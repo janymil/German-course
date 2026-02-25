@@ -1,0 +1,566 @@
+export const lesson49 = {
+  id: 49,
+  week: 10,
+  day: 4,
+  title: "Reisen und Urlaub",
+  topic: "Cestovanie a dovolenka",
+  cefr: "A1",
+  xpReward: 30,
+  narrativeContext:
+    "Jana plánuje svoju letnú dovolenku. Chce ísť do Talianska. Prezruje si lety, rezervuje hotel a balí kufor. 'Wohin fährt dein Zug?' 'Wann landet das Flugzeug?'",
+  communicativeGoal:
+    "Po tejto lekcii viem plánovať cestu, hovoriť o doprave a ubytovaní a použijem modálne + separabilné slovesá pri cestovaní.",
+  skillFocus: ["vocabulary", "grammar", "speaking"],
+
+  grammarNote: {
+    rule:
+      "Modálne + odlučovacie slovesá pri cestovaní + cestovné predložky: nach / in die / ans",
+    explanation:
+      "Modálne slovesá + odlučovacie infinitívy: 'Wann müssen wir abfahren?' (müssen + abfahren), 'Ich möchte das Ticket buchen.' (möchten + buchen), 'Können Sie mich abholen?' (können + abholen). Cestovné predložky: nach + krajina bez člena: Ich fahre nach Italien, nach Deutschland, nach Österreich. In + krajina s členom (F/Pl): Ich fahre in die Schweiz, in die USA, in die Türkei. Ans Meer/an den See: Ich fahre ans Meer.",
+    examples: [
+      { de: "Ich fahre nach Italien.", sk: "Idem do Talianska." },
+      { de: "Sie fährt in die Schweiz.", sk: "Ide do Švajčiarska." },
+      { de: "Wir fahren ans Meer.", sk: "Ideme k moru." },
+      { de: "Wann müssen wir abfahren?", sk: "Kedy musíme odísť?" },
+      { de: "Können Sie mich abholen?", sk: "Môžete ma vyzdvihnúť?" },
+    ],
+    slovakContrastNote:
+      "Slovenčina: 'ísť do Talianska' = fahren nach Italien (nach + bez člena). Pre krajiny so členom: 'ísť do Švajčiarska' = in die Schweiz (in + die, Akk). Slovenské 'do' zodpovedá nemeckému nach (pre krajiny bez člena) alebo in + Akk (pre krajiny so členom). 'Ans Meer' = k moru — slovenčina: 'k' + datív.",
+  },
+
+  vocab: [
+    {
+      de: "das Flugzeug",
+      sk: "lietadlo",
+      example: "Das Flugzeug landet um 14:00 Uhr.",
+      exampleSk: "Lietadlo pristáva o 14:00.",
+      gender: "N",
+      srsId: "L49_V01",
+      recycledFrom: [],
+    },
+    {
+      de: "der Flug",
+      sk: "let",
+      example: "Der Flug nach Rom dauert zwei Stunden.",
+      exampleSk: "Let do Ríma trvá dve hodiny.",
+      gender: "M",
+      srsId: "L49_V02",
+      recycledFrom: [],
+    },
+    {
+      de: "fliegen",
+      sk: "letieť",
+      example: "Wir fliegen am Montag nach Mailand.",
+      exampleSk: "V pondelok letíme do Milána.",
+      gender: null,
+      srsId: "L49_V03",
+      recycledFrom: [],
+    },
+    {
+      de: "buchen",
+      sk: "rezervovať, zarezervovať",
+      example: "Ich buche das Hotel online.",
+      exampleSk: "Rezervujem hotel online.",
+      gender: null,
+      srsId: "L49_V04",
+      recycledFrom: [],
+    },
+    {
+      de: "das Hotel",
+      sk: "hotel",
+      example: "Das Hotel liegt zentral.",
+      exampleSk: "Hotel leží centrálne.",
+      gender: "N",
+      srsId: "L49_V05",
+      recycledFrom: [23],
+    },
+    {
+      de: "das Hostel",
+      sk: "hostel",
+      example: "Das Hostel ist billiger als das Hotel.",
+      exampleSk: "Hostel je lacnejší ako hotel.",
+      gender: "N",
+      srsId: "L49_V06",
+      recycledFrom: [],
+    },
+    {
+      de: "der Koffer",
+      sk: "kufor",
+      example: "Ich packe den Koffer für den Urlaub.",
+      exampleSk: "Balím kufor na dovolenku.",
+      gender: "M",
+      srsId: "L49_V07",
+      recycledFrom: [],
+    },
+    {
+      de: "packen",
+      sk: "baliť",
+      example: "Was muss ich alles einpacken?",
+      exampleSk: "Čo všetko musím zabalif?",
+      gender: null,
+      srsId: "L49_V08",
+      recycledFrom: [],
+    },
+    {
+      de: "der Urlaub",
+      sk: "dovolenka",
+      example: "Ich habe zwei Wochen Urlaub.",
+      exampleSk: "Mám dvoj týždňovú dovolenku.",
+      gender: "M",
+      srsId: "L49_V09",
+      recycledFrom: [],
+    },
+    {
+      de: "die Ferien (Pl.)",
+      sk: "prázdniny (školské)",
+      example: "In den Ferien fahren die Kinder ans Meer.",
+      exampleSk: "Na prázdninách idú deti k moru.",
+      gender: "Pl",
+      srsId: "L49_V10",
+      recycledFrom: [],
+    },
+    {
+      de: "ans Meer fahren",
+      sk: "ísť k moru",
+      example: "Im Juli fahren wir ans Meer nach Italien.",
+      exampleSk: "V júli ideme k moru do Talianska.",
+      gender: null,
+      srsId: "L49_V11",
+      recycledFrom: [],
+    },
+    {
+      de: "der Strand",
+      sk: "pláž",
+      example: "Am Strand liegen und sich entspannen.",
+      exampleSk: "Ležať na pláži a relaxovať.",
+      gender: "M",
+      srsId: "L49_V12",
+      recycledFrom: [],
+    },
+    {
+      de: "das Ausland",
+      sk: "zahraničie",
+      example: "Ich fahre dieses Jahr ins Ausland.",
+      exampleSk: "Tento rok idem do zahraničia.",
+      gender: "N",
+      srsId: "L49_V13",
+      recycledFrom: [],
+    },
+    {
+      de: "der Reisepass",
+      sk: "cestovný pas",
+      example: "Vergiss den Reisepass nicht!",
+      exampleSk: "Nezabudni na cestovný pas!",
+      gender: "M",
+      srsId: "L49_V14",
+      recycledFrom: [],
+    },
+    {
+      de: "die Unterkunft",
+      sk: "ubytovanie",
+      example: "Wir suchen eine günstige Unterkunft.",
+      exampleSk: "Hľadáme lacné ubytovanie.",
+      gender: "F",
+      srsId: "L49_V15",
+      recycledFrom: [],
+    },
+    {
+      de: "der Campingplatz",
+      sk: "kemping",
+      example: "Wir schlafen auf dem Campingplatz.",
+      exampleSk: "Spíme na kempingu.",
+      gender: "M",
+      srsId: "L49_V16",
+      recycledFrom: [],
+    },
+    {
+      de: "landen → landet",
+      sk: "pristáť, pristávať",
+      example: "Das Flugzeug landet pünktlich.",
+      exampleSk: "Lietadlo pristáva načas.",
+      gender: null,
+      srsId: "L49_V17",
+      recycledFrom: [],
+    },
+    {
+      de: "starten → startet",
+      sk: "odletieť, štartovať",
+      example: "Das Flugzeug startet um 9 Uhr.",
+      exampleSk: "Lietadlo štartuje o 9 hodine.",
+      gender: null,
+      srsId: "L49_V18",
+      recycledFrom: [],
+    },
+    {
+      de: "einsteigen → steigt ein ⚠️",
+      sk: "nastúpiť — odlučovacie",
+      example: "Bitte steigen Sie jetzt ein!",
+      exampleSk: "Prosím, nastúpte teraz!",
+      gender: null,
+      srsId: "L49_V19",
+      recycledFrom: [24],
+    },
+    {
+      de: "aussteigen → steigt aus ⚠️",
+      sk: "vystúpiť — odlučovacie",
+      example: "Wir steigen in Rom aus.",
+      exampleSk: "Vystúpime v Ríme.",
+      gender: null,
+      srsId: "L49_V20",
+      recycledFrom: [24],
+    },
+  ],
+
+  exercises: [
+    {
+      type: "flashcard",
+      instruction:
+        "Prezri slovíčka z oblasti cestovania. Ku každej karte povedz, či si to robil/a na poslednej dovolenke.",
+      items: [
+        "L49_V01",
+        "L49_V02",
+        "L49_V03",
+        "L49_V04",
+        "L49_V05",
+        "L49_V07",
+        "L49_V08",
+        "L49_V09",
+        "L49_V11",
+        "L49_V12",
+        "L49_V13",
+        "L49_V14",
+        "L49_V15",
+        "L49_V17",
+        "L49_V18",
+        "L49_V19",
+        "L49_V20",
+      ],
+    },
+    {
+      type: "mcq",
+      instruction: "Vyber správnu odpoveď.",
+      questions: [
+        {
+          question: "Jana chce ísť do Talianska. Ako sa to povie?",
+          options: [
+            "Jana fährt in Italien.",
+            "Jana fährt nach Italien.",
+            "Jana fährt zu Italien.",
+            "Jana fährt in die Italien.",
+          ],
+          answer: "Jana fährt nach Italien.",
+          explanation:
+            "Taliansko (Italien) nemá člen → 'nach Italien'. 'nach' + krajina bez člena.",
+        },
+        {
+          question: "Do Švajčiarska sa hovorí:",
+          options: [
+            "nach Schweiz",
+            "nach die Schweiz",
+            "in die Schweiz",
+            "in Schweiz",
+          ],
+          answer: "in die Schweiz",
+          explanation:
+            "'die Schweiz' má ženský člen → 'in die Schweiz' (Akkusatív). Krajiny so členom (F/Pl/M): in + Akk.",
+        },
+        {
+          question: "'Wann ___ das Flugzeug?' (pristáť)",
+          options: ["landet", "fliegt", "startet", "bucht"],
+          answer: "landet",
+          explanation: "'landen' = pristáť. Das Flugzeug landet. ≠ starten = štartovať/odletieť.",
+        },
+        {
+          question: "Čo si musí Jana vziať, aby mohla ísť do zahraničia?",
+          options: ["das Hotel", "den Reisepass", "den Campingplatz", "die Ferien"],
+          answer: "den Reisepass",
+          explanation: "'der Reisepass' = cestovný pas. Potrebný pri cestovaní do zahraničia.",
+        },
+        {
+          question:
+            "Modálne + odlučovacie: 'Wann ___ wir ab___?' (abfahren, müssen)",
+          options: [
+            "müssen … fahren",
+            "müssen … abfahren",
+            "abfahren … müssen",
+            "müssen … ab",
+          ],
+          answer: "müssen … ab",
+          explanation:
+            "Slovosled: müssen (P2) + … + abfahren (koniec). V otázke: Wann müssen wir abfahren? Častica 'ab' ostáva súčasťou infinitívu.",
+        },
+      ],
+    },
+    {
+      type: "fill",
+      instruction: "Doplň správnu predložku alebo tvar slovesa.",
+      questions: [
+        {
+          sentence: "Ich fahre ___ Sommer nach Italien.",
+          answer: "im",
+          hint: "predložka + mesiac/ročné obdobie",
+          explanation: "'im Sommer' = v lete. im = in + dem (datív).",
+        },
+        {
+          sentence: "Das Flugzeug ___ pünktlich um 10 Uhr.",
+          answer: "landet",
+          hint: "pristáť — 3. os. sg.",
+          explanation: "'landen' → landet. Das Flugzeug landet.",
+        },
+        {
+          sentence: "Bitte ___ Sie Ihren Koffer ___!",
+          answer: "packen … ein",
+          hint: "einpacken — odlučovacie",
+          explanation: "'einpacken' → packen … ein. Pokyn: Bitte packen Sie ein!",
+        },
+        {
+          sentence: "Wir fahren ___ Meer. (k moru)",
+          answer: "ans",
+          hint: "an + das → ans",
+          explanation: "'ans Meer' = an das Meer (Akkusatív). Kontrakcia an + das = ans.",
+        },
+        {
+          sentence: "Ich ___ ein Hotel in Rom ___.",
+          answer: "buche … ",
+          hint: "buchen — pravidelné, 1. os. sg. (bez prefixu)",
+          explanation: "'buchen' je pravidelné sloveso bez prefixu. Ich buche das Hotel.",
+        },
+      ],
+    },
+    {
+      type: "listen",
+      instruction:
+        "Počúvaj cestovné frázy. Opakuj nahlas a všímaj si predložky (nach/in die/ans).",
+      questions: [
+        { de: "Ich fahre nach Italien.", sk: "Idem do Talianska." },
+        { de: "Sie fährt in die Schweiz.", sk: "Ide do Švajčiarska." },
+        { de: "Wir fahren ans Meer.", sk: "Ideme k moru." },
+        { de: "Wann müssen wir abfahren?", sk: "Kedy musíme odísť?" },
+        { de: "Das Flugzeug landet um 15 Uhr.", sk: "Lietadlo pristáva o 15:00." },
+        { de: "Vergiss den Reisepass nicht!", sk: "Nezabudni na cestovný pas!" },
+        { de: "Ich buche das Hotel online.", sk: "Rezervujem hotel online." },
+        { de: "Bitte steigen Sie jetzt ein!", sk: "Prosím, nastúpte teraz!" },
+      ],
+    },
+    {
+      type: "match",
+      instruction: "Spoj nemecký výraz so slovenským prekladom.",
+      pairs: [
+        ["das Flugzeug", "lietadlo"],
+        ["der Koffer", "kufor"],
+        ["der Strand", "pláž"],
+        ["der Reisepass", "cestovný pas"],
+        ["die Unterkunft", "ubytovanie"],
+        ["buchen", "rezervovať"],
+        ["landen", "pristáť"],
+        ["einsteigen", "nastúpiť"],
+        ["aussteigen", "vystúpiť"],
+        ["das Ausland", "zahraničie"],
+      ],
+    },
+    {
+      type: "dialogue",
+      instruction:
+        "Jana a Lukas plánujú dovolenku. Prečítaj si rozhovor — modálne a odlučovacie slovesá v akcii.",
+      lines: [
+        {
+          speaker: "Lukas",
+          de: "Jana, wohin möchtest du in diesem Sommer fahren?",
+          sk: "Jana, kam chceš ísť toto leto?",
+        },
+        {
+          speaker: "Jana",
+          de: "Ich möchte nach Italien fahren. Ans Meer — ich träume von Strand und Sonne!",
+          sk: "Chcem ísť do Talianska. K moru — snívam o pláži a slnku!",
+        },
+        {
+          speaker: "Lukas",
+          de: "Toll! Wie möchtest du reisen — mit dem Flugzeug oder mit dem Zug?",
+          sk: "Skvelé! Ako chceš cestovať — lietadlom alebo vlakom?",
+        },
+        {
+          speaker: "Jana",
+          de: "Ich fliege lieber. Der Flug nach Rom dauert nur zwei Stunden.",
+          sk: "Radšej letím. Let do Ríma trvá len dve hodiny.",
+        },
+        {
+          speaker: "Lukas",
+          de: "Hast du schon ein Hotel gebucht?",
+          sk: "Rezervoval/a si si už hotel?",
+        },
+        {
+          speaker: "Jana",
+          de: "Noch nicht. Ich suche noch eine günstige Unterkunft — vielleicht ein Hostel.",
+          sk: "Ešte nie. Stále hľadám lacné ubytovanie — možno hostel.",
+        },
+        {
+          speaker: "Lukas",
+          de: "Was musst du alles mitnehmen?",
+          sk: "Čo všetko musíš vziať so sebou?",
+        },
+        {
+          speaker: "Jana",
+          de: "Den Reisepass, natürlich! Und Kleidung, Sonnencreme, Geld …",
+          sk: "Cestovný pas, samozrejme! A oblečenie, opaľovací krém, peniaze …",
+        },
+        {
+          speaker: "Lukas",
+          de: "Wann startet dein Flugzeug?",
+          sk: "Kedy štartuje tvoje lietadlo?",
+        },
+        {
+          speaker: "Jana",
+          de: "Am fünften Juli, morgens um 8 Uhr. Ich muss früh aufstehen!",
+          sk: "Piateho júla, ráno o 8:00. Musím skoro vstávať!",
+        },
+        {
+          speaker: "Lukas",
+          de: "Und wann landest du in Rom?",
+          sk: "A kedy pristávaš v Ríme?",
+        },
+        {
+          speaker: "Jana",
+          de: "Gegen 10 Uhr. Dann steige ich aus und nehme ein Taxi zum Hotel. Ich freue mich so!",
+          sk: "Okolo 10:00. Potom vystúpim a vezmem si taxi do hotela. Tak sa na to teším!",
+        },
+      ],
+      comprehensionQuestions: [
+        {
+          question: "Wohin möchte Jana fahren?",
+          answer: "Jana möchte nach Italien (nach Rom) fahren — ans Meer.",
+          explanation: "Jana sagt: 'Ich möchte nach Italien fahren. Ans Meer.'",
+        },
+        {
+          question: "Wann startet ihr Flug?",
+          answer: "Am fünften Juli um 8 Uhr morgens.",
+          explanation: "'Am fünften Juli, morgens um 8 Uhr.'",
+        },
+        {
+          question: "Was macht Jana nach der Landung?",
+          answer: "Jana steigt aus und nimmt ein Taxi zum Hotel.",
+          explanation: "'Dann steige ich aus und nehme ein Taxi zum Hotel.'",
+        },
+      ],
+    },
+    {
+      type: "minitext",
+      instruction:
+        "Jana číta popis hotela na webstránke. Odpovedz na otázky.",
+      text:
+        "Hotel La Bella Roma — Ihr Traumhotel im Herzen Roms!\n★★★ Komfortables Hotel in zentraler Lage.\nEntfernung: 5 Minuten zum Kolosseum, 10 Minuten zum Vatikan.\nZimmer: Einzelzimmer ab 89 € pro Nacht. Doppelzimmer ab 129 € pro Nacht.\nFrühstück inklusive! Kostenloses WLAN. Klimaanlage in allen Zimmern.\nBuchung: Online buchen oder anrufen: +39 06 12345678\nWir freuen uns auf Ihren Besuch!",
+      textSk:
+        "Hotel La Bella Roma — Váš vysnívaný hotel v srdci Ríma!\n★★★ Komfortný hotel v centrálnej polohe.\nVzdialenosť: 5 minút ku Koloseu, 10 minút k Vatikánu.\nIzby: jednolôžková izba od 89 € za noc. dvojlôžková izba od 129 € za noc.\nRaňajky v cene! Bezplatné WiFi. Klimatizácia v každej izbe.\nRezervovanie: Rezervujte online alebo zavolajte: +39 06 12345678\nTešíme sa na Vašu návštevu!",
+      questions: [
+        {
+          question: "Wie viel kostet ein Einzelzimmer pro Nacht?",
+          answer: "Ein Einzelzimmer kostet ab 89 € pro Nacht.",
+          explanation: "'Einzelzimmer ab 89 € pro Nacht.'",
+        },
+        {
+          question: "Was ist im Preis inklusive?",
+          answer: "Das Frühstück und kostenloses WLAN sind inklusive.",
+          explanation: "'Frühstück inklusive! Kostenloses WLAN.'",
+        },
+        {
+          question: "Wie weit ist das Hotel vom Kolosseum?",
+          answer: "Das Hotel ist 5 Minuten vom Kolosseum entfernt.",
+          explanation: "'5 Minuten zum Kolosseum.'",
+        },
+      ],
+    },
+    {
+      type: "freewrite",
+      instruction:
+        "Napíš odstavec o svojej vysnívanej dovolenke. Použi predložky (nach/in die/ans) a modálne slovesá.",
+      prompt:
+        "Beschreibe deinen Traumurlaub. Wohin möchtest du fahren? Was möchtest du machen?",
+      minWords: 40,
+      exampleAnswer:
+        "Mein Traumurlaub ist in Japan. Ich möchte nach Tokio fliegen — der Flug dauert vielleicht 12 Stunden! Dort möchte ich viele Tempel und Restaurants besuchen. Ich muss natürlich den Reisepass mitnehmen und ein Hotel buchen. Ich möchte in einem traditionellen japanischen Ryokan übernachten. Am Strand möchte ich mich entspannen. Und ich möchte lieber in einem Hostel wohnen — das ist billiger als im Hotel. Eines Tages fahre ich nach Japan — das ist mein Traum!",
+    },
+    {
+      type: "wordorder",
+      instruction: "ZoraÄ slovÃ¡ do sprÃ¡vnej nemeckej vety.",
+      sentences: [
+        {
+          words: ["Obwohl", "Jana", "mÃ¼de", "ist,", "lernt", "sie", "Deutsch."],
+          correct: "Obwohl Jana mÃ¼de ist, lernt sie Deutsch.",
+          hint: "Hoci je Jana unavenÃ¡, uÄÃ­ sa nemÄinu.",
+          explanation: "'obwohl' uvÃ¡dza vedÄ¾ajÅ¡iu vetu â€” sloveso 'ist' na konci. HlavnÃ¡ veta po Äiarke zaÄÃ­na slovesom (inverzia).",
+        },
+        {
+          words: ["Obwohl", "es", "kalt", "ist,", "geht", "sie", "spazieren."],
+          correct: "Obwohl es kalt ist, geht sie spazieren.",
+          hint: "Hoci je zima, ide sa prechÃ¡dzaÅ¥.",
+          explanation: "Obwohl-veta: sloveso na konci 'ist'. HlavnÃ¡ veta: 'geht' na 1. mieste po Äiarke.",
+        },
+        {
+          words: ["Obwohl", "er", "krank", "ist,", "arbeitet", "er."],
+          correct: "Obwohl er krank ist, arbeitet er.",
+          hint: "Hoci je chorÃ½, pracuje.",
+          explanation: "VedÄ¾ajÅ¡ia veta s 'obwohl': 'ist' na konci. HlavnÃ¡ veta: 'arbeitet' pred 'er'.",
+        },
+        {
+          words: ["Obwohl", "das", "Essen", "teuer", "ist,", "essen", "wir", "dort."],
+          correct: "Obwohl das Essen teuer ist, essen wir dort.",
+          hint: "Hoci je jedlo drahÃ©, jeme tam.",
+          explanation: "PrÃ­sudok 'ist' na konci obwohl-vety; 'essen' v hlavnej vete je na 1. pozÃ­cii.",
+        },
+        {
+          words: ["Obwohl", "sie", "wenig", "Zeit", "hat,", "hilft", "sie", "mir."],
+          correct: "Obwohl sie wenig Zeit hat, hilft sie mir.",
+          hint: "Hoci mÃ¡ mÃ¡lo Äasu, pomÃ¡ha mi.",
+          explanation: "'mir' je datÃ­v od 'ich' â€” hilft + Dativ (komu pomÃ¡ha).",
+        },
+      ],
+    },
+    {
+      type: "speaking",
+      instruction: "PoÄÃºvaj nemeckÃº vetu. Potom hovor nahlas a skontroluj sa.",
+      phrases: [
+        {
+          de: "Obwohl Jana mÃ¼de ist, lernt sie Deutsch.",
+          sk: "Hoci je Jana unavenÃ¡, uÄÃ­ sa nemÄinu.",
+          tip: "obwohl=[obvol], w=[v]",
+        },
+        {
+          de: "Obwohl es kalt ist, geht sie spazieren.",
+          sk: "Hoci je zima, ide sa prechÃ¡dzaÅ¥.",
+          tip: "spazieren=[Å¡paci:ren]",
+        },
+        {
+          de: "Obwohl er krank ist, arbeitet er.",
+          sk: "Hoci je chorÃ½, pracuje.",
+          tip: "krank=[krank], k na konci",
+        },
+        {
+          de: "Obwohl das Essen teuer ist, essen wir dort.",
+          sk: "Hoci je jedlo drahÃ©, jeme tam.",
+          tip: "teuer=[tojor], eu=[oj]",
+        },
+        {
+          de: "Obwohl sie wenig Zeit hat, hilft sie mir.",
+          sk: "Hoci mÃ¡ mÃ¡lo Äasu, pomÃ¡ha mi.",
+          tip: "wenig=[ve:niCH], gâ†’ch na konci",
+        },
+      ],
+    },
+  ],
+
+  reviewWords: [
+    "L49_V01",
+    "L49_V02",
+    "L49_V04",
+    "L49_V07",
+    "L49_V09",
+    "L49_V11",
+    "L49_V14",
+    "L49_V15",
+    "L49_V17",
+    "L49_V19",
+    "L49_V20",
+  ],
+
+  lessonNotes:
+    "Kľúčová gramatika: Cestovné predložky — nach + krajina bez člena (nach Italien, nach Deutschland). In + die + krajina s ženským/množným členom (in die Schweiz, in die USA). Ans Meer = an + das Meer (Akk, kontrakcia). Modálne + odlučovacie slovesá: müssen abfahren, müssen einsteigen, können abholen — infinitív na konci, modalné v P2.",
+};

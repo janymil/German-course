@@ -1,0 +1,237 @@
+// WEEK 6 — Jobs and Hobbies
+export const week6Lessons = [
+  {
+    id: 16,
+    week: 6,
+    day: 1,
+    title: "Práca a povolania — Berufe",
+    topic: "Povolania a pracovné prostredie",
+    cefr: "A1",
+    xpReward: 35,
+    grammarNote: {
+      rule: "Povolania bez člena + ženský rod -in",
+      explanation:
+        "Po slovese sein sa povolania používajú BEZ člena: 'Ich bin Arzt' (NIE ein Arzt). Výnimka len ak je pridané prídavné meno: 'Er ist ein guter Arzt.' Ženský rod: takmer všetky povolania + prípona -in: Arzt → Ärztin, Lehrer → Lehrerin, Ingenieur → Ingenieurin, Programmierer → Programmiererin.",
+      examples: [
+        { de: "Ich bin Arzt. / Sie ist Ärztin.", sk: "Som doktor. / Ona je doktorka. (-in = ženský rod)" },
+        { de: "Er ist ein guter Arzt. (+ prívlastok → ein)", sk: "Je dobrý doktor. (s prídavným menom → zámen)" },
+        { de: "Was bist du von Beruf?", sk: "Čím si z povolania?" },
+        { de: "Ich arbeite bei Volkswagen / bei einer Bank.", sk: "Pracujem vo Volkswagene / v banke." },
+      ],
+    },
+    vocab: [
+      { de: "der Arzt / die Ärztin", sk: "lekár / lekárka", example: "Sie ist Ärztin in einem Krankenhaus." },
+      { de: "der Lehrer / die Lehrerin", sk: "učiteľ / učiteľka", example: "Er ist Lehrer an einer Schule." },
+      { de: "der Ingenieur / die Ingenieurin", sk: "inžinier / inžinierka", example: "Ich bin Ingenieur bei BMW." },
+      { de: "der Programmierer / die Programmiererin", sk: "programátor / programátorka", example: "Meine Frau ist Programmiererin." },
+      { de: "der Kellner / die Kellnerin", sk: "čašník / čašníčka", example: "Die Kellnerin bringt die Rechnung." },
+      { de: "der Koch / die Köchin", sk: "kuchár / kuchárka", example: "Er ist Koch in einem Restaurant." },
+      { de: "der Rechtsanwalt / die Rechtsanwältin", sk: "advokát / advokátka", example: "Sie ist Rechtsanwältin." },
+      { de: "der Verkäufer / die Verkäuferin", sk: "predavač / predavačka", example: "Ich bin Verkäufer in einem Supermarkt." },
+      { de: "arbeiten bei / in", sk: "pracovať v / u", example: "Ich arbeite bei einer IT-Firma." },
+      { de: "die Firma / das Unternehmen", sk: "firma / podnik", example: "Ich arbeite in einer großen Firma." },
+      { de: "das Büro", sk: "kancelária", example: "Ich arbeite im Büro, nicht zu Hause." },
+      { de: "das Krankenhaus", sk: "nemocnica", example: "Der Arzt arbeitet im Krankenhaus." },
+      { de: "die Schule", sk: "škola", example: "Die Lehrerin arbeitet an einer Schule." },
+      { de: "das Gehalt", sk: "plat", example: "Das Gehalt ist leider nicht sehr hoch." },
+      { de: "der Kollege / die Kollegin", sk: "kolega / kolegyňa", example: "Meine Kollegin ist sehr nett." },
+      { de: "Was bist du von Beruf?", sk: "Čím si z povolania?", example: "Was bist du von Beruf? — Ich bin Ingenieur." },
+    ],
+    exercises: [
+      {
+        type: "flashcard",
+        instruction: "Povolania — mužský a ženský rod.",
+        items: [
+          "der Arzt / die Ärztin",
+          "der Lehrer / die Lehrerin",
+          "der Ingenieur",
+          "der Programmierer",
+          "der Kellner",
+          "der Koch",
+          "der Rechtsanwalt",
+          "der Verkäufer",
+          "das Krankenhaus",
+          "das Büro",
+        ],
+      },
+      {
+        type: "mcq",
+        questions: [
+          {
+            question: "Ich bin ___. (Som doktorka — žena)",
+            options: ["Arzt", "Ärztin", "ein Arzt", "die Ärztin"],
+            answer: 1,
+          },
+          {
+            question: "Was bist du von ___? (povolanie)",
+            options: ["Arbeit", "Hobby", "Beruf", "Name"],
+            answer: 2,
+          },
+          {
+            question: "Čo je 'das Krankenhaus'?",
+            options: ["škola", "nemocnica", "firma", "kancelária"],
+            answer: 1,
+          },
+          {
+            question: "Ženský rod od 'Lehrer' je:",
+            options: ["Lehrerin", "Lehrere", "Lehrerinne", "die Lehrer"],
+            answer: 0,
+          },
+          {
+            question: "Ich arbeite ___ einer IT-Firma.",
+            options: ["in", "bei", "an", "zu"],
+            answer: 1,
+          },
+        ],
+      },
+      {
+        type: "fill",
+        questions: [
+          { sentence: "Ich bin ___. (programátor, muž)", answer: "Programmierer", hint: "P..." },
+          { sentence: "Was bist du von ___? (povolanie)", answer: "Beruf", hint: "B..." },
+          { sentence: "Ich arbeite im ___. (kancelária)", answer: "Büro", hint: "B..." },
+          { sentence: "Der Arzt arbeitet im ___. (nemocnica)", answer: "Krankenhaus", hint: "K..." },
+          { sentence: "Meine ___ ist sehr nett. (kolegyňa)", answer: "Kollegin", hint: "K..." },
+        ],
+      },
+      {
+        type: "listen",
+        questions: [
+          { de: "Ich bin Programmiererin", sk: "Som programátorka" },
+          { de: "Was bist du von Beruf?", sk: "Čím si z povolania?" },
+          { de: "Ich arbeite bei einer IT-Firma", sk: "Pracujem v IT firme" },
+          { de: "Mein Kollege ist sehr nett", sk: "Môj kolega je veľmi milý" },
+        ],
+      },
+      {
+        type: "match",
+        pairs: [
+          ["der Arzt", "lekár"],
+          ["die Lehrerin", "učiteľka"],
+          ["der Koch", "kuchár"],
+          ["das Krankenhaus", "nemocnica"],
+          ["das Gehalt", "plat"],
+        ],
+      },
+    ],
+  },
+  {
+    id: 17,
+    week: 6,
+    day: 2,
+    title: "Záľuby — Hobbys und Freizeit",
+    topic: "Voľný čas a záujmy + gern/lieber/am liebsten",
+    cefr: "A1",
+    xpReward: 30,
+    grammarNote: {
+      rule: "gern / lieber / am liebsten — stupňovanie záľuby",
+      explanation:
+        "'Gern' (rád) ide VŽDY za slovesom, nikdy na začiatku: 'Ich lese gern' (NIE 'Gern ich lese'). Stupňovanie: gern (rád) → lieber (radšej) → am liebsten (najradšej). Negatívne: 'nicht gern' = nerád. Otázka: 'Was machst du gern?'",
+      examples: [
+        { de: "Ich lese gern. (za slovesom!)", sk: "Rád čítam." },
+        { de: "Ich schwimme lieber als ich laufe.", sk: "Radšej plávam než behám." },
+        { de: "Am liebsten höre ich Musik.", sk: "Najradšej počúvam hudbu. (na začiatku = dôraz)" },
+        { de: "Was machst du am Wochenende? — Ich koche gern.", sk: "Čo robíš cez víkend? — Rád varím." },
+      ],
+    },
+    vocab: [
+      { de: "Musik hören", sk: "počúvať hudbu", example: "Ich höre am liebsten Musik." },
+      { de: "lesen", sk: "čítať", example: "Ich lese gern Bücher." },
+      { de: "reisen", sk: "cestovať", example: "Ich reise sehr gern. Wohin reist du gern?" },
+      { de: "kochen", sk: "variť", example: "Er kocht gern für Freunde." },
+      { de: "Sport treiben", sk: "robiť šport", example: "Ich treibe gern Sport am Abend." },
+      { de: "schwimmen", sk: "plávať", example: "Sie schwimmt lieber als sie läuft." },
+      { de: "tanzen", sk: "tancovať", example: "Ich tanze nicht gern, aber ich singe gern." },
+      { de: "fotografieren", sk: "fotografovať", example: "Ich fotografiere gern in der Natur." },
+      { de: "zeichnen / malen", sk: "kresliť / maľovať", example: "Meine Tochter zeichnet gern." },
+      { de: "spielen", sk: "hrať (sport/hru)", example: "Er spielt gern Fußball." },
+      { de: "gern", sk: "rád", example: "Ich lerne gern Deutsch!" },
+      { de: "lieber", sk: "radšej", example: "Ich trinke lieber Tee als Kaffee." },
+      { de: "am liebsten", sk: "najradšej", example: "Am liebsten esse ich Pizza." },
+      { de: "die Freizeit", sk: "voľný čas", example: "In der Freizeit lese ich viel." },
+    ],
+    exercises: [
+      {
+        type: "flashcard",
+        instruction: "Záľuby a voľný čas.",
+        items: [
+          "Musik hören",
+          "lesen",
+          "reisen",
+          "kochen",
+          "schwimmen",
+          "tanzen",
+          "fotografieren",
+          "spielen",
+          "gern (za slovesom!)",
+          "lieber (radšej)",
+          "am liebsten (najradšej)",
+        ],
+      },
+      {
+        type: "mcq",
+        questions: [
+          {
+            question: "Správna veta s 'gern':",
+            options: [
+              "Gern ich lese Bücher.",
+              "Ich gern lese Bücher.",
+              "Ich lese gern Bücher.",
+              "Ich lese Bücher gern immer.",
+            ],
+            answer: 2,
+          },
+          {
+            question: "Stupňovanie: gern → lieber → ___",
+            options: ["sehr gern", "am liebsten", "meistens gern", "noch gern"],
+            answer: 1,
+          },
+          {
+            question: "Čo je 'fotografieren'?",
+            options: ["plávať", "kresliť", "fotografovať", "variť"],
+            answer: 2,
+          },
+          {
+            question: "'Was machst du gern?' — správna odpoveď:",
+            options: ["Ich bin müde.", "Ich lese gern Bücher.", "Ich habe keine Zeit.", "Ich gehe schlafen."],
+            answer: 1,
+          },
+          {
+            question: "Čo je 'die Freizeit'?",
+            options: ["dovolenka", "víkend", "voľný čas", "prázdniny"],
+            answer: 2,
+          },
+        ],
+      },
+      {
+        type: "fill",
+        questions: [
+          { sentence: "Ich höre ___ Musik. (rád)", answer: "gern", hint: "g..." },
+          { sentence: "Ich trinke ___ Tee als Kaffee. (radšej)", answer: "lieber", hint: "l..." },
+          { sentence: "Am ___ esse ich Pizza. (najradšej)", answer: "liebsten", hint: "am l..." },
+          { sentence: "Was machst du in der ___? (voľný čas)", answer: "Freizeit", hint: "F..." },
+          { sentence: "Er spielt gern ___. (futbal)", answer: "Fußball", hint: "F..." },
+        ],
+      },
+      {
+        type: "listen",
+        questions: [
+          { de: "Ich reise sehr gern", sk: "Veľmi rád cestujem" },
+          { de: "Was machst du gern?", sk: "Čo robíš rád?" },
+          { de: "Am liebsten höre ich Musik", sk: "Najradšej počúvam hudbu" },
+          { de: "Ich schwimme lieber als ich laufe", sk: "Radšej plávam než behám" },
+        ],
+      },
+      {
+        type: "match",
+        pairs: [
+          ["lesen", "čítať"],
+          ["kochen", "variť"],
+          ["reisen", "cestovať"],
+          ["schwimmen", "plávať"],
+          ["die Freizeit", "voľný čas"],
+        ],
+      },
+    ],
+  },
+];

@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-950 text-gray-100 font-sans;
+  }
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-900;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gray-700 rounded-full;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-500;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-gray-900 border border-gray-800 rounded-2xl p-6;
+  }
+  .btn-primary {
+    @apply bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-700 text-white font-semibold px-5 py-2.5 rounded-xl transition-all duration-150 flex items-center gap-2 cursor-pointer;
+  }
+  .btn-secondary {
+    @apply bg-gray-800 hover:bg-gray-700 active:bg-gray-900 text-gray-200 font-medium px-5 py-2.5 rounded-xl transition-all duration-150 flex items-center gap-2 cursor-pointer;
+  }
+  .btn-danger {
+    @apply bg-red-700 hover:bg-red-600 active:bg-red-800 text-white font-semibold px-5 py-2.5 rounded-xl transition-all duration-150 flex items-center gap-2 cursor-pointer;
+  }
+  .section-title {
+    @apply text-2xl font-bold text-white mb-1;
+  }
+  .section-subtitle {
+    @apply text-sm text-gray-400 mb-6;
+  }
+  .highlight-box {
+    @apply border-l-4 border-indigo-500 bg-indigo-950/50 rounded-r-xl p-5;
+  }
+  .warning-box {
+    @apply border-l-4 border-amber-500 bg-amber-950/40 rounded-r-xl p-5;
+  }
+  .success-box {
+    @apply border-l-4 border-emerald-500 bg-emerald-950/40 rounded-r-xl p-5;
+  }
+}
