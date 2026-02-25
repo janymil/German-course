@@ -5,9 +5,11 @@ import {
   XCircle,
   ChevronRight,
   User,
-  MessageCircle
+  MessageCircle,
+  Brain
 } from 'lucide-react';
 import { useTTS } from '../../hooks/useTTS';
+import { getExplanation } from '../../hooks/useAI';
 
 export function DialogueExercise({ exercise, lesson, onComplete }) {
   const { speak } = useTTS();
@@ -16,6 +18,8 @@ export function DialogueExercise({ exercise, lesson, onComplete }) {
   const [selectedOption, setSelectedOption] = useState(null);
   const [confirmed, setConfirmed] = useState(false);
   const [correctCount, setCorrectCount] = useState(0);
+  const [explanation, setExplanation] = useState(null);
+  const [loadingWhy, setLoadingWhy] = useState(false);
   const [totalPlayerTurns, setTotalPlayerTurns] = useState(
     () => turns.filter((t) => t.playerTurn).length
   );
@@ -47,6 +51,7 @@ export function DialogueExercise({ exercise, lesson, onComplete }) {
       setCurrentIndex(nextIndex);
       setSelectedOption(null);
       setConfirmed(false);
+      setExplanation(null);
     }
   };
 
@@ -92,38 +97,34 @@ export function DialogueExercise({ exercise, lesson, onComplete }) {
         {turns.map((_, i) => (
           <div
             key={i}
-            className={`flex-1 h-1 rounded-full transition-all duration-300 ${
-              i < currentIndex
+            className={`flex-1 h-1 rounded-full transition-all duration-300 ${i < currentIndex
                 ? 'bg-emerald-500'
                 : i === currentIndex
-                ? 'bg-indigo-500'
-                : 'bg-gray-700'
-            }`}
+                  ? 'bg-indigo-500'
+                  : 'bg-gray-700'
+              }`}
           />
         ))}
       </div>
 
       {/* Turn card */}
       <div
-        className={`card border rounded-2xl p-5 space-y-3 ${
-          isPlayerTurn
+        className={`card border rounded-2xl p-5 space-y-3 ${isPlayerTurn
             ? 'border-indigo-700 bg-indigo-950/30'
             : 'border-gray-700 bg-gray-800/60'
-        }`}
+          }`}
       >
         {/* Speaker label */}
         <div className="flex items-center gap-2">
           <div
-            className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 ${
-              isPlayerTurn ? 'bg-indigo-600' : 'bg-gray-600'
-            }`}
+            className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 ${isPlayerTurn ? 'bg-indigo-600' : 'bg-gray-600'
+              }`}
           >
             <User size={14} className="text-white" />
           </div>
           <span
-            className={`font-semibold text-sm ${
-              isPlayerTurn ? 'text-indigo-300' : 'text-gray-300'
-            }`}
+            className={`font-semibold text-sm ${isPlayerTurn ? 'text-indigo-300' : 'text-gray-300'
+              }`}
           >
             {currentTurn.speaker}
           </span>
@@ -212,10 +213,43 @@ export function DialogueExercise({ exercise, lesson, onComplete }) {
                 Potvrdiť
               </button>
             ) : (
-              <div className="space-y-2 mt-2">
+              <div className="space-y-3 mt-4">
                 {currentTurn.sk && (
-                  <p className="text-xs text-gray-400 text-center">{currentTurn.sk}</p>
+                  <p className="text-xs text-gray-400 text-center mb-2">{currentTurn.sk}</p>
                 )}
+
+                {explanation ? (
+                  <div className="bg-amber-950/40 border border-amber-800/50 rounded-xl p-4 animate-fade-in flex items-start gap-3">
+                    <Brain size={18} className="text-amber-400 flex-shrink-0 mt-0.5" />
+                    <p className="text-amber-200 text-sm leading-relaxed">{explanation}</p>
+                  </div>
+                ) : (
+                  confirmed && !currentTurn.options[selectedOption].correct && (
+                    <button
+                      onClick={async () => {
+                        setLoadingWhy(true);
+                        try {
+                          const res = await getExplanation({
+                            question: "Kontext dialógu na doplnenie.",
+                            correctAnswer: currentTurn.options.find(o => o.correct).de,
+                            userAnswer: currentTurn.options[selectedOption].de
+                          });
+                          setExplanation(res);
+                        } catch (e) {
+                          setExplanation("Chyba API kľúča. Pridajte ho v nastaveniach Coach-a pre AI funkcie.");
+                        } finally {
+                          setLoadingWhy(false);
+                        }
+                      }}
+                      disabled={loadingWhy}
+                      className="w-full btn-secondary bg-amber-950/20 py-3 flex items-center justify-center gap-2 text-sm font-semibold border-amber-800 text-amber-500 hover:bg-amber-950/40 hover:border-amber-600 transition-all border border-dashed"
+                    >
+                      <Brain size={16} className={loadingWhy ? "animate-pulse" : ""} />
+                      {loadingWhy ? 'Pýtam sa učiteľa...' : 'Vysvetli mi prečo to je zle'}
+                    </button>
+                  )
+                )}
+
                 <button
                   onClick={handleNext}
                   className="w-full btn-primary py-3 flex items-center justify-center gap-2 text-sm font-semibold"

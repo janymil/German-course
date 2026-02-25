@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ArrowLeft, CheckCircle, Star, Zap, RotateCcw, ChevronRight, BookOpen, Volume2, ClipboardCheck } from 'lucide-react';
+import { ArrowLeft, CheckCircle, Star, Zap, RotateCcw, ChevronRight, BookOpen, Volume2, ClipboardCheck, Target } from 'lucide-react';
 import { FlashcardExercise } from '../components/exercises/FlashcardExercise';
 import { MCQExercise } from '../components/exercises/MCQExercise';
 import { FillExercise } from '../components/exercises/FillExercise';
@@ -12,20 +12,22 @@ import { MiniTextExercise } from '../components/exercises/MiniTextExercise';
 import { LessonTest } from '../components/exercises/LessonTest';
 import WritingChecker from '../components/exercises/WritingChecker';
 import { useTTS } from '../hooks/useTTS';
+import StudyNudge from '../components/StudyCoach';
+import SegmentIntending from '../components/SegmentIntending';
 
 const PHASES = ['grammar', 'exercises', 'results', 'lessontest'];
 
 const EXERCISE_TYPE_NAMES = {
   flashcard: 'Kartičky',
-  match:     'Spájanie',
+  match: 'Spájanie',
   wordorder: 'Slovosled',
-  fill:      'Doplňovanie',
-  listen:    'Počúvanie',
-  mcq:       'Výber odpovede',
-  minitext:  'Čítanie',
-  speaking:  'Hovorenie',
-  dialogue:  'Dialóg',
-  writing:   'Písanie (AI)',
+  fill: 'Doplňovanie',
+  listen: 'Počúvanie',
+  mcq: 'Výber odpovede',
+  minitext: 'Čítanie',
+  speaking: 'Hovorenie',
+  dialogue: 'Dialóg',
+  writing: 'Písanie (AI)',
 };
 function exName(ex, i) {
   return EXERCISE_TYPE_NAMES[ex?.type] || `Cvičenie ${i + 1}`;
@@ -70,18 +72,22 @@ function GrammarCard({ lesson, onNext, speak }) {
         <p className="text-xs text-gray-500">Najprv si prečítaj gramatiku, potom precvičuj cvičeniami.</p>
       </div>
 
-      <button
-        onClick={onNext}
-        className="w-full btn-primary py-4 text-base font-semibold flex items-center justify-center gap-2"
-      >
-        Začať cvičenia
-        <ChevronRight size={20} />
-      </button>
+      <div className="space-y-4">
+        <button
+          onClick={onNext}
+          className="w-full btn-primary py-4 text-lg font-bold flex items-center justify-center gap-2 shadow-sm transition-transform hover:-translate-y-0.5"
+        >
+          Začať cvičenia
+          <ChevronRight size={20} />
+        </button>
+
+        <SegmentIntending onComplete={onNext} />
+      </div>
     </div>
   );
 }
 
-function ResultsScreen({ lesson, scores, avgScore, onComplete, onRetry, onStartTest }) {
+function ResultsScreen({ lesson, scores, avgScore, onComplete, onRetry, onStartTest, onNavigate }) {
   const xpEarned = scores.length === lesson.exercises.length
     ? Math.round((avgScore / 100) * lesson.xpReward)
     : 0;
@@ -136,11 +142,27 @@ function ResultsScreen({ lesson, scores, avgScore, onComplete, onRetry, onStartT
           Urobiť test lekcie →
         </button>
       )}
+
+      {/* Arena CTA */}
+      <div className="bg-gradient-to-br from-indigo-950/60 to-indigo-900/20 border border-indigo-800/40 rounded-2xl p-5">
+        <p className="text-sm text-gray-400 mb-3 leading-relaxed">
+          🎯 <strong className="text-white">Základ máš za sebou!</strong> Teraz choď do
+          <strong className="text-indigo-400"> Tréningovej Arény</strong> a precvičuj slovíčka, diktát
+          a hovorenie aspoň 15–20 minút.
+        </p>
+        <button
+          onClick={() => { onComplete(); setTimeout(() => onNavigate?.('arena'), 100); }}
+          className="w-full py-3 bg-indigo-600 hover:bg-indigo-500 text-white font-bold rounded-xl transition-all shadow-lg flex items-center justify-center gap-2 group"
+        >
+          <Target size={18} className="group-hover:rotate-12 transition-transform" />
+          Vstúpiť do Tréningovej Arény
+        </button>
+      </div>
     </div>
   );
 }
 
-export default function LessonView({ lesson, progress, onComplete, onBack, onOpenAPIKey }) {
+export default function LessonView({ lesson, progress, onComplete, onBack, onOpenAPIKey, onNavigate }) {
   const [phase, setPhase] = useState('grammar');
   const [exerciseIndex, setExerciseIndex] = useState(0);
   const [scores, setScores] = useState([]);
@@ -226,7 +248,16 @@ export default function LessonView({ lesson, progress, onComplete, onBack, onOpe
       {phase === 'grammar' && (
         <GrammarCard lesson={lesson} onNext={() => setPhase('exercises')} speak={speak} />
       )}
-      {phase === 'exercises' && renderExercise()}
+      {phase === 'exercises' && (
+        <div>
+          {/* Subtle contextual hint during the exercise */}
+          <StudyNudge
+            exerciseType={lesson.exercises[exerciseIndex]?.type}
+            phaseInExercise={exerciseIndex}
+          />
+          {renderExercise()}
+        </div>
+      )}
       {phase === 'lessontest' && (
         <LessonTest
           lesson={lesson}
@@ -242,6 +273,7 @@ export default function LessonView({ lesson, progress, onComplete, onBack, onOpe
           onComplete={handleComplete}
           onRetry={handleRetry}
           onStartTest={() => setPhase('lessontest')}
+          onNavigate={onNavigate}
         />
       )}
     </div>

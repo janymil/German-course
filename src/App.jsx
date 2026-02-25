@@ -8,12 +8,14 @@ import VocabTrainer from './views/VocabTrainer';
 import GrammarGuide from './views/GrammarGuide';
 import MethodGuide from './views/MethodGuide';
 import PassivePhase from './views/PassivePhase';
+import ExerciseArena from './views/ExerciseArena';
 import { useProgress } from './hooks/useProgress';
 import { LESSONS, WEEKLY_PLAN } from './data/curriculum';
 import WeeklyTest from './views/WeeklyTest';
 import AIConversation from './views/AIConversation';
 import APIKeyModal from './components/APIKeyModal';
 import PlacementTest from './views/PlacementTest';
+import StudyCoachPage from './views/StudyCoachPage';
 
 export default function App() {
   const [activeView, setActiveView] = useState(() => {
@@ -75,7 +77,7 @@ export default function App() {
       )}
 
       <main className={`flex-1 overflow-y-auto ${activeView !== 'lesson' && activeView !== 'weeklytest' && activeView !== 'welcome' && activeView !== 'placement' ? 'pb-20 md:pb-0' : ''}`}>
-        <div className={`${activeView === 'welcome' ? '' : 'max-w-4xl mx-auto px-4 py-6'}`}>
+        <div className={`${activeView === 'welcome' ? '' : 'w-full mx-auto px-4 py-6'}`}>
           {showApiKey && <APIKeyModal onClose={() => setShowApiKey(false)} />}
 
           {activeView === 'welcome' && (
@@ -121,6 +123,7 @@ export default function App() {
               onComplete={handleCompleteLesson}
               onBack={handleBack}
               onOpenAPIKey={() => setShowApiKey(true)}
+              onNavigate={setActiveView}
             />
           )}
           {activeView === 'vocab' && (
@@ -130,13 +133,19 @@ export default function App() {
             />
           )}
           {activeView === 'grammar' && (
-            <GrammarGuide />
+            <GrammarGuide progress={progress} />
           )}
           {activeView === 'passive' && (
             <PassivePhase />
           )}
           {activeView === 'guide' && (
             <MethodGuide />
+          )}
+          {activeView === 'arena' && (
+            <ExerciseArena progress={progress} onNavigate={setActiveView} />
+          )}
+          {activeView === 'studycoach' && (
+            <StudyCoachPage />
           )}
           {activeView === 'weeklytest' && selectedWeekNum && (
             <WeeklyTest

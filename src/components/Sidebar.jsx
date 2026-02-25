@@ -1,5 +1,5 @@
 import React from 'react';
-import { Home, Calendar, Brain, BookOpen, HelpCircle, Headphones, MessageSquare, Key } from 'lucide-react';
+import { Home, Calendar, Brain, BookOpen, HelpCircle, Headphones, MessageSquare, Key, FlaskConical, Target, Lightbulb } from 'lucide-react';
 
 const NAV = [
   { id: 'dashboard', label: 'Prehľad', Icon: Home },
@@ -7,7 +7,10 @@ const NAV = [
   { id: 'passive', label: 'Pasívna fáza', Icon: Headphones },
   { id: 'vocab', label: 'Slovíčka', Icon: Brain },
   { id: 'grammar', label: 'Gramatika', Icon: BookOpen },
+  { id: 'arena', label: 'Aréna', Icon: Target },
   { id: 'chat', label: 'AI Konverzácia', Icon: MessageSquare },
+  { id: 'placement', label: 'Vstupný test', Icon: FlaskConical },
+  { id: 'studycoach', label: 'Study Coach', Icon: Lightbulb },
   { id: 'guide', label: 'Príručka', Icon: HelpCircle },
 ];
 

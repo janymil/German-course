@@ -2,6 +2,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import { LESSONS } from '../data/curriculum';
 import { Volume2, RotateCcw, CheckCircle, Brain, ChevronRight, ChevronLeft, LayoutGrid, CheckSquare, Edit3 } from 'lucide-react';
 import { useTTS } from '../hooks/useTTS';
+import { getExplanation } from '../hooks/useAI';
+import { normalizeGerman } from '../utils/text';
 
 function shuffle(arr) {
   const a = [...arr];
@@ -61,6 +63,8 @@ export default function VocabTrainer({ progress, onMarkVocab }) {
   const [gapInput, setGapInput] = useState('');
   const [gapChecked, setGapChecked] = useState(false);
   const [gapCorrect, setGapCorrect] = useState(false);
+  const [explanation, setExplanation] = useState(null);
+  const [loadingWhy, setLoadingWhy] = useState(false);
   const inputRef = useRef(null);
 
   const resetDeck = () => {
@@ -75,6 +79,8 @@ export default function VocabTrainer({ progress, onMarkVocab }) {
     setGapInput('');
     setGapChecked(false);
     setGapCorrect(false);
+    setExplanation(null);
+    setLoadingWhy(false);
   };
 
   useEffect(() => {
@@ -119,6 +125,7 @@ export default function VocabTrainer({ progress, onMarkVocab }) {
       setGapInput('');
       setGapChecked(false);
       setGapCorrect(false);
+      setExplanation(null);
     } else {
       setDone(true);
     }
@@ -147,7 +154,7 @@ export default function VocabTrainer({ progress, onMarkVocab }) {
   // Mode C handlers
   const handleGapCheck = () => {
     if (gapChecked || !gapInput.trim()) return;
-    const isCorrect = gapInput.trim().toLowerCase() === current.de.toLowerCase();
+    const isCorrect = normalizeGerman(gapInput) === normalizeGerman(current.de);
     setGapCorrect(isCorrect);
     setGapChecked(true);
     onMarkVocab(current.de, isCorrect);
@@ -205,6 +212,28 @@ export default function VocabTrainer({ progress, onMarkVocab }) {
           <RotateCcw size={16} />
           Ďalšia séria
         </button>
+
+        <div className="card mt-6 p-5 border-gray-800 bg-gray-900/40">
+          <div className="flex items-center gap-2 mb-4">
+            <LayoutGrid size={16} className="text-indigo-400" />
+            <p className="text-sm font-bold text-gray-300">SRS Pamäťová Mapa</p>
+          </div>
+          <div className="flex flex-wrap gap-1.5 justify-center">
+            {LESSONS.flatMap(l => l.vocab).map((v, i) => {
+              const seen = progress.vocabSeen?.[v.de];
+              let bg = 'bg-gray-800'; // unseen
+              if (seen) {
+                bg = seen.mastered ? 'bg-emerald-500' : 'bg-amber-500 hover:bg-amber-400';
+              }
+              return <div key={i} className={`w-3 h-3 sm:w-4 sm:h-4 rounded-sm ${bg} transition-colors`} title={v.de} />
+            })}
+          </div>
+          <div className="flex gap-4 mt-5 text-[10px] sm:text-xs justify-center font-medium text-gray-500">
+            <div className="flex items-center gap-1.5"><div className="w-2.5 h-2.5 bg-emerald-500 rounded-sm"></div> V pamäti</div>
+            <div className="flex items-center gap-1.5"><div className="w-2.5 h-2.5 bg-amber-500 rounded-sm"></div> Slabé miesta</div>
+            <div className="flex items-center gap-1.5"><div className="w-2.5 h-2.5 bg-gray-800 rounded-sm"></div> Nevidené</div>
+          </div>
+        </div>
       </div>
     );
   }
@@ -228,9 +257,8 @@ export default function VocabTrainer({ progress, onMarkVocab }) {
           <button
             key={id}
             onClick={() => handleModeChange(id)}
-            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium transition-all ${
-              mode === id ? 'bg-indigo-700 text-white' : 'bg-gray-800 text-gray-400 hover:text-gray-200'
-            }`}
+            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium transition-all ${mode === id ? 'bg-indigo-700 text-white' : 'bg-gray-800 text-gray-400 hover:text-gray-200'
+              }`}
           >
             <Icon size={14} />
             {label}
@@ -367,13 +395,45 @@ export default function VocabTrainer({ progress, onMarkVocab }) {
             })}
           </div>
           {mcqSelected !== null && (
-            <button
-              onClick={() => advance(mcqSelected === current.sk)}
-              className="w-full btn-primary flex items-center justify-center gap-2 py-3"
-            >
-              Ďalej
-              <ChevronRight size={16} />
-            </button>
+            <div className="space-y-3">
+              {mcqSelected !== current.sk && !explanation && (
+                <button
+                  onClick={async () => {
+                    setLoadingWhy(true);
+                    try {
+                      const res = await getExplanation({
+                        question: "Prelož do slovenčiny: " + current.de,
+                        correctAnswer: current.sk,
+                        userAnswer: mcqSelected
+                      });
+                      setExplanation(res);
+                    } catch (e) {
+                      setExplanation("Chyba API kľúča.");
+                    } finally {
+                      setLoadingWhy(false);
+                    }
+                  }}
+                  disabled={loadingWhy}
+                  className="w-full btn-secondary bg-amber-950/20 py-3 flex items-center justify-center gap-2 text-sm font-semibold border-amber-800 text-amber-500 hover:bg-amber-950/40 hover:border-amber-600 transition-all border border-dashed"
+                >
+                  <Brain size={16} className={loadingWhy ? "animate-pulse" : ""} />
+                  {loadingWhy ? 'Generujem...' : 'Prečo to je nesprávne?'}
+                </button>
+              )}
+              {explanation && (
+                <div className="bg-amber-950/40 border border-amber-800/50 rounded-xl p-4 animate-fade-in flex items-start gap-3 text-left">
+                  <Brain size={18} className="text-amber-400 flex-shrink-0 mt-0.5" />
+                  <p className="text-amber-200 text-sm leading-relaxed">{explanation}</p>
+                </div>
+              )}
+              <button
+                onClick={() => advance(mcqSelected === current.sk)}
+                className="w-full btn-primary flex items-center justify-center gap-2 py-3"
+              >
+                Ďalej
+                <ChevronRight size={16} />
+              </button>
+            </div>
           )}
         </>
       )}
@@ -396,13 +456,12 @@ export default function VocabTrainer({ progress, onMarkVocab }) {
                     {part}
                     {i < arr.length - 1 && (
                       <span
-                        className={`inline-block min-w-16 border-b-2 mx-1 font-black ${
-                          gapChecked
-                            ? gapCorrect
-                              ? 'text-emerald-400 border-emerald-500'
-                              : 'text-red-400 border-red-500'
-                            : 'text-indigo-300 border-indigo-500'
-                        }`}
+                        className={`inline-block min-w-16 border-b-2 mx-1 font-black ${gapChecked
+                          ? gapCorrect
+                            ? 'text-emerald-400 border-emerald-500'
+                            : 'text-red-400 border-red-500'
+                          : 'text-indigo-300 border-indigo-500'
+                          }`}
                       >
                         {gapChecked ? current.de : gapInput || '\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0'}
                       </span>
@@ -442,14 +501,45 @@ export default function VocabTrainer({ progress, onMarkVocab }) {
           ) : (
             <div className="space-y-3">
               <div
-                className={`rounded-2xl border px-4 py-3 text-sm font-medium text-center ${
-                  gapCorrect
-                    ? 'border-emerald-700 bg-emerald-950/30 text-emerald-300'
-                    : 'border-red-800 bg-red-950/20 text-red-400'
-                }`}
+                className={`rounded-2xl border px-4 py-3 text-sm font-medium text-center ${gapCorrect
+                  ? 'border-emerald-700 bg-emerald-950/30 text-emerald-300'
+                  : 'border-red-800 bg-red-950/20 text-red-400'
+                  }`}
               >
                 {gapCorrect ? '✓ Správne!' : `✗ Správna odpoveď: ${current.de}`}
               </div>
+
+              {!gapCorrect && !explanation && (
+                <button
+                  onClick={async () => {
+                    setLoadingWhy(true);
+                    try {
+                      const res = await getExplanation({
+                        question: "Prelož text/vetu do nemčiny: " + (gapSentence ? current.example : current.sk),
+                        correctAnswer: current.de,
+                        userAnswer: gapInput
+                      });
+                      setExplanation(res);
+                    } catch (e) {
+                      setExplanation("Chyba API kľúča.");
+                    } finally {
+                      setLoadingWhy(false);
+                    }
+                  }}
+                  disabled={loadingWhy}
+                  className="w-full btn-secondary bg-amber-950/20 py-3 flex items-center justify-center gap-2 text-sm font-semibold border-amber-800 text-amber-500 hover:bg-amber-950/40 hover:border-amber-600 transition-all border border-dashed"
+                >
+                  <Brain size={16} className={loadingWhy ? "animate-pulse" : ""} />
+                  {loadingWhy ? 'Generujem...' : 'Prečo to je nesprávne?'}
+                </button>
+              )}
+              {explanation && (
+                <div className="bg-amber-950/40 border border-amber-800/50 rounded-xl p-4 animate-fade-in flex items-start gap-3 text-left">
+                  <Brain size={18} className="text-amber-400 flex-shrink-0 mt-0.5" />
+                  <p className="text-amber-200 text-sm leading-relaxed">{explanation}</p>
+                </div>
+              )}
+
               <button
                 onClick={() => advance(gapCorrect)}
                 className="w-full btn-primary flex items-center justify-center gap-2 py-3"

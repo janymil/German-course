@@ -4,6 +4,7 @@
 import React, { useState, useRef } from 'react';
 import { CheckCircle, XCircle, Lightbulb, Volume2 } from 'lucide-react';
 import { useTTS } from '../../hooks/useTTS';
+import { normalizeGerman } from '../../utils/text';
 
 export function FillExercise({ exercise, onComplete }) {
   const questions = exercise.questions;
@@ -17,19 +18,19 @@ export function FillExercise({ exercise, onComplete }) {
   const { speak } = useTTS();
 
   const q = questions[qIndex];
-  const isCorrect = input.trim().toLowerCase() === q.answer.toLowerCase();
+  const isCorrect = normalizeGerman(input) === normalizeGerman(q.answer);
 
   const check = () => {
     if (!input.trim()) return;
     setChecked(true);
-    const correct = input.trim().toLowerCase() === q.answer.toLowerCase();
+    const correct = normalizeGerman(input) === normalizeGerman(q.answer);
     // Speak full correct sentence
     const fullSentence = q.sentence.replace('___', q.answer);
     speak(fullSentence);
   };
 
   const next = () => {
-    const correct = input.trim().toLowerCase() === q.answer.toLowerCase();
+    const correct = normalizeGerman(input) === normalizeGerman(q.answer);
     const newAnswers = [...answers, correct];
     setAnswers(newAnswers);
     if (qIndex < questions.length - 1) {
@@ -65,10 +66,9 @@ export function FillExercise({ exercise, onComplete }) {
       {/* Progress */}
       <div className="flex gap-1 mb-2">
         {questions.map((_, i) => (
-          <div key={i} className={`flex-1 h-1.5 rounded-full ${
-            i < qIndex ? (answers[i] ? 'bg-emerald-500' : 'bg-rose-500') :
-            i === qIndex ? 'bg-indigo-500' : 'bg-gray-700'
-          }`} />
+          <div key={i} className={`flex-1 h-1.5 rounded-full ${i < qIndex ? (answers[i] ? 'bg-emerald-500' : 'bg-rose-500') :
+              i === qIndex ? 'bg-indigo-500' : 'bg-gray-700'
+            }`} />
         ))}
       </div>
 

@@ -95,3 +95,24 @@ PRAVIDLÁ:
 
   return raw;
 }
+
+/**
+ * Get a contextual explanation for why an answer is incorrect.
+ */
+export async function getExplanation({ question, correctAnswer, userAnswer }) {
+  const system = `Si jazykový lektor nemčiny pre slovenských začiatočníkov (úroveň A1).
+Tvoja úloha: stručne, jasne a priateľsky vysvetliť v SLOVENČINE (nepoužívaj iný jazyk), prečo je odpoveď žiaka nesprávna a aké gramatické pravidlo porušil. Píš priamo k veci, max 2 vety.`;
+
+  const user = `Kontext / Otázka: "${question}"
+Správna nemecká odpoveď: "${correctAnswer}"
+Tvoja zvolená nesprávna odpoveď: "${userAnswer}"
+
+Povedz mi, prečo som urobil chybu.`;
+
+  const raw = await callOpenAI(
+    [{ role: 'system', content: system }, { role: 'user', content: user }],
+    { temperature: 0.3, max_tokens: 200 }
+  );
+
+  return raw;
+}

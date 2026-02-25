@@ -4,12 +4,7 @@
 import React, { useState, useRef } from 'react';
 import { Volume2, VolumeX, CheckCircle, XCircle, Play } from 'lucide-react';
 import { useTTS } from '../../hooks/useTTS';
-
-function normalize(s) {
-  return s.toLowerCase()
-    .replace(/ä/g, 'ae').replace(/ö/g, 'oe').replace(/ü/g, 'ue').replace(/ß/g, 'ss')
-    .replace(/[.,!?;:]/g, '').trim();
-}
+import { normalizeGerman } from '../../utils/text';
 
 export function ListenExercise({ exercise, onComplete }) {
   const questions = exercise.questions;
@@ -37,10 +32,10 @@ export function ListenExercise({ exercise, onComplete }) {
     speak(q.de, 'de-DE', 0.9);
   };
 
-  const isCorrect = normalize(input) === normalize(q.de);
+  const isCorrect = normalizeGerman(input) === normalizeGerman(q.de);
 
   const next = () => {
-    const correct = normalize(input) === normalize(q.de);
+    const correct = normalizeGerman(input) === normalizeGerman(q.de);
     const newAnswers = [...answers, correct];
     setAnswers(newAnswers);
     if (qIndex < questions.length - 1) {
@@ -74,10 +69,9 @@ export function ListenExercise({ exercise, onComplete }) {
       {/* Progress */}
       <div className="flex gap-1">
         {questions.map((_, i) => (
-          <div key={i} className={`flex-1 h-1.5 rounded-full ${
-            i < qIndex ? (answers[i] ? 'bg-emerald-500' : 'bg-rose-500') :
-            i === qIndex ? 'bg-sky-500' : 'bg-gray-700'
-          }`} />
+          <div key={i} className={`flex-1 h-1.5 rounded-full ${i < qIndex ? (answers[i] ? 'bg-emerald-500' : 'bg-rose-500') :
+              i === qIndex ? 'bg-sky-500' : 'bg-gray-700'
+            }`} />
         ))}
       </div>
 
@@ -87,9 +81,8 @@ export function ListenExercise({ exercise, onComplete }) {
       <div className="flex flex-col items-center justify-center gap-4 bg-gray-800 border border-gray-700 rounded-2xl p-10">
         <button
           onClick={playAudio}
-          className={`w-24 h-24 rounded-full border-4 flex items-center justify-center transition-all ${
-            speaking ? 'border-sky-500 bg-sky-950/60 scale-110' : 'border-gray-600 bg-gray-700 hover:bg-gray-600 hover:border-sky-600'
-          }`}
+          className={`w-24 h-24 rounded-full border-4 flex items-center justify-center transition-all ${speaking ? 'border-sky-500 bg-sky-950/60 scale-110' : 'border-gray-600 bg-gray-700 hover:bg-gray-600 hover:border-sky-600'
+            }`}
         >
           <Volume2 size={40} className={speaking ? 'text-sky-400' : 'text-gray-300'} />
         </button>

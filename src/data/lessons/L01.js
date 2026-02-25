@@ -43,15 +43,15 @@
       { letter: 'N', name: 'en', example: 'nein' },
       { letter: 'O', name: 'oh', example: 'die Oma' },
       { letter: 'P', name: 'pay', example: 'die Post' },
-      { letter: 'Q', name: 'koo', example: 'die Quelle' },
+      { letter: 'Q', name: 'koo', example: 'das Quiz' },
       { letter: 'R', name: 'er', example: 'richtig' },
       { letter: 'S', name: 'es', example: 'die Stadt' },
       { letter: 'T', name: 'tay', example: 'der Tag' },
       { letter: 'U', name: 'oo', example: 'und' },
       { letter: 'V', name: 'fow', example: 'der Vogel' },
       { letter: 'W', name: 'vay', example: 'Wien' },
-      { letter: 'X', name: 'iks', example: 'die Hexe' },
-      { letter: 'Y', name: 'oepsilon', example: 'yoga' },
+      { letter: 'X', name: 'iks', example: 'das Taxi' },
+      { letter: 'Y', name: 'oepsilon', example: 'das Yoga' },
       { letter: 'Z', name: 'tset', example: 'das Zimmer' },
       { letter: 'Ä', name: 'ae', example: 'die Ärztin' },
       { letter: 'Ö', name: 'oe', example: 'Österreich' },
@@ -221,8 +221,8 @@
     {
       de: "lang",
       sk: "dlhý",
-      example: "Das Wort 'Donaudampfschifffahrtsgesellschaft\' ist sehr lang.",
-      exampleSk: "Slovo 'Donaudampfschifffahrtsgesellschaft\' je veľmi dlhé.",
+      example: "Das Wort 'Entschuldigung' ist sehr lang.",
+      exampleSk: "Slovo 'Entschuldigung' je veľmi dlhé.",
       gender: null,
       srsId: "L01_V14",
       recycledFrom: []
@@ -354,7 +354,7 @@
         {
           question: "Jana vypĺňa formulár. Recepčná sa pýta: 'Wie schreibt man das?\' Čo to znamená?",
           options: [
-            "Ako sa to vyslubuje?",
+            "Ako sa to vyslovuje?",
             "Ako sa to píše?",
             "Čo to znamená?",
             "Kde to je?"
@@ -507,7 +507,7 @@
       type: 'minitext',
       instruction: 'Prečítaj si krátky text o Jane. Potom odpovedaj na otázky.',
       text: 'Jana Nováková kommt aus der Slowakei. Sie arbeitet jetzt in Wien. Am ersten Tag fragt die Rezeptionistin: „Wie heißen Sie?“ Jana antwortet: „Ich heiße Jana Nováková.“ — „Können Sie Ihren Familiennamen buchstabieren?“ — „Ja, natürlich. N-O-V-Á-K-O-V-Á.“ — „Danke! Das ist richtig.“ Jana lächelt. Der erste Tag in Wien beginnt.',
-      textSk: 'Jana Nováková pochádza zo Slovenska. Teraz pracuje vo Viedni. V prvý deň sa recepčná pýta: „Ako sa voláte?“ Jana odpovedá: „Volám sa Jana Nováková.“ — „Môžete nahláskovať vaše priezvisko?“ — „Áno, samozrejme. N-O-V-Á-K-O-V-Á.“ — „Äakujem! To je správne.“ Jana sa usmeva. Prvý deň vo Viedni začína.',
+      textSk: 'Jana Nováková pochádza zo Slovenska. Teraz pracuje vo Viedni. V prvý deň sa recepčná pýta: „Ako sa voláte?“ Jana odpovedá: „Volám sa Jana Nováková.“ — „Môžete nahláskovať vaše priezvisko?“ — „Áno, samozrejme. N-O-V-Á-K-O-V-Á.“ — „Ďakujem! To je správne.“ Jana sa usmeva. Prvý deň vo Viedni začína.',
       questions: [
         {
           question: 'Woher kommt Jana Nováková?',
