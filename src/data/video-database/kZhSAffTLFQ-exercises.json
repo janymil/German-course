@@ -1,0 +1,373 @@
+{
+  "topics": [
+    {
+      "title": "Sich vorstellen und Herkunft",
+      "description": "Predstavenie sa a pôvod",
+      "exercises": [
+        {
+          "type": "fill",
+          "sentence": "Ich ___ Sam.",
+          "answer": "heiße",
+          "explanation": "Sloveso 'heißen' (volám sa) v prvej osobe jednotného čísla."
+        },
+        {
+          "type": "wordorder",
+          "words": [
+            "komme",
+            "ich",
+            "aus",
+            "Amerika"
+          ],
+          "correct": "ich komme aus Amerika",
+          "explanation": "Správny slovosled pre vyjadrenie pôvodu."
+        },
+        {
+          "type": "mcq",
+          "question": "Ich heiße Anna. Du ___ Sam.",
+          "options": [
+            "heiße",
+            "heißt",
+            "komme",
+            "kommt"
+          ],
+          "answer": 1,
+          "explanation": "Sloveso 'heißen' (volám sa) v druhej osobe jednotného čísla."
+        },
+        {
+          "type": "fill",
+          "sentence": "Ich komme ___ Amerika.",
+          "answer": "aus",
+          "explanation": "Predložka 'aus' sa používa na vyjadrenie pôvodu (z)."
+        },
+        {
+          "type": "wordorder",
+          "words": [
+            "kommst",
+            "du",
+            "aus",
+            "amerika"
+          ],
+          "correct": "du kommst aus amerika",
+          "explanation": "Správny slovosled pre otázku o pôvode."
+        }
+      ]
+    },
+    {
+      "title": "Wohnen und Orte",
+      "description": "Bývanie a miesta",
+      "exercises": [
+        {
+          "type": "fill",
+          "sentence": "Sie wohnen zusammen ___ Berlin.",
+          "answer": "in",
+          "explanation": "Predložka 'in' sa používa pre miesta (v)."
+        },
+        {
+          "type": "wordorder",
+          "words": [
+            "wohnen",
+            "hier",
+            "ja",
+            "anna",
+            "und",
+            "sascha"
+          ],
+          "correct": "sascha und anna wohnen hier ja",
+          "explanation": "Správny slovosled pre vyjadrenie, kto kde býva."
+        },
+        {
+          "type": "mcq",
+          "question": "Ich wohne ___ Amerika.",
+          "options": [
+            "in",
+            "aus",
+            "neben",
+            "von"
+          ],
+          "answer": 2,
+          "explanation": "Predložka 'neben' znamená 'vedľa'."
+        },
+        {
+          "type": "fill",
+          "sentence": "Wo ___ die Girls?",
+          "answer": "sind",
+          "explanation": "Sloveso 'sein' (byť) v tretej osobe množného čísla."
+        },
+        {
+          "type": "wordorder",
+          "words": [
+            "wohnen",
+            "sie",
+            "zusammen",
+            "in",
+            "berlin"
+          ],
+          "correct": "sie wohnen zusammen in berlin",
+          "explanation": "Správny slovosled pre vyjadrenie, že niekto býva spolu v meste."
+        }
+      ]
+    },
+    {
+      "title": "Fragen stellen",
+      "description": "Kladenie otázok",
+      "exercises": [
+        {
+          "type": "mcq",
+          "question": "___ bist du denn?",
+          "options": [
+            "Was",
+            "Wo",
+            "Wer",
+            "Wie"
+          ],
+          "answer": 2,
+          "explanation": "'Wer' sa používa na otázku o osobe (kto)."
+        },
+        {
+          "type": "fill",
+          "sentence": "Was ___ das?",
+          "answer": "ist",
+          "explanation": "Sloveso 'sein' (byť) v tretej osobe jednotného čísla."
+        },
+        {
+          "type": "wordorder",
+          "words": [
+            "hast",
+            "du",
+            "hunger"
+          ],
+          "correct": "hast du hunger",
+          "explanation": "Správny slovosled pre otázku 'Máš hlad?'."
+        },
+        {
+          "type": "mcq",
+          "question": "___ ist denn mit dir los?",
+          "options": [
+            "Wer",
+            "Wo",
+            "Was",
+            "Wie"
+          ],
+          "answer": 2,
+          "explanation": "'Was' sa používa na otázku o veci alebo situácii (čo)."
+        },
+        {
+          "type": "fill",
+          "sentence": "Sascha, alles ___?",
+          "answer": "okay",
+          "explanation": "Fráza 'alles okay' znamená 'všetko v poriadku'."
+        }
+      ]
+    },
+    {
+      "title": "Essen und Trinken",
+      "description": "Jedlo a nápoje",
+      "exercises": [
+        {
+          "type": "fill",
+          "sentence": "Hast du ___?",
+          "answer": "Hunger",
+          "explanation": "'Hunger haben' znamená 'mať hlad'."
+        },
+        {
+          "type": "wordorder",
+          "words": [
+            "was",
+            "zu",
+            "essen",
+            "kaufen",
+            "wir"
+          ],
+          "correct": "wir kaufen dir was zu essen",
+          "explanation": "Správny slovosled pre vyjadrenie, že niečo kúpime na jedenie."
+        },
+        {
+          "type": "mcq",
+          "question": "Was ist dein ___?",
+          "options": [
+            "Essen",
+            "Trinken",
+            "Lieblingsessen",
+            "Hunger"
+          ],
+          "answer": 2,
+          "explanation": "'Lieblingsessen' znamená 'obľúbené jedlo'."
+        },
+        {
+          "type": "fill",
+          "sentence": "Er hat unsere ___ zurückgebracht.",
+          "answer": "Milch",
+          "explanation": "'Milch' je mlieko."
+        },
+        {
+          "type": "wordorder",
+          "words": [
+            "currywurst",
+            "lieblingsessen",
+            "ist",
+            "mein"
+          ],
+          "correct": "mein lieblingsessen ist currywurst",
+          "explanation": "Správny slovosled pre vyjadrenie obľúbeného jedla."
+        }
+      ]
+    },
+    {
+      "title": "Besitz und Zugehörigkeit",
+      "description": "Vlastníctvo a príslušnosť",
+      "exercises": [
+        {
+          "type": "fill",
+          "sentence": "Niemand darf ___ Fahrrad anfassen.",
+          "answer": "mein",
+          "explanation": "'Mein' je privlastňovacie zámeno pre 'moje'."
+        },
+        {
+          "type": "wordorder",
+          "words": [
+            "mutter",
+            "meiner",
+            "von",
+            "ein",
+            "brief"
+          ],
+          "correct": "ein brief von meiner mutter",
+          "explanation": "Správny slovosled pre vyjadrenie, od koho je list."
+        },
+        {
+          "type": "mcq",
+          "question": "___ Gepäck ist unsinn.",
+          "options": [
+            "Mein",
+            "Dein",
+            "Ihr",
+            "Unser"
+          ],
+          "answer": 0,
+          "explanation": "'Mein' je privlastňovacie zámeno pre 'moje'."
+        },
+        {
+          "type": "fill",
+          "sentence": "Er hat ___ Milch zurückgebracht.",
+          "answer": "unsere",
+          "explanation": "'Unsere' je privlastňovacie zámeno pre 'naše'."
+        },
+        {
+          "type": "wordorder",
+          "words": [
+            "eltern",
+            "meinen",
+            "mit",
+            "dunas"
+          ],
+          "correct": "dunas mit meinen eltern",
+          "explanation": "Správny slovosled pre vyjadrenie 's mojimi rodičmi'."
+        }
+      ]
+    },
+    {
+      "title": "Verneinung und Imperativ",
+      "description": "Zápor a rozkazovací spôsob",
+      "exercises": [
+        {
+          "type": "fill",
+          "sentence": "Nimm mich bitte ___!",
+          "answer": "nicht",
+          "explanation": "'Nicht' sa používa na zápor (nie)."
+        },
+        {
+          "type": "wordorder",
+          "words": [
+            "niemand",
+            "anfassen",
+            "fahrrad",
+            "mein",
+            "darf"
+          ],
+          "correct": "niemand darf mein fahrrad anfassen",
+          "explanation": "Správny slovosled pre zápornú vetu s 'niemand'."
+        },
+        {
+          "type": "mcq",
+          "question": "___ mir die Post!",
+          "options": [
+            "Nimm",
+            "Gib",
+            "Sei",
+            "Komm"
+          ],
+          "answer": 1,
+          "explanation": "'Gib' je rozkazovací spôsob od 'geben' (daj)."
+        },
+        {
+          "type": "fill",
+          "sentence": "___ Autos.",
+          "answer": "keine",
+          "explanation": "'Keine' je záporný člen pre množné číslo (žiadne)."
+        },
+        {
+          "type": "wordorder",
+          "words": [
+            "sofort",
+            "raus",
+            "kommt"
+          ],
+          "correct": "kommt sofort raus",
+          "explanation": "Správny slovosled pre rozkaz 'Poďte hneď von!'."
+        }
+      ]
+    },
+    {
+      "title": "Beschreibungen und Zustände",
+      "description": "Opisy a stavy",
+      "exercises": [
+        {
+          "type": "fill",
+          "sentence": "Der Typ ist ___.",
+          "answer": "komisch",
+          "explanation": "'Komisch' znamená 'divný/zvláštny'."
+        },
+        {
+          "type": "wordorder",
+          "words": [
+            "total",
+            "witzig",
+            "ist",
+            "nick"
+          ],
+          "correct": "nick ist total witzig",
+          "explanation": "Správny slovosled pre opis osoby."
+        },
+        {
+          "type": "mcq",
+          "question": "Mir ist ___. Ich gehe duschen.",
+          "options": [
+            "kalt",
+            "müde",
+            "heiß",
+            "langweilig"
+          ],
+          "answer": 2,
+          "explanation": "'Heiß' znamená 'horúco'."
+        },
+        {
+          "type": "fill",
+          "sentence": "Anna ist Nick ___.",
+          "answer": "verliebt",
+          "explanation": "'Verliebt sein' znamená 'byť zamilovaný'."
+        },
+        {
+          "type": "wordorder",
+          "words": [
+            "reich",
+            "total",
+            "bist",
+            "du"
+          ],
+          "correct": "du bist total reich",
+          "explanation": "Správny slovosled pre opis bohatstva."
+        }
+      ]
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { Send, CheckCircle, XCircle, Sparkles, RotateCcw, Key, Lightbulb } from 'lucide-react';
 import { checkWriting } from '../../hooks/useAI';
 
@@ -7,14 +7,15 @@ import { checkWriting } from '../../hooks/useAI';
  * Exercise data shape:
  *   { type: 'writing', prompts: [{ sk: 'Povedz po nemecky: Volám sa Jana.', context: 'Predstavovanie sa' }] }
  */
-export default function WritingChecker({ exercise, lesson, onComplete, onOpenAPIKey }) {
+export default function WritingChecker({ exercise, lesson, onComplete, onOpenAPIKey, savedState, onProgress }) {
   const prompts = exercise.prompts || [];
-  const [idx, setIdx] = useState(0);
+  const [idx, setIdx] = useState(savedState?.idx || 0);
   const [input, setInput] = useState('');
   const [result, setResult] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-  const [scores, setScores] = useState([]); // track correct/wrong per prompt
+  const [scores, setScores] = useState(savedState?.scores || []);
+  const [hintVisible, setHintVisible] = useState(false);
 
   const current = prompts[idx];
   const isLast = idx === prompts.length - 1;
@@ -43,17 +44,36 @@ export default function WritingChecker({ exercise, lesson, onComplete, onOpenAPI
     }
   }
 
-  function handleNext() {
+  const handleNext = useCallback(() => {
     if (isLast) {
       const correct = [...scores, result?.correct].filter(Boolean).length;
       onComplete?.({ scores: [...scores, result?.correct], correct, total: prompts.length });
     } else {
-      setIdx(i => i + 1);
+      const newIdx = idx + 1;
+      const newScores = [...scores, result?.correct];
+      setIdx(newIdx);
+      setScores(newScores);
       setInput('');
       setResult(null);
       setError(null);
+      setHintVisible(false);
+      // Save progress so returning to the lesson resumes here
+      onProgress?.({ idx: newIdx, scores: newScores });
     }
-  }
+  }, [isLast, scores, result, onComplete, prompts.length, idx, onProgress]);
+
+  // Allow pressing Enter to advance to next question after result is shown
+  const handleKeyDown = useCallback((e) => {
+    if (e.key === 'Enter' && result && !loading) {
+      e.preventDefault();
+      handleNext();
+    }
+  }, [result, loading, handleNext]);
+
+  useEffect(() => {
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [handleKeyDown]);
 
   function handleRetry() {
     setInput('');
@@ -75,9 +95,8 @@ export default function WritingChecker({ exercise, lesson, onComplete, onOpenAPI
         {prompts.map((_, i) => (
           <div
             key={i}
-            className={`h-1 flex-1 rounded-full transition-all ${
-              i < idx ? 'bg-indigo-500' : i === idx ? 'bg-violet-500' : 'bg-gray-800'
-            }`}
+            className={`h-1 flex-1 rounded-full transition-all ${i < idx ? 'bg-indigo-500' : i === idx ? 'bg-violet-500' : 'bg-gray-800'
+              }`}
           />
         ))}
       </div>
@@ -87,10 +106,23 @@ export default function WritingChecker({ exercise, lesson, onComplete, onOpenAPI
         <p className="text-xs text-gray-500 uppercase tracking-wider font-semibold mb-2">Preložte do nemčiny</p>
         <p className="text-white text-lg font-semibold leading-snug">{current.sk}</p>
         {current.hint && (
-          <p className="text-xs text-gray-600 mt-2 flex items-center gap-1">
-            <Lightbulb size={11} />
-            {current.hint}
-          </p>
+          <div className="mt-3">
+            {hintVisible ? (
+              <p className="text-xs text-gray-400 mt-2 flex items-center gap-1 bg-gray-900/50 inline-flex px-3 py-1.5 rounded-lg border border-gray-700/50">
+                <Lightbulb size={12} className="text-yellow-500" />
+                {current.hint}
+              </p>
+            ) : (
+              <button 
+                onClick={() => setHintVisible(true)}
+                className="text-xs text-gray-500 hover:text-gray-300 mt-2 flex items-center gap-1.5 transition-colors"
+                title="Zobraziť nápovedu"
+              >
+                <Lightbulb size={12} />
+                <span>Nápoveda (začiatok vety)</span>
+              </button>
+            )}
+          </div>
         )}
       </div>
 
@@ -110,13 +142,12 @@ export default function WritingChecker({ exercise, lesson, onComplete, onOpenAPI
           <button
             onClick={handleCheck}
             disabled={!input.trim() || loading}
-            className={`w-full py-3.5 rounded-2xl font-bold text-sm flex items-center justify-center gap-2 transition-all ${
-              loading
-                ? 'bg-violet-900/50 text-violet-400 cursor-wait'
-                : input.trim()
+            className={`w-full py-3.5 rounded-2xl font-bold text-sm flex items-center justify-center gap-2 transition-all ${loading
+              ? 'bg-violet-900/50 text-violet-400 cursor-wait'
+              : input.trim()
                 ? 'bg-violet-600 hover:bg-violet-500 text-white'
                 : 'bg-gray-800 text-gray-600 cursor-not-allowed'
-            }`}
+              }`}
           >
             {loading ? (
               <><span className="animate-spin inline-block w-4 h-4 border-2 border-violet-400 border-t-transparent rounded-full" /> AI kontroluje…</>
@@ -152,11 +183,10 @@ export default function WritingChecker({ exercise, lesson, onComplete, onOpenAPI
 
       {/* Result */}
       {result && (
-        <div className={`rounded-2xl border p-5 space-y-4 ${
-          result.correct
-            ? 'bg-emerald-950/30 border-emerald-700/40'
-            : 'bg-red-950/20 border-red-800/30'
-        }`}>
+        <div className={`rounded-2xl border p-5 space-y-4 ${result.correct
+          ? 'bg-emerald-950/30 border-emerald-700/40'
+          : 'bg-red-950/20 border-red-800/30'
+          }`}>
           {/* Verdict */}
           <div className="flex items-center gap-2">
             {result.correct
@@ -211,9 +241,10 @@ export default function WritingChecker({ exercise, lesson, onComplete, onOpenAPI
             )}
             <button
               onClick={handleNext}
-              className="flex-1 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-sm transition-all"
+              className="flex-1 py-2.5 px-4 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-sm transition-all flex items-center justify-center gap-2"
             >
               {isLast ? 'Dokončiť cvičenie' : 'Ďalšia veta →'}
+              {!isLast && <span className="text-[10px] opacity-50 font-normal border border-white/20 rounded px-1 py-0.5">Enter ↵</span>}
             </button>
           </div>
         </div>

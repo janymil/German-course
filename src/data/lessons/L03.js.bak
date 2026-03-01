@@ -1,0 +1,376 @@
+export const lesson03 = {
+  id: 3,
+  week: 1,
+  day: 3,
+  title: "Woher kommst du?",
+  topic: "Odkiaľ pochádzaš? Krajiny, jazyky",
+  cefr: "A1",
+  xpReward: 15,
+  narrativeContext: "Jana meets a new colleague and they talk about where they are from and what languages they speak.",
+  communicativeGoal: "Po tejto lekcii viem povedať, odkiaľ pochádzam a aké jazyky ovládam.",
+  skillFocus: ["vocabulary", "grammar", "speaking"],
+  grammarNote: {
+    rule: "Slovesá 'sprechen' (hovoriť) a 'kommen aus' (pochádzať z)",
+    explanation: "Sloveso 'sprechen' (hovoriť) je nepravidelné. V druhej a tretej osobe jednotného čísla sa kmeňová samohláska 'e' mení na 'i' (du sprichst, er/sie/es spricht). Sloveso 'kommen' je pravidelné. Ak chceme povedať, odkiaľ pochádzame, používame ho vždy s predložkou 'aus' (napr. 'Ich komme aus der Slowakei' alebo 'aus Deutschland').",
+    examples: [
+      { de: "Ich spreche Slowakisch.", sk: "Hovorím po slovensky.", note: "Pravidelná 1. osoba." },
+      { de: "Sprichst du Deutsch?", sk: "Hovoríš po nemecky?", note: "Zmena e -> i v 2. osobe." },
+      { de: "Er spricht Englisch.", sk: "On hovorí po anglicky.", note: "Zmena e -> i v 3. osobe." },
+      { de: "Ich komme aus der Slowakei.", sk: "Pochádzam zo Slovenska.", note: "Predložka aus." },
+      { de: "Sie kommt aus Deutschland.", sk: "Ona pochádza z Nemecka." }
+    ],
+    slovakContrastNote: "V slovenčine používame predložku 'po' (po slovensky, po nemecky). V nemčine sa nepoužíva žiadna predložka, iba samotný názov jazyka, ktorý sa píše vždy s veľkým začiatočným písmenom (Slowakisch, Deutsch, Englisch)."
+  },
+  vocab: [
+    {
+      de: "sprechen",
+      sk: "hovoriť",
+      gender: null,
+      srsId: "L03_V01",
+      example: "Ich spreche Deutsch und Slowakisch.",
+      exampleSk: "Hovorím po nemecky a po slovensky.",
+      recycledFrom: []
+    },
+    {
+      de: "die Sprache",
+      sk: "jazyk (reč)",
+      gender: "F",
+      srsId: "L03_V02",
+      example: "Deutsch ist eine schöne Sprache.",
+      exampleSk: "Nemčina je pekný jazyk.",
+      recycledFrom: []
+    },
+    {
+      de: "Deutsch",
+      sk: "nemčina",
+      gender: "N",
+      srsId: "L03_V03",
+      example: "Wir lernen zusammen Deutsch.",
+      exampleSk: "Spolu sa učíme nemčinu.",
+      recycledFrom: []
+    },
+    {
+      de: "Slowakisch",
+      sk: "slovenčina",
+      gender: "N",
+      srsId: "L03_V04",
+      example: "Jana spricht Slowakisch.",
+      exampleSk: "Jana hovorí po slovensky.",
+      recycledFrom: []
+    },
+    {
+      de: "Englisch",
+      sk: "angličtina",
+      gender: "N",
+      srsId: "L03_V05",
+      example: "Sprichst du auch Englisch?",
+      exampleSk: "Hovoríš aj po anglicky?",
+      recycledFrom: []
+    },
+    {
+      de: "lernen",
+      sk: "učiť sa",
+      gender: null,
+      srsId: "L03_V06",
+      example: "Wir lernen Deutsch.",
+      exampleSk: "Učíme sa po nemecky.",
+      recycledFrom: []
+    },
+    {
+      de: "verstehen",
+      sk: "rozumieť",
+      gender: null,
+      srsId: "L03_V07",
+      example: "Ich verstehe die Frage nicht.",
+      exampleSk: "Nerozumiem tej otázke.",
+      recycledFrom: []
+    },
+    {
+      de: "ein bisschen",
+      sk: "trochu",
+      gender: null,
+      srsId: "L03_V08",
+      example: "Ich spreche nur ein bisschen Deutsch.",
+      exampleSk: "Hovorím len trochu po nemecky.",
+      recycledFrom: []
+    },
+    {
+      de: "Deutschland",
+      sk: "Nemecko",
+      gender: "N",
+      srsId: "L03_V09",
+      example: "Er kommt aus Deutschland.",
+      exampleSk: "Pochádza z Nemecka.",
+      recycledFrom: []
+    },
+    {
+      de: "die Schweiz",
+      sk: "Švajčiarsko",
+      gender: "F",
+      srsId: "L03_V10",
+      example: "Wir leben in der Schweiz.",
+      exampleSk: "Žijeme vo Švajčiarsku.",
+      recycledFrom: []
+    },
+    {
+      de: "Europa",
+      sk: "Európa",
+      gender: "N",
+      srsId: "L03_V11",
+      example: "Die Slowakei liegt in Europa.",
+      exampleSk: "Slovensko leží v Európe.",
+      recycledFrom: []
+    },
+    {
+      de: "die Welt",
+      sk: "svet",
+      gender: "F",
+      srsId: "L03_V12",
+      example: "Die Sprache öffnet die Welt.",
+      exampleSk: "Jazyk otvára svet.",
+      recycledFrom: []
+    },
+    {
+      de: "das Wort",
+      sk: "slovo",
+      gender: "N",
+      srsId: "L03_V13",
+      example: "Das Wort ist neu für mich.",
+      exampleSk: "Toto slovo je pre mňa nové.",
+      recycledFrom: []
+    },
+    {
+      de: "der Satz",
+      sk: "veta",
+      gender: "M",
+      srsId: "L03_V14",
+      example: "Dieser Satz ist nicht sehr lang.",
+      exampleSk: "Táto veta nie je veľmi dlhá.",
+      recycledFrom: []
+    },
+    {
+      de: "die Frage",
+      sk: "otázka",
+      gender: "F",
+      srsId: "L03_V15",
+      example: "Ich habe eine kurze Frage.",
+      exampleSk: "Mám krátku otázku.",
+      recycledFrom: []
+    },
+    {
+      de: "die Antwort",
+      sk: "odpoveď",
+      gender: "F",
+      srsId: "L03_V16",
+      example: "Ist deine Antwort richtig?",
+      exampleSk: "Je tvoja odpoveď správna?",
+      recycledFrom: []
+    },
+    {
+      de: "fragen",
+      sk: "pýtať sa",
+      gender: null,
+      srsId: "L03_V17",
+      example: "Darf ich dich etwas fragen?",
+      exampleSk: "Smiem sa ťa niečo opýtať?",
+      recycledFrom: []
+    },
+    {
+      de: "antworten",
+      sk: "odpovedať",
+      gender: null,
+      srsId: "L03_V18",
+      example: "Bitte antworte mir schnell.",
+      exampleSk: "Prosím, odpovedz mi rýchlo.",
+      recycledFrom: []
+    }
+  ],
+  exercises: [
+    {
+      type: "flashcard",
+      instruction: "Naštuduj si nové slovíčka a ich výslovnosť."
+    },
+    {
+      type: "match",
+      instruction: "Spoj slovíčka s ich slovenským prekladom.",
+      pairs: [
+        ["die Sprache", "jazyk (reč)"],
+        ["verstehen", "rozumieť"],
+        ["ein bisschen", "trochu"],
+        ["die Antwort", "odpoveď"],
+        ["fragen", "pýtať sa"],
+        ["die Welt", "svet"]
+      ]
+    },
+    {
+      type: "wordorder",
+      instruction: "Zostav správne vety podľa nemeckého slovosledu.",
+      sentences: [
+        {
+          words: ["Ich", "komme", "aus", "der", "Slowakei"],
+          correct: "Ich komme aus der Slowakei",
+          hint: "Pochádzam zo Slovenska.",
+          explanation: "Sloveso 'kommen' v 1. osobe je 'komme'. Predložka pre Slovensko je vždy 'aus der'."
+        },
+        {
+          words: ["Sprichst", "du", "auch", "Deutsch"],
+          correct: "Sprichst du auch Deutsch",
+          hint: "Hovoríš aj po nemecky?",
+          explanation: "Pri otázke bez opytovacieho zámena je sloveso na prvom mieste. Sloveso sprechen mení v 2. osobe 'e' na 'i' -> 'sprichst'."
+        },
+        {
+          words: ["Er", "spricht", "ein", "bisschen", "Englisch"],
+          correct: "Er spricht ein bisschen Englisch",
+          hint: "On hovorí trochu po anglicky.",
+          explanation: "Tretia osoba jednotného čísla od 'sprechen' je 'spricht'."
+        },
+        {
+          words: ["Wir", "lernen", "zusammen", "die", "Sprache"],
+          correct: "Wir lernen zusammen die Sprache",
+          hint: "Spolu sa učíme tento jazyk.",
+          explanation: "Sloveso 'lernen' je pravidelné. V množnom čísle 'wir' zostáva v základnom tvare '-en'."
+        }
+      ]
+    },
+    {
+      type: "fill",
+      instruction: "Doplň správny tvar slovesa do vety.",
+      questions: [
+        {
+          sentence: "Ich ___ nur ein bisschen Deutsch.",
+          answer: "spreche",
+          hint: "hovorím",
+          explanation: "Sloveso 'sprechen' má v 1. osobe (Ich) koncovku -e."
+        },
+        {
+          sentence: "Jana ___ aus der Slowakei.",
+          answer: "kommt",
+          hint: "pochádza",
+          explanation: "Pre 3. osobu (sie/ona) používame sloveso s koncovkou -t: 'kommt'."
+        },
+        {
+          sentence: "Er ___ die Frage nicht.",
+          answer: "versteht",
+          hint: "nerozumie",
+          explanation: "Sloveso 'verstehen' má v 3. osobe koncovku -t: 'versteht'."
+        },
+        {
+          sentence: "Wir ___ heute neue Wörter.",
+          answer: "lernen",
+          hint: "učíme sa",
+          explanation: "V 1. osobe množného čísla sa používa neurčitok slovesa 'lernen'."
+        }
+      ]
+    },
+    {
+      type: "listen",
+      instruction: "Pozorne počúvaj a napíš, čo počuješ.",
+      questions: [
+        { de: "sprechen", sk: "hovoriť" },
+        { de: "die Sprache", sk: "jazyk (reč)" },
+        { de: "ein bisschen", sk: "trochu" },
+        { de: "die Schweiz", sk: "Švajčiarsko" },
+        { de: "das Wort", sk: "slovo" },
+        { de: "verstehen", sk: "rozumieť" }
+      ]
+    },
+    {
+      type: "mcq",
+      instruction: "Vyber správnu možnosť.",
+      questions: [
+        {
+          question: "Ako povieš 'On hovorí' po nemecky?",
+          options: ["Er spreche", "Er sprecht", "Er spricht", "Er spracht"],
+          answer: 2,
+          explanation: "Sloveso 'sprechen' je nepravidelné a v 3. osobe mení kmeňovú samohlásku z 'e' na 'i' -> spricht."
+        },
+        {
+          question: "Ktorá predložka sa používa so slovesom 'kommen', ak hovoríme o krajine, z ktorej pochádzame?",
+          options: ["in", "zu", "auf", "aus"],
+          answer: 3,
+          explanation: "Na vyjadrenie pôvodu (odkiaľ) sa po nemecky vždy používa 'aus'."
+        },
+        {
+          question: "Čo znamená slovo 'die Welt'?",
+          options: ["slovo", "svet", "veta", "otázka"],
+          answer: 1,
+          explanation: "'die Welt' znamená presne 'svet'."
+        },
+        {
+          question: "Ktorý tvar slovesa 'lernen' je správny pre zámeno 'wir' (my)?",
+          options: ["Wir lernt", "Wir lernen", "Wir lerne", "Wir lernst"],
+          answer: 1,
+          explanation: "Pre 'wir' (my) sa obvykle používa plný tvar, teda neurčitok 'lernen'."
+        }
+      ]
+    },
+    {
+      type: "minitext",
+      instruction: "Prečítaj si krátky dialóg a odpovedz na otázky pod textom.",
+      text: "Lukas: Hallo, ich bin Lukas. Woher kommst du?\nJana: Hallo Lukas, ich bin Jana. Ich komme aus der Slowakei.\nLukas: Interessant! Und welche Sprachen sprichst du?\nJana: Ich spreche Slowakisch und Englisch. Jetzt lerne ich Deutsch.\nLukas: Du sprichst schon ein bisschen Deutsch! Ich komme aus der Schweiz. Ich spreche Deutsch und auch Englisch.\nJana: Sehr gut. Ich verstehe alles. Das ist eine schöne Sprache.",
+      textSk: "Lukas: Ahoj, ja som Lukas. Odkiaľ pochádzaš?\nJana: Ahoj Lukas, ja som Jana. Pochádzam zo Slovenska.\nLukas: Zaujímavé! A akými jazykmi hovoríš?\nJana: Hovorím po slovensky a anglicky. Teraz sa učím nemčinu.\nLukas: Už hovoríš trochu po nemecky! Ja pochádzam zo Švajčiarska. Hovorím po nemecky a tiež po anglicky.\nJana: Veľmi dobre. Všetkému rozumiem. Je to pekný jazyk.",
+      questions: [
+        {
+          question: "Odkiaľ pochádza Lukas?",
+          options: ["Z Nemecka", "Zo Slovenska", "Z Rakúska", "Zo Švajčiarska"],
+          answer: 3,
+          explanation: "Lukas v rozhovore prezrádza: 'Ich komme aus der Schweiz.'."
+        },
+        {
+          question: "Ktorý jazyk sa Jana aktuálne učí?",
+          options: ["Angličtinu", "Slovenčinu", "Nemčinu", "Taliančinu"],
+          answer: 2,
+          explanation: "Jana jasne hovorí: 'Jetzt lerne ich Deutsch.' (Teraz sa učím nemčinu)."
+        },
+        {
+          question: "Akými spoločnými jazykmi momentálne aspoň trochu hovoria obaja (Lukas a Jana)?",
+          options: ["Anglicky a francúzsky", "Nemecky a slovensky", "Nemecky a anglicky", "Švajčiarsky a anglicky"],
+          answer: 2,
+          explanation: "Pričom Jana začína s nemčinou, už 'ein bisschen' hovorí, a obaja explicitne potvrdzujú aj angličtinu ('Englisch')."
+        }
+      ]
+    },
+    {
+      type: "speaking",
+      instruction: "Pozorne si vypočuj tieto frázy a zopakuj ich vlastným tempom.",
+      phrases: [
+        {
+          de: "Woher kommst du?",
+          sk: "Odkiaľ pochádzaš?",
+          tip: "W = [v], r na konci slabiky sa mení na temné [a]"
+        },
+        {
+          de: "Ich komme aus der Slowakei.",
+          sk: "Pochádzam zo Slovenska.",
+          tip: "Všimni si výslovnosť 'aus' s úzkym [a]"
+        },
+        {
+          de: "Sprichst du Deutsch?",
+          sk: "Hovoríš po nemecky?",
+          tip: "Sp na začiatku = [šp]"
+        },
+        {
+          de: "Ich spreche nur ein bisschen.",
+          sk: "Hovorím len trochu.",
+          tip: "sch = [š], bisschen sa vyslovuje mäkko s dlhším [s]"
+        },
+        {
+          de: "Wir lernen zusammen Deutsch.",
+          sk: "Spolu sa učíme nemčinu.",
+          tip: "r uprostred je hrdelné, ch v 'Deutsch' znie ako naše [č]"
+        },
+        {
+          de: "Ich verstehe die Frage nicht.",
+          sk: "Nerozumiem tej otázke.",
+          tip: "v = [f]"
+        }
+      ]
+    }
+  ],
+  reviewWords: [
+    "woher",
+    "kommen",
+    "Land"
+  ],
+  lessonNotes: "Zameriavame sa na nepravidelné zmeny samohlásky pri slovese sprechen (e -> i) v 2. a 3. osobe jednotného čísla a predložku aus pri uvádzaní krajiny pôvodu."
+};

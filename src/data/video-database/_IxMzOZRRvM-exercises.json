@@ -1,0 +1,401 @@
+{
+  "topics": [
+    {
+      "title": "Sich vorstellen und beschreiben",
+      "description": "Cvičenia na predstavenie sa a opis osôb a vecí.",
+      "exercises": [
+        {
+          "type": "mcq",
+          "question": "Wähle die richtige Antwort: Ich heiße Anna. Ich bin ___.",
+          "options": [
+            "19",
+            "20",
+            "18",
+            "21"
+          ],
+          "answer": 0,
+          "explanation": "Anna sagt im Video: 'Ich bin 19'."
+        },
+        {
+          "type": "fill",
+          "sentence": "Ich bin 1 85 ___.",
+          "answer": "groß",
+          "explanation": "Die Person beschreibt ihre Größe mit 'groß'."
+        },
+        {
+          "type": "wordorder",
+          "words": [
+            "du",
+            "hast",
+            "wunderschöne",
+            "augen"
+          ],
+          "correct": "du hast wunderschöne augen",
+          "explanation": "Dies ist eine Beschreibung von Annas Augen."
+        },
+        {
+          "type": "mcq",
+          "question": "Was beschreibt Sam im Video?",
+          "options": [
+            "Er ist sehr sehr reich.",
+            "Er ist sehr sehr arm.",
+            "Er ist sehr sehr müde.",
+            "Er ist sehr sehr klein."
+          ],
+          "answer": 0,
+          "explanation": "Nick findet heraus, dass Sam 'sehr sehr reich ist'."
+        },
+        {
+          "type": "fill",
+          "sentence": "Bist du ___?",
+          "answer": "hübsch",
+          "explanation": "In den E-Mails wird gefragt: 'Bist du hübsch?'"
+        }
+      ]
+    },
+    {
+      "title": "Vorlieben und Abneigungen",
+      "description": "Cvičenia na vyjadrenie obľúbených a neobľúbených vecí.",
+      "exercises": [
+        {
+          "type": "mcq",
+          "question": "Was liebt Anna?",
+          "options": [
+            "Schokolade",
+            "Kaffee",
+            "Tee",
+            "Wasser"
+          ],
+          "answer": 0,
+          "explanation": "Anna sagt: 'Ich liebe Schokolade, Schokoladeneis, Schokoladentorte Berlin und Brot mit Nutella'."
+        },
+        {
+          "type": "fill",
+          "sentence": "Ich ___ schnelle Autos.",
+          "answer": "mag",
+          "explanation": "Die Person sagt: 'ich mag schnelle Autos'."
+        },
+        {
+          "type": "wordorder",
+          "words": [
+            "wir",
+            "tanzen",
+            "gerne"
+          ],
+          "correct": "wir tanzen gerne",
+          "explanation": "Die Mädchen in den E-Mails sagen, dass sie gerne tanzen."
+        },
+        {
+          "type": "mcq",
+          "question": "Was finden die Mädchen super?",
+          "options": [
+            "Millionäre",
+            "Autos",
+            "Häuser",
+            "Bücher"
+          ],
+          "answer": 0,
+          "explanation": "Die Mädchen schreiben: 'finden wir Millionäre super'."
+        }
+      ]
+    },
+    {
+      "title": "Fragen stellen",
+      "description": "Cvičenia na kladenie jednoduchých otázok.",
+      "exercises": [
+        {
+          "type": "mcq",
+          "question": "Was ist die Frage, die Anna stellt?",
+          "options": [
+            "Was macht Willen da?",
+            "Was macht Sam da?",
+            "Was macht Nick da?",
+            "Was macht Anna da?"
+          ],
+          "answer": 0,
+          "explanation": "Anna fragt: 'Was macht Willen da?'"
+        },
+        {
+          "type": "fill",
+          "sentence": "Was ___ denn das?",
+          "answer": "ist",
+          "explanation": "Dies ist eine allgemeine Frage: 'Was ist denn das?'"
+        },
+        {
+          "type": "wordorder",
+          "words": [
+            "bist",
+            "du",
+            "ein",
+            "millionär"
+          ],
+          "correct": "bist du ein millionär",
+          "explanation": "Diese Frage wird im Video mehrmals gestellt."
+        },
+        {
+          "type": "mcq",
+          "question": "Welche Frage wird in den E-Mails gestellt?",
+          "options": [
+            "Hast du eine hübsche Freundin?",
+            "Hast du ein schnelles Auto?",
+            "Hast du ein großes Haus?",
+            "Hast du einen Hund?"
+          ],
+          "answer": 0,
+          "explanation": "In den E-Mails wird gefragt: 'Hast du eine hübsche Freundin?'"
+        }
+      ]
+    },
+    {
+      "title": "Zahlen und Mengen",
+      "description": "Cvičenia na čísla a množstvá.",
+      "exercises": [
+        {
+          "type": "mcq",
+          "question": "Wie alt ist Anna?",
+          "options": [
+            "19",
+            "90",
+            "10",
+            "20"
+          ],
+          "answer": 0,
+          "explanation": "Anna sagt: 'Ich bin 19'."
+        },
+        {
+          "type": "fill",
+          "sentence": "Sie hat ___ katastrophale Antworten bekommen.",
+          "answer": "drei",
+          "explanation": "Anna hat 'drei katastrophale Antworten bekommen'."
+        },
+        {
+          "type": "wordorder",
+          "words": [
+            "wir",
+            "haben",
+            "bestimmt",
+            "1000",
+            "e",
+            "mail"
+          ],
+          "correct": "wir haben bestimmt 1000 e mail",
+          "explanation": "Nick und Sam haben viele E-Mails bekommen."
+        },
+        {
+          "type": "mcq",
+          "question": "Wie viele E-Mails haben sie bekommen?",
+          "options": [
+            "633",
+            "336",
+            "63",
+            "363"
+          ],
+          "answer": 0,
+          "explanation": "Sie haben '633 E-Mails' bekommen."
+        }
+      ]
+    },
+    {
+      "title": "Orte und Lokalisierung",
+      "description": "Cvičenia na miesta a určenie polohy.",
+      "exercises": [
+        {
+          "type": "mcq",
+          "question": "Woher kommen Sascha und Anna?",
+          "options": [
+            "aus Berlin",
+            "aus Hamburg",
+            "aus München",
+            "aus Köln"
+          ],
+          "answer": 0,
+          "explanation": "Die Geschichte ist 'von Sascha und Anna aus Berlin'."
+        },
+        {
+          "type": "fill",
+          "sentence": "Die Flasche mit dem Wasser ist ___ Bad.",
+          "answer": "im",
+          "explanation": "Die Flasche ist 'im Bad'."
+        },
+        {
+          "type": "wordorder",
+          "words": [
+            "im",
+            "internet",
+            "werben",
+            "ist",
+            "total",
+            "einfach"
+          ],
+          "correct": "im internet werben ist total einfach",
+          "explanation": "Es wird gesagt, dass es einfach ist, im Internet zu werben."
+        },
+        {
+          "type": "mcq",
+          "question": "Wo haben sie die E-Mails bekommen?",
+          "options": [
+            "im Internetcafé",
+            "im Büro",
+            "zu Hause",
+            "in der Schule"
+          ],
+          "answer": 0,
+          "explanation": "Sie haben die E-Mails 'im Internetcafé'."
+        }
+      ]
+    },
+    {
+      "title": "Aufforderungen und Bitten",
+      "description": "Cvičenia na príkazy a prosby.",
+      "exercises": [
+        {
+          "type": "mcq",
+          "question": "Was soll Sam nach dem Sport tun?",
+          "options": [
+            "Komm doch ins Fitnesscenter.",
+            "Geh doch nach Hause.",
+            "Iss doch etwas.",
+            "Schlaf doch."
+          ],
+          "answer": 0,
+          "explanation": "Es wird gesagt: 'Komm doch nach dem Sport Sam'."
+        },
+        {
+          "type": "fill",
+          "sentence": "___ mal die Waschmaschine an.",
+          "answer": "Mach",
+          "explanation": "Dies ist eine Aufforderung: 'Mach mal die Waschmaschine an'."
+        },
+        {
+          "type": "wordorder",
+          "words": [
+            "kannst",
+            "du",
+            "meine",
+            "pflanze",
+            "bitte",
+            "mit",
+            "wasser",
+            "besprühen"
+          ],
+          "correct": "kannst du meine pflanze bitte mit wasser besprühen",
+          "explanation": "Dies ist eine Bitte an Sam."
+        },
+        {
+          "type": "mcq",
+          "question": "Was ist eine Aufforderung im Video?",
+          "options": [
+            "Schreibt uns eine E-Mail.",
+            "Lest ein Buch.",
+            "Seht fern.",
+            "Geht spazieren."
+          ],
+          "answer": 0,
+          "explanation": "Die Mädchen fordern auf: 'Schreibt uns eine E-Mail'."
+        },
+        {
+          "type": "fill",
+          "sentence": "___ Panik, cool bleiben.",
+          "answer": "Keine",
+          "explanation": "Dies ist eine Beruhigung: 'Keine Panik'."
+        }
+      ]
+    },
+    {
+      "title": "Besitzanzeige",
+      "description": "Cvičenia na vyjadrenie vlastníctva.",
+      "exercises": [
+        {
+          "type": "mcq",
+          "question": "Wessen Pflanze soll besprüht werden?",
+          "options": [
+            "meine Pflanze",
+            "deine Pflanze",
+            "seine Pflanze",
+            "ihre Pflanze"
+          ],
+          "answer": 0,
+          "explanation": "Es wird gesagt: 'kannst du meine Pflanze bitte mit Wasser besprühen'."
+        },
+        {
+          "type": "fill",
+          "sentence": "___ Lächeln ist so süß.",
+          "answer": "Dein",
+          "explanation": "Es wird gesagt: 'Dein Lächeln ist so süß'."
+        },
+        {
+          "type": "wordorder",
+          "words": [
+            "dein",
+            "haar",
+            "glänzt",
+            "so",
+            "schön"
+          ],
+          "correct": "dein haar glänzt so schön",
+          "explanation": "Dies ist eine Beschreibung von Annas Haar."
+        },
+        {
+          "type": "mcq",
+          "question": "Wessen Haar glänzt so schön?",
+          "options": [
+            "Ihr Haar",
+            "Sein Haar",
+            "Mein Haar",
+            "Unser Haar"
+          ],
+          "answer": 0,
+          "explanation": "Es wird gesagt: 'Ihr Haar glänzt so schön'."
+        }
+      ]
+    },
+    {
+      "title": "Einfache Satzstrukturen und Konnektoren",
+      "description": "Cvičenia na jednoduché vetné štruktúry a spojky.",
+      "exercises": [
+        {
+          "type": "mcq",
+          "question": "Wähle den richtigen Konnektor: Er kann nicht sehr gut Deutsch sprechen, ___ er sieht total gut aus.",
+          "options": [
+            "aber",
+            "und",
+            "oder",
+            "weil"
+          ],
+          "answer": 0,
+          "explanation": "Der Satz lautet: 'aber er kann nicht sehr gut Deutsch sprechen, aber er sieht total gut aus'."
+        },
+        {
+          "type": "fill",
+          "sentence": "Das ___ die Geschichte von Sascha und Anna.",
+          "answer": "ist",
+          "explanation": "Dies ist eine einfache Aussage: 'Das ist die Geschichte'."
+        },
+        {
+          "type": "wordorder",
+          "words": [
+            "ich",
+            "bin",
+            "ein",
+            "absoluter",
+            "fan"
+          ],
+          "correct": "ich bin ein absoluter fan",
+          "explanation": "Anna stellt sich als Fan vor."
+        },
+        {
+          "type": "mcq",
+          "question": "Welcher Satz ist korrekt?",
+          "options": [
+            "Wir sind Nick und Sam.",
+            "Wir sind Nick und Anna.",
+            "Wir sind Sam und Anna.",
+            "Wir sind Sascha und Anna."
+          ],
+          "answer": 0,
+          "explanation": "Die Jungs stellen sich vor: 'Wir sind Nick und Sam'."
+        }
+      ]
+    }
+  ]
+}

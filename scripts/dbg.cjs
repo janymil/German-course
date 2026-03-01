@@ -1,0 +1,14 @@
+﻿const fs = require('fs');
+const raw = fs.readFileSync('src/data/lessons/L01.js', 'utf8');
+const c = raw.replace(/\r\n/g, '\n');
+const rwIdx = c.indexOf('\n  reviewWords:');
+const exIdx = c.lastIndexOf('\n  exercises: [', rwIdx);
+console.log('rwIdx:', rwIdx, 'exIdx:', exIdx);
+console.log('char at exIdx:', JSON.stringify(c.slice(exIdx, exIdx+20)));
+const arrOpen = exIdx + '\n  exercises: ['.length - 1;
+console.log('arrOpen:', arrOpen, 'char:', JSON.stringify(c[arrOpen]));
+const closeIdx = c.indexOf('\n  ],', arrOpen);
+console.log('closeIdx:', closeIdx);
+const exSection = c.slice(arrOpen+1, closeIdx);
+console.log('exSection first 50:', JSON.stringify(exSection.slice(0,50)));
+console.log('exSection last 50:', JSON.stringify(exSection.slice(-50)));

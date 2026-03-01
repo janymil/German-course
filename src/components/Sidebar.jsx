@@ -1,20 +1,32 @@
-import React from 'react';
-import { Home, Calendar, Brain, BookOpen, HelpCircle, Headphones, MessageSquare, Key, FlaskConical, Target, Lightbulb } from 'lucide-react';
+import React, { useState } from 'react';
+import { Home, Calendar, Brain, BookOpen, HelpCircle, Headphones, MessageSquare, Key, FlaskConical, Target, Lightbulb, Newspaper, MonitorPlay, LayoutList, Map, MoreHorizontal, X } from 'lucide-react';
 
 const NAV = [
   { id: 'dashboard', label: 'Prehľad', Icon: Home },
   { id: 'weekly', label: 'Plán', Icon: Calendar },
   { id: 'passive', label: 'Pasívna fáza', Icon: Headphones },
   { id: 'vocab', label: 'Slovíčka', Icon: Brain },
+  { id: 'stories', label: 'Čítanie', Icon: Newspaper },
+  { id: 'videocoach', label: 'Video Coach', Icon: MonitorPlay },
   { id: 'grammar', label: 'Gramatika', Icon: BookOpen },
   { id: 'arena', label: 'Aréna', Icon: Target },
   { id: 'chat', label: 'AI Konverzácia', Icon: MessageSquare },
   { id: 'placement', label: 'Vstupný test', Icon: FlaskConical },
   { id: 'studycoach', label: 'Study Coach', Icon: Lightbulb },
+  { id: 'features', label: 'Funkcie', Icon: LayoutList },
+  { id: 'roadmap', label: 'Roadmapa', Icon: Map },
   { id: 'guide', label: 'Príručka', Icon: HelpCircle },
 ];
 
+// Mobile: 5 main items shown + "More" expander
+const MOBILE_MAIN = ['dashboard', 'weekly', 'vocab', 'arena', 'grammar'];
+
 export default function Sidebar({ activeView, setActiveView, onOpenAPIKey }) {
+  const [mobileMore, setMobileMore] = useState(false);
+
+  const mobileMain = NAV.filter(n => MOBILE_MAIN.includes(n.id));
+  const mobileExtra = NAV.filter(n => !MOBILE_MAIN.includes(n.id));
+
   return (
     <>
       {/* Desktop sidebar */}
@@ -49,19 +61,54 @@ export default function Sidebar({ activeView, setActiveView, onOpenAPIKey }) {
         </div>
       </aside>
 
-      {/* Mobile bottom nav */}
-      <nav className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-gray-900/95 backdrop-blur border-t border-gray-800 flex">
-        {NAV.map(({ id, label, Icon }) => (
+      {/* Mobile bottom nav — 5 items + More */}
+      <nav className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-gray-900/95 backdrop-blur border-t border-gray-800">
+        {/* More panel */}
+        {mobileMore && (
+          <div className="absolute bottom-full left-0 right-0 bg-gray-900/98 backdrop-blur-lg border-t border-gray-800 shadow-2xl max-h-[60vh] overflow-y-auto">
+            <div className="flex items-center justify-between px-4 py-3 border-b border-gray-800">
+              <span className="text-sm font-bold text-white">Všetky nástroje</span>
+              <button onClick={() => setMobileMore(false)} className="text-gray-400 hover:text-white p-1">
+                <X size={18} />
+              </button>
+            </div>
+            <div className="grid grid-cols-3 gap-1 p-3">
+              {mobileExtra.map(({ id, label, Icon }) => (
+                <button
+                  key={id}
+                  onClick={() => { setActiveView(id); setMobileMore(false); }}
+                  className={`flex flex-col items-center justify-center gap-1.5 py-3 px-2 rounded-xl text-xs font-medium transition-all
+                    ${activeView === id ? 'bg-indigo-800/60 text-indigo-300' : 'text-gray-400 hover:text-white hover:bg-gray-800/50'}`}
+                >
+                  <Icon size={20} />
+                  <span className="leading-tight text-center">{label}</span>
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
+        {/* Main 5 items + More button */}
+        <div className="flex">
+          {mobileMain.map(({ id, label, Icon }) => (
+            <button
+              key={id}
+              onClick={() => { setActiveView(id); setMobileMore(false); }}
+              className={`flex-1 flex flex-col items-center justify-center gap-1 py-2.5 text-xs font-medium transition-all
+                ${activeView === id ? 'text-indigo-400' : 'text-gray-500 hover:text-gray-300'}`}
+            >
+              <Icon size={20} />
+              <span>{label}</span>
+            </button>
+          ))}
           <button
-            key={id}
-            onClick={() => setActiveView(id)}
+            onClick={() => setMobileMore(!mobileMore)}
             className={`flex-1 flex flex-col items-center justify-center gap-1 py-2.5 text-xs font-medium transition-all
-              ${activeView === id ? 'text-indigo-400' : 'text-gray-500 hover:text-gray-300'}`}
+              ${mobileMore || !MOBILE_MAIN.includes(activeView) ? 'text-indigo-400' : 'text-gray-500 hover:text-gray-300'}`}
           >
-            <Icon size={20} />
-            <span>{label}</span>
+            <MoreHorizontal size={20} />
+            <span>Viac</span>
           </button>
-        ))}
+        </div>
       </nav>
     </>
   );

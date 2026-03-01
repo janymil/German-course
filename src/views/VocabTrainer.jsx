@@ -1,9 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { LESSONS } from '../data/curriculum';
-import { Volume2, RotateCcw, CheckCircle, Brain, ChevronRight, ChevronLeft, LayoutGrid, CheckSquare, Edit3 } from 'lucide-react';
+import { Volume2, RotateCcw, CheckCircle, Brain, ChevronRight, ChevronLeft, LayoutGrid, CheckSquare, Edit3, Plus, X } from 'lucide-react';
 import { useTTS } from '../hooks/useTTS';
 import { getExplanation } from '../hooks/useAI';
 import { normalizeGerman } from '../utils/text';
+import { GenderWord, GenderText, GenderLegend, getGenderForWord, GENDER_COLORS } from '../utils/genderColors';
 
 function shuffle(arr) {
   const a = [...arr];
@@ -15,15 +16,36 @@ function shuffle(arr) {
 }
 
 function buildDeck(progress) {
+  const today = new Date().toISOString().slice(0, 10);
   const allVocab = LESSONS.flatMap((l) =>
-    l.vocab.map((v) => ({ ...v, lessonId: l.id, lessonTitle: l.title }))
+    l.vocab.map((v) => ({ ...v, lessonId: l.id, lessonTitle: l.title, source: 'lesson' }))
   );
-  // Prioritize: unseen first, then not-mastered, then mastered (review)
+  const customVocab = (progress.customVocab || []).map(v => ({ ...v, lessonTitle: 'Vlastné slovíčko', source: 'custom' }));
+  const combined = [...allVocab, ...customVocab];
   const vocabSeen = progress.vocabSeen || {};
-  const unseen = allVocab.filter((v) => !vocabSeen[v.de]);
-  const notMastered = allVocab.filter((v) => vocabSeen[v.de] && !vocabSeen[v.de].mastered);
-  const mastered = allVocab.filter((v) => vocabSeen[v.de]?.mastered);
-  return shuffle([...unseen, ...notMastered, ...shuffle(mastered).slice(0, 5)]);
+
+  // Sort cards into buckets:
+  // 1. Overdue (dueDate <= today) — most important, sorted by how overdue they are
+  // 2. Unseen — never reviewed
+  // 3. Due in future — not yet, show a few as preview
+  const getDaysOverdue = (v) => {
+    const due = vocabSeen[v.de]?.dueDate;
+    if (!due) return null; // unseen
+    return Math.ceil((new Date(today) - new Date(due)) / 86400000); // positive = overdue
+  };
+
+  const overdue = combined
+    .filter(v => { const d = getDaysOverdue(v); return d !== null && d >= 0; })
+    .sort((a, b) => (getDaysOverdue(b) || 0) - (getDaysOverdue(a) || 0));
+
+  const unseen = combined.filter(v => !vocabSeen[v.de]);
+
+  const upcoming = combined
+    .filter(v => { const d = getDaysOverdue(v); return d !== null && d < 0; })
+    .sort((a, b) => (getDaysOverdue(a) || 0) - (getDaysOverdue(b) || 0))
+    .slice(0, 5); // only a few preview cards
+
+  return [...overdue, ...unseen, ...upcoming];
 }
 
 function buildMCQOptions(current) {
@@ -46,7 +68,7 @@ const MODES = [
   { id: 'C', label: 'Doplňovanie', Icon: Edit3 },
 ];
 
-export default function VocabTrainer({ progress, onMarkVocab }) {
+export default function VocabTrainer({ progress, onMarkVocab, onMarkVocabWrong, onReviewVocab, onAddCustomVocab }) {
   const { speak } = useTTS();
   const [mode, setMode] = useState('A');
   const [deck, setDeck] = useState([]);
@@ -54,6 +76,8 @@ export default function VocabTrainer({ progress, onMarkVocab }) {
   const [flipped, setFlipped] = useState(false);
   const [sessionResults, setSessionResults] = useState({ known: 0, unknown: 0 });
   const [done, setDone] = useState(false);
+  const [againQueue, setAgainQueue] = useState([]); // Feature 2: cards to repeat at end of session
+  const [showStats, setShowStats] = useState(false); // Feature 5: stats panel
 
   // Mode B state
   const [mcqOptions, setMcqOptions] = useState([]);
@@ -67,6 +91,11 @@ export default function VocabTrainer({ progress, onMarkVocab }) {
   const [loadingWhy, setLoadingWhy] = useState(false);
   const inputRef = useRef(null);
 
+  // Custom vocab state
+  const [showAddForm, setShowAddForm] = useState(false);
+  const [newWordDe, setNewWordDe] = useState('');
+  const [newWordSk, setNewWordSk] = useState('');
+
   const resetDeck = () => {
     const d = buildDeck(progress);
     setDeck(d);
@@ -74,6 +103,7 @@ export default function VocabTrainer({ progress, onMarkVocab }) {
     setFlipped(false);
     setDone(false);
     setSessionResults({ known: 0, unknown: 0 });
+    setAgainQueue([]);
     setMcqOptions([]);
     setMcqSelected(null);
     setGapInput('');
@@ -108,18 +138,53 @@ export default function VocabTrainer({ progress, onMarkVocab }) {
     }
   }, [mode, index, deck]);
 
+  const today = new Date().toISOString().slice(0, 10);
   const current = deck[index];
   const vocabSeen = progress.vocabSeen || {};
   const totalMastered = Object.values(vocabSeen).filter((v) => v.mastered).length;
-  const allVocabCount = LESSONS.reduce((s, l) => s + l.vocab.length, 0);
+  const dueTodayCount = Object.entries(vocabSeen).filter(([, v]) => v.dueDate && v.dueDate <= today).length;
+  const customVocabCount = (progress.customVocab || []).length;
+  const allVocabCount = LESSONS.reduce((s, l) => s + l.vocab.length, 0) + customVocabCount;
+
+  // Feature 4: Due forecast for next 7 days
+  const dueForecast = (() => {
+    const forecast = {};
+    for (let i = 0; i <= 6; i++) {
+      const d = new Date(Date.now() + i * 86400000).toISOString().slice(0, 10);
+      forecast[d] = 0;
+    }
+    Object.values(vocabSeen).forEach(v => {
+      if (v.dueDate && forecast.hasOwnProperty(v.dueDate)) {
+        forecast[v.dueDate]++;
+      }
+    });
+    return forecast;
+  })();
+
+  // Feature 3: Leech detection (wrongCount >= 8)
+  const leeches = Object.entries(vocabSeen).filter(([, v]) => (v.wrongCount || 0) >= 8).map(([word]) => word);
+
+  // Feature 1 & 2: unified review + "Again" re-queue
+  const review = (quality) => {
+    if (current) (onReviewVocab || onMarkVocab)(current.de, quality);
+  };
 
   const advance = (isCorrect) => {
-    setSessionResults((r) => ({
+    setSessionResults(r => ({
       known: r.known + (isCorrect ? 1 : 0),
       unknown: r.unknown + (isCorrect ? 0 : 1),
     }));
-    if (index < deck.length - 1) {
-      setIndex(index + 1);
+
+    const nextIndex = index + 1;
+    const isLastCard = nextIndex >= deck.length;
+
+    if (!isCorrect && current) {
+      // Feature 2: append to end of deck for re-practice
+      setDeck(d => [...d, current]);
+    }
+
+    if (!isLastCard || !isCorrect) {
+      setIndex(nextIndex);
       setFlipped(false);
       setMcqSelected(null);
       setGapInput('');
@@ -139,25 +204,25 @@ export default function VocabTrainer({ progress, onMarkVocab }) {
     }
   };
 
-  const handleResult = (mastered) => {
-    onMarkVocab(current.de, mastered);
-    advance(mastered);
+  const handleResult = (quality) => {
+    review(quality);
+    advance(quality >= 3);
   };
 
-  // Mode B handlers
   const handleMCQSelect = (option) => {
     if (mcqSelected !== null) return;
     setMcqSelected(option);
-    onMarkVocab(current.de, option === current.sk);
+    const isCorrect = option === current.sk;
+    review(isCorrect ? 4 : 1);
+    setTimeout(() => advance(isCorrect), 900);
   };
 
-  // Mode C handlers
   const handleGapCheck = () => {
     if (gapChecked || !gapInput.trim()) return;
     const isCorrect = normalizeGerman(gapInput) === normalizeGerman(current.de);
     setGapCorrect(isCorrect);
     setGapChecked(true);
-    onMarkVocab(current.de, isCorrect);
+    review(isCorrect ? 4 : 1);
   };
 
   const handleGapKeyDown = (e) => {
@@ -171,13 +236,57 @@ export default function VocabTrainer({ progress, onMarkVocab }) {
     resetDeck();
   };
 
-  // --- Empty state ---
   if (deck.length === 0) {
     return (
       <div className="max-w-md mx-auto text-center py-20">
         <Brain size={48} className="text-gray-600 mx-auto mb-4" />
         <p className="text-gray-400 text-lg">Žiadne slovíčka na precvičenie.</p>
-        <p className="text-gray-600 text-sm mt-2">Choď si urobiť nejakú lekciu najprv!</p>
+        <p className="text-gray-600 text-sm mt-2 mb-6">Choď si urobiť nejakú lekciu najprv!</p>
+
+        {onAddCustomVocab && (
+          <button
+            onClick={() => setShowAddForm(true)}
+            className="btn-secondary rounded-xl font-bold py-3 text-sm flex gap-2 items-center justify-center mx-auto"
+          >
+            <Plus size={16} /> Alebo si pridaj vlastné slovo
+          </button>
+        )}
+
+        {showAddForm && (
+          <div className="bg-gray-900 border border-gray-700/50 rounded-2xl p-4 mt-4 animate-fade-in space-y-3 max-w-sm mx-auto text-left">
+            <p className="text-sm font-semibold text-gray-300 flex justify-between">
+              Pridať vlastné slovíčko
+              <button onClick={() => setShowAddForm(false)} className="text-gray-500 hover:text-white"><X size={16} /></button>
+            </p>
+            <div className="grid grid-cols-1 gap-2">
+              <input
+                value={newWordDe} onChange={e => setNewWordDe(e.target.value)}
+                placeholder="Nemecky (napr. das Auto)"
+                className="bg-gray-800 border border-gray-700 rounded-xl px-3 py-2 text-sm text-white focus:border-indigo-500 focus:outline-none"
+              />
+              <input
+                value={newWordSk} onChange={e => setNewWordSk(e.target.value)}
+                placeholder="Slovensky (napr. auto)"
+                className="bg-gray-800 border border-gray-700 rounded-xl px-3 py-2 text-sm text-white focus:border-indigo-500 focus:outline-none"
+              />
+            </div>
+            <button
+              onClick={() => {
+                if (newWordDe.trim() && newWordSk.trim() && onAddCustomVocab) {
+                  onAddCustomVocab(newWordDe.trim(), newWordSk.trim());
+                  setNewWordDe('');
+                  setNewWordSk('');
+                  setShowAddForm(false);
+                  setTimeout(() => resetDeck(), 100);
+                }
+              }}
+              disabled={!newWordDe.trim() || !newWordSk.trim()}
+              className="w-full bg-indigo-600 hover:bg-indigo-500 disabled:opacity-50 text-white font-semibold py-2 rounded-xl text-sm transition-colors"
+            >
+              Uložiť slovíčko
+            </button>
+          </div>
+        )}
       </div>
     );
   }
@@ -248,23 +357,125 @@ export default function VocabTrainer({ progress, onMarkVocab }) {
           <Brain size={20} className="text-indigo-400" />
           <h2 className="text-lg font-bold text-white">Tréner slovíčok</h2>
         </div>
-        <span className="text-sm text-gray-500">{index + 1} / {deck.length}</span>
+        <div className="flex items-center gap-2">
+          <button
+            onClick={() => setShowStats(s => !s)}
+            className={`text-sm flex items-center gap-1 px-2.5 py-1 rounded-full border transition-all ${showStats ? 'bg-indigo-700 border-indigo-500 text-white' : 'bg-gray-800 border-gray-700 text-gray-400 hover:text-white'
+              }`}
+            title="Štatistiky & forecast"
+          >
+            📊
+          </button>
+          <span className="text-sm text-gray-500">{index + 1} / {deck.length}</span>
+        </div>
       </div>
 
-      {/* Mode selector */}
-      <div className="flex gap-2">
-        {MODES.map(({ id, label, Icon }) => (
+      {/* Feature 5: Stats panel */}
+      {showStats && (
+        <div className="bg-gray-900/70 border border-gray-700 rounded-2xl p-4 space-y-3">
+          <p className="text-xs font-bold text-gray-400 uppercase tracking-widest">📅 SRS Forecast — nasledujúcich 7 dní</p>
+          <div className="grid grid-cols-7 gap-1">
+            {Object.entries(dueForecast).map(([date, count], i) => (
+              <div key={date} className="text-center">
+                <div
+                  className={`rounded-lg py-1.5 text-sm font-bold transition-all ${i === 0 ? 'bg-amber-500/30 border border-amber-500/50 text-amber-300' :
+                    count > 0 ? 'bg-indigo-900/60 text-indigo-300' : 'bg-gray-800 text-gray-600'
+                    }`}
+                >
+                  {count}
+                </div>
+                <div className="text-[9px] text-gray-600 mt-0.5">
+                  {i === 0 ? 'Dnes' : i === 1 ? 'Zajtra' : `+${i}d`}
+                </div>
+              </div>
+            ))}
+          </div>
+          {leeches.length > 0 && (
+            <div className="bg-red-950/40 border border-red-800/50 rounded-xl p-3">
+              <p className="text-xs font-bold text-red-400 mb-1.5">🩸 Problémové slovíčka ({leeches.length})</p>
+              <div className="flex flex-wrap gap-1.5">
+                {leeches.map(word => (
+                  <span key={word} className="bg-red-900/40 text-red-300 text-xs px-2 py-0.5 rounded-full border border-red-800/40">{word}</span>
+                ))}
+              </div>
+              <p className="text-[10px] text-gray-500 mt-2">Tieto slová si pamätáš ťažko. Skús mnemotechniku alebo obrázkovú asociáciu.</p>
+            </div>
+          )}
+          <div className="flex gap-3 text-xs">
+            <div className="flex-1 bg-gray-800/60 rounded-xl p-2.5 text-center">
+              <p className="text-lg font-bold text-emerald-400">{totalMastered}</p>
+              <p className="text-gray-500">V pamäti</p>
+            </div>
+            <div className="flex-1 bg-gray-800/60 rounded-xl p-2.5 text-center">
+              <p className="text-lg font-bold text-amber-400">{dueTodayCount}</p>
+              <p className="text-gray-500">Dnes</p>
+            </div>
+            <div className="flex-1 bg-gray-800/60 rounded-xl p-2.5 text-center">
+              <p className="text-lg font-bold text-gray-300">{allVocabCount - totalMastered}</p>
+              <p className="text-gray-500">Ostatok</p>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Mode selector & Custom Word */}
+      <div className="flex items-center justify-between">
+        <div className="flex gap-2">
+          {MODES.map(({ id, label, Icon }) => (
+            <button
+              key={id}
+              onClick={() => handleModeChange(id)}
+              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium transition-all ${mode === id ? 'bg-indigo-700 text-white' : 'bg-gray-800 text-gray-400 hover:text-gray-200'
+                }`}
+            >
+              <Icon size={14} />
+              <span className="hidden sm:inline">{label}</span>
+            </button>
+          ))}
+        </div>
+        {onAddCustomVocab && (
           <button
-            key={id}
-            onClick={() => handleModeChange(id)}
-            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium transition-all ${mode === id ? 'bg-indigo-700 text-white' : 'bg-gray-800 text-gray-400 hover:text-gray-200'
-              }`}
+            onClick={() => setShowAddForm(!showAddForm)}
+            className="text-indigo-400 hover:text-indigo-300 flex items-center gap-1 text-sm font-medium transition-colors bg-indigo-900/30 px-3 py-1.5 rounded-full border border-indigo-500/30"
           >
-            <Icon size={14} />
-            {label}
+            {showAddForm ? <X size={14} /> : <Plus size={14} />}
+            Pridať
           </button>
-        ))}
+        )}
       </div>
+
+      {showAddForm && (
+        <div className="bg-gray-900 border border-indigo-500/50 rounded-2xl p-4 animate-fade-in space-y-3">
+          <p className="text-sm font-semibold text-gray-300">Pridať vlastné slovíčko</p>
+          <div className="grid grid-cols-2 gap-2">
+            <input
+              value={newWordDe} onChange={e => setNewWordDe(e.target.value)}
+              placeholder="Nemecky (napr. Katze)"
+              className="bg-gray-800 border border-gray-700 rounded-xl px-3 py-2 text-sm text-white focus:border-indigo-500 focus:outline-none"
+            />
+            <input
+              value={newWordSk} onChange={e => setNewWordSk(e.target.value)}
+              placeholder="Slovensky (napr. mačka)"
+              className="bg-gray-800 border border-gray-700 rounded-xl px-3 py-2 text-sm text-white focus:border-indigo-500 focus:outline-none"
+            />
+          </div>
+          <button
+            onClick={() => {
+              if (newWordDe.trim() && newWordSk.trim() && onAddCustomVocab) {
+                onAddCustomVocab(newWordDe.trim(), newWordSk.trim());
+                setNewWordDe('');
+                setNewWordSk('');
+                setShowAddForm(false);
+                setTimeout(() => resetDeck(), 100);
+              }
+            }}
+            disabled={!newWordDe.trim() || !newWordSk.trim()}
+            className="w-full bg-indigo-600 hover:bg-indigo-500 disabled:opacity-50 text-white font-semibold py-2 rounded-xl text-sm transition-colors"
+          >
+            Uložiť slovíčko
+          </button>
+        </div>
+      )}
 
       {/* Progress bar */}
       <div className="h-1.5 bg-gray-800 rounded-full overflow-hidden">
@@ -275,10 +486,18 @@ export default function VocabTrainer({ progress, onMarkVocab }) {
       </div>
 
       {/* Stats bar */}
-      <div className="flex gap-3 text-xs">
-        <span className="text-emerald-400 font-semibold">{sessionResults.known} ✓</span>
-        <span className="text-red-400 font-semibold">{sessionResults.unknown} ✗</span>
-        <span className="text-gray-500 ml-auto">{totalMastered} zvládnutých celkovo</span>
+      <div className="flex gap-3 text-xs items-center">
+        <span className="text-emerald-400 font-bold">{sessionResults.known} ✓</span>
+        <span className="text-red-400 font-bold">{sessionResults.unknown} ✗</span>
+        <span className="text-indigo-300 font-semibold">
+          {sessionResults.known + sessionResults.unknown} kariet tejto session
+        </span>
+        {dueTodayCount > 0 && (
+          <span className="bg-amber-500/20 text-amber-300 border border-amber-600/40 rounded-full px-2 py-0.5 font-semibold">
+            🔔 {dueTodayCount} dnes
+          </span>
+        )}
+        <span className="text-gray-600 ml-auto">{totalMastered} zvládnutých celkovo</span>
       </div>
 
       {/* ── MODE A: Flashcard ── */}
@@ -289,7 +508,10 @@ export default function VocabTrainer({ progress, onMarkVocab }) {
             className={`relative rounded-3xl border min-h-52 flex flex-col items-center justify-center p-8 transition-all duration-300 select-none
               ${!flipped ? 'cursor-pointer hover:border-indigo-600 border-gray-700 bg-gray-900' : 'border-indigo-700 bg-indigo-950/30'}`}
           >
-            <span className="absolute top-4 left-4 text-xs text-gray-600">{current.lessonTitle}</span>
+            {/* [Agent 4] Source tag */}
+            <span className="absolute top-4 left-4 text-xs text-gray-600">
+              {current.source === 'story' ? `📖 ${current.storyTitle || 'Príbeh'}` : `📚 ${current.lessonTitle}`}
+            </span>
             {vocabSeen[current.de]?.mastered && (
               <span className="absolute top-4 right-4 flex items-center gap-1 text-xs text-emerald-500">
                 <CheckCircle size={12} /> zvládnuté
@@ -297,13 +519,30 @@ export default function VocabTrainer({ progress, onMarkVocab }) {
             )}
             {!flipped ? (
               <div className="text-center">
-                <p className="text-4xl font-black text-white mb-3">{current.de}</p>
+                {current.image && (
+                  <img
+                    src={current.image}
+                    alt={current.de}
+                    className="w-28 h-28 object-cover rounded-2xl mx-auto mb-4 ring-2 ring-indigo-700/40 shadow-lg"
+                    onError={e => { e.target.style.display = 'none'; }}
+                  />
+                )}
+                <p className="text-4xl font-black mb-2">
+                  {(() => { const g = getGenderForWord(current.de); return g ? <span className={GENDER_COLORS[g].text}>{current.de}</span> : <span className="text-white">{current.de}</span>; })()}
+                </p>
+                {(vocabSeen[current.de]?.wrongCount || 0) >= 8 && (
+                  <span className="inline-flex items-center gap-1 text-[10px] bg-red-900/50 text-red-400 border border-red-800/50 rounded-full px-2 py-0.5 mb-2">
+                    🩸 Problémové slovícko
+                  </span>
+                )}
                 <p className="text-gray-500 text-sm">Klikni pre preklad</p>
                 <Volume2 size={16} className="text-indigo-400 mx-auto mt-3 animate-pulse" />
               </div>
             ) : (
               <div className="text-center w-full">
-                <p className="text-2xl font-bold text-white mb-1">{current.de}</p>
+                <p className="text-2xl font-bold mb-1">
+                  {(() => { const g = getGenderForWord(current.de); return g ? <span className={GENDER_COLORS[g].text}>{current.de}</span> : <span className="text-white">{current.de}</span>; })()}
+                </p>
                 <button
                   onClick={() => speak(current.de)}
                   className="mb-4 flex items-center gap-2 mx-auto bg-indigo-800/60 hover:bg-indigo-700/60 rounded-xl px-3 py-1.5 transition-all"
@@ -317,27 +556,35 @@ export default function VocabTrainer({ progress, onMarkVocab }) {
                     className="mt-3 bg-gray-800/60 rounded-xl px-4 py-2 text-sm text-gray-400 cursor-pointer hover:bg-gray-800 transition-all"
                     onClick={() => speak(current.example)}
                   >
-                    <span className="text-indigo-300">„{current.example}"</span>
+                    <span className="text-indigo-300">„<GenderText text={current.example} />“</span>
                   </div>
                 )}
               </div>
             )}
           </div>
           {flipped ? (
-            <div className="grid grid-cols-2 gap-3">
+            <div className="grid grid-cols-3 gap-2">
               <button
-                onClick={() => handleResult(false)}
-                className="btn-secondary border-red-900 hover:border-red-700 hover:bg-red-950/30 text-red-400 flex items-center justify-center gap-2 py-4"
+                onClick={() => handleResult(1)}
+                className="btn-secondary border-red-900 hover:border-red-700 hover:bg-red-950/30 text-red-400 flex flex-col items-center justify-center gap-1 py-3 text-sm"
               >
-                <ChevronLeft size={18} />
-                Nevedel som
+                <ChevronLeft size={16} />
+                <span>Nevedel</span>
+                <span className="text-[10px] text-gray-600">+1 deň</span>
               </button>
               <button
-                onClick={() => handleResult(true)}
-                className="btn-primary bg-emerald-700 hover:bg-emerald-600 border-emerald-600 flex items-center justify-center gap-2 py-4"
+                onClick={() => handleResult(3)}
+                className="btn-secondary border-amber-800 hover:border-amber-600 hover:bg-amber-950/20 text-amber-300 flex flex-col items-center justify-center gap-1 py-3 text-sm"
               >
-                Vedel som
-                <ChevronRight size={18} />
+                <span>Vedel</span>
+                <span className="text-[10px] text-gray-600">+{vocabSeen[current?.de]?.interval || 1}d</span>
+              </button>
+              <button
+                onClick={() => handleResult(5)}
+                className="btn-primary bg-emerald-700 hover:bg-emerald-600 border-emerald-600 flex flex-col items-center justify-center gap-1 py-3 text-sm"
+              >
+                <span>Ľahké!</span>
+                <span className="text-[10px] text-emerald-300">dlhší interval</span>
               </button>
             </div>
           ) : (
@@ -365,7 +612,9 @@ export default function VocabTrainer({ progress, onMarkVocab }) {
               <Volume2 size={14} className="text-indigo-300" />
               <span className="text-xs text-indigo-200">Počuť výslovnosť</span>
             </button>
-            <p className="text-4xl font-black text-white">{current.de}</p>
+            <p className="text-4xl font-black">
+              {(() => { const g = getGenderForWord(current.de); return g ? <span className={GENDER_COLORS[g].text}>{current.de}</span> : <span className="text-white">{current.de}</span>; })()}
+            </p>
             <p className="text-gray-500 text-sm mt-2">Vyber správny preklad</p>
           </div>
           <div className="grid grid-cols-2 gap-3">

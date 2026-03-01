@@ -14,6 +14,7 @@ import WritingChecker from '../components/exercises/WritingChecker';
 import { useTTS } from '../hooks/useTTS';
 import StudyNudge from '../components/StudyCoach';
 import SegmentIntending from '../components/SegmentIntending';
+import { GenderText, GenderWord, GenderLegend } from '../utils/genderColors';
 
 const PHASES = ['grammar', 'exercises', 'results', 'lessontest'];
 
@@ -34,39 +35,53 @@ function exName(ex, i) {
 }
 
 function GrammarCard({ lesson, onNext, speak }) {
-  const { grammarNote } = lesson;
+  const notes = lesson.grammarNotes || (lesson.grammarNote ? [lesson.grammarNote] : []);
+
   return (
     <div className="max-w-xl mx-auto space-y-6">
-      <div className="card border-violet-800 bg-violet-950/30">
-        <div className="flex items-center gap-2 mb-4">
-          <BookOpen size={18} className="text-violet-400" />
-          <span className="font-bold text-violet-300">Gramatická poznámka</span>
+      {lesson.heroImage && (
+        <div className="rounded-3xl overflow-hidden border-2 border-indigo-900/50 shadow-2xl shadow-indigo-900/20 mb-6">
+          <img src={lesson.heroImage} alt={lesson.title} className="w-full h-48 sm:h-64 object-cover" />
         </div>
-        <h3 className="text-xl font-bold text-white mb-2">{grammarNote.rule}</h3>
-        <p className="text-gray-300 text-sm leading-relaxed mb-4">{grammarNote.explanation}</p>
+      )}
 
-        <div className="space-y-2">
-          <p className="text-xs text-gray-500 uppercase tracking-wider font-semibold">Príklady</p>
-          {grammarNote.examples.map((ex, i) => (
-            <button
-              key={i}
-              onClick={() => speak(ex.de)}
-              className="w-full text-left flex items-start gap-3 bg-gray-800/60 hover:bg-gray-800 rounded-xl p-3 transition-all group"
-            >
-              <Volume2 size={14} className="text-indigo-400 flex-shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
-              <div>
-                <p className="text-white text-sm font-medium">{ex.de}</p>
-                <p className="text-gray-400 text-xs">{ex.sk}</p>
-              </div>
-            </button>
-          ))}
+      {notes.map((note, noteIdx) => (
+        <div key={noteIdx} className="card border-violet-800 bg-violet-950/30">
+          <div className="flex items-center gap-2 mb-4">
+            <BookOpen size={18} className="text-violet-400" />
+            <span className="font-bold text-violet-300">Gramatická poznámka {notes.length > 1 ? noteIdx + 1 : ''}</span>
+          </div>
+          <h3 className="text-xl font-bold text-white mb-2">{note.rule}</h3>
+          <p className="text-gray-300 text-sm leading-relaxed mb-4" dangerouslySetInnerHTML={{ __html: note.explanation }}></p>
+
+          {(note.examples && note.examples.length > 0) && (
+            <div className="space-y-2">
+              <p className="text-xs text-gray-500 uppercase tracking-wider font-semibold">Príklady</p>
+              {note.examples.map((ex, i) => (
+                <button
+                  key={i}
+                  onClick={() => speak(ex.de)}
+                  className="w-full text-left flex items-start gap-3 bg-gray-800/60 hover:bg-gray-800 rounded-xl p-3 transition-all group"
+                >
+                  <Volume2 size={14} className="text-indigo-400 flex-shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
+                  <div>
+                    <p className="text-white text-sm font-medium"><GenderText text={ex.de} /></p>
+                    <p className="text-gray-400 text-xs">{ex.sk}</p>
+                  </div>
+                </button>
+              ))}
+            </div>
+          )}
         </div>
-      </div>
+      ))}
 
       <div className="card border-indigo-800/40 bg-indigo-950/20">
+        <GenderLegend className="mb-3" />
         <p className="text-sm text-gray-300 mb-3">
           <span className="text-indigo-400 font-semibold">Slovíčka v tejto lekcii:</span>{' '}
-          {lesson.vocab.slice(0, 5).map((v) => v.de).join(', ')}
+          {lesson.vocab.slice(0, 5).map((v, vi) => (
+            <span key={vi}>{vi > 0 && ', '}<GenderWord word={v.de} gender={v.gender} className="text-gray-300" /></span>
+          ))}
           {lesson.vocab.length > 5 && <span className="text-gray-500"> + {lesson.vocab.length - 5} ďalších</span>}
         </p>
         <p className="text-xs text-gray-500">Najprv si prečítaj gramatiku, potom precvičuj cvičeniami.</p>
@@ -162,20 +177,33 @@ function ResultsScreen({ lesson, scores, avgScore, onComplete, onRetry, onStartT
   );
 }
 
-export default function LessonView({ lesson, progress, onComplete, onBack, onOpenAPIKey, onNavigate }) {
-  const [phase, setPhase] = useState('grammar');
-  const [exerciseIndex, setExerciseIndex] = useState(0);
-  const [scores, setScores] = useState([]);
+export default function LessonView({ lesson, progress, saveLessonState, onComplete, onBack, onOpenAPIKey, onNavigate }) {
+  const savedState = progress?.lessonStates?.[lesson.id];
+  const [phase, setPhase] = useState(savedState?.phase || 'grammar');
+  const [exerciseIndex, setExerciseIndex] = useState(savedState?.exerciseIndex || 0);
+  const [scores, setScores] = useState(savedState?.scores || []);
+  const [exState, setExState] = useState(savedState?.exState || null);
   const { speak } = useTTS();
+
+  React.useEffect(() => {
+    if (saveLessonState && phase !== 'results') {
+      saveLessonState(lesson.id, { phase, exerciseIndex, scores, exState, mode: 'classic' });
+    }
+  }, [phase, exerciseIndex, scores, exState, lesson.id, saveLessonState]);
 
   const handleExerciseDone = (score) => {
     const newScores = [...scores, Math.round(score)];
     setScores(newScores);
+    setExState(null); // Clear mid-exercise state when advancing
     if (exerciseIndex < lesson.exercises.length - 1) {
       setExerciseIndex(exerciseIndex + 1);
     } else {
       setPhase('results');
     }
+  };
+
+  const handleSubProgress = (stateUpdate) => {
+    setExState(stateUpdate);
   };
 
   const avgScore = scores.length > 0 ? scores.reduce((a, b) => a + b, 0) / scores.length : 0;
@@ -192,7 +220,11 @@ export default function LessonView({ lesson, progress, onComplete, onBack, onOpe
 
   const renderExercise = () => {
     const ex = lesson.exercises[exerciseIndex];
-    const props = { onComplete: handleExerciseDone };
+    const props = {
+      onComplete: handleExerciseDone,
+      onProgress: handleSubProgress,
+      savedState: exState
+    };
     switch (ex.type) {
       case 'flashcard': return <FlashcardExercise exercise={ex} lesson={lesson} {...props} />;
       case 'mcq': return <MCQExercise exercise={ex} {...props} />;
@@ -203,7 +235,7 @@ export default function LessonView({ lesson, progress, onComplete, onBack, onOpe
       case 'speaking': return <SpeakingExercise exercise={ex} lesson={lesson} {...props} />;
       case 'wordorder': return <WordOrderExercise exercise={ex} lesson={lesson} {...props} />;
       case 'minitext': return <MiniTextExercise exercise={ex} lesson={lesson} {...props} />;
-      case 'writing': return <WritingChecker exercise={ex} lesson={lesson} onOpenAPIKey={onOpenAPIKey} onComplete={result => handleExerciseDone(result ? Math.round((result.correct / result.total) * 100) : 50)} />;
+      case 'writing': return <WritingChecker exercise={ex} lesson={lesson} onOpenAPIKey={onOpenAPIKey} savedState={exState} onProgress={handleSubProgress} onComplete={result => handleExerciseDone(result ? Math.round((result.correct / result.total) * 100) : 50)} />;
       default: return <div className="text-red-400">Neznámy typ cvičenia: {ex.type}</div>;
     }
   };

@@ -8,12 +8,13 @@ import {
 } from 'lucide-react';
 import { LESSONS } from '../data/curriculum';
 import { useTTS } from '../hooks/useTTS';
+import { callGemini } from '../hooks/useAI';
 
 // ─── Helpers ────────────────────────────────────────────────────────────────
 const rnd = (arr) => arr[Math.floor(Math.random() * arr.length)];
 const shuf = (arr) => [...arr].sort(() => Math.random() - 0.5);
-const norm = (s = '') => s.toLowerCase().replace(/[^a-zäöüß]/g, '');
-const getKey = () => localStorage.getItem('openai_api_key') || '';
+const norm = (s = '') => s.toLowerCase().replace(/ä/g, 'ae').replace(/ö/g, 'oe').replace(/ü/g, 'ue').replace(/ß/g, 'ss').replace(/[^a-z0-9]/g, '');
+const getKey = () => import.meta.env.VITE_GEMINI_API_KEY || localStorage.getItem('gemini_api_key') || '';
 
 // Extract phonetic items: examples with [phonetic] notation → dictation from phonetic
 function phoneticItems(lesson) {
@@ -145,27 +146,41 @@ function buildPool(sourceLessons, allUnlocked) {
 }
 
 // AI: generate extra exercises for a lesson
-async function fetchAIExercises(lesson) {
-    const key = getKey();
-    if (!key) return [];
-    const system = `Si učiteľ nemčiny. Vygeneruj 5 cvičení pre lekciu "${lesson.title}" (téma: ${lesson.topic}) na úrovni A1. 
-Odpovedaj VÝHRADNE JSON poľom bez markdown. Každý objekt má: {"type":"translation","de":"nemecké slovo/veta","sk":"slovenský preklad"}
-Použi len jednoduchú A1 slovnú zásobu súvisiacu s témou lekcie.`;
+async function fetchAIExercises(lesson, allUnlockedLessons, count = 10) {
+    let cached = [];
     try {
-        const res = await fetch('https://api.openai.com/v1/chat/completions', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${key}` },
-            body: JSON.stringify({
-                model: 'gpt-4o-mini', messages: [{ role: 'system', content: system }],
-                temperature: 0.8, max_tokens: 400
-            })
-        });
-        if (!res.ok) return [];
-        const data = await res.json();
-        const raw = data.choices[0].message.content.trim().replace(/```json|```/g, '');
+        const res = await fetch(`http://${window.location.hostname}:5173/api/aibank`);
+        if (res.ok) {
+            const data = await res.json();
+            if (data[lesson.id]) cached = data[lesson.id];
+        }
+    } catch { }
+
+    // If we already have enough cached exercises, recycle them (shuffle and pick)
+    if (cached.length >= count) {
+        return shuf(cached).slice(0, count);
+    }
+
+    // Determine how many we actually need to generate to reach the count
+    const needed = count - cached.length;
+
+    const key = getKey();
+    if (!key) return cached; // return whatever we have if no key
+
+    const vocabList = allUnlockedLessons.flatMap(l => l.vocab || []).map(v => v.de).join(', ');
+    const system = `Si učiteľ nemčiny. Vygeneruj presne ${needed} rôznych prekladových cvičení pre lekciu "${lesson.title}" na úrovni A1. 
+DÔLEŽITÉ PRAVIDLÁ:
+1. Tvoja nová slovná zásoba musí byť VÝHRADNE z tohto zoznamu povolených slov: ${vocabList}. Nikdy nepouži iné zložité slová.
+2. Nekombinuj len 2 slová dokolečka. Použi čo najväčšiu šírku z tohto zoznamu, nech sú vety nápadité.
+3. Odpovedaj VÝHRADNE JSON poľom bez markdownu. Každý objekt má tvar: {"type":"translation","de":"nemecká veta z povolených slov","sk":"slovenský preklad"}`;
+    try {
+        const raw = await callGemini(
+            [{ role: 'system', content: system }],
+            { temperature: 0.8, maxOutputTokens: 4000 }
+        ).then(text => text.replace(/```json|```/g, ''));
         const arr = JSON.parse(raw);
-        if (!Array.isArray(arr)) return [];
-        return arr.map(item => ({
+        if (!Array.isArray(arr)) return cached;
+        const newItems = arr.map(item => ({
             type: 'translation',
             question: item.de,
             correct: item.sk,
@@ -174,8 +189,21 @@ Použi len jednoduchú A1 slovnú zásobu súvisiacu s témou lekcie.`;
             lessonTitle: `🤖 AI: ${lesson.title}`,
             lessonId: lesson.id,
             isAI: true,
+            id: Math.random().toString(36).substring(7)
         }));
-    } catch { return []; }
+
+        // Combine and save to persistent file via our custom API
+        const combined = [...cached, ...newItems];
+        try {
+            await fetch(`http://${window.location.hostname}:5173/api/aibank`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ lessonId: lesson.id, items: newItems })
+            });
+        } catch { }
+
+        return shuf(combined).slice(0, count);
+    } catch { return cached; }
 }
 
 // Word-level diff for speech feedback
@@ -213,6 +241,7 @@ export default function ExerciseArena({ progress, onNavigate }) {
     const [streak, setStreak] = useState(0);
     const [totalAnswered, setTotalAnswered] = useState(0);
     const [totalCorrect, setTotalCorrect] = useState(0);
+    const [sessionHistory, setSessionHistory] = useState([]);
 
     const [pool, setPool] = useState([]);
     const [currentItem, setCurrentItem] = useState(null);
@@ -237,6 +266,11 @@ export default function ExerciseArena({ progress, onNavigate }) {
 
     // Speech
     const { transcript, listening, resetTranscript } = useSpeechRecognition();
+    const transcriptRef = useRef('');
+
+    useEffect(() => {
+        transcriptRef.current = transcript;
+    }, [transcript]);
 
     // AI generation
     const [aiLoading, setAiLoading] = useState(false);
@@ -268,12 +302,12 @@ export default function ExerciseArena({ progress, onNavigate }) {
         if (!blitzRunning || blitzTime === null) return;
         if (blitzTime <= 0) {
             setBlitzRunning(false);
-            processAnswer(false, currentItem?.correct || '');
+            processAnswer(false, 'Vypršal čas', currentItem?.correct || '');
             return;
         }
         blitzRef.current = setTimeout(() => setBlitzTime(t => t - 1), 1000);
         return () => clearTimeout(blitzRef.current);
-    }, [blitzRunning, blitzTime]);
+    }, [blitzRunning, blitzTime, currentItem]);
 
     const startBlitz = useCallback(() => {
         clearTimeout(blitzRef.current);
@@ -314,9 +348,10 @@ export default function ExerciseArena({ progress, onNavigate }) {
     }, [speak, resetTranscript, startBlitz, stopBlitz]);
 
     // ── Process answer ────────────────────────────────────────────────────────
-    const processAnswer = useCallback((isCorrect, correctAnswer = '', explanation = '') => {
+    const processAnswer = useCallback((isCorrect, userAnswer = '', correctAnswer = '', explanation = '') => {
         stopBlitz();
         setTotalAnswered(t => t + 1);
+        setSessionHistory(h => [...h, { item: currentItem, isCorrect, userAnswer, correctAnswer: correctAnswer || currentItem?.correct || '', type: currentItem?.type }]);
         if (isCorrect) {
             setTotalCorrect(t => t + 1);
             setStreak(s => s + 1);
@@ -330,7 +365,7 @@ export default function ExerciseArena({ progress, onNavigate }) {
         }
         if (explanation) setFeedbackMsg(p => p + (explanation ? ` — ${explanation}` : ''));
         setTimeout(() => nextItem(pool), isCorrect ? 1200 : 2400);
-    }, [streak, pool, nextItem, stopBlitz]);
+    }, [streak, pool, nextItem, stopBlitz, currentItem]);
 
     // ── Start / Stop ──────────────────────────────────────────────────────────
     const startTraining = async () => {
@@ -343,14 +378,15 @@ export default function ExerciseArena({ progress, onNavigate }) {
         // AI exercise generation
         if (aiEnabled && hasKey && sourceLessons.length === 1) {
             setAiLoading(true);
-            const aiItems = await fetchAIExercises(sourceLessons[0]);
+            const count = Math.min(Math.round(sessionDuration * 2) + 5, 40); // Scaling 
+            const aiItems = await fetchAIExercises(sourceLessons[0], unlockedLessons, count);
             newPool = [...newPool, ...aiItems];
             setAiLoading(false);
         }
 
         if (!newPool.length) return;
         setPool(newPool);
-        setScore(0); setStreak(0); setTotalAnswered(0); setTotalCorrect(0);
+        setScore(0); setStreak(0); setTotalAnswered(0); setTotalCorrect(0); setSessionHistory([]);
         setTimeRemaining(sessionDuration * 60);
         setIsDone(false); setIsTraining(true);
         nextItem(newPool);
@@ -366,7 +402,7 @@ export default function ExerciseArena({ progress, onNavigate }) {
     // ── MCQ handler ───────────────────────────────────────────────────────────
     const handleMCQ = (opt) => {
         if (feedback !== null) return;
-        processAnswer(opt === currentItem.correct, currentItem.correct, currentItem.explanation);
+        processAnswer(opt === currentItem.correct, typeof opt === 'object' ? opt.de : opt, currentItem.correct, currentItem.explanation);
     };
 
     // ── Text submit (dictation / fill / phonetic) ──────────────────────────────
@@ -376,7 +412,7 @@ export default function ExerciseArena({ progress, onNavigate }) {
         const ok = norm(textInput) === norm(currentItem.correct) ||
             (norm(currentItem.correct).includes(norm(textInput)) &&
                 norm(textInput).length >= norm(currentItem.correct).length - 2);
-        processAnswer(ok, currentItem.correct, currentItem.explanation);
+        processAnswer(ok, textInput, currentItem.correct, currentItem.explanation);
     };
 
     // ── Word order ────────────────────────────────────────────────────────────
@@ -405,25 +441,80 @@ export default function ExerciseArena({ progress, onNavigate }) {
     const handleWordOrderSubmit = () => {
         if (feedback || !wordSlots.length) return;
         const ok = norm(wordSlots.join(' ')) === norm(currentItem.correct);
-        processAnswer(ok, currentItem.correct, currentItem.explanation);
+        processAnswer(ok, wordSlots.join(' '), currentItem.correct, currentItem.explanation);
     };
 
     // ── Speech ────────────────────────────────────────────────────────────────
     const startListening = () => { resetTranscript(); SpeechRecognition.startListening({ language: 'de-DE', continuous: false }); };
     const stopListeningEval = () => {
         SpeechRecognition.stopListening();
+        // Give it a moment to finalize the transcript from the speech API
         setTimeout(() => {
-            const spoken = transcript;
+            const spoken = transcriptRef.current;
             const target = currentItem.correct;
             const ok = spoken && (norm(spoken).includes(norm(target)) ||
-                norm(target).includes(norm(spoken)) ||
-                spoken.toLowerCase().includes(target.toLowerCase()));
+                norm(target).includes(norm(spoken)));
             setWordDiffResult(wordDiff(spoken, target));
-            processAnswer(ok, target);
-        }, 700);
+            processAnswer(ok, spoken, target);
+        }, 1000);
     };
 
     const formatTime = (s) => `${Math.floor(s / 60)}:${String(s % 60).padStart(2, '0')}`;
+
+    const handleDownloadPDF = (includeAnswers) => {
+        const title = "Tréningová Aréna - Cvičenia";
+        let html = `<html><head><title>${title}</title><meta charset="utf-8">
+        <style>
+            body { font-family: sans-serif; padding: 20px; color: #333; max-width: 800px; margin: 0 auto; }
+            h1 { text-align: center; border-bottom: 2px solid #ccc; padding-bottom: 10px; }
+            .item { margin-bottom: 20px; padding: 15px; border: 1px solid #eee; border-radius: 8px; page-break-inside: avoid; }
+            .type { font-size: 10px; color: #888; text-transform: uppercase; font-weight: bold; }
+            .question { font-size: 18px; font-weight: bold; margin: 8px 0; }
+            .options { font-size: 14px; color: #555; margin-bottom: 8px; }
+            .answer-box { margin-top: 10px; padding: 10px; background: #f9f9f9; border-radius: 6px; }
+            .empty-box { border-bottom: 1px dashed #ccc; height: 40px; margin-top: 15px; }
+            .correct { color: #10b981; font-weight: bold; }
+            .incorrect { color: #ef4444; font-weight: bold; }
+            @media print { .no-print { display: none; } body { padding: 0; } .item { border-color: #ccc; } }
+        </style></head><body>
+        <div class="no-print" style="text-align:center;margin-bottom:20px;">
+            <button onclick="window.print()" style="padding:10px 20px;background:#4f46e5;color:white;border:none;border-radius:6px;cursor:pointer;font-weight:bold;">Vytlačiť do PDF</button>
+        </div>
+        <h1>${title}</h1>
+        <p style="text-align:center; color:#666;">Počet otázok: ${sessionHistory.length}</p>`;
+
+        sessionHistory.forEach((h, i) => {
+            const item = h.item;
+            html += `<div class="item">`;
+            html += `<div class="type">${h.type} | Z lekcie ${item.lessonId}</div>`;
+
+            let qText = item.question || item.sentence || item.text || item.phoneticText || item.prompt;
+            if (h.type === 'wordorder') qText = `Zoraďte slová: ${item.words.join(' / ')}`;
+            if (h.type === 'dictation') qText = `(Diktát) Napíšte počuté: ${item.hint ? '(' + item.hint + ')' : ''}`;
+
+            html += `<div class="question">${i + 1}. ${qText}</div>`;
+
+            if (item.options) {
+                const opts = item.options.map(o => typeof o === 'object' ? o.de : o).join(' • ');
+                html += `<div class="options">Možnosti: ${opts}</div>`;
+            }
+
+            if (includeAnswers) {
+                html += `<div class="answer-box">`;
+                html += `<div>Tvoja odpoveď: <span class="${h.isCorrect ? 'correct' : 'incorrect'}">${h.userAnswer || '(žiadna / čas vypršal)'}</span></div>`;
+                if (!h.isCorrect) html += `<div style="margin-top:4px;">Správna odpoveď: <span class="correct">${h.correctAnswer}</span></div>`;
+                html += `</div>`;
+            } else {
+                html += `<div class="empty-box">Odpoveď: </div>`;
+            }
+            html += `</div>`;
+        });
+
+        html += `</body></html>`;
+        const win = window.open('', '_blank');
+        win.document.write(html);
+        win.document.close();
+    };
 
     // ══════════════════════════════════════════════════════════════════════════
     // LOBBY
@@ -487,7 +578,7 @@ export default function ExerciseArena({ progress, onNavigate }) {
                                 <div className="w-8 h-8 rounded-xl bg-violet-500/20 flex items-center justify-center"><Key size={16} className="text-violet-400" /></div>
                                 <div>
                                     <p className="text-sm font-bold text-white">AI generovanie otázok</p>
-                                    <p className="text-xs text-gray-500">GPT-4o-mini vygeneruje extra cvičenia pre vybranú lekciu</p>
+                                    <p className="text-xs text-gray-500">Gemini AI vygeneruje extra cvičenia pre vybranú lekciu</p>
                                 </div>
                             </div>
                             <button onClick={() => setAiEnabled(v => !v)}
@@ -502,7 +593,7 @@ export default function ExerciseArena({ progress, onNavigate }) {
 
                     <button onClick={startTraining} disabled={!unlockedLessons.length || aiLoading}
                         className="w-full py-4 bg-indigo-600 hover:bg-indigo-500 disabled:bg-gray-700 text-white font-bold rounded-xl transition-all shadow-[0_4px_20px_rgba(99,102,241,0.4)] flex items-center justify-center gap-3 text-lg group">
-                        {aiLoading ? <><Loader2 size={22} className="animate-spin" /> Generejem AI otázky…</> : <><Play size={22} className="group-hover:scale-110 transition-transform" /> Vstúpiť do Arény</>}
+                        {aiLoading ? <><Loader2 size={22} className="animate-spin" /> Generujem AI otázky…</> : <><Play size={22} className="group-hover:scale-110 transition-transform" /> Vstúpiť do Arény</>}
                     </button>
                 </div>
             </div>
@@ -541,6 +632,16 @@ export default function ExerciseArena({ progress, onNavigate }) {
                             <Target size={18} /> Zmeniť lekciu
                         </button>
                     </div>
+                    {sessionHistory.length > 0 && (
+                        <div className="flex flex-col sm:flex-row gap-3 pt-3 border-t border-gray-800/50">
+                            <button onClick={() => handleDownloadPDF(false)} className="flex-1 py-2.5 bg-sky-900/40 hover:bg-sky-800/60 border border-sky-800/50 text-sky-400 font-bold rounded-xl text-sm transition-all hover:text-sky-300">
+                                📄 Uložiť len otázky (PDF)
+                            </button>
+                            <button onClick={() => handleDownloadPDF(true)} className="flex-1 py-2.5 bg-emerald-900/40 hover:bg-emerald-800/60 border border-emerald-800/50 text-emerald-400 font-bold rounded-xl text-sm transition-all hover:text-emerald-300">
+                                📝 Report s odpoveďami (PDF)
+                            </button>
+                        </div>
+                    )}
                 </div>
             </div>
         );
@@ -777,7 +878,7 @@ export default function ExerciseArena({ progress, onNavigate }) {
                                     onDragStart={() => onDragStart(word, 'slot')}
                                     onClick={() => handleWordClickSlot(word)}
                                     className={`px-3 py-2 rounded-xl text-sm font-bold border-2 transition-all hover:scale-105 cursor-grab active:cursor-grabbing ${feedback === null ? 'bg-pink-900/40 border-pink-500/60 text-pink-300 hover:bg-pink-800/50' :
-                                            feedback === 'correct' ? 'bg-emerald-900/40 border-emerald-500 text-emerald-300' : 'bg-red-900/40 border-red-500 text-red-300'}`}>
+                                        feedback === 'correct' ? 'bg-emerald-900/40 border-emerald-500 text-emerald-300' : 'bg-red-900/40 border-red-500 text-red-300'}`}>
                                     {word}
                                 </button>
                             ))}
@@ -831,8 +932,8 @@ export default function ExerciseArena({ progress, onNavigate }) {
                                     onTouchStart={startListening} onTouchEnd={stopListeningEval}
                                     disabled={feedback !== null}
                                     className={`w-24 h-24 rounded-full flex items-center justify-center transition-all select-none text-white ${listening ? 'bg-red-500 animate-pulse shadow-[0_0_50px_rgba(239,68,68,0.7)] scale-110' :
-                                            feedback !== null ? 'bg-gray-800 text-gray-600' :
-                                                'bg-emerald-600 hover:bg-emerald-500 shadow-[0_0_25px_rgba(16,185,129,0.4)] hover:scale-105'}`}>
+                                        feedback !== null ? 'bg-gray-800 text-gray-600' :
+                                            'bg-emerald-600 hover:bg-emerald-500 shadow-[0_0_25px_rgba(16,185,129,0.4)] hover:scale-105'}`}>
                                     <Mic size={40} />
                                 </button>
 

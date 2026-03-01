@@ -106,7 +106,7 @@ export default function WeeklyPlan({ progress, onStartLesson, onStartWeeklyTest,
                       </div>
                       <div className="flex items-center gap-2 flex-shrink-0 text-xs">
                         {done && score !== undefined ? (
-                          <span className={`font-bold ${score >= 80 ? 'text-emerald-400' : 'text-amber-400'}`}>{score}%</span>
+                          <span className={`font-bold ${Math.min(100, score) >= 80 ? 'text-emerald-400' : 'text-amber-400'}`}>{Math.min(100, score)}%</span>
                         ) : (
                           <span className="text-yellow-600">+{lesson.xpReward}</span>
                         )}

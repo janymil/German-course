@@ -1,0 +1,436 @@
+{
+  "L01_G02": [
+    {
+      "type": "mcq",
+      "question": "___ bin Anna.",
+      "options": [
+        "Du",
+        "Sie",
+        "Er",
+        "Ich"
+      ],
+      "answer": 3,
+      "explanation": "Používame 'Ich', pretože hovoríme o sebe v prvej osobe jednotného čísla."
+    },
+    {
+      "type": "mcq",
+      "question": "Wie heißt ___?",
+      "options": [
+        "ich",
+        "er",
+        "du",
+        "sie"
+      ],
+      "answer": 2,
+      "explanation": "Opýtali ste sa niekoho priamo, preto používame 'du' v druhej osobe jednotného čísla."
+    },
+    {
+      "type": "mcq",
+      "question": "Wir sind Peter und ___.",
+      "options": [
+        "du",
+        "Sie",
+        "er",
+        "ich"
+      ],
+      "answer": 3,
+      "explanation": "Hovoríme o sebe v prvej osobe jednotného čísla v rámci skupiny 'wir'."
+    },
+    {
+      "type": "mcq",
+      "question": "Sind Sie Herr Müller?",
+      "options": [
+        "Ja, du bist Herr Müller.",
+        "Ja, ich bin Herr Müller.",
+        "Nein, er ist Herr Müller.",
+        "Ja, sie ist Herr Müller."
+      ],
+      "answer": 1,
+      "explanation": "Na formálne oslovenie 'Sie' v otázke odpovedáme v prvej osobe 'ich'."
+    },
+    {
+      "type": "mcq",
+      "question": "___ sind Studenten.",
+      "options": [
+        "Wir",
+        "Ich",
+        "Du",
+        "Ihr"
+      ],
+      "answer": 0,
+      "explanation": "Hovoríme o skupine ľudí, preto používame 'Wir' pre prvú osobu množného čísla."
+    },
+    {
+      "type": "mcq",
+      "question": "Woher kommen Sie?",
+      "options": [
+        "Du kommst aus Deutschland.",
+        "Ich komme aus Deutschland.",
+        "Er kommt aus Deutschland.",
+        "Sie kommt aus Deutschland."
+      ],
+      "answer": 1,
+      "explanation": "Na formálne oslovenie 'Sie' v otázke odpovedáme v prvej osobe 'Ich'."
+    },
+    {
+      "type": "mcq",
+      "question": "Wie heißen Sie?",
+      "options": [
+        "Du heißt Maria.",
+        "Er heißt Maria.",
+        "Ich heiße Maria.",
+        "Sie heißt Maria."
+      ],
+      "answer": 2,
+      "explanation": "Pri formálnom vykaní sa v odpovedi používa prvá osoba jednotného čísla 'Ich'."
+    },
+    {
+      "type": "mcq",
+      "question": "Ist das dein Bruder?",
+      "options": [
+        "Ja, das ist ich.",
+        "Ja, das ist er.",
+        "Ja, das ist du.",
+        "Ja, das ist sie."
+      ],
+      "answer": 1,
+      "explanation": "Hovoríme o tretej osobe jednotného čísla (on), preto použijeme zámeno 'er'."
+    },
+    {
+      "type": "mcq",
+      "question": "Hallo, ___ bin Paul.",
+      "options": [
+        "du",
+        "ich",
+        "er",
+        "sie"
+      ],
+      "answer": 1,
+      "explanation": "Predstavujeme sa, preto používame prvú osobu jednotného čísla 'ich'."
+    },
+    {
+      "type": "mcq",
+      "question": "Sind Sie müde?",
+      "options": [
+        "Nein, ich bin nicht müde.",
+        "Nein, du bist nicht müde.",
+        "Nein, er ist nicht müde.",
+        "Nein, sie ist nicht müde."
+      ],
+      "answer": 0,
+      "explanation": "Na formálne oslovenie 'Sie' v otázke odpovedáme v prvej osobe 'ich'."
+    },
+    {
+      "type": "mcq",
+      "question": "Wer bist du?",
+      "options": [
+        "Du bist Student.",
+        "Er ist Student.",
+        "Ich bin Student.",
+        "Sie ist Student."
+      ],
+      "answer": 2,
+      "explanation": "Na otázku 'Wer bist du?' odpovedáme v prvej osobe jednotného čísla pomocou 'Ich'."
+    },
+    {
+      "type": "mcq",
+      "question": "Wie alt sind Sie?",
+      "options": [
+        "Du bist 30 Jahre alt.",
+        "Er ist 30 Jahre alt.",
+        "Ich bin 30 Jahre alt.",
+        "Sie ist 30 Jahre alt."
+      ],
+      "answer": 2,
+      "explanation": "Na formálne oslovenie 'Sie' v otázke odpovedáme v prvej osobe 'Ich'."
+    },
+    {
+      "type": "mcq",
+      "question": "___ bin Anna Müller.",
+      "options": [
+        "Du",
+        "Ich",
+        "Sie",
+        "Er"
+      ],
+      "answer": 1,
+      "explanation": "Pre prvú osobu jednotného čísla (ja) používame zámeno 'Ich' so slovesom 'bin'."
+    },
+    {
+      "type": "mcq",
+      "question": "Wie heißt ___?",
+      "options": [
+        "du",
+        "ich",
+        "er",
+        "sie"
+      ],
+      "answer": 0,
+      "explanation": "Pre druhú osobu jednotného čísla (ty) používame zámeno 'du' so slovesom 'heißt'."
+    },
+    {
+      "type": "mcq",
+      "question": "Wir sind Freunde. Und ___?",
+      "options": [
+        "ihr",
+        "sie",
+        "du",
+        "ich"
+      ],
+      "answer": 0,
+      "explanation": "Pri oslovovaní viacerých osôb, ktoré nepoznáme osobne (vy), používame zámeno 'ihr' (vy) v tomto kontexte."
+    },
+    {
+      "type": "mcq",
+      "question": "Guten Tag, wie sind ___?",
+      "options": [
+        "Sie",
+        "du",
+        "ihr",
+        "er"
+      ],
+      "answer": 0,
+      "explanation": "Pri formálnom vykaní používame zámeno 'Sie' s veľkým S a sloveso 'sind' (alebo 'heißen')."
+    },
+    {
+      "type": "mcq",
+      "question": "Er ist mein Bruder. ___ heißt Thomas.",
+      "options": [
+        "Ich",
+        "Sie",
+        "Er",
+        "Du"
+      ],
+      "answer": 2,
+      "explanation": "Pre tretiu osobu jednotného čísla mužského rodu (on) používame zámeno 'Er' so slovesom 'ist' a 'heißt'."
+    },
+    {
+      "type": "mcq",
+      "question": "Das ist Maria. ___ ist Studentin.",
+      "options": [
+        "Er",
+        "Sie",
+        "Ich",
+        "Du"
+      ],
+      "answer": 1,
+      "explanation": "Pre tretiu osobu jednotného čísla ženského rodu (ona) používame zámeno 'Sie' (malé s) so slovesom 'ist'."
+    },
+    {
+      "type": "mcq",
+      "question": "Wir sind Peter und Paul. Wie heißen ___?",
+      "options": [
+        "sie",
+        "ihr",
+        "du",
+        "ich"
+      ],
+      "answer": 1,
+      "explanation": "Keď sa pýtame skupiny ľudí, ktorých poznáme osobne (vy), použijeme zámeno 'ihr'."
+    },
+    {
+      "type": "mcq",
+      "question": "Die Kinder spielen. ___ sind glücklich.",
+      "options": [
+        "Er",
+        "Sie",
+        "Wir",
+        "Du"
+      ],
+      "answer": 1,
+      "explanation": "Pre tretiu osobu množného čísla (oni) používame zámeno 'Sie' (malé s) so slovesom 'sind'."
+    },
+    {
+      "type": "mcq",
+      "question": "Sind ___ Herr Schmidt?",
+      "options": [
+        "du",
+        "ihr",
+        "er",
+        "Sie"
+      ],
+      "answer": 3,
+      "explanation": "Pri formálnom vykaní sa používame zámeno 'Sie' (veľké S) s príslušnou časťou slovesa 'sind' alebo 'heißen'."
+    },
+    {
+      "type": "mcq",
+      "question": "Ich bin müde. ___ brauche Kaffee.",
+      "options": [
+        "Ich",
+        "Du",
+        "Er",
+        "Sie"
+      ],
+      "answer": 0,
+      "explanation": "Opakované použitie zámena 'Ich' je bežné na zdôraznenie, že sa jedná o osobnú potrebu."
+    },
+    {
+      "type": "mcq",
+      "question": "Das Auto ist neu. ___ ist rot.",
+      "options": [
+        "Er",
+        "Sie",
+        "Es",
+        "Ich"
+      ],
+      "answer": 2,
+      "explanation": "Pre stredný rod (auto) používame zámeno 'Es' so slovesom 'ist'."
+    },
+    {
+      "type": "mcq",
+      "question": "Hallo, mein Name ist Klaus. Wie heißen ___?",
+      "options": [
+        "du",
+        "Sie",
+        "ihr",
+        "er"
+      ],
+      "answer": 1,
+      "explanation": "Pri zoznamovaní sa s niekým formálne používame otázku s 'Wie heißen Sie?'."
+    },
+    {
+      "type": "mcq",
+      "question": "___ bin Anna.",
+      "options": [
+        "Ich",
+        "Du",
+        "Sie",
+        "Er"
+      ],
+      "answer": 0,
+      "explanation": "Pre prvú osobu jednotného čísla (ja) používame zámeno 'Ich'."
+    },
+    {
+      "type": "mcq",
+      "question": "Wie heißt ___?",
+      "options": [
+        "ich",
+        "du",
+        "er",
+        "sie"
+      ],
+      "answer": 1,
+      "explanation": "Pri neformálnom tykaní používame zámeno 'du'."
+    },
+    {
+      "type": "mcq",
+      "question": "___ sind Herr Müller.",
+      "options": [
+        "Ich",
+        "Sie",
+        "Du",
+        "Er"
+      ],
+      "answer": 1,
+      "explanation": "Pri formálnom vykaní používame zámeno 'Sie'."
+    },
+    {
+      "type": "mcq",
+      "question": "Wir sind Maria und ___.",
+      "options": [
+        "du",
+        "ich",
+        "er",
+        "sie"
+      ],
+      "answer": 1,
+      "explanation": "Keď sa pridávame k skupine, používame 'ich'."
+    },
+    {
+      "type": "mcq",
+      "question": "Sind ___ studenti?",
+      "options": [
+        "ich",
+        "ihr",
+        "du",
+        "sie"
+      ],
+      "answer": 1,
+      "explanation": "Pre neformálne oslovenie viacerých osôb (vy) používame 'ihr'."
+    },
+    {
+      "type": "mcq",
+      "question": "___ ist mein Freund.",
+      "options": [
+        "Er",
+        "Ich",
+        "Du",
+        "Sie"
+      ],
+      "answer": 0,
+      "explanation": "Pre tretiu osobu jednotného čísla mužského rodu (on) používame 'Er'."
+    },
+    {
+      "type": "mcq",
+      "question": "Was sind ___ von Beruf?",
+      "options": [
+        "Sie",
+        "Ich",
+        "Du",
+        "Er"
+      ],
+      "answer": 0,
+      "explanation": "Pri otázke na povolanie vo formálnom vykaní používame 'Sie'."
+    },
+    {
+      "type": "mcq",
+      "question": "___ heißt Peter.",
+      "options": [
+        "Du",
+        "Sie",
+        "Er",
+        "Ich"
+      ],
+      "answer": 3,
+      "explanation": "Ak oznamujeme svoje meno, používame 'Ich'."
+    },
+    {
+      "type": "mcq",
+      "question": "Woher ___ Sie?",
+      "options": [
+        "bist",
+        "kommen",
+        "bin",
+        "ist"
+      ],
+      "answer": 1,
+      "explanation": "Pri formálnom vykaní ('Sie') sa sloveso 'kommen' časuje ako v tretej osobe množného čísla, teda 'kommen'."
+    },
+    {
+      "type": "mcq",
+      "question": "___ du aus Deutschland?",
+      "options": [
+        "Kommst",
+        "Bin",
+        "Bist",
+        "Ist"
+      ],
+      "answer": 0,
+      "explanation": "Pri neformálnom tykaní ('du') sa sloveso 'kommen' časuje ako 'kommst'."
+    },
+    {
+      "type": "mcq",
+      "question": "___ ist meine Schwester.",
+      "options": [
+        "Ich",
+        "Du",
+        "Er",
+        "Sie"
+      ],
+      "answer": 3,
+      "explanation": "Pre tretiu osobu jednotného čísla ženského rodu (ona) používame 'Sie'."
+    },
+    {
+      "type": "mcq",
+      "question": "Wie alt ___ Sie?",
+      "options": [
+        "bin",
+        "sind",
+        "bist",
+        "ist"
+      ],
+      "answer": 1,
+      "explanation": "Pri formálnom vykaní ('Sie') sa sloveso 'sein' časuje ako 'sind'."
+    }
+  ]
+}

@@ -1,429 +1,237 @@
-﻿export const lesson03 = {
+export const lesson03 = {
   id: 3,
   week: 1,
   day: 3,
-  title: "Ich bin Jana — das Verb 'sein'",
-  topic: "Sloveso 'byť' (sein) — predstavovanie sa",
-  cefr: "A1",
-  xpReward: 25,
-  narrativeContext:
-    "Jana sa predstavuje kolegom na prvom teamovom stretnutí. 'Ich bin Jana. Ich bin Slowakin. Ich bin müde, aber ich bin sehr nett!' — smiech v miestnosti prelomí ľady. Jana objaví, že sloveso 'sein' sa v nemčine nikdy nevynecháva.",
-  communicativeGoal:
-    "Po tejto lekcii viem skonjogovať sloveso 'sein' vo všetkých osobách, opísať seba a iných základnými prídavnými menami a viem, prečo nemčina nezjednodušuje vetu vynechaním kopuly.",
-  skillFocus: ["grammar", "vocabulary", "speaking"],
-
+  title: 'Woher kommst du?',
+  topic: 'Odkiaľ pochádzaš? Krajiny, jazyky. Slovesá kommen aus a sprechen.',
+  cefr: 'A1',
+  xpReward: 20,
+  narrativeContext: 'Jana na jazykovom kurze spoznáva nových ľudí a pýta sa, odkiaľ pochádzajú a akými jazykmi hovoria.',
+  communicativeGoal: 'Po tejto lekcii viem povedať, z akej krajiny pochádzam, a akými jazykmi hovorím.',
+  skillFocus: ['vocabulary', 'grammar', 'speaking'],
   grammarNote: {
-    rule: "Sloveso 'sein' (byť) — časovanie v prítomnom čase",
-    explanation:
-      "Sein je nepravidelné sloveso a jeden z najdôležitejších v celej nemčine. Každá osoba má inú formu. DÔLEŽITÉ: Na rozdiel od slovenčiny sa 'sein' v nemeckých vetách NIKDY nevynecháva. 'Ja som unavená' v neformálnej slovenčine môže byť 'unavená' (bez 'som'), ale v nemčine musíš vždy napísať 'Ich bin müde'.",
+    rule: 'Zámena woher, predložka aus a sloveso sprechen',
+    explanation: 'Sloveso "sprechen" (hovoriť) mení pri časovaní v prítomnom čase samohlásku v kmeni z "e" na "i" v 2. a 3. osobe jednotného čísla (du sprichst, er/sie/es spricht). Pre vyjadrenie pôvodu sa používa opytovacie zámeno "woher" na začiatku otázky a v odpovedi sa používa s predložkou "aus". Kým väčšina krajín je stredného rodu a nepoužívame pred nimi člen (Nemecko, Rakúsko), existujú výnimky a Švajčiarsko (die Schweiz) k nim patrí, takže člen musíme vo vete s predložkou aus použiť (aus der Schweiz).',
     examples: [
-      { de: "ich bin", sk: "ja som" },
-      { de: "du bist", sk: "ty si" },
-      { de: "er / sie / es ist", sk: "on / ona / ono je" },
-      { de: "wir sind", sk: "my sme" },
-      { de: "ihr seid", sk: "vy ste (neformálne, množné číslo)" },
-      { de: "sie / Sie sind", sk: "oni sú / Vy ste (formálne)" }
+      { de: 'Woher kommst du?', sk: 'Odkiaľ pochádzaš?' },
+      { de: 'Ich komme aus Deutschland.', sk: 'Pochádzam z Nemecka.' },
+      { de: 'Was sprichst du?', sk: 'Čo hovoríš? (akým jazykom)' },
+      { de: 'Er spricht Deutsch und Englisch.', sk: 'On hovorí po nemecky a po anglicky.' },
+      { de: 'Ich wohne in der Schweiz.', sk: 'Bývam vo Švajčiarsku.' }
     ],
-    slovakContrastNote:
-      "V slovenčine: 'Ja som unavená' → v hovorovej reči sa 'som' často vypúšťa: 'Unavená.' V nemčine NIKDY: 'Ich bin müde.' — 'bin' sa NIKDY nevynecháva. Toto je jedna z najpodstatnejších gramatických rozdielov!"
+    slovakContrastNote: 'V slovenčine sa rod krajiny u takmer všetkých štátov zhoduje s nemčinou, pozor ale na člen, ktorý slovenčina nepoužíva: Pri "aus Deutschland" člen nepoužijeme, kým u "aus der Schweiz" alebo "aus der Slowakei" musí byť prítomný (die → der). V nemčine má naviac predložka priradený tzv. Dativ.'
   },
-
   vocab: [
-    {
-      de: "sein",
-      sk: "byť",
-      example: "Ich bin Jana. Ich bin aus der Slowakei.",
-      exampleSk: "Som Jana. Som zo Slovenska.",
-      gender: null,
-      srsId: "L03_V01",
-      recycledFrom: []
-    },
-    {
-      de: "ich",
-      sk: "ja",
-      example: "Ich bin müde.",
-      exampleSk: "Som unavená.",
-      gender: null,
-      srsId: "L03_V02",
-      recycledFrom: []
-    },
-    {
-      de: "du",
-      sk: "ty (neformálne)",
-      example: "Du bist sehr nett!",
-      exampleSk: "Si veľmi milá/milý!",
-      gender: null,
-      srsId: "L03_V03",
-      recycledFrom: []
-    },
-    {
-      de: "er / sie / es",
-      sk: "on / ona / ono",
-      example: "Er ist jung. Sie ist nett. Es ist groß.",
-      exampleSk: "On je mladý. Ona je milá. Ono je veľké.",
-      gender: null,
-      srsId: "L03_V04",
-      recycledFrom: []
-    },
-    {
-      de: "wir",
-      sk: "my",
-      example: "Wir sind Kollegen.",
-      exampleSk: "Sme kolegovia.",
-      gender: null,
-      srsId: "L03_V05",
-      recycledFrom: []
-    },
-    {
-      de: "ihr",
-      sk: "vy (neformálne, množné číslo)",
-      example: "Ihr seid sehr nett!",
-      exampleSk: "Ste veľmi milí!",
-      gender: null,
-      srsId: "L03_V06",
-      recycledFrom: []
-    },
-    {
-      de: "sie (Pl.) / Sie",
-      sk: "oni / Vy (formálne)",
-      example: "Sie sind Studenten. — Sie sind Frau Müllerová?",
-      exampleSk: "Oni sú študenti. — Vy ste pani Müllerová?",
-      gender: null,
-      srsId: "L03_V07",
-      recycledFrom: []
-    },
-    {
-      de: "die Studentin / der Student",
-      sk: "študentka / študent",
-      example: "Jana ist Studentin. Thomas ist Student.",
-      exampleSk: "Jana je študentka. Thomas je študent.",
-      gender: "F/M",
-      srsId: "L03_V08",
-      recycledFrom: []
-    },
-    {
-      de: "die Lehrerin / der Lehrer",
-      sk: "učiteľka / učiteľ",
-      example: "Frau Bauer ist Lehrerin. Herr Bauer ist Lehrer.",
-      exampleSk: "Pani Bauerová je učiteľka. Pán Bauer je učiteľ.",
-      gender: "F/M",
-      srsId: "L03_V09",
-      recycledFrom: []
-    },
-    {
-      de: "jung",
-      sk: "mladý",
-      example: "Jana ist jung — sie ist 28 Jahre alt.",
-      exampleSk: "Jana je mladá — má 28 rokov.",
-      gender: null,
-      srsId: "L03_V10",
-      recycledFrom: []
-    },
-    {
-      de: "alt",
-      sk: "starý",
-      example: "Das Gebäude ist sehr alt.",
-      exampleSk: "Budova je veľmi stará.",
-      gender: null,
-      srsId: "L03_V11",
-      recycledFrom: []
-    },
-    {
-      de: "müde",
-      sk: "unavený / unavená",
-      example: "Ich bin müde — der erste Tag war lang!",
-      exampleSk: "Som unavená — prvý deň bol dlhý!",
-      gender: null,
-      srsId: "L03_V12",
-      recycledFrom: []
-    },
-    {
-      de: "nett",
-      sk: "milý / príjemný",
-      example: "Jana ist sehr nett. Alle mögen sie.",
-      exampleSk: "Jana je veľmi milá. Všetci ju majú radi.",
-      gender: null,
-      srsId: "L03_V13",
-      recycledFrom: []
-    },
-    {
-      de: "groß",
-      sk: "veľký / vysoký",
-      example: "Wien ist groß. Herr Müller ist groß.",
-      exampleSk: "Viedeň je veľká. Pán Müller je vysoký.",
-      gender: null,
-      srsId: "L03_V14",
-      recycledFrom: []
-    },
-    {
-      de: "klein",
-      sk: "malý / nízky",
-      example: "Die Slowakei ist klein, aber schön.",
-      exampleSk: "Slovensko je malé, ale krásne.",
-      gender: null,
-      srsId: "L03_V15",
-      recycledFrom: []
-    }
+    { de: 'kommen', sk: 'pochádzať, prísť', gender: null, srsId: 'L03_V01', example: 'Ich komme aus der Slowakei.', exampleSk: 'Pochádzam zo Slovenska.', recycledFrom: [] },
+    { de: 'aus', sk: 'z (predložka)', gender: null, srsId: 'L03_V02', example: 'Er kommt aus Italien.', exampleSk: 'On pochádza z Talianska.', recycledFrom: [] },
+    { de: 'sprechen', sk: 'hovoriť', gender: null, srsId: 'L03_V03', example: 'Wir sprechen Deutsch.', exampleSk: 'My hovoríme po nemecky.', recycledFrom: [] },
+    { de: 'Deutsch', sk: 'nemčina', gender: 'N', srsId: 'L03_V04', example: 'Jana lernt Deutsch.', exampleSk: 'Jana sa učí nemčinu.', recycledFrom: [] },
+    { de: 'Englisch', sk: 'angličtina', gender: 'N', srsId: 'L03_V05', example: 'Sprichst du Englisch?', exampleSk: 'Hovoríš po anglicky?', recycledFrom: [] },
+    { de: 'die Sprache', sk: 'jazyk (reč)', gender: 'F', srsId: 'L03_V06', example: 'Deutsch ist eine Sprache.', exampleSk: 'Nemčina je jazyk.', recycledFrom: [] },
+    { de: 'das Land', sk: 'krajina', gender: 'N', srsId: 'L03_V07', example: 'Das ist ein schönes Land.', exampleSk: 'To je pekná krajina.', recycledFrom: [] },
+    { de: 'Deutschland', sk: 'Nemecko', gender: 'N', srsId: 'L03_V08', example: 'Sie lebt in Deutschland.', exampleSk: 'Ona žije v Nemecku.', recycledFrom: [] },
+    { de: 'Österreich', sk: 'Rakúsko', gender: 'N', srsId: 'L03_V09', example: 'Kommst du aus Österreich?', exampleSk: 'Pochádzaš z Rakúska?', recycledFrom: [] },
+    { de: 'die Schweiz', sk: 'Švajčiarsko', gender: 'F', srsId: 'L03_V10', example: 'Wir wohnen in der Schweiz.', exampleSk: 'Bývame vo Švajčiarsku.', recycledFrom: [] },
+    { de: 'woher', sk: 'odkiaľ', gender: null, srsId: 'L03_V11', example: 'Woher kommst du?', exampleSk: 'Odkiaľ pochádzaš?', recycledFrom: [] },
+    { de: 'ein bisschen', sk: 'trochu', gender: null, srsId: 'L03_V12', example: 'Ich spreche ein bisschen Englisch.', exampleSk: 'Hovorím trochu po anglicky.', recycledFrom: [] },
+    { de: 'verstehen', sk: 'rozumieť', gender: null, srsId: 'L03_V13', example: 'Ich verstehe dich sehr gut.', exampleSk: 'Rozumiem ti veľmi dobre.', recycledFrom: [] },
+    { de: 'leben', sk: 'žiť', gender: null, srsId: 'L03_V14', example: 'Wir leben zusammen.', exampleSk: 'My žijeme spolu.', recycledFrom: [] },
+    { de: 'wohnen', sk: 'bývať', gender: null, srsId: 'L03_V15', example: 'Ich wohne in Berlin.', exampleSk: 'Bývam v Berlíne.', recycledFrom: [] }
   ],
-
   exercises: [
     {
-      type: "flashcard",
-      instruction:
-        "Precvičuj osobné zámenáa prídavné mená. Flip kartu pre preklad a príkladovú vetu.",
-      items: [
-        "sein = byť",
-        "ich = ja",
-        "du = ty (neformálne)",
-        "er / sie / es = on / ona / ono",
-        "wir = my",
-        "ihr = vy (neformálne pl.)",
-        "sie (Pl.) / Sie = oni / Vy (formálne)",
-        "die Studentin / der Student = študentka / študent",
-        "die Lehrerin / der Lehrer = učiteľka / učiteľ",
-        "jung = mladý",
-        "alt = starý",
-        "müde = unavený",
-        "nett = milý / príjemný",
-        "groß = veľký / vysoký",
-        "klein = malý / nízky"
-      ]
+      type: 'flashcard',
+      instruction: 'Spoznaj nové slovíčka: Krajiny a jazyky.'
     },
     {
-      type: "mcq",
-      instruction:
-        "Vyber správnu formu slovesa 'sein'. Jana vypĺňa online jazykový test pred nástupom do práce.",
-      questions: [
-        {
-          question: "Vyber správnu vetu: Jana hovorí o sebe.",
-          options: [
-            "Ich bist müde.",
-            "Ich sind müde.",
-            "Ich bin müde.",
-            "Ich ist müde."
-          ],
-          answer: 2,
-          explanation:
-            "Pre 1. osobu jednotného čísla (ich = ja) sa používa 'bin'. Celá konjugácia: ich BIN, du BIST, er/sie/es IST, wir SIND, ihr SEID, sie/Sie SIND."
-        },
-        {
-          question: "Ako sa povie 'Ty si veľmi nett' po nemecky (neformálne, kamarát)?",
-          options: [
-            "Du sind sehr nett.",
-            "Du bist sehr nett.",
-            "Du bin sehr nett.",
-            "Du seid sehr nett."
-          ],
-          answer: 1,
-          explanation:
-            "Pre 2. osobu jednotného čísla (du = ty, neformálne) sa používa 'bist'. 'Du bist sehr nett' = Ty si veľmi milý/milá."
-        },
-        {
-          question: "Jana hovorí o sebe a o kolegyni: 'Wir ___ Kollegen.'",
-          options: [
-            "bin",
-            "bist",
-            "ist",
-            "sind"
-          ],
-          answer: 3,
-          explanation:
-            "Pre 1. osobu množného čísla (wir = my) sa používa 'sind'. 'Wir sind Kollegen' = Sme kolegovia. Pozor: 'sind' sa používa aj pre 3. osobu množného čísla (sie = oni) a formálne Sie."
-        },
-        {
-          question: "Prečo je táto veta NESPRÁVNA: 'Jana müde.'?",
-          options: [
-            "Nie je nesprávna — v nemčine je to bežné",
-            "V nemčine sa sloveso 'sein' nikdy nevynecháva — správne: 'Jana ist müde.'",
-            "Nesprávna je 'müde' — má byť 'müdig'",
-            "Jana by mala byť vo vete na konci"
-          ],
-          answer: 1,
-          explanation:
-            "V nemčine sa kopula (sein = byť) NIKDY nevynecháva, ani v hovorovej reči. Na rozdiel od slovenčiny, kde 'Jana unavená' je bežné v hovorovej reči, v nemčine MUSÍ byť: 'Jana IST müde.'"
-        },
-        {
-          question: "Ako sa opýtame formálne (na pohovore): 'Ste pán Novák?'",
-          options: [
-            "Ihr seid Herr Novák?",
-            "Du bist Herr Novák?",
-            "Sie sind Herr Novák?",
-            "Er ist Herr Novák?"
-          ],
-          answer: 2,
-          explanation:
-            "Formálne Sie (Vy s veľkým S) sa kombinuje s formou 'sind'. 'Sie sind Herr Novák?' = Vy ste pán Novák? Pozor: 'Sie sind' môže znamenať aj 'Oni sú' — kontext rozhoduje. Formálne Sie sa VŽDY píše s veľkým S."
-        },
-        {
-          question: "Jana opis kolegov: Thomas a Markus _____ jung und nett.",
-          options: [
-            "bist",
-            "bin",
-            "sind",
-            "seid"
-          ],
-          answer: 2,
-          explanation:
-            "'sie sind' (oni sú) — pre 3. osobu množného čísla (Thomas und Markus = oni) sa používa 'sind'. Rovnaká forma ako 'wir sind' a formálne 'Sie sind'."
-        }
-      ]
-    },
-    {
-      type: "fill",
-      instruction:
-        "Doplň správnu formu slovesa 'sein'. Jana píše e-mail o sebe svojej mamičke.",
-      questions: [
-        {
-          sentence: "Ich ___ Jana Nováková und ich ___ 28 Jahre alt.",
-          answer: "bin … bin",
-          hint: "ja + ja — obe sú 1. os. jedn. čísla",
-          explanation:
-            "'Ich bin' = ja som, pre 1. osobu jednotného čísla. 'Ich bin 28 Jahre alt' = Mám 28 rokov (doslova: Som 28 rokov starý/stará). V nemčine sa vek vyjadruje cez 'sein' + X Jahre alt."
-        },
-        {
-          sentence: "Wien ___ groß und sehr schön.",
-          answer: "ist",
-          hint: "3. osoba jednotného čísla (mesto = ono)",
-          explanation:
-            "'Wien' = mesto = stredný rod = es → 'ist'. 'Wien ist groß und sehr schön' = Viedeň je veľká a veľmi krásna."
-        },
-        {
-          sentence: "Wir ___ Kollegen — ich bin froh!",
-          answer: "sind",
-          hint: "my — 1. osoba množného čísla",
-          explanation:
-            "'Wir sind Kollegen' = Sme kolegovia. 'froh' = šťastný/á. Jana je rada, že má kolegov."
-        },
-        {
-          sentence: "Du ___ sehr nett, Lisa!",
-          answer: "bist",
-          hint: "ty — 2. osoba jednotného čísla",
-          explanation:
-            "'Du bist sehr nett, Lisa!' = Ty si veľmi milá, Lisa! Neformálne oslovenie — Jana a Lisa sú rovesníčky."
-        },
-        {
-          sentence: "Er ___ jung, aber er ___ auch sehr kompetent.",
-          answer: "ist … ist",
-          hint: "on — 3. osoba jednotného čísla, obe",
-          explanation:
-            "'er ist' = on je, pre 3. osobu jednotného čísla mužského rodu. Obe miesta vyžadujú 'ist'."
-        },
-        {
-          sentence: "Ihr ___ alle sehr willkommen hier.",
-          answer: "seid",
-          hint: "vy všetci — 2. osoba množného čísla",
-          explanation:
-            "'Ihr seid' = vy ste (neformálne, množné číslo). Šéf hovorí celému tímu: 'Ihr seid alle sehr willkommen hier.' = Všetci ste tu veľmi vítaní."
-        }
-      ]
-    },
-    {
-      type: "listen",
-      instruction:
-        "Počúvaj vety a identifikuj správny preklad. Dávaj pozor na formu 'sein'.",
-      questions: [
-        { de: "Ich bin müde.", sk: "Som unavená." },
-        { de: "Du bist sehr nett!", sk: "Ty si veľmi milý/milá!" },
-        { de: "Er ist jung.", sk: "On je mladý." },
-        { de: "Wir sind Kollegen.", sk: "Sme kolegovia." },
-        { de: "Sie sind groß.", sk: "Oni sú vysokí. / Vy ste vysokí." },
-        { de: "Wien ist schön.", sk: "Viedeň je krásna." },
-        { de: "Ich bin Studentin.", sk: "Som študentka." },
-        { de: "Ihr seid nett!", sk: "Vy ste milí!" }
-      ]
-    },
-    {
-      type: "match",
-      instruction:
-        "Spoj osobné zámeno s jeho správnou formou slovesa 'sein'.",
+      type: 'match',
+      instruction: 'Priraď nemecké výrazy k slovenským',
       pairs: [
-        ["ich", "bin"],
-        ["du", "bist"],
-        ["er / sie / es", "ist"],
-        ["wir", "sind"],
-        ["ihr", "seid"],
-        ["sie (Pl.) / Sie", "sind"],
-        ["jung ↔ ?", "alt"],
-        ["groß ↔ ?", "klein"]
+        ['sprechen', 'hovoriť'],
+        ['woher', 'odkiaľ'],
+        ['Deutschland', 'Nemecko'],
+        ['die Schweiz', 'Švajčiarsko'],
+        ['verstehen', 'rozumieť'],
+        ['leben', 'žiť']
       ]
     },
     {
       type: 'wordorder',
-      instruction: 'Zoraď slová do správnej nemeckej vety.',
+      instruction: 'Zostav správne vety.',
       sentences: [
         {
-          words: ['Ich', 'bin', 'Jana', 'Nováková.'],
-          correct: 'Ich bin Jana Nováková.',
-          hint: 'Som Jana Nováková.',
-          explanation: '"sein" v 1. osobe: ich bin. Sloveso je vždy na 2. mieste — V2 pravidlo.'
+          words: ['Woher', 'kommst', 'du'],
+          correct: 'Woher kommst du',
+          hint: 'Odkiaľ pochádzaš?',
+          explanation: 'Opytovacie zámeno "Woher" stojí na začiatku, nasleduje sloveso a podmet.'
         },
         {
-          words: ['Wie', 'alt', 'bist', 'du?'],
-          correct: 'Wie alt bist du?',
-          hint: 'Koľko máš rokov?',
-          explanation: 'W-otázka: V2 platití — bist je na 2. mieste po "Wie alt".'
+          words: ['Ich', 'komme', 'aus', 'Österreich'],
+          correct: 'Ich komme aus Österreich',
+          hint: 'Pochádzam z Rakúska.',
+          explanation: 'Spojenie pochádzať z sa povie "kommen aus".'
         },
         {
-          words: ['Er', 'ist', 'sehr', 'nett.'],
-          correct: 'Er ist sehr nett.',
-          hint: 'On je veľmi milý.',
-          explanation: '3. osoba: er ist. "sehr" (veľmi) stojí pred prídavným menom.'
+          words: ['Sprichst', 'du', 'Deutsch'],
+          correct: 'Sprichst du Deutsch',
+          hint: 'Hovoríš po nemecky?',
+          explanation: 'Pri otázke stojí sloveso na prvom mieste a pri 2. osobe sa mení kmeňová samohláska e na i (du sprichst).'
         },
         {
-          words: ['Wir', 'sind', 'Kollegen.'],
-          correct: 'Wir sind Kollegen.',
-          hint: 'Sme kolegovia.',
-          explanation: '1. osoba mn. č.: wir sind. Po "sein" nasleduje podstatné meno BEZ člena (pri povolaniach/skupinách).'
+          words: ['Wir', 'wohnen', 'in', 'der', 'Schweiz'],
+          correct: 'Wir wohnen in der Schweiz',
+          hint: 'Bývame vo Švajčiarsku.',
+          explanation: 'Švajčiarsko sa vždy spája s určitým členom (aus der, in der).'
+        }
+      ]
+    },
+    {
+      type: 'fill',
+      instruction: 'Doplň správne slovo do vety.',
+      questions: [
+        {
+          sentence: '___ kommst du?',
+          answer: 'Woher',
+          hint: 'Odkiaľ',
+          explanation: '"Woher" používame pri otázke na pôvod (odkiaľ).'
         },
         {
-          words: ['Das', 'ist', 'mein', 'Büro.'],
-          correct: 'Das ist mein Büro.',
-          hint: 'To je moja kancelária.',
-          explanation: '"Das ist" = to je — uvodzuje nový predmet. Büro je stredného rodu (N), preto "mein".'
+          sentence: 'Ich ___ aus Deutschland.',
+          answer: 'komme',
+          hint: 'Pochádzam (od slovesa kommen)',
+          explanation: 'V 1. osobe (ich) má sloveso kommen koncovku -e.'
+        },
+        {
+          sentence: 'Er ___ sehr gut Englisch.',
+          answer: 'spricht',
+          hint: 'hovorí (od slovesa sprechen)',
+          explanation: 'Sloveso sprechen je nepravidelné a v 3. osobe jedného čísla sa mení samohláska (er spricht).'
+        },
+        {
+          sentence: 'Ich verstehe dich ein ___.',
+          answer: 'bisschen',
+          hint: 'trochu',
+          explanation: 'Výraz "ein bisschen" má význam "trošku/trochu".'
+        }
+      ]
+    },
+    {
+      type: 'listen',
+      instruction: 'Počúvaj a zoraď či si porozumel.',
+      questions: [
+        { de: 'leben', sk: 'žiť' },
+        { de: 'wohnen', sk: 'bývať' },
+        { de: 'das Land', sk: 'krajina' },
+        { de: 'die Sprache', sk: 'jazyk' },
+        { de: 'Österreich', sk: 'Rakúsko' },
+        { de: 'die Schweiz', sk: 'Švajčiarsko' }
+      ]
+    },
+    {
+      type: 'mcq',
+      instruction: 'Vyber správnu možnosť.',
+      questions: [
+        {
+          question: 'Ergänze: Du ___ sehr gut Deutsch. (sprechen)',
+          questionSk: 'Doplň: Ty ___ veľmi dobre po nemecky. (hovoriť)',
+          options: ['spreche', 'sprech', 'sprichst', 'spricht'],
+          answer: 2,
+          explanation: 'V 2. osobe jednotného čísla sa u slovesa sprechen mení e na i + koncovka -st → sprichst.'
+        },
+        {
+          question: 'Welcher Satz ist richtig? "Ich komme aus..."',
+          questionSk: 'Ktorá veta je správna? "Pochádzam z..."',
+          options: [
+            'Ich komme aus Schweiz.',
+            'Ich komme in der Schweiz.',
+            'Ich komme aus der Schweiz.',
+            'Ich aus der Schweiz.'
+          ],
+          answer: 2,
+          explanation: 'Švajčiarsko vyžaduje člen: "aus der Schweiz".'
+        },
+        {
+          question: 'Welcher Satz ist grammatisch korrekt?',
+          questionSk: 'Ktorá veta je gramaticky správna?',
+          options: [
+            'Leben du in Österreich?',
+            'Lebst du in Österreich?',
+            'Lebt wir in Österreich?',
+            'Lebt du in Österreich?'
+          ],
+          answer: 1,
+          explanation: 'Druhá osoba (du) vyžaduje koncovku -st: lebst.'
+        },
+        {
+          question: 'Welches Verb bedeutet "rozumieť"?',
+          questionSk: 'Ktoré sloveso znamená "rozumieť"?',
+          options: ['verstehen', 'leben', 'wohnen', 'sprechen'],
+          answer: 0,
+          explanation: '"Verstehen" znamená rozumieť. "Sprechen" je hovoriť.'
         }
       ]
     },
     {
       type: 'minitext',
-      instruction: 'Prečítaj si krátky text o Jane. Potom odpovedaj na otázky.',
-      text: 'Jana ist neu im Team. Das erste Meeting beginnt. Die Chefin sagt: "Jana, bitte stell dich vor." Jana steht auf: "Ich bin Jana Nováková. Ich bin aus der Slowakei. Ich bin 28 Jahre alt. Ich bin PR-Managerin." Thomas sagt: "Toll! Bist du verheiratet?" Jana lacht: "Nein, ich bin nicht verheiratet. Aber ich bin sehr froh, hier zu sein!"',
-      textSk: 'Jana je nová v tíme. Prvé stretnutie začína. Šéfka povie: "Jana, predstav sa prosím." Jana vstáva: "Som Jana Nováková. Som zo Slovenska. Mam 28 rokov. Som PR-manažérka." Thomas povie: "Super! Si vydatá?" Jana sa smíe: "Nie, nie som vydatá. Ale som veľmi rada, že som tu!"',
+      instruction: 'Prečítaj si pokračovanie príbehu Jany a odpovedz na otázky.',
+      text: 'Im Deutschkurs fragt Jana: "Woher kommst du, Lukas?" Lukas antwortet: "Ich komme aus Österreich. Und du?" Jana sagt: "Ich komme aus der Slowakei. Ich wohne jetzt in Wien." Lukas fragt: "Sprichst du Englisch?" Jana sagt: "Ja, ein bisschen. Und ich spreche gut Slowakisch." Lukas lacht: "Ich verstehe kein Slowakisch! Aber ich spreche gut Deutsch."',
+      textSk: 'Na kurze nemčiny sa Jana pýta: "Odkiaľ pochádzaš, Lukas?" Lukas odpovedá: "Pochádzam z Rakúska. A ty?" Jana hovorí: "Pochádzam zo Slovenska. Teraz bývam vo Viedni." Lukas sa pýta: "Hovoríš po anglicky?" Jana hovorí: "Áno, trochu. A hovorím dobre po slovensky." Lukas sa smeje: "Ja nerozumiem po slovensky! Ale hovorím dobre po nemecky."',
       questions: [
         {
-          question: 'Z akej krajiny je Jana?',
-          options: ['Z Rakúsko', 'Z Nemecka', 'Zo Slovenska', 'Z Čiech'],
-          answer: 2,
-          explanation: 'V texte: "Ich bin aus der Slowakei."'
+          question: 'Woher kommt Lukas?',
+          questionSk: 'Odkiaľ pochádza Lukas?',
+          options: ['Aus der Slowakei', 'Aus Deutschland', 'Aus der Schweiz', 'Aus Österreich'],
+          answer: 3,
+          explanation: 'Lukas hovorí: "Ich komme aus Österreich."'
         },
         {
-          question: 'Akoľko je Jana stará?',
-          options: ['25 rokov', '27 rokov', '28 rokov', '30 rokov'],
-          answer: 2,
-          explanation: 'V texte: "Ich bin 28 Jahre alt."'
+          question: 'Wo wohnt Jana jetzt?',
+          questionSk: 'Kde teraz býva Jana?',
+          options: ['In Bratislava', 'In Wien', 'In Berlin', 'In Zürich'],
+          answer: 1,
+          explanation: 'Jana hovorí: "Ich wohne jetzt in Wien."'
         },
         {
-          question: 'Aké povolanie má Jana?',
-          options: ['Lekárka', 'Učiteľka', 'PR-Managerin', 'Ingénierka'],
+          question: 'Welche Sprache versteht Lukas nicht?',
+          questionSk: 'Ktorému jazyku Lukas nerozumie?',
+          options: ['Deutsch', 'Englisch', 'Slowakisch', 'Französisch'],
           answer: 2,
-          explanation: 'V texte: "Ich bin PR-Managerin."'
+          explanation: 'Lukas hovorí: "Ich verstehe kein Slowakisch!"'
         }
       ]
     },
     {
       type: 'speaking',
-      instruction: 'Počúvaj nemeckú vetu (klikni na reproduktor). Potom hovor nahlas a skontroluj sa.',
+      instruction: 'Precvič si výslovnosť.',
       phrases: [
-        { de: 'Ich bin Jana Nováková.', sk: 'Som Jana Nováková.', tip: 'bin: b+in, krátke i' },
-        { de: 'Ich komme aus der Slowakei.', sk: 'Pochádzam zo Slovenska.', tip: 'komme: o krátke, e tiché' },
-        { de: 'Ich bin 28 Jahre alt.', sk: 'Mám 28 rokov.', tip: 'Jahre: J=[j], e tiché' },
-        { de: 'Ich bin nicht verheiratet.', sk: 'Nie som vydatá/ženaty.', tip: 'nicht: ch=[č], t na konci' },
-        { de: 'Wir sind Kollegen.', sk: 'Sme kolegovia.', tip: 'sind: s=[z], nd na konci' },
-        { de: 'Sie ist sehr nett.', sk: 'Ona je veľmi milá.', tip: 'sehr: s=[z], ehr=[er]' }
+        {
+          de: 'Woher kommst du?',
+          sk: 'Odkiaľ pochádzaš?',
+          tip: 'Klaď dôraz na slovo "Woher".'
+        },
+        {
+          de: 'Ich komme aus Deutschland.',
+          sk: 'Pochádzam z Nemecka.',
+          tip: 'Výslovnosť S pred C a H sa číta ako hláska [š].'
+        },
+        {
+          de: 'Sprichst du Deutsch?',
+          sk: 'Hovoríš po nemecky?',
+          tip: 'Výslovnosť SP na začiatku slabiky sa vyslovuje ako [šp].'
+        },
+        {
+          de: 'Ich spreche Englisch.',
+          sk: 'Hovorím po anglicky.',
+          tip: 'Samohláska E na konci slova sprech-E sa slabo vyslovuje.'
+        },
+        {
+          de: 'Ich verstehe ein bisschen.',
+          sk: 'Rozumiem trochu.',
+          tip: 'Dvojité -ss- v "bisschen" čítame ako ostré [s].'
+        }
       ]
     }
   ],
-
-  reviewWords: [],
-  lessonNotes:
-    "Sein je základ nemčiny. Kľúčový rozdiel od slovenčiny: kopula (sein) sa NIKDY nevynecháva. Osobitná pozornosť na 'sie/Sie sind' — kontextová homonymia: 'sie sind' = oni sú, 'Sie sind' = Vy ste (formálne). Formálne Sie vždy veľkým písmenom!"
+  reviewWords: ['ich', 'du', 'und', 'ja', 'nein'],
+  lessonNotes: 'Dôraz na správnu výslovnosť "spr" a "sch". Dôležité je tiež odlíšenie rodu pri krajinách.'
 };

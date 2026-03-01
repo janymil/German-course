@@ -282,14 +282,20 @@ const SECTIONS = [
     content: (
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm mt-2">
         {[
-          { icon: '📊', name: 'Dashboard', desc: 'Prehľad. XP, zobrazená aktivita grafom, a hlavné veľké tlačidlo štartu.' },
-          { icon: '📅', name: 'Pásemny Plán', desc: 'A1 kurz je tu prísne rozložený do týždňov.' },
-          { icon: '📖', name: 'Lekcia (Jadro)', desc: 'Učenie novej látky cez prepletené interaktívne tasky. ' },
-          { icon: '🎧', name: 'Pasívna fáza', desc: 'Pre pokročilých: Lampariello metóda, obojsmerný tréning 50-tich viet.' },
-          { icon: '🧠', name: 'Tréner slovíčok', desc: 'SRS balík na slovnú zásobu - klikaj každý deň na 5 minút.' },
-          { icon: '📚', name: 'Gramatika', desc: 'Encyklopédia zistenia, referencie, hľadania tabuliek z lekcií.' },
-          { icon: '✍️', name: 'Writing Checker', desc: 'AI ťa opraví za jazdy v štandardných úlohach, ak spravíš chybu.' },
-          { icon: '💬', name: 'AI Konverzácia', desc: 'Chatbot simulátor. Naučíš sa od neho neformálnu konverzačnú nemčinu.' },
+          { icon: '📊', name: 'Dashboard (Prehľad)', desc: 'Tvoj centrálny bod: XP, séria dní, graf aktivity, prehľad kurikula a rýchly štart ďalšej lekcie.' },
+          { icon: '📅', name: 'Týždenný plán', desc: '16-týždňový rozvrh. 5 lekcií cez týždeň + víkendové opakovanie a týždenný test.' },
+          { icon: '📖', name: 'Lekcia (Jadro)', desc: 'Gramatika + 8 typov cvičení. 2 režimy: klasický alebo prekladaný (interleaving). Ukladá rozpracovaný progres.' },
+          { icon: '🎧', name: 'Pasívna fáza', desc: '50 dní pasívneho počúvania (fáza 1) a aktívneho prekladu SK→DE (fáza 2). Lampariello metóda.' },
+          { icon: '🧠', name: 'Tréner slovíčok', desc: 'SRS slovíčka s algoritmom SM-2. 3 režimy: kartičky, výber, doplňovanie. Mapa pamäte, detekcia leeches, AI vysvetlenia.' },
+          { icon: '📚', name: 'Gramatika', desc: 'Encyklopédia všetkých gramatických pravidiel. Hľadanie, AI cvičenia, tlač do PDF.' },
+          { icon: '🎯', name: 'Cvičebná aréna', desc: 'Nekonečné cvičenia zo všetkých odomknutých lekcií. Preklady, diktáty, hovorenie, skladanie viet. AI generuje extra úlohy.' },
+          { icon: '📰', name: 'Čítanie (Príbehy)', desc: 'Graded readers s kliknuteľnými slovami → AI gramatická karta. Audio, kvíz, ukladanie slov do SRS.' },
+          { icon: '🎬', name: 'Video Coach', desc: 'YouTube videá s interaktívnymi titulkami. Kliknuteľné slová, AI segmentácia, cvičenia ku každej časti, hlasový kouč.' },
+          { icon: '💬', name: 'AI Konverzácia', desc: '5 virtuálnych postáv. Písomný aj hlasový vstup. Auto-prispôsobenie úrovni. AI spätná väzba po konverzácii.' },
+          { icon: '✍️', name: 'Writing Checker', desc: 'AI kontrola nemeckých viet. Opraví chyby a vysvetlí ich po slovensky. Integrovaný v lekciách.' },
+          { icon: '🧪', name: 'Vstupný test', desc: 'Placement test cez 6 úrovní. Odomkne lekcie podľa tvojej existujúcej úrovne — nemusíš začínať od nuly.' },
+          { icon: '🏆', name: 'Týždenný test', desc: '20 otázok v 3 sekciách (počúvanie, čítanie, slovná zásoba). Formát Goethe A1 skúšky.' },
+          { icon: '💡', name: 'Study Coach', desc: '6 vedecky overených metód učenia s interaktívnymi ukážkami. Personalizovaný denný plán podľa tvojho pokroku.' },
         ].map((t) => (
           <div key={t.name} className="flex items-start gap-4 p-5 bg-gray-900/40 rounded-2xl border border-gray-800/60 hover:border-gray-600 transition-colors">
             <span className="text-3xl flex-shrink-0 drop-shadow-md">{t.icon}</span>
@@ -322,7 +328,7 @@ const SECTIONS = [
               Pridaj systémovej AI mozog
             </p>
 
-            <p className="text-lg text-violet-100/90 leading-relaxed mb-8">Aplikácia v základnom móde funguje skvele pre A1 gramatiku. Ak chceš posunúť zážitok bližšie k úrovni skutočného tutora v tvojej izbe, potrebuješ napojiť model od OpenAI (využíva sa rýchly GPT-4o-mini). Je to brutálne lacné (centy).</p>
+            <p className="text-lg text-violet-100/90 leading-relaxed mb-8">Aplikácia v základnom móde funguje skvele pre A1 gramatiku. AI funkcie (Gemini) sú zabudované priamo — konverzácie, gramatické karty, generovanie cvičení a kontrola písania fungujú automaticky. Pre niektoré pokročilé funkcie (Aréna) sa používa aj OpenAI.</p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
               <div className="bg-gray-950/60 rounded-2xl p-5 border border-gray-800/50">

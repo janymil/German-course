@@ -434,22 +434,25 @@
       textSk: 'Jana hľadá byt vo Viedni. Pán Gruber jej ukáže byt v 6. obvode. Byt stojí osemsto päťdesiat eur mesačne. Jana sa pýta: "Je to príliš veľa?" Pán Gruber povie: "Nie, to je normálne pre Viedeň." Jana premýšľa: "Dobre zarábam. Viem to zaplatiť." Byt si vezme.',
       questions: [
         {
-          question: 'Koľko stojí byt Herrn Grubera?',
+          question: 'Wie viel kostet die Wohnung im Monat?',
+          questionSk: 'Koľko stojí byt mesačne?',
           options: ['Siebenhundert Euro', 'Achthundertfünfzig Euro', 'Neunhundert Euro', 'Tausend Euro'],
           answer: 1,
-          explanation: 'V texte: "Die Wohnung kostet achthundertfünfzig Euro im Monat."'
+          explanation: 'Im Text: "Die Wohnung kostet achthundertfünfzig Euro im Monat."'
         },
         {
-          question: 'V ktorom obvode je byt?',
+          question: 'In welchem Bezirk ist die Wohnung?',
+          questionSk: 'V ktorom obvode je byt?',
           options: ['Im 4. Bezirk', 'Im 5. Bezirk', 'Im 6. Bezirk', 'Im 7. Bezirk'],
           answer: 2,
-          explanation: 'V texte: "eine Wohnung im 6. Bezirk"'
+          explanation: 'Im Text: "eine Wohnung im 6. Bezirk"'
         },
         {
-          question: 'Čo Jana urobí na záver?',
-          options: ['Byt odmietne', 'Zavolá inému prenajímateľovi', 'Byt si vezme', 'Požiada o zľavu'],
+          question: 'Was macht Jana am Ende?',
+          questionSk: 'Čo urobí Jana na záver?',
+          options: ['Sie geht weg', 'Sie ruft jemand anderen an', 'Sie nimmt die Wohnung', 'Sie bittet um einen Rabatt'],
           answer: 2,
-          explanation: 'V texte: "Sie nimmt die Wohnung."'
+          explanation: 'Im Text: "Sie nimmt die Wohnung."'
         }
       ]
     },

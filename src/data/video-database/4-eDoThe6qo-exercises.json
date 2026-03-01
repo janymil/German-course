@@ -1,0 +1,800 @@
+{
+  "topics": [
+    {
+      "title": "Begrüßung und Verabschiedung",
+      "description": "Pozdravy a rozlúčky",
+      "exercises": [
+        {
+          "type": "mcq",
+          "question": "Was bedeutet 'Guten Morgen'?",
+          "options": [
+            "Pozdrav ráno",
+            "Otázka",
+            "Meno",
+            "Rozlúčka"
+          ],
+          "answer": 0,
+          "explanation": "„Guten Morgen“ je pozdrav, ktorý sa používa ráno."
+        },
+        {
+          "type": "fill",
+          "sentence": "Guten Tag, Frau Kamp. – Guten Tag! Wie geht es Ihnen? – Sehr gut, danke. Und ___?",
+          "answer": "Ihnen",
+          "explanation": "Ak sa pýtate späť na stav formálne, použijete 'Ihnen'."
+        },
+        {
+          "type": "wordorder",
+          "words": [
+            "Hallo",
+            "Opa"
+          ],
+          "correct": "Hallo Opa",
+          "explanation": "Správne poradie slov pre neformálny pozdrav."
+        },
+        {
+          "type": "fill",
+          "sentence": "___, Nico! Bis morgen!",
+          "answer": "Tschüss",
+          "explanation": "„Tschüss“ je neformálna rozlúčka."
+        },
+        {
+          "type": "mcq",
+          "question": "Čo poviete, keď sa lúčite?",
+          "options": [
+            "Auf Wiedersehen!",
+            "Guten Tag!",
+            "Wie geht es Ihnen?",
+            "Schön!"
+          ],
+          "answer": 0,
+          "explanation": "„Auf Wiedersehen“ je formálna rozlúčka."
+        }
+      ]
+    },
+    {
+      "title": "Sich vorstellen und nach dem Befinden fragen",
+      "description": "Predstavenie sa a otázky na stav",
+      "exercises": [
+        {
+          "type": "fill",
+          "sentence": "Hallo, ich ___ Nico. Und wie heißt du?",
+          "answer": "heiße",
+          "explanation": "Sloveso 'heißen' (volám sa) sa používa na predstavenie sa."
+        },
+        {
+          "type": "mcq",
+          "question": "Ako sa spýtate na stav osoby, ktorú dobre poznáte?",
+          "options": [
+            "Na, wie geht’s?",
+            "Wie geht es Ihnen?",
+            "Guten Morgen!",
+            "Was ist das?"
+          ],
+          "answer": 0,
+          "explanation": "„Na, wie geht’s?“ je neformálny spôsob, ako sa spýtať na stav."
+        },
+        {
+          "type": "wordorder",
+          "words": [
+            "bin",
+            "ich",
+            "Lisa",
+            "Brunner"
+          ],
+          "correct": "ich bin Lisa Brunner",
+          "explanation": "Správne poradie slov pre predstavenie sa."
+        },
+        {
+          "type": "fill",
+          "sentence": "Hallo, ich bin Nico. – Hallo, Nico. Ich bin Sebastian. Was ___ du hier?",
+          "answer": "machst",
+          "explanation": "Sloveso 'machen' (robiť) sa používa v otázke 'Čo tu robíš?'"
+        },
+        {
+          "type": "mcq",
+          "question": "Ako odpoviete na 'Wie geht es dir?'",
+          "options": [
+            "Super, danke.",
+            "Ich heiße Nico.",
+            "Die Tasche ist schön.",
+            "Ich komme aus Spanien."
+          ],
+          "answer": 0,
+          "explanation": "„Super, danke“ je bežná odpoveď na otázku o stave."
+        }
+      ]
+    },
+    {
+      "title": "Zahlen und Alter",
+      "description": "Čísla a vek",
+      "exercises": [
+        {
+          "type": "fill",
+          "sentence": "sechs, sieben, acht, neun, zehn, elf, ___.",
+          "answer": "zwölf",
+          "explanation": "Pokračovanie číselnej rady."
+        },
+        {
+          "type": "mcq",
+          "question": "Koľko rokov má Lotte?",
+          "options": [
+            "Sie ist acht.",
+            "Sie ist schön.",
+            "Sie ist hier.",
+            "Sie ist weg."
+          ],
+          "answer": 0,
+          "explanation": "Podľa textu má Lotte osem rokov."
+        },
+        {
+          "type": "wordorder",
+          "words": [
+            "ist",
+            "Emma",
+            "auch",
+            "acht",
+            "Jahre",
+            "alt"
+          ],
+          "correct": "Emma ist auch acht Jahre alt",
+          "explanation": "Správne poradie slov pre vyjadrenie veku."
+        },
+        {
+          "type": "fill",
+          "sentence": "Das Zimmer hat ___ Quadratmeter.",
+          "answer": "elf",
+          "explanation": "Podľa textu má izba jedenásť metrov štvorcových."
+        },
+        {
+          "type": "mcq",
+          "question": "Koľko izieb má byt?",
+          "options": [
+            "Es gibt fünf Zimmer.",
+            "Es gibt zehn Zimmer.",
+            "Es gibt acht Zimmer.",
+            "Es gibt zwölf Zimmer."
+          ],
+          "answer": 0,
+          "explanation": "Podľa textu má byt päť izieb."
+        }
+      ]
+    },
+    {
+      "title": "Gegenstände benennen und beschreiben",
+      "description": "Pomenovanie a opis predmetov",
+      "exercises": [
+        {
+          "type": "fill",
+          "sentence": "Die ___ ist schön!",
+          "answer": "Tasche",
+          "explanation": "Slovo 'Tasche' (taška) je použité na opis predmetu."
+        },
+        {
+          "type": "mcq",
+          "question": "Čo je to 'Eine Einladung zum Geburtstag'?",
+          "options": [
+            "Pozvánka",
+            "Taška",
+            "Darček",
+            "Mobil"
+          ],
+          "answer": 0,
+          "explanation": "„Eine Einladung zum Geburtstag“ znamená pozvánka na narodeniny."
+        },
+        {
+          "type": "wordorder",
+          "words": [
+            "ist",
+            "das",
+            "ein",
+            "Geschenk"
+          ],
+          "correct": "das ist ein Geschenk",
+          "explanation": "Správne poradie slov pre opis predmetu."
+        },
+        {
+          "type": "fill",
+          "sentence": "Ich hab hier Emmas Schlafsack und ihre ___.",
+          "answer": "Isomatte",
+          "explanation": "„Isomatte“ (karimatka) je predmet, ktorý patrí Emme."
+        },
+        {
+          "type": "mcq",
+          "question": "Čo potrebujete na písanie?",
+          "options": [
+            "Einen Stift.",
+            "Eine Tasche.",
+            "Ein Handy.",
+            "Eine Pizza."
+          ],
+          "answer": 0,
+          "explanation": "„Einen Stift“ (pero) sa používa na písanie."
+        }
+      ]
+    },
+    {
+      "title": "Herkunft und Wohnort",
+      "description": "Pôvod a miesto bydliska",
+      "exercises": [
+        {
+          "type": "fill",
+          "sentence": "Ich komme ___ Spanien.",
+          "answer": "aus",
+          "explanation": "Predložka 'aus' (z) sa používa na vyjadrenie pôvodu."
+        },
+        {
+          "type": "mcq",
+          "question": "Kde býva Nico?",
+          "options": [
+            "Ich wohne in Sevilla.",
+            "Ich wohne in Deutschland.",
+            "Ich wohne in Frankreich.",
+            "Ich wohne in Schweden."
+          ],
+          "answer": 0,
+          "explanation": "Nico hovorí, že býva v Seville."
+        },
+        {
+          "type": "wordorder",
+          "words": [
+            "wohnst",
+            "du",
+            "in",
+            "Frankreich"
+          ],
+          "correct": "du wohnst in Frankreich",
+          "explanation": "Správne poradie slov pre otázku o mieste bydliska."
+        },
+        {
+          "type": "fill",
+          "sentence": "Meine Eltern wohnen in ___.",
+          "answer": "Sevilla",
+          "explanation": "Nico hovorí, že jeho rodičia bývajú v Seville."
+        },
+        {
+          "type": "mcq",
+          "question": "Odkiaľ pochádza Nico?",
+          "options": [
+            "Ich komme aus Spanien.",
+            "Ich komme aus Deutschland.",
+            "Ich komme aus Italien.",
+            "Ich komme aus Japan."
+          ],
+          "answer": 0,
+          "explanation": "Nico hovorí, že pochádza zo Španielska."
+        }
+      ]
+    },
+    {
+      "title": "Essen und Trinken bestellen",
+      "description": "Objednávanie jedla a nápojov",
+      "exercises": [
+        {
+          "type": "fill",
+          "sentence": "Ich nehme eine Pizza mit ___ bitte.",
+          "answer": "Salami",
+          "explanation": "Slovo 'Salami' (saláma) je druh pizze."
+        },
+        {
+          "type": "mcq",
+          "question": "Čo je Pizza Hawaii?",
+          "options": [
+            "Pizza s ananásom a šunkou.",
+            "Pizza so salámou.",
+            "Pizza s tuniakom.",
+            "Pizza s paradajkami a mozzarellou."
+          ],
+          "answer": 0,
+          "explanation": "Pizza Hawaii je pizza s ananásom a šunkou."
+        },
+        {
+          "type": "wordorder",
+          "words": [
+            "bestelle",
+            "ich",
+            "und"
+          ],
+          "correct": "und ich bestelle",
+          "explanation": "Správne poradie slov pre 'a ja si objednám'."
+        },
+        {
+          "type": "fill",
+          "sentence": "In Spanien isst man ___!",
+          "answer": "Gazpacho",
+          "explanation": "„Gazpacho“ je španielska špecialita."
+        },
+        {
+          "type": "mcq",
+          "question": "Čo sa je v Taliansku?",
+          "options": [
+            "Pizza.",
+            "Sushi.",
+            "Köttbullar.",
+            "Käse."
+          ],
+          "answer": 0,
+          "explanation": "Pizza je typické jedlo v Taliansku."
+        }
+      ]
+    },
+    {
+      "title": "Uhrzeit und Tagesablauf",
+      "description": "Čas a denný režim",
+      "exercises": [
+        {
+          "type": "fill",
+          "sentence": "Emma steht um ___ sieben auf.",
+          "answer": "halb",
+          "explanation": "„Halb sieben“ znamená pol siedmej."
+        },
+        {
+          "type": "mcq",
+          "question": "Kedy je obed?",
+          "options": [
+            "Um zwölf.",
+            "Um halb sieben.",
+            "Um vier.",
+            "Um halb fünf."
+          ],
+          "answer": 0,
+          "explanation": "Obed je o dvanástej."
+        },
+        {
+          "type": "wordorder",
+          "words": [
+            "macht",
+            "Hausaufgaben",
+            "Emma",
+            "normalerweise"
+          ],
+          "correct": "Emma macht normalerweise Hausaufgaben",
+          "explanation": "Správne poradie slov pre 'Emma zvyčajne robí domáce úlohy'."
+        },
+        {
+          "type": "fill",
+          "sentence": "Sie kommt um Viertel vor eins, also um ___ Uhr.",
+          "answer": "12:45",
+          "explanation": "„Viertel vor eins“ je 12:45."
+        },
+        {
+          "type": "mcq",
+          "question": "Čo robí Emma po hraní?",
+          "options": [
+            "Sie räumt auf.",
+            "Sie putzt Zähne.",
+            "Sie isst Müsli.",
+            "Sie übt Flöte."
+          ],
+          "answer": 0,
+          "explanation": "Po hraní Emma upratuje."
+        }
+      ]
+    },
+    {
+      "title": "Berufe und Arbeit",
+      "description": "Povolania a práca",
+      "exercises": [
+        {
+          "type": "fill",
+          "sentence": "Meine Eltern sagen, ___ ist gut.",
+          "answer": "Ingenieur",
+          "explanation": "„Ingenieur“ (inžinier) je povolanie."
+        },
+        {
+          "type": "mcq",
+          "question": "Aké bolo Tarekovo povolanie?",
+          "options": [
+            "Elektriker.",
+            "Bankkaufmann.",
+            "Lehrer.",
+            "Chef."
+          ],
+          "answer": 0,
+          "explanation": "Tarek bol pôvodne elektrikár."
+        },
+        {
+          "type": "wordorder",
+          "words": [
+            "mag",
+            "ich",
+            "meine",
+            "Arbeit"
+          ],
+          "correct": "ich mag meine Arbeit",
+          "explanation": "Správne poradie slov pre 'mám rád svoju prácu'."
+        },
+        {
+          "type": "fill",
+          "sentence": "Du arbeitest also gerne im ___.",
+          "answer": "Restaurant",
+          "explanation": "Práca v reštaurácii je spomenutá."
+        },
+        {
+          "type": "mcq",
+          "question": "Čo robí radosť?",
+          "options": [
+            "Die Arbeit im Restaurant.",
+            "Die Tasche ist weg.",
+            "Das Zimmer ist frei.",
+            "Die Bremse funktioniert nicht."
+          ],
+          "answer": 0,
+          "explanation": "Práca v reštaurácii robí radosť."
+        }
+      ]
+    },
+    {
+      "title": "Einkaufen und Preise",
+      "description": "Nakupovanie a ceny",
+      "exercises": [
+        {
+          "type": "fill",
+          "sentence": "Wo kaufst du ___?",
+          "answer": "ein",
+          "explanation": "„Einkaufen“ (nakupovať) je sloveso."
+        },
+        {
+          "type": "mcq",
+          "question": "Kde sa nakupuje v supermarkete?",
+          "options": [
+            "Um die Ecke.",
+            "Im Fundbüro.",
+            "Im Hotel.",
+            "Im Zentrum."
+          ],
+          "answer": 0,
+          "explanation": "Nakupuje sa v supermarkete za rohom."
+        },
+        {
+          "type": "wordorder",
+          "words": [
+            "kostet",
+            "was",
+            "das"
+          ],
+          "correct": "was kostet das",
+          "explanation": "Správne poradie slov pre otázku 'koľko to stojí'."
+        },
+        {
+          "type": "fill",
+          "sentence": "Ein Pfund Tomaten kostet ___ Euro.",
+          "answer": "2",
+          "explanation": "Libra paradajok stojí 2 eurá."
+        },
+        {
+          "type": "mcq",
+          "question": "Koľko stojí všetko spolu (300 gramov datlí, päť uhoriek a libra paradajok)?",
+          "options": [
+            "12,40 Euro.",
+            "20 Euro.",
+            "7,60 Euro.",
+            "2 Euro."
+          ],
+          "answer": 0,
+          "explanation": "Celková suma je 12,40 eur."
+        }
+      ]
+    },
+    {
+      "title": "Freizeitaktivitäten",
+      "description": "Voľnočasové aktivity",
+      "exercises": [
+        {
+          "type": "fill",
+          "sentence": "Ich hab gehört, du spielst ___?",
+          "answer": "Fußball",
+          "explanation": "„Fußball“ (futbal) je šport."
+        },
+        {
+          "type": "mcq",
+          "question": "Čo robí Nico najradšej?",
+          "options": [
+            "Angeln.",
+            "Joggen.",
+            "Schwimmen.",
+            "Fahrrad fahren."
+          ],
+          "answer": 0,
+          "explanation": "Nico hovorí, že najradšej chytá ryby."
+        },
+        {
+          "type": "wordorder",
+          "words": [
+            "gehe",
+            "ich",
+            "gern",
+            "angeln"
+          ],
+          "correct": "ich gehe gern angeln",
+          "explanation": "Správne poradie slov pre 'rád chodím chytať ryby'."
+        },
+        {
+          "type": "fill",
+          "sentence": "Wir gehen auch gern ins Theater und ins ___.",
+          "answer": "Kino",
+          "explanation": "„Kino“ (kino) je miesto pre voľnočasové aktivity."
+        },
+        {
+          "type": "mcq",
+          "question": "Čo je šport?",
+          "options": [
+            "Krafttraining.",
+            "Musik hören.",
+            "Flöte üben.",
+            "Hausaufgaben machen."
+          ],
+          "answer": 0,
+          "explanation": "„Krafttraining“ (silový tréning) je športová aktivita."
+        }
+      ]
+    },
+    {
+      "title": "Wohnung und Zimmer beschreiben",
+      "description": "Opis bytu a izieb",
+      "exercises": [
+        {
+          "type": "fill",
+          "sentence": "Die Wohnung hat eine ___.",
+          "answer": "Terrasse",
+          "explanation": "„Terrasse“ (terasa) je súčasť bytu."
+        },
+        {
+          "type": "mcq",
+          "question": "Čo nie je v dome?",
+          "options": [
+            "Einen Aufzug.",
+            "Eine Terrasse.",
+            "Eine Küche.",
+            "Ein Bad."
+          ],
+          "answer": 0,
+          "explanation": "V dome nie je výťah."
+        },
+        {
+          "type": "wordorder",
+          "words": [
+            "sind",
+            "die",
+            "Fenster",
+            "groß"
+          ],
+          "correct": "die Fenster sind groß",
+          "explanation": "Správne poradie slov pre 'okná sú veľké'."
+        },
+        {
+          "type": "fill",
+          "sentence": "Es gibt fünf Zimmer, eine Küche und ein ___.",
+          "answer": "Bad",
+          "explanation": "„Bad“ (kúpeľňa) je súčasť bytu."
+        },
+        {
+          "type": "mcq",
+          "question": "Aká je kuchyňa?",
+          "options": [
+            "Sehr gemütlich.",
+            "Sehr groß.",
+            "Sehr hell.",
+            "Sehr ruhig."
+          ],
+          "answer": 0,
+          "explanation": "Kuchyňa je veľmi útulná."
+        }
+      ]
+    },
+    {
+      "title": "Gesundheit und Krankheit",
+      "description": "Zdravie a choroba",
+      "exercises": [
+        {
+          "type": "fill",
+          "sentence": "Der Arzt sagt, es ist nicht ___.",
+          "answer": "gebrochen",
+          "explanation": "„Gebrochen“ (zlomené) je stav zranenia."
+        },
+        {
+          "type": "mcq",
+          "question": "Čo predpísal lekár Nicovi?",
+          "options": [
+            "Schmerztabletten und eine Salbe.",
+            "Eine Pizza.",
+            "Ein Geschenk.",
+            "Ein Fahrrad."
+          ],
+          "answer": 0,
+          "explanation": "Lekár predpísal Nicovi lieky proti bolesti a masť."
+        },
+        {
+          "type": "wordorder",
+          "words": [
+            "dein",
+            "nicht",
+            "Bein",
+            "bewegen",
+            "du",
+            "darfst"
+          ],
+          "correct": "du darfst dein Bein nicht bewegen",
+          "explanation": "Správne poradie slov pre 'nesmieš hýbať nohou'."
+        },
+        {
+          "type": "fill",
+          "sentence": "Nimm die Tabletten ___ täglich.",
+          "answer": "dreimal",
+          "explanation": "„Dreimal“ (trikrát) udáva frekvenciu užívania liekov."
+        },
+        {
+          "type": "mcq",
+          "question": "Kedy má Nico použiť masť?",
+          "options": [
+            "Abends vor dem Schlafengehen.",
+            "Morgens.",
+            "Mittags.",
+            "Nach dem Essen."
+          ],
+          "answer": 0,
+          "explanation": "Masť sa má používať večer pred spaním."
+        }
+      ]
+    },
+    {
+      "title": "Wetter",
+      "description": "Počasie",
+      "exercises": [
+        {
+          "type": "fill",
+          "sentence": "Wir hatten super ___.",
+          "answer": "Wetter",
+          "explanation": "„Wetter“ (počasie) je spomenuté v kontexte dovolenky."
+        },
+        {
+          "type": "mcq",
+          "question": "Aké je počasie u Nica?",
+          "options": [
+            "Es ist bewölkt.",
+            "Es ist sonnig.",
+            "Es ist warm.",
+            "Es ist toll."
+          ],
+          "answer": 0,
+          "explanation": "U Nica je zamračené."
+        },
+        {
+          "type": "wordorder",
+          "words": [
+            "wird",
+            "es",
+            "noch",
+            "kälter",
+            "morgen"
+          ],
+          "correct": "morgen wird es noch kälter",
+          "explanation": "Správne poradie slov pre 'zajtra bude ešte chladnejšie'."
+        },
+        {
+          "type": "fill",
+          "sentence": "Der Himmel ist einfach immer ___.",
+          "answer": "grau",
+          "explanation": "Obloha je vždy sivá."
+        },
+        {
+          "type": "mcq",
+          "question": "Aká je vysoká teplota?",
+          "options": [
+            "20 Grad.",
+            "Sieben Grad.",
+            "Kälter.",
+            "Grau."
+          ],
+          "answer": 0,
+          "explanation": "20 stupňov je vysoká teplota."
+        }
+      ]
+    },
+    {
+      "title": "Kleidung",
+      "description": "Oblečenie",
+      "exercises": [
+        {
+          "type": "fill",
+          "sentence": "Wie findest du das ___?",
+          "answer": "Hemd",
+          "explanation": "„Hemd“ (košeľa) je kus oblečenia."
+        },
+        {
+          "type": "mcq",
+          "question": "Koľko stojí košeľa?",
+          "options": [
+            "25 Euro.",
+            "2 Euro.",
+            "12,40 Euro.",
+            "22,50 Euro."
+          ],
+          "answer": 0,
+          "explanation": "Košeľa stojí 25 eur."
+        },
+        {
+          "type": "wordorder",
+          "words": [
+            "steht",
+            "dir",
+            "gut",
+            "das"
+          ],
+          "correct": "das steht dir gut",
+          "explanation": "Správne poradie slov pre 'to ti dobre pristane'."
+        },
+        {
+          "type": "fill",
+          "sentence": "Probier mal ___ an.",
+          "answer": "M",
+          "explanation": "„M“ je veľkosť oblečenia."
+        },
+        {
+          "type": "mcq",
+          "question": "Čo je príliš veľké?",
+          "options": [
+            "L.",
+            "M.",
+            "Salami.",
+            "Ananas."
+          ],
+          "answer": 0,
+          "explanation": "Veľkosť 'L' bola príliš veľká."
+        }
+      ]
+    },
+    {
+      "title": "Familie",
+      "description": "Rodina",
+      "exercises": [
+        {
+          "type": "fill",
+          "sentence": "Hallo, ___!",
+          "answer": "Opa",
+          "explanation": "„Opa“ (dedko) je člen rodiny."
+        },
+        {
+          "type": "mcq",
+          "question": "Koľko rokov má Lotte?",
+          "options": [
+            "Sie ist acht.",
+            "Sie ist sieben.",
+            "Sie ist neun.",
+            "Sie ist zehn."
+          ],
+          "answer": 0,
+          "explanation": "Lotte má osem rokov."
+        },
+        {
+          "type": "wordorder",
+          "words": [
+            "ist",
+            "meine",
+            "Schwester",
+            "das"
+          ],
+          "correct": "das ist meine Schwester",
+          "explanation": "Správne poradie slov pre 'to je moja sestra'."
+        },
+        {
+          "type": "fill",
+          "sentence": "Meine ___ wohnen in Sevilla.",
+          "answer": "Eltern",
+          "explanation": "„Eltern“ (rodičia) sú členovia rodiny."
+        },
+        {
+          "type": "mcq",
+          "question": "Kto je v Paríži?",
+          "options": [
+            "Dein Bruder.",
+            "Deine Tante.",
+            "Deine Eltern.",
+            "Deine Cousine."
+          ],
+          "answer": 0,
+          "explanation": "Jeho brat je v Paríži."
+        }
+      ]
+    }
+  ]
+}

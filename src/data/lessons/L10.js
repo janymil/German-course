@@ -468,22 +468,25 @@
       textSk: 'Jana ide s Petrom do Gasthausa. Jana má hlad. Zoberie si polievku a Viedenský rezeň. Peter je rybu. Jana pije jablčný džús, Peter pije vodu. Čašník sa pýta: "Chutilo vám?" Jana povie: "Áno, bolo veľmi chutné!"',
       questions: [
         {
-          question: 'Čo si Jana objednala?',
+          question: 'Was nimmt Jana zum Essen?',
+          questionSk: 'Čo si Jana dá na jedenie?',
           options: ['Den Fisch und das Wasser', 'Die Suppe und den Wiener Schnitzel', 'Den Salat und den Kaffee', 'Die Suppe und das Brot'],
           answer: 1,
-          explanation: 'V texte: "Sie nimmt die Suppe und den Wiener Schnitzel."'
+          explanation: 'Im Text: "Sie nimmt die Suppe und den Wiener Schnitzel."'
         },
         {
-          question: 'Čo pil Peter?',
+          question: 'Was trinkt Peter?',
+          questionSk: 'Čo pije Peter?',
           options: ['Einen Kaffee', 'Einen Apfelsaft', 'Ein Wasser', 'Eine Limonade'],
           answer: 2,
-          explanation: 'V texte: "Peter trinkt ein Wasser."'
+          explanation: 'Im Text: "Peter trinkt ein Wasser."'
         },
         {
-          question: 'Čo povedal čašník na konci?',
+          question: 'Was fragt der Kellner am Ende?',
+          questionSk: 'Čo sa čašník pýta na konci?',
           options: ['Bitte zahlen!', 'Noch etwas?', 'Hat es Ihnen geschmeckt?', 'Guten Appetit!'],
           answer: 2,
-          explanation: 'V texte: \'Der Kellner fragt: "Hat es Ihnen geschmeckt?"\''
+          explanation: 'Im Text: "Der Kellner fragt: Hat es Ihnen geschmeckt?"'
         }
       ]
     },

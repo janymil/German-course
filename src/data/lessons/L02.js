@@ -1,463 +1,361 @@
-﻿export const lesson02 = {
+export const lesson02 = {
   id: 2,
   week: 1,
   day: 2,
-  title: "Begrüßungen und Verabschiedungen",
-  topic: "Pozdravy a rozlúčky — formálne vs. neformálne",
-  cefr: "A1",
-  xpReward: 20,
-  narrativeContext:
-    "Jana prichádza na prvý deň do práce vo Viedni. V kancelárii počuje 'Grüß Gott' a 'Servus' — výrazy, ktoré nikdy nepočula na hodinách nemčiny v Bratislave. Musí rýchlo pochopiť, kedy hovoriť formálne a kedy neformálne.",
-  communicativeGoal:
-    "Po tejto lekcii viem pozdraviť a rozlúčiť sa formálne aj neformálne po nemecky, poznám rakúske varianty pozdravov a viem reagovať na otázku 'Wie geht es Ihnen?'",
-  skillFocus: ["vocabulary", "speaking", "pragmatics"],
-
+  title: 'Wer bist du? Wie heißt du?',
+  topic: 'W-Fragen: Wie, Wer, Was. Použitie slovesa sein.',
+  cefr: 'A1',
+  xpReward: 15,
+  narrativeContext: 'Jana sa učí klásť základné otázky pri zoznamovaní a reagovať na bežné situácie v rozhovoroch.',
+  communicativeGoal: 'Po tejto lekcii viem klásť základné otázky a vyjadriť súhlas alebo nesúhlas.',
+  skillFocus: ['vocabulary', 'grammar', 'reading', 'speaking'],
   grammarNote: {
-    rule: "Formálne vs. neformálne oslovovanie — Sie vs. du",
-    explanation:
-      "Nemčina rozlišuje formálne oslovovanie (Sie — vykanie) a neformálne (du — tykanie). Formálne Sie sa píše vždy s veľkým S. Pozdravy sa líšia podľa toho, koho oslovuješ. Rakúska nemčina má navyše vlastné regionálne varianty — 'Grüß Gott' namiesto 'Guten Tag' a 'Servus' namiesto 'Tschüss'.",
+    rule: 'Opytovacie zámená (W-Fragen) a poriadok slov',
+    explanation: 'V nemčine začíname opytovacie vety, pri ktorých očakávame konkrétnu informáciu (tzv. dopĺňacie otázky), vždy opytovacím zámenom. Tieto slová zväčša začínajú na písmeno W (preto sa volajú W-Fragen), napríklad: "wie" (ako), "was" (čo) alebo "wo" (kde). Ak veta začína opytovacím zámenom, hneď na druhom mieste nasleduje vyčasované sloveso a až potom podmet.',
     examples: [
-      { de: "Guten Tag, Herr Müller.", sk: "formálne — nadriadený, cudzí človek, zákazník" },
-      { de: "Hallo, Markus!", sk: "neformálne — kolega, kamarát, rovesník" },
-      { de: "Grüß Gott!", sk: "rakúsky/bavorský pozdrav (doslova: Pozdrav Boh!)" },
-      { de: "Servus!", sk: "rakúsky neformálny pozdrav aj rozlúčka" }
+      { de: 'Wie heißt du?', sk: 'Ako sa voláš?' },
+      { de: 'Was ist das?', sk: 'Čo je to?' },
+      { de: 'Wo bist du?', sk: 'Kde si?' },
+      { de: 'Wer ist das?', sk: 'Kto je to?' }
     ],
-    slovakContrastNote:
-      "Slovenčina tiež rozlišuje vykanie a tykanie. Nemecký systém je veľmi podobný — hauptný rozdiel je, že formálne 'Sie' sa VŽDY píše s veľkým písmenom. V Rakúsku sú bežné regionálne varianty 'Grüß Gott' a 'Servus', ktoré v nemeckých učebniciach zvyčajne nenájdeš."
+    slovakContrastNote: 'Opytovacie slovo kladieme zásadne na prvé miesto a za ním nasleduje sloveso. Na rozdiel od angličtiny tu nie sú žiadne pomocné slovesá ako "do/does", systém pripomína skôr slovenčinu.'
   },
-
   vocab: [
     {
-      de: "Hallo",
-      sk: "Ahoj",
-      example: "Hallo! Ich bin Jana.",
-      exampleSk: "Ahoj! Som Jana.",
+      de: 'wie',
+      sk: 'ako',
       gender: null,
-      srsId: "L02_V01",
+      srsId: 'L02_V01',
+      example: 'Wie geht es dir?',
+      exampleSk: 'Ako sa máš?',
       recycledFrom: []
     },
     {
-      de: "Guten Morgen",
-      sk: "Dobré ráno",
-      example: "Guten Morgen! Wie geht es Ihnen?",
-      exampleSk: "Dobré ráno! Ako sa máte?",
+      de: 'was',
+      sk: 'čo',
       gender: null,
-      srsId: "L02_V02",
+      srsId: 'L02_V02',
+      example: 'Was ist das?',
+      exampleSk: 'Čo je to?',
       recycledFrom: []
     },
     {
-      de: "Guten Tag",
-      sk: "Dobrý deň",
-      example: "Guten Tag, mein Name ist Jana Nováková.",
-      exampleSk: "Dobrý deň, volám sa Jana Nováková.",
+      de: 'wo',
+      sk: 'kde',
       gender: null,
-      srsId: "L02_V03",
+      srsId: 'L02_V03',
+      example: 'Wo bist du?',
+      exampleSk: 'Kde si?',
       recycledFrom: []
     },
     {
-      de: "Guten Abend",
-      sk: "Dobrý večer",
-      example: "Guten Abend! Schöner Tag heute, oder?",
-      exampleSk: "Dobrý večer! Pekný deň dnes, však?",
-      gender: null,
-      srsId: "L02_V04",
+      de: 'die Frau',
+      sk: 'žena, pani',
+      gender: 'F',
+      srsId: 'L02_V04',
+      example: 'Die Frau lernt Deutsch.',
+      exampleSk: 'Žena sa učí po nemecky.',
       recycledFrom: []
     },
     {
-      de: "Gute Nacht",
-      sk: "Dobrú noc",
-      example: "Gute Nacht! Bis morgen.",
-      exampleSk: "Dobrú noc! Do zajtra.",
-      gender: null,
-      srsId: "L02_V05",
+      de: 'der Herr',
+      sk: 'pán',
+      gender: 'M',
+      srsId: 'L02_V05',
+      example: 'Der Herr ist hier.',
+      exampleSk: 'Pán je tu.',
       recycledFrom: []
     },
     {
-      de: "Auf Wiedersehen",
-      sk: "Do videnia",
-      example: "Auf Wiedersehen, Frau Müller!",
-      exampleSk: "Do videnia, pani Müllerová!",
+      de: 'gut',
+      sk: 'dobre, dobrý',
       gender: null,
-      srsId: "L02_V06",
+      srsId: 'L02_V06',
+      example: 'Das ist sehr gut.',
+      exampleSk: 'To je veľmi dobré.',
       recycledFrom: []
     },
     {
-      de: "Tschüss",
-      sk: "Čau",
-      example: "Tschüss, bis morgen!",
-      exampleSk: "Čau, do zajtra!",
+      de: 'schlecht',
+      sk: 'zle, zlý',
       gender: null,
-      srsId: "L02_V07",
+      srsId: 'L02_V07',
+      example: 'Das ist nicht schlecht.',
+      exampleSk: 'To nie je zlé.',
       recycledFrom: []
     },
     {
-      de: "Bis bald",
-      sk: "Čoskoro sa uvidíme",
-      example: "Bis bald, Jana! Pass auf dich auf.",
-      exampleSk: "Čoskoro sa uvidíme, Jana! Daj na seba pozor.",
+      de: 'auch',
+      sk: 'tiež, aj',
       gender: null,
-      srsId: "L02_V08",
+      srsId: 'L02_V08',
+      example: 'Ich bin auch hier.',
+      exampleSk: 'Ja som tu tiež.',
       recycledFrom: []
     },
     {
-      de: "Grüß Gott",
-      sk: "Pochválen Pán Boh! (rakúsky pozdrav)",
-      example: "Grüß Gott! Willkommen in Wien.",
-      exampleSk: "Dobrý deň! Vitajte vo Viedni. (rakúsky variant)",
+      de: 'richtig',
+      sk: 'správne, správny',
       gender: null,
-      srsId: "L02_V09",
+      srsId: 'L02_V09',
+      example: 'Ja, das ist richtig.',
+      exampleSk: 'Áno, to je správne.',
       recycledFrom: []
     },
     {
-      de: "Servus",
-      sk: "Servus / Čau (rakúsky neformálny pozdrav aj rozlúčka)",
-      example: "Servus, wie geht's?",
-      exampleSk: "Čau, ako sa máš?",
+      de: 'falsch',
+      sk: 'nesprávne, nesprávny',
       gender: null,
-      srsId: "L02_V10",
+      srsId: 'L02_V10',
+      example: 'Nein, das ist falsch.',
+      exampleSk: 'Nie, to je nesprávne.',
       recycledFrom: []
     },
     {
-      de: "Wie geht es Ihnen?",
-      sk: "Ako sa máte? (formálne)",
-      example: "Guten Morgen! Wie geht es Ihnen, Herr Bauer?",
-      exampleSk: "Dobré ráno! Ako sa máte, pán Bauer?",
+      de: 'fragen',
+      sk: 'pýtať sa',
       gender: null,
-      srsId: "L02_V11",
+      srsId: 'L02_V11',
+      example: 'Ich frage dich.',
+      exampleSk: 'Pýtam sa ťa.',
       recycledFrom: []
     },
     {
-      de: "Wie geht's?",
-      sk: "Ako sa máš? (neformálne)",
-      example: "Hey, wie geht's dir?",
-      exampleSk: "Hej, ako sa máš?",
+      de: 'antworten',
+      sk: 'odpovedať',
       gender: null,
-      srsId: "L02_V12",
+      srsId: 'L02_V12',
+      example: 'Ich antworte dir.',
+      exampleSk: 'Odpovedám ti.',
       recycledFrom: []
     },
     {
-      de: "Danke / Danke schön",
-      sk: "Ďakujem / Pekne ďakujem",
-      example: "Danke schön für Ihre Hilfe!",
-      exampleSk: "Pekne ďakujem za vašu pomoc!",
+      de: 'lernen',
+      sk: 'učiť sa',
       gender: null,
-      srsId: "L02_V13",
+      srsId: 'L02_V13',
+      example: 'Wir lernen Deutsch.',
+      exampleSk: 'Učíme sa po nemecky.',
       recycledFrom: []
     },
     {
-      de: "Bitte / Bitte schön",
-      sk: "Prosím / Prosím vás",
-      example: "Bitte schön! — Danke schön!",
-      exampleSk: "Prosím vás! — Ďakujem vám!",
+      de: 'oder',
+      sk: 'alebo',
       gender: null,
-      srsId: "L02_V14",
+      srsId: 'L02_V14',
+      example: 'Ist das richtig oder falsch?',
+      exampleSk: 'Je to správne alebo nesprávne?',
       recycledFrom: []
     },
     {
-      de: "Entschuldigung",
-      sk: "Prepáčte",
-      example: "Entschuldigung, wo ist das Büro?",
-      exampleSk: "Prepáčte, kde je kancelária?",
+      de: 'und',
+      sk: 'a',
       gender: null,
-      srsId: "L02_V15",
-      recycledFrom: []
-    },
-    {
-      de: "Es tut mir leid",
-      sk: "Ľutujem / Je mi to ľúto",
-      example: "Es tut mir leid, ich bin zu spät.",
-      exampleSk: "Je mi to ľúto, meškám.",
-      gender: null,
-      srsId: "L02_V16",
-      recycledFrom: []
-    },
-    {
-      de: "Ich heiße…",
-      sk: "Volám sa…",
-      example: "Ich heiße Jana Nováková. Ich komme aus der Slowakei.",
-      exampleSk: "Volám sa Jana Nováková. Som zo Slovenska.",
-      gender: null,
-      srsId: "L02_V17",
-      recycledFrom: []
-    },
-    {
-      de: "Mein Name ist…",
-      sk: "Moje meno je…",
-      example: "Mein Name ist Jana Nováková. Schön, Sie kennenzulernen.",
-      exampleSk: "Moje meno je Jana Nováková. Teší ma.",
-      gender: null,
-      srsId: "L02_V18",
+      srsId: 'L02_V15',
+      example: 'Die Frau und der Herr lernen.',
+      exampleSk: 'Žena a pán sa učia.',
       recycledFrom: []
     }
   ],
-
   exercises: [
     {
-      type: "flashcard",
-      instruction:
-        "Precvičuj pozdravy a rozlúčky. Flip kartu pre slovenský preklad a poznámku (F = formálne, NF = neformálne, AT = rakúsky variant).",
-      items: [
-        "Hallo = Ahoj (NF)",
-        "Guten Morgen = Dobré ráno (F/NF)",
-        "Guten Tag = Dobrý deň (F)",
-        "Guten Abend = Dobrý večer (F/NF)",
-        "Gute Nacht = Dobrú noc (F/NF)",
-        "Auf Wiedersehen = Do videnia (F)",
-        "Tschüss = Čau (NF)",
-        "Bis bald = Čoskoro sa uvidíme (NF)",
-        "Grüß Gott = Dobrý deň (AT — rakúsky formálny pozdrav)",
-        "Servus = Čau / Ahoj (AT — rakúsky neformálny pozdrav aj rozlúčka)",
-        "Wie geht es Ihnen? = Ako sa máte? (F)",
-        "Wie geht's? = Ako sa máš? (NF)",
-        "Danke / Danke schön = Ďakujem / Pekne ďakujem",
-        "Bitte / Bitte schön = Prosím / Prosím vás",
-        "Entschuldigung = Prepáčte",
-        "Es tut mir leid = Ľutujem / Je mi to ľúto",
-        "Ich heiße… = Volám sa…",
-        "Mein Name ist… = Moje meno je…"
-      ]
+      type: 'flashcard',
+      instruction: 'Prezri si nové slovíčka z tejto lekcie. Pokús sa zapamätať si význam aj členy podstatných mien.'
     },
     {
-      type: "mcq",
-      instruction:
-        "Jana je vo Viedni. Pomôž jej vybrať správny pozdrav pre každú situáciu.",
-      questions: [
-        {
-          question: "Jana vstupuje na pohovor. Hovorí: 'Guten Tag, ich heiße Jana Nováková.' Je to správne?",
-          options: [
-            "Áno, 'Guten Tag' je formálny pozdrav — správne!",
-            "Nie, na pohovor treba použiť 'Hallo'",
-            "Nie, správne je 'Gute Nacht'",
-            "Nie, Jana by mala povedať 'Tschüss'"
-          ],
-          answer: 0,
-          explanation:
-            "'Guten Tag' je formálny pozdrav vhodný na pohovor, do obchodu, do úradu — všade, kde nepoznáme osobu dobre alebo kde sú formálne spoločenské vzťahy. Správna voľba!"
-        },
-        {
-          question: "Kolega Thomas (rovesník, kamarát) odchádza domov. Jana hovorí: 'Auf Wiedersehen, Thomas!' Je to správne?",
-          options: [
-            "Áno, 'Auf Wiedersehen' sa hodí vždy",
-            "Nie, 'Auf Wiedersehen' je príliš formálne pre kamaráta — lepšie 'Tschüss' alebo 'Bis bald'",
-            "Nie, správne je 'Guten Morgen'",
-            "Áno, ale len v Rakúsku"
-          ],
-          answer: 1,
-          explanation:
-            "'Auf Wiedersehen' je formálna rozlúčka — vhodná pre nadriadených, zákazníkov, cudzích ľudí. Pre kamaráta je prirodzenejšie 'Tschüss', 'Bis bald', alebo v Rakúsku 'Servus'."
-        },
-        {
-          question: "Recepčná v hoteli vie Janu a hovorí: 'Grüß Gott!' Jana to nikdy nepočula. Čo to znamená?",
-          options: [
-            "Je to urážka",
-            "Je to rakúsky/bavorský formálny pozdrav, ekvivalent 'Guten Tag'",
-            "Je to rozlúčka, ekvivalent 'Auf Wiedersehen'",
-            "Je to prosba o pomoc"
-          ],
-          answer: 1,
-          explanation:
-            "'Grüß Gott' (doslova: Pozdrav [ťa] Boh) je typický rakúsky a bavorský formálny pozdrav, ktorý nahradza 'Guten Tag'. V Štandardnej nemčine (severné Nemecko) sa nepoužíva, ale vo Viedni ho počuješ všade!"
-        },
-        {
-          question: "Jana sa stretne s novou kolegyňou o 8:00 ráno. Ako jej správne zapraje?",
-          options: [
-            "Gute Nacht!",
-            "Guten Abend!",
-            "Guten Morgen!",
-            "Auf Wiedersehen!"
-          ],
-          answer: 2,
-          explanation:
-            "'Guten Morgen' = Dobré ráno — používa sa ráno (zvyčajne do 10:00–11:00). Prehľad: Morgen (ráno) → Guten Morgen; Tag (deň) → Guten Tag; Abend (večer) → Guten Abend; Nacht (noc) → Gute Nacht."
-        },
-        {
-          question: "Ako sa povie 'Je mi to ľúto' po nemecky?",
-          options: [
-            "Danke schön",
-            "Entschuldigung",
-            "Es tut mir leid",
-            "Bitte schön"
-          ],
-          answer: 2,
-          explanation:
-            "'Es tut mir leid' = Je mi to ľúto / Ľutujem. Pozor: 'Entschuldigung' = Prepáčte/Ospravedlňujem sa (napr. keď si niekoho nevšimol alebo chceš pritiahnuť pozornosť), 'Es tut mir leid' vyjadřuje skutočnú ľútosť."
-        },
-        {
-          question: "Čo je typicky rakúsky neformálny pozdrav, ktorý funguje aj pri stretnutí aj pri rozlúčke?",
-          options: [
-            "Guten Tag",
-            "Auf Wiedersehen",
-            "Servus",
-            "Gute Nacht"
-          ],
-          answer: 2,
-          explanation:
-            "'Servus' je rakúsky dialektizmus latinského pôvodu (lat. servus = sluha, v zmysle 'k službám'). Vo Viedni sa bežne používa ako pozdrav aj rozlúčka medzi priateľmi a známymi — rovnako ako slovenské 'Ahoj' alebo 'Čau'."
-        }
-      ]
-    },
-    {
-      type: "fill",
-      instruction:
-        "Doplň správny pozdrav alebo rozlúčku. Jana absolvuje prvý deň v práci.",
-      questions: [
-        {
-          sentence: "Jana vstupuje do kancelárie o 8:30. Šéfovi hovorí: '___ Morgen, Herr Bauer!'",
-          answer: "Guten",
-          hint: "Dobré ráno — prvá časť",
-          explanation:
-            "'Guten Morgen' = Dobré ráno. 'Guten' je akuzatívna forma adjektíva 'gut' (dobrý) — zatiaľ to len zapamätaj ako frázu, gramatiku prídeme neskôr."
-        },
-        {
-          sentence: "Kolegyňa Lisa odchádza: 'Tschüss Jana!' Jana odpovedá: 'Tschüss! ___ bald!'",
-          answer: "Bis",
-          hint: "Čoskoro sa uvidíme — prvá časť",
-          explanation:
-            "'Bis bald' = Čoskoro sa uvidíme. 'Bis' = do / až (predložka), 'bald' = čoskoro. Ďalšie varianty: 'Bis morgen' (do zajtra), 'Bis Montag' (do pondelka)."
-        },
-        {
-          sentence: "Jana nevie, kde je toaleta. Pýta sa kolegu: '___, wo ist die Toilette?'",
-          answer: "Entschuldigung",
-          hint: "Prepáčte / ospravedlňte ma",
-          explanation:
-            "'Entschuldigung' sa používa na upútanie pozornosti alebo na ospravedlnenie drobného previnenia. Môžeš ho tiež vysloviť ako: 'Entschuldigen Sie bitte' (formálnejšie)."
-        },
-        {
-          sentence: "Jana sa predstavuje šéfovi: '___ heiße Jana Nováková.'",
-          answer: "Ich",
-          hint: "osobné zámeno — ja",
-          explanation:
-            "'Ich heiße…' = Volám sa… 'Ich' = ja. Formálnejší variant: 'Mein Name ist Jana Nováková.' Oba sú správne na formálnom predstavovaní."
-        },
-        {
-          sentence: "Recepčná Petra (rakúčanka) víta Janu: '___ Gott! Willkommen im Büro.'",
-          answer: "Grüß",
-          hint: "rakúsky formálny pozdrav",
-          explanation:
-            "'Grüß Gott' je typicky rakúsky (a bavorský) pozdrav. Jana ho bude počuť vo Viedni veľmi často — je to štandardný formálny pozdrav, nie náboženský výraz v modernom použití."
-        },
-        {
-          sentence: "Jana sa lúči so šéfom večer: 'Auf ___, Herr Bauer!'",
-          answer: "Wiedersehen",
-          hint: "Do videnia — druhá časť",
-          explanation:
-            "'Auf Wiedersehen' doslova = Do opätovného videnia (Wieder = znovu, sehen = vidieť). Je to formálna rozlúčka. Neformálny ekvivalent: 'Tschüss', rakúsky: 'Servus'."
-        }
-      ]
-    },
-    {
-      type: "listen",
-      instruction:
-        "Počúvaj pozdrav a identifikuj, čo si počul. Venuj pozornosť formálnosti!",
-      questions: [
-        { de: "Guten Morgen!", sk: "Dobré ráno!" },
-        { de: "Auf Wiedersehen!", sk: "Do videnia!" },
-        { de: "Grüß Gott!", sk: "Dobrý deň! (rakúsky variant)" },
-        { de: "Servus!", sk: "Čau! (rakúsky neformálny)" },
-        { de: "Wie geht es Ihnen?", sk: "Ako sa máte? (formálne)" },
-        { de: "Es tut mir leid.", sk: "Je mi to ľúto." },
-        { de: "Danke schön!", sk: "Pekne ďakujem!" },
-        { de: "Bitte schön!", sk: "Prosím vás!" }
-      ]
-    },
-    {
-      type: "match",
-      instruction:
-        "Spoj nemecký pozdrav alebo frázu so slovenským prekladom.",
+      type: 'match',
+      instruction: 'Priraď nemecké slovíčka k ich slovenským prekladom.',
       pairs: [
-        ["Guten Abend", "Dobrý večer"],
-        ["Tschüss", "Čau"],
-        ["Bis bald", "Čoskoro sa uvidíme"],
-        ["Entschuldigung", "Prepáčte"],
-        ["Es tut mir leid", "Je mi to ľúto"],
-        ["Mein Name ist…", "Moje meno je…"],
-        ["Wie geht's?", "Ako sa máš?"],
-        ["Gute Nacht", "Dobrú noc"]
+        ['wie', 'ako'],
+        ['was', 'čo'],
+        ['wo', 'kde'],
+        ['die Frau', 'žena, pani'],
+        ['der Herr', 'pán'],
+        ['fragen', 'pýtať sa'],
+        ['antworten', 'odpovedať'],
+        ['lernen', 'učiť sa']
       ]
     },
     {
       type: 'wordorder',
-      instruction: 'Zoraď slová do správnej nemeckej vety.',
+      instruction: 'Zostav správne vety. Nezabudni: W-Fragen začínajú opytovacím zámenom a následne ide sloveso.',
       sentences: [
         {
-          words: ['Guten', 'Morgen,', 'Frau', 'Müller!'],
-          correct: 'Guten Morgen, Frau Müller!',
-          hint: 'Dobré ráno, pani Müllerová!',
-          explanation: 'Formálne oslovenie: titul + priezvisko. Pozdrav stojí pred oslovením.'
+          words: ['Wie', 'dir', 'geht', 'es'],
+          correct: 'Wie geht es dir',
+          hint: 'Ako sa máš?',
+          explanation: '"Wie" (ako) je na začiatku, nasleduje sloveso "geht".'
         },
         {
-          words: ['Wie', 'geht', 'es', 'Ihnen?'],
-          correct: 'Wie geht es Ihnen?',
-          hint: 'Ako sa máte? (formálne)',
-          explanation: 'Formálna otázka: "Ihnen" = Vám (veľké I). Sloveso geht je na 2. mieste — pravidlo V2.'
+          words: ['ist', 'Was', 'das'],
+          correct: 'Was ist das',
+          hint: 'Čo je to?',
+          explanation: '"Was" je prvé, "ist" druhé.'
         },
         {
-          words: ['Danke,', 'es', 'geht', 'mir', 'gut.'],
-          correct: 'Danke, es geht mir gut.',
-          hint: 'Ďakujem, darí sa mi dobre.',
-          explanation: '"mir" = mne (datív). Es geht mir gut — neosobná konštrukcia, bežná odpoveď na pozdrav.'
+          words: ['bist', 'du', 'Wo'],
+          correct: 'Wo bist du',
+          hint: 'Kde si?',
+          explanation: '"Wo" sa pýta na miesto, nachádza sa na prvom mieste vo vete.'
         },
         {
-          words: ['Auf', 'Wiedersehen,', 'Herr', 'Bauer!'],
-          correct: 'Auf Wiedersehen, Herr Bauer!',
-          hint: 'Do videnia, pán Bauer!',
-          explanation: 'Formálna rozlúčka. V Rakúsku sa používa aj "Auf Wiederschaun" — miestny variant.'
+          words: ['oder', 'falsch', 'es', 'Ist', 'richtig'],
+          correct: 'Ist es richtig oder falsch',
+          hint: 'Je to správne alebo nesprávne?',
+          explanation: 'Toto nie je W-otázka, začína sa preto priamo slovesom "Ist".'
+        }
+      ]
+    },
+    {
+      type: 'fill',
+      instruction: 'Doplň chýbajúce slová do vety.',
+      questions: [
+        {
+          sentence: '___ geht es dir?',
+          answer: 'Wie',
+          hint: 'ako',
+          explanation: 'Správna opytovacia fráza je "Wie geht es dir?".'
         },
         {
-          words: ['Ich', 'heiße', 'Jana', 'Nováková.'],
-          correct: 'Ich heiße Jana Nováková.',
-          hint: 'Volám sa Jana Nováková.',
-          explanation: 'Sloveso heißen = volať sa. Vždy na 2. mieste (V2 pravidlo). Kmeň: heiß-.'
+          sentence: '___ ist das? Das ist ein Buch.',
+          answer: 'Was',
+          hint: 'čo',
+          explanation: 'Na neživé predmety sa pýtame zámenom "Was" (Čo).'
+        },
+        {
+          sentence: 'Ist das ___ oder falsch?',
+          answer: 'richtig',
+          hint: 'správne',
+          explanation: 'Protiklad k nesprávne (falsch) je správne (richtig).'
+        },
+        {
+          sentence: 'Die Frau und der ___ lernen Deutsch.',
+          answer: 'Herr',
+          hint: 'pán',
+          explanation: 'Dvojica slov je "die Frau" (žena) a "der Herr" (pán).'
+        },
+        {
+          sentence: 'Das ist nicht gut, das ist ___.',
+          answer: 'schlecht',
+          hint: 'zle, zlý',
+          explanation: 'Protiklad pre slovo "gut" (dobre) je "schlecht" (zle).'
+        }
+      ]
+    },
+    {
+      type: 'listen',
+      instruction: 'Vypočuj si nemecké frázy a zisti, čo znamenajú.',
+      questions: [
+        { de: 'wie, was, wo', sk: 'ako, čo, kde' },
+        { de: 'die Frau und der Herr', sk: 'žena a pán' },
+        { de: 'fragen und antworten', sk: 'pýtať sa a odpovedať' },
+        { de: 'Das ist richtig.', sk: 'To je správne.' },
+        { de: 'Sehr gut, und dir?', sk: 'Veľmi dobre, a tebe?' },
+        { de: 'Wo bist du?', sk: 'Kde si?' }
+      ]
+    },
+    {
+      type: 'mcq',
+      instruction: 'Vyber správnu možnosť na základe gramatiky a slovíčok z lekcie.',
+      questions: [
+        {
+          question: 'Welches Fragewort fragt nach dem Ort?',
+          questionSk: 'Ktoré opytovacie slovo sa pýta na miesto?',
+          options: ['Was', 'Wie', 'Wo', 'Wer'],
+          answer: 2,
+          explanation: '"Wo" znamená "kde" — pýta sa na miesto.'
+        },
+        {
+          question: 'Was antwortest du auf "Wie geht es dir?"',
+          questionSk: 'Čo odpovieš na "Ako sa máš?"',
+          options: ['Wo bist du?', 'Gut, danke.', 'Das ist falsch.', 'Ich lerne.'],
+          answer: 1,
+          explanation: 'Na otázku "Ako sa máš?" sa bežne odpovedá "Gut, danke." (Dobre, ďakujem).'
+        },
+        {
+          question: 'Welches Verb bedeutet "pýtať sa"?',
+          questionSk: 'Ktoré sloveso znamená "pýtať sa"?',
+          options: ['antworten', 'sein', 'lernen', 'fragen'],
+          answer: 3,
+          explanation: '"Fragen" znamená pýtať sa. "Antworten" je odpovedať.'
+        },
+        {
+          question: 'Was ist das Gegenteil von "schlecht"?',
+          questionSk: 'Aký je protiklad slova "schlecht"?',
+          options: ['falsch', 'gut', 'auch', 'richtig'],
+          answer: 1,
+          explanation: 'Protiklad pre "schlecht" (zlý) je "gut" (dobrý).'
+        },
+        {
+          question: 'Ergänze den Satz: "Was ___ das?"',
+          questionSk: 'Doplň vetu: "Was ___ das?"',
+          options: ['ist', 'bist', 'sein', 'auch'],
+          answer: 0,
+          explanation: 'Správna veta je "Was ist das?" (Čo je to?). Tretia osoba vyžaduje "ist".'
         }
       ]
     },
     {
       type: 'minitext',
-      instruction: 'Prečítaj si krátky text o Jane. Potom odpovedaj na otázky.',
-      text: 'Jana kommt am Montag ins Büro. Sie sagt: "Guten Morgen!" Ihr Chef heißt Herr Bauer. Er sagt: "Grüß Gott, Frau Nováková! Willkommen im Team!" Jana ist sehr froh. Ein junger Kollege sagt: "Hallo, ich bin Thomas. Sag einfach du zu mir." Jana lächelt. In Österreich sagt man "Grüß Gott" — das ist sehr typisch.',
-      textSk: 'Jana príde v pondelok do kancelárie. Povie: "Dobré ráno!" Jej šéf sa volá pán Bauer. Povie: "Dobrý deň, pani Nováková! Vitajte v tíme!" Jana je veľmi rada. Mladý kolega povie: "Ahoj, ja som Thomas. Pokojne mi tykaj." Jana sa usmieva. V Rakúsku sa hovorí "Grüß Gott" — to je veľmi typické.',
+      instruction: 'Prečítaj si text o Janinom prvom dni na jazykovom kurze a odpovedz na otázky.',
+      text: 'Jana ist in Wien. Heute ist der erste Tag im Deutschkurs. Die Frau fragt: "Hallo! Wie heißt du?" Jana antwortet: "Ich heiße Jana. Und wer bist du?" Die Frau sagt: "Ich bin Anna. Wie geht es dir?" Jana sagt: "Gut, danke! Was lernen wir?" Anna antwortet: "Wir lernen Deutsch. Das ist sehr gut!" Jana fragt: "Ist Deutsch schwer?" Anna lacht: "Nein!"',
+      textSk: 'Jana je vo Viedni. Dnes je prvý deň na kurze nemčiny. Žena sa pýta: "Ahoj! Ako sa voláš?" Jana odpovedá: "Volám sa Jana. A kto si ty?" Žena hovorí: "Ja som Anna. Ako sa máš?" Jana hovorí: "Dobre, ďakujem! Čo sa učíme?" Anna odpovedá: "Učíme sa nemčinu. To je veľmi dobre!" Jana sa pýta: "Je nemčina ťažká?" Anna sa smeje: "Nie!"',
       questions: [
         {
-          question: 'Ako sa volá šéf Jane?',
-          options: ['Herr Müller', 'Herr Bauer', 'Herr Thomas', 'Herr Gruber'],
+          question: 'Wer fragt zuerst?',
+          questionSk: 'Kto sa pýta prvý?',
+          options: ['Jana', 'Anna', 'Lukas', 'Thomas'],
           answer: 1,
-          explanation: 'V texte: "Ihr Chef heißt Herr Bauer."'
+          explanation: 'Anna sa pýta prvá: "Hallo! Wie heißt du?"'
         },
         {
-          question: 'Čo povie Herr Bauer pri privítaní?',
-          options: ['Guten Morgen!', 'Auf Wiedersehen!', 'Grüß Gott!', 'Tschüss!'],
-          answer: 2,
-          explanation: 'V texte: "Er sagt: Grüß Gott, Frau Nováková!" — rakúsky formálny pozdrav.'
-        },
-        {
-          question: 'Čo navrhne Jana Thomas?',
-          options: ['Formálne vykanie', 'Tykanie (du)', 'Anglicky hovoriť', 'Nič nenavrhne'],
+          question: 'Was lernen Jana und Anna?',
+          questionSk: 'Čo sa učia Jana a Anna?',
+          options: ['Englisch', 'Deutsch', 'Slowakisch', 'Französisch'],
           answer: 1,
-          explanation: '"Sag einfach du zu mir" — Thomas navrhuje tykanie Jane.'
+          explanation: 'Anna hovorí: "Wir lernen Deutsch."'
         },
         {
-          question: 'Aký pozdrav je typický rakúsky?',
-          options: ['Hallo', 'Guten Morgen', 'Grüß Gott', 'Tschüss'],
-          answer: 2,
-          explanation: 'V texte: "In Österreich sagt man Grüß Gott — das ist sehr typisch."'
+          question: 'Wie geht es Jana?',
+          questionSk: 'Ako sa má Jana?',
+          options: ['Schlecht.', 'Gut, danke!', 'Sehr schlecht.', 'Nicht gut.'],
+          answer: 1,
+          explanation: 'Jana odpovedá: "Gut, danke!"'
         }
       ]
     },
     {
       type: 'speaking',
-      instruction: 'Počúvaj nemeckú vetu (klikni na reproduktor). Potom hovor nahlas a skontroluj sa.',
+      instruction: 'Precvič si výslovnosť s týmto cvičením. Dávaj pozor na W na začiatku slov.',
       phrases: [
-        { de: 'Guten Morgen!', sk: 'Dobré ráno!', tip: 'G=[g], nicht [dsch]' },
-        { de: 'Grüß Gott!', sk: 'Dobrý deň! (rakúsky)', tip: 'Grüß: ü=[ü], ß=[ss]' },
-        { de: 'Wie geht es Ihnen?', sk: 'Ako sa máte?', tip: 'Ihnen: I veľké, h tiché' },
-        { de: 'Danke schön!', sk: 'Ďakujem pekne!', tip: 'schön: sch=[š], ö=[ö]' },
-        { de: 'Auf Wiedersehen!', sk: 'Do videnia!', tip: 'Wieder: ie=[í], sehen: s=[z]' },
-        { de: 'Tschüss!', sk: 'Čau!', tip: 'Tsch=[č], ü=[ü], ss=[s]' }
+        {
+          de: 'Wie geht es dir?',
+          sk: 'Ako sa máš?',
+          tip: 'W na začiatku slova vyslovujeme ako slovenské v.'
+        },
+        {
+          de: 'Was ist das?',
+          sk: 'Čo je to?',
+          tip: 'W vyslovíme ako [v], S v slove das vyslovíme veľmi ostro.'
+        },
+        {
+          de: 'Wo bist du?',
+          sk: 'Kde si?',
+          tip: 'O v slove wo vyslov trochu pritiahnutejšie a dlhšie.'
+        },
+        {
+          de: 'Das ist richtig.',
+          sk: 'To je správne.',
+          tip: 'Na konci slova richtig sa "ig" číta mäkko [ij/ich].'
+        },
+        {
+          de: 'Ist das richtig oder falsch?',
+          sk: 'Je to správne alebo nesprávne?',
+          tip: 'Oder sa vyslovuje s dlhým o a mäkkým d.'
+        }
       ]
     }
   ],
-
-  reviewWords: [],
-  lessonNotes:
-    "Veľmi dôležitá lekcia pre sociálnu integráciu Jany vo Viedni. Kľúčový poznatk: Rakúska nemčina má vlastné varianty — 'Grüß Gott' (formálny pozdrav) a 'Servus' (neformálny pozdrav aj rozlúčka). Tieto výrazy v štandardných učebniciach zvyčajne chýbajú. 'Sie' (formálne vy) sa VŽDY píše s veľkým písmenom — odlíšenie od 'sie' (ona/oni)."
+  reviewWords: ['sein', 'heißen', 'ich', 'du'],
+  lessonNotes: 'Študent si musí osvojiť najmä spojitosti opytovacích zámien: Was - vec, Wer - osoba, Wie - spôsob. Dôraz sa kladie aj na výslovnosť w [v].'
 };

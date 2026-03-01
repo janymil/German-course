@@ -1,5 +1,5 @@
 import React from 'react';
-import { BookOpen, Headphones, PenLine, Mic, ArrowRight, MapPin, Briefcase, Coffee, Users } from 'lucide-react';
+import { BookOpen, Headphones, PenLine, Mic, ArrowRight, MapPin, Briefcase, Coffee, Users, Target, Newspaper, MonitorPlay, Lightbulb } from 'lucide-react';
 import { LESSONS } from '../data/curriculum';
 
 export default function Welcome({ onNavigate, onStartLesson }) {
@@ -147,6 +147,26 @@ export default function Welcome({ onNavigate, onStartLesson }) {
               Konverzačný partner v reálnych situáciách z Janiinho príbehu.
             </p>
           </div>
+        </div>
+
+        {/* Extra tools */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-2 mb-10">
+          {[
+            { icon: Target, label: 'Cvičebná aréna', desc: 'Nekonečné cvičenia', color: '#f87171', bg: 'rgba(239,68,68,0.07)', border: 'rgba(239,68,68,0.2)' },
+            { icon: Newspaper, label: 'Príbehy', desc: 'Interaktívne čítanie', color: '#22d3ee', bg: 'rgba(34,211,238,0.07)', border: 'rgba(34,211,238,0.2)' },
+            { icon: MonitorPlay, label: 'Video Coach', desc: 'Videá s titulkami', color: '#f472b6', bg: 'rgba(244,114,182,0.07)', border: 'rgba(244,114,182,0.2)' },
+            { icon: Lightbulb, label: 'Study Coach', desc: '6 metód učenia', color: '#a3e635', bg: 'rgba(163,230,53,0.07)', border: 'rgba(163,230,53,0.2)' },
+          ].map(({ icon: Icon, label, desc, color, bg, border }) => (
+            <div
+              key={label}
+              className="rounded-2xl py-4 px-3 flex flex-col items-center gap-2 text-center"
+              style={{ background: bg, border: `1px solid ${border}` }}
+            >
+              <Icon size={20} style={{ color }} />
+              <span className="text-xs font-bold" style={{ color }}>{label}</span>
+              <span className="text-[10px] text-gray-600 leading-tight">{desc}</span>
+            </div>
+          ))}
         </div>
 
         {/* 4 skills */}

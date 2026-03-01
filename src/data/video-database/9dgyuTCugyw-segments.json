@@ -1,0 +1,24 @@
+{
+  "segments": [
+    {
+      "startTimeMs": 8450,
+      "endTimeMs": 379690,
+      "topicDescription": "Einkaufen und Styling"
+    },
+    {
+      "startTimeMs": 374270,
+      "endTimeMs": 750159,
+      "topicDescription": "Einkaufen und Kleidung"
+    },
+    {
+      "startTimeMs": 753690,
+      "endTimeMs": 1123340,
+      "topicDescription": "Online-Einkauf Chaos"
+    },
+    {
+      "startTimeMs": 1122240,
+      "endTimeMs": 1446630,
+      "topicDescription": "Kleidung kaufen"
+    }
+  ]
+}

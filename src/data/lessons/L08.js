@@ -379,22 +379,25 @@
       textSk: 'Jana ide do Café Central vo Viedni. To je veľmi slávna kaviareň. Sadne si a pozrie sa na jedálny lístok. Prichádza čašník. Jana povie: "Chcela by som kávu a Sachertorte, prosím." Čašník povie: "Chvíľku, prosím." Jana sa pozerá z okna. Viedeň je taká krásna.',
       questions: [
         {
-          question: 'Aké je Café Central?',
+          question: 'Wie ist das Café Central?',
+          questionSk: 'Aké je Café Central?',
           options: ['Klein und neu', 'Sehr berühmt', 'Billig und einfach', 'Neu und modern'],
           answer: 1,
-          explanation: 'V texte: "Das ist ein sehr berühmtes Café."'
+          explanation: 'Im Text: "Das ist ein sehr berühmtes Café."'
         },
         {
-          question: 'Čo si Jana objedná?',
+          question: 'Was bestellt Jana?',
+          questionSk: 'Čo si Jana objedná?',
           options: ['Tee und Kuchen', 'Kaffee und Sachertorte', 'Wasser und Schnitzel', 'Tee und Torte'],
           answer: 1,
-          explanation: 'V texte: "Ich möchte einen Kaffee und eine Sachertorte, bitte."'
+          explanation: 'Im Text: "Ich möchte einen Kaffee und eine Sachertorte, bitte."'
         },
         {
-          question: 'Čo Jana robí na záver?',
+          question: 'Was macht Jana am Ende?',
+          questionSk: 'Čo Jana robí na záver?',
           options: ['Sie geht nach Hause', 'Sie liest ein Buch', 'Sie schaut aus dem Fenster', 'Sie telefoniert'],
           answer: 2,
-          explanation: 'V texte: "Jana schaut aus dem Fenster."'
+          explanation: 'Im Text: "Jana schaut aus dem Fenster."'
         }
       ]
     },

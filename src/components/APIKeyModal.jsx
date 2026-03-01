@@ -2,18 +2,18 @@ import React, { useState } from 'react';
 import { X, Key, Eye, EyeOff, ExternalLink, CheckCircle } from 'lucide-react';
 
 export default function APIKeyModal({ onClose }) {
-  const [key, setKey] = useState(localStorage.getItem('openai_api_key') || '');
+  const [key, setKey] = useState(import.meta.env.VITE_GEMINI_API_KEY || localStorage.getItem('gemini_api_key') || '');
   const [show, setShow] = useState(false);
   const [saved, setSaved] = useState(false);
 
   function handleSave() {
-    localStorage.setItem('openai_api_key', key.trim());
+    localStorage.setItem('gemini_api_key', key.trim());
     setSaved(true);
     setTimeout(() => { setSaved(false); onClose(); }, 900);
   }
 
   function handleClear() {
-    localStorage.removeItem('openai_api_key');
+    localStorage.removeItem('gemini_api_key');
     setKey('');
   }
 
@@ -33,7 +33,7 @@ export default function APIKeyModal({ onClose }) {
               <Key size={16} className="text-indigo-400" />
             </div>
             <div>
-              <h2 className="text-white font-bold text-sm">OpenAI API kľúč</h2>
+              <h2 className="text-white font-bold text-sm">Gemini API kľúč</h2>
               <p className="text-gray-500 text-xs">Potrebný pre AI funkcie kurzu</p>
             </div>
           </div>
@@ -52,14 +52,14 @@ export default function APIKeyModal({ onClose }) {
 
           <div>
             <label className="text-xs text-gray-500 font-semibold uppercase tracking-wider block mb-2">
-              API kľúč (sk-...)
+              API kľúč (AIza...)
             </label>
             <div className="relative">
               <input
                 type={show ? 'text' : 'password'}
                 value={key}
                 onChange={e => setKey(e.target.value)}
-                placeholder="sk-proj-..."
+                placeholder="AIza..."
                 className="w-full bg-gray-800/60 border border-gray-700/60 rounded-xl px-4 py-3 pr-12 text-sm text-white placeholder-gray-600 focus:outline-none focus:border-indigo-600 transition-colors font-mono"
                 onKeyDown={e => e.key === 'Enter' && key && handleSave()}
               />
@@ -76,13 +76,13 @@ export default function APIKeyModal({ onClose }) {
           </div>
 
           <a
-            href="https://platform.openai.com/api-keys"
+            href="https://aistudio.google.com/app/apikey"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-1.5 text-xs text-gray-600 hover:text-indigo-400 transition-colors"
           >
             <ExternalLink size={11} />
-            Ako získam API kľúč? (platform.openai.com)
+            Ako získam API kľúč? (aistudio.google.com)
           </a>
         </div>
 
@@ -99,13 +99,12 @@ export default function APIKeyModal({ onClose }) {
           <button
             onClick={handleSave}
             disabled={!key.trim()}
-            className={`flex-1 py-2.5 rounded-xl font-bold text-sm flex items-center justify-center gap-2 transition-all ${
-              saved
+            className={`flex-1 py-2.5 rounded-xl font-bold text-sm flex items-center justify-center gap-2 transition-all ${saved
                 ? 'bg-emerald-700 text-white'
                 : key.trim()
-                ? 'bg-indigo-600 hover:bg-indigo-500 text-white'
-                : 'bg-gray-800 text-gray-600 cursor-not-allowed'
-            }`}
+                  ? 'bg-indigo-600 hover:bg-indigo-500 text-white'
+                  : 'bg-gray-800 text-gray-600 cursor-not-allowed'
+              }`}
           >
             {saved ? <><CheckCircle size={15} /> Uložené!</> : 'Uložiť kľúč'}
           </button>

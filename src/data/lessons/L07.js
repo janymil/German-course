@@ -364,22 +364,25 @@
       textSk: 'Pán Gruber ukáže Jane nový byt. Obývačka je veľká. Kuchyňa je malá, ale moderná. Spálňa má posteľ a skriňu. Jana sa pýta: "Kde je kúpeľňa?" Pán Gruber povie: "Kúpeľňa je vpravo." Jana je veľmi rada. Byt je pre ňu perfektný.',
       questions: [
         {
-          question: 'Aká je kuchyňa?',
+          question: 'Wie ist die Küche?',
+          questionSk: 'Aká je kuchyňa?',
           options: ['Groß und alt', 'Klein, aber modern', 'Groß und modern', 'Klein und alt'],
           answer: 1,
-          explanation: 'V texte: "Die Küche ist klein, aber modern."'
+          explanation: 'Im Text: "Die Küche ist klein, aber modern."'
         },
         {
-          question: 'Kde je kúpeľňa?',
+          question: 'Wo ist das Bad?',
+          questionSk: 'Kde je kúpeľňa?',
           options: ['Links', 'Geradeaus', 'Rechts', 'Oben'],
           answer: 2,
-          explanation: 'V texte: "Das Bad ist rechts."'
+          explanation: 'Im Text: "Das Bad ist rechts."'
         },
         {
-          question: 'Čo má spálňa?',
+          question: 'Was hat das Schlafzimmer?',
+          questionSk: 'Čo má spálňa?',
           options: ['Nur ein Bett', 'Ein Sofa und einen Tisch', 'Ein Bett und einen Schrank', 'Nur einen Schrank'],
           answer: 2,
-          explanation: 'V texte: "Das Schlafzimmer hat ein Bett und einen Schrank."'
+          explanation: 'Im Text: "Das Schlafzimmer hat ein Bett und einen Schrank."'
         }
       ]
     },

@@ -1,0 +1,436 @@
+{
+  "xp": 26,
+  "streak": 1,
+  "lastStudyDate": "2026-02-28",
+  "completedLessons": {
+    "1": {
+      "completedAt": "2026-02-28T03:48:12.980Z",
+      "score": 0,
+      "xpEarned": 0
+    }
+  },
+  "vocabSeen": {
+    "ich": {
+      "seenCount": 1,
+      "mastered": false,
+      "wrongCount": 0,
+      "lastSeen": "2026-02-26T22:28:06.601Z"
+    },
+    "heiße": {
+      "seenCount": 1,
+      "mastered": false,
+      "wrongCount": 0,
+      "lastSeen": "2026-02-26T22:28:06.601Z"
+    },
+    "Jan": {
+      "seenCount": 1,
+      "mastered": false,
+      "wrongCount": 0,
+      "lastSeen": "2026-02-26T22:28:06.601Z"
+    },
+    "geht": {
+      "seenCount": 1,
+      "mastered": false,
+      "wrongCount": 0,
+      "lastSeen": "2026-02-26T22:28:06.601Z"
+    },
+    "mir": {
+      "seenCount": 1,
+      "mastered": false,
+      "wrongCount": 0,
+      "lastSeen": "2026-02-26T22:28:06.601Z"
+    },
+    "gut": {
+      "seenCount": 1,
+      "mastered": false,
+      "wrongCount": 0,
+      "lastSeen": "2026-02-26T22:28:06.601Z"
+    },
+    "heute": {
+      "seenCount": 1,
+      "mastered": false,
+      "wrongCount": 0,
+      "lastSeen": "2026-02-26T22:28:06.601Z"
+    },
+    "komme": {
+      "seenCount": 1,
+      "mastered": false,
+      "wrongCount": 0,
+      "lastSeen": "2026-02-26T22:28:06.601Z"
+    },
+    "aus": {
+      "seenCount": 1,
+      "mastered": false,
+      "wrongCount": 0,
+      "lastSeen": "2026-02-26T22:28:06.602Z"
+    },
+    "der": {
+      "seenCount": 1,
+      "mastered": false,
+      "wrongCount": 0,
+      "lastSeen": "2026-02-26T22:28:06.602Z"
+    },
+    "Slowakei": {
+      "seenCount": 1,
+      "mastered": false,
+      "wrongCount": 0,
+      "lastSeen": "2026-02-26T22:28:06.602Z"
+    },
+    "Hallo": {
+      "seenCount": 1,
+      "mastered": true,
+      "wrongCount": 0,
+      "lastSeen": "2026-02-26T22:39:35.718Z"
+    },
+    "Guten Morgen": {
+      "seenCount": 1,
+      "mastered": true,
+      "wrongCount": 0,
+      "lastSeen": "2026-02-26T22:39:37.524Z"
+    },
+    "Guten Tag": {
+      "seenCount": 1,
+      "mastered": true,
+      "wrongCount": 0,
+      "lastSeen": "2026-02-26T22:39:38.921Z"
+    },
+    "Guten Abend": {
+      "seenCount": 1,
+      "mastered": true,
+      "wrongCount": 0,
+      "lastSeen": "2026-02-26T22:39:39.993Z"
+    },
+    "Tschüss": {
+      "seenCount": 1,
+      "mastered": true,
+      "wrongCount": 0,
+      "lastSeen": "2026-02-26T22:39:41.055Z"
+    },
+    "Auf Wiedersehen": {
+      "seenCount": 1,
+      "mastered": true,
+      "wrongCount": 0,
+      "lastSeen": "2026-02-26T22:39:42.059Z"
+    },
+    "der Name": {
+      "seenCount": 1,
+      "mastered": true,
+      "wrongCount": 0,
+      "lastSeen": "2026-02-26T22:39:43.252Z"
+    },
+    "der Vorname": {
+      "seenCount": 3,
+      "wrongCount": 0,
+      "repetitions": 3,
+      "interval": 16,
+      "easeFactor": 2.8,
+      "dueDate": "2026-03-16",
+      "mastered": true,
+      "lastSeen": "2026-02-28T03:19:33.654Z"
+    },
+    "der Nachname": {
+      "seenCount": 2,
+      "wrongCount": 0,
+      "repetitions": 2,
+      "interval": 6,
+      "easeFactor": 2.7,
+      "dueDate": "2026-03-06",
+      "mastered": false,
+      "lastSeen": "2026-02-28T03:18:58.113Z"
+    },
+    "ich heiße": {
+      "seenCount": 2,
+      "wrongCount": 0,
+      "repetitions": 2,
+      "interval": 6,
+      "easeFactor": 2.7,
+      "dueDate": "2026-03-06",
+      "mastered": false,
+      "lastSeen": "2026-02-28T03:19:00.462Z"
+    },
+    "Wie heißen Sie?": {
+      "seenCount": 2,
+      "wrongCount": 0,
+      "repetitions": 2,
+      "interval": 6,
+      "easeFactor": 2.7,
+      "dueDate": "2026-03-06",
+      "mastered": false,
+      "lastSeen": "2026-02-28T03:19:02.760Z"
+    },
+    "Wer bist du?": {
+      "seenCount": 2,
+      "wrongCount": 0,
+      "repetitions": 2,
+      "interval": 6,
+      "easeFactor": 2.46,
+      "dueDate": "2026-03-06",
+      "mastered": false,
+      "lastSeen": "2026-02-28T03:19:04.823Z"
+    },
+    "das Alphabet": {
+      "seenCount": 2,
+      "wrongCount": 0,
+      "repetitions": 2,
+      "interval": 6,
+      "easeFactor": 2.7,
+      "dueDate": "2026-03-06",
+      "mastered": false,
+      "lastSeen": "2026-02-28T03:19:06.756Z"
+    },
+    "der Buchstabe": {
+      "seenCount": 2,
+      "wrongCount": 0,
+      "repetitions": 2,
+      "interval": 6,
+      "easeFactor": 2.46,
+      "dueDate": "2026-03-06",
+      "mastered": false,
+      "lastSeen": "2026-02-28T03:19:08.333Z"
+    },
+    "buchstabieren": {
+      "seenCount": 2,
+      "wrongCount": 0,
+      "repetitions": 2,
+      "interval": 6,
+      "easeFactor": 2.7,
+      "dueDate": "2026-03-06",
+      "mastered": false,
+      "lastSeen": "2026-02-28T03:19:09.914Z"
+    },
+    "Wie schreibt man das?": {
+      "seenCount": 2,
+      "wrongCount": 0,
+      "repetitions": 2,
+      "interval": 6,
+      "easeFactor": 2.22,
+      "dueDate": "2026-03-06",
+      "mastered": false,
+      "lastSeen": "2026-02-28T03:19:13.168Z"
+    },
+    "Entschuldigung": {
+      "seenCount": 3,
+      "wrongCount": 0,
+      "repetitions": 3,
+      "interval": 16,
+      "easeFactor": 2.56,
+      "dueDate": "2026-03-16",
+      "mastered": true,
+      "lastSeen": "2026-02-28T03:19:30.815Z"
+    },
+    "Gute Nacht": {
+      "seenCount": 2,
+      "wrongCount": 0,
+      "repetitions": 2,
+      "interval": 6,
+      "easeFactor": 2.7,
+      "dueDate": "2026-03-06",
+      "mastered": false,
+      "lastSeen": "2026-02-28T03:19:18.005Z"
+    },
+    "Bis bald": {
+      "seenCount": 2,
+      "wrongCount": 0,
+      "repetitions": 2,
+      "interval": 6,
+      "easeFactor": 2.46,
+      "dueDate": "2026-03-06",
+      "mastered": false,
+      "lastSeen": "2026-02-28T03:19:20.801Z"
+    },
+    "Grüß Gott": {
+      "seenCount": 2,
+      "wrongCount": 0,
+      "repetitions": 2,
+      "interval": 6,
+      "easeFactor": 2.46,
+      "dueDate": "2026-03-06",
+      "mastered": false,
+      "lastSeen": "2026-02-28T03:19:23.013Z"
+    },
+    "Servus": {
+      "seenCount": 2,
+      "wrongCount": 0,
+      "repetitions": 2,
+      "interval": 6,
+      "easeFactor": 2.46,
+      "dueDate": "2026-03-06",
+      "mastered": false,
+      "lastSeen": "2026-02-28T03:19:24.283Z"
+    },
+    "Wie geht es Ihnen?": {
+      "seenCount": 2,
+      "wrongCount": 0,
+      "repetitions": 2,
+      "interval": 6,
+      "easeFactor": 2.22,
+      "dueDate": "2026-03-06",
+      "mastered": false,
+      "lastSeen": "2026-02-28T03:19:28.843Z"
+    },
+    "Wie geht's?": {
+      "seenCount": 1,
+      "wrongCount": 0,
+      "repetitions": 1,
+      "interval": 1,
+      "easeFactor": 2.6,
+      "dueDate": "2026-03-01",
+      "mastered": false,
+      "lastSeen": "2026-02-28T03:19:35.619Z"
+    },
+    "Danke / Danke schön": {
+      "seenCount": 1,
+      "wrongCount": 0,
+      "repetitions": 1,
+      "interval": 1,
+      "easeFactor": 2.6,
+      "dueDate": "2026-03-01",
+      "mastered": false,
+      "lastSeen": "2026-02-28T03:19:38.351Z"
+    },
+    "Bitte / Bitte schön": {
+      "seenCount": 1,
+      "wrongCount": 0,
+      "repetitions": 1,
+      "interval": 1,
+      "easeFactor": 2.6,
+      "dueDate": "2026-03-01",
+      "mastered": false,
+      "lastSeen": "2026-02-28T03:19:40.268Z"
+    },
+    "Es tut mir leid": {
+      "seenCount": 1,
+      "wrongCount": 0,
+      "repetitions": 1,
+      "interval": 1,
+      "easeFactor": 2.6,
+      "dueDate": "2026-03-01",
+      "mastered": false,
+      "lastSeen": "2026-02-28T03:19:44.148Z"
+    },
+    "Ich heiße…": {
+      "seenCount": 1,
+      "wrongCount": 0,
+      "repetitions": 1,
+      "interval": 1,
+      "easeFactor": 2.6,
+      "dueDate": "2026-03-01",
+      "mastered": false,
+      "lastSeen": "2026-02-28T03:19:46.262Z"
+    },
+    "Mein Name ist…": {
+      "seenCount": 1,
+      "wrongCount": 0,
+      "repetitions": 1,
+      "interval": 1,
+      "easeFactor": 2.6,
+      "dueDate": "2026-03-01",
+      "mastered": false,
+      "lastSeen": "2026-02-28T03:19:49.942Z"
+    },
+    "sein": {
+      "seenCount": 1,
+      "wrongCount": 0,
+      "repetitions": 1,
+      "interval": 1,
+      "easeFactor": 2.6,
+      "dueDate": "2026-03-01",
+      "mastered": false,
+      "lastSeen": "2026-02-28T03:19:51.655Z"
+    },
+    "du": {
+      "seenCount": 1,
+      "wrongCount": 0,
+      "repetitions": 1,
+      "interval": 1,
+      "easeFactor": 2.6,
+      "dueDate": "2026-03-01",
+      "mastered": false,
+      "lastSeen": "2026-02-28T03:19:53.201Z"
+    }
+  },
+  "dailyXP": [
+    {
+      "date": "2026-02-26",
+      "xp": 10
+    },
+    {
+      "date": "2026-02-28",
+      "xp": 16
+    }
+  ],
+  "conversationPhrases": [
+    {
+      "de": "ich heiße Jan",
+      "correction": null,
+      "hasCorrection": false,
+      "charId": "hr",
+      "charName": "Petra Mayr",
+      "savedAt": "2026-02-26T22:28:02.019Z"
+    },
+    {
+      "de": "es geht mir gut heute",
+      "correction": null,
+      "hasCorrection": false,
+      "charId": "hr",
+      "charName": "Petra Mayr",
+      "savedAt": "2026-02-26T22:28:02.019Z"
+    },
+    {
+      "de": "ich komme aus der Slowakei",
+      "correction": null,
+      "hasCorrection": false,
+      "charId": "hr",
+      "charName": "Petra Mayr",
+      "savedAt": "2026-02-26T22:28:02.019Z"
+    }
+  ],
+  "placementTestDone": true,
+  "placementUnlockedUpTo": 0,
+  "storiesRead": {},
+  "readingVocab": [],
+  "grammarSeen": {},
+  "passiveSessions": [
+    {
+      "date": "2026-02-26",
+      "minutes": 5,
+      "xpEarned": 10,
+      "dayNum": 1
+    }
+  ],
+  "passiveCompletedDays": [
+    1
+  ],
+  "grammarAiSeen": {},
+  "weeklyTests": {},
+  "lessonTests": {},
+  "customVocab": [],
+  "lessonStates": {
+    "1": {
+      "updatedAt": "2026-02-28T04:38:16.824Z",
+      "phase": "interleaved",
+      "seqIndex": 1,
+      "scores": [],
+      "exState": null,
+      "mode": "interleaved"
+    },
+    "2": {
+      "updatedAt": "2026-03-01T01:27:28.964Z",
+      "phase": "interleaved",
+      "seqIndex": 8,
+      "scores": [
+        100,
+        100,
+        125,
+        80,
+        83,
+        80,
+        33
+      ],
+      "exState": null,
+      "mode": "interleaved"
+    }
+  },
+  "generatedWords": {},
+  "test": "123"
+}

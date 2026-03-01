@@ -1,0 +1,581 @@
+{
+  "topics": [
+    {
+      "title": "Sich vorstellen und persönliche Angaben",
+      "description": "Cvičenie na predstavenie sa a poskytnutie osobných informácií.",
+      "exercises": [
+        {
+          "type": "fill",
+          "sentence": "Ich ___ Nevin.",
+          "answer": "heiße",
+          "explanation": "Používame sloveso 'heißen' (volám sa) na uvedenie mena."
+        },
+        {
+          "type": "mcq",
+          "question": "Woher kommen Sie?",
+          "options": [
+            "Ich komme aus der Türkei.",
+            "Ich wohne hier.",
+            "Ich bin neu hier.",
+            "Ich suche Arbeit."
+          ],
+          "answer": 0,
+          "explanation": "Správna odpoveď na otázku 'Woher kommen Sie?' (Odkiaľ pochádzate?) je 'Ich komme aus der Türkei.' (Pochádzam z Turecka.)."
+        },
+        {
+          "type": "wordorder",
+          "words": [
+            "bin",
+            "ich",
+            "neu",
+            "hier"
+          ],
+          "correct": "ich bin neu hier",
+          "explanation": "Správny slovosled je 'Ich bin neu hier.' (Som tu nový/nová.)."
+        },
+        {
+          "type": "fill",
+          "sentence": "Ich ___ aber hier.",
+          "answer": "wohne",
+          "explanation": "Používame sloveso 'wohnen' (bývať) na vyjadrenie miesta bydliska."
+        }
+      ]
+    },
+    {
+      "title": "Begrüßung, Dank und Verabschiedung",
+      "description": "Cvičenie na pozdravy, poďakovanie a rozlúčky.",
+      "exercises": [
+        {
+          "type": "fill",
+          "sentence": "Vielen ___.",
+          "answer": "Dank",
+          "explanation": "Fráza 'Vielen Dank' znamená 'Ďakujem veľmi pekne'."
+        },
+        {
+          "type": "mcq",
+          "question": "Was sagt man, wenn man geht?",
+          "options": [
+            "Auf Wiedersehen.",
+            "Guten Tag.",
+            "Vielen Dank.",
+            "Entschuldigung."
+          ],
+          "answer": 0,
+          "explanation": "Keď odchádzame, hovoríme 'Auf Wiedersehen.' (Dovidenia.)."
+        },
+        {
+          "type": "wordorder",
+          "words": [
+            "tag",
+            "guten"
+          ],
+          "correct": "guten tag",
+          "explanation": "Správny slovosled je 'Guten Tag.' (Dobrý deň.)."
+        },
+        {
+          "type": "fill",
+          "sentence": "___ Besserung!",
+          "answer": "Gute",
+          "explanation": "Fráza 'Gute Besserung!' znamená 'Skoré uzdravenie!'."
+        }
+      ]
+    },
+    {
+      "title": "Fragen stellen und Antworten geben",
+      "description": "Cvičenie na kladenie otázok a odpovedanie na ne.",
+      "exercises": [
+        {
+          "type": "fill",
+          "sentence": "Wohin ___ Sie denn?",
+          "answer": "wollen",
+          "explanation": "Používame sloveso 'wollen' (chcieť) v otázke 'Wohin wollen Sie denn?' (Kam chcete ísť?)."
+        },
+        {
+          "type": "mcq",
+          "question": "Čo znamená 'Was ist das?'",
+          "options": [
+            "Čo je to?",
+            "Kto je to?",
+            "Ako sa voláte?",
+            "Kde to je?"
+          ],
+          "answer": 0,
+          "explanation": "'Was ist das?' znamená 'Čo je to?'."
+        },
+        {
+          "type": "wordorder",
+          "words": [
+            "wohnen",
+            "Sie",
+            "denn",
+            "wo"
+          ],
+          "correct": "wo wohnen sie denn",
+          "explanation": "Správny slovosled je 'Wo wohnen Sie denn?' (Kde bývate?)."
+        },
+        {
+          "type": "fill",
+          "sentence": "Bin ich hier ___?",
+          "answer": "richtig",
+          "explanation": "Fráza 'Bin ich hier richtig?' znamená 'Som tu správne?'."
+        }
+      ]
+    },
+    {
+      "title": "Ortsangaben und Richtungen",
+      "description": "Cvičenie na určovanie miesta a smeru.",
+      "exercises": [
+        {
+          "type": "fill",
+          "sentence": "Sie müssen die Treppe ___.",
+          "answer": "hoch",
+          "explanation": "Slovo 'hoch' znamená 'hore' a používa sa na označenie smeru."
+        },
+        {
+          "type": "mcq",
+          "question": "Kde je druhý poschodie?",
+          "options": [
+            "Zweiter Stock.",
+            "Rechter Gang.",
+            "Ganz hinten links.",
+            "Hier."
+          ],
+          "answer": 0,
+          "explanation": "'Zweiter Stock' znamená 'druhé poschodie'."
+        },
+        {
+          "type": "wordorder",
+          "words": [
+            "hinten",
+            "links",
+            "ganz"
+          ],
+          "correct": "ganz hinten links",
+          "explanation": "Správny slovosled je 'Ganz hinten links.' (Úplne vzadu vľavo.)."
+        },
+        {
+          "type": "fill",
+          "sentence": "Ich arbeite ___.",
+          "answer": "hier",
+          "explanation": "Slovo 'hier' znamená 'tu'."
+        }
+      ]
+    },
+    {
+      "title": "Zahlen und Mengen",
+      "description": "Cvičenie na čísla a množstvá.",
+      "exercises": [
+        {
+          "type": "fill",
+          "sentence": "Eins, zwei, ___, vier Äpfel.",
+          "answer": "drei",
+          "explanation": "Čísla v poradí sú eins (jeden), zwei (dva), drei (tri), vier (štyri)."
+        },
+        {
+          "type": "mcq",
+          "question": "Koľko eur stojí poplatok za prax?",
+          "options": [
+            "Zehn Euro.",
+            "Drei Euro.",
+            "Vier Euro.",
+            "Sechzig Euro."
+          ],
+          "answer": 0,
+          "explanation": "Poplatok za prax je 'Zehn Euro' (desať eur)."
+        },
+        {
+          "type": "wordorder",
+          "words": [
+            "euro",
+            "bitte",
+            "zehn"
+          ],
+          "correct": "zehn euro bitte",
+          "explanation": "Správny slovosled je 'Zehn Euro, bitte.' (Desať eur, prosím.)."
+        },
+        {
+          "type": "fill",
+          "sentence": "Sie bezahlen sie nur einmal ___ drei Monate.",
+          "answer": "alle",
+          "explanation": "Fráza 'alle drei Monate' znamená 'každé tri mesiace'."
+        }
+      ]
+    },
+    {
+      "title": "Einkaufen und Dienstleistungen",
+      "description": "Cvičenie na nakupovanie a služby.",
+      "exercises": [
+        {
+          "type": "fill",
+          "sentence": "Das Ticket müssen Sie am ___ kaufen.",
+          "answer": "Automaten",
+          "explanation": "Lístok sa kupuje 'am Automaten' (v automate)."
+        },
+        {
+          "type": "mcq",
+          "question": "Čo potrebujete na nákup lístka v automate?",
+          "options": [
+            "Kleingeld.",
+            "Eine Fahrkarte.",
+            "Einen Bus.",
+            "Eine Agentur."
+          ],
+          "answer": 0,
+          "explanation": "Na nákup lístka v automate potrebujete 'Kleingeld' (drobné)."
+        },
+        {
+          "type": "wordorder",
+          "words": [
+            "eine",
+            "fahrkarte",
+            "Sie",
+            "haben"
+          ],
+          "correct": "haben sie eine fahrkarte",
+          "explanation": "Správny slovosled je 'Haben Sie eine Fahrkarte?' (Máte cestovný lístok?)."
+        },
+        {
+          "type": "fill",
+          "sentence": "Können Sie ___ verkaufen?",
+          "answer": "Gemüse",
+          "explanation": "Slovo 'Gemüse' znamená 'zelenina'."
+        }
+      ]
+    },
+    {
+      "title": "Arbeit und Beruf",
+      "description": "Cvičenie na tému práca a povolanie.",
+      "exercises": [
+        {
+          "type": "fill",
+          "sentence": "Ich ___ Arbeit.",
+          "answer": "suche",
+          "explanation": "Sloveso 'suchen' (hľadať) sa používa v kontexte 'Ich suche Arbeit.' (Hľadám prácu.)."
+        },
+        {
+          "type": "mcq",
+          "question": "Aká je Nevina profesia?",
+          "options": [
+            "Verkäuferin.",
+            "Ärztin.",
+            "Lehrerin.",
+            "Kundin."
+          ],
+          "answer": 0,
+          "explanation": "Nevin pracuje ako 'Verkäuferin' (predavačka)."
+        },
+        {
+          "type": "wordorder",
+          "words": [
+            "hier",
+            "ich",
+            "arbeite"
+          ],
+          "correct": "ich arbeite hier",
+          "explanation": "Správny slovosled je 'Ich arbeite hier.' (Pracujem tu.)."
+        },
+        {
+          "type": "fill",
+          "sentence": "Heute ist mein ___ Arbeitstag.",
+          "answer": "erster",
+          "explanation": "Slovo 'erster' (prvý) sa používa v kontexte 'erster Arbeitstag' (prvý pracovný deň)."
+        }
+      ]
+    },
+    {
+      "title": "Modalverben (können, müssen, möchten, wollen, dürfen)",
+      "description": "Cvičenie na modálne slovesá (môcť, musieť, chcieť, smieť).",
+      "exercises": [
+        {
+          "type": "fill",
+          "sentence": "Ich ___ zur Agentur für Arbeit.",
+          "answer": "möchte",
+          "explanation": "Sloveso 'möchte' (chcel by som/chcela by som) vyjadruje želanie."
+        },
+        {
+          "type": "mcq",
+          "question": "Čo znamená 'Sie müssen hier aussteigen'?",
+          "options": [
+            "Musíte tu vystúpiť.",
+            "Môžete tu vystúpiť.",
+            "Chcete tu vystúpiť?",
+            "Smiete tu vystúpiť."
+          ],
+          "answer": 0,
+          "explanation": "'Sie müssen hier aussteigen' znamená 'Musíte tu vystúpiť' (je to povinné)."
+        },
+        {
+          "type": "wordorder",
+          "words": [
+            "mich",
+            "wieder",
+            "setzen",
+            "kann",
+            "ich"
+          ],
+          "correct": "kann ich mich wieder setzen",
+          "explanation": "Správny slovosled je 'Kann ich mich wieder setzen?' (Môžem si znova sadnúť?)."
+        },
+        {
+          "type": "fill",
+          "sentence": "___ ich fotografieren?",
+          "answer": "Darf",
+          "explanation": "Sloveso 'dürfen' (smieť) sa používa na vyjadrenie povolenia."
+        }
+      ]
+    },
+    {
+      "title": "Negation (nicht, kein/keine)",
+      "description": "Cvičenie na negáciu (nie, žiadny/žiadna).",
+      "exercises": [
+        {
+          "type": "fill",
+          "sentence": "Das ist ___ Zucchini.",
+          "answer": "keine",
+          "explanation": "Používame 'keine' (žiadna) pre negáciu podstatného mena ženského rodu 'Zucchini'."
+        },
+        {
+          "type": "mcq",
+          "question": "Čo znamená 'Ich habe meinen Pass nicht dabei'?",
+          "options": [
+            "Nemám pri sebe pas.",
+            "Mám pri sebe pas.",
+            "Hľadám pas.",
+            "Potrebujem pas."
+          ],
+          "answer": 0,
+          "explanation": "'Ich habe meinen Pass nicht dabei' znamená 'Nemám pri sebe pas'."
+        },
+        {
+          "type": "wordorder",
+          "words": [
+            "ohne",
+            "es",
+            "gibt",
+            "hier",
+            "keine",
+            "party",
+            "essen"
+          ],
+          "correct": "hier gibt es keine party ohne essen",
+          "explanation": "Správny slovosled je 'Hier gibt es keine Party ohne Essen.' (Tu nie je žiadna párty bez jedla.)."
+        },
+        {
+          "type": "fill",
+          "sentence": "Ich verstehe ___.",
+          "answer": "nicht",
+          "explanation": "Slovo 'nicht' (nie) sa používa na negáciu slovesa 'verstehen' (rozumieť)."
+        }
+      ]
+    },
+    {
+      "title": "Zeitliche Angaben",
+      "description": "Cvičenie na časové údaje.",
+      "exercises": [
+        {
+          "type": "fill",
+          "sentence": "Heute ist mein ___ Arbeitstag.",
+          "answer": "erster",
+          "explanation": "Slovo 'erster' (prvý) je radová číslovka pre 'prvý pracovný deň'."
+        },
+        {
+          "type": "mcq",
+          "question": "Kedy sa vráti Nevinin manžel?",
+          "options": [
+            "Morgen.",
+            "Heute.",
+            "Nächste Woche.",
+            "Vor einer halben Stunde."
+          ],
+          "answer": 0,
+          "explanation": "Nevinin manžel sa vráti 'Morgen' (zajtra)."
+        },
+        {
+          "type": "wordorder",
+          "words": [
+            "einer",
+            "angerufen",
+            "halben",
+            "ich",
+            "vor",
+            "stunde",
+            "habe"
+          ],
+          "correct": "ich habe vor einer halben stunde angerufen",
+          "explanation": "Správny slovosled je 'Ich habe vor einer halben Stunde angerufen.' (Zavolal/a som pred pol hodinou.)."
+        },
+        {
+          "type": "fill",
+          "sentence": "Vielleicht ein bisschen ___.",
+          "answer": "später",
+          "explanation": "Slovo 'später' znamená 'neskôr'."
+        }
+      ]
+    },
+    {
+      "title": "Gesundheit und Arztbesuch",
+      "description": "Cvičenie na tému zdravie a návšteva lekára.",
+      "exercises": [
+        {
+          "type": "fill",
+          "sentence": "Haben Sie die ___ dabei?",
+          "answer": "Versichertenkarte",
+          "explanation": "Pri návšteve lekára potrebujete 'Versichertenkarte' (kartičku poistenca)."
+        },
+        {
+          "type": "mcq",
+          "question": "Koľko je poplatok za prax?",
+          "options": [
+            "Zehn Euro.",
+            "Drei Euro.",
+            "Fünf Euro.",
+            "Hundert Euro."
+          ],
+          "answer": 0,
+          "explanation": "Poplatok za prax je 'Zehn Euro' (desať eur)."
+        },
+        {
+          "type": "wordorder",
+          "words": [
+            "besserung",
+            "gute"
+          ],
+          "correct": "gute besserung",
+          "explanation": "Správny slovosled je 'Gute Besserung!' (Skoré uzdravenie!)."
+        },
+        {
+          "type": "fill",
+          "sentence": "Ich bin sehr ___.",
+          "answer": "müde",
+          "explanation": "Slovo 'müde' znamená 'unavený/á'."
+        }
+      ]
+    },
+    {
+      "title": "Wohnen und Wohnungssuche",
+      "description": "Cvičenie na tému bývanie a hľadanie bytu.",
+      "exercises": [
+        {
+          "type": "fill",
+          "sentence": "Ich suche eine Wohnung mit ___.",
+          "answer": "Balkon",
+          "explanation": "Slovo 'Balkon' znamená 'balkón'."
+        },
+        {
+          "type": "mcq",
+          "question": "Čo znamená 'warm' pri byte?",
+          "options": [
+            "Inklusive Nebenkosten.",
+            "Bez kúrenia.",
+            "Len kúrenie.",
+            "Bez nákladov."
+          ],
+          "answer": 0,
+          "explanation": "'Warm' znamená 'vrátane vedľajších nákladov' (inklusive Nebenkosten)."
+        },
+        {
+          "type": "wordorder",
+          "words": [
+            "richtig",
+            "zimmer",
+            "zwei"
+          ],
+          "correct": "zwei zimmer richtig",
+          "explanation": "Správny slovosled je 'Zwei Zimmer, richtig?' (Dve izby, správne?)."
+        },
+        {
+          "type": "fill",
+          "sentence": "Das ist eine ___.",
+          "answer": "Einbauküche",
+          "explanation": "Slovo 'Einbauküche' znamená 'vstavaná kuchyňa'."
+        }
+      ]
+    },
+    {
+      "title": "Alltagsaktivitäten und Bitten",
+      "description": "Cvičenie na každodenné činnosti a žiadosti.",
+      "exercises": [
+        {
+          "type": "fill",
+          "sentence": "Könnten Sie bitte draußen ___?",
+          "answer": "telefonieren",
+          "explanation": "Sloveso 'telefonieren' znamená 'telefonovať'."
+        },
+        {
+          "type": "mcq",
+          "question": "Čo má Nevin urobiť v čakárni?",
+          "options": [
+            "Unterlagen ausfüllen.",
+            "Ein Foto machen.",
+            "Sich anstellen.",
+            "Warten."
+          ],
+          "answer": 0,
+          "explanation": "Nevin má 'Unterlagen ausfüllen' (vyplniť dokumenty)."
+        },
+        {
+          "type": "wordorder",
+          "words": [
+            "unterlagen",
+            "aus",
+            "diese",
+            "füllen",
+            "bitte",
+            "Sie"
+          ],
+          "correct": "füllen sie bitte diese unterlagen aus",
+          "explanation": "Správny slovosled je 'Füllen Sie bitte diese Unterlagen aus.' (Vyplňte, prosím, tieto dokumenty.)."
+        },
+        {
+          "type": "fill",
+          "sentence": "Kannst du mir ___?",
+          "answer": "helfen",
+          "explanation": "Sloveso 'helfen' znamená 'pomôcť'."
+        }
+      ]
+    },
+    {
+      "title": "Besitz und Zugehörigkeit",
+      "description": "Cvičenie na vyjadrenie vlastníctva a príslušnosti.",
+      "exercises": [
+        {
+          "type": "fill",
+          "sentence": "Ist das ___ Bus?",
+          "answer": "mein",
+          "explanation": "Zámeno 'mein' (môj) vyjadruje vlastníctvo."
+        },
+        {
+          "type": "mcq",
+          "question": "Čo znamená 'Ihr Mann'?",
+          "options": [
+            "Váš manžel (formálne).",
+            "Môj manžel.",
+            "Jej manžel.",
+            "Tvoj manžel (neformálne)."
+          ],
+          "answer": 0,
+          "explanation": "'Ihr Mann' znamená 'Váš manžel' (vo formálnom oslovení)."
+        },
+        {
+          "type": "wordorder",
+          "words": [
+            "pass",
+            "nicht",
+            "dabei",
+            "ich",
+            "habe",
+            "meinen"
+          ],
+          "correct": "ich habe meinen pass nicht dabei",
+          "explanation": "Správny slovosled je 'Ich habe meinen Pass nicht dabei.' (Nemám pri sebe pas.)."
+        },
+        {
+          "type": "fill",
+          "sentence": "Für ___ Freunde in der Türkei.",
+          "answer": "meine",
+          "explanation": "Zámeno 'meine' (moji) vyjadruje vlastníctvo pre množné číslo."
+        }
+      ]
+    }
+  ]
+}

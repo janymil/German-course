@@ -227,8 +227,9 @@ No audio files are needed — TTS via Web Speech API is used. Rate: 0.75x for in
   instruction: string,
   questions: [
     {
-      question: string,
-      options: string[],           // Exactly 4 options.
+      question: string,            // REQUIRED. The question text **IN GERMAN**. See RULE 15.
+      questionSk: string,          // REQUIRED. Slovak translation of the question. Shown on tap of translate icon.
+      options: string[],           // Exactly 4 options. **IN GERMAN**.
       answer: number,              // 0-BASED index of the correct option. NOT the text, the INDEX.
       explanation: string,         // REQUIRED. Rendered below the correct/wrong feedback in MCQExercise.jsx.
     }
@@ -236,6 +237,7 @@ No audio files are needed — TTS via Web Speech API is used. Rate: 0.75x for in
 }
 ```
 **CRITICAL: `answer` is a 0-based integer index. answer:0 = first option, answer:1 = second, etc. Never put the text of the answer in this field.**
+**CRITICAL: `question` and `options` MUST be in German (see RULE 15). `questionSk` provides the Slovak translation.**
 
 ### minitext exercise schema:
 ```js
@@ -246,8 +248,9 @@ No audio files are needed — TTS via Web Speech API is used. Rate: 0.75x for in
   textSk: string,          // REQUIRED. Slovak translation (collapsible in UI — shown on demand).
   questions: [
     {
-      question: string,    // German comprehension question about the text.
-      options: string[],   // Exactly 4 options.
+      question: string,    // REQUIRED. German comprehension question about the text. **IN GERMAN** (see RULE 15).
+      questionSk: string,  // REQUIRED. Slovak translation of the question. Shown on tap of translate icon.
+      options: string[],   // Exactly 4 options. **IN GERMAN**.
       answer: number,      // 0-BASED index.
       explanation: string, // Quote from text explaining the answer.
     }
@@ -255,6 +258,7 @@ No audio files are needed — TTS via Web Speech API is used. Rate: 0.75x for in
 }
 ```
 **Text grammar constraint: same as RULE 2 vocab examples — use only grammar structures appropriate for the lesson's CEFR stage.**
+**CRITICAL: `question` and `options` MUST be in German (see RULE 15). `questionSk` provides the Slovak translation.**
 
 ### speaking exercise schema:
 ```js
@@ -316,7 +320,9 @@ This is the definitive map of which component reads which fields. **Before editi
 
 ### MCQExercise.jsx
 - Reads from: `exercise.questions[]`
-- Fields accessed: `q.question`, `q.options[]`, `q.answer` (0-based index), `q.explanation`
+- Fields accessed: `q.question`, `q.questionSk`, `q.options[]`, `q.answer` (0-based index), `q.explanation`
+- `q.question` IS in German — displayed as main question text
+- `q.questionSk` IS rendered — shown on toggle (translate icon click)
 - `q.explanation` IS rendered — it appears after the answer feedback
 
 ### FillExercise.jsx
@@ -358,10 +364,11 @@ This is the definitive map of which component reads which fields. **Before editi
 ### MiniTextExercise.jsx
 - Reads from: `exercise.text`, `exercise.textSk`, `exercise.instruction`, `exercise.questions[]`
 - Fields accessed: `exercise.text` (displayed with TTS button), `exercise.textSk` (collapsible Slovak translation)
-- Questions: `q.question`, `q.options[]`, `q.answer` (0-based), `q.explanation`
+- Questions: `q.question` (German), `q.questionSk` (Slovak, shown on translate icon), `q.options[]`, `q.answer` (0-based), `q.explanation`
 - Phase 1: student reads text (can play TTS, toggle Slovak translation), clicks "Odpovedať na otázky"
 - Phase 2: standard MCQ on the text content
 - **Text must be max 80 words, A1 grammar level, use vocabulary from the lesson**
+- **Questions and options MUST be in German (see RULE 15). `questionSk` provides the Slovak translation on icon click.**
 
 ### SpeakingExercise.jsx
 - Reads from: `exercise.phrases[]`
@@ -516,6 +523,190 @@ speak(text, lang='de-DE', rate=0.85)
 
 ---
 
+## RULE 10B — GENDER COLOR SYSTEM (BERLINER METHODE)
+
+The app uses the proven 3-color system (Berliner Methode) to help learners associate noun genders through color. **All German nouns displayed anywhere in the app are automatically color-coded by gender.**
+
+### Color scheme:
+| Article | Gender | Color | Tailwind class | Hex |
+|---|---|---|---|---|
+| **der** | Maskulin (M) | modrá (blue) | `text-blue-400` | `#60a5fa` |
+| **die** | Feminin (F) | červená (rose/red) | `text-rose-400` | `#fb7185` |
+| **das** | Neutrum (N) | zelená (green) | `text-green-400` | `#4ade80` |
+
+### How it works:
+- **Utility file**: `src/utils/genderColors.jsx` — exports `GenderText`, `GenderWord`, `GenderLegend`, `getGenderMap()`, `getGenderForWord()`, `GENDER_COLORS`
+- **`GenderWord`** — for single vocab words with known gender (pass `word` and `gender` props)
+- **`GenderText`** — for German sentences/text. Auto-detects "der/die/das + Noun" patterns and standalone known nouns using a global gender map built from ALL lessons' vocab.
+- **`GenderLegend`** — compact 3-color legend shown at the bottom of relevant exercises
+- The global gender map is lazily built from `LESSONS[].vocab[]` — any noun with `gender !== null` is indexed by its bare form (without article)
+
+### Where it is applied (ALL these components use gender coloring):
+| Component | What is colored |
+|---|---|
+| FlashcardExercise | `card.de` on front (via GenderWord), `card.example` on back (via GenderText) |
+| MatchExercise | German side items (via getGenderForWord) |
+| WordOrderExercise | Word tiles in bank (via getGenderForWord) |
+| FillExercise | Sentence parts around the blank (via GenderText) |
+| ListenExercise | Correct answer reveal (via GenderText) |
+| MCQExercise | Question text and option text (via GenderText) |
+| MiniTextExercise | Main German reading text (via GenderText) |
+| SpeakingExercise | German phrase display (via GenderText) |
+| VocabTrainer | Card front in all 3 modes (via getGenderForWord), example sentences (via GenderText) |
+| GrammarGuide | Grammar examples `ex.de` (via GenderText) |
+| LessonView GrammarCard | Grammar examples, vocab preview (via GenderText + GenderWord) |
+
+### Rules for agents creating/editing lessons:
+1. **Every noun in `vocab[]` MUST have a correct `gender` field** — M, F, or N. This field drives the color system. A wrong gender = wrong color = confused learner.
+2. The `de` field for nouns MUST include the article: `'der Name'`, `'die Frau'`, `'das Land'`. The `GenderText` component uses articles to detect and color nouns in sentences.
+3. When writing German sentences for exercises (examples, fill sentences, minitext, speaking phrases), use the definite article with nouns wherever grammatically natural. This maximizes color coverage.
+4. **Never hardcode colors in lesson data** — coloring is handled automatically by the components via `genderColors.jsx`.
+5. If adding a new exercise component that displays German text, import and use `GenderText` or `GenderWord` from `../../utils/genderColors`.
+
+---
+
+## RULE 14 — EXERCISE CONTENT FRESHNESS AND VARIATION
+
+**This rule exists because AI-generated exercises often reuse the same sentence structures and vocabulary patterns across exercises within one lesson, producing a repetitive and pedagogically weak experience. An experienced German teacher would NEVER give a student the same sentence pattern in two exercises.**
+
+### Absolute prohibitions:
+1. **No sentence recycling**: A German sentence (or close paraphrase of it) may appear in AT MOST ONE exercise within a lesson. If "Ich bin Anna" appears in the flashcard, it must NOT appear in fill, MCQ, or minitext.
+2. **No pattern recycling**: If the fill exercise has "Ist das ___ oder falsch?", then the MCQ must NOT have a question about "richtig oder falsch" using the same framing.
+3. **No vocabulary cluster reuse**: Each exercise should draw from DIFFERENT vocabulary items. If the match exercise covers words 1–8, the fill should focus on words 5–15.
+
+### Mandatory variation rules:
+4. **MCQ question variety**: Questions must mix these types — at least 2 types per lesson:
+   - Grammar-rule questions ("Welcher Satz ist richtig?")
+   - Vocabulary meaning ("Was bedeutet 'sprechen'?")
+   - Sentence completion ("Ergänze den Satz: Ich ___ Deutsch.")
+   - Context/situation questions ("Was sagst du, wenn du jemanden triffst?")
+5. **Fill focus diversity**: Each fill question must test a DIFFERENT grammar point or vocabulary item. Never two blanks testing the same word form.
+6. **WordOrder must be grammar-focused**: Sentences in wordorder exercise must specifically drill the lesson's `grammarNote.rule`. They should produce different sentence structures — not 4 variations of "Ich bin X".
+7. **Speaking phrases must be situational**: Each phrase should present a different communicative situation (greeting, asking, answering, apologizing, requesting).
+
+### Quality standard — the "Experienced Teacher" test:
+Before finalizing any exercise set, ask: **Would an experienced A1 German teacher use these exact exercises in a 45-minute class?** If any exercise feels repetitive, formulaic, or too easy — rewrite it. A real teacher would vary sentence structures, introduce small surprises, mix formal/informal registers, and test understanding from different angles.
+
+### Cross-exercise freshness check:
+After writing all 8 exercises for a lesson, review them as a set:
+- Count how many times each German word appears across ALL exercises. No word should appear more than 4 times (except structural words like "ist", "der", "ich").
+- Ensure the 8 exercises collectively cover ALL 15–22 vocabulary items from the lesson. No vocab item should be exercised only once.
+- Each exercise should feel like a NEW challenge, not a remix of the previous one.
+
+---
+
+## RULE 15 — GERMAN-LANGUAGE QUESTIONS (MAXIMUM EXPOSURE)
+
+**This rule exists because the app previously displayed exercise questions in Slovak, violating the core principle of maximum German-language exposure. A learner should read German as much as possible — even in question prompts.**
+
+### What MUST be in German:
+| Exercise type | Field | Language | Example |
+|---|---|---|---|
+| MCQ | `question` | **GERMAN** | `'Welches Verb passt? Ich ___ Anna.'` |
+| MCQ | `questionSk` | Slovak | `'Ktoré sloveso sa hodí? Ja ___ Anna.'` |
+| MCQ | `options[]` | **GERMAN** | `['bin', 'bist', 'ist', 'sind']` |
+| MiniText | `question` | **GERMAN** | `'Wer spricht zuerst?'` |
+| MiniText | `questionSk` | Slovak | `'Kto hovorí prvý?'` |
+| MiniText | `options[]` | **GERMAN** | `['Anna', 'Peter', 'Jana', 'Thomas']` |
+
+### What stays in Slovak:
+| Exercise type | Field | Language | Reason |
+|---|---|---|---|
+| MCQ | `explanation` | Slovak | Explanations need to be fully understood |
+| MCQ | `instruction` | Slovak | Top-level instruction for the exercise |
+| Fill | `hint` | Slovak | Hint must be in mother tongue to help |
+| Fill | `explanation` | Slovak | Grammar explanation in mother tongue |
+| WordOrder | `hint` | Slovak | Translation prompt |
+| WordOrder | `explanation` | Slovak | Grammar explanation |
+| Speaking | `sk` | Slovak | Translation shown after reveal |
+
+### Component behaviour:
+- **MCQExercise.jsx**: Shows `q.question` (German) as main text. A small translate icon (🇸🇰) appears next to the question. Clicking it toggles `q.questionSk` underneath.
+- **MiniTextExercise.jsx**: Same pattern for comprehension questions — German question with translate toggle.
+- **FillExercise.jsx**: The sentence is already in German. The hint is in Slovak. No change needed.
+
+### For agents creating lesson data:
+- Write `question` in clear, simple A1 German that a beginner can understand
+- Keep questions short (max 15 words)
+- Use vocabulary the student has already learned (this lesson + prior lessons)
+- The `questionSk` field is a direct Slovak translation — no extra commentary
+- Options in MCQ/MiniText are always German words or short German phrases
+
+---
+
+## RULE 16 — MINITEXT CONTINUOUS STORY (JANA'S JOURNEY)
+
+**The minitext exercise in each lesson is part of a continuous narrative that follows Jana Nováková on her journey from Bratislava to Vienna to learn German. Each lesson's minitext is ONE EPISODE of this story, adapted to use that lesson's vocabulary and grammar.**
+
+### Story arc overview:
+- **L01–L05** (Week 1): Jana arrives in Vienna, introduces herself, meets people, learns names/ages/professions
+- **L06–L10** (Week 2): Jana's daily routine — apartment, family, schedule, hobbies
+- **L11–L15** (Week 3): Jana navigates the city — shopping, transport, directions
+- **L16–L20** (Week 4): Jana's social life — eating out, ordering food, making plans
+- **L21–L30** (Weeks 5–6): Jana at work/university — classes, colleagues, appointments
+- **L31–L40** (Weeks 7–8): Jana's wider world — weather, health, travel, clothes
+- **L41–L50** (Weeks 9–10): Jana handles problems — complaints, repairs, bureaucracy
+- **L51–L60** (Weeks 11–12): Jana deepens relationships — celebrations, culture, opinions
+- **L61–L70** (Weeks 13–14): Jana's German life — media, technology, future plans
+- **L71–L80** (Weeks 15–16): Exam preparation arc — Jana reflects and prepares for Goethe A1
+
+### Content rules for each episode:
+1. **Max 80 words** — this is a hard limit
+2. **Use at least 8 vocabulary words** from the current lesson's `vocab[]`
+3. **Use ONLY grammar** appropriate for the lesson's CEFR stage (see RULE 2)
+4. **Reference previous episodes** — mention characters or events from prior lessons when natural
+5. **Each episode ends with a small cliffhanger or transition** to the next lesson's topic
+6. **Characters recur**: Jana, Lukas (Austrian friend), Thomas (colleague), Maria (doctor friend), Anna (classmate). New characters may be introduced as the story progresses.
+7. **The story must feel authentic** — situations a real Slovak person would encounter in Vienna
+
+### Comprehension questions:
+- 3–5 questions per minitext, ALL in German (with `questionSk` for Slovak translation)
+- At least 1 question about WHO (Wer...?)
+- At least 1 question about WHAT (Was...?)
+- At least 1 question about a fact from the text (inference or detail)
+- Options MUST be in German
+
+---
+
+## RULE 17 — EXERCISE DEPTH, PHRASES, AND QUESTION QUALITY
+
+**This rule exists because AI-generated exercises tend to be shallow: too few questions, reused patterns, no real-world phrases, and vague comprehension questions. An experienced teacher would write exercises that challenge the student with VARIETY, DEPTH, and REAL-WORLD LANGUAGE.**
+
+### Minimum exercise counts (per lesson):
+| Exercise type | Minimum items | Ideal range |
+|---|---|---|
+| `match` pairs | 8 | 8–10 |
+| `wordorder` sentences | 5 | 5–6 |
+| `fill` questions | 6 | 6–8 |
+| `listen` questions | 8 | 8–10 |
+| `mcq` questions | 6 | 6–8 |
+| `minitext` questions | 4 | 4–5 |
+| `speaking` phrases | 6 | 6–8 |
+
+### Use REAL PHRASES, not isolated words:
+- **Fill exercise**: Use complete, natural phrases from real-life situations — not bare grammar drills. "Ich möchte ___ Kaffee, bitte" is better than "Ich ___ Jana."
+- **MCQ exercise**: Include situation-based questions: "Was sagst du im Restaurant?" alongside grammar questions.
+- **Match exercise**: Mix single words AND short phrases (e.g., "Guten Morgen" ↔ "Dobré ráno") — not just isolated nouns.
+- **Speaking exercise**: Each phrase must be a complete, usable real-world sentence (e.g., "Können Sie das wiederholen?" not just "wiederholen").
+- **WordOrder exercise**: Use sentences from realistic dialogue situations, not artificial constructions.
+
+### Question quality rules (MANDATORY):
+1. **NO vague questions**: "O čom je text?" (What is the text about?) is BANNED. Every question must ask about a SPECIFIC fact or detail from the text.
+2. **NO yes/no questions** in MCQ or minitext — they are too easy and don't test comprehension.
+3. **Each question must have ONE clearly correct answer** based on the text. The three wrong options must be plausible but definitively incorrect.
+4. **Wrong options must be from the same category** as the correct answer: if the answer is a number, all options are numbers; if the answer is a name, all options are names.
+5. **Questions must test UNDERSTANDING, not memory**: Prefer questions about what happened, why, and what follows — not just "which word appeared in sentence 3."
+6. **Explanations must quote the text**: Every `explanation` field must contain a direct quote from the text that proves the answer. Format: `'Im Text: "direct quote from text"'`
+
+### Anti-patterns to AVOID (instant rejection):
+- Generic questions like "Worum geht es?" (What is it about?) — TOO VAGUE
+- Questions answerable without reading the text — BAD
+- All options being completely unrelated to the text — BAD (e.g., "Berlin, Tokyo, Mars, Atlantis" for a question about Vienna)
+- Same question structure repeated across exercises — BAD (e.g., "Was macht Jana?" in both MCQ and minitext)
+- Placeholder or template-quality content — UNACCEPTABLE
+
+---
+
 ## RULE 11 — BEFORE RUNNING ANY AUDIT
 
 An audit is only complete if it reads ALL of the following:
@@ -579,6 +770,9 @@ C:\Users\USER\Documents\GERMAN\
       useProgress.js                    ← localStorage progress system.
       useTTS.js                         ← Web Speech API TTS hook. Strips phonetic annotations before speaking.
       useAI.js                          ← GPT-4o-mini hook. checkWriting() + sendConversationMessage().
+    utils/
+      genderColors.jsx                  ← Gender color system (Berliner Methode). Exports GenderText, GenderWord, GenderLegend.
+      text.js                           ← normalizeGerman() for accent-tolerant comparison.
   docs/
     APP_OVERVIEW.md                     ← Human-readable full app documentation.
     AI_ROLE.md
@@ -600,6 +794,8 @@ C:\Users\USER\Documents\GERMAN\
 - [ ] Read every file I plan to edit
 - [ ] **RULE 1B INTERCONNECTION AUDIT completed** — all affected entry points checked (Sidebar, Welcome, Dashboard, MethodGuide, App.jsx, LessonView, lesson files)
 - [ ] Every new vocab entry has all 8 required fields (de, sk, gender, srsId, example, exampleSk, recycledFrom, and correct structure)
+- [ ] **Every noun in vocab has correct `gender` field** (M/F/N) — drives the color-coding system (RULE 10B)
+- [ ] **Noun `de` field includes article**: 'der Name', 'die Frau', 'das Land'
 - [ ] No `exercise.items` array in flashcard exercises
 - [ ] MCQ `answer` is a 0-based INTEGER index
 - [ ] All `explanation` fields in MCQ, Fill, WordOrder are non-empty strings
@@ -611,4 +807,14 @@ C:\Users\USER\Documents\GERMAN\
 - [ ] `minitext.text` is max 80 words, A1 grammar level, uses lesson vocabulary
 - [ ] `minitext.questions[].answer` is a 0-based integer index
 - [ ] `speaking.phrases[]` have de + sk + tip fields (tip ≤60 chars)
+- [ ] **MCQ and MiniText `question` fields are in GERMAN** (RULE 15)
+- [ ] **MCQ and MiniText have `questionSk` field** with Slovak translation (RULE 15)
+- [ ] **MCQ and MiniText `options` are in GERMAN** (RULE 15)
+- [ ] **No exercise sentence recycling** — each sentence appears in at most 1 exercise (RULE 14)
+- [ ] **Exercise set covers all vocab items** from the lesson (RULE 14)
+- [ ] **Minitext continues Jana's story** — references prior episodes if applicable (RULE 16)
+- [ ] **Exercise counts meet RULE 17 minimums** (match≥8, fill≥6, mcq≥6, minitext≥4, speaking≥6)
+- [ ] **No vague questions** — every question asks a SPECIFIC fact from the text (RULE 17)
+- [ ] **Exercises use real-world phrases**, not just isolated words (RULE 17)
+- [ ] **Explanations quote the text** — format: `'Im Text: "..."'` (RULE 17)
 - [ ] Build passes after edit

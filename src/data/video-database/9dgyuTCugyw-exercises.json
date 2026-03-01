@@ -1,0 +1,263 @@
+{
+  "topics": [
+    {
+      "title": "Sich vorstellen und Begrüßung",
+      "description": "Cvičenia na predstavenie sa a základné pozdravy.",
+      "exercises": [
+        {
+          "type": "fill",
+          "sentence": "Das ___ die Geschichte.",
+          "answer": "ist",
+          "explanation": "Cvičenie na sloveso 'sein' v 3. osobe jednotného čísla."
+        },
+        {
+          "type": "wordorder",
+          "words": [
+            "Morgen",
+            "guten"
+          ],
+          "correct": "guten Morgen",
+          "explanation": "Cvičenie na správny slovosled pozdravu."
+        },
+        {
+          "type": "mcq",
+          "question": "Wer ist Sam?",
+          "options": [
+            "Er ist ein Nachbar.",
+            "Er ist Besuch aus Amerika.",
+            "Er ist ein Verkäufer.",
+            "Er ist ein Kunde."
+          ],
+          "answer": 1,
+          "explanation": "Cvičenie na porozumenie informácií o postavách."
+        },
+        {
+          "type": "fill",
+          "sentence": "Ich komme ja ___.",
+          "answer": "schon",
+          "explanation": "Cvičenie na doplnenie slova 'schon' v bežnej fráze."
+        }
+      ]
+    },
+    {
+      "title": "Personen und Dinge beschreiben",
+      "description": "Cvičenia na opis osôb a vecí pomocou prídavných mien.",
+      "exercises": [
+        {
+          "type": "mcq",
+          "question": "Wie ist Sam?",
+          "options": [
+            "Er ist groß.",
+            "Er ist schlank.",
+            "Er ist cool.",
+            "Alle Optionen sind richtig."
+          ],
+          "answer": 3,
+          "explanation": "Cvičenie na prídavné mená opisujúce Sama."
+        },
+        {
+          "type": "fill",
+          "sentence": "Die Klamotten sind echt ___.",
+          "answer": "cool",
+          "explanation": "Cvičenie na doplnenie prídavného mena 'cool'."
+        },
+        {
+          "type": "wordorder",
+          "words": [
+            "Zitrone",
+            "heiße"
+          ],
+          "correct": "heiße Zitrone",
+          "explanation": "Cvičenie na slovosled prídavného mena a podstatného mena."
+        },
+        {
+          "type": "mcq",
+          "question": "Was ist 'super'?",
+          "options": [
+            "Sam findet es super in Deutschland.",
+            "Sam ist super.",
+            "Die Hose ist super.",
+            "Die Eier sind super."
+          ],
+          "answer": 0,
+          "explanation": "Cvičenie na porozumenie kontextu slova 'super'."
+        }
+      ]
+    },
+    {
+      "title": "Einkaufen und Kleidung",
+      "description": "Cvičenia na slovnú zásobu a frázy súvisiace s nakupovaním a oblečením.",
+      "exercises": [
+        {
+          "type": "fill",
+          "sentence": "Ich bin der Verkäufer und du bist der ___.",
+          "answer": "Kunde",
+          "explanation": "Cvičenie na slovnú zásobu súvisiacu s nakupovaním."
+        },
+        {
+          "type": "mcq",
+          "question": "Was möchte ich kaufen?",
+          "options": [
+            "Ich möchte eine Hose kaufen.",
+            "Ich möchte einen Schal kaufen.",
+            "Ich möchte Apfelsinen kaufen.",
+            "Ich möchte Hundefutter kaufen."
+          ],
+          "answer": 0,
+          "explanation": "Cvičenie na porozumenie želaní pri nakupovaní."
+        },
+        {
+          "type": "wordorder",
+          "words": [
+            "einkaufen",
+            "gehen",
+            "wir"
+          ],
+          "correct": "wir gehen einkaufen",
+          "explanation": "Cvičenie na správny slovosled vety."
+        },
+        {
+          "type": "fill",
+          "sentence": "Probier es ___.",
+          "answer": "an",
+          "explanation": "Cvičenie na doplnenie odlučiteľnej predpony slovesa 'anprobieren'."
+        },
+        {
+          "type": "mcq",
+          "question": "Was ist keine Kleidung?",
+          "options": [
+            "Die Hose.",
+            "Der Schal.",
+            "Das Hemd.",
+            "Die Apfelsinen."
+          ],
+          "answer": 3,
+          "explanation": "Cvičenie na rozlíšenie oblečenia od iných vecí."
+        }
+      ]
+    },
+    {
+      "title": "Zahlen, Mengen und Preise",
+      "description": "Cvičenia na čísla, množstvá a ceny.",
+      "exercises": [
+        {
+          "type": "fill",
+          "sentence": "Sam hat zehn ___ Äpfel eingekauft.",
+          "answer": "Kilo",
+          "explanation": "Cvičenie na jednotku hmotnosti 'Kilo'."
+        },
+        {
+          "type": "mcq",
+          "question": "Wie viele Eier hat Sam bestellt?",
+          "options": [
+            "Zehn Eier.",
+            "Zwölf Eier.",
+            "144 Eier.",
+            "88 Eier."
+          ],
+          "answer": 1,
+          "explanation": "Cvičenie na porozumenie číselných údajov pri objednávke."
+        },
+        {
+          "type": "wordorder",
+          "words": [
+            "Euro",
+            "6000",
+            "das",
+            "macht"
+          ],
+          "correct": "das macht 6000 Euro",
+          "explanation": "Cvičenie na správny slovosled pri udávaní ceny."
+        },
+        {
+          "type": "fill",
+          "sentence": "Das ist viel zu ___.",
+          "answer": "teuer",
+          "explanation": "Cvičenie na doplnenie prídavného mena 'teuer'."
+        }
+      ]
+    },
+    {
+      "title": "Wünsche äußern und Fragen stellen",
+      "description": "Cvičenia na vyjadrovanie želaní a kladenie otázok.",
+      "exercises": [
+        {
+          "type": "fill",
+          "sentence": "___ ich Ihnen helfen?",
+          "answer": "Kann",
+          "explanation": "Cvičenie na modálne sloveso 'können' v otázke."
+        },
+        {
+          "type": "mcq",
+          "question": "Welche Frage wird gestellt, wenn man Kleidung kaufen möchte?",
+          "options": [
+            "Was ist das?",
+            "Welche Größe?",
+            "Wie viel Uhr ist es?",
+            "Wo ist das Bad?"
+          ],
+          "answer": 1,
+          "explanation": "Cvičenie na porozumenie otázok pri nákupe oblečenia."
+        },
+        {
+          "type": "wordorder",
+          "words": [
+            "Hose",
+            "diese",
+            "Ihnen",
+            "gefällt"
+          ],
+          "correct": "gefällt Ihnen diese Hose",
+          "explanation": "Cvičenie na správny slovosled v otázke s 'gefallen'."
+        },
+        {
+          "type": "fill",
+          "sentence": "Ich möchte eine Hose ___.",
+          "answer": "kaufen",
+          "explanation": "Cvičenie na doplnenie slovesa 'kaufen' v želaní."
+        }
+      ]
+    },
+    {
+      "title": "Aufforderungen und Ratschläge",
+      "description": "Cvičenia na imperatív a vyjadrovanie rád.",
+      "exercises": [
+        {
+          "type": "fill",
+          "sentence": "Wach ___!",
+          "answer": "auf",
+          "explanation": "Cvičenie na odlučiteľnú predponu slovesa 'aufwachen'."
+        },
+        {
+          "type": "wordorder",
+          "words": [
+            "Bett",
+            "aus",
+            "dem",
+            "raus"
+          ],
+          "correct": "raus aus dem Bett",
+          "explanation": "Cvičenie na správny slovosled v imperatívnej fráze."
+        },
+        {
+          "type": "mcq",
+          "question": "Was bedeutet 'keine Panik'?",
+          "options": [
+            "Sei ruhig.",
+            "Sei schnell.",
+            "Sei cool.",
+            "Sei reich."
+          ],
+          "answer": 0,
+          "explanation": "Cvičenie na porozumenie významu frázy."
+        },
+        {
+          "type": "fill",
+          "sentence": "Wir ___ mal schnell.",
+          "answer": "müssten",
+          "explanation": "Cvičenie na modálne sloveso 'müssen' v konjunktíve."
+        }
+      ]
+    }
+  ]
+}

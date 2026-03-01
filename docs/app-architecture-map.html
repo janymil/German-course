@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>German App — Architecture Map</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #080c14; font-family: 'Segoe UI', system-ui, sans-serif; color: #fff; min-height: 100vh; overflow-x: hidden; }
+
+  /* ── Header ── */
+  .header { text-align: center; padding: 48px 24px 32px; }
+  .header h1 { font-size: 2rem; font-weight: 900; letter-spacing: -0.5px; background: linear-gradient(135deg, #818cf8, #c084fc, #38bdf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  .header p { color: #64748b; font-size: 0.9rem; margin-top: 8px; }
+
+  /* ── Legend ── */
+  .legend { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; padding: 0 24px 32px; }
+  .legend-item { display: flex; align-items: center; gap: 8px; font-size: 0.75rem; color: #94a3b8; }
+  .legend-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+  .dot-green { background: #34d399; }
+  .dot-red { background: #f87171; }
+  .dot-amber { background: #fbbf24; }
+  .dot-blue { background: #60a5fa; }
+  .dot-purple { background: #a78bfa; }
+
+  /* ── Main mind map canvas ── */
+  .canvas { position: relative; width: 100%; max-width: 1400px; margin: 0 auto; padding: 0 24px 64px; }
+
+  /* ── CEREBRO center ── */
+  .cerebro {
+    background: linear-gradient(135deg, #312e81, #4c1d95);
+    border: 2px solid #7c3aed;
+    border-radius: 20px;
+    padding: 28px 36px;
+    text-align: center;
+    max-width: 340px;
+    margin: 0 auto 0;
+    box-shadow: 0 0 60px rgba(124,58,237,0.4);
+    position: relative;
+    z-index: 10;
+  }
+  .cerebro .icon { font-size: 2.5rem; margin-bottom: 8px; }
+  .cerebro h2 { font-size: 1.4rem; font-weight: 900; color: #c4b5fd; }
+  .cerebro p { font-size: 0.75rem; color: #8b5cf6; margin-top: 4px; line-height: 1.5; }
+  .cerebro .fields { margin-top: 14px; display: flex; flex-direction: column; gap: 4px; }
+  .cerebro .field { background: rgba(139,92,246,0.15); border: 1px solid rgba(139,92,246,0.3); border-radius: 8px; padding: 5px 10px; font-size: 0.68rem; color: #a78bfa; text-align: left; font-family: monospace; }
+
+  /* ── Module cards ── */
+  .modules-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 48px;
+  }
+
+  .module {
+    background: #0f172a;
+    border-radius: 20px;
+    border: 1px solid #1e293b;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .module:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(0,0,0,0.4); }
+
+  .module-header {
+    padding: 18px 20px 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-bottom: 1px solid #1e293b;
+  }
+  .module-icon { font-size: 1.6rem; flex-shrink: 0; }
+  .module-title { font-size: 1rem; font-weight: 800; }
+  .module-sub { font-size: 0.7rem; color: #64748b; margin-top: 1px; }
+
+  .module-body { padding: 16px 20px; }
+
+  /* Feature list */
+  .feature-list { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+  .feature-list li { display: flex; align-items: flex-start; gap: 8px; font-size: 0.75rem; color: #94a3b8; }
+  .feature-list li::before { content: '▸'; color: inherit; flex-shrink: 0; margin-top: 1px; }
+  .feature-list li.done::before { color: #34d399; }
+  .feature-list li.partial::before { color: #fbbf24; }
+  .feature-list li.missing::before { color: #f87171; }
+
+  /* Data flows */
+  .flows { margin-top: 16px; border-top: 1px solid #1e293b; padding-top: 14px; }
+  .flows-title { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #475569; margin-bottom: 8px; }
+  .flow { display: flex; align-items: center; gap: 6px; font-size: 0.7rem; margin-bottom: 5px; }
+  .flow-arrow { font-size: 0.7rem; flex-shrink: 0; }
+  .flow-out { color: #818cf8; }
+  .flow-in { color: #34d399; }
+  .flow-missing { color: #f87171; text-decoration: line-through; opacity: 0.6; }
+  .flow-label { color: #64748b; }
+
+  /* Status badges */
+  .badge { display: inline-block; padding: 2px 8px; border-radius: 99px; font-size: 0.6rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-left: auto; flex-shrink: 0; }
+  .badge-done { background: rgba(52,211,153,0.15); color: #34d399; border: 1px solid rgba(52,211,153,0.3); }
+  .badge-partial { background: rgba(251,191,36,0.15); color: #fbbf24; border: 1px solid rgba(251,191,36,0.3); }
+  .badge-missing { background: rgba(248,113,113,0.15); color: #f87171; border: 1px solid rgba(248,113,113,0.3); }
+
+  /* Color accents per module */
+  .mod-lessons  .module-header { background: linear-gradient(135deg, rgba(99,102,241,0.12), transparent); }
+  .mod-lessons  .module-title { color: #818cf8; }
+  .mod-lessons  { border-color: rgba(99,102,241,0.3); }
+
+  .mod-vocab    .module-header { background: linear-gradient(135deg, rgba(52,211,153,0.12), transparent); }
+  .mod-vocab    .module-title { color: #34d399; }
+  .mod-vocab    { border-color: rgba(52,211,153,0.3); }
+
+  .mod-stories  .module-header { background: linear-gradient(135deg, rgba(251,191,36,0.12), transparent); }
+  .mod-stories  .module-title { color: #fcd34d; }
+  .mod-stories  { border-color: rgba(251,191,36,0.3); }
+
+  .mod-grammar  .module-header { background: linear-gradient(135deg, rgba(96,165,250,0.12), transparent); }
+  .mod-grammar  .module-title { color: #60a5fa; }
+  .mod-grammar  { border-color: rgba(96,165,250,0.3); }
+
+  .mod-ai       .module-header { background: linear-gradient(135deg, rgba(167,139,250,0.12), transparent); }
+  .mod-ai       .module-title { color: #a78bfa; }
+  .mod-ai       { border-color: rgba(167,139,250,0.3); }
+
+  .mod-gamif    .module-header { background: linear-gradient(135deg, rgba(248,113,113,0.12), transparent); }
+  .mod-gamif    .module-title { color: #f87171; }
+  .mod-gamif    { border-color: rgba(248,113,113,0.3); }
+
+  .mod-coach    .module-header { background: linear-gradient(135deg, rgba(244,114,182,0.12), transparent); }
+  .mod-coach    .module-title { color: #f472b6; }
+  .mod-coach    { border-color: rgba(244,114,182,0.3); }
+
+  .mod-passive  .module-header { background: linear-gradient(135deg, rgba(45,212,191,0.12), transparent); }
+  .mod-passive  .module-title { color: #2dd4bf; }
+  .mod-passive  { border-color: rgba(45,212,191,0.3); }
+
+  /* ── Connection diagram ── */
+  .connections-section { max-width: 1400px; margin: 48px auto 0; padding: 0 24px; }
+  .connections-section h2 { font-size: 1.2rem; font-weight: 800; color: #c4b5fd; margin-bottom: 24px; text-align: center; }
+
+  .connection-table { width: 100%; border-collapse: collapse; font-size: 0.75rem; }
+  .connection-table th { padding: 10px 14px; text-align: left; color: #475569; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; border-bottom: 1px solid #1e293b; }
+  .connection-table td { padding: 10px 14px; border-bottom: 1px solid #0f172a; vertical-align: top; }
+  .connection-table tr:hover td { background: rgba(255,255,255,0.02); }
+  .conn-from { color: #818cf8; font-weight: 700; }
+  .conn-to { color: #34d399; font-weight: 700; }
+  .conn-data { color: #94a3b8; font-family: monospace; font-size: 0.7rem; }
+  .conn-status-done { color: #34d399; }
+  .conn-status-partial { color: #fbbf24; }
+  .conn-status-missing { color: #f87171; }
+  .conn-why { color: #64748b; font-size: 0.68rem; italic; }
+
+  /* ── Gap analysis ── */
+  .gaps-section { max-width: 1400px; margin: 48px auto; padding: 0 24px 80px; }
+  .gaps-section h2 { font-size: 1.2rem; font-weight: 800; color: #f87171; margin-bottom: 24px; text-align: center; }
+  .gap-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+  .gap-card { background: rgba(248,113,113,0.05); border: 1px solid rgba(248,113,113,0.2); border-radius: 16px; padding: 16px 18px; }
+  .gap-card h3 { font-size: 0.85rem; font-weight: 700; color: #fca5a5; margin-bottom: 10px; display: flex; align-items: center; gap-8px: ; }
+  .gap-card p { font-size: 0.73rem; color: #94a3b8; line-height: 1.6; }
+  .gap-prio { display: inline-block; padding: 1px 7px; border-radius: 99px; font-size: 0.6rem; font-weight: 700; margin-left: 8px; }
+  .prio-high { background: rgba(248,113,113,0.2); color: #f87171; }
+  .prio-med  { background: rgba(251,191,36,0.2);  color: #fbbf24; }
+  .prio-low  { background: rgba(148,163,184,0.2); color: #94a3b8; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>🧠 German Learning App — Full Architecture Map</h1>
+  <p>Every module, every data flow, every existing connection and every missing one</p>
+</div>
+
+<div class="legend">
+  <div class="legend-item"><div class="legend-dot dot-green"></div> Implemented & connected</div>
+  <div class="legend-item"><div class="legend-dot dot-amber"></div> Partially implemented</div>
+  <div class="legend-item"><div class="legend-dot dot-red"></div> Missing / broken connection</div>
+  <div class="legend-item"><div class="legend-dot dot-purple"></div> Core data store (Cerebro)</div>
+</div>
+
+<!-- CEREBRO CENTER -->
+<div class="canvas">
+  <div class="cerebro">
+    <div class="icon">🧠</div>
+    <h2>useProgress — Cerebro</h2>
+    <p>Central data store. All modules read from and write to this single source of truth stored in localStorage.</p>
+    <div class="fields">
+      <div class="field">xp: number</div>
+      <div class="field">streak: number</div>
+      <div class="field">dailyXP: [{date, xp}]</div>
+      <div class="field">completedLessons: {id: {score, xp}}</div>
+      <div class="field">weeklyTests: {week: {score, passed}}</div>
+      <div class="field">vocabSeen: {word: {seenCount, mastered}}</div>
+      <div class="field">conversationPhrases: [{de, correction}]</div>
+      <div class="field">storiesRead: {id: {quizScore, wordsAdded}}</div>
+      <div class="field">readingVocab: [{de, sk, storyId}]</div>
+      <div class="field">placementTestDone: boolean</div>
+      <div class="field">placementUnlockedUpTo: number</div>
+    </div>
+  </div>
+
+  <!-- MODULE CARDS -->
+  <div class="modules-grid">
+
+    <!-- LESSONS -->
+    <div class="module mod-lessons">
+      <div class="module-header">
+        <div class="module-icon">📚</div>
+        <div>
+          <div class="module-title">Lessons (Lekcie)</div>
+          <div class="module-sub">LessonView · ExerciseArena · WeeklyPlan · WeeklyTest · PlacementTest</div>
+        </div>
+        <span class="badge badge-partial">Partial</span>
+      </div>
+      <div class="module-body">
+        <ul class="feature-list">
+          <li class="done">A1 curriculum: 20+ lessons in weekly plan</li>
+          <li class="done">Exercises: fill-in, multiple choice, matching, ordering</li>
+          <li class="done">Per-lesson score → XP reward</li>
+          <li class="done">Weekly test per week block</li>
+          <li class="done">Placement test → unlock lessons</li>
+          <li class="partial">Lesson completion recorded in Cerebro</li>
+          <li class="missing">Wrong answers NOT fed to VocabTrainer for drilling</li>
+          <li class="missing">Grammar mistakes NOT linked to GrammarGuide cards</li>
+          <li class="missing">Lessons do NOT unlock stories</li>
+        </ul>
+        <div class="flows">
+          <div class="flows-title">Data Flows</div>
+          <div class="flow"><span class="flow-arrow">→</span><span class="flow-out">Cerebro</span><span class="flow-label">: completeLesson(id, score, xp)</span></div>
+          <div class="flow"><span class="flow-arrow">→</span><span class="flow-out">Cerebro</span><span class="flow-label">: markVocabSeen(word) when new vocab appears</span></div>
+          <div class="flow flow-missing"><span class="flow-arrow">⚠</span><span>wrong answers → VocabTrainer priority queue</span></div>
+          <div class="flow flow-missing"><span class="flow-arrow">⚠</span><span>lesson N done → unlocks Story N</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- VOCAB TRAINER -->
+    <div class="module mod-vocab">
+      <div class="module-header">
+        <div class="module-icon">🃏</div>
+        <div>
+          <div class="module-title">Vocab Trainer (SRS)</div>
+          <div class="module-sub">VocabTrainer · useProgress.vocabSeen</div>
+        </div>
+        <span class="badge badge-partial">Partial</span>
+      </div>
+      <div class="module-body">
+        <ul class="feature-list">
+          <li class="done">Flashcard SRS review system</li>
+          <li class="done">Words from lessons added via markVocabSeen()</li>
+          <li class="done">Words from stories added via markVocabSeen()</li>
+          <li class="done">Words from AI Chat added via markVocabSeen()</li>
+          <li class="partial">Mastered state tracked, but SRS intervals are basic</li>
+          <li class="missing">VocabTrainer does NOT show word's source (lesson/story/chat)</li>
+          <li class="missing">Repeated wrong cards NOT bumped to top of queue</li>
+          <li class="missing">readingVocab NOT shown separately from lesson vocab</li>
+        </ul>
+        <div class="flows">
+          <div class="flows-title">Data Flows</div>
+          <div class="flow"><span class="flow-arrow">←</span><span class="flow-in">Reads from</span><span class="flow-label">: Cerebro.vocabSeen</span></div>
+          <div class="flow"><span class="flow-arrow">←</span><span class="flow-in">Reads from</span><span class="flow-label">: Cerebro.readingVocab (source tags)</span></div>
+          <div class="flow"><span class="flow-arrow">→</span><span class="flow-out">Writes to</span><span class="flow-label">: Cerebro.vocabSeen (mastered flag)</span></div>
+          <div class="flow flow-missing"><span class="flow-arrow">⚠</span><span>does NOT export "weak words" to StudyCoach</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STORY READER -->
+    <div class="module mod-stories">
+      <div class="module-header">
+        <div class="module-icon">📖</div>
+        <div>
+          <div class="module-title">Story Reader (Čítanie)</div>
+          <div class="module-sub">StoryBrowser · StoryReader · stories.js · /audio/stories/</div>
+        </div>
+        <span class="badge badge-partial">Partial</span>
+      </div>
+      <div class="module-body">
+        <ul class="feature-list">
+          <li class="done">5 A1 stories, 15–17 sentences each</li>
+          <li class="done">Click word → inline Grammar Card</li>
+          <li class="done">Save word → Vocab SRS</li>
+          <li class="done">Pre-generated MP3 audio (OpenAI TTS HD, voice: nova)</li>
+          <li class="done">Play / Pause / Stop / speed control (0.5×–1.5×)</li>
+          <li class="done">Per-sentence TTS on hover (🔊 button)</li>
+          <li class="done">Quiz after story → score → XP</li>
+          <li class="missing">Stories NOT locked/unlocked based on lesson progress</li>
+          <li class="missing">Quiz wrong answers NOT fed back to lesson gap analysis</li>
+          <li class="missing">Story difficulty NOT matched to user's current level</li>
+        </ul>
+        <div class="flows">
+          <div class="flows-title">Data Flows</div>
+          <div class="flow"><span class="flow-arrow">→</span><span class="flow-out">Cerebro</span><span class="flow-label">: completeStory(id, title, quizScore, words)</span></div>
+          <div class="flow"><span class="flow-arrow">→</span><span class="flow-out">Cerebro</span><span class="flow-label">: markVocabSeen(word) on Save click</span></div>
+          <div class="flow"><span class="flow-arrow">→</span><span class="flow-out">Cerebro</span><span class="flow-label">: readingVocab[] (source-tagged words)</span></div>
+          <div class="flow flow-missing"><span class="flow-arrow">⚠</span><span>story level NOT linked to completedLessons</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- GRAMMAR GUIDE -->
+    <div class="module mod-grammar">
+      <div class="module-header">
+        <div class="module-icon">📐</div>
+        <div>
+          <div class="module-title">Grammar Guide (Gramatika)</div>
+          <div class="module-sub">GrammarGuide · GrammarCard (inline in StoryReader)</div>
+        </div>
+        <span class="badge badge-missing">Isolated</span>
+      </div>
+      <div class="module-body">
+        <ul class="feature-list">
+          <li class="done">Reference guide: cases, articles, conjugations</li>
+          <li class="done">Inline grammar cards in Story Reader (click-to-open)</li>
+          <li class="missing">GrammarGuide does NOT know which rules user struggles with</li>
+          <li class="missing">Lesson wrong answers do NOT highlight relevant grammar cards</li>
+          <li class="missing">Story grammar cards NOT recorded as "viewed"</li>
+          <li class="missing">No connection between GrammarGuide and Cerebro at all</li>
+        </ul>
+        <div class="flows">
+          <div class="flows-title">Data Flows</div>
+          <div class="flow flow-missing"><span class="flow-arrow">⚠</span><span>receives nothing from Cerebro</span></div>
+          <div class="flow flow-missing"><span class="flow-arrow">⚠</span><span>sends nothing to Cerebro</span></div>
+          <div class="flow flow-missing"><span class="flow-arrow">⚠</span><span>grammar cards viewed → NOT tracked</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- AI CONVERSATION -->
+    <div class="module mod-ai">
+      <div class="module-header">
+        <div class="module-icon">🤖</div>
+        <div>
+          <div class="module-title">AI Conversation (Chat)</div>
+          <div class="module-sub">AIConversation · useAI · phrases.js</div>
+        </div>
+        <span class="badge badge-partial">Partial</span>
+      </div>
+      <div class="module-body">
+        <ul class="feature-list">
+          <li class="done">OpenAI GPT-4 conversation with German characters</li>
+          <li class="done">Grammar corrections highlighted in chat</li>
+          <li class="done">Save phrase → conversationPhrases in Cerebro</li>
+          <li class="done">Save corrected words → Vocab SRS</li>
+          <li class="partial">Phrase library (phrases.js) exists but static</li>
+          <li class="missing">Chat context NOT aware of user's lesson progress</li>
+          <li class="missing">AI does NOT adapt difficulty to user level</li>
+          <li class="missing">Conversation phrases NOT shown in VocabTrainer with source</li>
+        </ul>
+        <div class="flows">
+          <div class="flows-title">Data Flows</div>
+          <div class="flow"><span class="flow-arrow">→</span><span class="flow-out">Cerebro</span><span class="flow-label">: saveConversationPhrases(phrases[])</span></div>
+          <div class="flow"><span class="flow-arrow">→</span><span class="flow-out">Cerebro</span><span class="flow-label">: markVocabSeen(corrected word)</span></div>
+          <div class="flow flow-missing"><span class="flow-arrow">⚠</span><span>does NOT read completedLessons to adapt level</span></div>
+          <div class="flow flow-missing"><span class="flow-arrow">⚠</span><span>does NOT read vocabSeen weak words</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- GAMIFICATION -->
+    <div class="module mod-gamif">
+      <div class="module-header">
+        <div class="module-icon">🏆</div>
+        <div>
+          <div class="module-title">Gamification (XP / Streak)</div>
+          <div class="module-sub">Dashboard · useProgress.xp / streak / dailyXP</div>
+        </div>
+        <span class="badge badge-partial">Partial</span>
+      </div>
+      <div class="module-body">
+        <ul class="feature-list">
+          <li class="done">XP earned from: lessons, stories, weekly tests</li>
+          <li class="done">Daily streak tracking</li>
+          <li class="done">XP history (last 30 days) → bar chart on Dashboard</li>
+          <li class="missing">XP NOT earned from: AI chat, passive listening, grammar review</li>
+          <li class="missing">No achievement badges / milestones</li>
+          <li class="missing">Streak broken notification not shown</li>
+          <li class="missing">Leaderboard / social features absent</li>
+        </ul>
+        <div class="flows">
+          <div class="flows-title">Data Flows</div>
+          <div class="flow"><span class="flow-arrow">←</span><span class="flow-in">Reads</span><span class="flow-label">: Cerebro.xp, streak, dailyXP</span></div>
+          <div class="flow flow-missing"><span class="flow-arrow">⚠</span><span>Chat sessions → 0 XP (should reward)</span></div>
+          <div class="flow flow-missing"><span class="flow-arrow">⚠</span><span>Passive listening → 0 XP (should reward)</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STUDY COACH -->
+    <div class="module mod-coach">
+      <div class="module-header">
+        <div class="module-icon">🎯</div>
+        <div>
+          <div class="module-title">Study Coach (Tréner)</div>
+          <div class="module-sub">StudyCoach · StudyCoachPage · SegmentIntending</div>
+        </div>
+        <span class="badge badge-missing">Isolated</span>
+      </div>
+      <div class="module-body">
+        <ul class="feature-list">
+          <li class="done">UI panel exists</li>
+          <li class="partial">SegmentIntending — intention-setting module</li>
+          <li class="missing">Does NOT read lesson progress to recommend next lesson</li>
+          <li class="missing">Does NOT read weakest vocab words to suggest drilling</li>
+          <li class="missing">Does NOT read storiesRead to recommend next story</li>
+          <li class="missing">Does NOT analyze time-of-day patterns</li>
+          <li class="missing">No adaptive "what to study now" logic</li>
+        </ul>
+        <div class="flows">
+          <div class="flows-title">Data Flows</div>
+          <div class="flow flow-missing"><span class="flow-arrow">⚠</span><span>reads nothing from Cerebro</span></div>
+          <div class="flow flow-missing"><span class="flow-arrow">⚠</span><span>sends nothing to Cerebro</span></div>
+          <div class="flow flow-missing"><span class="flow-arrow">⚠</span><span>should read: weakVocab, lessonsCompleted, storiesRead</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PASSIVE LISTENING -->
+    <div class="module mod-passive">
+      <div class="module-header">
+        <div class="module-icon">🎧</div>
+        <div>
+          <div class="module-title">Passive Listening (Pasívne)</div>
+          <div class="module-sub">PassivePhase</div>
+        </div>
+        <span class="badge badge-missing">Isolated</span>
+      </div>
+      <div class="module-body">
+        <ul class="feature-list">
+          <li class="done">Audio playback of lesson/story content</li>
+          <li class="missing">Sessions NOT recorded in Cerebro</li>
+          <li class="missing">0 XP awarded for passive listening</li>
+          <li class="missing">NOT connected to streak system</li>
+          <li class="missing">Content NOT adapted to user level</li>
+          <li class="missing">No connection to story audio (MP3 files)</li>
+        </ul>
+        <div class="flows">
+          <div class="flows-title">Data Flows</div>
+          <div class="flow flow-missing"><span class="flow-arrow">⚠</span><span>reads nothing from Cerebro</span></div>
+          <div class="flow flow-missing"><span class="flow-arrow">⚠</span><span>listening session → 0 XP, not stored</span></div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- end modules-grid -->
+</div><!-- end canvas -->
+
+<!-- CONNECTION FLOW TABLE -->
+<div class="connections-section">
+  <h2>📡 All Data Connections — Full Matrix</h2>
+  <table class="connection-table">
+    <thead>
+      <tr>
+        <th>FROM</th>
+        <th>TO</th>
+        <th>DATA PASSED</th>
+        <th>STATUS</th>
+        <th>INTENDED EFFECT</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td class="conn-from">Lesson Exercise</td><td class="conn-to">Cerebro</td><td class="conn-data">completeLesson(id, score, xp)</td><td class="conn-status-done">✅ Working</td><td class="conn-why">XP + streak update, lesson marked done</td></tr>
+      <tr><td class="conn-from">Lesson Exercise</td><td class="conn-to">Cerebro</td><td class="conn-data">markVocabSeen(word)</td><td class="conn-status-done">✅ Working</td><td class="conn-why">New vocab enters SRS queue</td></tr>
+      <tr><td class="conn-from">Weekly Test</td><td class="conn-to">Cerebro</td><td class="conn-data">completeWeeklyTest(week, score)</td><td class="conn-status-done">✅ Working</td><td class="conn-why">Test result stored, week marked</td></tr>
+      <tr><td class="conn-from">Placement Test</td><td class="conn-to">Cerebro</td><td class="conn-data">completePlacementTest(unlockedUpTo)</td><td class="conn-status-done">✅ Working</td><td class="conn-why">Lessons unlocked based on level</td></tr>
+      <tr><td class="conn-from">Story Reader</td><td class="conn-to">Cerebro</td><td class="conn-data">completeStory(id, title, score, words)</td><td class="conn-status-done">✅ Working</td><td class="conn-why">XP + readingVocab + storiesRead updated</td></tr>
+      <tr><td class="conn-from">Story Reader</td><td class="conn-to">Cerebro</td><td class="conn-data">markVocabSeen(word) on save</td><td class="conn-status-done">✅ Working</td><td class="conn-why">Saved words enter SRS for drilling</td></tr>
+      <tr><td class="conn-from">AI Chat</td><td class="conn-to">Cerebro</td><td class="conn-data">saveConversationPhrases(phrases)</td><td class="conn-status-done">✅ Working</td><td class="conn-why">Phrases stored for review</td></tr>
+      <tr><td class="conn-from">AI Chat</td><td class="conn-to">Cerebro</td><td class="conn-data">markVocabSeen(corrected word)</td><td class="conn-status-done">✅ Working</td><td class="conn-why">Grammar mistakes enter SRS</td></tr>
+      <tr><td class="conn-from">VocabTrainer</td><td class="conn-to">Cerebro</td><td class="conn-data">markVocabSeen(word, mastered=true)</td><td class="conn-status-done">✅ Working</td><td class="conn-why">Mastered flag set on correct recall</td></tr>
+      <tr><td class="conn-from">Dashboard</td><td class="conn-to">Cerebro</td><td class="conn-data">reads xp, streak, completedLessons</td><td class="conn-status-partial">⚠ Partial</td><td class="conn-why">Shows some stats, misses story/chat data</td></tr>
+
+      <tr><td class="conn-from">Lesson wrong answers</td><td class="conn-to">VocabTrainer</td><td class="conn-data">priority boost for drilling</td><td class="conn-status-missing">❌ Missing</td><td class="conn-why">Words you got wrong should be drilled first</td></tr>
+      <tr><td class="conn-from">Lesson wrong answers</td><td class="conn-to">GrammarGuide</td><td class="conn-data">highlight weak grammar rules</td><td class="conn-status-missing">❌ Missing</td><td class="conn-why">If you keep failing Dativ, Grammar Guide flags it</td></tr>
+      <tr><td class="conn-from">completedLessons</td><td class="conn-to">StoryBrowser</td><td class="conn-data">unlock story based on lesson progress</td><td class="conn-status-missing">❌ Missing</td><td class="conn-why">Finish Lesson 5 → Story 1 unlocks</td></tr>
+      <tr><td class="conn-from">vocabSeen (weak words)</td><td class="conn-to">StudyCoach</td><td class="conn-data">list of words needing review</td><td class="conn-status-missing">❌ Missing</td><td class="conn-why">Coach says "drill these 5 words today"</td></tr>
+      <tr><td class="conn-from">storiesRead</td><td class="conn-to">StudyCoach</td><td class="conn-data">reading history + scores</td><td class="conn-status-missing">❌ Missing</td><td class="conn-why">Coach recommends next unread story</td></tr>
+      <tr><td class="conn-from">completedLessons</td><td class="conn-to">AIConversation</td><td class="conn-data">known grammar + vocabulary</td><td class="conn-status-missing">❌ Missing</td><td class="conn-why">AI adapts difficulty to what user has learned</td></tr>
+      <tr><td class="conn-from">readingVocab</td><td class="conn-to">VocabTrainer</td><td class="conn-data">source tag (from which story)</td><td class="conn-status-missing">❌ Missing</td><td class="conn-why">VocabTrainer shows "Learned from: Story 1"</td></tr>
+      <tr><td class="conn-from">GrammarCard views</td><td class="conn-to">Cerebro</td><td class="conn-data">grammarViewed[rule] count</td><td class="conn-status-missing">❌ Missing</td><td class="conn-why">Track which grammar rules user is studying</td></tr>
+      <tr><td class="conn-from">PassivePhase</td><td class="conn-to">Cerebro</td><td class="conn-data">listeningSession(duration, content)</td><td class="conn-status-missing">❌ Missing</td><td class="conn-why">Award XP, count toward streak</td></tr>
+      <tr><td class="conn-from">StudyCoach</td><td class="conn-to">Dashboard</td><td class="conn-data">daily recommendation</td><td class="conn-status-missing">❌ Missing</td><td class="conn-why">Dashboard shows "Coach says: review 3 words + read Story 2"</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- GAP ANALYSIS -->
+<div class="gaps-section">
+  <h2>🚨 Priority Gap Analysis — What to Fix</h2>
+  <div class="gap-grid">
+
+    <div class="gap-card">
+      <h3>1. Story Unlock Gate <span class="gap-prio prio-high">HIGH</span></h3>
+      <p>Stories are completely open — no progression. Lesson 1–3 completion should unlock Story 01, Lesson 4–6 unlocks Story 02, etc. Currently a beginner can read the hardest story first with no guidance.</p>
+    </div>
+
+    <div class="gap-card">
+      <h3>2. StudyCoach is Blind <span class="gap-prio prio-high">HIGH</span></h3>
+      <p>The StudyCoach panel reads ZERO data from Cerebro. It can't recommend anything. It should read completedLessons, vocabSeen (sorted by weakest), storiesRead, and dailyXP to generate a "Today's Plan" recommendation.</p>
+    </div>
+
+    <div class="gap-card">
+      <h3>3. Grammar Guide is Dead-End <span class="gap-prio prio-high">HIGH</span></h3>
+      <p>GrammarGuide is a static reference with no connection to the rest of the app. Lesson mistakes should highlight relevant sections. Grammar card clicks in StoryReader should be tracked in Cerebro.</p>
+    </div>
+
+    <div class="gap-card">
+      <h3>4. VocabTrainer Missing Source Tags <span class="gap-prio prio-med">MED</span></h3>
+      <p>User doesn't know WHY a word is in their deck. All words from lessons, stories, and chat look identical. readingVocab already has storyId — VocabTrainer should display it.</p>
+    </div>
+
+    <div class="gap-card">
+      <h3>5. Wrong Answers Not Drilled <span class="gap-prio prio-med">MED</span></h3>
+      <p>Exercises you get wrong are not boosted in SRS priority. A word you failed 3 times should surface first in VocabTrainer. Currently all words share equal priority.</p>
+    </div>
+
+    <div class="gap-card">
+      <h3>6. AI Chat Not Level-Aware <span class="gap-prio prio-med">MED</span></h3>
+      <p>The AI system prompt doesn't include the user's completed lessons or current level. It should adapt difficulty, vocabulary, and grammar to what the user has actually learned so far.</p>
+    </div>
+
+    <div class="gap-card">
+      <h3>7. Passive Listening = 0 XP <span class="gap-prio prio-low">LOW</span></h3>
+      <p>PassivePhase rewards nothing. A 20-minute listening session should count toward daily XP and streak. Otherwise users have no incentive to use it.</p>
+    </div>
+
+    <div class="gap-card">
+      <h3>8. Dashboard Missing Story Data <span class="gap-prio prio-low">LOW</span></h3>
+      <p>Dashboard shows lesson stats but ignores storiesRead and readingVocab. A "Recently Read" widget and "Words from Reading" count would complete the picture for the Study Coach view.</p>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>

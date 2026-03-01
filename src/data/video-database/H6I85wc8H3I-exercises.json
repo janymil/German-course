@@ -1,0 +1,300 @@
+{
+  "topics": [
+    {
+      "title": "Sich und andere vorstellen / Über Personen sprechen",
+      "description": "Predstavovanie seba a iných / Rozprávanie o ľuďoch",
+      "exercises": [
+        {
+          "type": "mcq",
+          "question": "Ich ___ klug.",
+          "options": [
+            "bin",
+            "bist",
+            "ist",
+            "sind"
+          ],
+          "answer": 0,
+          "explanation": "Das Verb 'sein' wird mit 'ich' zu 'bin'."
+        },
+        {
+          "type": "fill",
+          "sentence": "Ich ___ mit Lena.",
+          "answer": "wohne",
+          "explanation": "Das Verb 'wohnen' wird mit 'ich' zu 'wohne'."
+        },
+        {
+          "type": "wordorder",
+          "words": [
+            "bist",
+            "du",
+            "wunderschön"
+          ],
+          "correct": "du bist wunderschön",
+          "explanation": "Die korrekte Satzstellung ist Subjekt (du) + Verb (bist) + Adjektiv (wunderschön)."
+        },
+        {
+          "type": "mcq",
+          "question": "Ihr ___ euch.",
+          "options": [
+            "kenne",
+            "kennt",
+            "kennen",
+            "kennt"
+          ],
+          "answer": 1,
+          "explanation": "Das Verb 'kennen' wird mit 'ihr' zu 'kennt'."
+        },
+        {
+          "type": "fill",
+          "sentence": "Wir sind doch ein tolles ___.",
+          "answer": "Paar",
+          "explanation": "Das fehlende Nomen ist 'Paar'."
+        },
+        {
+          "type": "wordorder",
+          "words": [
+            "ist",
+            "Die",
+            "krank"
+          ],
+          "correct": "Die ist krank",
+          "explanation": "Die korrekte Satzstellung ist Subjekt (Die) + Verb (ist) + Adjektiv (krank)."
+        }
+      ]
+    },
+    {
+      "title": "Fragen stellen",
+      "description": "Kladenie otázok",
+      "exercises": [
+        {
+          "type": "mcq",
+          "question": "___ machst du da?",
+          "options": [
+            "Wer",
+            "Wo",
+            "Was",
+            "Wie"
+          ],
+          "answer": 2,
+          "explanation": "Für eine Frage nach einer Tätigkeit verwendet man 'Was'."
+        },
+        {
+          "type": "fill",
+          "sentence": "Was ___ du denn hier?",
+          "answer": "machst",
+          "explanation": "Das Verb 'machen' wird mit 'du' zu 'machst'."
+        },
+        {
+          "type": "wordorder",
+          "words": [
+            "das",
+            "soll",
+            "Was"
+          ],
+          "correct": "Was soll das",
+          "explanation": "Die korrekte Satzstellung für eine W-Frage ist W-Wort (Was) + Verb (soll) + Subjekt (das)."
+        },
+        {
+          "type": "fill",
+          "sentence": "___ du?",
+          "answer": "Fragst",
+          "explanation": "Das Verb 'fragen' wird mit 'du' zu 'fragst'."
+        }
+      ]
+    },
+    {
+      "title": "Meinungen und Gefühle ausdrücken",
+      "description": "Vyjadrovanie názorov a pocitov",
+      "exercises": [
+        {
+          "type": "mcq",
+          "question": "Ich ___ dich total.",
+          "options": [
+            "verstehe",
+            "verstehst",
+            "versteht",
+            "verstehen"
+          ],
+          "answer": 0,
+          "explanation": "Das Verb 'verstehen' wird mit 'ich' zu 'verstehe'."
+        },
+        {
+          "type": "fill",
+          "sentence": "Das ist nicht ___.",
+          "answer": "richtig",
+          "explanation": "Das fehlende Adjektiv ist 'richtig'."
+        },
+        {
+          "type": "wordorder",
+          "words": [
+            "dir",
+            "danke",
+            "Ich"
+          ],
+          "correct": "Ich danke dir",
+          "explanation": "Die korrekte Satzstellung ist Subjekt (Ich) + Verb (danke) + Dativobjekt (dir)."
+        },
+        {
+          "type": "mcq",
+          "question": "Ich ___ es nicht.",
+          "options": [
+            "glaube",
+            "glaubst",
+            "glaubt",
+            "glauben"
+          ],
+          "answer": 0,
+          "explanation": "Das Verb 'glauben' wird mit 'ich' zu 'glaube'."
+        },
+        {
+          "type": "fill",
+          "sentence": "Das ist das ___.",
+          "answer": "Problem",
+          "explanation": "Das fehlende Nomen ist 'Problem'."
+        },
+        {
+          "type": "wordorder",
+          "words": [
+            "schön",
+            "ist",
+            "Das",
+            "doch"
+          ],
+          "correct": "Das ist doch schön",
+          "explanation": "Die korrekte Satzstellung ist Subjekt (Das) + Verb (ist) + Modalpartikel (doch) + Adjektiv (schön)."
+        }
+      ]
+    },
+    {
+      "title": "Alltag und Aktivitäten",
+      "description": "Každodenný život a aktivity",
+      "exercises": [
+        {
+          "type": "mcq",
+          "question": "Ich ___ das Geld.",
+          "options": [
+            "brauche",
+            "brauchst",
+            "braucht",
+            "brauchen"
+          ],
+          "answer": 0,
+          "explanation": "Das Verb 'brauchen' wird mit 'ich' zu 'brauche'."
+        },
+        {
+          "type": "fill",
+          "sentence": "Ich war ___ im Audimax.",
+          "answer": "heute",
+          "explanation": "Das fehlende Adverb der Zeit ist 'heute'."
+        },
+        {
+          "type": "wordorder",
+          "words": [
+            "schlafen",
+            "Sie",
+            "einfach",
+            "Gehen"
+          ],
+          "correct": "Gehen Sie einfach schlafen",
+          "explanation": "Die korrekte Satzstellung für den Imperativ (Sie-Form) ist Verb (Gehen) + Pronomen (Sie) + Adverb (einfach) + Infinitiv (schlafen)."
+        },
+        {
+          "type": "fill",
+          "sentence": "Ich ___.",
+          "answer": "lese",
+          "explanation": "Das Verb 'lesen' wird mit 'ich' zu 'lese'."
+        },
+        {
+          "type": "mcq",
+          "question": "Wir ___ zusammen studiert.",
+          "options": [
+            "haben",
+            "hat",
+            "bist",
+            "sind"
+          ],
+          "answer": 0,
+          "explanation": "Für das Perfekt mit 'studieren' verwendet man das Hilfsverb 'haben'."
+        },
+        {
+          "type": "wordorder",
+          "words": [
+            "reden",
+            "Du",
+            "musst",
+            "mit",
+            "ihm"
+          ],
+          "correct": "Du musst mit ihm reden",
+          "explanation": "Die korrekte Satzstellung ist Subjekt (Du) + Modalverb (musst) + Präpositionalobjekt (mit ihm) + Infinitiv (reden)."
+        }
+      ]
+    },
+    {
+      "title": "Orte und Herkunft",
+      "description": "Miesta a pôvod",
+      "exercises": [
+        {
+          "type": "mcq",
+          "question": "Ich war heute ___ Audimax.",
+          "options": [
+            "auf",
+            "im",
+            "an",
+            "über"
+          ],
+          "answer": 1,
+          "explanation": "Für den Ort 'Audimax' verwendet man die Präposition 'in' mit Dativ, hier 'im' (in dem)."
+        },
+        {
+          "type": "fill",
+          "sentence": "Ich ___ mit Lena.",
+          "answer": "wohne",
+          "explanation": "Das Verb 'wohnen' wird mit 'ich' zu 'wohne'."
+        },
+        {
+          "type": "wordorder",
+          "words": [
+            "im",
+            "Hotel",
+            "alles",
+            "steckt"
+          ],
+          "correct": "alles steckt im Hotel",
+          "explanation": "Die korrekte Satzstellung ist Subjekt (alles) + Verb (steckt) + Präpositionalphrase (im Hotel)."
+        },
+        {
+          "type": "fill",
+          "sentence": "Mama aus ___.",
+          "answer": "Amerika",
+          "explanation": "Das fehlende Land ist 'Amerika'."
+        },
+        {
+          "type": "mcq",
+          "question": "Du wohnst ___ drei Mädchen zusammen.",
+          "options": [
+            "mit",
+            "ohne",
+            "für",
+            "gegen"
+          ],
+          "answer": 0,
+          "explanation": "Für die Begleitung verwendet man die Präposition 'mit'."
+        },
+        {
+          "type": "wordorder",
+          "words": [
+            "Tür",
+            "der",
+            "vor",
+            "Amerika",
+            "aus",
+            "Mama"
+          ],
+          "correct": "Mama aus Amerika vor der Tür",
+          "explanation": "Dies ist ein Satzfragment aus dem Transkript, das die Herkunft und den Ort beschreibt."
+        }
+      ]
+    }
+  ]
+}

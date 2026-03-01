@@ -1,0 +1,34 @@
+{
+  "segments": [
+    {
+      "startTimeMs": 4640,
+      "endTimeMs": 378789,
+      "topicDescription": "Wohnungssuche und Einzug"
+    },
+    {
+      "startTimeMs": 373729,
+      "endTimeMs": 742440,
+      "topicDescription": "Einkaufen und Kochen"
+    },
+    {
+      "startTimeMs": 736620,
+      "endTimeMs": 1131910,
+      "topicDescription": "Arbeit und Krankheit"
+    },
+    {
+      "startTimeMs": 1124540,
+      "endTimeMs": 1490890,
+      "topicDescription": "Treffen und Telefonat"
+    },
+    {
+      "startTimeMs": 1489720,
+      "endTimeMs": 1857090,
+      "topicDescription": "Kleidungswahl"
+    },
+    {
+      "startTimeMs": 1852980,
+      "endTimeMs": 2201169,
+      "topicDescription": "Einzugsparty Nachbarn"
+    }
+  ]
+}

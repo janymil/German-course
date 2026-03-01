@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Flame, Star, BookOpen, Trophy, Zap, Lock, CheckCircle, TrendingUp, Calendar, HelpCircle, MessageSquare, Sparkles, Key, Unlock, FlaskConical, ArrowRight, Target } from 'lucide-react';
+import { Flame, Star, BookOpen, Trophy, Zap, Lock, CheckCircle, TrendingUp, Calendar, HelpCircle, MessageSquare, Sparkles, Key, Unlock, FlaskConical, ArrowRight, Target, RotateCcw } from 'lucide-react';
 import { LESSONS, WEEKLY_PLAN, A2_PREVIEW } from '../data/curriculum';
 
 function XPBar({ xp }) {
@@ -115,16 +115,37 @@ function LessonTooltipPanel({ lesson, rect }) {
   );
 }
 
-export default function Dashboard({ progress, onStartLesson, onNavigate, onOpenAPIKey, onStartPlacementTest }) {
+export default function Dashboard({ progress, onStartLesson, onNavigate, onOpenAPIKey, onStartPlacementTest, onResetLesson, onResetAll }) {
   const { completedLessons = {}, xp = 0, streak = 0 } = progress;
   const completedCount = Object.keys(completedLessons).length;
-  const savedPhrasesCount = (progress.conversationPhrases || []).length;
-  const [hoveredLesson, setHoveredLesson] = useState(null);
-  const [tooltipRect, setTooltipRect] = useState(null);
-
   const totalLessons = LESSONS.length;
   const totalVocab = LESSONS.reduce((s, l) => s + l.vocab.length, 0);
   const masteredVocab = Object.values(progress.vocabSeen || {}).filter((v) => v.mastered).length;
+
+  let partialLessonsProgress = 0;
+  if (progress.lessonStates) {
+    for (const [lessonId, state] of Object.entries(progress.lessonStates)) {
+      if (state && !completedLessons[lessonId]) {
+        const lessonDef = LESSONS.find(l => String(l.id) === String(lessonId));
+        if (lessonDef && lessonDef.exercises?.length) {
+          const completedExercises = state.scores?.length || 0;
+          partialLessonsProgress += Math.min(0.9, completedExercises / lessonDef.exercises.length);
+        }
+      }
+    }
+  }
+  const effectiveCompletedCount = completedCount + partialLessonsProgress;
+  const overallProgressPct = totalLessons > 0 ? Math.min(100, Math.round((effectiveCompletedCount / totalLessons) * 100)) : 0;
+
+  const savedPhrasesCount = (progress.conversationPhrases || []).length;
+  const [hoveredLesson, setHoveredLesson] = useState(null);
+  const [tooltipRect, setTooltipRect] = useState(null);
+  const [confirmResetId, setConfirmResetId] = useState(null);
+  const [confirmResetAll, setConfirmResetAll] = useState(false);
+
+  // [Agent 8] Story stats
+  const storiesReadCount = Object.keys(progress.storiesRead || {}).length;
+  const readingVocabCount = (progress.readingVocab || []).length;
 
   const nextLesson = LESSONS.find((l) => !completedLessons[l.id]);
 
@@ -163,19 +184,20 @@ export default function Dashboard({ progress, onStartLesson, onNavigate, onOpenA
         {/* Main Content Area */}
         <div className="lg:col-span-8 space-y-6">
 
-          {/* Top Stats Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          {/* Top Stats Grid — now 5 cards including story stats [Agent 8] */}
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
             {[
-              { icon: Flame, label: 'Streak', value: `${streak} dní`, color: 'text-orange-500', bg: 'bg-gradient-to-br from-orange-500/10 to-transparent border-orange-500/20 shadow-orange-500/5' },
-              { icon: Star, label: 'Celkové XP', value: xp.toLocaleString(), color: 'text-yellow-400', bg: 'bg-gradient-to-br from-yellow-400/10 to-transparent border-yellow-400/20 shadow-yellow-400/5' },
-              { icon: BookOpen, label: 'Lekcie', value: `${completedCount}/${totalLessons}`, color: 'text-sky-400', bg: 'bg-gradient-to-br from-sky-400/10 to-transparent border-sky-400/20 shadow-sky-400/5' },
-              { icon: Trophy, label: 'Zvládnuté Slová', value: `${masteredVocab}/${totalVocab}`, color: 'text-emerald-400', bg: 'bg-gradient-to-br from-emerald-400/10 to-transparent border-emerald-400/20 shadow-emerald-400/5' },
+              { icon: Flame, label: 'Streak', value: `${streak} dní`, color: 'text-orange-500', bg: 'bg-gradient-to-br from-orange-500/10 to-transparent border-orange-500/20' },
+              { icon: Star, label: 'Celkové XP', value: xp.toLocaleString(), color: 'text-yellow-400', bg: 'bg-gradient-to-br from-yellow-400/10 to-transparent border-yellow-400/20' },
+              { icon: BookOpen, label: 'Lekcie', value: `${completedCount}/${totalLessons}`, color: 'text-sky-400', bg: 'bg-gradient-to-br from-sky-400/10 to-transparent border-sky-400/20' },
+              { icon: Trophy, label: 'Zvládnuté slová', value: `${masteredVocab}/${totalVocab}`, color: 'text-emerald-400', bg: 'bg-gradient-to-br from-emerald-400/10 to-transparent border-emerald-400/20' },
+              { icon: BookOpen, label: 'Čítanie', value: `${storiesReadCount} príbehov · ${readingVocabCount} slóv`, color: 'text-amber-400', bg: 'bg-gradient-to-br from-amber-400/10 to-transparent border-amber-400/20' },
             ].map((s) => (
               <div key={s.label} className={`rounded-3xl border p-5 relative overflow-hidden backdrop-blur-sm ${s.bg} transition-transform hover:-translate-y-1 duration-300`}>
                 <div className={`p-2.5 rounded-2xl bg-gray-900/50 inline-flex mb-3 ${s.color} border border-gray-700/30`}>
                   <s.icon size={22} strokeWidth={2.5} />
                 </div>
-                <p className="text-3xl font-extrabold text-white mb-0.5 tracking-tight">{s.value}</p>
+                <p className="text-2xl font-extrabold text-white mb-0.5 tracking-tight">{s.value}</p>
                 <p className="text-sm font-semibold text-gray-500 uppercase tracking-wider">{s.label}</p>
               </div>
             ))}
@@ -221,10 +243,10 @@ export default function Dashboard({ progress, onStartLesson, onNavigate, onOpenA
               <div className="relative z-10 mt-8 pt-6 border-t border-indigo-500/20">
                 <div className="flex justify-between text-sm font-semibold mb-2">
                   <span className="text-indigo-300">Priebeh kurzu A1</span>
-                  <span className="text-indigo-200">{Math.round((completedCount / totalLessons) * 100)}%</span>
+                  <span className="text-indigo-200">{overallProgressPct}%</span>
                 </div>
                 <div className="h-2.5 bg-gray-900 rounded-full overflow-hidden shadow-inner">
-                  <div className="h-full bg-gradient-to-r from-indigo-500 to-indigo-400 rounded-full" style={{ width: `${(completedCount / totalLessons) * 100}%` }} />
+                  <div className="h-full bg-gradient-to-r from-indigo-500 to-indigo-400 rounded-full" style={{ width: `${overallProgressPct}%` }} />
                 </div>
               </div>
             </div>
@@ -281,9 +303,12 @@ export default function Dashboard({ progress, onStartLesson, onNavigate, onOpenA
                         const locked = !available;
 
                         return (
-                          <button
+                          <div
                             key={lesson.id}
                             onClick={() => !locked && onStartLesson(lesson.id)}
+                            role="button"
+                            tabIndex={locked ? -1 : 0}
+                            onKeyDown={(e) => e.key === 'Enter' && !locked && onStartLesson(lesson.id)}
                             onMouseEnter={(e) => {
                               setHoveredLesson(lesson);
                               setTooltipRect(e.currentTarget.getBoundingClientRect());
@@ -300,9 +325,30 @@ export default function Dashboard({ progress, onStartLesson, onNavigate, onOpenA
                                 {done ? <CheckCircle size={16} /> : locked ? <Lock size={16} /> : <BookOpen size={16} />}
                               </div>
                               {done && score !== undefined && (
-                                <span className={`text-xs font-bold px-2 py-1 rounded-lg ${score >= 80 ? 'bg-emerald-500/10 text-emerald-400' : 'bg-amber-500/10 text-amber-400'}`}>
-                                  {score}%
-                                </span>
+                                <div className="flex items-center gap-1">
+                                  {confirmResetId === lesson.id ? (
+                                    <div className="flex items-center gap-1" onClick={(e) => e.stopPropagation()}>
+                                      <button onClick={(e) => { e.stopPropagation(); onResetLesson?.(lesson.id); setConfirmResetId(null); }} className="text-[10px] text-red-400 hover:text-red-300 font-semibold">Áno</button>
+                                      <span className="text-gray-600 text-[10px]">/</span>
+                                      <button onClick={(e) => { e.stopPropagation(); setConfirmResetId(null); }} className="text-[10px] text-gray-500 hover:text-gray-400">Nie</button>
+                                    </div>
+                                  ) : (
+                                    <>
+                                      <span className={`text-xs font-bold px-2 py-1 rounded-lg ${Math.min(100, score) >= 80 ? 'bg-emerald-500/10 text-emerald-400' : 'bg-amber-500/10 text-amber-400'}`}>
+                                        {Math.min(100, score)}%
+                                      </span>
+                                      {onResetLesson && (
+                                        <button
+                                          onClick={(e) => { e.stopPropagation(); setConfirmResetId(lesson.id); }}
+                                          className="w-5 h-5 rounded flex items-center justify-center text-gray-600 hover:text-red-400 hover:bg-red-900/20 transition-colors"
+                                          title="Resetovať lekciu"
+                                        >
+                                          <RotateCcw size={11} />
+                                        </button>
+                                      )}
+                                    </>
+                                  )}
+                                </div>
                               )}
                               {!done && available && (
                                 <span className="text-xs font-bold px-2 py-1 rounded-lg bg-gray-800 text-gray-400 group-hover:bg-indigo-500/10 group-hover:text-indigo-400 transition-colors">
@@ -317,7 +363,7 @@ export default function Dashboard({ progress, onStartLesson, onNavigate, onOpenA
                             <p className={`text-xs font-medium truncate w-full ${done ? 'text-emerald-400/70' : locked ? 'text-gray-600' : 'text-gray-400 gap-hover:text-gray-300'}`}>
                               {lesson.topic}
                             </p>
-                          </button>
+                          </div>
                         );
                       })}
                     </div>
@@ -505,6 +551,27 @@ export default function Dashboard({ progress, onStartLesson, onNavigate, onOpenA
 
         </div>
       </div>
+
+      {/* Reset All Progress */}
+      {onResetAll && (
+        <div className="mt-6 flex justify-center pb-4">
+          {confirmResetAll ? (
+            <div className="flex items-center gap-3 text-sm">
+              <span className="text-gray-400">Naozaj resetovať <strong className="text-red-400">všetok postup</strong>?</span>
+              <button onClick={() => { onResetAll(); setConfirmResetAll(false); }} className="text-red-400 hover:text-red-300 font-semibold underline underline-offset-2">Áno, vymazať</button>
+              <button onClick={() => setConfirmResetAll(false)} className="text-gray-500 hover:text-gray-400">Zrušiť</button>
+            </div>
+          ) : (
+            <button
+              onClick={() => setConfirmResetAll(true)}
+              className="text-xs text-gray-700 hover:text-red-500 transition-colors flex items-center gap-1.5"
+            >
+              <RotateCcw size={11} />
+              Resetovať všetok postup
+            </button>
+          )}
+        </div>
+      )}
 
       {hoveredLesson && tooltipRect && (
         <LessonTooltipPanel lesson={hoveredLesson} rect={tooltipRect} />

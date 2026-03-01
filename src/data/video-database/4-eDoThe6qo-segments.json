@@ -1,0 +1,109 @@
+{
+  "segments": [
+    {
+      "startTimeMs": 10360,
+      "endTimeMs": 312440,
+      "topicDescription": "Begrüßung und Vorstellung"
+    },
+    {
+      "startTimeMs": 312760,
+      "endTimeMs": 622280,
+      "topicDescription": "Tasche verloren"
+    },
+    {
+      "startTimeMs": 622600,
+      "endTimeMs": 927120,
+      "topicDescription": "Tasche verloren"
+    },
+    {
+      "startTimeMs": 928040,
+      "endTimeMs": 1231640,
+      "topicDescription": "Problem und Hilfe"
+    },
+    {
+      "startTimeMs": 1231760,
+      "endTimeMs": 1546760,
+      "topicDescription": "Abschiedsparty und Reise"
+    },
+    {
+      "startTimeMs": 1546880,
+      "endTimeMs": 1857000,
+      "topicDescription": "Sprachunterricht und Freunde"
+    },
+    {
+      "startTimeMs": 1858680,
+      "endTimeMs": 2164400,
+      "topicDescription": "Wohnungssuche und Umzug"
+    },
+    {
+      "startTimeMs": 2165120,
+      "endTimeMs": 2468040,
+      "topicDescription": "Zimmerbesichtigung und Entscheidung"
+    },
+    {
+      "startTimeMs": 2468360,
+      "endTimeMs": 2772160,
+      "topicDescription": "Tagesablauf und Ferien"
+    },
+    {
+      "startTimeMs": 2772960,
+      "endTimeMs": 3074920,
+      "topicDescription": "Gespräche und Verabredungen"
+    },
+    {
+      "startTimeMs": 3075040,
+      "endTimeMs": 3380960,
+      "topicDescription": "Berufe und Restaurant"
+    },
+    {
+      "startTimeMs": 3382040,
+      "endTimeMs": 3690400,
+      "topicDescription": "Geschenke und Einkaufen"
+    },
+    {
+      "startTimeMs": 3691640,
+      "endTimeMs": 3994040,
+      "topicDescription": "Besuch und Frühstück"
+    },
+    {
+      "startTimeMs": 3994760,
+      "endTimeMs": 4297000,
+      "topicDescription": "Einkaufen und Essen"
+    },
+    {
+      "startTimeMs": 4297840,
+      "endTimeMs": 4600680,
+      "topicDescription": "Einkaufen und Kochen"
+    },
+    {
+      "startTimeMs": 4601520,
+      "endTimeMs": 4904320,
+      "topicDescription": "Tasche gefunden"
+    },
+    {
+      "startTimeMs": 4904480,
+      "endTimeMs": 5207280,
+      "topicDescription": "Kleidung kaufen"
+    },
+    {
+      "startTimeMs": 5207960,
+      "endTimeMs": 5513680,
+      "topicDescription": "Fußballtraining und Vorbereitung"
+    },
+    {
+      "startTimeMs": 5514040,
+      "endTimeMs": 5816960,
+      "topicDescription": "Fußverletzung beim Fußball"
+    },
+    {
+      "startTimeMs": 5817120,
+      "endTimeMs": 6125520,
+      "topicDescription": "Heimweh und neue Heimat"
+    },
+    {
+      "startTimeMs": 6125720,
+      "endTimeMs": 6202000,
+      "topicDescription": "Traum vom Laden"
+    }
+  ]
+}

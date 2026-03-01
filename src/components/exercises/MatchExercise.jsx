@@ -4,6 +4,7 @@
 import React, { useState, useEffect } from 'react';
 import { CheckCircle, RotateCcw } from 'lucide-react';
 import { useTTS } from '../../hooks/useTTS';
+import { getGenderForWord, GENDER_COLORS, GenderLegend } from '../../utils/genderColors';
 
 function shuffle(arr) {
   const a = [...arr];
@@ -76,7 +77,10 @@ export function MatchExercise({ exercise, onComplete }) {
   return (
     <div className="space-y-6">
       <div className="flex items-center justify-between">
+        <div className="flex flex-col gap-1.5">
         <p className="text-sm text-gray-400">{matched.size} / {pairs.length} spárovaných</p>
+        <GenderLegend />
+      </div>
         <div className="flex gap-1">
           {pairs.map((_, i) => (
             <div key={i} className={`w-5 h-1.5 rounded-full ${matched.has(i) ? 'bg-emerald-500' : 'bg-gray-700'}`} />
@@ -101,7 +105,8 @@ export function MatchExercise({ exercise, onComplete }) {
               onClick={() => click('left', item.id)}
               className={`w-full rounded-xl border-2 px-4 py-3 text-sm font-medium transition-all duration-150 text-left ${getStyle('left', item.id)}`}
             >
-              {matched.has(item.id) ? '✓ ' : ''}{item.text}
+              {matched.has(item.id) ? '✓ ' : ''}
+              {(() => { const g = getGenderForWord(item.text); return g ? <span className={GENDER_COLORS[g].text}>{item.text}</span> : item.text; })()}
             </button>
           ))}
         </div>

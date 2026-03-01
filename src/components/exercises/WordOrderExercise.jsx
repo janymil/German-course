@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { CheckCircle, XCircle, ArrowRight, Volume2, RotateCcw, X } from 'lucide-react';
 import { useTTS } from '../../hooks/useTTS';
+import { getGenderForWord, GENDER_COLORS } from '../../utils/genderColors';
 
 export function WordOrderExercise({ exercise, lesson, onComplete }) {
   const { speak, stop, speaking } = useTTS();
@@ -71,6 +72,22 @@ export function WordOrderExercise({ exercise, lesson, onComplete }) {
     setChecked(false);
     setIsCorrect(false);
   }
+
+  // Enter key: check or advance
+  useEffect(() => {
+    const handleKey = (e) => {
+      if (e.key === 'Enter' && !done) {
+        e.preventDefault();
+        if (checked) {
+          handleNext();
+        } else if (built.length > 0) {
+          handleCheck();
+        }
+      }
+    };
+    document.addEventListener('keydown', handleKey);
+    return () => document.removeEventListener('keydown', handleKey);
+  }, [checked, done, built, current]);
 
   function handleSpeak() {
     if (speaking) {
@@ -219,15 +236,19 @@ export function WordOrderExercise({ exercise, lesson, onComplete }) {
         <div className="flex flex-col gap-2">
           <p className="text-xs text-gray-500 uppercase tracking-wide">Slovná banka</p>
           <div className="flex flex-wrap gap-2">
-            {bank.map(tile => (
+            {bank.map(tile => {
+              const g = getGenderForWord(tile.text);
+              const genderCls = g ? GENDER_COLORS[g].text : 'text-white';
+              return (
               <button
                 key={tile.id}
                 onClick={() => moveToBuilt(tile)}
-                className="px-3 py-1.5 bg-gray-800 hover:bg-gray-700 border border-gray-700 hover:border-gray-500 text-white rounded-lg text-sm font-medium transition-all"
+                className={`px-3 py-1.5 bg-gray-800 hover:bg-gray-700 border border-gray-700 hover:border-gray-500 rounded-lg text-sm font-medium transition-all ${genderCls}`}
               >
                 {tile.text}
               </button>
-            ))}
+              );
+            })}
             {bank.length === 0 && (
               <span className="text-gray-600 text-sm italic">Všetky slová sú umiestnené.</span>
             )}

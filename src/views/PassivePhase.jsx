@@ -1,33 +1,36 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { PHRASE_DAYS } from '../data/phrases';
 import { useTTS } from '../hooks/useTTS';
+import { useProgress } from '../hooks/useProgress';
 import {
   Volume2, ChevronRight, ChevronLeft, CheckCircle, Lock,
-  Headphones, PenLine, Calendar, RotateCcw, Play, Eye
+  Headphones, PenLine, Calendar, RotateCcw, Play, Eye, Info, X
 } from 'lucide-react';
 
 // ── LCS diff ─────────────────────────────────────────────────────────────────
+const norm = (s = '') => s.toLowerCase().replace(/ä/g, 'ae').replace(/ö/g, 'oe').replace(/ü/g, 'ue').replace(/ß/g, 'ss');
+
 function lcs(a, b) {
   const wa = a.split(' '), wb = b.split(' ');
   const m = wa.length, n = wb.length;
   const dp = Array.from({ length: m + 1 }, () => Array(n + 1).fill(0));
   for (let i = 1; i <= m; i++)
     for (let j = 1; j <= n; j++)
-      dp[i][j] = wa[i-1].toLowerCase() === wb[j-1].toLowerCase()
-        ? dp[i-1][j-1] + 1
-        : Math.max(dp[i-1][j], dp[i][j-1]);
+      dp[i][j] = norm(wa[i - 1]) === norm(wb[j - 1])
+        ? dp[i - 1][j - 1] + 1
+        : Math.max(dp[i - 1][j], dp[i][j - 1]);
   // backtrack
   const result = [];
   let i = m, j = n;
   while (i > 0 || j > 0) {
-    if (i > 0 && j > 0 && wa[i-1].toLowerCase() === wb[j-1].toLowerCase()) {
-      result.unshift({ word: wb[j-1], type: 'match' });
+    if (i > 0 && j > 0 && norm(wa[i - 1]) === norm(wb[j - 1])) {
+      result.unshift({ word: wb[j - 1], type: 'match' });
       i--; j--;
-    } else if (j > 0 && (i === 0 || dp[i][j-1] >= dp[i-1][j])) {
-      result.unshift({ word: wb[j-1], type: 'add' });
+    } else if (j > 0 && (i === 0 || dp[i][j - 1] >= dp[i - 1][j])) {
+      result.unshift({ word: wb[j - 1], type: 'add' });
       j--;
     } else {
-      result.unshift({ word: wa[i-1], type: 'remove' });
+      result.unshift({ word: wa[i - 1], type: 'remove' });
       i--;
     }
   }
@@ -43,8 +46,8 @@ function DiffView({ userText, correctText }) {
           key={i}
           className={
             t.type === 'match' ? 'text-white' :
-            t.type === 'add'   ? 'bg-emerald-800/60 text-emerald-300 px-1 rounded' :
-                                 'bg-red-900/60 text-red-300 px-1 rounded line-through'
+              t.type === 'add' ? 'bg-emerald-800/60 text-emerald-300 px-1 rounded' :
+                'bg-red-900/60 text-red-300 px-1 rounded line-through'
           }
         >
           {t.word}
@@ -143,8 +146,8 @@ function Phase2({ day }) {
     if (!input.trim()) return;
     setSubmitted(true);
     speak(current.de);
-    const correct = current.de.toLowerCase().replace(/[.,!?]/g, '').trim();
-    const user = input.toLowerCase().replace(/[.,!?]/g, '').trim();
+    const correct = norm(current.de).replace(/[.,!?]/g, '').trim();
+    const user = norm(input).replace(/[.,!?]/g, '').trim();
     const sim = correct === user ? 100 : Math.max(0, Math.round((1 - (levenshtein(user, correct) / Math.max(user.length, correct.length))) * 100));
     setScores((s) => [...s, sim]);
   };
@@ -240,35 +243,29 @@ function levenshtein(a, b) {
   const dp = Array.from({ length: m + 1 }, (_, i) => Array.from({ length: n + 1 }, (_, j) => (i === 0 ? j : j === 0 ? i : 0)));
   for (let i = 1; i <= m; i++)
     for (let j = 1; j <= n; j++)
-      dp[i][j] = a[i-1] === b[j-1] ? dp[i-1][j-1] : 1 + Math.min(dp[i-1][j], dp[i][j-1], dp[i-1][j-1]);
+      dp[i][j] = a[i - 1] === b[j - 1] ? dp[i - 1][j - 1] : 1 + Math.min(dp[i - 1][j], dp[i][j - 1], dp[i - 1][j - 1]);
   return dp[m][n];
 }
 
 // ── Main view ─────────────────────────────────────────────────────────────────
-const STORAGE_KEY = 'german_passive_progress';
-
-function loadPassive() {
-  try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || { completedDays: [] }; } catch { return { completedDays: [] }; }
-}
-function savePassive(data) {
-  try { localStorage.setItem(STORAGE_KEY, JSON.stringify(data)); } catch {}
-}
 
 export default function PassivePhase() {
   const { speak } = useTTS();
-  const [passiveData, setPassiveData] = useState(loadPassive);
+  const { progress, completePassiveDay } = useProgress();
   const [selectedDay, setSelectedDay] = useState(null);
-  const [activePhase, setActivePhase] = useState(1); // 1 or 2
+  const [activePhase, setActivePhase] = useState(1);
+  const [showInfo, setShowInfo] = useState(false);
 
-  const completedDays = passiveData.completedDays || [];
+  const completedDays = progress?.passiveCompletedDays || [];
   const currentDay = Math.min(completedDays.length + 1, 50);
   const phase2Unlocked = completedDays.length >= 50;
 
   const handleDayComplete = (dayNum) => {
     if (!completedDays.includes(dayNum)) {
-      const updated = { ...passiveData, completedDays: [...completedDays, dayNum] };
-      setPassiveData(updated);
-      savePassive(updated);
+      // [Agent 7] Award XP — estimate ~30 sec per phrase
+      const day = PHRASE_DAYS[dayNum - 1];
+      const minutes = Math.round((day?.phrases?.length || 5) * 0.5);
+      completePassiveDay(dayNum, minutes);
     }
     setSelectedDay(null);
   };
@@ -322,13 +319,51 @@ export default function PassivePhase() {
   return (
     <div className="max-w-2xl mx-auto space-y-6">
       {/* Header */}
-      <div className="flex items-center gap-3">
-        <Headphones size={22} className="text-indigo-400" />
-        <div>
-          <h2 className="text-2xl font-bold text-white">Pasívna fáza</h2>
-          <p className="text-xs text-gray-500 mt-0.5">50 dní počúvaj · potom prekladaj</p>
+      <div className="flex items-start justify-between">
+        <div className="flex items-center gap-3">
+          <Headphones size={22} className="text-indigo-400" />
+          <div>
+            <h2 className="text-2xl font-bold text-white">Pasívna fáza</h2>
+            <p className="text-xs text-gray-500 mt-0.5">50 dní počúvaj · potom prekladaj</p>
+          </div>
         </div>
+        <button onClick={() => setShowInfo(true)} className="px-3 py-1.5 bg-indigo-500/10 hover:bg-indigo-500/20 text-indigo-400 text-xs font-bold rounded-lg transition-colors border border-indigo-500/20 flex items-center gap-2">
+          <Info size={14} /> Ako to funguje?
+        </button>
       </div>
+
+      {/* Onboarding Modal */}
+      {showInfo && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm animate-fade-in">
+          <div className="bg-gray-900 border border-gray-700/50 rounded-2xl w-full max-w-xl shadow-2xl overflow-hidden shadow-indigo-500/10">
+            <div className="p-6">
+              <div className="flex items-start justify-between mb-4">
+                <h3 className="text-2xl font-bold text-white flex items-center gap-2">
+                  <Headphones className="text-indigo-400" size={24} /> Čo je Pasívna fáza?
+                </h3>
+                <button onClick={() => setShowInfo(false)} className="text-gray-500 hover:text-white transition-colors bg-gray-800 hover:bg-gray-700 p-2 rounded-full">
+                  <X size={20} />
+                </button>
+              </div>
+              <div className="space-y-4 text-sm text-gray-300">
+                <p>Tento modul vychádza z metód známych polyglotov a slúži ako <strong className="text-white">receptívny tréning (Hörverstehen)</strong>.</p>
+                <div className="p-4 rounded-xl bg-indigo-950/30 border border-indigo-900/50">
+                  <p className="font-bold text-indigo-300 mb-2">Fáza 1: Iba počúvanie (Dni 1–50)</p>
+                  <p>Prvých 50 dní od teba aplikácia nežiada žiadny výstup. Nemusíš nič písať ani prekladať. Tvojou úlohou je <strong>články iba čítať očami a pozorne počúvať</strong> nemeckého hovorcu. Mozog si tak automaticky zvykne na melódiu jazyka, intonáciu a výslovnosť bez akéhokoľvek stresu.</p>
+                </div>
+                <div className="p-4 rounded-xl bg-emerald-950/30 border border-emerald-900/50">
+                  <p className="font-bold text-emerald-300 mb-2">Fáza 2: Aktívny preklad (Po 50. dni)</p>
+                  <p>Keď získaš "cit pre jazyk", odomkne sa ti Aktívna fáza. V nej už uvidíš iba slovenčinu a tvojou úlohou bude napísať presný nemecký preklad. Aplikácia potom porovná tvoju odpoveď s originálom a detailne ti ukáže chyby.</p>
+                </div>
+                <p className="text-gray-400 italic">Vety sú prispôsobené štandardu Goethe-Zertifikat A1.</p>
+                <button onClick={() => setShowInfo(false)} className="w-full mt-2 py-3 bg-indigo-600 hover:bg-indigo-500 text-white font-bold rounded-xl transition-all">
+                  Rozumiem, poďme na to!
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Progress summary */}
       <div className="card">
@@ -388,8 +423,8 @@ export default function PassivePhase() {
                 className={`aspect-square rounded-xl flex flex-col items-center justify-center text-xs font-bold transition-all
                   ${done ? 'bg-indigo-900/70 border border-indigo-700 text-indigo-200 hover:bg-indigo-800/70' :
                     isNext ? 'bg-indigo-700 border border-indigo-500 text-white ring-2 ring-indigo-400 hover:bg-indigo-600' :
-                    locked ? 'bg-gray-800/40 border border-gray-800 text-gray-700 cursor-default' :
-                    'bg-gray-800/60 border border-gray-700 text-gray-400 hover:bg-gray-700/60'}`}
+                      locked ? 'bg-gray-800/40 border border-gray-800 text-gray-700 cursor-default' :
+                        'bg-gray-800/60 border border-gray-700 text-gray-400 hover:bg-gray-700/60'}`}
               >
                 {done ? <CheckCircle size={14} /> : locked ? <Lock size={11} /> : day.day}
               </button>

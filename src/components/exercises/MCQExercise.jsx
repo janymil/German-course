@@ -1,9 +1,10 @@
 /**
  * MCQExercise — Multiple Choice Questions with instant feedback
  */
-import React, { useState } from 'react';
-import { CheckCircle, XCircle, Volume2 } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { CheckCircle, XCircle, Volume2, Globe } from 'lucide-react';
 import { useTTS } from '../../hooks/useTTS';
+import { GenderText } from '../../utils/genderColors';
 
 export function MCQExercise({ exercise, onComplete }) {
   const questions = exercise.questions;
@@ -11,16 +12,27 @@ export function MCQExercise({ exercise, onComplete }) {
   const [selected, setSelected] = useState(null);
   const [answers, setAnswers] = useState([]);
   const [finished, setFinished] = useState(false);
+  const [showTranslation, setShowTranslation] = useState(false);
   const { speak } = useTTS();
 
   const q = questions[qIndex];
+
+  // Enter key: advance when answer selected
+  useEffect(() => {
+    const handleKey = (e) => {
+      if (e.key === 'Enter' && selected !== null && !finished) {
+        e.preventDefault();
+        next();
+      }
+    };
+    document.addEventListener('keydown', handleKey);
+    return () => document.removeEventListener('keydown', handleKey);
+  }, [selected, finished, qIndex]);
 
   const choose = (optIndex) => {
     if (selected !== null) return;
     setSelected(optIndex);
     const correct = optIndex === q.answer;
-    // Speak the correct answer
-    setTimeout(() => speak(q.options[q.answer]), 300);
   };
 
   const next = () => {
@@ -30,6 +42,7 @@ export function MCQExercise({ exercise, onComplete }) {
     if (qIndex < questions.length - 1) {
       setQIndex(qIndex + 1);
       setSelected(null);
+      setShowTranslation(false);
     } else {
       setFinished(true);
       const score = Math.round((newAnswers.filter(Boolean).length / questions.length) * 100);
@@ -57,17 +70,37 @@ export function MCQExercise({ exercise, onComplete }) {
         <span>Otázka {qIndex + 1} / {questions.length}</span>
         <div className="flex gap-1">
           {questions.map((_, i) => (
-            <div key={i} className={`w-5 h-1.5 rounded-full ${
-              i < qIndex ? (answers[i] ? 'bg-emerald-500' : 'bg-rose-500') :
+            <div key={i} className={`w-5 h-1.5 rounded-full ${i < qIndex ? (answers[i] ? 'bg-emerald-500' : 'bg-rose-500') :
               i === qIndex ? 'bg-indigo-500' : 'bg-gray-700'
-            }`} />
+              }`} />
           ))}
         </div>
       </div>
 
       {/* Question */}
       <div className="bg-gray-800 border border-gray-700 rounded-2xl p-6">
-        <p className="text-xl font-semibold text-white leading-snug">{q.question}</p>
+        {(q.image || exercise.image) && (
+          <img
+            src={q.image || exercise.image}
+            alt="Context"
+            className="w-full h-48 sm:h-64 object-cover rounded-xl mb-4 border border-gray-700"
+          />
+        )}
+        <div className="flex items-start gap-2">
+          <p className="text-xl font-semibold text-white leading-snug flex-1"><GenderText text={q.question} /></p>
+          {q.questionSk && (
+            <button
+              onClick={() => setShowTranslation(s => !s)}
+              className={`shrink-0 p-1.5 rounded-lg transition-colors ${showTranslation ? 'bg-indigo-700 text-indigo-200' : 'bg-gray-700 text-gray-400 hover:bg-gray-600 hover:text-gray-200'}`}
+              title="Preložiť otázku"
+            >
+              <Globe size={16} />
+            </button>
+          )}
+        </div>
+        {showTranslation && q.questionSk && (
+          <p className="text-sm text-gray-400 mt-2 italic border-t border-gray-700 pt-2">🇸🇰 {q.questionSk}</p>
+        )}
       </div>
 
       {/* Options */}
@@ -90,11 +123,11 @@ export function MCQExercise({ exercise, onComplete }) {
               <div className={`w-7 h-7 rounded-full border-2 flex items-center justify-center flex-shrink-0 font-bold text-sm
                 ${selected !== null && isCorrect ? 'border-emerald-500 bg-emerald-900 text-emerald-300' :
                   selected !== null && isSelected ? 'border-rose-500 bg-rose-900 text-rose-300' :
-                  'border-gray-600 text-gray-400'}`}>
+                    'border-gray-600 text-gray-400'}`}>
                 {['A', 'B', 'C', 'D'][i]}
               </div>
               <span className={`font-medium text-sm ${selected !== null && isCorrect ? 'text-emerald-200' : selected !== null && isSelected ? 'text-rose-200' : 'text-gray-200'}`}>
-                {opt}
+                <GenderText text={opt} />
               </span>
               {selected !== null && isCorrect && <CheckCircle size={16} className="text-emerald-400 ml-auto" />}
               {selected !== null && isSelected && !isCorrect && <XCircle size={16} className="text-rose-400 ml-auto" />}

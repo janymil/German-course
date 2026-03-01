@@ -1,0 +1,428 @@
+{
+  "topics": [
+    {
+      "title": "Sich vorstellen und andere vorstellen",
+      "description": "Predstavenie seba a iných, vrátane mena, pôvodu, veku a jazykov.",
+      "exercises": [
+        {
+          "type": "fill",
+          "sentence": "Ich ___ Julia Weber.",
+          "answer": "bin",
+          "explanation": "Používa sa sloveso 'sein' (byť) na predstavenie sa."
+        },
+        {
+          "type": "wordorder",
+          "words": [
+            "bin",
+            "ich",
+            "Spanier"
+          ],
+          "correct": "ich bin Spanier",
+          "explanation": "Správny slovosled pre vyjadrenie národnosti."
+        },
+        {
+          "type": "mcq",
+          "question": "Mein Kind heißt Luis Fernandez Weber und ___ ist fünf Jahre alt.",
+          "options": [
+            "er",
+            "sie",
+            "es",
+            "wir"
+          ],
+          "answer": 0,
+          "explanation": "Pre mužské osoby (Luis) sa používa zámeno 'er'."
+        },
+        {
+          "type": "fill",
+          "sentence": "Seine Muttersprache ist ___.",
+          "answer": "Deutsch",
+          "explanation": "Doplnenie názvu jazyka."
+        }
+      ]
+    },
+    {
+      "title": "Fragen stellen und Informationen geben",
+      "description": "Kladenie otázok (W-Fragen, Ja/Nie otázky) a poskytovanie informácií ako adresa, telefónne číslo a vek.",
+      "exercises": [
+        {
+          "type": "mcq",
+          "question": "___ ist die Adresse?",
+          "options": [
+            "Wer",
+            "Was",
+            "Wo",
+            "Wie"
+          ],
+          "answer": 3,
+          "explanation": "Na otázku o adrese sa používa 'Wie'."
+        },
+        {
+          "type": "fill",
+          "sentence": "Haben Sie noch Plätze ___?",
+          "answer": "frei",
+          "explanation": "Doplnenie prídavného mena 'frei' (voľné)."
+        },
+        {
+          "type": "wordorder",
+          "words": [
+            "Sie",
+            "wie",
+            "schreibt",
+            "das",
+            "man"
+          ],
+          "correct": "wie schreibt man das",
+          "explanation": "Správny slovosled pre otázku 'ako sa to píše'."
+        },
+        {
+          "type": "mcq",
+          "question": "Welche Sprache ___ er?",
+          "options": [
+            "ist",
+            "hat",
+            "spricht",
+            "macht"
+          ],
+          "answer": 2,
+          "explanation": "Pre 'hovoriť jazykom' sa používa sloveso 'sprechen'."
+        }
+      ]
+    },
+    {
+      "title": "Berufe und Arbeit",
+      "description": "Povolania a opis práce, vrátane názvov profesií a pracovných činností.",
+      "exercises": [
+        {
+          "type": "fill",
+          "sentence": "Ist er von Beruf ___?",
+          "answer": "Arzt",
+          "explanation": "Doplnenie názvu povolania 'Arzt' (lekár)."
+        },
+        {
+          "type": "mcq",
+          "question": "Die Arbeit ist wirklich ___.",
+          "options": [
+            "schlecht",
+            "langweilig",
+            "interessant",
+            "traurig"
+          ],
+          "answer": 2,
+          "explanation": "Na opis práce sa používa prídavné meno 'interessant' (zaujímavá)."
+        },
+        {
+          "type": "wordorder",
+          "words": [
+            "ist",
+            "die",
+            "Lehrerin",
+            "Frau",
+            "ich",
+            "glaube"
+          ],
+          "correct": "ich glaube die Frau ist Lehrerin",
+          "explanation": "Správny slovosled pre vyjadrenie domnienky o povolaní."
+        },
+        {
+          "type": "fill",
+          "sentence": "Ich schreibe die Software ___.",
+          "answer": "neu",
+          "explanation": "Doplnenie príslovky 'neu' (nanovo)."
+        }
+      ]
+    },
+    {
+      "title": "Orte und Richtungen",
+      "description": "Opisovanie miest, adries a udávanie smerov.",
+      "exercises": [
+        {
+          "type": "fill",
+          "sentence": "Ich bin vor der ___ wo ich arbeite.",
+          "answer": "Praxis",
+          "explanation": "Doplnenie názvu miesta 'Praxis' (ordinácia/prax)."
+        },
+        {
+          "type": "mcq",
+          "question": "Die Adresse ist ___ 33.",
+          "options": [
+            "Hagenauerstraße",
+            "Hufelandstraße",
+            "Bahnhofstraße",
+            "Schulstraße"
+          ],
+          "answer": 1,
+          "explanation": "Správny názov ulice z transkriptu."
+        },
+        {
+          "type": "wordorder",
+          "words": [
+            "ist",
+            "ganz",
+            "ich",
+            "der",
+            "bin",
+            "Nähe",
+            "in"
+          ],
+          "correct": "ich bin ganz in der Nähe",
+          "explanation": "Správny slovosled pre vyjadrenie 'som celkom blízko'."
+        },
+        {
+          "type": "fill",
+          "sentence": "Das ist zwei Straßen nach ___ und dann die dritte rechts.",
+          "answer": "links",
+          "explanation": "Doplnenie smeru 'links' (vľavo)."
+        }
+      ]
+    },
+    {
+      "title": "Zahlen, Alter und Zeit",
+      "description": "Používanie čísiel, vyjadrenie veku, času a množstva.",
+      "exercises": [
+        {
+          "type": "fill",
+          "sentence": "Er ist ___ Jahre alt.",
+          "answer": "fünf",
+          "explanation": "Doplnenie čísla pre vek."
+        },
+        {
+          "type": "mcq",
+          "question": "In meinem Büro sind ___ Programmierer.",
+          "options": [
+            "26",
+            "36",
+            "46",
+            "56"
+          ],
+          "answer": 2,
+          "explanation": "Správny počet programátorov z transkriptu."
+        },
+        {
+          "type": "wordorder",
+          "words": [
+            "Uhr",
+            "um",
+            "6",
+            "stehst",
+            "du",
+            "morgen"
+          ],
+          "correct": "du stehst morgen um 6 Uhr",
+          "explanation": "Správny slovosled pre vyjadrenie času vstávania."
+        },
+        {
+          "type": "fill",
+          "sentence": "Dann brauchst du nur zehn ___.",
+          "answer": "Minuten",
+          "explanation": "Doplnenie jednotky času 'Minuten' (minúty)."
+        }
+      ]
+    },
+    {
+      "title": "Gefühle und Befinden",
+      "description": "Vyjadrenie pocitov a zdravotného stavu.",
+      "exercises": [
+        {
+          "type": "fill",
+          "sentence": "Das finde ich ___.",
+          "answer": "anstrengend",
+          "explanation": "Doplnenie prídavného mena 'anstrengend' (namáhavé)."
+        },
+        {
+          "type": "mcq",
+          "question": "Geht es dir wieder ___?",
+          "options": [
+            "schlecht",
+            "besser",
+            "müde",
+            "traurig"
+          ],
+          "answer": 1,
+          "explanation": "Na otázku o zlepšení stavu sa používa 'besser' (lepšie)."
+        },
+        {
+          "type": "wordorder",
+          "words": [
+            "noch",
+            "Kopfweh",
+            "hast",
+            "du"
+          ],
+          "correct": "hast du noch Kopfweh",
+          "explanation": "Správny slovosled pre otázku 'máš ešte bolesti hlavy'."
+        },
+        {
+          "type": "fill",
+          "sentence": "Ich brauche etwas ___.",
+          "answer": "Zeit",
+          "explanation": "Doplnenie podstatného mena 'Zeit' (čas)."
+        }
+      ]
+    },
+    {
+      "title": "Tagesablauf und Freizeit",
+      "description": "Opis denného režimu a voľnočasových aktivít.",
+      "exercises": [
+        {
+          "type": "fill",
+          "sentence": "Ich gehe ___.",
+          "answer": "joggen",
+          "explanation": "Doplnenie slovesa 'joggen' (behať)."
+        },
+        {
+          "type": "mcq",
+          "question": "Louis ___ auch noch schön.",
+          "options": [
+            "isst",
+            "spielt",
+            "schläft",
+            "lernt"
+          ],
+          "answer": 2,
+          "explanation": "Pre 'spať' sa používa sloveso 'schlafen'."
+        },
+        {
+          "type": "wordorder",
+          "words": [
+            "hatte",
+            "keine",
+            "Daniel",
+            "Zeit"
+          ],
+          "correct": "Daniel hatte keine Zeit",
+          "explanation": "Správny slovosled pre vyjadrenie 'Daniel nemal čas'."
+        },
+        {
+          "type": "fill",
+          "sentence": "Ich habe gerade ___.",
+          "answer": "Mittagspause",
+          "explanation": "Doplnenie podstatného mena 'Mittagspause' (obedná prestávka)."
+        }
+      ]
+    },
+    {
+      "title": "Wohnen und Umzug",
+      "description": "Téma bývania a sťahovania, vrátane opisu bytu a súvisiacich činností.",
+      "exercises": [
+        {
+          "type": "fill",
+          "sentence": "Ich habe die Wohnung im ___ Stock gemietet.",
+          "answer": "dritten",
+          "explanation": "Doplnenie radovej číslovky 'dritten' (treťom)."
+        },
+        {
+          "type": "mcq",
+          "question": "Wir hatten eine tolle Ferienwohnung mit einer fantastischen ___.",
+          "options": [
+            "Küche",
+            "Aussicht",
+            "Bad",
+            "Garage"
+          ],
+          "answer": 1,
+          "explanation": "Doplnenie podstatného mena 'Aussicht' (výhľad)."
+        },
+        {
+          "type": "wordorder",
+          "words": [
+            "wohnen",
+            "wir",
+            "nun",
+            "hier"
+          ],
+          "correct": "wir wohnen nun hier",
+          "explanation": "Správny slovosled pre vyjadrenie 'teraz tu bývame'."
+        },
+        {
+          "type": "fill",
+          "sentence": "Die Wohnung war wirklich ___ und sie war so preiswert.",
+          "answer": "idyllisch",
+          "explanation": "Doplnenie prídavného mena 'idyllisch' (idylická)."
+        }
+      ]
+    },
+    {
+      "title": "Transport und Wege",
+      "description": "Dopravné prostriedky a spôsoby presunu.",
+      "exercises": [
+        {
+          "type": "fill",
+          "sentence": "Wie kommst du zu ___?",
+          "answer": "Fuß",
+          "explanation": "Doplnenie podstatného mena 'Fuß' (pešo)."
+        },
+        {
+          "type": "mcq",
+          "question": "Ich nehme das ___.",
+          "options": [
+            "Auto",
+            "Bus",
+            "Fahrrad",
+            "Taxi"
+          ],
+          "answer": 2,
+          "explanation": "Doplnenie dopravného prostriedku 'Fahrrad' (bicykel)."
+        },
+        {
+          "type": "wordorder",
+          "words": [
+            "der",
+            "LKW",
+            "war",
+            "so",
+            "bequem"
+          ],
+          "correct": "der LKW war so bequem",
+          "explanation": "Správny slovosled pre opis kamióna."
+        },
+        {
+          "type": "fill",
+          "sentence": "Die Anreise war etwas ___.",
+          "answer": "anstrengend",
+          "explanation": "Doplnenie prídavného mena 'anstrengend' (namáhavá)."
+        }
+      ]
+    },
+    {
+      "title": "Wetter",
+      "description": "Opis počasia a súvisiacich javov.",
+      "exercises": [
+        {
+          "type": "fill",
+          "sentence": "Wir hatten viel ___.",
+          "answer": "Sonnenschein",
+          "explanation": "Doplnenie podstatného mena 'Sonnenschein' (slnečný svit)."
+        },
+        {
+          "type": "mcq",
+          "question": "Hier und da mal eine ___.",
+          "options": [
+            "Sonne",
+            "Wolke",
+            "Regen",
+            "Wind"
+          ],
+          "answer": 1,
+          "explanation": "Doplnenie podstatného mena 'Wolke' (oblak)."
+        },
+        {
+          "type": "wordorder",
+          "words": [
+            "hatten",
+            "keinen",
+            "wir",
+            "Regen"
+          ],
+          "correct": "wir hatten keinen Regen",
+          "explanation": "Správny slovosled pre vyjadrenie 'nemali sme dážď'."
+        },
+        {
+          "type": "fill",
+          "sentence": "Wir hatten angenehme ___.",
+          "answer": "Temperaturen",
+          "explanation": "Doplnenie podstatného mena 'Temperaturen' (teploty)."
+        }
+      ]
+    }
+  ]
+}

@@ -407,22 +407,25 @@
       textSk: 'Jana má nových spolubývajúcich. Thomas pochádza z Nemecka. Laila pochádza z Turecka. Pavel pochádza z Čiech. Sarah pochádza z USA. Jana povie: "Pochádzam zo Slovenska." Thomas sa pýta: "Hovoríš po anglicky?" Jana odpovedá: "Áno, hovorím po anglicky a po nemecky." Všetci sú radi — hovoria spolu po nemecky.',
       questions: [
         {
-          question: 'Odkiaľ pochádza Laila?',
+          question: 'Woher kommt Laila?',
+          questionSk: 'Odkiaľ pochádza Laila?',
           options: ['Aus Deutschland', 'Aus Tschechien', 'Aus der Türkei', 'Aus den USA'],
           answer: 2,
-          explanation: 'V texte: "Laila kommt aus der Türkei."'
+          explanation: 'Im Text: "Laila kommt aus der Türkei."'
         },
         {
-          question: 'Akými jazykmi hovorí Jana?',
+          question: 'Welche Sprachen spricht Jana?',
+          questionSk: 'Akými jazykmi hovorí Jana?',
           options: ['Nur Slowakisch', 'Slowakisch und Französisch', 'Englisch und Deutsch', 'Nur Deutsch'],
           answer: 2,
-          explanation: 'V texte: "ich spreche Englisch und Deutsch."'
+          explanation: 'Im Text: "ich spreche Englisch und Deutsch."'
         },
         {
-          question: 'Ako skontagujú všetci spolubývajúci?',
+          question: 'Wie kommunizieren die Mitbewohner?',
+          questionSk: 'Ako komunikujú spolubývajúci?',
           options: ['Sie sprechen Englisch', 'Sie sprechen Slowakisch', 'Sie sprechen Deutsch zusammen', 'Sie schreiben E-Mails'],
           answer: 2,
-          explanation: 'V texte: "sie sprechen Deutsch zusammen."'
+          explanation: 'Im Text: "sie sprechen Deutsch zusammen."'
         }
       ]
     },

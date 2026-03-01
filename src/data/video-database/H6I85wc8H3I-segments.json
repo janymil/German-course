@@ -1,0 +1,74 @@
+{
+  "segments": [
+    {
+      "startTimeMs": 70,
+      "endTimeMs": 365620,
+      "topicDescription": "Familienplanung"
+    },
+    {
+      "startTimeMs": 361830,
+      "endTimeMs": 727320,
+      "topicDescription": "Schwangerschaft und Familie"
+    },
+    {
+      "startTimeMs": 732060,
+      "endTimeMs": 1096890,
+      "topicDescription": "Arbeit und Rechte"
+    },
+    {
+      "startTimeMs": 1106070,
+      "endTimeMs": 1469130,
+      "topicDescription": "Beziehungsprobleme und Ermittlungen"
+    },
+    {
+      "startTimeMs": 1466789,
+      "endTimeMs": 1832480,
+      "topicDescription": "Altes Seminar"
+    },
+    {
+      "startTimeMs": 1830110,
+      "endTimeMs": 2196269,
+      "topicDescription": "Familienprobleme und Zinseszins"
+    },
+    {
+      "startTimeMs": 2196530,
+      "endTimeMs": 2562390,
+      "topicDescription": "Therapiegespräch"
+    },
+    {
+      "startTimeMs": 2558950,
+      "endTimeMs": 2924170,
+      "topicDescription": "Familienstreitigkeiten und Ankunft"
+    },
+    {
+      "startTimeMs": 2922339,
+      "endTimeMs": 3286260,
+      "topicDescription": "Unfall und Verlust"
+    },
+    {
+      "startTimeMs": 3287320,
+      "endTimeMs": 3656619,
+      "topicDescription": "Konfrontation und Streit"
+    },
+    {
+      "startTimeMs": 3649570,
+      "endTimeMs": 4017320,
+      "topicDescription": "Familienprobleme und Adoption"
+    },
+    {
+      "startTimeMs": 4015580,
+      "endTimeMs": 4383460,
+      "topicDescription": "Persönliche Gespräche"
+    },
+    {
+      "startTimeMs": 4377010,
+      "endTimeMs": 4741360,
+      "topicDescription": "Verhaftung und Geständnis"
+    },
+    {
+      "startTimeMs": 4739890,
+      "endTimeMs": 5068939,
+      "topicDescription": "Familienbeziehung und Liebe"
+    }
+  ]
+}

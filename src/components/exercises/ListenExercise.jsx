@@ -1,10 +1,11 @@
 /**
  * ListenExercise — TTS plays German, user types what they heard
  */
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Volume2, VolumeX, CheckCircle, XCircle, Play } from 'lucide-react';
 import { useTTS } from '../../hooks/useTTS';
 import { normalizeGerman } from '../../utils/text';
+import { GenderText } from '../../utils/genderColors';
 
 export function ListenExercise({ exercise, onComplete }) {
   const questions = exercise.questions;
@@ -24,6 +25,18 @@ export function ListenExercise({ exercise, onComplete }) {
     speak(q.de, 'de-DE', 0.75);
     setPlayed(true);
   };
+
+  // Enter key: advance when checked
+  useEffect(() => {
+    const handleKey = (e) => {
+      if (e.key === 'Enter' && checked && !finished) {
+        e.preventDefault();
+        next();
+      }
+    };
+    document.addEventListener('keydown', handleKey);
+    return () => document.removeEventListener('keydown', handleKey);
+  }, [checked, finished, qIndex, input]);
 
   const check = () => {
     if (!input.trim()) return;
@@ -119,7 +132,7 @@ export function ListenExercise({ exercise, onComplete }) {
           </div>
           {showAnswer && (
             <div className="bg-gray-700/50 border border-gray-600 rounded-xl px-4 py-2 text-sm text-gray-300">
-              Odpoveď: <strong className="text-white">{q.de}</strong> — {q.sk}
+              Odpoveď: <strong className="text-white"><GenderText text={q.de} /></strong> — {q.sk}
             </div>
           )}
         </div>
@@ -134,7 +147,7 @@ export function ListenExercise({ exercise, onComplete }) {
             </div>
             <div className="space-y-1 text-sm">
               <p><span className="text-gray-500">Tvoje:</span> <span className="text-white">{input}</span></p>
-              <p><span className="text-gray-500">Správne:</span> <span className="text-emerald-300 font-medium">{q.de}</span></p>
+              <p><span className="text-gray-500">Správne:</span> <span className="text-emerald-300 font-medium"><GenderText text={q.de} /></span></p>
               <p><span className="text-gray-500">Preklad:</span> <span className="text-gray-400">{q.sk}</span></p>
             </div>
           </div>

@@ -1,10 +1,11 @@
 /**
  * FillExercise — Fill in the blank with hint + TTS reveal
  */
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { CheckCircle, XCircle, Lightbulb, Volume2 } from 'lucide-react';
 import { useTTS } from '../../hooks/useTTS';
 import { normalizeGerman } from '../../utils/text';
+import { GenderText } from '../../utils/genderColors';
 
 export function FillExercise({ exercise, onComplete }) {
   const questions = exercise.questions;
@@ -19,6 +20,18 @@ export function FillExercise({ exercise, onComplete }) {
 
   const q = questions[qIndex];
   const isCorrect = normalizeGerman(input) === normalizeGerman(q.answer);
+
+  // Enter key: advance when checked
+  useEffect(() => {
+    const handleKey = (e) => {
+      if (e.key === 'Enter' && checked && !finished) {
+        e.preventDefault();
+        next();
+      }
+    };
+    document.addEventListener('keydown', handleKey);
+    return () => document.removeEventListener('keydown', handleKey);
+  }, [checked, finished, qIndex, input]);
 
   const check = () => {
     if (!input.trim()) return;
@@ -77,14 +90,14 @@ export function FillExercise({ exercise, onComplete }) {
       {/* Sentence display */}
       <div className="bg-gray-800 border border-gray-700 rounded-2xl p-6 text-center">
         <p className="text-xl font-semibold text-white leading-loose flex flex-wrap items-center justify-center gap-2">
-          <span>{parts[0]}</span>
+          <GenderText text={parts[0]} />
           <span className={`inline-block min-w-24 px-3 py-1 rounded-lg border-b-2 text-center transition-all
             ${checked
               ? (isCorrect ? 'bg-emerald-900/40 border-emerald-500 text-emerald-200' : 'bg-rose-900/40 border-rose-500 text-rose-200')
               : 'bg-gray-700 border-indigo-500 text-white'}`}>
             {checked ? (isCorrect ? input : q.answer) : (input || '___')}
           </span>
-          <span>{parts[1]}</span>
+          <GenderText text={parts[1]} />
         </p>
       </div>
 

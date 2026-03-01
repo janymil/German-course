@@ -1,18 +1,39 @@
 /**
  * FlashcardExercise — flip card to reveal translation + TTS on every card
  */
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Volume2, RotateCcw, ChevronLeft, ChevronRight, CheckCircle } from 'lucide-react';
 import { useTTS } from '../../hooks/useTTS';
+import { GenderWord, GenderText, GenderLegend } from '../../utils/genderColors';
 
-export function FlashcardExercise({ exercise, lesson, onComplete }) {
+export function FlashcardExercise({ exercise, lesson, onComplete, savedState, onProgress }) {
   const vocab = lesson.vocab;
-  const [index, setIndex] = useState(0);
+  const [index, setIndex] = useState(savedState?.index || 0);
   const [flipped, setFlipped] = useState(false);
-  const [done, setDone] = useState(new Set());
+  // Restore the Set properly from an array
+  const [done, setDone] = useState(new Set(savedState?.done || []));
   const { speak, speaking } = useTTS();
 
   const card = vocab[index];
+
+  // Enter key: flip or advance
+  useEffect(() => {
+    const handleKey = (e) => {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        if (!card) return;
+        if (!flipped) {
+          setFlipped(true);
+          speak(card.de);
+        } else {
+          next();
+        }
+      }
+    };
+    document.addEventListener('keydown', handleKey);
+    return () => document.removeEventListener('keydown', handleKey);
+  }, [flipped, index, card]);
+
   if (!card) return null;
 
   const speakWord = (e) => {
@@ -26,10 +47,23 @@ export function FlashcardExercise({ exercise, lesson, onComplete }) {
   };
 
   const next = () => {
-    setDone((d) => new Set([...d, index]));
+    const newDone = new Set([...done, index]);
+    setDone(newDone);
+
+    // Calculate new position
+    const newIndex = index < vocab.length - 1 ? index + 1 : index;
+
     if (index < vocab.length - 1) {
-      setIndex(index + 1);
+      setIndex(newIndex);
       setFlipped(false);
+    }
+
+    // Save mid-deck state upwards to the global lessonState
+    if (onProgress) {
+      onProgress({
+        index: newIndex,
+        done: Array.from(newDone) // Convert Set to Array for JSON storage
+      });
     }
   };
 
@@ -44,9 +78,8 @@ export function FlashcardExercise({ exercise, lesson, onComplete }) {
       {/* Progress dots */}
       <div className="flex gap-1.5 flex-wrap">
         {vocab.map((_, i) => (
-          <div key={i} className={`h-1.5 flex-1 rounded-full min-w-3 transition-all ${
-            i === index ? 'bg-indigo-500' : done.has(i) ? 'bg-emerald-600' : 'bg-gray-700'
-          }`} />
+          <div key={i} className={`h-1.5 flex-1 rounded-full min-w-3 transition-all ${i === index ? 'bg-indigo-500' : done.has(i) ? 'bg-emerald-600' : 'bg-gray-700'
+            }`} />
         ))}
       </div>
 
@@ -62,7 +95,9 @@ export function FlashcardExercise({ exercise, lesson, onComplete }) {
 
         {!flipped ? (
           <>
-            <p className="text-4xl font-bold text-white text-center">{card.de}</p>
+                <p className="text-4xl font-bold text-center">
+                  <GenderWord word={card.de} gender={card.gender} className="text-white" />
+                </p>
             <button
               onClick={speakWord}
               className={`mt-4 p-2.5 rounded-full border transition-all ${speaking ? 'bg-indigo-700 border-indigo-500' : 'bg-gray-700 border-gray-600 hover:bg-gray-600'}`}
@@ -73,10 +108,18 @@ export function FlashcardExercise({ exercise, lesson, onComplete }) {
         ) : (
           <>
             <p className="text-3xl font-bold text-indigo-200 text-center">{card.sk}</p>
-            <p className="text-sm text-gray-400 mt-3 italic text-center">„{card.example}"</p>
+            {card.example && (
+              <p
+                className="text-sm mt-4 italic text-center cursor-pointer hover:text-indigo-300 transition-colors"
+                onClick={(e) => { e.stopPropagation(); speak(card.example); }}
+                title="Vypočuj si príklad"
+              >
+                „<GenderText text={card.example} className="text-gray-400" />“
+              </p>
+            )}
             <button
               onClick={speakWord}
-              className="mt-3 p-2 rounded-full bg-indigo-900 border border-indigo-700 hover:bg-indigo-800"
+              className="mt-4 p-2 rounded-full bg-indigo-900 border border-indigo-700 hover:bg-indigo-800"
             >
               <Volume2 size={16} className="text-indigo-300" />
             </button>
@@ -104,6 +147,7 @@ export function FlashcardExercise({ exercise, lesson, onComplete }) {
         </button>
       )}
 
+      <GenderLegend className="justify-center mt-2" />
       <p className="text-center text-xs text-gray-600">{index + 1} / {vocab.length}</p>
     </div>
   );

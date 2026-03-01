@@ -1,6 +1,7 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Volume2, Eye, CheckCircle, RefreshCw, ArrowRight, Mic } from 'lucide-react';
 import { useTTS } from '../../hooks/useTTS';
+import { GenderText } from '../../utils/genderColors';
 
 export function SpeakingExercise({ exercise, lesson, onComplete }) {
   const { speak, stop, speaking } = useTTS();
@@ -16,6 +17,26 @@ export function SpeakingExercise({ exercise, lesson, onComplete }) {
   const phrase = phrases[currentIndex];
   const total = phrases.length;
   const correctCount = results.filter(Boolean).length;
+
+  // Enter key: reveal → zvládol → continue through flow
+  useEffect(() => {
+    const handleKey = (e) => {
+      if (e.key === 'Enter' && !done) {
+        e.preventDefault();
+        if (!revealed) {
+          setRevealed(true);
+        } else if (!assessed) {
+          // After revealing, Enter = zvládol
+          handleZvladol();
+        } else if (triedRepeat) {
+          // After trying repeat, Enter = continue
+          handleContinue();
+        }
+      }
+    };
+    document.addEventListener('keydown', handleKey);
+    return () => document.removeEventListener('keydown', handleKey);
+  }, [revealed, assessed, triedRepeat, done, currentIndex]);
 
   function handleReveal() {
     setRevealed(true);
@@ -138,7 +159,7 @@ export function SpeakingExercise({ exercise, lesson, onComplete }) {
           <div className="flex flex-col gap-4">
             {/* German phrase display */}
             <div className="bg-gray-800 border border-gray-700 rounded-xl p-4">
-              <p className="text-2xl font-bold text-white leading-snug">{phrase.de}</p>
+              <p className="text-2xl font-bold text-white leading-snug"><GenderText text={phrase.de} /></p>
               {phrase.tip && (
                 <p className="text-xs text-yellow-400 mt-2 italic">💡 {phrase.tip}</p>
               )}

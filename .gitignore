@@ -22,3 +22,13 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Environment variables — never commit
+.env
+.env.local
+
+# Pre-generated audio (large binaries — regenerate with scripts/generate-story-audio.js)
+public/audio/stories/*.mp3
+
+# Personal progress — never commit, lives on your machine
+progress.json

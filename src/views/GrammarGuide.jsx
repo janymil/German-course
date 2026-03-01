@@ -1,28 +1,90 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { LESSONS } from '../data/curriculum';
-import { BookOpen, Volume2, Search, Zap, Lock, CheckCircle, ArrowRight, Bookmark, ArrowLeft, RefreshCw, ChevronRight } from 'lucide-react';
+import { BookOpen, Volume2, Search, Zap, Lock, CheckCircle, ArrowRight, Bookmark, ArrowLeft, RefreshCw, ChevronRight, Printer, Bot, X, Loader2 } from 'lucide-react';
 import { useTTS } from '../hooks/useTTS';
+import { useProgress } from '../hooks/useProgress';
+import { GenderText } from '../utils/genderColors';
 
 import 'regenerator-runtime/runtime';
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
 import { Mic } from 'lucide-react';
 
-function GrammarDrill({ lesson }) {
+function GrammarDrill({ rule, lesson }) {
+  const { progress, saveGrammarAiMemory, clearGrammarAiMemory } = useProgress();
   const [questions, setQuestions] = useState([]);
   const [current, setCurrent] = useState(0);
   const [selected, setSelected] = useState(null);
   const [score, setScore] = useState(0);
   const [done, setDone] = useState(false);
   const [key, setKey] = useState(0);
+  const seenIndicesRef = React.useRef(new Set());
 
   const { transcript, listening, resetTranscript } = useSpeechRecognition();
+  const transcriptRef = React.useRef('');
+  useEffect(() => { transcriptRef.current = transcript; }, [transcript]);
   const [speechResult, setSpeechResult] = useState(null);
 
   useEffect(() => {
+    if (lesson?.isCustom_AI) {
+      if (lesson.exercises?.length) {
+        // Prekonvertujeme AI cvičenia na bezpečný formát (ak prichádzajú surové so starým kľúčom alebo s correct_answer)
+        let qs = lesson.exercises.map((ex, index) => {
+          if (ex.correct_answer && ex.distractors) {
+            const options = [...ex.distractors];
+            const correctPos = Math.floor(Math.random() * (options.length + 1));
+            options.splice(correctPos, 0, ex.correct_answer);
+            return { type: ex.type || 'mcq', question: ex.question, options: options, answer: correctPos, explanation: ex.explanation, originalIndex: index };
+          }
+          return { ...ex, originalIndex: index };
+        });
+
+        // Systém trvalej pamäte pre aktuálneho (zatiaľ lokálneho) používateľa
+        const storageKey = `seen_ai_exercises_${lesson?.id || rule?.id || 'unknown'}`;
+        let savedSeen = progress?.grammarAiSeen?.[storageKey] || [];
+
+        // Zlúčime memory z predchádzajúcich relácií s aktuálnou pamäťou pre istotu
+        const seenSet = new Set([...savedSeen, ...seenIndicesRef.current]);
+
+        // Náhodný výber nevidených cvičení
+        let unseen = qs.filter(ex => !seenSet.has(ex.originalIndex));
+
+        // Ak sme vyčerpali všetky, urobíme "Hard Reset" pamäti daného pravidla
+        if (unseen.length === 0) {
+          seenSet.clear();
+          clearGrammarAiMemory(storageKey);
+          unseen = [...qs];
+        }
+
+        // Náhodne premiešame nevidené cvičenia
+        for (let i = unseen.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [unseen[i], unseen[j]] = [unseen[j], unseen[i]];
+        }
+
+        // Zoberieme maximálne 12 nevidených cvičení
+        const selectedChunk = unseen.slice(0, 12);
+
+        // Uložíme ich do trvalej pamäte, aby po reštarte servera nevyskočili znova
+        selectedChunk.forEach(ex => seenSet.add(ex.originalIndex));
+        seenIndicesRef.current = seenSet;
+        saveGrammarAiMemory(storageKey, [...seenSet]);
+
+        setQuestions(selectedChunk);
+        setCurrent(0);
+        setSelected(null);
+        setScore(0);
+        setDone(false);
+        setSpeechResult(null);
+      }
+      return;
+    }
+
     const qs = [];
-    const mcqEx = lesson.exercises?.find((e) => e.type === 'mcq');
-    const fillEx = lesson.exercises?.find((e) => e.type === 'fill');
-    const speakEx = lesson.exercises?.find((e) => e.type === 'speaking');
+    const sourceExercises = rule?.grammarNote?.exercises || lesson?.exercises || [];
+
+    const mcqEx = sourceExercises.find((e) => e.type === 'mcq');
+    const fillEx = sourceExercises.find((e) => e.type === 'fill');
+    const speakEx = sourceExercises.find((e) => e.type === 'speaking');
 
     if (mcqEx?.questions) {
       mcqEx.questions.slice(0, 3).forEach((q) => {
@@ -61,13 +123,13 @@ function GrammarDrill({ lesson }) {
       [qs[i], qs[j]] = [qs[j], qs[i]];
     }
 
-    setQuestions(qs.slice(0, 5));
+    setQuestions(qs.slice(0, lesson?.isCustom_AI ? 12 : 5));
     setCurrent(0);
     setSelected(null);
     setScore(0);
     setDone(false);
     setSpeechResult(null);
-  }, [lesson.id, key]);
+  }, [lesson?.id, rule?.id, key, lesson?.exercises?.length]);
 
   if (questions.length === 0) {
     return (
@@ -118,15 +180,16 @@ function GrammarDrill({ lesson }) {
 
     // Evaluate pronunciation
     setTimeout(() => {
-      const spoken = transcript.toLowerCase().replace(/[^a-zäöüß]/g, '');
-      const target = q.de.toLowerCase().replace(/[^a-zäöüß]/g, '');
+      const norm = (s = '') => s.toLowerCase().replace(/ä/g, 'ae').replace(/ö/g, 'oe').replace(/ü/g, 'ue').replace(/ß/g, 'ss').replace(/[^a-z0-9]/g, '');
+      const spoken = norm(transcriptRef.current);
+      const target = norm(q.de);
 
       let correctTokens = 0;
       const targetTokens = q.de.toLowerCase().split(/\s+/);
-      const spokenTokens = transcript.toLowerCase().split(/\s+/);
+      const spokenTokens = transcriptRef.current.toLowerCase().split(/\s+/).map(norm);
 
       for (const t of targetTokens) {
-        if (spokenTokens.includes(t.replace(/[^a-zäöüß]/g, ''))) correctTokens++;
+        if (spokenTokens.includes(norm(t))) correctTokens++;
       }
 
       const accuracy = targetTokens.length > 0 ? (correctTokens / targetTokens.length) : 0;
@@ -228,8 +291,8 @@ function GrammarDrill({ lesson }) {
                 onTouchEnd={stopListening}
                 disabled={isAnswered}
                 className={`w-20 h-20 rounded-full flex items-center justify-center transition-all ${listening ? 'bg-red-500 animate-pulse shadow-[0_0_30px_rgba(239,68,68,0.5)]' :
-                    isAnswered ? 'bg-gray-800 text-gray-600' :
-                      'bg-indigo-600 hover:bg-indigo-500 shadow-lg hover:scale-105'
+                  isAnswered ? 'bg-gray-800 text-gray-600' :
+                    'bg-indigo-600 hover:bg-indigo-500 shadow-lg hover:scale-105'
                   } text-white`}
               >
                 <Mic size={32} />
@@ -247,12 +310,36 @@ function GrammarDrill({ lesson }) {
         </div>
       )}
 
+      {/* FEEDBACK A VYSVETLENIE */}
+      {isAnswered && (
+        <div className={`mt-6 p-5 rounded-2xl border flex items-start gap-4 transition-all animate-fade-in ${(selected !== null && selected === q.answer) || speechResult === 'success' ? 'bg-emerald-950/40 border-emerald-800' : 'bg-red-950/40 border-red-800'}`}>
+          <div className="mt-1">
+            {(selected !== null && selected === q.answer) || speechResult === 'success'
+              ? <CheckCircle className="text-emerald-500" size={24} />
+              : <X className="text-red-500" size={24} />}
+          </div>
+          <div className="flex-1">
+            <h4 className={`text-lg font-bold mb-1 ${(selected !== null && selected === q.answer) || speechResult === 'success' ? 'text-emerald-400' : 'text-red-400'}`}>
+              {(selected !== null && selected === q.answer) || speechResult === 'success' ? 'Správne!' : 'Nesprávne!'}
+            </h4>
+            {q.explanation && (
+              <p className="text-gray-300 text-sm leading-relaxed">{q.explanation}</p>
+            )}
+            {!q.explanation && q.type !== 'speech' && selected !== null && selected !== q.answer && q.options && q.options[q.answer] && (
+              <p className="text-gray-300 text-sm leading-relaxed">
+                Správna odpoveď bola: <b>{q.options[q.answer]}</b>.
+              </p>
+            )}
+          </div>
+        </div>
+      )}
+
       <div className={`transition-all duration-300 overflow-hidden ${isAnswered ? 'max-h-24 opacity-100' : 'max-h-0 opacity-0'}`}>
         <button
           onClick={handleNext}
           className="w-full mt-4 py-3.5 bg-gray-800 hover:bg-gray-700 text-white font-bold rounded-xl transition-all border border-gray-700 flex items-center justify-center gap-2"
         >
-          {current + 1 >= questions.length ? 'Zobraziť výsledok' : 'Pokračovať'} <ArrowRight size={18} />
+          {current + 1 >= questions.length ? 'Zobraziť výsledok' : 'Ďalšie cvičenie'} <ArrowRight size={18} />
         </button>
       </div>
     </div>
@@ -263,24 +350,52 @@ export default function GrammarGuide({ progress }) {
   const { speak } = useTTS();
   const [search, setSearch] = useState('');
   const [selectedId, setSelectedId] = useState(null);
+  const [aiExercises, setAiExercises] = useState({});
+  const [isGenerating, setIsGenerating] = useState(false);
+  const [showAIModal, setShowAIModal] = useState(false);
 
   // Compute unlock status using Dashboard identical logic
   const completedLessons = progress?.completedLessons || {};
 
-  const rules = useMemo(() => {
-    return LESSONS.filter(l => l.grammarNote).map((lesson) => {
-      const done = !!completedLessons[lesson.id];
-      const globalIdx = LESSONS.findIndex(l => l.id === lesson.id);
-      const prevLessonDone = globalIdx === 0 || !!completedLessons[LESSONS[globalIdx - 1]?.id];
-      const placementUnlocked = lesson.id <= (progress?.placementUnlockedUpTo || 0);
-      const available = done || prevLessonDone || placementUnlocked;
+  // Fetch AI exercises globally
+  useEffect(() => {
+    fetch(`http://${window.location.hostname}:5173/api/grammarbank`)
+      .then(res => res.json())
+      .then(data => {
+        if (data && typeof data === 'object') {
+          setAiExercises(data);
+        }
+      })
+      .catch(() => { });
+  }, []);
 
-      return {
-        ...lesson,
-        isUnlocked: available || done,
-        isDone: done
-      };
+  const rules = useMemo(() => {
+    const list = [];
+    LESSONS.forEach((lesson) => {
+      let gNotes = lesson.grammarNotes;
+      if (!gNotes && lesson.grammarNote) {
+        // Fallback for older lessons
+        gNotes = [{ ...lesson.grammarNote, id: `L${lesson.id}_G1` }];
+      } else if (!gNotes) return;
+
+      gNotes.forEach((gn) => {
+        const done = !!completedLessons[lesson.id];
+        const globalIdx = LESSONS.findIndex(l => l.id === lesson.id);
+        const prevLessonDone = globalIdx === 0 || !!completedLessons[LESSONS[globalIdx - 1]?.id];
+        const placementUnlocked = lesson.id <= (progress?.placementUnlockedUpTo || 0);
+        const available = done || prevLessonDone || placementUnlocked;
+
+        list.push({
+          ...lesson,
+          id: gn.id || `${lesson.id}_${gn.rule}`, // Use grammar rule specific ID
+          lessonId: lesson.id,
+          grammarNote: gn, // The current rule object
+          isUnlocked: available || done,
+          isDone: done
+        });
+      });
     });
+    return list;
   }, [completedLessons, progress?.placementUnlockedUpTo]);
 
   // Set default selection
@@ -303,6 +418,184 @@ export default function GrammarGuide({ progress }) {
   });
 
   const selectedRule = rules.find((r) => r.id === selectedId);
+  const currentAiItems = aiExercises[selectedId] || [];
+
+  const handleGenerateAI = async () => {
+    if (!selectedRule) return;
+
+    // Attempt .env key first, then fallback to local storage
+    const key = import.meta.env.VITE_GEMINI_API_KEY || localStorage.getItem('gemini_api_key') || '';
+
+    if (!key) {
+      alert("Chýba Gemini kľúč. Nastavte ho v .env súbore ako VITE_GEMINI_API_KEY alebo si ho stiahnite z Google AI Studia.");
+      return;
+    }
+    setIsGenerating(true);
+    const system = `Si elitný nemecký lingvista a didaktik (špecialista na metodiku študentov úrovne A1) v inštitútoch ako Hueber alebo Goethe.
+Vytvoríš PRESNE 12 (ani viac, ani menej) UNIKÁTNYCH cvičení striktne zameraných na toto gramatické pravidlo:
+Pravidlo: "${selectedRule.grammarNote.rule}"
+Vysvetlenie: "${selectedRule.grammarNote.explanation.replace(/<[^>]*>?/gm, '')}"
+
+ABSOLÚTNE KRITICKÉ PRAVIDLÁ PRE MAXIMÁLNU KVALITU:
+1. 100% ČISTÁ NEMČINA: Samotná veta (question), správna odpoveď (correct_answer) aj nesprávne možnosti (distractors) MUSIA byť VYLUČNE v nemeckom jazyku! Je prísne zakázané miešať do nemeckej vety slovenské slová (napr. nikdy nepoužívaj slovenské "Ja" namiesto nemeckého "Ich"). Jediný povolený slovenský text je vo vlastnosti "explanation".
+2. ZABER Z KVALITNEJ A1 ZÁSOBY: Preukáž kreativitu hodnú Goethe Inštitútu! Vytvor 12 rôznorodých viet s rôznym kontextom (jedlo, rodina, práca, vek, cestovanie, vlastnosti). Neopakuj tie isté slová ani tie isté vety dookola.
+3. SÚSTREDENIE NA GRAMATICKÝ JAV: Doplňovačka ("___") a možnosti, z ktorých sa vyberá, sa musia týkať VÝHRADNE javu popísaného v Pravidle a Vysvetlení! Testuj len a presne to, čo dovoľuje pravidlo.
+4. GRAMATICKÁ PRESNOSŤ VET: Správna možnosť ("correct_answer") po dosadení do "___" musí dať gramaticky dokonalú a prirodzenú nemeckú vetu na úrovni A1.
+5. EDUKAČNÉ VYSVETLENIE: Ku každému cvičeniu PRIDAJ parameter "explanation", čo je 1 slovenská veta vysvetľujúca, prečo je táto konkrétna odpoveď správna z hľadiska doplňovaného gramatického javu.
+
+ODPOVEDAJ VÝHRADNE JSON POĽOM (bez textovok okolo) s presne 12 cvičeniami. Je zakázané pridať do odpovede akýkoľvek iný text!
+NEVRACAJ VLASTNOSŤ "answer"! VRACAJ VLASTNOSŤ "correct_answer" ako string a "distractors" ako pole 3 nesprávnych stringov.
+ŠTRUKTÚRA KAŽDÉHO OBJEKTU:
+{
+  "type": "mcq", 
+  "question": "Nemecká veta so slovom ___ uprostred.", 
+  "correct_answer": "SPRÁVNE_NEMECKÉ_SLOVO", 
+  "distractors": ["nesprávne1", "nesprávne2", "nesprávne3"], 
+  "explanation": "Slovenské vysvetlenie..."
+}
+(Typ môže byť "mcq" alebo "fill".)`;
+
+    try {
+      const requestBody = {
+        systemInstruction: { parts: [{ text: system }] },
+        contents: [{ role: "user", parts: [{ text: "Vygeneruj cvičenia podľa tvojich systémových inštrukcií." }] }],
+        generationConfig: {
+          temperature: 0.8,
+          maxOutputTokens: 3000,
+          responseMimeType: "application/json"
+        }
+      };
+
+      const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent?key=${key}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(requestBody)
+      });
+
+      if (!res.ok) {
+        const errText = await res.text();
+        console.error("Gemini API Error:", res.status, errText);
+        alert(`Gemini API Error (${res.status}): ${errText}`);
+        setIsGenerating(false);
+        return;
+      }
+
+      const data = await res.json();
+      const raw = data.candidates[0].content.parts[0].text.trim().replace(/```json|```/g, '');
+      const arr = JSON.parse(raw);
+      if (Array.isArray(arr)) {
+        // Prekonvertujeme AI 'correct_answer' a 'distractors' na bezpečný vnútorný format aplikácie (options + answer_index)
+        const safeExercises = arr.map(ex => {
+          if (ex.correct_answer && ex.distractors) {
+            const options = [...ex.distractors];
+            // Náhodná pozícia pre správnu odpoveď (0 až dĺžka poľa distractors)
+            const correctPos = Math.floor(Math.random() * (options.length + 1));
+            options.splice(correctPos, 0, ex.correct_answer);
+            return {
+              type: ex.type || 'mcq',
+              question: ex.question,
+              options: options,
+              answer: correctPos,
+              explanation: ex.explanation
+            };
+          }
+          return ex; // fallback ak by model predsa vrátil starý formát
+        });
+
+        await fetch(`http://${window.location.hostname}:5173/api/grammarbank`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ ruleId: selectedRule.id, items: safeExercises })
+        });
+        setAiExercises(prev => ({ ...prev, [selectedRule.id]: [...(prev[selectedRule.id] || []), ...safeExercises] }));
+      }
+    } catch (e) {
+      console.error("Try/Catch Error:", e);
+      alert("Nastala chyba pri spojení s Gemini: " + e.message);
+    }
+    setIsGenerating(false);
+  };
+
+  const handleDownloadPDF = () => {
+    if (!selectedRule) return;
+    const title = `Gramatika: ${selectedRule.grammarNote.rule}`;
+    let html = `<html><head><title>${title}</title><meta charset="utf-8">
+      <style>
+         body { font-family: sans-serif; padding: 20px; color: #333; max-width: 800px; margin: 0 auto; line-height: 1.6; }
+         h1 { text-align: center; border-bottom: 2px solid #ccc; padding-bottom: 10px; color: #111; }
+         h2 { text-transform: uppercase; font-size: 14px; color: #555; background: #eee; padding: 5px; margin-top: 30px; }
+         .explanation { font-size: 16px; margin: 20px 0; }
+         .explanation p { margin-bottom: 10px; }
+         .explanation ul { padding-left: 20px; }
+         .explanation li { margin-bottom: 5px; }
+         .exercise-box { border: 1px solid #ccc; padding: 15px; border-radius: 8px; margin-bottom: 15px; page-break-inside: avoid; }
+         .type { font-size: 10px; color: #888; text-transform: uppercase; font-weight: bold; }
+         .question { font-size: 16px; font-weight: bold; margin: 8px 0; }
+         .options { margin: 8px 0; font-size: 14px; }
+         .options div { margin-bottom: 4px; }
+         .btn-print { margin: 20px auto; display: block; padding: 10px 20px; background: #4f46e5; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; }
+         @media print { .no-print { display: none; } body { padding: 0; } }
+      </style></head><body>
+      <div class="no-print" style="text-align:center;">
+          <button class="btn-print" onclick="window.print()">Vytlačiť do PDF</button>
+      </div>
+      <h1>${selectedRule.grammarNote.rule}</h1>
+      <div class="explanation">
+         ${selectedRule.grammarNote.explanation}
+      </div>
+    `;
+
+    if (selectedRule.grammarNote.examples?.length > 0) {
+      html += `<h2>Príklady z praxe</h2>`;
+      selectedRule.grammarNote.examples.forEach(ex => {
+        html += `<p><b>${ex.de}</b><br><span style="color:#666;">${ex.sk}</span></p>`;
+      });
+    }
+
+    const hasAI = currentAiItems.length > 0;
+    html += `<h2>Praktické cvičenia ${hasAI ? '(Umelá inteligencia)' : '(Základné)'}</h2>`;
+
+    if (hasAI) {
+      currentAiItems.forEach((q, i) => {
+        html += `<div class="exercise-box">
+             <div class="type">AI Otázka ${i + 1} | ${q.type === 'mcq' ? 'Vyber správnu možnosť' : 'Doplňovačka'}</div>
+             <div class="question">${q.question.replace('___', '__________')}</div>
+             <div class="options">
+                ${q.options?.map((opt, idx) => `<div>${String.fromCharCode(65 + idx)}) ${opt}</div>`).join('') || ''}
+             </div>
+             <div style="font-size:12px;color:#888;margin-top:10px;">Správna odpoveď: ${String.fromCharCode(65 + q.answer)} (${q.options?.[q.answer] || ''})</div>
+           </div>`;
+      });
+    } else {
+      const sr = selectedRule.grammarNote.exercises || LESSONS.find(l => l.id === selectedRule.lessonId)?.exercises || [];
+      const mcq = sr.find(e => e.type === 'mcq')?.questions || [];
+      const fill = sr.find(e => e.type === 'fill')?.questions || [];
+      const combined = [...mcq, ...fill];
+
+      if (combined.length > 0) {
+        html += `<div style="color: #666; font-style: italic; margin-bottom: 15px;">Vygenerujte si dodatočné cvičenia pomocou AI pre vybudovanie komplexnejšieho pracovného listu! Nateraz ponúkame základné:</div>`;
+        combined.forEach((q, i) => {
+          html += `<div class="exercise-box">
+                     <div class="type">Základná otázka ${i + 1}</div>
+                     <div class="question">${q.question || q.sentence}</div>
+                     <div class="options">
+                         ${q.options ? q.options.map((opt, idx) => `<div>${String.fromCharCode(65 + idx)}) ${opt}</div>`).join('') : ''}
+                     </div>
+                 </div>`;
+        });
+      } else {
+        html += `<p style="color: #666; font-style: italic;">Žiadne dostupné cvičenia. Vygenerujte si cvičenia pomocou AI a následne si ich vytlačte.</p>`;
+      }
+    }
+
+    html += `</body></html>`;
+
+    const newWindow = window.open('', '_blank');
+    if (newWindow) {
+      newWindow.document.write(html);
+      newWindow.document.close();
+    }
+  };
 
   return (
     <div className="w-full max-w-7xl mx-auto flex flex-col h-[calc(100vh-6rem)] relative">
@@ -368,8 +661,8 @@ export default function GrammarGuide({ progress }) {
                     <p className={`text-sm font-bold truncate ${isActive ? 'text-indigo-100' : 'text-gray-200'}`}>
                       {lesson.grammarNote.rule}
                     </p>
-                    <p className={`text-[11px] truncate ${isActive ? 'text-indigo-300/80' : 'text-gray-500'}`}>
-                      Z lekcie {lesson.id}: {lesson.title}
+                    <p className={`text-[11px] font-medium truncate ${isActive ? 'text-indigo-300/80' : 'text-gray-500'}`}>
+                      {lesson.grammarNote.category || 'Gramatika A1'}
                     </p>
                   </div>
                   {isActive && <ChevronRight size={18} className="text-indigo-400 flex-shrink-0" />}
@@ -396,19 +689,27 @@ export default function GrammarGuide({ progress }) {
             <div className="p-6 sm:p-10 pb-20 relative z-10 max-w-4xl mx-auto">
               <div className="mb-8">
                 <div className="flex items-center gap-2 mb-3">
-                  <span className="px-2.5 py-1 bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 rounded-lg text-xs font-bold uppercase tracking-wider">
-                    Pravidlo L{selectedRule.id.toString().padStart(2, '0')}
+                  <span className="px-3 py-1 bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 rounded-lg text-xs font-bold uppercase tracking-wider">
+                    {selectedRule.grammarNote.category || 'Gramatika A1'}
                   </span>
                   {selectedRule.isDone && (
                     <span className="px-2.5 py-1 bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 rounded-lg text-xs font-bold uppercase flex items-center gap-1">
                       <CheckCircle size={12} /> Náučené
                     </span>
                   )}
+                  <button
+                    onClick={handleDownloadPDF}
+                    className="ml-auto flex items-center gap-1.5 px-3 py-1.5 bg-gray-800 hover:bg-gray-700 text-gray-300 rounded-lg text-xs font-bold border border-gray-700 hover:text-white transition-colors shadow-sm"
+                  >
+                    <Printer size={14} /> Tlačiť do PDF
+                  </button>
                 </div>
                 <h1 className="text-3xl sm:text-4xl font-extrabold text-white mb-4 leading-tight">{selectedRule.grammarNote.rule}</h1>
-                <p className="text-base text-gray-300 leading-relaxed max-w-2xl bg-gray-800/40 p-5 rounded-2xl border border-gray-700/50 shadow-inner">
-                  {selectedRule.grammarNote.explanation}
-                </p>
+
+                <div
+                  className="text-base text-gray-300 leading-relaxed max-w-2xl bg-gray-800/40 p-5 rounded-2xl border border-gray-700/50 shadow-inner grammar-rich-text"
+                  dangerouslySetInnerHTML={{ __html: selectedRule.grammarNote.explanation }}
+                />
               </div>
 
               <div className="space-y-10">
@@ -430,7 +731,7 @@ export default function GrammarGuide({ progress }) {
                           <div className="absolute right-3 top-3 w-8 h-8 rounded-full bg-gray-800 group-hover:bg-indigo-500 text-gray-500 group-hover:text-white flex items-center justify-center transition-colors shadow-sm">
                             <Volume2 size={16} />
                           </div>
-                          <p className="text-white font-bold text-base pr-8">{ex.de}</p>
+                          <p className="text-white font-bold text-base pr-8"><GenderText text={ex.de} /></p>
                           <p className="text-gray-400 text-sm">{ex.sk}</p>
                         </button>
                       ))}
@@ -500,6 +801,24 @@ export default function GrammarGuide({ progress }) {
                   </section>
                 )}
 
+                {/* Drill Module */}
+                <section className="pt-6">
+                  <h3 className="text-lg font-bold text-white mb-4 flex items-center gap-2 border-b border-gray-800 pb-2">
+                    <CheckCircle size={20} className="text-emerald-400" />
+                    Bleskové otestovanie tohto pravidla
+                  </h3>
+                  <GrammarDrill rule={selectedRule} lesson={LESSONS.find(l => l.id === selectedRule.lessonId)} />
+                  <div className="mt-4 text-center">
+                    <button
+                      onClick={() => setShowAIModal(true)}
+                      className="w-full flex justify-center items-center gap-2 py-3 bg-purple-900/30 hover:bg-purple-800/40 border border-purple-500/40 text-purple-300 rounded-xl font-bold transition-all shadow-sm"
+                    >
+                      <Bot size={18} className="text-purple-400" />
+                      {currentAiItems.length > 0 ? `Ďalšie cvičenia (AI banka: ${currentAiItems.length})` : 'Vygenerovať cvičenia s AI'}
+                    </button>
+                  </div>
+                </section>
+
                 {/* Key Vocabulary of the lesson */}
                 <section>
                   <h3 className="text-lg font-bold text-white mb-4 flex items-center gap-2 border-b border-gray-800 pb-2">
@@ -524,11 +843,6 @@ export default function GrammarGuide({ progress }) {
                   </div>
                 </section>
 
-                {/* Embedded Quiz */}
-                <section className="pt-6">
-                  <GrammarDrill lesson={selectedRule} />
-                </section>
-
               </div>
             </div>
           ) : (
@@ -540,6 +854,53 @@ export default function GrammarGuide({ progress }) {
           )}
         </div>
       </div>
+
+      {/* AI Modal */}
+      {showAIModal && selectedRule && (
+        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4 z-50 animate-fade-in">
+          <div className="bg-gray-900 border border-gray-700 shadow-2xl rounded-3xl w-full max-w-3xl max-h-[90vh] flex flex-col overflow-hidden">
+            <div className="flex items-center justify-between p-6 border-b border-gray-800 bg-gray-950/50">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-full bg-purple-500/20 flex items-center justify-center border border-purple-500/30">
+                  <Bot className="text-purple-400" size={20} />
+                </div>
+                <div>
+                  <h3 className="text-lg font-bold text-white leading-tight">AI Gramatický Trenér</h3>
+                  <p className="text-xs text-purple-400">Pravidlo: {selectedRule.grammarNote.rule}</p>
+                </div>
+              </div>
+              <button onClick={() => setShowAIModal(false)} className="text-gray-500 hover:text-white transition-colors bg-gray-800 hover:bg-gray-700 p-2 rounded-full">
+                <X size={20} />
+              </button>
+            </div>
+            <div className="p-6 flex-1 overflow-y-auto">
+              {currentAiItems.length === 0 ? (
+                <div className="text-center py-12">
+                  <Bot size={48} className="mx-auto text-purple-900/50 mb-4" />
+                  <h4 className="text-xl font-bold text-white mb-2">Žiadne AI cvičenia</h4>
+                  <p className="text-gray-400 mb-6 max-w-sm mx-auto">Vygenerujte si jedinečné cvičenia ušitú na mieru tomuto pravidlu pomocou nášho AI enginu.</p>
+                  <button onClick={handleGenerateAI} disabled={isGenerating} className="btn-primary inline-flex bg-purple-600 hover:bg-purple-500">
+                    {isGenerating ? <Loader2 size={18} className="animate-spin" /> : <Zap size={18} />}
+                    {isGenerating ? 'Generujem (cca 10s)...' : 'Vygenerovať 12 cvičení'}
+                  </button>
+                </div>
+              ) : (
+                <div className="space-y-6">
+                  <div className="flex items-center justify-between bg-purple-900/20 border border-purple-500/20 p-4 rounded-xl">
+                    <p className="text-sm font-medium text-purple-300">
+                      V banke AI cvičení máte {currentAiItems.length} otázok pre toto pravidlo.
+                    </p>
+                    <button onClick={handleGenerateAI} disabled={isGenerating} className="btn-secondary py-1.5 px-3 text-xs bg-gray-800 border border-gray-700">
+                      <RefreshCw size={14} className={isGenerating ? 'animate-spin' : ''} /> {isGenerating ? 'Pridávam...' : 'Pridať ďalších 12'}
+                    </button>
+                  </div>
+                  <GrammarDrill lesson={{ id: selectedRule.id, isCustom_AI: true, exercises: currentAiItems }} />
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
 
     </div>
   );

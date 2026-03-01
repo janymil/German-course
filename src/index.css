@@ -60,4 +60,16 @@
   .success-box {
     @apply border-l-4 border-emerald-500 bg-emerald-950/40 rounded-r-xl p-5;
   }
+  .grammar-rich-text b, .grammar-rich-text strong {
+    @apply font-bold text-white;
+  }
+  .grammar-rich-text i, .grammar-rich-text em {
+    @apply italic text-indigo-300;
+  }
+  .grammar-rich-text ul {
+    @apply list-disc pl-5 my-3 space-y-1 text-gray-300;
+  }
+  .grammar-rich-text li::marker {
+    @apply text-indigo-500;
+  }
 }
