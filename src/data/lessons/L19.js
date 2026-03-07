@@ -1,523 +1,875 @@
-﻿export const lesson19 = {
+export const lesson19 = {
   id: 19,
   week: 4,
   day: 4,
-  title: "Uhrzeit — Wie viel Uhr ist es?",
-  topic: "Hodiny — koľko je hodín?",
+  title: "Viele Dinge! Der Plural (1)",
+  topic: "Tvorenie množného čísla pri podstatných menách (1. časť)",
   cefr: "A1",
-  xpReward: 25,
-  narrativeContext:
-    "Jana hat ihren ersten wichtigen Termin — Besprechung um 9 Uhr! Sie muss wissen, wie spät es ist. Am Abend: 'Der Zug fährt um halb acht ab — nicht um acht!'",
-  communicativeGoal:
-    "Po tejto lekcii viem povedať a pýtať sa na čas, čítať cestovný poriadok a dohodovať stretnutia.",
-  skillFocus: ["vocabulary", "grammar", "speaking"],
-
-  grammarNote: {
-    rule: "Uhrzeit — dva systémy: officiálny (24h) a hovorový",
-    explanation:
-      "Officiálny/24h: 'Es ist vierzehn Uhr dreißig.' (14:30). Hovorový systém: X:00 = Es ist [X] Uhr. X:15 = Viertel nach [X]. X:30 = halb [X+1] ⚠️ (halb vier = 3:30, NIE 4:30!). X:45 = Viertel vor [X+1]. ⚠️⚠️ HALB: 'halb drei' = na pol ceste k TROM = 2:30! Rovnako ako slovenské 'pol tretej'. Časové príslovky: morgens (ráno), mittags (napoludnie), abends (večer), nachts (v noci).",
-    examples: [
-      { de: "Es ist halb vier. = 3:30", sk: "Je pol štvrtej." },
-      { de: "Es ist Viertel nach drei. = 3:15", sk: "Je štvrť na štyri." },
-      { de: "Es ist Viertel vor vier. = 3:45", sk: "Sú tri štvrte na štyri." },
-      { de: "Es ist vierzehn Uhr dreißig. = 14:30", sk: "Je štrnásť hodín tridsať." },
-    ],
-    slovakContrastNote:
-      "'Pol štvrtej' v slovenčine = 'halb vier' v nemčine — OBA jazyky počítajú k NASLEDUJÚCEJ hodine! Toto je jedna z oblastí, kde logika slovenčiny a nemčiny dokonale súhlasí. 'Um halb' v nemčine = 'o pol' v slovenčine.",
-  },
-
+  xpReward: 20,
+  narrativeContext: "Jana räumt ihren Schreibtisch auf. Sie findet viele Dinge und sortiert sie.",
+  communicativeGoal: "Nach dieser Lektion kann ich einfache Nomen im Plural benennen.",
+  skillFocus: [
+    "vocabulary",
+    "grammar",
+    "speaking",
+    "listening"
+  ],
+  lessonNotes: "V tejto lekcii sa naučíš tvoriť množné číslo podstatných mien. Jana upratuje svoj stôl a nachádza rôzne veci. Spoločne s ňou sa naučíš pomenovať ich v množnom čísle a počítať ich.",
+  grammarNotes: [
+    {
+      rule: "Die Pluralbildung im Deutschen: Einführung",
+      explanation: "<p>Tvorenie množného čísla v nemčine je pomerne nepravidelné a neexistuje jedno univerzálne pravidlo pre všetky podstatné mená. Preto je kľúčové učiť sa každé podstatné meno spolu s jeho určitým členom (der, die, das) a jeho tvarom v množnom čísle (die Pluralform). Napríklad, namiesto učenia sa len \"Tisch\" (stôl), je správne učiť sa \"der Tisch, die Tische\".</p><p>Existuje päť hlavných skupín, podľa ktorých sa tvoria množné čísla, ale aj v rámci týchto skupín sú výnimky. Vždy si zapamätajte, že v množnom čísle je určitý člen vždy <strong>die</strong>, bez ohľadu na rod podstatného mena v jednotnom čísle.</p>",
+      examples: [
+        {
+          de: "der Tisch, die Tische",
+          sk: "stôl, stoly"
+        },
+        {
+          de: "die Lampe, die Lampen",
+          sk: "lampa, lampy"
+        },
+        {
+          de: "das Buch, die Bücher",
+          sk: "kniha, knihy"
+        },
+        {
+          de: "der Lehrer, die Lehrer",
+          sk: "učiteľ, učitelia"
+        },
+        {
+          de: "der Stuhl, die Stühle",
+          sk: "stolička, stoličky"
+        },
+        {
+          de: "die Frau, die Frauen",
+          sk: "žena, ženy"
+        }
+      ],
+      slovakContrastNote: "<p>V slovenčine sa množné číslo tvorí pomerne pravidelne pomocou koncoviek, ktoré závisia od vzoru podstatného mena (napr. stôl – stoly, žena – ženy, kniha – knihy). V nemčine je situácia zložitejšia, pretože sa mení nielen koncovka, ale často aj kmeň slova (napr. pridanie prehlásky – Umlautu) alebo sa množné číslo tvorí bez zmeny koncovky. Preto je nevyhnutné učiť sa množné číslo pre každé podstatné meno individuálne.</p>"
+    },
+    {
+      rule: "Pluralbildung mit -n/-en",
+      explanation: "<p>Jednou z najčastejších a pomerne pravidelných foriem tvorby množného čísla je pridanie koncovky <strong>-n</strong> alebo <strong>-en</strong>. Táto forma sa používa predovšetkým pre:</p><ul><li>Väčšinu ženských podstatných mien (die Nomen), ktoré končia na <strong>-e</strong> (napr. <em>die Lampe</em>).</li><li>Niektoré ženské podstatné mená, ktoré končia na <strong>-el, -er, -in</strong> (pri -in sa zdvojí -n: <em>die Lehrerin -> die Lehrerinnen</em>).</li><li>Niektoré mužské podstatné mená, najmä tie, ktoré končia na <strong>-e</strong> (napr. <em>der Name</em>).</li><li>Všetky podstatné mená, ktoré končia na <strong>-ung, -heit, -keit, -schaft, -tät, -tion, -ik</strong>.</li></ul><p>Pri tejto forme sa nikdy nepoužíva prehláska (Umlaut).</p>",
+      examples: [
+        {
+          de: "die Lampe, die Lampen",
+          sk: "lampa, lampy"
+        },
+        {
+          de: "die Blume, die Blumen",
+          sk: "kvet, kvety"
+        },
+        {
+          de: "die Tasche, die Taschen",
+          sk: "taška, tašky"
+        },
+        {
+          de: "die Frau, die Frauen",
+          sk: "žena, ženy"
+        },
+        {
+          de: "der Name, die Namen",
+          sk: "meno, mená"
+        },
+        {
+          de: "die Studentin, die Studentinnen",
+          sk: "študentka, študentky"
+        },
+        {
+          de: "die Wohnung, die Wohnungen",
+          sk: "byt, byty"
+        },
+        {
+          de: "die Möglichkeit, die Möglichkeiten",
+          sk: "možnosť, možnosti"
+        }
+      ],
+      slovakContrastNote: "<p>V slovenčine sa koncovka -n/-en ako samostatný spôsob tvorby množného čísla nevyskytuje. Hoci niektoré slovenské podstatné mená môžu mať v množnom čísle koncovky podobné (napr. \"ženy\"), ide o súčasť širších skloňovacích vzorov, nie o samostatnú pridanú koncovku k pôvodnému tvaru slova ako v nemčine. Dôležité je si uvedomiť, že v nemčine sa pri tejto forme nikdy nemení samohláska v kmeni slova (nepridáva sa Umlaut).</p>"
+    },
+    {
+      rule: "Pluralbildung mit -e (und Umlaut)",
+      explanation: "<p>Ďalšou veľmi častou formou tvorby množného čísla je pridanie koncovky <strong>-e</strong>. Táto forma sa často spája aj s prehláskou (Umlautom) v kmeni slova, ak je v ňom samohláska <strong>a, o, u</strong>. Ak je v kmeni slova <strong>e, i, ie, ei, eu, au</strong>, prehláska sa netvorí.</p><p>Tento typ množného čísla sa vyskytuje predovšetkým pri:</p><ul><li>Mnohých mužských podstatných menách (napr. <em>der Tisch, der Stuhl</em>).</li><li>Niektorých ženských podstatných menách (menej často, napr. <em>die Stadt</em>).</li><li>Niektorých stredných podstatných menách (napr. <em>das Jahr</em>).</li></ul><p>Je dôležité si zapamätať, ktoré podstatné mená tvoria prehlásku a ktoré nie, pretože to nie je vždy predvídateľné len podľa rodu.</p>",
+      examples: [
+        {
+          de: "der Tisch, die Tische",
+          sk: "stôl, stoly"
+        },
+        {
+          de: "der Stuhl, die Stühle",
+          sk: "stolička, stoličky"
+        },
+        {
+          de: "der Ball, die Bälle",
+          sk: "lopta, lopty"
+        },
+        {
+          de: "der Baum, die Bäume",
+          sk: "strom, stromy"
+        },
+        {
+          de: "das Jahr, die Jahre",
+          sk: "rok, roky"
+        },
+        {
+          de: "die Stadt, die Städte",
+          sk: "mesto, mestá"
+        },
+        {
+          de: "der Tag, die Tage",
+          sk: "deň, dni"
+        },
+        {
+          de: "der Freund, die Freunde",
+          sk: "priateľ, priatelia"
+        }
+      ],
+      slovakContrastNote: "<p>Slovenčina nepozná jav prehlásky (Umlautu), kde sa mení samohláska v kmeni slova (a -> ä, o -> ö, u -> ü). Toto je pre slovenského študenta úplne nový a dôležitý aspekt nemeckej gramatiky, ktorý si vyžaduje pozornosť. V slovenčine sa kmeň slova v množnom čísle zvyčajne nemení, alebo sa mení predvídateľným spôsobom (napr. mäkké/tvrdé spoluhlásky pred koncovkou).</p>"
+    }
+  ],
   vocab: [
     {
-      de: "die Uhr",
-      sk: "hodiny, hodinky",
-      example: "Die Uhr zeigt 8:45.",
-      exampleSk: "Hodiny ukazujú 8:45.",
-      gender: "F",
-      srsId: "L19_V01",
-      recycledFrom: [],
-    },
-    {
-      de: "Wie viel Uhr ist es?",
-      sk: "Koľko je hodín?",
-      example: "Wie viel Uhr ist es?",
-      exampleSk: "Koľko je hodín?",
-      gender: null,
-      srsId: "L19_V02",
-      recycledFrom: [],
-    },
-    {
-      de: "Es ist ... Uhr.",
-      sk: "Je ... hodín.",
-      example: "Es ist drei Uhr.",
-      exampleSk: "Sú tri hodiny.",
-      gender: null,
-      srsId: "L19_V03",
-      recycledFrom: [],
-    },
-    {
-      de: "halb",
-      sk: "pol (k nasledujúcej hodine!)",
-      example: "Es ist halb vier. = 3:30",
-      exampleSk: "Je pol štvrtej.",
-      gender: null,
-      srsId: "L19_V04",
-      recycledFrom: [],
-    },
-    {
-      de: "das Viertel",
-      sk: "štvrť hodiny",
-      example: "Es ist Viertel nach drei.",
-      exampleSk: "Je štvrť na štyri.",
+      de: "das Buch",
+      sk: "kniha",
       gender: "N",
+      srsId: "L19_V01",
+      example: "Das sind Bücher.",
+      exampleSk: "To sú knihy.",
+      recycledFrom: []
+    },
+    {
+      de: "die Akte",
+      sk: "spis",
+      gender: "F",
+      srsId: "L19_V02",
+      example: "Tom bringt die Akten.",
+      exampleSk: "Tom prináša spisy.",
+      recycledFrom: []
+    },
+    {
+      de: "der Karton",
+      sk: "škatuľa",
+      gender: "M",
+      srsId: "L19_V03",
+      example: "Jana sortiert die Sachen in Kartons.",
+      exampleSk: "Jana triedi veci do škatúľ.",
+      recycledFrom: []
+    },
+    {
+      de: "die Sache",
+      sk: "vec",
+      gender: "F",
+      srsId: "L19_V04",
+      example: "Das sind viele Sachen.",
+      exampleSk: "To je veľa vecí.",
+      recycledFrom: []
+    },
+    {
+      de: "der Zettel",
+      sk: "lístok, poznámka",
+      gender: "M",
       srsId: "L19_V05",
-      recycledFrom: [],
+      example: "Ich finde viele Zettel.",
+      exampleSk: "Nachádzam veľa lístkov.",
+      recycledFrom: []
     },
     {
-      de: "nach",
-      sk: "po (časovo)",
-      example: "Viertel nach drei = 3:15",
-      exampleSk: "Štvrť na štyri",
-      gender: null,
+      de: "das Heft",
+      sk: "zošit",
+      gender: "N",
       srsId: "L19_V06",
-      recycledFrom: [],
+      example: "Wir haben drei Hefte.",
+      exampleSk: "Máme tri zošity.",
+      recycledFrom: []
     },
     {
-      de: "vor",
-      sk: "pred (časovo)",
-      example: "Viertel vor vier = 3:45",
-      exampleSk: "Tri štvrte na štyri",
-      gender: null,
+      de: "das Bild",
+      sk: "obrázok",
+      gender: "N",
       srsId: "L19_V07",
-      recycledFrom: [],
+      example: "Sie legt die Bilder in den Karton.",
+      exampleSk: "Ona kladie obrázky do škatule.",
+      recycledFrom: []
     },
     {
-      de: "mittags",
-      sk: "napoludnie, cez obed",
-      example: "Mittags esse ich in der Kantine.",
-      exampleSk: "Na obed jem v kantíne.",
-      gender: null,
+      de: "der Schrank",
+      sk: "skriňa",
+      gender: "M",
       srsId: "L19_V08",
-      recycledFrom: [],
+      example: "Der Schrank ist groß.",
+      exampleSk: "Skriňa je veľká.",
+      recycledFrom: []
     },
     {
-      de: "morgens",
-      sk: "ráno",
-      example: "Morgens trinke ich Kaffee.",
-      exampleSk: "Ráno pijem kávu.",
+      de: "sortieren",
+      sk: "triediť",
       gender: null,
       srsId: "L19_V09",
-      recycledFrom: [],
+      example: "Jana muss die Sachen sortieren.",
+      exampleSk: "Jana musí triediť veci.",
+      recycledFrom: []
     },
     {
-      de: "abends",
-      sk: "večer",
-      example: "Abends lese ich ein Buch.",
-      exampleSk: "Večer čítam knihu.",
+      de: "finden",
+      sk: "nájsť",
       gender: null,
       srsId: "L19_V10",
-      recycledFrom: [],
+      example: "Ich finde die Akten nicht.",
+      exampleSk: "Nenachádzam spisy.",
+      recycledFrom: []
     },
     {
-      de: "nachts",
-      sk: "v noci",
-      example: "Nachts schläft Jana gut.",
-      exampleSk: "V noci Jana dobre spí.",
+      de: "zählen",
+      sk: "počítať",
       gender: null,
       srsId: "L19_V11",
-      recycledFrom: [],
+      example: "Wir zählen die Bücher zusammen.",
+      exampleSk: "Počítame knihy spolu.",
+      recycledFrom: []
     },
     {
-      de: "der Termin",
-      sk: "termín, schôdzka",
-      example: "Ich habe einen Termin um 9 Uhr.",
-      exampleSk: "Mám stretnutie o 9:00.",
-      gender: "M",
+      de: "legen",
+      sk: "položiť (horizontálne)",
+      gender: null,
       srsId: "L19_V12",
-      recycledFrom: [],
+      example: "Legen Sie die Zettel hierher!",
+      exampleSk: "Položte lístky sem!",
+      recycledFrom: []
     },
     {
-      de: "pünktlich",
-      sk: "presne načas",
-      example: "Jana kommt immer pünktlich.",
-      exampleSk: "Jana vždy prichádza načas.",
+      de: "stellen",
+      sk: "postaviť (vertikálne)",
       gender: null,
       srsId: "L19_V13",
-      recycledFrom: [],
+      example: "Stellen Sie den Karton dorthin!",
+      exampleSk: "Postavte škatuľu tam!",
+      recycledFrom: []
     },
     {
-      de: "zu spät",
-      sk: "príliš neskoro",
-      example: "Der Zug ist zu spät!",
-      exampleSk: "Vlak mešká!",
+      de: "dort",
+      sk: "tam",
       gender: null,
       srsId: "L19_V14",
-      recycledFrom: [],
+      example: "Die Bücher sind dort.",
+      exampleSk: "Knihy sú tam.",
+      recycledFrom: []
     },
     {
-      de: "früh",
-      sk: "skoro, zavčas",
-      example: "Jana steht früh auf.",
-      exampleSk: "Jana vstáva zavčasu.",
+      de: "alles",
+      sk: "všetko",
       gender: null,
       srsId: "L19_V15",
-      recycledFrom: [],
+      example: "Ist alles in Ordnung?",
+      exampleSk: "Je všetko v poriadku?",
+      recycledFrom: []
     },
     {
-      de: "der Stundenplan",
-      sk: "rozvrh hodín, plán",
-      example: "Der Stundenplan beginnt um 8 Uhr.",
-      exampleSk: "Rozvrh začína o 8:00.",
-      gender: "M",
+      de: "fertig",
+      sk: "hotový",
+      gender: null,
       srsId: "L19_V16",
-      recycledFrom: [],
+      example: "Bist du fertig?",
+      exampleSk: "Si hotový?",
+      recycledFrom: []
     },
     {
-      de: "die Abfahrt",
-      sk: "odchod (dopravy)",
-      example: "Die Abfahrt ist um 14:32.",
-      exampleSk: "Odchod je o 14:32.",
-      gender: "F",
+      de: "zusammen",
+      sk: "spolu",
+      gender: null,
       srsId: "L19_V17",
-      recycledFrom: [],
+      example: "Wir arbeiten zusammen.",
+      exampleSk: "Pracujeme spolu.",
+      recycledFrom: []
     },
     {
-      de: "die Ankunft",
-      sk: "príchod (dopravy)",
-      example: "Die Ankunft in Bratislava ist um 16:10.",
-      exampleSk: "Príchod do Bratislavy je o 16:10.",
-      gender: "F",
+      de: "noch",
+      sk: "ešte, viac",
+      gender: null,
       srsId: "L19_V18",
-      recycledFrom: [],
-    },
+      example: "Tom bringt noch Akten.",
+      exampleSk: "Tom prináša ešte spisy.",
+      recycledFrom: []
+    }
   ],
-
   exercises: [
     {
       type: "flashcard",
-      instruction:
-        "Prelistuj si slovíčka. HALB = pol k NASLEDUJÚCEJ hodine! halb vier = 3:30!",
-      items: [
-        "die Uhr = hodiny, hodinky",
-        "Wie viel Uhr ist es? = Koľko je hodín?",
-        "Es ist drei Uhr. = Sú tri hodiny.",
-        "halb = pol (k nasledujúcej hodine!) → halb vier = 3:30",
-        "das Viertel = štvrť hodiny",
-        "Viertel nach drei = 3:15",
-        "Viertel vor vier = 3:45",
-        "morgens = ráno",
-        "mittags = napoludnie",
-        "abends = večer",
-        "nachts = v noci",
-        "der Termin = termín, schôdzka",
-        "pünktlich = presne načas",
-        "zu spät = príliš neskoro",
-        "früh = skoro, zavčas",
-        "die Abfahrt = odchod (dopravy)",
-        "die Ankunft = príchod (dopravy)",
-      ],
+      instruction: "Prezri si slovíčka tejto lekcie. Klikni na kartičku pre preklad."
+    },
+    {
+      type: "match",
+      instruction: "Priraď nemecké slová k ich slovenským prekladom.",
+      pairs: [
+        [
+          "das Buch",
+          "kniha"
+        ],
+        [
+          "die Akte",
+          "spis"
+        ],
+        [
+          "der Karton",
+          "škatuľa"
+        ],
+        [
+          "die Sache",
+          "vec"
+        ],
+        [
+          "der Zettel",
+          "lístok, poznámka"
+        ],
+        [
+          "sortieren",
+          "triediť"
+        ],
+        [
+          "finden",
+          "nájsť"
+        ],
+        [
+          "legen",
+          "položiť (horizontálne)"
+        ],
+        [
+          "dort",
+          "tam"
+        ],
+        [
+          "alles",
+          "všetko"
+        ]
+      ]
+    },
+    {
+      type: "wordorder",
+      instruction: "Usporiadaj slová do správneho poradia, aby si vytvoril(a) zmysluplnú vetu.",
+      sentences: [
+        {
+          words: [
+            "Ich",
+            "muss",
+            "die",
+            "Akten",
+            "sortieren"
+          ],
+          correct: "Ich muss die Akten sortieren",
+          hint: "Musím triediť spisy.",
+          explanation: "Modálne sloveso 'muss' stojí na druhom mieste, plnovýznamové sloveso 'sortieren' ide na koniec v neurčitku. 'Akten' je množné číslo od 'die Akte'."
+        },
+        {
+          words: [
+            "Wir",
+            "legen",
+            "die",
+            "Hefte",
+            "zusammen"
+          ],
+          correct: "Wir legen die Hefte zusammen",
+          hint: "Položíme zošity spolu.",
+          explanation: "Sloveso 'legen' je na druhom mieste. 'Hefte' je množné číslo od 'das Heft'."
+        },
+        {
+          words: [
+            "Kannst",
+            "du",
+            "die",
+            "Schränke",
+            "dort",
+            "stellen"
+          ],
+          correct: "Kannst du die Schränke dort stellen",
+          hint: "Môžeš postaviť skrine tam?",
+          explanation: "Modálne sloveso 'Kannst' stojí na prvom mieste v otázke, plnovýznamové sloveso 'stellen' ide na koniec v neurčitku. 'Schränke' je množné číslo od 'der Schrank' s prehláskou a koncovkou -e."
+        },
+        {
+          words: [
+            "Sie",
+            "finden",
+            "noch",
+            "viele",
+            "Sachen"
+          ],
+          correct: "Sie finden noch viele Sachen",
+          hint: "Ešte nájdu veľa vecí.",
+          explanation: "Sloveso 'finden' je na druhom mieste. 'Sachen' je množné číslo od 'die Sache'."
+        },
+        {
+          words: [
+            "Sind",
+            "alle",
+            "Sachen",
+            "fertig"
+          ],
+          correct: "Sind alle Sachen fertig",
+          hint: "Sú všetky veci hotové?",
+          explanation: "Sloveso 'Sind' je na prvom mieste v otázke. 'Sachen' je množné číslo od 'die Sache'."
+        }
+      ]
+    },
+    {
+      type: "fill",
+      instruction: "Doplň správne slovo do vety. Dávaj pozor na množné číslo a správne tvary.",
+      questions: [
+        {
+          sentence: "Ich muss die ___ sortieren.",
+          answer: "Akten",
+          hint: "Musím triediť spisy. (Akte)",
+          explanation: "Množné číslo od 'die Akte' je 'die Akten' (pridáva sa koncovka -n)."
+        },
+        {
+          sentence: "Wo sind meine ___?",
+          answer: "Hefte",
+          hint: "Kde sú moje zošity? (Heft)",
+          explanation: "Množné číslo od 'das Heft' je 'die Hefte' (pridáva sa koncovka -e)."
+        },
+        {
+          sentence: "Wir brauchen neue ___.",
+          answer: "Schränke",
+          hint: "Potrebujeme nové skrine. (Schrank)",
+          explanation: "Množné číslo od 'der Schrank' je 'die Schränke' (pridáva sa koncovka -e a prehláska Umlaut)."
+        },
+        {
+          sentence: "Ich habe ___ Buch.",
+          answer: "ein",
+          hint: "Mám knihu. (neurčitý člen)",
+          explanation: "'Buch' je stredného rodu (das Buch), v akuzatíve jednotného čísla sa neurčitý člen nemení a zostáva 'ein'."
+        },
+        {
+          sentence: "Wo ___ du?",
+          answer: "wohnst",
+          hint: "Kde bývaš? (sloveso 'wohnen')",
+          explanation: "Sloveso 'wohnen' sa pre osobu 'du' časuje ako 'wohnst'."
+        },
+        {
+          sentence: "Was ___ du?",
+          answer: "sprichst",
+          hint: "Čo hovoríš? (sloveso 'sprechen')",
+          explanation: "Sloveso 'sprechen' má pre osobu 'du' zmenu kmeňovej samohlásky z 'e' na 'i', takže je 'sprichst'."
+        },
+        {
+          sentence: "Er braucht ___ Stift.",
+          answer: "einen",
+          hint: "Potrebuje pero. (neurčitý člen)",
+          explanation: "'Stift' je mužského rodu (der Stift), v akuzatíve jednotného čísla sa neurčitý člen mení na 'einen'."
+        }
+      ]
+    },
+    {
+      type: "listen",
+      instruction: "Vypočuj si nemecké slovo alebo frázu a napíš, čo počuješ. Potom si skontroluj slovenský preklad.",
+      questions: [
+        {
+          de: "das Buch",
+          sk: "kniha"
+        },
+        {
+          de: "die Akte",
+          sk: "spis"
+        },
+        {
+          de: "der Zettel",
+          sk: "lístok, poznámka"
+        },
+        {
+          de: "sortieren",
+          sk: "triediť"
+        },
+        {
+          de: "finden",
+          sk: "nájsť"
+        },
+        {
+          de: "die Akten",
+          sk: "spisy"
+        },
+        {
+          de: "die Hefte",
+          sk: "zošity"
+        },
+        {
+          de: "die Schränke",
+          sk: "skrine"
+        },
+        {
+          de: "Ich muss sortieren.",
+          sk: "Musím triediť."
+        },
+        {
+          de: "Legen Sie die Sachen zusammen.",
+          sk: "Položte veci spolu."
+        }
+      ]
     },
     {
       type: "mcq",
       instruction: "Vyber správnu odpoveď.",
       questions: [
         {
-          question: "Čo znamená 'halb neun'?",
-          options: ["9:30", "8:30", "9:00", "8:00"],
-          answer: 1,
-          explanation:
-            "'Halb neun' = na pol ceste k DEVIATEJ = 8:30. Rovnako ako slovenské 'pol deviatej'. HALB + X = (X-1):30. Najčastejšia chyba: myslieť si, že halb neun = 9:30!",
+          question: "Aké je množné číslo od 'die Sache'?",
+          options: [
+            "die Sachen",
+            "die Sache",
+            "die Säche",
+            "die Sachens"
+          ],
+          answer: 0,
+          explanation: "Množné číslo od 'die Sache' je 'die Sachen' (pridáva sa koncovka -n)."
         },
         {
-          question: "Ako povieš '3:15' hovorovým spôsobom?",
+          question: "Vyber správne množné číslo: 'der Schrank'",
           options: [
-            "Viertel vor drei",
-            "Viertel nach drei",
-            "Halb vier",
-            "Drei Uhr fünfzehn",
+            "die Schranke",
+            "die Schränke",
+            "die Schränken",
+            "die Schranken"
           ],
           answer: 1,
-          explanation:
-            "'Viertel nach drei' = štvrť PO troch = 3:15. 'Viertel vor vier' = štvrť PRED štvrtou = 3:45. 'Halb vier' = 3:30.",
+          explanation: "Množné číslo od 'der Schrank' je 'die Schränke' (pridáva sa koncovka -e a prehláska Umlaut)."
         },
         {
-          question: "Jana má stretnutie o 9:45. Ako to povie hovorovým spôsobom?",
+          question: "Ktorá veta je správna?",
           options: [
-            "Halb zehn",
-            "Viertel nach neun",
-            "Viertel vor zehn",
-            "Viertel nach zehn",
+            "Ich muss die Heft sortieren.",
+            "Ich muss die Hefte sortieren.",
+            "Ich muss das Hefte sortieren.",
+            "Ich muss die Heften sortieren."
+          ],
+          answer: 1,
+          explanation: "Množné číslo od 'das Heft' je 'die Hefte'. Určitý člen pre množné číslo je vždy 'die'."
+        },
+        {
+          question: "Čo znamená 'sortieren'?",
+          options: [
+            "nájsť",
+            "počítať",
+            "triediť",
+            "položiť"
           ],
           answer: 2,
-          explanation:
-            "9:45 = štvrť PRED desiatou = Viertel vor zehn. Desať - štvrť hodiny = 9:45.",
+          explanation: "Sloveso 'sortieren' znamená 'triediť'."
         },
         {
-          question: "Vlak odchádza o 14:32. Ako to povieš v officiálnom systéme?",
+          question: "Ktoré slovo znamená 'škatuľa'?",
           options: [
-            "Der Zug fährt um halb drei ab.",
-            "Der Zug fährt um vierzehn Uhr zweiunddreißig ab.",
-            "Der Zug fährt um zwei Uhr zweiunddreißig ab.",
-            "Der Zug fährt um zwölf Uhr ab.",
+            "das Buch",
+            "die Akte",
+            "der Karton",
+            "der Zettel"
           ],
-          answer: 1,
-          explanation:
-            "Officiálny čas/cestovný poriadok: 'vierzehn Uhr zweiunddreißig' = 14:32. Vzor: [hodiny] Uhr [minúty].",
-        },
-        {
-          question: "Čo znamená 'pünktlich'?",
-          options: ["neskoro", "presne načas", "skoro", "príliš neskoro"],
-          answer: 1,
-          explanation:
-            "'Pünktlich' = presne načas, dochvíľny. Opak: 'zu spät' = príliš neskoro.",
-        },
-        {
-          question: "Ako sa pýtaš na čas?",
-          options: [
-            "Wie viele Uhr ist es?",
-            "Wie viel Uhr ist es?",
-            "Wie ist die Uhr?",
-            "Was ist die Zeit?",
-          ],
-          answer: 1,
-          explanation:
-            "'Wie viel Uhr ist es?' = Koľko je hodín? Tiež možné: 'Wie spät ist es?' Pozor: NIE 'Wie viele Uhr' (to nie je správne)!",
-        },
-      ],
-    },
-    {
-      type: "fill",
-      instruction: "Doplň čas správnym výrazom.",
-      questions: [
-        {
-          sentence: "Es ist ___ ___ . (7:30 — hovorovým spôsobom)",
-          answer: "halb acht",
-          hint: "7:30 = halb ___ (nasledujúca hodina je 8)",
-          explanation: "'Halb acht' = 7:30. Nasledujúca hodina = 8 (acht), preto halb acht.",
-        },
-        {
-          sentence: "Es ist ___ ___ vier. (3:15 — hovorovým spôsobom)",
-          answer: "Viertel nach",
-          hint: "3:15 = ___ ___ vier (štvrť PO...)",
-          explanation: "'Viertel nach vier' = 4:15. Alebo: 'Viertel nach drei' = 3:15.",
-        },
-        {
-          sentence: "Der Zug hat ___ ___ . Er kommt erst um 18:00. (mešká = príliš neskoro)",
-          answer: "zu spät",
-          hint: "príliš neskoro = ___ ___",
-          explanation: "'Zu spät' = príliš neskoro. 'Der Zug hat Verspätung' je tiež bežné.",
-        },
-        {
-          sentence: "Jana hat einen ___ um 9 Uhr morgens. (schôdzka/stretnutie)",
-          answer: "Termin",
-          hint: "termín, schôdzka = der T___",
-          explanation: "'Der Termin' = termín, schôdzka, doktor/pracovné stretnutie.",
-        },
-        {
-          sentence: "Die ___ des Zuges ist um 16:10. (príchod)",
-          answer: "Ankunft",
-          hint: "príchod (dopravy) = die A___",
-          explanation: "'Die Ankunft' = príchod. Opak: 'die Abfahrt' = odchod.",
-        },
-        {
-          sentence: "Jana kommt immer ___ — nie zu spät! (načas)",
-          answer: "pünktlich",
-          hint: "presne načas = p___lich",
-          explanation: "'Pünktlich' = dochvíľny, presne načas. Jana je vždy pünktlich!",
-        },
-      ],
-    },
-    {
-      type: "listen",
-      instruction: "Počúvaj a zopakuj. Sústred sa na halb a Viertel.",
-      questions: [
-        { de: "Wie viel Uhr ist es?", sk: "Koľko je hodín?" },
-        { de: "Es ist halb neun. (8:30)", sk: "Je pol deviatej." },
-        { de: "Es ist Viertel nach drei. (3:15)", sk: "Je štvrť na štyri." },
-        { de: "Es ist Viertel vor zehn. (9:45)", sk: "Sú tri štvrte na desať." },
-        { de: "Der Zug fährt um vierzehn Uhr zweiunddreißig ab.", sk: "Vlak odchádza o 14:32." },
-        { de: "Die Ankunft ist um sechzehn Uhr zehn.", sk: "Príchod je o 16:10." },
-        { de: "Jana kommt immer pünktlich.", sk: "Jana prichádza vždy načas." },
-        { de: "Ich habe einen Termin um neun Uhr morgens.", sk: "Mám stretnutie o 9:00 ráno." },
-      ],
-    },
-    {
-      type: "match",
-      instruction: "Spoj čas zapísaný číslicami so správnym nemeckým výrazom.",
-      pairs: [
-        ["3:30", "halb vier"],
-        ["7:15", "Viertel nach sieben"],
-        ["9:45", "Viertel vor zehn"],
-        ["8:30", "halb neun"],
-        ["die Abfahrt", "odchod (dopravy)"],
-        ["die Ankunft", "príchod (dopravy)"],
-        ["pünktlich", "presne načas"],
-        ["morgens", "ráno"],
-      ],
-    },
-    {
-      type: "dialogue",
-      instruction:
-        "Prečítaj si dialóg. Jana calls the office to confirm her appointment and nearly misses the train.",
-      lines: [
-        {
-          speaker: "A",
-          de: "Guten Morgen! Ich habe einen Termin bei Ihnen. Wann genau?",
-          sk: "Dobré ráno! Mám u vás schôdzku. Kedy presne?",
-        },
-        {
-          speaker: "B",
-          de: "Guten Morgen! Ihr Termin ist um halb neun.",
-          sk: "Dobré ráno! Vaša schôdzka je o pol deviatej.",
-        },
-        {
-          speaker: "A",
-          de: "Halb neun... das ist 9:30, richtig?",
-          sk: "Pol deviatej... to je 9:30, že?",
-        },
-        {
-          speaker: "B",
-          de: "Nein! Halb neun ist 8:30 Uhr, nicht 9:30!",
-          sk: "Nie! Pol deviatej je 8:30, nie 9:30!",
-        },
-        {
-          speaker: "A",
-          de: "Oh nein! Es ist jetzt Viertel nach acht! Ich muss sofort kommen!",
-          sk: "Ó nie! Teraz je štvrť na deväť (8:15)! Musím prísť hneď!",
-        },
-        {
-          speaker: "B",
-          de: "Ja, bitte! Wir warten auf Sie.",
-          sk: "Áno, prosím! Čakáme na vás.",
-        },
-        {
-          speaker: "A",
-          de: "Ich nehme die U-Bahn. Wann kommt sie an?",
-          sk: "Vezmem metro. Kedy príde?",
-        },
-        {
-          speaker: "B",
-          de: "Die nächste U-Bahn fährt um zwanzig nach acht ab.",
-          sk: "Najbližšie metro odchádza o dvadsať minút po ôsmej.",
-        },
-        {
-          speaker: "A",
-          de: "Und die Ankunft?",
-          sk: "A príchod?",
-        },
-        {
-          speaker: "B",
-          de: "Die Ankunft ist um fünf vor halb neun — also 8:25 Uhr.",
-          sk: "Príchod je o päť minút pred pol deviatou — teda o 8:25.",
-        },
-        {
-          speaker: "A",
-          de: "Perfekt! Ich bin dann pünktlich!",
-          sk: "Perfektné! Potom prídem načas!",
-        },
-        {
-          speaker: "B",
-          de: "Sehr gut! Bis gleich!",
-          sk: "Veľmi dobre! Čoskoro sa uvidíme!",
-        },
-      ],
-      comprehensionQuestions: [
-        {
-          question: "Wann ist Janas Termin?",
-          options: ["Um 9:30 Uhr.", "Um 8:00 Uhr.", "Um 8:30 Uhr."],
           answer: 2,
+          explanation: "'Der Karton' znamená 'škatuľa'."
         },
         {
-          question: "Was dachte Jana falsch?",
+          question: "Doplň správne slovo: 'Wir legen die Bücher ___.' (spolu)",
           options: [
-            "Sie dachte, halb neun = 8:00.",
-            "Sie dachte, halb neun = 9:30.",
-            "Sie dachte, halb neun = 9:00.",
+            "dort",
+            "noch",
+            "fertig",
+            "zusammen"
           ],
-          answer: 1,
+          answer: 3,
+          explanation: "Slovo 'zusammen' znamená 'spolu'."
         },
         {
-          question: "Womit fährt Jana zur Schôdzka?",
-          options: ["Mit dem Bus.", "Mit der U-Bahn.", "Mit dem Taxi."],
-          answer: 1,
-        },
-      ],
-    },
-    {
-      type: "wordorder",
-      instruction: "Zoraď slová do správnej nemeckej vety.",
-      sentences: [
-        {
-          words: ["Das", "Meeting", "beginnt", "um", "neun", "Uhr."],
-          correct: "Das Meeting beginnt um neun Uhr.",
-          hint: "Porada začína o deviatej.",
-          explanation: "'um' + hodina = o [čase]. Neutrálny čas: neun Uhr = 9:00."
-        },
-        {
-          words: ["Wann", "fährt", "der", "Zug", "ab?"],
-          correct: "Wann fährt der Zug ab?",
-          hint: "Kedy odchádza vlak?",
-          explanation: "W-otázka s odlučiteľným slovesom abfahren: ab na KONIEC, fährt na P2."
-        },
-        {
-          words: ["Es", "ist", "halb", "acht."],
-          correct: "Es ist halb acht.",
-          hint: "Je pol ôsmej (= 7:30).",
-          explanation: "halb acht = 7:30 (pol pred ôsmou, NIE 8:30!). Bežný hovorový čas."
-        },
-        {
-          words: ["Ich", "stehe", "um", "Viertel", "vor", "acht", "auf."],
-          correct: "Ich stehe um Viertel vor acht auf.",
-          hint: "Vstávam o štvrt na ôsmu (= 7:45).",
-          explanation: "Viertel vor acht = 7:45. aufstehen: auf na KONIEC vety."
-        },
-        {
-          words: ["Um", "wie", "viel", "Uhr", "beginnt", "die", "Besprechung?"],
-          correct: "Um wie viel Uhr beginnt die Besprechung?",
-          hint: "O koľkej začína porada?",
-          explanation: "'Um wie viel Uhr?' = o koľkej? Štandardná otázka na čas s invertovaným slovosledom."
+          question: "Vyber správnu formu článku: 'Ich brauche ___ Stuhl.'",
+          options: [
+            "der",
+            "ein",
+            "einen",
+            "den"
+          ],
+          answer: 2,
+          explanation: "'Stuhl' je mužského rodu (der Stuhl). V akuzatíve jednotného čísla sa neurčitý člen mení na 'einen'."
         }
       ]
     },
     {
       type: "minitext",
-      instruction: "Prečítaj si krátky text o Jane. Potom odpovedaj na otázky.",
-      text: "Jana hat heute ein wichtiges Meeting um neun Uhr. Sie steht um halb acht auf. Aber halb acht ist 7:30 — nicht 8:30! Jana kommt um Viertel vor neun ins Büro. Sie ist die Erste. Um neun Uhr beginnt das Meeting. Alle kommen pünktlich. Jana ist froh.",
-      textSk: "Jana má dnes dôležitú poradu o deviatej. Vstáva o pol ôsmej. Ale pol ôsmej je 7:30 — nie 8:30! Jana príde do kancelárie o štvrt na deväť. Je prvá. O deviatej začína porada. Všetci prídu načas. Jana je rada.",
+      instruction: "Lies den Dialog und beantworte die Fragen.",
+      text: "Jana: Oh, was finde ich denn hier in meinem Schrank? Viele alte Sachen! Das sind drei Stifte, zwei Hefte und auch Bücher!\nJana: Ich muss alles sortieren. Ich lege die Stifte in diesen Karton. Die Hefte und die Bücher kommen in diesen Karton.\nJana: Ah, hier sind auch Bilder und viele Zettel. Die Zettel lege ich auch dazu.\nTom: Hallo Jana! Ich habe hier noch Akten für dich. Du kannst sie dort ablegen.\nJana: Hallo Tom! Oh, viele Akten! Wie viele sind das?\nTom: Lass uns zusammen zählen. Eins, zwei, drei... Zehn Akten.\nJana: Gut. Dann sind wir bald fertig.",
+      textSk: "Jana: Och, čo tu len nachádzam v mojej skrini? Veľa starých vecí! To sú tri perá, dva zošity a aj knihy!\nJana: Musím všetko roztriediť. Perá položím do tejto škatule. Zošity a knihy idú do tejto škatule.\nJana: Aha, tu sú aj obrázky a veľa lístkov. Lístky položím tiež k tomu.\nTom: Ahoj Jana! Mám tu pre teba ešte spisy. Môžeš si ich tam odložiť.\nJana: Ahoj Tom! Och, veľa spisov! Koľko ich je?\nTom: Poďme spolu počítať. Jeden, dva, tri... Desať spisov.\nJana: Dobre. Potom budeme čoskoro hotoví.",
       questions: [
         {
-          question: "O koľkej Jana vstáva?",
-          options: ["Um acht Uhr", "Um halb neun", "Um halb acht", "Um sieben Uhr"],
-          answer: 2,
-          explanation: "V texte: 'Sie steht um halb acht auf.'"
-        },
-        {
-          question: "Čo znamená 'halb acht'?",
-          options: ["8:30", "7:30", "8:00", "7:00"],
+          question: "Was macht Jana?",
+          options: [
+            "Sie liest ein Buch.",
+            "Sie sortiert alte Sachen.",
+            "Sie zählt Akten.",
+            "Sie kauft neue Hefte."
+          ],
           answer: 1,
-          explanation: "V texte: 'halb acht ist 7:30 — nicht 8:30!'"
+          explanation: "Jana sagt: \"Ich muss alles sortieren.\" und \"Viele alte Sachen!\""
         },
         {
-          question: "O koľkej začína porada?",
-          options: ["Um acht Uhr", "Um halb neun", "Um Viertel vor neun", "Um neun Uhr"],
-          answer: 3,
-          explanation: "V texte: 'Um neun Uhr beginnt das Meeting.'"
+          question: "Was findet Jana zuerst in ihrem Schrank?",
+          options: [
+            "Zehn Akten.",
+            "Viele Bilder und Zettel.",
+            "Drei Stifte, zwei Hefte und Bücher.",
+            "Einen neuen Karton."
+          ],
+          answer: 2,
+          explanation: "Jana sagt: \"Das sind drei Stifte, zwei Hefte und auch Bücher!\""
+        },
+        {
+          question: "Was bringt Tom für Jana?",
+          options: [
+            "Neue Stifte.",
+            "Akten.",
+            "Alte Bücher.",
+            "Einen leeren Karton."
+          ],
+          answer: 1,
+          explanation: "Tom sagt: \"Ich habe hier noch Akten für dich.\" Sie zählen dann \"Zehn Akten.\""
+        },
+        {
+          question: "Wie viele Akten zählen Jana und Tom zusammen?",
+          options: [
+            "Zwei.",
+            "Drei.",
+            "Zehn.",
+            "Viele."
+          ],
+          answer: 2,
+          explanation: "Tom sagt: \"Lass uns zusammen zählen. Eins, zwei, drei... Zehn Akten.\""
         }
       ]
     },
     {
       type: "speaking",
-      instruction: "Počúvaj nemeckú vetu. Potom hovor nahlas a skontroluj sa.",
+      instruction: "Höre zu und sprich nach.",
       phrases: [
-        { de: "Es ist halb acht.", sk: "Je pol ôsmej (7:30).", tip: "halb: h=[h], al=[al]" },
-        { de: "Das Meeting beginnt um neun Uhr.", sk: "Porada začína o deviatej.", tip: "neun: eu=[oi]" },
-        { de: "Um wie viel Uhr beginnt es?", sk: "O koľkej to začína?", tip: "Uhr: Uh=[u:], r tíché" },
-        { de: "Ich stehe um sieben Uhr auf.", sk: "Vstávam o siedmej.", tip: "stehe: e=[e], h tíché" },
-        { de: "Er kommt pünktlich.", sk: "Príde načas.", tip: "pünktlich: ü=[ü], ch=[x]" }
+        {
+          de: "Die Bücher.",
+          sk: "Knihy.",
+          tip: "Ü=[y], CH=[ç] (mäkké ch)."
+        },
+        {
+          de: "Die Sachen.",
+          sk: "Veci.",
+          tip: "CH=[x] (tvrdé ch)."
+        },
+        {
+          de: "Die Schränke.",
+          sk: "Skrine.",
+          tip: "Ä=[ɛ], Sch=[ʃ]."
+        },
+        {
+          de: "Bücher sortieren.",
+          sk: "Triediť knihy.",
+          tip: "Ü=[y], R=[ʁ] (zadné r)."
+        },
+        {
+          de: "Die Hefte legen.",
+          sk: "Položiť zošity.",
+          tip: "H=[h] (vždy znie), G=[ɡ]."
+        },
+        {
+          de: "Ich zähle die Bilder.",
+          sk: "Počítam obrázky.",
+          tip: "Z=[ts], Ä=[ɛ]."
+        },
+        {
+          de: "Wir finden die Zettel.",
+          sk: "Nájdeme lístky.",
+          tip: "W=[v], I=[ɪ] (krátke i)."
+        },
+        {
+          de: "Stell die Kartons zusammen.",
+          sk: "Postav škatule spolu.",
+          tip: "S=[z] (na začiatku), Z=[ts]."
+        }
       ]
     },
+    {
+      type: "truefalse",
+      instruction: "Prečítajte si nasledujúce tvrdenia o tvorbe množného čísla podstatných mien a rozhodnite, či sú pravdivé (Wahr) alebo nepravdivé (Falsch).",
+      statements: [
+        {
+          statement: "Podstatné meno „die Akte“ tvorí množné číslo pridaním koncovky „-n“.",
+          isTrue: true,
+          explanation: "Správne. Množné číslo je „die Akten“, čo zodpovedá pravidlu pridania koncovky „-n“ pre niektoré ženské podstatné mená."
+        },
+        {
+          statement: "Množné číslo slova „das Buch“ je „die Buche“.",
+          isTrue: false,
+          explanation: "Nepravda. Správne množné číslo je „die Bücher“, kde dochádza k prehláske (Umlaut) a pridaniu koncovky „-er“."
+        },
+        {
+          statement: "Slovo „der Schrank“ má v množnom čísle prehlásku a koncovku „-e“.",
+          isTrue: true,
+          explanation: "Správne. Množné číslo je „die Schränke“, čo zodpovedá pravidlu prehlásky a koncovky „-e“."
+        },
+        {
+          statement: "Množné číslo slova „der Karton“ je „die Kartone“.",
+          isTrue: false,
+          explanation: "Nepravda. Správne množné číslo je „die Kartons“, kde sa pridáva koncovka „-s“, čo nie je typické pravidlo „-e“."
+        },
+        {
+          statement: "Pre podstatné meno „das Heft“ platí, že jeho množné číslo je „die Hefte“.",
+          isTrue: true,
+          explanation: "Správne. Množné číslo je „die Hefte“, čo zodpovedá pravidlu pridania koncovky „-e“."
+        }
+      ]
+    },
+    {
+      type: "dictation",
+      instruction: "Počúvajte nahrávku a zapíšte, čo počujete. Venujte pozornosť členom a koncovkám.",
+      sentences: [
+        {
+          de: "Legen Sie das Buch dort hin.",
+          sk: "Položte knihu tam."
+        },
+        {
+          de: "Ich muss die Akten sortieren.",
+          sk: "Musím triediť spisy."
+        },
+        {
+          de: "Findest du die Hefte?",
+          sk: "Nájdeš zošity?"
+        },
+        {
+          de: "Wir stellen die Bücher in den Schrank.",
+          sk: "Postavíme knihy do skrine."
+        },
+        {
+          de: "Kannst du bitte alle Zettel zusammenzählen?",
+          sk: "Môžeš prosím spočítať všetky lístky?"
+        }
+      ]
+    },
+    {
+      type: "categorysort",
+      instruction: "Roztrieďte podstatné mená do kategórií podľa ich rodu (člena).",
+      categories: [
+        {
+          name: "Ženský rod (die)",
+          color: "blue",
+          words: [
+            "die Akte",
+            "die Sache"
+          ]
+        },
+        {
+          name: "Mužský rod (der)",
+          color: "rose",
+          words: [
+            "der Karton",
+            "der Zettel",
+            "der Schrank"
+          ]
+        },
+        {
+          name: "Stredný rod (das)",
+          color: "green",
+          words: [
+            "das Buch",
+            "das Heft",
+            "das Bild"
+          ]
+        }
+      ],
+      explanation: "V nemčine je rod podstatného mena (der, die, das) veľmi dôležitý, pretože ovplyvňuje nielen člen, ale často aj tvorbu množného čísla. Napríklad: die Akte (die Akten), die Sache (die Sachen) – pridanie -n/-en. der Schrank (die Schränke), das Heft (die Hefte), das Buch (die Bücher), das Bild (die Bilder) – pridanie -e/-er, často s prehláskou (Umlaut)."
+    },
+    {
+      type: "translation",
+      instruction: "Preložte nasledujúce vety zo slovenčiny do nemčiny. Použite slovnú zásobu a gramatiku z lekcie.",
+      sentences: [
+        {
+          sk: "Musím triediť spisy.",
+          answer: "Ich muss die Akten sortieren.",
+          hint: "müssen, sortieren",
+          explanation: "Podstatné meno „die Akte“ (spis) je ženského rodu a v množnom čísle dostáva koncovku „-n“ (die Akten)."
+        },
+        {
+          sk: "Položte knihu na stôl.",
+          answer: "Legen Sie das Buch auf den Tisch.",
+          hint: "legen, Tisch",
+          explanation: "Sloveso „legen“ znamená „položiť (horizontálne)“. „Das Buch“ je stredného rodu. Používame formálny imperatív „Legen Sie“."
+        },
+        {
+          sk: "Môžeš spočítať všetky zošity?",
+          answer: "Kannst du alle Hefte zählen?",
+          hint: "können, zählen",
+          explanation: "„Das Heft“ (zošit) je stredného rodu a v množnom čísle dostáva koncovku „-e“ (die Hefte). Používame modálne sloveso „können“."
+        },
+        {
+          sk: "Chcel by som postaviť skriňu tam.",
+          answer: "Ich möchte den Schrank dort hinstellen.",
+          hint: "möchten, dort",
+          explanation: "Sloveso „stellen“ znamená „postaviť (vertikálne)“. „Der Schrank“ je mužského rodu a v množnom čísle má prehlásku a koncovku „-e“ (die Schränke)."
+        }
+      ]
+    },
+    {
+      type: "conjugation",
+      instruction: "Vyčasujte nasledujúce slovesá v prítomnom čase (Präsens).",
+      verbs: [
+        {
+          infinitive: "sortieren",
+          translation: "triediť",
+          forms: [
+            {
+              pronoun: "ich",
+              correct: "sortiere"
+            },
+            {
+              pronoun: "du",
+              correct: "sortierst"
+            },
+            {
+              pronoun: "er/sie/es",
+              correct: "sortiert"
+            },
+            {
+              pronoun: "wir",
+              correct: "sortieren"
+            },
+            {
+              pronoun: "ihr",
+              correct: "sortiert"
+            },
+            {
+              pronoun: "sie/Sie",
+              correct: "sortieren"
+            }
+          ],
+          note: "Sloveso „sortieren“ je pravidelné (slabé) sloveso. V prítomnom čase sa kmeň slovesa spája s typickými koncovkami: -e, -st, -t, -en, -t, -en."
+        },
+        {
+          infinitive: "finden",
+          translation: "nájsť",
+          forms: [
+            {
+              pronoun: "ich",
+              correct: "finde"
+            },
+            {
+              pronoun: "du",
+              correct: "findest"
+            },
+            {
+              pronoun: "er/sie/es",
+              correct: "findet"
+            },
+            {
+              pronoun: "wir",
+              correct: "finden"
+            },
+            {
+              pronoun: "ihr",
+              correct: "findet"
+            },
+            {
+              pronoun: "sie/Sie",
+              correct: "finden"
+            }
+          ],
+          note: "Sloveso „finden“ je silné sloveso, ale v prítomnom čase (Präsens) sa časuje ako pravidelné sloveso, bez zmeny kmeňovej samohlásky. Koncovky sú rovnaké ako pri pravidelných slovesách."
+        }
+      ]
+    }
   ],
-
-  reviewWords: ["L16_V10", "L16_V11", "L16_V12"],
-  lessonNotes:
-    "HALB = pol k NASLEDUJÚCEJ hodine! halb vier = 3:30 (NIE 4:30). Rovnako než slovenské 'pol štvrtej'. Officiálny čas: [hodiny] Uhr [minúty]. Hovorový: halb, Viertel nach, Viertel vor. Die Abfahrt = odchod, die Ankunft = príchod — dôležité pre cestovanie.",
+  reviewWords: []
 };

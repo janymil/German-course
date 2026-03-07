@@ -1,0 +1,5 @@
+Test 1 PASSED: [Der Lehrer:M][ sieht :none][den alten Mann:M][.:none]
+Test 2 PASSED: [Ich fahre :none][mit dem neuen, roten Auto:N][.:none]
+Test 3 PASSED: [Das ist :none][eine gute Frau:F][.:none]
+Test 4 PASSED: [Er kauft :none][Haus:N][.:none]
+Test 5 PASSED: [In dem kleinen Haus:N][ ist :none][eine Ärztin:F][.:none]

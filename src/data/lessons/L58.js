@@ -1,589 +1,870 @@
-﻿export const lesson58 = {
+export const lesson58 = {
   id: 58,
   week: 12,
   day: 3,
-  title: "Kleine Reparaturen — Wohnungsthemen",
-  topic: "Problémy v byte – sťažnosti, opravy, komunikácia so správcom",
+  title: "Was tut Ihnen weh?",
+  topic: "Opisovanie zdravotných problémov a bolesti.",
   cefr: "A1",
-  xpReward: 25,
-  narrativeContext:
-    "Janin nový byt má problémy! Kúrenie nefunguje od včera a kohútik kvapká. Jana musí zavolať správcovi (Hausmeister) a napísať prenajímateľke. Nechce byť drzá, ale situácia je naliehavá – v byte je zima. Učí sa zdvorilo popísať problém a požiadať o rýchlu opravu. 'Das ist dringend' – toto slová sa naučí dobre.",
-  communicativeGoal:
-    "Po tejto lekcii viem opísať problémy v byte alebo dome a zodpovedne komunikovať s prenajímateľom alebo správcom.",
-  skillFocus: ["speaking", "writing", "vocabulary"],
-  grammarNote: {
-    rule: "Opisovanie problémov – 'seit' + situácia, zdvorilé modálne žiadosti (Könnten Sie...?)",
-    explanation:
-      "Opisovanie trvania problému: 'seit gestern' (od včera), 'seit zwei Tagen' (dva dni) + prítomný čas! Pozor: v nemčine 'Die Heizung funktioniert seit gestern nicht.' (prítomný čas), nie perfektum! 'Können Sie...?' je normálna žiadosť. 'Könnten Sie...?' (Konjunktív II) je zdvorilejšia. Príčinná súvislosť s 'weil': 'Ich muss ausziehen, weil die Wohnung zu laut ist.' Učíme sa ako frazeologický celok: 'Ich wäre sehr dankbar, wenn...'",
-    examples: [
-      { de: "Die Heizung funktioniert seit gestern nicht.", sk: "Kúrenie nefunguje od včera." },
-      { de: "Der Wasserhahn tropft seit zwei Tagen.", sk: "Kohútik kvapká dva dni." },
-      { de: "Könnten Sie das bitte reparieren?", sk: "Mohli by ste to prosím opraviť?" },
-      { de: "Das ist dringend – es ist sehr kalt!", sk: "Je to naliehavé – je veľká zima!" },
-      { de: "Ich muss den Schaden melden.", sk: "Musím nahlásiť poškodenie." },
-    ],
-    slovakContrastNote:
-      "Slovenčina: 'nefunguje' = nemčina: 'funktioniert nicht'. Slovenčina: 'Môžeš to opraviť?' = nemčina: 'Kannst du das reparieren?' – podobná štruktúra. Zdvorilosť je univerzálna: 'Könnten Sie...?' = 'Mohli by ste...?' Pozor: 'seit' sa viaže s prítomným časom (nie Perfektum) – slovenčina to robí rovnako: 'kohútik kvapká od včera' (nie 'kvapkal').",
-  },
+  xpReward: 20,
+  narrativeContext: "Jana ist beim Arzt. Dr. Hirsch fragt Jana nach ihren Symptomen. Jana muss genau erklären, was sie fühlt.",
+  communicativeGoal: "Nach dieser Lektion kann ich meine Gesundheitsprobleme und Schmerzen auf Deutsch beschreiben.",
+  skillFocus: [
+    "vocabulary",
+    "speaking",
+    "grammar"
+  ],
+  lessonNotes: "V tejto lekcii sa naučíš slovnú zásobu na opisovanie chorôb a bolesti hlavy, hrdla, zuba atď. Taktiež sa naučíš pýtať a odpovedať na otázky týkajúce sa zdravia, ako napríklad 'Máš horúčku?' alebo 'Ako dlho si chorý/á?'.",
+  grammarNotes: [
+    {
+      rule: "Präsens und Perfekt bei Krankheiten",
+      explanation: "<p>V tejto lekcii sa zameriame na opisovanie zdravotných problémov a bolesti. V nemčine používame na opisovanie aktuálnych problémov slovesá v prítomnom čase (Präsens). Napríklad: <em>Ich habe Kopfschmerzen.</em> (Bolí ma hlava.) alebo <em>Mein Hals tut weh.</em> (Bolí ma hrdlo.).</p><p>Na opisovanie už prekonaných zdravotných problémov alebo udalostí, ktoré sa stali v minulosti, používame Perfekt. V slovenčine často používame minulý čas, ale v nemčine je Perfekt v hovorenej reči oveľa bežnejší pre minulé udalosti. Pamätajte, že pri slovesách pohybu alebo zmien stavu (napr. <em>aufwachen</em> - zobudiť sa, <em>krank werden</em> - ochorieť) používame pomocné sloveso <em>sein</em> v Perfekte, inak väčšinou <em>haben</em>.</p><p><strong>Príklady použitia:</strong></p><ul><li><em>Ich <strong>habe</strong> Fieber.</em> (Mám horúčku.) - Prítomný čas</li><li><em>Ich <strong>hatte</strong> Fieber.</em> (Mal som horúčku.) - Minulý čas (Präteritum, menej časté v hovorovej reči)</li><li><em>Ich <strong>habe</strong> Fieber <strong>gehabt</strong>.</em> (Mal som horúčku.) - Perfekt</li><li><em>Mein Bein <strong>tut</strong> weh.</em> (Bolí ma noha.) - Prítomný čas</li><li><em>Mein Bein <strong>tat</strong> weh.</em> (Boľala ma noha.) - Minulý čas (Präteritum)</li><li><em>Mein Bein <strong>hat</strong> weh<strong>getan</strong>.</em> (Boľala ma noha.) - Perfekt</li></ul><div class='tip-box'><strong>Tip:</strong> Všímajte si rozdiely medzi slovesami, ktoré opisujú stav (<em>haben</em>) a ktoré opisujú zmenu stavu alebo pohybu (<em>sein</em>) v Perfekte.</div>",
+      examples: [
+        {
+          de: "Ich habe Husten.",
+          sk: "Mám kašeľ."
+        },
+        {
+          de: "Ich habe Schnupfen.",
+          sk: "Mám nádchu."
+        },
+        {
+          de: "Mein Bauch tut weh.",
+          sk: "Bolí ma brucho."
+        },
+        {
+          de: "Ich habe Kopfschmerzen.",
+          sk: "Bolí ma hlava."
+        },
+        {
+          de: "Ich hatte Fieber.",
+          sk: "Mal som horúčku."
+        },
+        {
+          de: "Ich habe Fieber gehabt.",
+          sk: "Mal som horúčku."
+        },
+        {
+          de: "Ich bin krank geworden.",
+          sk: "Ochorel som."
+        },
+        {
+          de: "Ich bin gestern zum Arzt gegangen.",
+          sk: "Včera som šiel k lekárovi."
+        }
+      ],
+      slovakContrastNote: "V slovenčine používame na opisovanie minulých udalostí najčastejšie minulý čas. V nemčine je v hovorenej reči oveľa bežnejší Perfekt, najmä pri opisovaní užitočných minulých udalostí. Rozdiel je aj v používaní pomocných slovies v Perfekte – slovenčina má len jedno sloveso 'byť' (a 'mať' v niektorých kontextoch), zatiaľ čo nemčina používa 'haben' alebo 'sein' podľa pravidiel."
+    },
+    {
+      rule: "Imperativ bei Gesundheitstipps",
+      explanation: "<p>V tejto lekcii sa naučíme, ako dávať rady alebo pokyny týkajúce sa zdravia pomocou rozkazovacieho spôsobu (Imperativ). Imperativ je veľmi užitočný pri komunikácii s lekárom alebo pri poskytovaní rád priateľom.</p><p>Základné tvary Imperatívu:</p><ul><li><strong>Du-Form:</strong> Vezmeme sloveso v 2. osobe jednotného čísla prítomného času (ty si), odstránime koncovku '-st' a pridáme koncovku '-e' (často voliteľná) alebo pri slovesách s kmeňovou samohláskou 'a' alebo 'o' sa táto samohláska zmení na 'ä' alebo 'ö' a koncovka '-e' sa nepoužíva. Napr. <em>du machst -> mach(e)</em>, <em>du fährst -> fahr!</em>, <em>du kommst -> komm(e)!</em></li><li><strong>Ihr-Form:</strong> Používame tvar slovesa pre 2. osobu množného čísla prítomného času. Napr. <em>ihr macht -> macht!</em></li><li><strong>Sie-Form (zdvorilostná):</strong> Používame infinitív slovesa s osobným zámenom 'Sie'. Napr. <em>Sie machen -> machen Sie!</em></li><li><strong>Ich-Form (návrh):</strong> Používame sloveso v 1. osobe množného čísla prítomného času s osobným zámenom 'wir'. Napr. <em>wir machen -> machen wir!</em></li></ul><p>V kontexte zdravia môžeme dávať rady ako:</p><ul><li><em>Nehmen Sie Medikamente.</em> (Užívajte lieky.)</li><li><em>Ruhen Sie sich aus.</em> (Oddýchnite si.)</li><li><em>Trinken Sie viel Wasser.</em> (Pite veľa vody.)</li></ul><div class='warn-box'><strong>Pozor:</strong> Pri nepravidelných slovesách (napr. <em>sein, haben, sprechen</em>) sa tvary Imperatívu môžu líšiť od bežných pravidiel. Napr. <em>Sei ruhig!</em> (Buď pokojný!), <em>Hab keine Angst!</em> (Neboj sa!), <em>Sprich mit dem Arzt!</em> (Hovor s lekárom!).</div>",
+      examples: [
+        {
+          de: "Ruhen Sie sich aus!",
+          sk: "Oddýchnite si!"
+        },
+        {
+          de: "Nehmen Sie die Medizin.",
+          sk: "Vezmite si liek."
+        },
+        {
+          de: "Schlafen Sie gut!",
+          sk: "Dobre sa vyspite!"
+        },
+        {
+          de: "Trink viel Wasser!",
+          sk: "Pi veľa vody!"
+        },
+        {
+          de: "Iss Obst und Gemüse.",
+          sk: "Jedz ovocie a zeleninu."
+        },
+        {
+          de: "Gehen Sie zum Arzt.",
+          sk: "Choďte k lekárovi."
+        },
+        {
+          de: "Seien Sie vorsichtig!",
+          sk: "Buďte opatrní!"
+        },
+        {
+          de: "Haben Sie Geduld!",
+          sk: "Majte trpezlivosť!"
+        }
+      ],
+      slovakContrastNote: "Slovenčina má tiež rozkazovací spôsob, ale jeho tvary a použitie sa môžu líšiť. V slovenčine sa často používa priama forma rozkazu (ty choď, vy choďte), zatiaľ čo v nemčine je bežné používať zdvorilostnú formu 'Sie' (machen Sie) aj pri menej formálnych situáciách, ak chceme byť zdvorilí. Taktiež sa v slovenčine často používajú iné väzby na vyjadrenie rady, napríklad 'Mali by ste...' alebo 'Odporúčam ti...'. V nemčine je Imperativ priamejší a často sa používa na krátke, jasné pokyny."
+    }
+  ],
   vocab: [
     {
-      de: "die Heizung",
-      sk: "kúrenie / radiátor",
-      example: "Die Heizung in meinem Zimmer funktioniert nicht.",
-      exampleSk: "Kúrenie v mojej izbe nefunguje.",
-      gender: "F",
+      de: "das Fieber",
+      sk: "horúčka",
+      gender: "N",
       srsId: "L58_V01",
-      recycledFrom: [],
+      example: "Ich habe Fieber.",
+      exampleSk: "Mám horúčku.",
+      recycledFrom: []
     },
     {
-      de: "der Wasserhahn",
-      sk: "kohútik",
-      example: "Der Wasserhahn im Bad tropft.",
-      exampleSk: "Kohútik v kúpeľni kvapká.",
+      de: "der Husten",
+      sk: "kašeľ",
       gender: "M",
       srsId: "L58_V02",
-      recycledFrom: [],
+      example: "Ich habe Husten.",
+      exampleSk: "Mám kašeľ.",
+      recycledFrom: []
     },
     {
-      de: "tropfen",
-      sk: "kvapkať",
-      example: "Der Wasserhahn tropft die ganze Nacht.",
-      exampleSk: "Kohútik kvapká celú noc.",
-      gender: null,
+      de: "der Schnupfen",
+      sk: "nádcha",
+      gender: "M",
       srsId: "L58_V03",
-      recycledFrom: [],
+      example: "Ich habe Schnupfen.",
+      exampleSk: "Mám nádchu.",
+      recycledFrom: []
     },
     {
-      de: "kaputt",
-      sk: "pokazený / rozbitý",
-      example: "Das Schloss an der Tür ist kaputt.",
-      exampleSk: "Zámok na dverách je pokazený.",
-      gender: null,
+      de: "der Appetit",
+      sk: "chuť do jedla",
+      gender: "M",
       srsId: "L58_V04",
-      recycledFrom: [29],
+      example: "Ich habe keinen Appetit.",
+      exampleSk: "Nemám chuť do jedla.",
+      recycledFrom: []
     },
     {
-      de: "funktioniert nicht",
-      sk: "nefunguje",
-      example: "Die Klimaanlage funktioniert nicht mehr.",
-      exampleSk: "Klimatizácia už nefunguje.",
-      gender: null,
-      srsId: "L58_V05",
-      recycledFrom: [],
-    },
-    {
-      de: "reparieren",
-      sk: "opraviť",
-      example: "Können Sie das bitte reparieren?",
-      exampleSk: "Môžete to prosím opraviť?",
-      gender: null,
-      srsId: "L58_V06",
-      recycledFrom: [],
-    },
-    {
-      de: "die Reparatur",
-      sk: "oprava",
-      example: "Die Reparatur dauert zwei Stunden.",
-      exampleSk: "Oprava trvá dve hodiny.",
+      de: "die Krankheit",
+      sk: "choroba",
       gender: "F",
-      srsId: "L58_V07",
-      recycledFrom: [],
+      srsId: "L58_V05",
+      example: "Das ist eine Krankheit.",
+      exampleSk: "Toto je choroba.",
+      recycledFrom: []
     },
     {
-      de: "der Hausmeister ⚠️",
-      sk: "správca domu (rakúsky: Hausbesorger)",
-      example: "Der Hausmeister kümmert sich um das Haus.",
-      exampleSk: "Správca sa stará o dom.",
+      de: "der Kopf",
+      sk: "hlava",
+      gender: "M",
+      srsId: "L58_V06",
+      example: "Mein Kopf tut weh.",
+      exampleSk: "Bolí ma hlava.",
+      recycledFrom: []
+    },
+    {
+      de: "der Bauch",
+      sk: "brucho",
+      gender: "M",
+      srsId: "L58_V07",
+      example: "Mein Bauch tut weh.",
+      exampleSk: "Bolí ma brucho.",
+      recycledFrom: []
+    },
+    {
+      de: "der Zahn",
+      sk: "zub",
       gender: "M",
       srsId: "L58_V08",
-      recycledFrom: [],
+      example: "Mein Zahn tut weh.",
+      exampleSk: "Bolí ma zub.",
+      recycledFrom: []
     },
     {
-      de: "die Vermieterin",
-      sk: "prenajímateľka",
-      example: "Ich muss die Vermieterin anrufen.",
-      exampleSk: "Musím zavolať prenajímateľke.",
-      gender: "F",
-      srsId: "L58_V09",
-      recycledFrom: [],
-    },
-    {
-      de: "der Mieter / die Mieterin",
-      sk: "nájomca (m) / nájomkyňa (ž)",
-      example: "Der Mieter hat das Recht auf Reparaturen.",
-      exampleSk: "Nájomca má právo na opravy.",
-      gender: "M",
-      srsId: "L58_V10",
-      recycledFrom: [],
-    },
-    {
-      de: "Das ist ein Notfall.",
-      sk: "Je to núdzový prípad / havarijný stav.",
-      example: "Das ist ein Notfall – bei mir gibt es kein Wasser!",
-      exampleSk: "Je to núdzový prípad – nemám vodu!",
-      gender: null,
-      srsId: "L58_V11",
-      recycledFrom: [],
-    },
-    {
-      de: "dringend",
-      sk: "naliehavo / urgentne",
-      example: "Das muss dringend repariert werden.",
-      exampleSk: "To musí byť urgentne opravené.",
-      gender: null,
-      srsId: "L58_V12",
-      recycledFrom: [],
-    },
-    {
-      de: "Bitte melden Sie sich.",
-      sk: "Prosím, ozvite sa. / Zavolajte mi späť.",
-      example: "Bitte melden Sie sich so schnell wie möglich.",
-      exampleSk: "Prosím, ozvite sa čo najrýchlejšie.",
-      gender: null,
-      srsId: "L58_V13",
-      recycledFrom: [],
-    },
-    {
-      de: "der Strom",
-      sk: "elektrická energia / prúd",
-      example: "Gestern hatte ich keinen Strom.",
-      exampleSk: "Včera som nemal/a prúd.",
-      gender: "M",
-      srsId: "L58_V14",
-      recycledFrom: [],
-    },
-    {
-      de: "das Wasser",
-      sk: "voda",
-      example: "Das warme Wasser funktioniert nicht.",
-      exampleSk: "Teplá voda nefunguje.",
+      de: "das Ohr",
+      sk: "ucho",
       gender: "N",
-      srsId: "L58_V15",
-      recycledFrom: [8, 32],
+      srsId: "L58_V09",
+      example: "Mein Ohr tut weh.",
+      exampleSk: "Bolí ma ucho.",
+      recycledFrom: []
     },
     {
-      de: "der Schaden",
-      sk: "škoda / poškodenie",
-      example: "Es gibt einen Wasserschaden in der Wohnung.",
-      exampleSk: "V byte je vodná škoda.",
+      de: "das Bein",
+      sk: "noha",
+      gender: "N",
+      srsId: "L58_V10",
+      example: "Mein Bein tut weh.",
+      exampleSk: "Bolí ma noha.",
+      recycledFrom: []
+    },
+    {
+      de: "der Arm",
+      sk: "ruka (nad zápästím)",
       gender: "M",
-      srsId: "L58_V16",
-      recycledFrom: [],
+      srsId: "L58_V11",
+      example: "Mein Arm tut weh.",
+      exampleSk: "Bolí ma ruka.",
+      recycledFrom: []
     },
     {
-      de: "melden",
-      sk: "hlásiť / nahlasovať",
-      example: "Ich möchte einen Schaden melden.",
-      exampleSk: "Chcem nahlásiť poškodenie.",
+      de: "die Hand",
+      sk: "ruka (od zápästia)",
+      gender: "F",
+      srsId: "L58_V12",
+      example: "Meine Hand tut weh.",
+      exampleSk: "Bolí ma ruka.",
+      recycledFrom: []
+    },
+    {
+      de: "der Finger",
+      sk: "prst (na ruke)",
+      gender: "M",
+      srsId: "L58_V13",
+      example: "Mein Finger tut weh.",
+      exampleSk: "Bolí ma prst.",
+      recycledFrom: []
+    },
+    {
+      de: "die Schmerzen",
+      sk: "bolesti",
+      gender: "F",
+      srsId: "L58_V14",
+      example: "Ich habe Schmerzen im Bauch.",
+      exampleSk: "Mám bolesti v bruchu.",
+      recycledFrom: []
+    },
+    {
+      de: "weh tun",
+      sk: "bolieť",
+      gender: null,
+      srsId: "L58_V15",
+      example: "Mein Kopf tut weh.",
+      exampleSk: "Bolí ma hlava.",
+      recycledFrom: []
+    },
+    {
+      de: "husten",
+      sk: "kašľať",
+      gender: null,
+      srsId: "L58_V16",
+      example: "Ich huste oft.",
+      exampleSk: "Často kašlem.",
+      recycledFrom: []
+    },
+    {
+      de: "schnupfen",
+      sk: "mať nádchu",
       gender: null,
       srsId: "L58_V17",
-      recycledFrom: [],
+      example: "Ich schnupfe schon seit zwei Tagen.",
+      exampleSk: "Už dva dni mám nádchu.",
+      recycledFrom: []
     },
     {
-      de: "Könnte ich bitte...? ⚠️",
-      sk: "Mohla/Mohol by som prosím...? (zdvorilé Konjunktív II)",
-      example: "Könnte ich bitte einen Techniker bekommen?",
-      exampleSk: "Mohla by som dostať prosím technika?",
+      de: "kennen",
+      sk: "poznať",
       gender: null,
       srsId: "L58_V18",
-      recycledFrom: [],
+      example: "Ich kenne diesen Schmerz nicht.",
+      exampleSk: "Nepoznám túto bolesť.",
+      recycledFrom: []
     },
+    {
+      de: "Wie lange sind Sie schon krank?",
+      sk: "Ako dlho ste už chorý/chorá?",
+      gender: null,
+      srsId: "L58_V19",
+      example: "Wie lange sind Sie schon krank?",
+      exampleSk: "Ako dlho ste už chorý/chorá?",
+      recycledFrom: []
+    },
+    {
+      de: "Ich habe Fieber und keinen Appetit.",
+      sk: "Mám horúčku a nemám chuť do jedla.",
+      gender: null,
+      srsId: "L58_V20",
+      example: "Ich habe Fieber und keinen Appetit.",
+      exampleSk: "Mám horúčku a nemám chuť do jedla.",
+      recycledFrom: []
+    },
+    {
+      de: "Haben Sie Fieber?",
+      sk: "Máte horúčku?",
+      gender: null,
+      srsId: "L58_V21",
+      example: "Haben Sie Fieber?",
+      exampleSk: "Máte horúčku?",
+      recycledFrom: []
+    },
+    {
+      de: "Mein Kopf tut weh.",
+      sk: "Bolí ma hlava.",
+      gender: null,
+      srsId: "L58_V22",
+      example: "Mein Kopf tut weh.",
+      exampleSk: "Bolí ma hlava.",
+      recycledFrom: []
+    },
+    {
+      de: "Ich habe Schmerzen.",
+      sk: "Mám bolesti.",
+      gender: null,
+      srsId: "L58_V23",
+      example: "Ich habe Schmerzen im Bein.",
+      exampleSk: "Mám bolesti v nohe.",
+      recycledFrom: []
+    },
+    {
+      de: "Wo tut es weh?",
+      sk: "Kde to bolí?",
+      gender: null,
+      srsId: "L58_V24",
+      example: "Der Arzt fragt: Wo tut es weh?",
+      exampleSk: "Lekár sa pýta: Kde to bolí?",
+      recycledFrom: []
+    }
   ],
   exercises: [
     {
       type: "flashcard",
-      instruction: "Nauč sa slovnú zásobu problémov v byte a zdvorilých sťažností.",
-      items: [
-        "die Heizung = kúrenie",
-        "der Wasserhahn = kohútik",
-        "tropfen = kvapkať",
-        "kaputt = pokazený",
-        "funktioniert nicht = nefunguje",
-        "reparieren = opraviť",
-        "die Reparatur = oprava",
-        "der Hausmeister = správca domu",
-        "die Vermieterin = prenajímateľka",
-        "Das ist ein Notfall. = Je to núdzový prípad.",
-        "dringend = naliehavo",
-        "Bitte melden Sie sich. = Prosím, ozvite sa.",
-        "der Strom = elektrická energia",
-        "der Schaden = škoda / poškodenie",
-        "melden = hlásiť",
-        "Könnten Sie...? = Mohli by ste...? (zdvorilé)",
-      ],
-    },
-    {
-      type: "mcq",
-      instruction: "Vyber správnu odpoveď pre každú situáciu so sťažnosťou v byte.",
-      questions: [
-        {
-          question: "Jana chce zdvorilo požiadať správcu, aby prišiel opraviť kúrenie. Ako to povie?",
-          options: [
-            "Kommen Sie jetzt sofort!",
-            "Könnten Sie bitte die Heizung reparieren?",
-            "Warum ist die Heizung kaputt?",
-            "Ich brauche die Heizung.",
-          ],
-          answer: "Könnten Sie bitte die Heizung reparieren?",
-          explanation:
-            "'Könnten Sie bitte...?' je Konjunktív II (zdvorilá forma) – oveľa zdvorilejšie ako 'Kommen Sie!' alebo 'Reparieren Sie!'. Vždy pridaj 'bitte' pre extra zdvorilosť.",
-        },
-        {
-          question: "Ako sa v nemčine povie 'kohútik kvapká od včera'?",
-          options: [
-            "Der Wasserhahn hat gestern getropft.",
-            "Der Wasserhahn tropft seit gestern.",
-            "Der Wasserhahn tropfte gestern.",
-            "Der Wasserhahn ist seit gestern kaputt geworden.",
-          ],
-          answer: "Der Wasserhahn tropft seit gestern.",
-          explanation:
-            "'Seit' + prítomný čas opisuje situáciu, ktorá trvá od nejakého bodu do teraz. 'Seit gestern tropft der Wasserhahn' = kohútik kvapká od včera (a stále kvapká teraz). Toto je rozdiel oproti Perfektumu!",
-        },
-        {
-          question: "Čo je 'der Hausmeister' v nemecky hovoriacom dome?",
-          options: [
-            "Majiteľ domu",
-            "Nájomca bytu",
-            "Správca / domovník domu",
-            "Suseda",
-          ],
-          answer: "Správca / domovník domu",
-          explanation:
-            "'Der Hausmeister' = správca/domovník, ktorý sa stará o technické záležitosti domu. V Rakúsku sa môžeš stretnúť aj s výrazom 'Hausbesorger'. Pri malých opravách a problémoch je prvá kontaktná osoba.",
-        },
-        {
-          question: "Jana hovorí: 'Das ist ein Notfall!' Čo tým myslí?",
-          options: [
-            "Situácia je v pohode, nepotrebujem pomoc.",
-            "Je to urgentná/núdzová situácia.",
-            "Chcem iba informovať, nie je to dôležité.",
-            "Potrebujem len peniaze späť.",
-          ],
-          answer: "Je to urgentná/núdzová situácia.",
-          explanation:
-            "'Der Notfall' = núdzový prípad. 'Das ist ein Notfall' hovoríš, keď je situácia skutočne naliehavá – napríklad žiadna voda, žiadne kúrenie v zime, resp. nebezpečenstvo.",
-        },
-        {
-          question: "Prečo sa v nemčine po 'seit' používa prítomný čas, nie Perfektum?",
-          options: [
-            "Je to chyba v gramatike",
-            "Pretože situácia ešte trvá (stav trvá od minulosti do teraz)",
-            "Prítomný čas sa používa len v hovorovom jazyku",
-            "Nie je žiadny dôvod, obe sú správne",
-          ],
-          answer: "Pretože situácia ešte trvá (stav trvá od minulosti do teraz)",
-          explanation:
-            "'Seit' + prítomný čas = stav, ktorý sa začal v minulosti a trvá stále: 'Ich wohne seit 3 Jahren in Wien.' (Bývam tu 3 roky a ešte stále tu bývam). Slovenčina robí to isté: 'Bývam tu 3 roky.' (prítomný čas).",
-        },
-        {
-          question: "Čo znamená 'Ich möchte einen Schaden melden'?",
-          options: [
-            "Chcem dať výpoveď z bytu.",
-            "Chcem nahlásiť poškodenie.",
-            "Chcem vykonať opravu sám.",
-            "Chcem zaplatiť za opravu.",
-          ],
-          answer: "Chcem nahlásiť poškodenie.",
-          explanation:
-            "'Melden' = hlásiť, nahlasovať. 'Einen Schaden melden' = nahlásiť poškodenie (napríklad poisťovni alebo prenajímateľovi). Základná fráza pri problémoch v byte.",
-        },
-        {
-          question: "Ako sa zdvorilo napíše záver sťažnostného e-mailu po nemecky?",
-          options: [
-            "Ich verlange eine sofortige Antwort!",
-            "Bitte reparieren Sie es!",
-            "Ich wäre sehr dankbar für eine baldige Rückmeldung.",
-            "Das will ich sofort!",
-          ],
-          answer: "Ich wäre sehr dankbar für eine baldige Rückmeldung.",
-          explanation:
-            "'Ich wäre sehr dankbar für...' je mimoriadne zdvorilé ukončenie. 'Baldige Rückmeldung' = čoskoro odpoveď. Toto je frazeologický celok – nauč sa ho naspamäť.",
-        },
-      ],
-    },
-    {
-      type: "fill",
-      instruction: "Doplň správne slovo alebo frázu. Použi ___.",
-      questions: [
-        {
-          sentence: "Die Heizung ___ seit gestern nicht. (nefunguje)",
-          answer: "funktioniert",
-          hint: "nefunguje = funktioniert nicht; seit → prítomný čas!",
-          explanation:
-            "Po 'seit' sa používa prítomný čas, pretože stav trvá stále. 'Funktionieren' = fungovať. 3. os. sg.: 'funktioniert'. Negácia: 'funktioniert nicht'.",
-        },
-        {
-          sentence: "___ Sie bitte die Heizung reparieren? (zdvorilé – Konjunktív II)",
-          answer: "Könnten",
-          hint: "Konjunktív II od können = könnten; Sie-forma",
-          explanation:
-            "'Könnten Sie...?' je zdvorilá forma žiadosti (Konjunktív II od können). Zdvorilejšia ako 'Können Sie...?'. Vždy s 'bitte' pre maximum zdvorilostizdvorilosť.",
-        },
-        {
-          sentence: "Der Wasserhahn ___ schon seit einer Woche.",
-          answer: "tropft",
-          hint: "kvapkať = tropfen; 3. os. sg.",
-          explanation:
-            "'Tropfen' (kvapkať) – 3. os. sg.: 'tropft'. Seit + prítomný čas. 'Der Wasserhahn tropft' = kohútik kvapká.",
-        },
-        {
-          sentence: "Ich möchte einen ___ melden. (poškodenie)",
-          answer: "Schaden",
-          hint: "poškodenie = der Sch...",
-          explanation:
-            "'Den Schaden melden' = nahlásiť poškodenie. Toto je štandardná fráza pri kontaktovaní poisťovne alebo prenajímateľa.",
-        },
-        {
-          sentence: "Das ist sehr ___! Bitte kommen Sie so schnell wie möglich. (naliehavé)",
-          answer: "dringend",
-          hint: "naliehavé = d...",
-          explanation:
-            "'Dringend' = naliehavo, urgentne. 'Das ist dringend!' = To je urgentné! Dôležite slovo pri sťažnostiach a núdzových situáciách.",
-        },
-        {
-          sentence: "Ich ___ sehr dankbar, wenn Sie das Problem lösen könnten.",
-          answer: "wäre",
-          hint: "Konjunktív II od sein = wäre",
-          explanation:
-            "'Ich wäre sehr dankbar...' = bol/a by som veľmi vďačný/á. 'Wäre' je Konjunktív II od sein. Frazeologický zdvorilosťový vzorec.",
-        },
-        {
-          sentence: "Gestern hatte ich keinen ___. Alle Lichter gingen aus. (elektrická energia)",
-          answer: "Strom",
-          hint: "prúd / elektrická energia = der Str...",
-          explanation:
-            "'Der Strom' = elektrická energia/prúd. 'Keinen Strom haben' = nemať prúd. 'Ich hatte keinen Strom' = Perfektum od haben (mal/mala som).",
-        },
-      ],
-    },
-    {
-      type: "listen",
-      instruction: "Nacvič si tieto frázy pre sťažnosti a kontakt so správcom. Prečítaj ich nahlas.",
-      questions: [
-        { de: "Die Heizung funktioniert seit gestern nicht.", sk: "Kúrenie nefunguje od včera." },
-        { de: "Der Wasserhahn tropft im Bad.", sk: "Kohútik kvapká v kúpeľni." },
-        { de: "Könnten Sie bitte einen Techniker schicken?", sk: "Mohli by ste prosím poslať technika?" },
-        { de: "Das ist dringend – es ist sehr kalt!", sk: "Je to naliehavé – je veľmi zima!" },
-        { de: "Ich möchte einen Schaden melden.", sk: "Chcem nahlásiť poškodenie." },
-        { de: "Bitte melden Sie sich so schnell wie möglich.", sk: "Prosím, ozvite sa čo najrýchlejšie." },
-        { de: "Das ist ein Notfall!", sk: "Je to núdzový prípad!" },
-        { de: "Ich wäre sehr dankbar für eine schnelle Lösung.", sk: "Bol/a by som veľmi vďačný/á za rýchle riešenie." },
-      ],
+      instruction: "Prezri si slovíčka tejto lekcie. Klikni na kartičku pre preklad."
     },
     {
       type: "match",
-      instruction: "Spoj problém v byte s vhodnou reakciou alebo prekladom.",
+      instruction: "Spojte nemecké slová s ich slovenskými ekvivalentmi.",
       pairs: [
-        ["Die Heizung funktioniert nicht.", "Kúrenie nefunguje."],
-        ["Der Wasserhahn tropft.", "Kohútik kvapká."],
-        ["Das ist kaputt.", "Je to pokazené."],
-        ["Könnten Sie bitte kommen?", "Mohli by ste prosím prísť?"],
-        ["Das ist dringend!", "Je to naliehavé!"],
-        ["Ich möchte einen Schaden melden.", "Chcem nahlásiť poškodenie."],
-        ["der Hausmeister", "správca domu"],
-        ["die Vermieterin", "prenajímateľka"],
-      ],
-    },
-    {
-      type: "dialogue",
-      instruction:
-        "Jana volá správcovi domu (Hausmeister) kvôli pokazenému kúreniu. Situácia je naliehavá.",
-      lines: [
-        {
-          speaker: "B",
-          de: "Hausverwaltung Gruber, Guten Tag!",
-          sk: "Správca Gruber, dobrý deň!",
-        },
-        {
-          speaker: "A",
-          de: "Guten Tag! Hier ist Jana Nováková aus der Wohnung 4. Ich habe ein dringendes Problem.",
-          sk: "Dobrý deň! Tu je Jana Nováková z bytu 4. Mám naliehavý problém.",
-        },
-        {
-          speaker: "B",
-          de: "Was ist passiert, Frau Nováková?",
-          sk: "Čo sa stalo, pani Nováková?",
-        },
-        {
-          speaker: "A",
-          de: "Die Heizung in meiner Wohnung funktioniert seit gestern Abend nicht. Es ist sehr kalt hier!",
-          sk: "Kúrenie v mojom byte nefunguje od včera večera. Je tu veľmi zima!",
-        },
-        {
-          speaker: "B",
-          de: "Das tut mir leid. Haben Sie die Heizung schon neu gestartet?",
-          sk: "Je mi ľúto. Reštartovali ste kúrenie?",
-        },
-        {
-          speaker: "A",
-          de: "Ja, ich habe es versucht – aber es passiert nichts. Die Heizung bleibt kalt.",
-          sk: "Áno, skúsila som to – ale nič sa nedeje. Kúrenie zostáva studené.",
-        },
-        {
-          speaker: "B",
-          de: "Ich verstehe. Könnten Sie mir bitte Ihre genaue Adresse sagen?",
-          sk: "Chápem. Mohli by ste mi povedať presnú adresu?",
-        },
-        {
-          speaker: "A",
-          de: "Mariahilfer Straße 15, Wohnung 4, 1060 Wien.",
-          sk: "Mariahilfer Straße 15, byt 4, 1060 Viedeň.",
-        },
-        {
-          speaker: "B",
-          de: "Gerne schicke ich heute noch einen Techniker. Wäre 15 Uhr gut für Sie?",
-          sk: "Rád pošlem dnes ešte technika. Bol by pre Vás vhodný čas o 15:00?",
-        },
-        {
-          speaker: "A",
-          de: "Ja, 15 Uhr ist perfekt. Ich bin zu Hause. Danke vielmals!",
-          sk: "Áno, 15:00 je perfektné. Som doma. Veľmi pekne ďakujem!",
-        },
-        {
-          speaker: "B",
-          de: "Kein Problem! Der Techniker meldet sich vorher kurz per SMS.",
-          sk: "Žiadny problém! Technik sa vopred krátko ozve cez SMS.",
-        },
-        {
-          speaker: "A",
-          de: "Wunderbar! Auf Wiederhören.",
-          sk: "Nádherné! Dovidenia (telefónicky).",
-        },
-      ],
-      comprehensionQuestions: [
-        {
-          question: "Was ist das Problem in Janas Wohnung?",
-          options: [
-            "Der Wasserhahn tropft",
-            "Die Heizung funktioniert nicht",
-            "Die Tür ist kaputt",
-            "Es gibt keinen Strom",
-          ],
-          answer: "Die Heizung funktioniert nicht",
-        },
-        {
-          question: "Seit wann funktioniert die Heizung nicht?",
-          options: ["Seit heute Morgen", "Seit gestern Abend", "Seit einer Woche", "Seit zwei Tagen"],
-          answer: "Seit gestern Abend",
-        },
-        {
-          question: "Wann kommt der Techniker?",
-          options: ["Um 12 Uhr", "Um 14 Uhr", "Um 15 Uhr", "Am nächsten Tag"],
-          answer: "Um 15 Uhr",
-        },
-      ],
-    },
-    {
-      type: "minitext",
-      instruction:
-        "Prečítaj si WhatsApp konverzáciu medzi Janou a jej prenajímateľkou o kvapkajúcom kohútiku. Odpovedz na otázky.",
-      text:
-        "Jana: Guten Tag Frau Huber! Ich schreibe wegen des Wasserhahns in meinem Bad – er tropft jetzt schon seit 3 Tagen. Ich habe es selbst versucht zu fixieren, aber es klappt nicht. Könnten Sie bitte jemanden schicken?\n\nFrau Huber: Hallo Jana! Oh, das tut mir leid! Ist es sehr schlimm?\n\nJana: Ja, leider. Er tropft die ganze Nacht – ich kann kaum schlafen. Außerdem steigt der Wasserverbrauch.\n\nFrau Huber: Ich verstehe. Unser Klempner ist morgen frei. Geht Donnerstag um 10 Uhr?\n\nJana: Ja, das ist super! Vielen Dank 🙏\n\nFrau Huber: Gern! Er heißt Herr Fischer. Er meldet sich morgen früh. 👍",
-      textSk:
-        "Jana: Dobrý deň pani Huber! Píšem kvôli kohútiku v kúpeľni – kvapká už 3 dni. Skúsila som to sama opraviť, ale nejde to. Mohli by ste prosím niekoho poslať?\n\nPani Huber: Ahoj Jana! Ó, je mi ľúto! Je to veľmi zlé?\n\nJana: Áno, bohužiaľ. Kvapká celú noc – sotva môžem spať. Okrem toho stúpa spotreba vody.\n\nPani Huber: Rozumiem. Náš inštalatér je zajtra voľný. Vyhovuje štvrtok o 10:00?\n\nJana: Áno, to je super! Ďakujem pekne 🙏\n\nPani Huber: Prosím! Volá sa pán Fischer. Ozve sa zajtra ráno. 👍",
-      questions: [
-        {
-          question: "Wie lange tropft der Wasserhahn schon?",
-          options: ["Seit gestern", "Seit 2 Tagen", "Seit 3 Tagen", "Seit einer Woche"],
-          answer: "Seit 3 Tagen",
-        },
-        {
-          question: "Wann kommt der Klempner?",
-          options: [
-            "Heute",
-            "Morgen um 8 Uhr",
-            "Donnerstag um 10 Uhr",
-            "Am Freitag",
-          ],
-          answer: "Donnerstag um 10 Uhr",
-        },
-        {
-          question: "Wie heißt der Klempner?",
-          options: ["Herr Huber", "Herr Fischer", "Herr Gruber", "Herr Techniker"],
-          answer: "Herr Fischer",
-        },
-      ],
-    },
-    {
-      type: "freewrite",
-      instruction:
-        "Napíš formálny e-mail IT supportu svojej firmy. Tvoj počítač nefunguje a potrebuješ pomoc urgentne.",
-      prompt:
-        "Dein Computer funktioniert nicht. Schreibe eine E-Mail an den IT-Support deiner Firma.",
-      minWords: 40,
-      exampleAnswer:
-        "Betreff: Computer-Problem – dringend\n\nSehr geehrtes IT-Support-Team,\n\nhiermit möchte ich Ihnen mitteilen, dass mein Computer seit heute Morgen nicht mehr funktioniert. Das System startet nicht mehr und ich kann nicht arbeiten.\n\nIch wäre sehr dankbar, wenn Sie mir so schnell wie möglich helfen könnten. Das ist dringend.\n\nMit freundlichen Grüßen,\nJana Nováková\nAbteilung Marketing, Zimmer 204",
+        [
+          "das Fieber",
+          "horúčka"
+        ],
+        [
+          "der Husten",
+          "kašeľ"
+        ],
+        [
+          "der Schnupfen",
+          "nádcha"
+        ],
+        [
+          "der Appetit",
+          "chuť do jedla"
+        ],
+        [
+          "die Krankheit",
+          "choroba"
+        ],
+        [
+          "der Kopf",
+          "hlava"
+        ],
+        [
+          "der Bauch",
+          "brucho"
+        ],
+        [
+          "die Schmerzen",
+          "bolesti"
+        ],
+        [
+          "weh tun",
+          "bolieť"
+        ],
+        [
+          "husten",
+          "kašľať"
+        ]
+      ]
     },
     {
       type: "wordorder",
-      instruction: "Zoraď slová do správnej nemeckej vety.",
+      instruction: "Usporiadajte slová do správneho nemeckého poradia.",
       sentences: [
         {
-          words: ["Jana", "spricht", "weder", "Russisch", "noch", "Französisch"],
-          correct: "Jana spricht weder Russisch noch Französisch",
-          hint: "Jana nehovorí ani po rusky ani po francúzsky.",
-          explanation: "'weder...noch' neguje obe možnosti súčasne. Sloveso stojí na 2. mieste, weder/noch koordinujú dva objekty.",
+          words: [
+            "tut",
+            "weh",
+            "Mein",
+            "Kopf"
+          ],
+          correct: "Mein Kopf tut weh",
+          hint: "Moja hlava bolí.",
+          explanation: "V jednoduchých oznamovacích vetách je sloveso zvyčajne na druhom mieste. V tomto prípade je sloveso 'tut weh' (bolí)."
         },
         {
-          words: ["Ich", "habe", "weder", "Zeit", "noch", "Geld"],
-          correct: "Ich habe weder Zeit noch Geld",
-          hint: "Nemám ani čas ani peniaze.",
-          explanation: "'weder...noch' s dvoma menami bez článku (abstraktné pojmy). Oba objekty sú v akuzatíve.",
+          words: [
+            "Ich",
+            "Fieber",
+            "habe",
+            "und",
+            "keinen",
+            "Appetit"
+          ],
+          correct: "Ich habe Fieber und keinen Appetit",
+          hint: "Mám horúčku a nemám chuť do jedla.",
+          explanation: "V hlavnej vete je sloveso 'habe' na druhom mieste. 'keinen Appetit' je predmet vo 4. páde s negatívnou časticou 'kein'."
         },
         {
-          words: ["Er", "ist", "weder", "klug", "noch", "fleißig"],
-          correct: "Er ist weder klug noch fleißig",
-          hint: "Nie je ani múdry ani pracovitý.",
-          explanation: "'weder...noch' koordinuje dve prídavné mená v predikátívnom postavení — bez skloňovania.",
+          words: [
+            "Sie",
+            "Haben",
+            "Fieber"
+          ],
+          correct: "Haben Sie Fieber",
+          hint: "Máte horúčku?",
+          explanation: "V otázkach s opytovacím slovom (tu nie je opytovacie slovo, ide o otázku áno/nie) je sloveso na prvom mieste."
         },
         {
-          words: ["Weder", "Jana", "noch", "Lukas", "kommt", "heute"],
-          correct: "Weder Jana noch Lukas kommt heute",
-          hint: "Ani Jana ani Lukas dnes nepríde.",
-          explanation: "Keď 'weder...noch' koordinuje podmety, sloveso môže byť v jednotnom čísle (kommt), pretože oba sú negované.",
+          words: [
+            "Wo",
+            "weh",
+            "tut",
+            "es"
+          ],
+          correct: "Wo tut es weh",
+          hint: "Kde to bolí?",
+          explanation: "V otázkach s opytovacím slovom ('Wo') je opytovacie slovo na prvom mieste, sloveso na druhom mieste."
         },
         {
-          words: ["Sie", "trinkt", "weder", "Kaffee", "noch", "Tee"],
-          correct: "Sie trinkt weder Kaffee noch Tee",
-          hint: "Nepije ani kávu ani čaj.",
-          explanation: "'weder...noch' po časovaní slovesa: Kaffee a Tee sú priame objekty (akuzatív bez článku — látkové podstatné mená).",
+          words: [
+            "Ich",
+            "Schmerzen",
+            "habe"
+          ],
+          correct: "Ich habe Schmerzen",
+          hint: "Mám bolesti.",
+          explanation: "V jednoduchých oznamovacích vetách je sloveso 'habe' na druhom mieste."
+        }
+      ]
+    },
+    {
+      type: "fill",
+      instruction: "Doplňte správne slovo alebo tvar slova.",
+      questions: [
+        {
+          sentence: "Ich habe ____ und keinen Appetit.",
+          answer: "Fieber",
+          hint: "horúčka",
+          explanation: "Používame podstatné meno 'das Fieber' (horúčka) v 4. páde po slovese 'haben'."
         },
-      ],
+        {
+          sentence: "Mein Kopf ____ weh.",
+          answer: "tut",
+          hint: "bolí",
+          explanation: "Používame sloveso 'weh tun' v 3. osobe jednotného čísla, pretože podmetom je 'Mein Kopf'."
+        },
+        {
+          sentence: "Haben Sie ____?",
+          answer: "Fieber",
+          hint: "horúčka",
+          explanation: "Opäť používame podstatné meno 'das Fieber' (horúčka) v 4. páde po slovese 'haben'."
+        },
+        {
+          sentence: "Der Arzt fragt: 'Wo ____ es weh?'",
+          answer: "tut",
+          hint: "bolí",
+          explanation: "Používame sloveso 'weh tun' v 3. osobe jednotného čísla, pretože podmetom je 'es' (to)."
+        },
+        {
+          sentence: "Ich habe ____.",
+          answer: "Schmerzen",
+          hint: "bolesti",
+          explanation: "Používame podstatné meno 'die Schmerzen' (bolesti) v 4. páde po slovese 'haben'."
+        },
+        {
+          sentence: "Er hat ____.",
+          answer: "Husten",
+          hint: "kašeľ",
+          explanation: "Používame podstatné meno 'der Husten' (kašeľ) v 4. páde po slovese 'haben'."
+        },
+        {
+          sentence: "Sie ____ Schnupfen.",
+          answer: "hat",
+          hint: "má",
+          explanation: "Toto je test na minulú lekciu (L04). Používame 3. osobu jednotného čísla slovesa 'haben'."
+        },
+        {
+          sentence: "Ich ____ müde.",
+          answer: "bin",
+          hint: "som",
+          explanation: "Toto je test na minulú lekciu (L01). Používame 1. osobu jednotného čísla slovesa 'sein'."
+        }
+      ]
+    },
+    {
+      type: "listen",
+      instruction: "Počúvajte a napíšte, čo počujete.",
+      questions: [
+        {
+          de: "Fieber",
+          sk: "horúčka"
+        },
+        {
+          de: "Husten",
+          sk: "kašeľ"
+        },
+        {
+          de: "Schnupfen",
+          sk: "nádcha"
+        },
+        {
+          de: "Appetit",
+          sk: "chuť do jedla"
+        },
+        {
+          de: "Kopf",
+          sk: "hlava"
+        },
+        {
+          de: "Bauch",
+          sk: "brucho"
+        },
+        {
+          de: "Ohr",
+          sk: "ucho"
+        },
+        {
+          de: "Bein",
+          sk: "noha"
+        },
+        {
+          de: "Schmerzen",
+          sk: "bolesti"
+        },
+        {
+          de: "weh tun",
+          sk: "bolieť"
+        }
+      ]
+    },
+    {
+      type: "mcq",
+      instruction: "Vyberte správnu možnosť.",
+      questions: [
+        {
+          question: "Čo znamená 'Ich habe Fieber'?",
+          options: [
+            "Mám nádchu.",
+            "Mám horúčku.",
+            "Bolí ma hlava.",
+            "Mám kašeľ."
+          ],
+          answer: 1,
+          explanation: "'Fieber' znamená horúčka. 'Ich habe' znamená 'mám'."
+        },
+        {
+          question: "Ako sa povie 'Moje brucho bolí' po nemecky?",
+          options: [
+            "Mein Kopf tut weh.",
+            "Mein Bauch tut weh.",
+            "Mein Ohr tut weh.",
+            "Mein Bein tut weh."
+          ],
+          answer: 1,
+          explanation: "Podstatné meno pre 'brucho' je 'der Bauch'. Používame sloveso 'tut weh' na vyjadrenie bolesti."
+        },
+        {
+          question: "Ktoré sloveso sa používa na vyjadrenie bolesti, napr. 'Mein Zahn tut ___ weh.'?",
+          options: [
+            "haben",
+            "sein",
+            "tun",
+            "können"
+          ],
+          answer: 2,
+          explanation: "Fráza 'weh tun' znamená 'bolieť'. V tomto kontexte sa používa sloveso 'tun'."
+        },
+        {
+          question: "Čo znamená 'Husten'?",
+          options: [
+            "Nádcha",
+            "Bolesti",
+            "Kašeľ",
+            "Horúčka"
+          ],
+          answer: 2,
+          explanation: "'Husten' je nemecké slovo pre kašeľ."
+        },
+        {
+          question: "Ako sa spýtať 'Ako dlho ste už chorý/chorá?' po nemecky?",
+          options: [
+            "Wie geht es Ihnen?",
+            "Was ist los?",
+            "Wie lange sind Sie schon krank?",
+            "Haben Sie Schmerzen?"
+          ],
+          answer: 2,
+          explanation: "Táto otázka sa používa na zistenie dĺžky trvania choroby."
+        },
+        {
+          question: "Čo znamená 'keinen Appetit'?",
+          options: [
+            "Veľa chuti do jedla",
+            "Žiadnu chuť do jedla",
+            "Veľa jesť",
+            "Málo jesť"
+          ],
+          answer: 1,
+          explanation: "'Keinen' je negácia a 'Appetit' znamená chuť do jedla. Spolu to znamená 'žiadnu chuť do jedla'."
+        },
+        {
+          question: "V ktorej lekcii sme sa naučili sloveso 'können'?",
+          options: [
+            "L20",
+            "L22",
+            "L36",
+            "L40"
+          ],
+          answer: 1,
+          explanation: "Sloveso 'können' (môcť, vedieť) bolo predstavené v lekcii L22."
+        },
+        {
+          question: "Čo znamená 'war'?",
+          options: [
+            "je",
+            "bol/bola/bolo",
+            "bude",
+            "mám"
+          ],
+          answer: 1,
+          explanation: "'War' je minulý čas slovesa 'sein' (byť) pre 3. osobu jednotného čísla (on/ona/ono)."
+        }
+      ]
+    },
+    {
+      type: "minitext",
+      instruction: "Lies den Dialog und beantworte die Fragen.",
+      text: "Dr. Hirsch: Guten Tag, Frau Nováková. Setzen Sie sich bitte.\nJana: Danke, Herr Doktor.\nDr. Hirsch: Was fehlt Ihnen denn?\nJana: Ich fühle mich nicht gut. Mein Kopf tut weh und ich habe Fieber.\nDr. Hirsch: Haben Sie auch Husten oder Schnupfen?\nJana: Nein, nur Kopfschmerzen und ich habe keinen Appetit. Ich habe auch ein bisschen Bauchschmerzen.\nDr. Hirsch: Wie lange sind Sie schon krank?\nJana: Seit gestern Abend. Ich habe gestern Abend gegessen und dann tat mein Bauch weh.\nDr. Hirsch: Okay. Wir machen jetzt eine Untersuchung.",
+      textSk: "Dr. Hirsch: Dobrý deň, pani Nováková. Sadnite si, prosím.\nJana: Ďakujem, pán doktor.\nDr. Hirsch: Čo vám chýba?\nJana: Necítim sa dobre. Bolí ma hlava a mám horúčku.\nDr. Hirsch: Máte aj kašeľ alebo nádchu?\nJana: Nie, len bolesti hlavy a nemám chuť do jedla. Mám aj trochu bolesti brucha.\nDr. Hirsch: Ako dlho ste už chorá?\nJana: Od včerajšieho večera. Včera večer som jedla a potom ma bolelo brucho.\nDr. Hirsch: Dobre. Teraz urobíme vyšetrenie.",
+      questions: [
+        {
+          question: "Was fehlt Jana?",
+          options: [
+            "Sie hat Fieber und Kopfschmerzen.",
+            "Sie hat Husten und Schnupfen.",
+            "Sie hat Bauchschmerzen und Ohrenschmerzen.",
+            "Sie hat Fieber und Zahnschmerzen."
+          ],
+          answer: 0,
+          explanation: "Jana sagt: 'Mein Kopf tut weh und ich habe Fieber.'"
+        },
+        {
+          question: "Hat Jana Husten?",
+          options: [
+            "Ja, sie hustet viel.",
+            "Nein, sie hat keinen Husten.",
+            "Sie hustet nur manchmal.",
+            "Sie hustet nicht, aber sie schnupft."
+          ],
+          answer: 1,
+          explanation: "Dr. Hirsch fragt: 'Haben Sie auch Husten oder Schnupfen?' Jana antwortet: 'Nein, nur Kopfschmerzen...'"
+        },
+        {
+          question: "Was tut Jana auch weh?",
+          options: [
+            "Ihr Ohr tut weh.",
+            "Ihr Zahn tut weh.",
+            "Ihr Bauch tut weh.",
+            "Ihr Bein tut weh."
+          ],
+          answer: 2,
+          explanation: "Jana sagt: 'Ich habe auch ein bisschen Bauchschmerzen.'"
+        },
+        {
+          question: "Seit wann ist Jana krank?",
+          options: [
+            "Seit heute Morgen.",
+            "Seit gestern Abend.",
+            "Seit einer Woche.",
+            "Seit heute Mittag."
+          ],
+          answer: 1,
+          explanation: "Jana sagt: 'Seit gestern Abend.'"
+        }
+      ]
     },
     {
       type: "speaking",
-      instruction: "Počúvaj nemeckú vetu. Potom hovor nahlas a skontroluj sa.",
+      instruction: "Höre zu und sprich nach.",
       phrases: [
         {
-          de: "Jana spricht weder Russisch noch Französisch.",
-          sk: "Jana nehovorí ani po rusky ani po francúzsky.",
-          tip: "weder=[veːdɐ], noch=[nɔx] – ch=[x]",
+          de: "das Fieber",
+          sk: "horúčka",
+          tip: "Fieber: [f], [i:], [b]e[r]"
         },
         {
-          de: "Ich habe weder Zeit noch Geld.",
-          sk: "Nemám ani čas ani peniaze.",
-          tip: "weder...noch = ani...ani – obe negované",
+          de: "der Husten",
+          sk: "kašeľ",
+          tip: "Husten: [h], [u], [s]t[e]n"
         },
         {
-          de: "Er ist weder klug noch fleißig.",
-          sk: "Nie je ani múdry ani pracovitý.",
-          tip: "fleißig=[flaɪsɪç] – ei=[aɪ], ß=[s]",
+          de: "Mein Kopf tut weh.",
+          sk: "Bolí ma hlava.",
+          tip: "Kopf: [k], [ɔ]p[f]. Weh: [v]e[ç]"
         },
         {
-          de: "Weder Jana noch Lukas kommt heute.",
-          sk: "Ani Jana ani Lukas dnes nepríde.",
-          tip: "weder na začiatku – inverzné poradie vety",
+          de: "Wo tut es weh?",
+          sk: "Kde to bolí?",
+          tip: "Wo: [v]o. Tut: [t]u[t]. Weh: [v]e[ç]"
         },
         {
-          de: "Sie trinkt weder Kaffee noch Tee.",
-          sk: "Nepije ani kávu ani čaj.",
-          tip: "weder vždy pred prvým členom páru",
+          de: "Ich habe keinen Appetit.",
+          sk: "Nemám chuť do jedla.",
+          tip: "Ich: [i]ç. Keinen: [k]a[i]n[e]n. Appetit: [a]p[e]t[i]t"
         },
-      ],
+        {
+          de: "Haben Sie Schmerzen?",
+          sk: "Máte bolesti?",
+          tip: "Haben: [h], [a], [b]e[n]. Schmerzen: [ʃ]m[ɛ]r[ts]e[n]"
+        },
+        {
+          de: "Wie lange sind Sie schon krank?",
+          sk: "Ako dlho ste už chorý/chorá?",
+          tip: "Wie: [v]i:. Lange: [l]a[ŋ]g[e]. Krank: [kr]a[ŋ]k"
+        }
+      ]
     },
+    {
+      type: "truefalse",
+      instruction: "Rozhodnite, či sú nasledujúce tvrdenia pravdivé (Richtig) alebo nepravdivé (Falsch).",
+      statements: [
+        {
+          statement: "Wenn man Fieber hat, ist die Körpertemperatur normal.",
+          isTrue: false,
+          explanation: "Fieber bedeutet, dass die Körpertemperatur erhöht ist."
+        },
+        {
+          statement: "Der Schnupfen ist eine Krankheit, bei der man hustet.",
+          isTrue: false,
+          explanation: "Schnupfen bedeutet, dass die Nase läuft. Husten ist ein anderes Symptom."
+        },
+        {
+          statement: "Wenn der Bauch weh tut, hat man Schmerzen im Bauch.",
+          isTrue: true,
+          explanation: "Das ist korrekt. 'Weh tun' bedeutet Schmerzen haben."
+        },
+        {
+          statement: "Man kann keinen Appetit haben, wenn man gesund ist.",
+          isTrue: true,
+          explanation: "Wenn man krank ist, hat man oft keinen Appetit. Aber auch gesunde Menschen können mal keinen Appetit haben."
+        },
+        {
+          statement: "Der Finger tut weh, wenn man Fieber hat.",
+          isTrue: false,
+          explanation: "Fieber betrifft den ganzen Körper, aber es tut nicht automatisch der Finger weh. Man kann aber auch Fieber UND Schmerzen im Finger haben."
+        }
+      ]
+    },
+    {
+      type: "dictation",
+      instruction: "Napíšte vety, ktoré počujete.",
+      sentences: [
+        {
+          de: "Ich habe Husten.",
+          sk: "Mám kašeľ."
+        },
+        {
+          de: "Mein Ohr tut weh.",
+          sk: "Bolí ma ucho."
+        },
+        {
+          de: "Er hat keinen Appetit.",
+          sk: "On nemá chuť do jedla."
+        },
+        {
+          de: "Sie hat seit drei Tagen Fieber.",
+          sk: "Ona má horúčku tri dni."
+        },
+        {
+          de: "Mein Bein tut seit gestern weh.",
+          sk: "Moja noha bolí od včera."
+        }
+      ]
+    },
+    {
+      type: "categorysort",
+      instruction: "Roztrieďte slová do správnych kategórií.",
+      categories: [
+        {
+          name: "Časti tela (Körperteile)",
+          color: "blue",
+          words: [
+            "der Kopf",
+            "der Bauch",
+            "das Ohr",
+            "das Bein",
+            "der Arm",
+            "die Hand"
+          ]
+        },
+        {
+          name: "Symptómy choroby (Krankheitssymptome)",
+          color: "rose",
+          words: [
+            "das Fieber",
+            "der Husten",
+            "der Schnupfen",
+            "die Schmerzen",
+            "der Appetit"
+          ]
+        }
+      ],
+      explanation: "V tejto kategórii triedime časti ľudského tela od príznakov choroby."
+    },
+    {
+      type: "translation",
+      instruction: "Preložte slovenské vety do nemčiny.",
+      sentences: [
+        {
+          sk: "Bolí ma hlava.",
+          answer: "Mein Kopf tut weh.",
+          hint: "Kopf, weh tun",
+          explanation: "Používame sloveso 'weh tun' na opis bolesti. Tvar slovesa sa prispôsobuje časti tela: 'Der Kopf tut weh'."
+        },
+        {
+          sk: "Máte horúčku?",
+          answer: "Haben Sie Fieber?",
+          hint: "Haben, Fieber",
+          explanation: "Na opýtanie sa na horúčku používame sloveso 'haben' a podstatné meno 'das Fieber'."
+        },
+        {
+          sk: "Ako dlho ste už chorý?",
+          answer: "Wie lange sind Sie schon krank?",
+          hint: "Wie lange, sind",
+          explanation: "Používame 'Wie lange' na otázku o dĺžke trvania a sloveso 'sein' v spojení s prídavným menom 'krank'."
+        },
+        {
+          sk: "Nemám chuť do jedla.",
+          answer: "Ich habe keinen Appetit.",
+          hint: "haben, keinen Appetit",
+          explanation: "Zápor pri podstatnom mene 'Appetit' vytvoríme pomocou 'keinen'."
+        }
+      ]
+    },
+    {
+      type: "conjugation",
+      instruction: "Doplňte správne tvary slovesa 'husten' v prítomnom čase.",
+      verbs: [
+        {
+          infinitive: "husten",
+          translation: "kašľať",
+          forms: [
+            {
+              pronoun: "ich",
+              correct: "huste"
+            },
+            {
+              pronoun: "du",
+              correct: "hustest"
+            },
+            {
+              pronoun: "er/sie/es",
+              correct: "hustet"
+            },
+            {
+              pronoun: "wir",
+              correct: "husten"
+            },
+            {
+              pronoun: "ihr",
+              correct: "hustet"
+            },
+            {
+              pronoun: "sie/Sie",
+              correct: "husten"
+            }
+          ],
+          note: "Sloveso 'husten' je pravidelné sloveso. V 1. a 3. osobe jednotného čísla (ich, er/sie/es) sa pridáva koncovka '-t'."
+        }
+      ]
+    }
   ],
-  reviewWords: ["L58_V01", "L58_V02", "L58_V04", "L58_V05", "L58_V06", "L58_V12", "L58_V17", "L58_V18"],
-  lessonNotes:
-    "Zdvorilé sťažnosti sú kľúčovou komunikačnou zručnosťou. 'Könnten Sie...' (Konjunktív II) je vždy bezpečnejšie ako 'Können Sie...' formálnom kontexte. 'Seit + prítomný čas' = situácia stale trvá – veľmi bežná konštrukcia! V Rakúsku môže správca domu byť 'Hausbesorger' (staromódny rakúsky výraz) alebo 'Hausmeister' (bežnejší dnes).",
+  reviewWords: []
 };

@@ -1,6 +1,28 @@
 import { GoogleGenAI } from '@google/genai';
 import fs from 'fs';
 import path from 'path';
+import { createRequire } from 'module';
+const require = createRequire(import.meta.url);
+
+// Track AI API usage to api_stats.json
+function trackUsage(model, type, amount) {
+    try {
+        const { trackApiUsage } = require('./apiTracker.cjs');
+        trackApiUsage(model, type, amount);
+    } catch (e) {
+        console.error('[api-tracking]', e.message);
+    }
+}
+
+// Save an entry to the unified Knowledge Base (fire-and-forget)
+function kbSave({ type, key, input, output, model, sourceApp }) {
+    try {
+        const { save } = require('./knowledgeBase.cjs');
+        save({ type, key, input, output, model: model || '', sourceApp: sourceApp || '', upsert: true });
+    } catch (e) {
+        console.error('[KB save error]', e.message);
+    }
+}
 
 // Load .env
 const envPath = path.join(process.cwd(), '.env');
@@ -89,6 +111,14 @@ export async function handleSegmentVideo(req, res) {
                         config: { temperature: 0.1 }
                     });
 
+                    // Track Gemini Flash Lite usage for segment title generation
+                    const titleUsage = aiTitle.usageMetadata;
+                    if (titleUsage) {
+                        trackUsage('gemini-2.5-flash-lite', 'inputTokens', titleUsage.promptTokenCount || 0);
+                        trackUsage('gemini-2.5-flash-lite', 'outputTokens', titleUsage.candidatesTokenCount || 0);
+                        trackUsage('gemini-2.5-flash-lite', 'calls', 1);
+                    }
+
                     if (aiTitle.text) {
                         seg.topicDescription = aiTitle.text.replace(/["']/g, '').trim();
                     }
@@ -152,6 +182,12 @@ export async function handleTranscribeAudio(req, res) {
             }
 
             const data = await whisperRes.json();
+
+            // Track Whisper STT usage — estimate duration from buffer size (~64kbps webm voice)
+            const estimatedSeconds = Math.max(1, Math.round(buffer.length / 8192));
+            trackUsage('openai-whisper', 'seconds', estimatedSeconds);
+            trackUsage('openai-whisper', 'calls', 1);
+
             res.writeHead(200); res.end(JSON.stringify({ text: data.text }));
         } catch (err) {
             console.error('[handleTranscribeAudio] Error:', err);
@@ -232,7 +268,7 @@ Wenn userText = "START": fang direkt an — beziehe dich auf etwas Konkretes aus
             } catch (fallbackErr) {
                 console.warn("Gemini Flash Lite failed, falling back to Flash:", fallbackErr.message);
                 aiRes = await ai.models.generateContent({
-                    model: 'gemini-2.5-flash',
+                    model: 'gemini-2.5-flash-lite',
                     contents: cleanedContents,
                     config: {
                         temperature: 0.8,
@@ -241,6 +277,14 @@ Wenn userText = "START": fang direkt an — beziehe dich auf etwas Konkretes aus
                 });
             }
             const AIResponseText = aiRes.text || "Das hast du gut gesagt!";
+
+            // Track Gemini Flash Lite usage for voice chat
+            const voiceChatUsage = aiRes.usageMetadata;
+            if (voiceChatUsage) {
+                trackUsage('gemini-2.5-flash-lite', 'inputTokens', voiceChatUsage.promptTokenCount || 0);
+                trackUsage('gemini-2.5-flash-lite', 'outputTokens', voiceChatUsage.candidatesTokenCount || 0);
+                trackUsage('gemini-2.5-flash-lite', 'calls', 1);
+            }
 
             // 2. Synthesize audio via OpenAI TTS
             const ttsReq = await fetch("https://api.openai.com/v1/audio/speech", {
@@ -263,6 +307,10 @@ Wenn userText = "START": fang direkt an — beziehe dich auf etwas Konkretes aus
 
             const audioBuffer = Buffer.from(await ttsReq.arrayBuffer());
             const audioBase64 = audioBuffer.toString('base64');
+
+            // Track TTS-1 standard usage (voice coach responses)
+            trackUsage('openai-tts-standard', 'characters', AIResponseText.length);
+            trackUsage('openai-tts-standard', 'calls', 1);
 
             res.writeHead(200); res.end(JSON.stringify({
                 text: AIResponseText,
@@ -345,7 +393,7 @@ Antworte NUR mit gültigem JSON ohne Markdown-Formatierung:
                 });
             } catch {
                 aiRes = await ai.models.generateContent({
-                    model: 'gemini-2.5-flash',
+                    model: 'gemini-2.5-flash-lite',
                     contents: [{ role: 'user', parts: [{ text: prompt }] }],
                     config: { temperature: 0.3 }
                 });
@@ -357,8 +405,26 @@ Antworte NUR mit gültigem JSON ohne Markdown-Formatierung:
 
             const exerciseData = JSON.parse(rawText);
 
+            // Track Gemini Flash Lite usage for video exercise generation
+            const exerciseUsage = aiRes.usageMetadata;
+            if (exerciseUsage) {
+                trackUsage('gemini-2.5-flash-lite', 'inputTokens', exerciseUsage.promptTokenCount || 0);
+                trackUsage('gemini-2.5-flash-lite', 'outputTokens', exerciseUsage.candidatesTokenCount || 0);
+                trackUsage('gemini-2.5-flash-lite', 'calls', 1);
+            }
+
             if (!fs.existsSync(CACHE_DIR)) fs.mkdirSync(CACHE_DIR, { recursive: true });
             fs.writeFileSync(CACHE_FILE, JSON.stringify(exerciseData, null, 2));
+
+            // Also save to unified Knowledge Base
+            kbSave({
+                type:      'video_exercises',
+                key:       `video_exercises::${videoId}`,
+                input:     { videoId },
+                output:    exerciseData,
+                model:     'gemini-2.5-flash-lite',
+                sourceApp: 'video_coach'
+            });
 
             res.writeHead(200); res.end(JSON.stringify(exerciseData));
         } catch (err) {

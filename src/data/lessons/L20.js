@@ -1,502 +1,861 @@
-﻿export const lesson20 = {
+export const lesson20 = {
   id: 20,
   week: 4,
   day: 5,
-  title: "Trennbare Verben — Separable Verbs",
-  topic: "Odlučiteľné slovesá",
+  title: "Termine vereinbaren: E-Mails und Telefonate",
+  topic: "Pracovný telefón, e-maily, dohadovanie pracovného hovoru. Tvorenie zložených slov.",
   cefr: "A1",
-  xpReward: 35,
-  narrativeContext:
-    "Jana und ihr Mitbewohner Lukas planen das Wochenende. 'Wann fährt der Zug ab?' 'Wann stehst du auf?' Jana schreibt eine SMS an ihre Mitbewohnerin Luisa — das ist der erste Minitext des Kurses!",
-  communicativeGoal:
-    "Po tejto lekcii viem správne oddeľovať predpony trennbarer Verben v hlavnej vete a poznám bežné odlučiteľné slovesá pre každodenné aktivity.",
-  skillFocus: ["grammar", "vocabulary", "speaking", "reading"],
-
-  grammarNote: {
-    rule: "Trennbare Verben — odlučiteľné slovesá: predpona ide na KONIEC hlavnej vety",
-    explanation:
-      "V hlavnej vete sa predpona odlučiteľného slovesa odtrhne a ide na ÚPLNÝ KONIEC. 'Jana steht um 7 Uhr auf.' (AUF ide na koniec!). V infinitíve ostáva predpona pripojená: 'Jana muss um 7 Uhr aufstehen.' Bežné predpony: ab- (preč), an- (k), auf- (hore/otvor), aus- (von), ein- (dnu), zu- (zavrieť/k cieľu). Špeciálny prípad: einladen → e→ä vokalovú zmenu: er lädt ein (vzor z L14!). V slovníku: predpona je oddelená zvislou čiarou: auf|stehen, ein|kaufen.",
-    examples: [
-      { de: "Jana steht um 7 Uhr auf. (auf|stehen)", sk: "Jana vstáva o 7:00." },
-      { de: "Der Zug fährt um 8 Uhr ab. (ab|fahren)", sk: "Vlak odchádza o 8:00." },
-      { de: "Ich rufe dich morgen an. (an|rufen)", sk: "Zavolám ti zajtra." },
-      { de: "Er holt Jana vom Bahnhof ab. (ab|holen)", sk: "Vyzdvihne Janu na stanici." },
-    ],
-    slovakContrastNote:
-      "Slovenčina má slovesné predpony, no NIKDY sa neoddeľujú. Nemčina je špeciálna — predpona sa fyzicky presúva na koniec hlavnej vety. To sa spočiatku zdá zvláštne, ale stane sa to automatickým. Spomeň si na Satzklammer z L16 — modálne sloveso + infinitív na konci — tu je to podobná logika!",
-  },
-
+  xpReward: 20,
+  narrativeContext: "Jana arbeitet in Wien. Sie muss einen Termin für ihren Chef und einen Kunden vereinbaren.",
+  communicativeGoal: "Nach dieser Lektion kann ich einen Termin per E-Mail und Telefon vereinbaren und wichtige zusammengesetzte Nomen verstehen.",
+  skillFocus: [
+    "vocabulary",
+    "grammar",
+    "listening",
+    "reading",
+    "writing",
+    "speaking"
+  ],
+  lessonNotes: "V tejto lekcii sa naučíš, ako dohodnúť pracovný hovor. Jana najprv napíše e-mail a potom zavolá. Spoznáš formálne frázy pre e-maily a telefonáty a objavíš aj zaujímavé zložené slová.",
+  grammarNotes: [
+    {
+      rule: "Zusammengesetzte Nomen (Zložené podstatné mená)",
+      explanation: "<p>V nemčine je veľmi bežné tvoriť nové podstatné mená spájaním dvoch alebo viacerých slov. Tieto zložené podstatné mená sa vždy píšu ako jedno slovo. Rod (der, die, das) a spôsob tvorby množného čísla celého zloženého podstatného mena je vždy určený posledným slovom v reťazci. Niekedy sa medzi slová vkladá spojovacia hláska, najčastejšie „-s-“, ale aj „-en-“ alebo „-er-“, ktorá pomáha výslovnosti a plynulosti. Tieto spojovacie hlásky nemajú žiadny špecifický význam a ich použitie sa treba naučiť.</p>",
+      examples: [
+        {
+          de: "der Anruf + die Zeit = die Anrufzeit",
+          sk: "hovor + čas = čas hovoru",
+          note: "Nomen + Nomen"
+        },
+        {
+          de: "die E-Mail + die Adresse = die E-Mail-Adresse",
+          sk: "e-mail + adresa = e-mailová adresa",
+          note: "Nomen + Nomen"
+        },
+        {
+          de: "der Termin + der Vorschlag = der Terminvorschlag",
+          sk: "termín + návrh = návrh termínu",
+          note: "Nomen + Nomen s Fugen-s"
+        },
+        {
+          de: "das Büro + die Tür = die Bürotür",
+          sk: "kancelária + dvere = dvere kancelárie",
+          note: "Nomen + Nomen"
+        },
+        {
+          de: "das Telefon + das Gespräch = das Telefongespräch",
+          sk: "telefón + rozhovor = telefonický rozhovor",
+          note: "Nomen + Nomen"
+        },
+        {
+          de: "die Arbeit + der Tag = der Arbeitstag",
+          sk: "práca + deň = pracovný deň",
+          note: "Nomen + Nomen"
+        },
+        {
+          de: "die Besprechung + der Raum = der Besprechungsraum",
+          sk: "porada + miestnosť = zasadacia miestnosť",
+          note: "Nomen + Nomen s Fugen-s"
+        },
+        {
+          de: "anrufen + der Beantworter = der Anrufbeantworter",
+          sk: "zavolať + odkazovač = odkazovač",
+          note: "Verb + Nomen"
+        }
+      ],
+      slovakContrastNote: "V slovenčine tiež tvoríme zložené slová, ale často ich píšeme s pomlčkou (napr. pracovno-právny) alebo používame prídavné mená (napr. pracovný stôl namiesto Arbeitstisch). V nemčine sa zložené podstatné mená takmer vždy píšu ako jedno slovo a sú veľmi časté. Dôležité je pamätať, že rod a množné číslo celého slova určuje vždy posledné podstatné meno."
+    },
+    {
+      rule: "Formulierungen für Termine und Anrufe (Frázy pre termíny a telefonáty)",
+      explanation: "<p>Pri dohadovaní termínov, telefonovaní alebo posielaní e-mailov je dôležité poznať základné frázy, ktoré vám pomôžu vyjadriť sa zdvorilo a efektívne. Používame modálne slovesá ako „können“ (môcť) a „möchten“ (chcieť, rád by som), ako aj priame otázky a žiadosti. Tieto frázy vám umožnia pýtať sa na dostupnosť, navrhovať stretnutia alebo žiadať o spätné zavolanie.</p>",
+      examples: [
+        {
+          de: "Ich möchte einen Termin vereinbaren.",
+          sk: "Chcel by som si dohodnúť termín."
+        },
+        {
+          de: "Können wir uns am Dienstag treffen?",
+          sk: "Môžeme sa stretnúť v utorok?"
+        },
+        {
+          de: "Haben Sie am Mittwoch Zeit?",
+          sk: "Máte v stredu čas?"
+        },
+        {
+          de: "Rufen Sie mich bitte zurück.",
+          sk: "Zavolajte mi, prosím, späť."
+        },
+        {
+          de: "Ich rufe Sie später an.",
+          sk: "Zavolám vám neskôr."
+        },
+        {
+          de: "Sagen Sie mir bitte Bescheid.",
+          sk: "Dajte mi, prosím, vedieť."
+        },
+        {
+          de: "Wann passt es Ihnen?",
+          sk: "Kedy vám to vyhovuje?"
+        },
+        {
+          de: "Ich bin ab 10 Uhr erreichbar.",
+          sk: "Som dostupný od 10. hodiny."
+        }
+      ],
+      slovakContrastNote: "Slovenčina používa podobné štruktúry pre zdvorilé žiadosti a otázky. Rozdiel je často v doslovnom preklade a slovoslede. Napríklad, priamejší Imperatív v nemčine (Rufen Sie mich bitte zurück!) môže znieť v slovenčine menej zdvorilo, ak by sme ho preložili doslovne ako „Zavolajte mi späť!“. Preto je dôležité naučiť sa celé nemecké frázy, aby ste zneli prirodzene a zdvorilo."
+    }
+  ],
   vocab: [
     {
-      de: "abfahren → fährt ab",
-      sk: "odísť, odchádzať (dopravou)",
-      example: "Der Zug fährt um 8 ab.",
-      exampleSk: "Vlak odchádza o 8.",
-      gender: null,
+      de: "der Termin",
+      sk: "termín",
+      gender: "M",
       srsId: "L20_V01",
-      recycledFrom: [16],
+      example: "Ich möchte einen Termin vereinbaren.",
+      exampleSk: "Chcem dohodnúť termín.",
+      recycledFrom: []
     },
     {
-      de: "ankommen → kommt an",
-      sk: "prísť, prichádzať",
-      example: "Wir kommen um 10 an.",
-      exampleSk: "Prichádzame o 10.",
-      gender: null,
+      de: "die Zeit",
+      sk: "čas",
+      gender: "F",
       srsId: "L20_V02",
-      recycledFrom: [16],
+      example: "Wann ist Ihnen eine gute Zeit?",
+      exampleSk: "Kedy je pre vás vhodný čas?",
+      recycledFrom: []
     },
     {
-      de: "aufstehen → steht auf",
-      sk: "vstávať, vstať",
-      example: "Jana steht um 7 Uhr auf.",
-      exampleSk: "Jana vstáva o 7:00.",
-      gender: null,
+      de: "die Woche",
+      sk: "týždeň",
+      gender: "F",
       srsId: "L20_V03",
-      recycledFrom: [],
+      example: "Die nächste Woche ist sehr voll.",
+      exampleSk: "Budúci týždeň je veľmi plný.",
+      recycledFrom: []
     },
     {
-      de: "einschlafen → schläft ein",
-      sk: "zaspávať, zaspať",
-      example: "Er schläft um Mitternacht ein.",
-      exampleSk: "O polnoci zaspí.",
-      gender: null,
+      de: "der Anruf",
+      sk: "telefonát",
+      gender: "M",
       srsId: "L20_V04",
-      recycledFrom: [],
+      example: "Ich erwarte einen wichtigen Anruf.",
+      exampleSk: "Očakávam dôležitý hovor.",
+      recycledFrom: []
     },
     {
-      de: "aufmachen → macht auf",
-      sk: "otvoriť",
-      example: "Mach bitte das Fenster auf.",
-      exampleSk: "Otvor, prosím, okno.",
-      gender: null,
+      de: "das Gespräch",
+      sk: "rozhovor",
+      gender: "N",
       srsId: "L20_V05",
-      recycledFrom: [],
+      example: "Wir müssen ein Gespräch führen.",
+      exampleSk: "Musíme viesť rozhovor.",
+      recycledFrom: []
     },
     {
-      de: "zumachen → macht zu",
-      sk: "zatvoriť",
-      example: "Mach die Tür zu, bitte!",
-      exampleSk: "Zavri dvere, prosím!",
-      gender: null,
+      de: "die Firma",
+      sk: "firma",
+      gender: "F",
       srsId: "L20_V06",
-      recycledFrom: [],
+      example: "Die Firma ist in Berlin.",
+      exampleSk: "Firma je v Berlíne.",
+      recycledFrom: []
     },
     {
-      de: "einladen → lädt ein",
-      sk: "pozvať",
-      example: "Er lädt Jana zum Essen ein.",
-      exampleSk: "Pozýva Janu na jedlo.",
-      gender: null,
+      de: "der Kunde",
+      sk: "klient",
+      gender: "M",
       srsId: "L20_V07",
-      recycledFrom: [],
+      example: "Der Kunde wartet auf uns.",
+      exampleSk: "Klient na nás čaká.",
+      recycledFrom: []
     },
     {
-      de: "ausgehen → geht aus",
-      sk: "ísť von, vychádzať",
-      example: "Gehst du heute Abend aus?",
-      exampleSk: "Ideš dnes večer von?",
-      gender: null,
+      de: "die Nachricht",
+      sk: "správa",
+      gender: "F",
       srsId: "L20_V08",
-      recycledFrom: [],
+      example: "Bitte senden Sie mir eine Nachricht.",
+      exampleSk: "Prosím, pošlite mi správu.",
+      recycledFrom: []
     },
     {
-      de: "einkaufen → kauft ein",
-      sk: "nakupovať",
-      example: "Jana kauft samstags ein.",
-      exampleSk: "Jana nakupuje v sobotu.",
-      gender: null,
+      de: "die Uhrzeit",
+      sk: "čas (hodina)",
+      gender: "F",
       srsId: "L20_V09",
-      recycledFrom: [],
+      example: "Welche Uhrzeit passt Ihnen?",
+      exampleSk: "Ktorý čas vám vyhovuje?",
+      recycledFrom: []
     },
     {
-      de: "anrufen → ruft an",
-      sk: "zavolať (telefón)",
-      example: "Ich rufe dich morgen an.",
-      exampleSk: "Zavolám ti zajtra.",
-      gender: null,
+      de: "das Datum",
+      sk: "dátum",
+      gender: "N",
       srsId: "L20_V10",
-      recycledFrom: [],
+      example: "Welches Datum ist gut für Sie?",
+      exampleSk: "Ktorý dátum je pre vás dobrý?",
+      recycledFrom: []
     },
     {
-      de: "abholen → holt ab",
-      sk: "vyzdvihnúť, prísť po niekoho",
-      example: "Er holt Jana vom Bahnhof ab.",
-      exampleSk: "Vyzdvihne Janu na stanici.",
-      gender: null,
+      de: "die Telefonkonferenz",
+      sk: "telekonferencia",
+      gender: "F",
       srsId: "L20_V11",
-      recycledFrom: [],
+      example: "Wir planen eine Telefonkonferenz.",
+      exampleSk: "Plánujeme telekonferenciu.",
+      recycledFrom: []
     },
     {
-      de: "die Vorsilbe",
-      sk: "predpona",
-      example: "ab-, an-, auf- sind Vorsilben.",
-      exampleSk: "ab-, an-, auf- sú predpony.",
+      de: "die Arbeitswoche",
+      sk: "pracovný týždeň",
       gender: "F",
       srsId: "L20_V12",
-      recycledFrom: [],
+      example: "Die Arbeitswoche beginnt am Montag.",
+      exampleSk: "Pracovný týždeň začína v pondelok.",
+      recycledFrom: []
     },
     {
-      de: "die Bahn",
-      sk: "metro, regionálny vlak",
-      example: "Ich nehme die Bahn.",
-      exampleSk: "Idem metrom / vlakom.",
-      gender: "F",
+      de: "vereinbaren",
+      sk: "dohodnúť",
+      gender: null,
       srsId: "L20_V13",
-      recycledFrom: [],
+      example: "Ich muss einen Termin vereinbaren.",
+      exampleSk: "Musím dohodnúť termín.",
+      recycledFrom: []
     },
     {
-      de: "der Bus",
-      sk: "autobus",
-      example: "Der Bus fährt um 10 ab.",
-      exampleSk: "Autobus odchádza o 10.",
-      gender: "M",
+      de: "anrufen",
+      sk: "zavolať",
+      gender: null,
       srsId: "L20_V14",
-      recycledFrom: [],
+      example: "Rufen Sie mich bitte morgen an!",
+      exampleSk: "Zavolajte mi prosím zajtra!",
+      recycledFrom: []
     },
     {
-      de: "die Straßenbahn",
-      sk: "električka (= die Bim viedensky!)",
-      example: "Die Straßenbahn — auf Wienerisch: die Bim!",
-      exampleSk: "Električka — po viedensky: die Bim!",
-      gender: "F",
+      de: "senden",
+      sk: "poslať",
+      gender: null,
       srsId: "L20_V15",
-      recycledFrom: [],
+      example: "Senden Sie die Dokumente heute!",
+      exampleSk: "Pošlite dokumenty dnes!",
+      recycledFrom: []
     },
+    {
+      de: "Sehr geehrte/r Herr/Frau...",
+      sk: "Vážený pán/pani...",
+      gender: null,
+      srsId: "L20_V16",
+      example: "Sehr geehrter Herr Bauer, ich melde mich bei Ihnen.",
+      exampleSk: "Vážený pán Bauer, ozývam sa Vám.",
+      recycledFrom: []
+    },
+    {
+      de: "Mit freundlichen Grüßen",
+      sk: "S pozdravom",
+      gender: null,
+      srsId: "L20_V17",
+      example: "Mit freundlichen Grüßen, Jana Müller.",
+      exampleSk: "S pozdravom, Jana Müller.",
+      recycledFrom: []
+    },
+    {
+      de: "möglich",
+      sk: "možný",
+      gender: null,
+      srsId: "L20_V18",
+      example: "Ist ein Termin am Dienstag möglich?",
+      exampleSk: "Je termín v utorok možný?",
+      recycledFrom: []
+    }
   ],
-
   exercises: [
     {
       type: "flashcard",
-      instruction:
-        "Prelistuj si slovíčka. Ku každému slovesu si pozri formu er/sie/es a pamätaj: predpona ide na koniec vety!",
-      items: [
-        "abfahren → fährt ab = odchádzať (vlak, bus...)",
-        "ankommen → kommt an = prichádzať",
-        "aufstehen → steht auf = vstávať",
-        "einschlafen → schläft ein = zaspávať",
-        "aufmachen → macht auf = otvoriť",
-        "zumachen → macht zu = zatvoriť",
-        "einladen → lädt ein = pozvať (a→ä zmena!)",
-        "ausgehen → geht aus = ísť von",
-        "einkaufen → kauft ein = nakupovať",
-        "anrufen → ruft an = zavolať",
-        "abholen → holt ab = vyzdvihnúť, prísť po niekoho",
-        "die Vorsilbe = predpona",
-        "die Bahn = metro, regionálny vlak",
-        "der Bus = autobus",
-        "die Straßenbahn / die Bim = električka",
-      ],
-    },
-    {
-      type: "mcq",
-      instruction: "Vyber správnu odpoveď.",
-      questions: [
-        {
-          question: "Kde ide predpona odlučiteľného slovesa v hlavnej vete?",
-          options: [
-            "Ostáva pripojená k slovesu na P2.",
-            "Ide pred podmet.",
-            "Ide na úplný koniec hlavnej vety.",
-            "Zmizne — nepoužíva sa.",
-          ],
-          answer: 2,
-          explanation:
-            "Predpona odlučiteľného slovesa = vždy na KONIEC hlavnej vety. 'Jana steht um 7 Uhr auf.' — 'auf' ide na koniec! V infinitíve ostáva: aufstehen.",
-        },
-        {
-          question: "Jana steht jeden Morgen um sechs ___. (aufstehen)",
-          options: ["auf", "aufstehen", "stehst", "steh auf"],
-          answer: 0,
-          explanation:
-            "'Jana steht [6:00] auf.' Kmeň 'steht' na P2, predpona 'auf' na koniec.",
-        },
-        {
-          question: "Ako povieš 'Zavolám ti zajtra.' (anrufen, ich)?",
-          options: [
-            "Ich anrufe dich morgen.",
-            "Ich rufe dich morgen an.",
-            "Ich rufe an dich morgen.",
-            "Morgen ich rufe an dich.",
-          ],
-          answer: 1,
-          explanation:
-            "'anrufen' → ich rufe ... an. Predpona 'an' ide na koniec celej vety. 'Ich rufe dich morgen an.'",
-        },
-        {
-          question: "Er ___ Jana zur Party ___. (einladen, er — aj vokalová zmena!)",
-          options: [
-            "einladet ... ein",
-            "lädt ... ein",
-            "ladet ... ein",
-            "einlädt ... ein",
-          ],
-          answer: 1,
-          explanation:
-            "einladen má vokalovú zmenu a→ä: er lädt ein. Kmeň 'lädt' na P2, predpona 'ein' na koniec.",
-        },
-        {
-          question: "Ako sa zmení veta s modálnym slovesom? 'Jana muss früh ___.' (aufstehen)",
-          options: [
-            "Jana muss früh auf.",
-            "Jana muss auf früh stehen.",
-            "Jana muss früh aufstehen.",
-            "Jana aufsteht muss früh.",
-          ],
-          answer: 2,
-          explanation:
-            "S modálnym slovesom: infinitív ostáva CELÝ (aufstehen — predpona sa NEoddeľuje!) a ide na koniec. Satzklammer: muss [P2] ... aufstehen [koniec].",
-        },
-        {
-          question: "Čo je die Bim?",
-          options: [
-            "Slangový výraz pre autobus vo Viedni.",
-            "Viedenský dialektálny výraz pre električku (Straßenbahn).",
-            "Druh rakúskeho jedla.",
-            "Názov viedenského metra.",
-          ],
-          answer: 1,
-          explanation:
-            "'Die Bim' = viedenský slang pre Straßenbahn (električku). Pochádza od zvuku zvona električky. Typicky viedenské!",
-        },
-      ],
-    },
-    {
-      type: "fill",
-      instruction:
-        "Doplň správnu odlučiteľnú formu slovesa. Predpona na koniec!",
-      questions: [
-        {
-          sentence: "Jana ___ jeden Morgen um sechs Uhr ___ . (aufstehen)",
-          answer: "steht / auf",
-          hint: "aufstehen, Jana/sie: st___ ... auf",
-          explanation: "'Jana steht ... auf.' Kmeň 'steht', predpona 'auf' na koniec.",
-        },
-        {
-          sentence: "Wann ___ der Zug ___ ? (abfahren, wann = otázka)",
-          answer: "fährt / ab",
-          hint: "abfahren, Zug/er: f___hrt ... ab",
-          explanation: "'Wann fährt der Zug ab?' Vokalová zmena: fahren → fährt (a→ä).",
-        },
-        {
-          sentence: "Ich ___ dich heute Abend ___ . (anrufen, ich)",
-          answer: "rufe / an",
-          hint: "anrufen, ich: r___fe ... an",
-          explanation: "'Ich rufe dich heute Abend an.' Predpona 'an' ide na koniec.",
-        },
-        {
-          sentence: "Er ___ Jana zur Geburtstagsparty ___ . (einladen, er)",
-          answer: "lädt / ein",
-          hint: "einladen, er: l___dt (a→ä!) ... ein",
-          explanation: "'Er lädt Jana ... ein.' Vokalová zmena a→ä + predpona 'ein' na konci.",
-        },
-        {
-          sentence: "Jana muss morgen früh ___ . (aufstehen — s modálnym slovesom)",
-          answer: "aufstehen",
-          hint: "muss + infinitív = aufst___en (celé slovo!)",
-          explanation:
-            "S modálnym slovesom: infinitív ostáva celý: aufstehen (NEoddeľuje sa!). Jana muss früh aufstehen.",
-        },
-        {
-          sentence: "___ du samstags ___? (einkaufen, du, otázka)",
-          answer: "Kaufst / ein",
-          hint: "einkaufen, du: K___fst du ... ein?",
-          explanation: "'Kaufst du ... ein?' V otázke: kmeň na P1, predpona na koniec.",
-        },
-      ],
-    },
-    {
-      type: "listen",
-      instruction:
-        "Počúvaj a zopakuj. Sústred sa na pozíciu predpony na konci vety.",
-      questions: [
-        { de: "Jana steht um 7 Uhr auf.", sk: "Jana vstáva o 7:00." },
-        { de: "Der Zug fährt um halb acht ab.", sk: "Vlak odchádza o pol ôsmej." },
-        { de: "Wir kommen um 9:30 in Bratislava an.", sk: "Prichádzame do Bratislavy o 9:30." },
-        { de: "Ich rufe dich morgen an.", sk: "Zavolám ti zajtra." },
-        { de: "Er holt Jana vom Bahnhof ab.", sk: "Vyzdvihne Janu na stanici." },
-        { de: "Kaufst du samstags ein?", sk: "Nakupuješ v sobotu?" },
-        { de: "Jana muss früh aufstehen.", sk: "Jana musí skoro vstať." },
-        { de: "Er lädt uns zum Essen ein.", sk: "Pozýva nás na jedlo." },
-      ],
+      instruction: "Prezri si slovíčka tejto lekcie. Klikni na kartičku pre preklad."
     },
     {
       type: "match",
-      instruction: "Spoj infinitív odlučiteľného slovesa so správnym slovenským prekladom.",
+      instruction: "Priraďte nemecké slová k ich slovenským prekladom.",
       pairs: [
-        ["aufstehen", "vstávať"],
-        ["abfahren", "odchádzať (doprava)"],
-        ["ankommen", "prichádzať"],
-        ["einladen", "pozvať"],
-        ["einkaufen", "nakupovať"],
-        ["anrufen", "zavolať"],
-        ["abholen", "vyzdvihnúť, prísť po niekoho"],
-        ["ausgehen", "ísť von"],
-      ],
-    },
-    {
-      type: "dialogue",
-      instruction:
-        "Prečítaj si dialóg. Jana a Lukas plánujú výlet do Bratislavy na víkend.",
-      lines: [
-        {
-          speaker: "A",
-          de: "Lukas, wann fährt der Zug nach Bratislava ab?",
-          sk: "Lukas, kedy odchádza vlak do Bratislavy?",
-        },
-        {
-          speaker: "B",
-          de: "Der nächste Zug fährt um 7:30 ab — also halb acht.",
-          sk: "Najbližší vlak odchádza o 7:30 — teda pol ôsmej.",
-        },
-        {
-          speaker: "A",
-          de: "Wann müssen wir dann aufstehen?",
-          sk: "Kedy teda musíme vstať?",
-        },
-        {
-          speaker: "B",
-          de: "Wir müssen um sechs Uhr aufstehen. Ich stehe um 6 auf.",
-          sk: "Musíme vstať o šiestej. Ja vstávam o 6.",
-        },
-        {
-          speaker: "A",
-          de: "Oh nein! Ich schlafe immer bis sieben ein!",
-          sk: "Ó nie! Ja vždy zaspinam do siedmej!",
-        },
-        {
-          speaker: "B",
-          de: "Das stimmt nicht — du schläfst bis sieben, nicht ein! Also: wir fahren zusammen.",
-          sk: "To nie je správne — ty spíš do siedmej, nezaspínaš! Teda: ideme spolu.",
-        },
-        {
-          speaker: "A",
-          de: "Wer holt die Tickets ab?",
-          sk: "Kto vyzdvihne lístky?",
-        },
-        {
-          speaker: "B",
-          de: "Ich hole die Tickets ab. Und du rufst Luisa an!",
-          sk: "Ja vyzdvihnem lístky. A ty zavoláš Luise!",
-        },
-        {
-          speaker: "A",
-          de: "Gut. Steigen wir in Wien um?",
-          sk: "Dobre. Prestupujeme vo Viedni?",
-        },
-        {
-          speaker: "B",
-          de: "Nein, wir fahren direkt durch. Wir kommen um 9:30 in Bratislava an.",
-          sk: "Nie, ideme priamo. Prichádzame do Bratislavy o 9:30.",
-        },
-        {
-          speaker: "A",
-          de: "Super! Ich kaufe dann Samstag noch schnell ein.",
-          sk: "Super! Ja potom v sobotu ešte rýchlo nakúpim.",
-        },
-        {
-          speaker: "B",
-          de: "Perfekt! Ich lade dann auch meine Schwester ein.",
-          sk: "Perfektné! Ja potom tiež pozývam svoju sestru.",
-        },
-      ],
-      comprehensionQuestions: [
-        {
-          question: "Wann fährt der Zug nach Bratislava ab?",
-          options: ["Um 8:30", "Um 6:00", "Um 7:30"],
-          answer: 2,
-        },
-        {
-          question: "Wer holt die Tickets ab?",
-          options: ["Jana", "Lukas", "Luisa"],
-          answer: 1,
-        },
-        {
-          question: "Wann kommen sie in Bratislava an?",
-          options: ["Um 9:00", "Um 9:30", "Um 10:00"],
-          answer: 1,
-        },
-      ],
-    },
-    {
-      type: "minitext",
-      instruction:
-        "Prvý minitext v kurze! Prečítaj si SMS správu, ktorú Jana píše svojej spolubývajúcej Luise. Všimni si odlučiteľné slovesá v praxi.",
-      text:
-        "Hallo Luisa! 😊 Ich stehe morgen um 6 auf. Lukas holt mich ab — wir fahren zusammen nach Bratislava. Wir fahren um 7:30 ab und kommen um 9:30 in Bratislava an. Kaufst du ein, oder soll ich die Pizza bestellen? Ich rufe dich heute Abend noch an. Bis dann! Jana 🙂",
-      textSk:
-        "Ahoj Luisa! 😊 Zajtra vstávam o 6. Lukas ma vyzdvihne — ideme spolu do Bratislavy. Odchádzame o 7:30 a prichádzame do Bratislavy o 9:30. Nakupuješ ty, alebo mám objednať pizzu? Zavolám ti dnes večer. Dovtedy! Jana 🙂",
-      questions: [
-        {
-          question: "Um wie viel Uhr steht Jana morgen auf?",
-          options: ["Um 7:00 Uhr.", "Um 6:00 Uhr.", "Um 7:30 Uhr."],
-          answer: 1,
-        },
-        {
-          question: "Wann kommt Jana in Bratislava an?",
-          options: ["Um 7:30 Uhr.", "Um 9:00 Uhr.", "Um 9:30 Uhr."],
-          answer: 2,
-        },
-        {
-          question: "Was fragt Jana am Ende der SMS?",
-          options: [
-            "Ob Luisa den Zug buchen soll.",
-            "Ob Luisa einkauft oder Jana die Pizza bestellt.",
-            "Ob Luisa auch mitkommt nach Bratislava.",
-          ],
-          answer: 1,
-        },
-      ],
+        [
+          "der Termin",
+          "termín"
+        ],
+        [
+          "die Zeit",
+          "čas"
+        ],
+        [
+          "die Woche",
+          "týždeň"
+        ],
+        [
+          "der Anruf",
+          "telefonát"
+        ],
+        [
+          "das Gespräch",
+          "rozhovor"
+        ],
+        [
+          "die Firma",
+          "firma"
+        ],
+        [
+          "der Kunde",
+          "klient"
+        ],
+        [
+          "die Nachricht",
+          "správa"
+        ],
+        [
+          "vereinbaren",
+          "dohodnúť"
+        ],
+        [
+          "möglich",
+          "možný"
+        ]
+      ]
     },
     {
       type: "wordorder",
-      instruction: "Zoraď slová do správnej nemeckej vety.",
+      instruction: "Usporiadajte slová tak, aby ste vytvorili správnu nemeckú vetu.",
       sentences: [
         {
-          words: ["Jana", "ruft", "Luisa", "an."],
-          correct: "Jana ruft Luisa an.",
-          hint: "Jana zavolá Luise.",
-          explanation: "anrufen (odlučiteľné): ruft na P2, an na KONIEC. Typický Satzklammer vzor."
+          words: [
+            "Wir",
+            "einen",
+            "müssen",
+            "Termin",
+            "vereinbaren"
+          ],
+          correct: "Wir müssen einen Termin vereinbaren",
+          hint: "Musíme si dohodnúť termín.",
+          explanation: "Veta začína podmetom (Wir), nasleduje modálne sloveso (müssen) na druhom mieste, potom zvyšok vety a na konci je plnovýznamové sloveso v infinitive (vereinbaren)."
         },
         {
-          words: ["Ich", "kaufe", "heute", "ein."],
-          correct: "Ich kaufe heute ein.",
-          hint: "Dnes nakupujem.",
-          explanation: "einkaufen: kaufe na P2, ein na KONIEC. 'heute' = príslovka času."
+          words: [
+            "mich",
+            "bitte",
+            "Rufen",
+            "an",
+            "Sie!"
+          ],
+          correct: "Rufen Sie mich bitte an",
+          hint: "Zavolajte mi, prosím!",
+          explanation: "Ide o zdvorilý rozkaz (Imperativ s \"Sie\"). Sloveso je na prvom mieste, potom \"Sie\" a zvyšok vety. \"Anrufen\" je deliteľné sloveso, predpona \"an\" ide na koniec."
         },
         {
-          words: ["Wann", "kommst", "du", "an?"],
-          correct: "Wann kommst du an?",
-          hint: "Kedy prichádzaš?",
-          explanation: "ankommen (odlučiteľné): kommst na P2, an na KONIEC. W-otázka s invertovaným poriadkom."
+          words: [
+            "eine",
+            "Ihnen",
+            "Nachricht",
+            "ich",
+            "sende"
+          ],
+          correct: "Ich sende Ihnen eine Nachricht",
+          hint: "Pošlem Vám správu.",
+          explanation: "Štandardný slovosled: podmet (Ich), sloveso (sende) na druhom mieste, nepriamy predmet (Ihnen), priamy predmet (eine Nachricht)."
         },
         {
-          words: ["Lukas", "hört", "jetzt", "auf", "zu", "arbeiten."],
-          correct: "Lukas hört jetzt auf zu arbeiten.",
-          hint: "Lukas teraz prestáva pracovať.",
-          explanation: "aufhören: hört na P2, auf na KONIEC. 'zu' + infinitív pre druhý infinitív."
+          words: [
+            "können",
+            "Wann",
+            "wir",
+            "telefonieren?"
+          ],
+          correct: "Wann können wir telefonieren",
+          hint: "Kedy si môžeme zavolať?",
+          explanation: "Otázka s opytovacím zámenom (Wann) má sloveso (können) na druhom mieste, potom podmet (wir) a plnovýznamové sloveso v infinitive (telefonieren) na konci."
         },
         {
-          words: ["Bitte", "ruf", "mich", "morgen", "an!"],
-          correct: "Bitte ruf mich morgen an!",
-          hint: "Prosím, zavolaj mi zajtra!",
-          explanation: "Imperatív anrufen: ruf na P1, an na KONIEC. 'bitte' zdvorilo na začiatok."
+          words: [
+            "Sie",
+            "möchten",
+            "einen",
+            "Termin",
+            "vereinbaren?"
+          ],
+          correct: "Möchten Sie einen Termin vereinbaren",
+          hint: "Chceli by ste si dohodnúť termín?",
+          explanation: "Otázka bez opytovacieho zámena začína slovesom (möchten) na prvom mieste, potom podmet (Sie) a plnovýznamové sloveso v infinitive (vereinbaren) na konci."
+        },
+        {
+          words: [
+            "ist",
+            "Die",
+            "Telefonkonferenz",
+            "morgen"
+          ],
+          correct: "Die Telefonkonferenz ist morgen",
+          hint: "Telekonferencia je zajtra.",
+          explanation: "Podmet (Die Telefonkonferenz) je zložené podstatné meno. Sloveso (ist) je na druhom mieste, potom príslovka času (morgen)."
+        }
+      ]
+    },
+    {
+      type: "fill",
+      instruction: "Doplňte správne slovo do medzery.",
+      questions: [
+        {
+          sentence: "Die ___ ist von Montag bis Freitag.",
+          answer: "Arbeitswoche",
+          hint: "Pracovný týždeň je od pondelka do piatku.",
+          explanation: "„Arbeitswoche“ (pracovný týždeň) je zložené podstatné meno. Rod slova „Woche“ (die) určuje rod zloženého slova."
+        },
+        {
+          sentence: "Ich ___ Ihnen eine E-Mail senden.",
+          answer: "kann",
+          hint: "Môžem Vám poslať e-mail.",
+          explanation: "Modálne sloveso „kann“ (môžem) vyjadruje možnosť alebo schopnosť. Sloveso v infinitive (senden) ide na koniec vety."
+        },
+        {
+          sentence: "Sehr ___ Herr Müller, wir haben eine Frage.",
+          answer: "geehrter",
+          hint: "Vážený pán Müller, máme otázku.",
+          explanation: "„Sehr geehrter Herr...“ je zdvorilý začiatok formálneho listu alebo e-mailu pre muža. Koncovka -er je pre maskulínum v nominatíve."
+        },
+        {
+          sentence: "Wir ___ einen Termin für nächste Woche vereinbaren.",
+          answer: "möchten",
+          hint: "Radi by sme si dohodli termín na budúci týždeň.",
+          explanation: "„Möchten“ (chceli by sme) je zdvorilá forma vyjadrenia želania. Sloveso v infinitive (vereinbaren) ide na koniec vety."
+        },
+        {
+          sentence: "Ich brauche ___ neuen Drucker für das Büro.",
+          answer: "einen",
+          hint: "Potrebujem novú tlačiareň do kancelárie.",
+          explanation: "Sloveso „brauchen“ vyžaduje akuzatív. „Drucker“ je maskulínum (der Drucker), preto v akuzatíve je „einen Drucker“. (L17/L18)"
+        },
+        {
+          sentence: "Haben Sie viele ___ im Büro?",
+          answer: "Stifte",
+          hint: "Máte v kancelárii veľa pier?",
+          explanation: "„Stifte“ je množné číslo od „der Stift“ (pero). V nemčine sa množné číslo tvorí rôznymi spôsobmi. (L19)"
+        },
+        {
+          sentence: "Können wir die ___ bitte ändern?",
+          answer: "Uhrzeit",
+          hint: "Môžeme, prosím, zmeniť čas (hodinu)?",
+          explanation: "„Uhrzeit“ (čas, hodina) je zložené podstatné meno. Sloveso „ändern“ (zmeniť) vyžaduje akuzatív, „die Uhrzeit“ zostáva v akuzatíve rovnaká ako v nominatíve."
+        }
+      ]
+    },
+    {
+      type: "listen",
+      instruction: "Vypočujte si slovo alebo frázu a napíšte ju po nemecky. Potom skontrolujte preklad.",
+      questions: [
+        {
+          de: "die Zeit",
+          sk: "čas"
+        },
+        {
+          de: "möglich",
+          sk: "možný"
+        },
+        {
+          de: "anrufen",
+          sk: "zavolať"
+        },
+        {
+          de: "senden",
+          sk: "poslať"
+        },
+        {
+          de: "der Termin",
+          sk: "termín"
+        },
+        {
+          de: "der Anruf",
+          sk: "telefonát"
+        },
+        {
+          de: "die Firma",
+          sk: "firma"
+        },
+        {
+          de: "die Nachricht",
+          sk: "správa"
+        },
+        {
+          de: "die Arbeitswoche",
+          sk: "pracovný týždeň"
+        },
+        {
+          de: "die Telefonkonferenz",
+          sk: "telekonferencia"
+        }
+      ]
+    },
+    {
+      type: "mcq",
+      instruction: "Vyberte správnu odpoveď.",
+      questions: [
+        {
+          question: "Doplňte správne modálne sloveso: \"Ich ___ Ihnen morgen anrufen.\"",
+          options: [
+            "kann",
+            "können",
+            "kannst",
+            "könnt"
+          ],
+          answer: 0,
+          explanation: "Pre zámeno „ich“ je správna konjugácia modálneho slovesa „können“ tvar „kann“."
+        },
+        {
+          question: "Aký je správny rod pre zložené podstatné meno \"die Arbeitswoche\"?",
+          options: [
+            "der",
+            "die",
+            "das",
+            "kein Artikel"
+          ],
+          answer: 1,
+          explanation: "Rod zloženého podstatného mena určuje posledné slovo. „Die Woche“ je ženského rodu, preto aj „die Arbeitswoche“ je ženského rodu."
+        },
+        {
+          question: "Ktorá fráza sa používa na zdvorilé ukončenie formálneho e-mailu?",
+          options: [
+            "Hallo!",
+            "Tschüss!",
+            "Mit freundlichen Grüßen",
+            "Bis bald!"
+          ],
+          answer: 2,
+          explanation: "„Mit freundlichen Grüßen“ je štandardné zdvorilé ukončenie formálnej korešpondencie v nemčine."
+        },
+        {
+          question: "Doplňte správny člen: \"Wir brauchen ___ neuen Schreibtisch.\"",
+          options: [
+            "ein",
+            "eine",
+            "einen",
+            "einem"
+          ],
+          answer: 2,
+          explanation: "Sloveso „brauchen“ vyžaduje akuzatív. „Schreibtisch“ je maskulínum (der Schreibtisch), preto v akuzatíve neurčitý člen je „einen“. (L18)"
+        },
+        {
+          question: "Ako sa povie po nemecky \"dohodnúť\"?",
+          options: [
+            "anrufen",
+            "senden",
+            "vereinbaren",
+            "möglich"
+          ],
+          answer: 2,
+          explanation: "Sloveso „vereinbaren“ znamená „dohodnúť“ (napr. termín)."
+        },
+        {
+          question: "Čo znamená slovo \"der Kunde\"?",
+          options: [
+            "zamestnanec",
+            "šéf",
+            "klient",
+            "kolega"
+          ],
+          answer: 2,
+          explanation: "„Der Kunde“ znamená „klient“ alebo „zákazník“."
+        },
+        {
+          question: "Ako sa povie po nemecky \"telekonferencia\"?",
+          options: [
+            "die Konferenz",
+            "das Telefonat",
+            "die Telefonkonferenz",
+            "das Gespräch"
+          ],
+          answer: 2,
+          explanation: "„Die Telefonkonferenz“ je správny nemecký výraz pre „telekonferenciu“."
+        }
+      ]
+    },
+    {
+      type: "minitext",
+      instruction: "Lies den Dialog und beantworte die Fragen.",
+      text: "Jana (E-Mail-Nachricht):\nSehr geehrter Herr Bauer,\nich schreibe Ihnen wegen eines Termins für eine Telefonkonferenz. Herr Gruber möchte Sie anrufen. Wann haben Sie Zeit? Bitte senden Sie mir mögliche Daten und Uhrzeiten.\nMit freundlichen Grüßen,\nJana Nováková\n\nJana (am Telefon): Guten Tag, Herr Bauer. Hier ist Jana Nováková von der Firma Gruber. Ich rufe wegen der E-Mail-Nachricht an.\nHerr Bauer: Guten Tag, Frau Nováková. Ja, ich habe Ihre Nachricht.\nJana: Super! Ist Dienstag oder Mittwoch für ein Gespräch möglich?\nHerr Bauer: Dienstag ist schwierig. Am Mittwoch habe ich am Nachmittag Zeit.\nJana: Gut. Welche Uhrzeit passt Ihnen am Mittwoch? Herr Gruber muss den Anruf vereinbaren.\nHerr Bauer: Um 14 Uhr ist gut.\nJana: Okay, ich informiere Herrn Gruber. Vielen Dank!",
+      textSk: "Jana (E-mailová správa):\nVážený pán Bauer,\npíšem Vám ohľadom termínu pre telekonferenciu. Pán Gruber by Vám chcel zavolať. Kedy máte čas? Prosím, pošlite mi možné dátumy a časy.\nS pozdravom,\nJana Nováková\n\nJana (telefonuje): Dobrý deň, pán Bauer. Tu je Jana Nováková z firmy Gruber. Volám ohľadom e-mailovej správy.\nPán Bauer: Dobrý deň, pani Nováková. Áno, mám Vašu správu.\nJana: Super! Je utorok alebo streda na rozhovor možná?\nPán Bauer: Utorok je bohužiaľ ťažký. V stredu mám poobede čas.\nJana: Dobre. Aký čas Vám vyhovuje v stredu? Pán Gruber musí dohodnúť telefonát.\nPán Bauer: O 14. hodine je to dobré.\nJana: Dobre, informujem pána Grubera. Ďakujem pekne!",
+      questions: [
+        {
+          question: "Worum geht es in Janas E-Mail?",
+          options: [
+            "Um einen Termin für eine Telefonkonferenz zu vereinbaren.",
+            "Um ein neues Angebot zu senden.",
+            "Um einen Termin abzusagen.",
+            "Um Herrn Bauers Adresse zu erfragen."
+          ],
+          answer: 0,
+          explanation: "Jana schreibt: \"ich schreibe Ihnen wegen eines Termins für eine Telefonkonferenz.\""
+        },
+        {
+          question: "Wer möchte Herrn Bauer anrufen?",
+          options: [
+            "Jana Nováková",
+            "Herr Gruber",
+            "Herr Bauer selbst",
+            "Ein Kollege von Janas Firma"
+          ],
+          answer: 1,
+          explanation: "Jana schreibt: \"Herr Gruber möchte Sie anrufen.\""
+        },
+        {
+          question: "Welcher Tag ist für Herrn Bauer für das Gespräch schwierig?",
+          options: [
+            "Dienstag",
+            "Mittwoch",
+            "Donnerstag",
+            "Freitag"
+          ],
+          answer: 0,
+          explanation: "Herr Bauer sagt: \"Dienstag ist schwierig.\""
+        },
+        {
+          question: "Wann findet der Anruf am Mittwoch statt?",
+          options: [
+            "Am Vormittag",
+            "Um 14 Uhr",
+            "Am Abend",
+            "Um 10 Uhr"
+          ],
+          answer: 1,
+          explanation: "Herr Bauer sagt: \"Um 14 Uhr ist gut.\""
         }
       ]
     },
     {
       type: "speaking",
-      instruction: "Počúvaj nemeckú vetu. Potom hovor nahlas a skontroluj sa.",
+      instruction: "Höre zu und sprich nach.",
       phrases: [
-        { de: "Jana ruft Luisa an.", sk: "Jana zavolá Luise.", tip: "ruft: r=[r], uft=[uft]" },
-        { de: "Ich kaufe heute ein.", sk: "Dnes nakupujem.", tip: "kaufe: au=[ao], f=[f]" },
-        { de: "Wann kommst du an?", sk: "Kedy prichádzaš?", tip: "kommst: om=[om], st" },
-        { de: "Bitte ruf mich morgen an!", sk: "Prosím, zavolaj mi zajtra!", tip: "ruf: r=[r], uf=[uf]" },
-        { de: "Ich fange jetzt an.", sk: "Teraz začínam.", tip: "fange: f=[f], ange=[aŋə]" }
+        {
+          de: "die Zeit",
+          sk: "čas",
+          tip: "Z=[ts], ei=[aɪ̯] ako v slove \"čaj\"."
+        },
+        {
+          de: "möglich",
+          sk: "možný",
+          tip: "ö=[ø] ako v \"schön\", ch=[ç] ako v \"ich\"."
+        },
+        {
+          de: "die Arbeitswoche",
+          sk: "pracovný týždeň",
+          tip: "W=[v], ch=[x] po A, O, U."
+        },
+        {
+          de: "einen Termin vereinbaren",
+          sk: "dohodnúť termín",
+          tip: "V=[f], ei=[aɪ̯]. Dbaj na \"r\"."
+        },
+        {
+          de: "Sehr geehrte Frau Schmidt,",
+          sk: "Vážená pani Schmidtová,",
+          tip: "Sehr=[zeːɐ̯], g=[ɡ], ee=[eː]."
+        },
+        {
+          de: "Ich möchte einen Anruf vereinbaren.",
+          sk: "Chcel by som dohodnúť telefonát.",
+          tip: "ch=[ç], ö=[œ], V=[f]."
+        },
+        {
+          de: "Mit freundlichen Grüßen",
+          sk: "S pozdravom",
+          tip: "eu=[ɔʏ̯], ch=[ç], ü=[y]."
+        }
       ]
     },
+    {
+      type: "truefalse",
+      instruction: "Prečítajte si tvrdenia o nemeckej gramatike a rozhodnite, či sú pravdivé (pravda) alebo nepravdivé (nepravda).",
+      statements: [
+        {
+          statement: "Rod zloženého podstatného mena (napr. 'die Arbeitswoche') je vždy určený prvým slovom.",
+          isTrue: false,
+          explanation: "Nepravda. Rod zloženého podstatného mena je vždy určený posledným slovom. Napríklad, 'die Arbeitswoche' má rod 'die', pretože 'die Woche' je ženského rodu."
+        },
+        {
+          statement: "Slovo 'Telefonkonferenz' je príkladom zloženého podstatného mena v nemčine.",
+          isTrue: true,
+          explanation: "Pravda. 'Telefonkonferenz' je zložené podstatné meno, ktoré spája 'Telefon' a 'Konferenz'."
+        },
+        {
+          statement: "Pri zdvorilom dohadovaní termínu je vhodné použiť frázu 'Ich kann nicht kommen'.",
+          isTrue: false,
+          explanation: "Nepravda. Táto fráza je príliš priama. Je zdvorilejšie povedať napríklad 'Ich kann leider nicht kommen' alebo 'Dieser Termin ist für mich leider nicht möglich' a navrhnúť alternatívu."
+        },
+        {
+          statement: "Fráza 'Sehr geehrte Frau Müller' je správny a zdvorilý začiatok e-mailu pre ženu.",
+          isTrue: true,
+          explanation: "Pravda. 'Sehr geehrte/r Herr/Frau...' je štandardný a zdvorilý spôsob oslovenia v nemeckých e-mailoch a listoch."
+        },
+        {
+          statement: "Modálne slovesá ako 'können' a 'müssen' sú často používané pri dohadovaní termínov a komunikácii v práci.",
+          isTrue: true,
+          explanation: "Pravda. Tieto slovesá sú kľúčové pre vyjadrenie možnosti, nutnosti alebo želania pri plánovaní a komunikácii."
+        }
+      ]
+    },
+    {
+      type: "dictation",
+      instruction: "Počúvajte nahrávku a napíšte, čo počujete. Každú vetu si vypočujte dvakrát.",
+      sentences: [
+        {
+          de: "Ich rufe an.",
+          sk: "Volám."
+        },
+        {
+          de: "Wir müssen einen Termin vereinbaren.",
+          sk: "Musíme dohodnúť termín."
+        },
+        {
+          de: "Können Sie mir eine Nachricht senden?",
+          sk: "Môžete mi poslať správu?"
+        },
+        {
+          de: "Die Telefonkonferenz ist am Montag.",
+          sk: "Telekonferencia je v pondelok."
+        },
+        {
+          de: "Sehr geehrte Frau Schmidt, wann ist der Termin?",
+          sk: "Vážená pani Schmidt, kedy je termín?"
+        }
+      ]
+    },
+    {
+      type: "categorysort",
+      instruction: "Roztrieďte podstatné mená do správnych kategórií podľa ich rodu (der, die, das).",
+      categories: [
+        {
+          name: "der",
+          color: "blue",
+          words: [
+            "der Termin",
+            "der Anruf",
+            "der Kunde"
+          ]
+        },
+        {
+          name: "die",
+          color: "rose",
+          words: [
+            "die Zeit",
+            "die Woche",
+            "die Firma",
+            "die Nachricht",
+            "die Telefonkonferenz"
+          ]
+        },
+        {
+          name: "das",
+          color: "green",
+          words: [
+            "das Gespräch",
+            "das Datum"
+          ]
+        }
+      ],
+      explanation: "V nemčine má každé podstatné meno rod (mužský 'der', ženský 'die', stredný 'das'). Je dôležité učiť sa podstatné mená spolu s ich členom, pretože rod ovplyvňuje skloňovanie a tvorbu viet."
+    },
+    {
+      type: "translation",
+      instruction: "Preložte nasledujúce vety zo slovenčiny do nemčiny.",
+      sentences: [
+        {
+          sk: "Musím zavolať klientovi.",
+          answer: "Ich muss den Kunden anrufen.",
+          hint: "müssen, anrufen",
+          explanation: "Používame modálne sloveso 'müssen' a deliteľné sloveso 'anrufen'. 'Den Kunden' je v akuzatíve, pretože 'anrufen' si vyžaduje priamy predmet."
+        },
+        {
+          sk: "Môžeme dohodnúť termín?",
+          answer: "Können wir einen Termin vereinbaren?",
+          hint: "können, vereinbaren",
+          explanation: "Otázka s modálnym slovesom 'können'. Modálne sloveso je na prvom mieste, za ním podmet a plnovýznamové sloveso 'vereinbaren' v infinitive na konci vety."
+        },
+        {
+          sk: "Prosím, pošlite mi správu.",
+          answer: "Bitte senden Sie mir eine Nachricht.",
+          hint: "senden, Nachricht",
+          explanation: "Používame zdvorilý imperatív 'Senden Sie' a sloveso 'senden', ktoré si vyžaduje datív (mir) a akuzatív (eine Nachricht)."
+        },
+        {
+          sk: "Pracovný týždeň je dlhý.",
+          answer: "Die Arbeitswoche ist lang.",
+          hint: "Arbeitswoche, lang",
+          explanation: "Príklad zloženého podstatného mena 'die Arbeitswoche' (pracovný týždeň). Rod je určený slovom 'Woche'."
+        }
+      ]
+    },
+    {
+      type: "conjugation",
+      instruction: "Vyčasujte nasledujúce slovesá v prítomnom čase (Präsens).",
+      verbs: [
+        {
+          infinitive: "anrufen",
+          translation: "zavolať",
+          forms: [
+            {
+              pronoun: "ich",
+              correct: "rufe an"
+            },
+            {
+              pronoun: "du",
+              correct: "rufst an"
+            },
+            {
+              pronoun: "er/sie/es",
+              correct: "ruft an"
+            },
+            {
+              pronoun: "wir",
+              correct: "rufen an"
+            },
+            {
+              pronoun: "ihr",
+              correct: "ruft an"
+            },
+            {
+              pronoun: "sie/Sie",
+              correct: "rufen an"
+            }
+          ],
+          note: "Sloveso 'anrufen' je deliteľné sloveso. Predpona 'an-' sa v prítomnom čase oddeľuje a ide na koniec vety. Napr. 'Ich rufe dich an.'"
+        },
+        {
+          infinitive: "senden",
+          translation: "poslať",
+          forms: [
+            {
+              pronoun: "ich",
+              correct: "sende"
+            },
+            {
+              pronoun: "du",
+              correct: "sendest"
+            },
+            {
+              pronoun: "er/sie/es",
+              correct: "sendet"
+            },
+            {
+              pronoun: "wir",
+              correct: "senden"
+            },
+            {
+              pronoun: "ihr",
+              correct: "sendet"
+            },
+            {
+              pronoun: "sie/Sie",
+              correct: "senden"
+            }
+          ],
+          note: "Sloveso 'senden' je pravidelné sloveso a časuje sa podľa štandardných pravidiel pre slovesá končiace na '-en'."
+        }
+      ]
+    }
   ],
-
-  reviewWords: ["L16_V11", "L16_V12", "L16_V13", "L19_V01", "L14_V01"],
-  lessonNotes:
-    "Kľúč k odlučiteľným slovesám: (1) V hlavnej vete: kmeň na P2, predpona na KONIEC. (2) S modálnym slovesom: infinitív ostáva celý na konci (Jana muss aufstehen — NDEoddeľuje sa!). (3) V slovníku hľadaj značku | : auf|stehen, ein|kaufen. Gratulujeme — dokončil/-a si Týždeň 4!",
+  reviewWords: []
 };

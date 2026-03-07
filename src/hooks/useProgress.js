@@ -46,6 +46,7 @@ const defaultState = () => ({
   customVocab: [],
   lessonStates: {}, // Stores mid-lesson progress
   generatedWords: {}, // Stores AI generated grammar cards for StoryReader
+  smartTutorHistory: [], // Stores past AI Tutor sessions
 });
 
 // ── Serialise / deserialise ──────────────────────────────────────────────────
@@ -483,6 +484,16 @@ export function useProgress() {
     }));
   }, []);
 
+  const saveSmartTutorSession = useCallback((sessionData) => {
+    setGlobalProgress((prev) => ({
+      ...prev,
+      smartTutorHistory: [
+        { ...sessionData, savedAt: new Date().toISOString() },
+        ...(prev.smartTutorHistory || []),
+      ].slice(0, 50), // Keep the latest 50 sessions
+    }));
+  }, []);
+
   const resetLesson = useCallback((lessonId) => {
     setGlobalProgress((prev) => {
       const newCompleted = { ...prev.completedLessons };
@@ -567,5 +578,6 @@ export function useProgress() {
     addCustomVocab,
     completeStory,
     saveGeneratedGrammarCard,
+    saveSmartTutorSession,
   };
 }

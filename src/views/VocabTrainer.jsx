@@ -1,10 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { LESSONS } from '../data/curriculum';
-import { Volume2, RotateCcw, CheckCircle, Brain, ChevronRight, ChevronLeft, LayoutGrid, CheckSquare, Edit3, Plus, X } from 'lucide-react';
+import { Volume2, RotateCcw, CheckCircle, Brain, ChevronRight, ChevronLeft, LayoutGrid, CheckSquare, Edit3, Plus, X, Layers as LayersIcon } from 'lucide-react';
 import { useTTS } from '../hooks/useTTS';
 import { getExplanation } from '../hooks/useAI';
 import { normalizeGerman } from '../utils/text';
 import { GenderWord, GenderText, GenderLegend, getGenderForWord, GENDER_COLORS } from '../utils/genderColors';
+import { ChunksTrainer } from '../components/vocab/ChunksTrainer';
 
 function shuffle(arr) {
   const a = [...arr];
@@ -24,6 +25,12 @@ function buildDeck(progress) {
   const combined = [...allVocab, ...customVocab];
   const vocabSeen = progress.vocabSeen || {};
 
+  // Filter out archived/ignored words where interval is arbitrarily high e.g. 10000
+  const activeCombined = combined.filter(v => {
+    const seen = vocabSeen[v.de];
+    return !seen || seen.interval < 10000;
+  });
+
   // Sort cards into buckets:
   // 1. Overdue (dueDate <= today) — most important, sorted by how overdue they are
   // 2. Unseen — never reviewed
@@ -34,13 +41,13 @@ function buildDeck(progress) {
     return Math.ceil((new Date(today) - new Date(due)) / 86400000); // positive = overdue
   };
 
-  const overdue = combined
+  const overdue = activeCombined
     .filter(v => { const d = getDaysOverdue(v); return d !== null && d >= 0; })
     .sort((a, b) => (getDaysOverdue(b) || 0) - (getDaysOverdue(a) || 0));
 
-  const unseen = combined.filter(v => !vocabSeen[v.de]);
+  const unseen = activeCombined.filter(v => !vocabSeen[v.de]);
 
-  const upcoming = combined
+  const upcoming = activeCombined
     .filter(v => { const d = getDaysOverdue(v); return d !== null && d < 0; })
     .sort((a, b) => (getDaysOverdue(a) || 0) - (getDaysOverdue(b) || 0))
     .slice(0, 5); // only a few preview cards
@@ -70,6 +77,7 @@ const MODES = [
 
 export default function VocabTrainer({ progress, onMarkVocab, onMarkVocabWrong, onReviewVocab, onAddCustomVocab }) {
   const { speak } = useTTS();
+  const [mainTab, setMainTab] = useState('words'); // 'words' | 'chunks'
   const [mode, setMode] = useState('A');
   const [deck, setDeck] = useState([]);
   const [index, setIndex] = useState(0);
@@ -350,453 +358,514 @@ export default function VocabTrainer({ progress, onMarkVocab, onMarkVocabWrong, 
   const gapSentence = mode === 'C' ? buildGapSentence(current) : null;
 
   return (
-    <div className="max-w-md mx-auto space-y-5">
-      {/* Header */}
-      <div className="flex items-center justify-between">
-        <div className="flex items-center gap-2">
-          <Brain size={20} className="text-indigo-400" />
-          <h2 className="text-lg font-bold text-white">Tréner slovíčok</h2>
+    <div className="max-w-md mx-auto space-y-5 animate-fade-in">
+      {/* Header & Main Tabs */}
+      <div className="flex flex-col gap-4 mb-4">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <Brain size={20} className="text-indigo-400" />
+            <h2 className="text-lg font-bold text-white">Slovíčka & Frázy</h2>
+          </div>
+          {mainTab === 'words' && (
+            <button
+              onClick={() => setShowStats(s => !s)}
+              className={`text-sm flex items-center gap-1 px-2.5 py-1 rounded-full border transition-all ${showStats ? 'bg-indigo-700 border-indigo-500 text-white' : 'bg-gray-800 border-gray-700 text-gray-400 hover:text-white'
+                }`}
+              title="Štatistiky & forecast"
+            >
+              📊
+            </button>
+          )}
         </div>
-        <div className="flex items-center gap-2">
+
+        {/* Top-Level Tabs Navigation */}
+        <div className="bg-gray-900 border border-gray-800 p-1 rounded-2xl flex gap-1 w-full relative">
           <button
-            onClick={() => setShowStats(s => !s)}
-            className={`text-sm flex items-center gap-1 px-2.5 py-1 rounded-full border transition-all ${showStats ? 'bg-indigo-700 border-indigo-500 text-white' : 'bg-gray-800 border-gray-700 text-gray-400 hover:text-white'
+            onClick={() => setMainTab('words')}
+            className={`flex-1 flex items-center justify-center gap-2 py-2.5 rounded-xl text-sm font-semibold transition-all relative z-10 ${mainTab === 'words'
+              ? 'text-white'
+              : 'text-gray-500 hover:text-gray-300'
               }`}
-            title="Štatistiky & forecast"
           >
-            📊
+            <LayoutGrid size={16} className={mainTab === 'words' ? 'text-indigo-400' : ''} />
+            Samostatné slová
           </button>
-          <span className="text-sm text-gray-500">{index + 1} / {deck.length}</span>
+          <button
+            onClick={() => setMainTab('chunks')}
+            className={`flex-1 flex items-center justify-center gap-2 py-2.5 rounded-xl text-sm font-semibold transition-all relative z-10 ${mainTab === 'chunks'
+              ? 'text-white'
+              : 'text-gray-500 hover:text-gray-300'
+              }`}
+          >
+            <LayersIcon size={16} className={mainTab === 'chunks' ? 'text-indigo-400' : ''} />
+            Vety a zhluky
+          </button>
+
+          {/* Animated active pill background */}
+          <div
+            className="absolute top-1 bottom-1 w-[calc(50%-4px)] bg-gray-800 rounded-xl transition-all duration-300 shadow-md border border-gray-700 pointer-events-none"
+            style={{
+              left: mainTab === 'words' ? '4px' : '50%'
+            }}
+          />
         </div>
       </div>
 
-      {/* Feature 5: Stats panel */}
-      {showStats && (
-        <div className="bg-gray-900/70 border border-gray-700 rounded-2xl p-4 space-y-3">
-          <p className="text-xs font-bold text-gray-400 uppercase tracking-widest">📅 SRS Forecast — nasledujúcich 7 dní</p>
-          <div className="grid grid-cols-7 gap-1">
-            {Object.entries(dueForecast).map(([date, count], i) => (
-              <div key={date} className="text-center">
-                <div
-                  className={`rounded-lg py-1.5 text-sm font-bold transition-all ${i === 0 ? 'bg-amber-500/30 border border-amber-500/50 text-amber-300' :
-                    count > 0 ? 'bg-indigo-900/60 text-indigo-300' : 'bg-gray-800 text-gray-600'
-                    }`}
-                >
-                  {count}
-                </div>
-                <div className="text-[9px] text-gray-600 mt-0.5">
-                  {i === 0 ? 'Dnes' : i === 1 ? 'Zajtra' : `+${i}d`}
-                </div>
-              </div>
-            ))}
-          </div>
-          {leeches.length > 0 && (
-            <div className="bg-red-950/40 border border-red-800/50 rounded-xl p-3">
-              <p className="text-xs font-bold text-red-400 mb-1.5">🩸 Problémové slovíčka ({leeches.length})</p>
-              <div className="flex flex-wrap gap-1.5">
-                {leeches.map(word => (
-                  <span key={word} className="bg-red-900/40 text-red-300 text-xs px-2 py-0.5 rounded-full border border-red-800/40">{word}</span>
+      {mainTab === 'chunks' ? (
+        <ChunksTrainer progress={progress} onMarkVocab={onMarkVocab} onReviewVocab={onReviewVocab} />
+      ) : (
+        <>
+          {/* Feature 5: Stats panel for Words only */}
+          {showStats && (
+            <div className="bg-gray-900/70 border border-gray-700 rounded-2xl p-4 space-y-3 animate-fade-in">
+              <p className="text-xs font-bold text-gray-400 uppercase tracking-widest">📅 SRS Forecast — nasledujúcich 7 dní</p>
+              <div className="grid grid-cols-7 gap-1">
+                {Object.entries(dueForecast).map(([date, count], i) => (
+                  <div key={date} className="text-center">
+                    <div
+                      className={`rounded-lg py-1.5 text-sm font-bold transition-all ${i === 0 ? 'bg-amber-500/30 border border-amber-500/50 text-amber-300' :
+                        count > 0 ? 'bg-indigo-900/60 text-indigo-300' : 'bg-gray-800 text-gray-600'
+                        }`}
+                    >
+                      {count}
+                    </div>
+                    <div className="text-[9px] text-gray-600 mt-0.5">
+                      {i === 0 ? 'Dnes' : i === 1 ? 'Zajtra' : `+${i}d`}
+                    </div>
+                  </div>
                 ))}
               </div>
-              <p className="text-[10px] text-gray-500 mt-2">Tieto slová si pamätáš ťažko. Skús mnemotechniku alebo obrázkovú asociáciu.</p>
+              {leeches.length > 0 && (
+                <div className="bg-red-950/40 border border-red-800/50 rounded-xl p-3">
+                  <p className="text-xs font-bold text-red-400 mb-1.5">🩸 Problémové slovíčka ({leeches.length})</p>
+                  <div className="flex flex-wrap gap-1.5">
+                    {leeches.map(word => (
+                      <span key={word} className="bg-red-900/40 text-red-300 text-xs px-2 py-0.5 rounded-full border border-red-800/40">{word}</span>
+                    ))}
+                  </div>
+                  <p className="text-[10px] text-gray-500 mt-2">Tieto slová si pamätáš ťažko. Skús mnemotechniku alebo obrázkovú asociáciu.</p>
+                </div>
+              )}
+              <div className="flex gap-3 text-xs">
+                <div className="flex-1 bg-gray-800/60 rounded-xl p-2.5 text-center">
+                  <p className="text-lg font-bold text-emerald-400">{totalMastered}</p>
+                  <p className="text-gray-500">V pamäti</p>
+                </div>
+                <div className="flex-1 bg-gray-800/60 rounded-xl p-2.5 text-center">
+                  <p className="text-lg font-bold text-amber-400">{dueTodayCount}</p>
+                  <p className="text-gray-500">Dnes</p>
+                </div>
+                <div className="flex-1 bg-gray-800/60 rounded-xl p-2.5 text-center">
+                  <p className="text-lg font-bold text-gray-300">{allVocabCount - totalMastered}</p>
+                  <p className="text-gray-500">Ostatok</p>
+                </div>
+              </div>
             </div>
           )}
-          <div className="flex gap-3 text-xs">
-            <div className="flex-1 bg-gray-800/60 rounded-xl p-2.5 text-center">
-              <p className="text-lg font-bold text-emerald-400">{totalMastered}</p>
-              <p className="text-gray-500">V pamäti</p>
+
+          {/* Mode selector & Custom Word */}
+          <div className="flex items-center justify-between">
+            <div className="flex gap-2">
+              {MODES.map(({ id, label, Icon }) => (
+                <button
+                  key={id}
+                  onClick={() => handleModeChange(id)}
+                  className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium transition-all ${mode === id ? 'bg-indigo-700 text-white' : 'bg-gray-800 text-gray-400 hover:text-gray-200'
+                    }`}
+                >
+                  <Icon size={14} />
+                  <span className="hidden sm:inline">{label}</span>
+                </button>
+              ))}
             </div>
-            <div className="flex-1 bg-gray-800/60 rounded-xl p-2.5 text-center">
-              <p className="text-lg font-bold text-amber-400">{dueTodayCount}</p>
-              <p className="text-gray-500">Dnes</p>
-            </div>
-            <div className="flex-1 bg-gray-800/60 rounded-xl p-2.5 text-center">
-              <p className="text-lg font-bold text-gray-300">{allVocabCount - totalMastered}</p>
-              <p className="text-gray-500">Ostatok</p>
-            </div>
+            {onAddCustomVocab && (
+              <button
+                onClick={() => setShowAddForm(!showAddForm)}
+                className="text-indigo-400 hover:text-indigo-300 flex items-center gap-1 text-sm font-medium transition-colors bg-indigo-900/30 px-3 py-1.5 rounded-full border border-indigo-500/30"
+              >
+                {showAddForm ? <X size={14} /> : <Plus size={14} />}
+                Pridať
+              </button>
+            )}
           </div>
-        </div>
-      )}
 
-      {/* Mode selector & Custom Word */}
-      <div className="flex items-center justify-between">
-        <div className="flex gap-2">
-          {MODES.map(({ id, label, Icon }) => (
-            <button
-              key={id}
-              onClick={() => handleModeChange(id)}
-              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium transition-all ${mode === id ? 'bg-indigo-700 text-white' : 'bg-gray-800 text-gray-400 hover:text-gray-200'
-                }`}
-            >
-              <Icon size={14} />
-              <span className="hidden sm:inline">{label}</span>
-            </button>
-          ))}
-        </div>
-        {onAddCustomVocab && (
-          <button
-            onClick={() => setShowAddForm(!showAddForm)}
-            className="text-indigo-400 hover:text-indigo-300 flex items-center gap-1 text-sm font-medium transition-colors bg-indigo-900/30 px-3 py-1.5 rounded-full border border-indigo-500/30"
-          >
-            {showAddForm ? <X size={14} /> : <Plus size={14} />}
-            Pridať
-          </button>
-        )}
-      </div>
+          {showAddForm && (
+            <div className="bg-gray-900 border border-indigo-500/50 rounded-2xl p-4 animate-fade-in space-y-3">
+              <p className="text-sm font-semibold text-gray-300">Pridať vlastné slovíčko</p>
+              <div className="grid grid-cols-2 gap-2">
+                <input
+                  value={newWordDe} onChange={e => setNewWordDe(e.target.value)}
+                  placeholder="Nemecky (napr. Katze)"
+                  className="bg-gray-800 border border-gray-700 rounded-xl px-3 py-2 text-sm text-white focus:border-indigo-500 focus:outline-none"
+                />
+                <input
+                  value={newWordSk} onChange={e => setNewWordSk(e.target.value)}
+                  placeholder="Slovensky (napr. mačka)"
+                  className="bg-gray-800 border border-gray-700 rounded-xl px-3 py-2 text-sm text-white focus:border-indigo-500 focus:outline-none"
+                />
+              </div>
+              <button
+                onClick={() => {
+                  if (newWordDe.trim() && newWordSk.trim() && onAddCustomVocab) {
+                    onAddCustomVocab(newWordDe.trim(), newWordSk.trim());
+                    setNewWordDe('');
+                    setNewWordSk('');
+                    setShowAddForm(false);
+                    setTimeout(() => resetDeck(), 100);
+                  }
+                }}
+                disabled={!newWordDe.trim() || !newWordSk.trim()}
+                className="w-full bg-indigo-600 hover:bg-indigo-500 disabled:opacity-50 text-white font-semibold py-2 rounded-xl text-sm transition-colors"
+              >
+                Uložiť slovíčko
+              </button>
+            </div>
+          )}
 
-      {showAddForm && (
-        <div className="bg-gray-900 border border-indigo-500/50 rounded-2xl p-4 animate-fade-in space-y-3">
-          <p className="text-sm font-semibold text-gray-300">Pridať vlastné slovíčko</p>
-          <div className="grid grid-cols-2 gap-2">
-            <input
-              value={newWordDe} onChange={e => setNewWordDe(e.target.value)}
-              placeholder="Nemecky (napr. Katze)"
-              className="bg-gray-800 border border-gray-700 rounded-xl px-3 py-2 text-sm text-white focus:border-indigo-500 focus:outline-none"
-            />
-            <input
-              value={newWordSk} onChange={e => setNewWordSk(e.target.value)}
-              placeholder="Slovensky (napr. mačka)"
-              className="bg-gray-800 border border-gray-700 rounded-xl px-3 py-2 text-sm text-white focus:border-indigo-500 focus:outline-none"
+          {/* Progress bar */}
+          <div className="h-1.5 bg-gray-800 rounded-full overflow-hidden">
+            <div
+              className="h-full bg-indigo-500 rounded-full transition-all duration-500"
+              style={{ width: `${(index / deck.length) * 100}%` }}
             />
           </div>
-          <button
-            onClick={() => {
-              if (newWordDe.trim() && newWordSk.trim() && onAddCustomVocab) {
-                onAddCustomVocab(newWordDe.trim(), newWordSk.trim());
-                setNewWordDe('');
-                setNewWordSk('');
-                setShowAddForm(false);
-                setTimeout(() => resetDeck(), 100);
-              }
-            }}
-            disabled={!newWordDe.trim() || !newWordSk.trim()}
-            className="w-full bg-indigo-600 hover:bg-indigo-500 disabled:opacity-50 text-white font-semibold py-2 rounded-xl text-sm transition-colors"
-          >
-            Uložiť slovíčko
-          </button>
-        </div>
-      )}
 
-      {/* Progress bar */}
-      <div className="h-1.5 bg-gray-800 rounded-full overflow-hidden">
-        <div
-          className="h-full bg-indigo-500 rounded-full transition-all duration-500"
-          style={{ width: `${(index / deck.length) * 100}%` }}
-        />
-      </div>
-
-      {/* Stats bar */}
-      <div className="flex gap-3 text-xs items-center">
-        <span className="text-emerald-400 font-bold">{sessionResults.known} ✓</span>
-        <span className="text-red-400 font-bold">{sessionResults.unknown} ✗</span>
-        <span className="text-indigo-300 font-semibold">
-          {sessionResults.known + sessionResults.unknown} kariet tejto session
-        </span>
-        {dueTodayCount > 0 && (
-          <span className="bg-amber-500/20 text-amber-300 border border-amber-600/40 rounded-full px-2 py-0.5 font-semibold">
-            🔔 {dueTodayCount} dnes
-          </span>
-        )}
-        <span className="text-gray-600 ml-auto">{totalMastered} zvládnutých celkovo</span>
-      </div>
-
-      {/* ── MODE A: Flashcard ── */}
-      {mode === 'A' && (
-        <>
-          <div
-            onClick={!flipped ? handleFlip : undefined}
-            className={`relative rounded-3xl border min-h-52 flex flex-col items-center justify-center p-8 transition-all duration-300 select-none
-              ${!flipped ? 'cursor-pointer hover:border-indigo-600 border-gray-700 bg-gray-900' : 'border-indigo-700 bg-indigo-950/30'}`}
-          >
-            {/* [Agent 4] Source tag */}
-            <span className="absolute top-4 left-4 text-xs text-gray-600">
-              {current.source === 'story' ? `📖 ${current.storyTitle || 'Príbeh'}` : `📚 ${current.lessonTitle}`}
+          {/* Stats bar */}
+          <div className="flex gap-3 text-xs items-center">
+            <span className="text-emerald-400 font-bold">{sessionResults.known} ✓</span>
+            <span className="text-red-400 font-bold">{sessionResults.unknown} ✗</span>
+            <span className="text-indigo-300 font-semibold">
+              {sessionResults.known + sessionResults.unknown} kariet tejto session
             </span>
-            {vocabSeen[current.de]?.mastered && (
-              <span className="absolute top-4 right-4 flex items-center gap-1 text-xs text-emerald-500">
-                <CheckCircle size={12} /> zvládnuté
+            {dueTodayCount > 0 && (
+              <span className="bg-amber-500/20 text-amber-300 border border-amber-600/40 rounded-full px-2 py-0.5 font-semibold">
+                🔔 {dueTodayCount} dnes
               </span>
             )}
-            {!flipped ? (
-              <div className="text-center">
-                {current.image && (
-                  <img
-                    src={current.image}
-                    alt={current.de}
-                    className="w-28 h-28 object-cover rounded-2xl mx-auto mb-4 ring-2 ring-indigo-700/40 shadow-lg"
-                    onError={e => { e.target.style.display = 'none'; }}
-                  />
-                )}
-                <p className="text-4xl font-black mb-2">
-                  {(() => { const g = getGenderForWord(current.de); return g ? <span className={GENDER_COLORS[g].text}>{current.de}</span> : <span className="text-white">{current.de}</span>; })()}
-                </p>
-                {(vocabSeen[current.de]?.wrongCount || 0) >= 8 && (
-                  <span className="inline-flex items-center gap-1 text-[10px] bg-red-900/50 text-red-400 border border-red-800/50 rounded-full px-2 py-0.5 mb-2">
-                    🩸 Problémové slovícko
+            <span className="text-gray-500 ml-auto">{index + 1} / {deck.length} kariet</span>
+          </div>
+
+          {/* ── MODE A: Flashcard ── */}
+          {mode === 'A' && (
+            <>
+              <div
+                onClick={!flipped ? handleFlip : undefined}
+                className={`relative rounded-3xl border min-h-52 flex flex-col items-center justify-center p-8 transition-all duration-300 select-none
+              ${!flipped ? 'cursor-pointer hover:border-indigo-600 border-gray-700 bg-gray-900' : 'border-indigo-700 bg-indigo-950/30'}`}
+              >
+                {/* [Agent 4] Source tag */}
+                <span className="absolute top-4 left-4 text-xs text-gray-600">
+                  {current.source === 'story' ? `📖 ${current.storyTitle || 'Príbeh'}` : `📚 ${current.lessonTitle}`}
+                </span>
+                {vocabSeen[current.de]?.mastered && (
+                  <span className="absolute top-4 right-4 flex items-center gap-1 text-xs text-emerald-500">
+                    <CheckCircle size={12} /> zvládnuté
                   </span>
                 )}
-                <p className="text-gray-500 text-sm">Klikni pre preklad</p>
-                <Volume2 size={16} className="text-indigo-400 mx-auto mt-3 animate-pulse" />
+                {!flipped ? (
+                  <div className="text-center">
+                    {current.image && (
+                      <img
+                        src={current.image}
+                        alt={current.de}
+                        className="w-28 h-28 object-cover rounded-2xl mx-auto mb-4 ring-2 ring-indigo-700/40 shadow-lg"
+                        onError={e => { e.target.style.display = 'none'; }}
+                      />
+                    )}
+                    <p className="text-4xl font-black mb-2">
+                      {(() => { const g = getGenderForWord(current.de); return g ? <span className={GENDER_COLORS[g].text}>{current.de}</span> : <span className="text-white">{current.de}</span>; })()}
+                    </p>
+                    {(vocabSeen[current.de]?.wrongCount || 0) >= 8 && (
+                      <span className="inline-flex items-center gap-1 text-[10px] bg-red-900/50 text-red-400 border border-red-800/50 rounded-full px-2 py-0.5 mb-2">
+                        🩸 Problémové slovícko
+                      </span>
+                    )}
+                    <p className="text-gray-500 text-sm">Klikni pre preklad</p>
+                    <Volume2 size={16} className="text-indigo-400 mx-auto mt-3 animate-pulse" />
+                  </div>
+                ) : (
+                  <div className="text-center w-full">
+                    <p className="text-2xl font-bold mb-1">
+                      {(() => { const g = getGenderForWord(current.de); return g ? <span className={GENDER_COLORS[g].text}>{current.de}</span> : <span className="text-white">{current.de}</span>; })()}
+                    </p>
+                    <button
+                      onClick={() => speak(current.de)}
+                      className="mb-4 flex items-center gap-2 mx-auto bg-indigo-800/60 hover:bg-indigo-700/60 rounded-xl px-3 py-1.5 transition-all"
+                    >
+                      <Volume2 size={14} className="text-indigo-300" />
+                      <span className="text-xs text-indigo-200">Počuť výslovnosť</span>
+                    </button>
+                    <p className="text-3xl font-black text-indigo-300 mb-2">{current.sk}</p>
+                    {current.example && (
+                      <div
+                        className="mt-3 bg-gray-800/60 rounded-xl px-4 py-2 text-sm text-gray-400 cursor-pointer hover:bg-gray-800 transition-all"
+                        onClick={() => speak(current.example)}
+                      >
+                        <span className="text-indigo-300">„<GenderText text={current.example} />“</span>
+                      </div>
+                    )}
+                  </div>
+                )}
               </div>
-            ) : (
-              <div className="text-center w-full">
-                <p className="text-2xl font-bold mb-1">
-                  {(() => { const g = getGenderForWord(current.de); return g ? <span className={GENDER_COLORS[g].text}>{current.de}</span> : <span className="text-white">{current.de}</span>; })()}
-                </p>
+              {flipped ? (
+                <>
+                  <div className="grid grid-cols-3 gap-2 mb-3">
+                    <button
+                      onClick={() => handleResult(1)}
+                      className="btn-secondary border-red-900 hover:border-red-700 hover:bg-red-950/30 text-red-400 flex flex-col items-center justify-center gap-1 py-3 text-sm"
+                    >
+                      <ChevronLeft size={16} />
+                      <span>Nevedel</span>
+                      <span className="text-[10px] text-gray-600">+1 deň</span>
+                    </button>
+                    <button
+                      onClick={() => handleResult(3)}
+                      className="btn-secondary border-amber-800 hover:border-amber-600 hover:bg-amber-950/20 text-amber-300 flex flex-col items-center justify-center gap-1 py-3 text-sm"
+                    >
+                      <span>Vedel</span>
+                      <span className="text-[10px] text-gray-600">+{vocabSeen[current?.de]?.interval || 1}d</span>
+                    </button>
+                    <button
+                      onClick={() => handleResult(5)}
+                      className="btn-primary bg-emerald-700 hover:bg-emerald-600 border-emerald-600 flex flex-col items-center justify-center gap-1 py-3 text-sm"
+                    >
+                      <span>Ľahké!</span>
+                      <span className="text-[10px] text-emerald-300">dlhší interval</span>
+                    </button>
+                  </div>
+
+                  {/* Quick Archive: banish word from SRS forever */}
+                  <button
+                    onClick={() => {
+                      const fn = onReviewVocab || onMarkVocab;
+                      if (fn) fn(current.de, 5);
+                      if (progress.vocabSeen) {
+                        if (progress.vocabSeen[current.de]) {
+                          progress.vocabSeen[current.de].interval = 10000;
+                        } else {
+                          progress.vocabSeen[current.de] = { interval: 10000, mastered: true };
+                        }
+                      }
+                      advance(true);
+                    }}
+                    className="w-full btn-secondary border-gray-700 hover:border-indigo-600 hover:bg-indigo-950/20 text-gray-400 hover:text-indigo-300 flex items-center justify-center gap-2 py-2.5 text-xs transition-all"
+                  >
+                    <CheckCircle size={14} className="opacity-70" />
+                    <span>Už to ovládam. Viac neukazovať.</span>
+                  </button>
+                </>
+              ) : (
+                <button onClick={handleFlip} className="w-full btn-secondary py-4 text-gray-300">
+                  Zobraziť preklad
+                </button>
+              )}
+            </>
+          )}
+
+          {/* ── MODE B: MCQ ── */}
+          {mode === 'B' && (
+            <>
+              <div className="relative rounded-3xl border border-gray-700 bg-gray-900 min-h-36 flex flex-col items-center justify-center p-8 select-none">
+                <span className="absolute top-4 left-4 text-xs text-gray-600">{current.lessonTitle}</span>
+                {vocabSeen[current.de]?.mastered && (
+                  <span className="absolute top-4 right-4 flex items-center gap-1 text-xs text-emerald-500">
+                    <CheckCircle size={12} /> zvládnuté
+                  </span>
+                )}
                 <button
                   onClick={() => speak(current.de)}
-                  className="mb-4 flex items-center gap-2 mx-auto bg-indigo-800/60 hover:bg-indigo-700/60 rounded-xl px-3 py-1.5 transition-all"
+                  className="mb-3 flex items-center gap-2 mx-auto bg-indigo-800/60 hover:bg-indigo-700/60 rounded-xl px-3 py-1.5 transition-all"
                 >
                   <Volume2 size={14} className="text-indigo-300" />
                   <span className="text-xs text-indigo-200">Počuť výslovnosť</span>
                 </button>
-                <p className="text-3xl font-black text-indigo-300 mb-2">{current.sk}</p>
-                {current.example && (
-                  <div
-                    className="mt-3 bg-gray-800/60 rounded-xl px-4 py-2 text-sm text-gray-400 cursor-pointer hover:bg-gray-800 transition-all"
-                    onClick={() => speak(current.example)}
+                <p className="text-4xl font-black">
+                  {(() => { const g = getGenderForWord(current.de); return g ? <span className={GENDER_COLORS[g].text}>{current.de}</span> : <span className="text-white">{current.de}</span>; })()}
+                </p>
+                <p className="text-gray-500 text-sm mt-2">Vyber správny preklad</p>
+              </div>
+              <div className="grid grid-cols-2 gap-3">
+                {mcqOptions.map((option) => {
+                  const isSelected = mcqSelected === option;
+                  const isCorrect = option === current.sk;
+                  let cls = 'rounded-2xl border px-4 py-3 text-sm font-medium transition-all text-left ';
+                  if (mcqSelected === null) {
+                    cls += 'border-gray-700 bg-gray-800 text-gray-200 hover:border-indigo-600 hover:bg-indigo-950/30 cursor-pointer';
+                  } else if (isCorrect) {
+                    cls += 'border-emerald-600 bg-emerald-950/40 text-emerald-300';
+                  } else if (isSelected) {
+                    cls += 'border-red-700 bg-red-950/30 text-red-400';
+                  } else {
+                    cls += 'border-gray-800 bg-gray-900 text-gray-600 opacity-60';
+                  }
+                  return (
+                    <button
+                      key={option}
+                      className={cls}
+                      onClick={() => handleMCQSelect(option)}
+                      disabled={mcqSelected !== null}
+                    >
+                      {option}
+                    </button>
+                  );
+                })}
+              </div>
+              {mcqSelected !== null && (
+                <div className="space-y-3">
+                  {mcqSelected !== current.sk && !explanation && (
+                    <button
+                      onClick={async () => {
+                        setLoadingWhy(true);
+                        try {
+                          const res = await getExplanation({
+                            question: "Prelož do slovenčiny: " + current.de,
+                            correctAnswer: current.sk,
+                            userAnswer: mcqSelected
+                          });
+                          setExplanation(res);
+                        } catch (e) {
+                          setExplanation("Chyba API kľúča.");
+                        } finally {
+                          setLoadingWhy(false);
+                        }
+                      }}
+                      disabled={loadingWhy}
+                      className="w-full btn-secondary bg-amber-950/20 py-3 flex items-center justify-center gap-2 text-sm font-semibold border-amber-800 text-amber-500 hover:bg-amber-950/40 hover:border-amber-600 transition-all border border-dashed"
+                    >
+                      <Brain size={16} className={loadingWhy ? "animate-pulse" : ""} />
+                      {loadingWhy ? 'Generujem...' : 'Prečo to je nesprávne?'}
+                    </button>
+                  )}
+                  {explanation && (
+                    <div className="bg-amber-950/40 border border-amber-800/50 rounded-xl p-4 animate-fade-in flex items-start gap-3 text-left">
+                      <Brain size={18} className="text-amber-400 flex-shrink-0 mt-0.5" />
+                      <p className="text-amber-200 text-sm leading-relaxed">{explanation}</p>
+                    </div>
+                  )}
+                  <button
+                    onClick={() => advance(mcqSelected === current.sk)}
+                    className="w-full btn-primary flex items-center justify-center gap-2 py-3"
                   >
-                    <span className="text-indigo-300">„<GenderText text={current.example} />“</span>
-                  </div>
+                    Ďalej
+                    <ChevronRight size={16} />
+                  </button>
+                </div>
+              )}
+            </>
+          )}
+
+          {/* ── MODE C: Gap-fill ── */}
+          {mode === 'C' && (
+            <>
+              <div className="relative rounded-3xl border border-gray-700 bg-gray-900 min-h-36 flex flex-col items-center justify-center p-8 select-none">
+                <span className="absolute top-4 left-4 text-xs text-gray-600">{current.lessonTitle}</span>
+                {vocabSeen[current.de]?.mastered && (
+                  <span className="absolute top-4 right-4 flex items-center gap-1 text-xs text-emerald-500">
+                    <CheckCircle size={12} /> zvládnuté
+                  </span>
+                )}
+                <p className="text-sm text-gray-400 mb-3">Doplň chýbajúce slovo:</p>
+                {gapSentence ? (
+                  <p className="text-xl font-semibold text-white text-center leading-relaxed">
+                    {gapSentence.split('___').map((part, i, arr) => (
+                      <React.Fragment key={i}>
+                        <GenderText text={part} />
+                        {i < arr.length - 1 && (
+                          <span
+                            className={`inline-block min-w-16 border-b-2 mx-1 font-black ${gapChecked
+                              ? gapCorrect
+                                ? 'text-emerald-400 border-emerald-500'
+                                : 'text-red-400 border-red-500'
+                              : 'text-indigo-300 border-indigo-500'
+                              }`}
+                          >
+                            {gapChecked ? current.de : gapInput || '\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0'}
+                          </span>
+                        )}
+                      </React.Fragment>
+                    ))}
+                  </p>
+                ) : (
+                  <p className="text-lg font-semibold text-white text-center">
+                    Napíš: <span className="text-indigo-300">{current.de}</span>
+                  </p>
+                )}
+                {current.sk && (
+                  <p className="text-sm text-gray-500 mt-3">{current.sk}</p>
                 )}
               </div>
-            )}
-          </div>
-          {flipped ? (
-            <div className="grid grid-cols-3 gap-2">
-              <button
-                onClick={() => handleResult(1)}
-                className="btn-secondary border-red-900 hover:border-red-700 hover:bg-red-950/30 text-red-400 flex flex-col items-center justify-center gap-1 py-3 text-sm"
-              >
-                <ChevronLeft size={16} />
-                <span>Nevedel</span>
-                <span className="text-[10px] text-gray-600">+1 deň</span>
-              </button>
-              <button
-                onClick={() => handleResult(3)}
-                className="btn-secondary border-amber-800 hover:border-amber-600 hover:bg-amber-950/20 text-amber-300 flex flex-col items-center justify-center gap-1 py-3 text-sm"
-              >
-                <span>Vedel</span>
-                <span className="text-[10px] text-gray-600">+{vocabSeen[current?.de]?.interval || 1}d</span>
-              </button>
-              <button
-                onClick={() => handleResult(5)}
-                className="btn-primary bg-emerald-700 hover:bg-emerald-600 border-emerald-600 flex flex-col items-center justify-center gap-1 py-3 text-sm"
-              >
-                <span>Ľahké!</span>
-                <span className="text-[10px] text-emerald-300">dlhší interval</span>
-              </button>
-            </div>
-          ) : (
-            <button onClick={handleFlip} className="w-full btn-secondary py-4 text-gray-300">
-              Zobraziť preklad
-            </button>
-          )}
-        </>
-      )}
 
-      {/* ── MODE B: MCQ ── */}
-      {mode === 'B' && (
-        <>
-          <div className="relative rounded-3xl border border-gray-700 bg-gray-900 min-h-36 flex flex-col items-center justify-center p-8 select-none">
-            <span className="absolute top-4 left-4 text-xs text-gray-600">{current.lessonTitle}</span>
-            {vocabSeen[current.de]?.mastered && (
-              <span className="absolute top-4 right-4 flex items-center gap-1 text-xs text-emerald-500">
-                <CheckCircle size={12} /> zvládnuté
-              </span>
-            )}
-            <button
-              onClick={() => speak(current.de)}
-              className="mb-3 flex items-center gap-2 mx-auto bg-indigo-800/60 hover:bg-indigo-700/60 rounded-xl px-3 py-1.5 transition-all"
-            >
-              <Volume2 size={14} className="text-indigo-300" />
-              <span className="text-xs text-indigo-200">Počuť výslovnosť</span>
-            </button>
-            <p className="text-4xl font-black">
-              {(() => { const g = getGenderForWord(current.de); return g ? <span className={GENDER_COLORS[g].text}>{current.de}</span> : <span className="text-white">{current.de}</span>; })()}
-            </p>
-            <p className="text-gray-500 text-sm mt-2">Vyber správny preklad</p>
-          </div>
-          <div className="grid grid-cols-2 gap-3">
-            {mcqOptions.map((option) => {
-              const isSelected = mcqSelected === option;
-              const isCorrect = option === current.sk;
-              let cls = 'rounded-2xl border px-4 py-3 text-sm font-medium transition-all text-left ';
-              if (mcqSelected === null) {
-                cls += 'border-gray-700 bg-gray-800 text-gray-200 hover:border-indigo-600 hover:bg-indigo-950/30 cursor-pointer';
-              } else if (isCorrect) {
-                cls += 'border-emerald-600 bg-emerald-950/40 text-emerald-300';
-              } else if (isSelected) {
-                cls += 'border-red-700 bg-red-950/30 text-red-400';
-              } else {
-                cls += 'border-gray-800 bg-gray-900 text-gray-600 opacity-60';
-              }
-              return (
-                <button
-                  key={option}
-                  className={cls}
-                  onClick={() => handleMCQSelect(option)}
-                  disabled={mcqSelected !== null}
-                >
-                  {option}
-                </button>
-              );
-            })}
-          </div>
-          {mcqSelected !== null && (
-            <div className="space-y-3">
-              {mcqSelected !== current.sk && !explanation && (
-                <button
-                  onClick={async () => {
-                    setLoadingWhy(true);
-                    try {
-                      const res = await getExplanation({
-                        question: "Prelož do slovenčiny: " + current.de,
-                        correctAnswer: current.sk,
-                        userAnswer: mcqSelected
-                      });
-                      setExplanation(res);
-                    } catch (e) {
-                      setExplanation("Chyba API kľúča.");
-                    } finally {
-                      setLoadingWhy(false);
-                    }
-                  }}
-                  disabled={loadingWhy}
-                  className="w-full btn-secondary bg-amber-950/20 py-3 flex items-center justify-center gap-2 text-sm font-semibold border-amber-800 text-amber-500 hover:bg-amber-950/40 hover:border-amber-600 transition-all border border-dashed"
-                >
-                  <Brain size={16} className={loadingWhy ? "animate-pulse" : ""} />
-                  {loadingWhy ? 'Generujem...' : 'Prečo to je nesprávne?'}
-                </button>
-              )}
-              {explanation && (
-                <div className="bg-amber-950/40 border border-amber-800/50 rounded-xl p-4 animate-fade-in flex items-start gap-3 text-left">
-                  <Brain size={18} className="text-amber-400 flex-shrink-0 mt-0.5" />
-                  <p className="text-amber-200 text-sm leading-relaxed">{explanation}</p>
+              {!gapChecked ? (
+                <div className="flex gap-2">
+                  <input
+                    ref={inputRef}
+                    type="text"
+                    value={gapInput}
+                    onChange={(e) => setGapInput(e.target.value)}
+                    onKeyDown={handleGapKeyDown}
+                    placeholder="Napíš nemecké slovo…"
+                    className="flex-1 bg-gray-800 border border-gray-700 rounded-xl px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-indigo-500 text-sm"
+                  />
+                  <button
+                    onClick={handleGapCheck}
+                    disabled={!gapInput.trim()}
+                    className="btn-primary px-5 py-3 disabled:opacity-40"
+                  >
+                    Skontrolovať
+                  </button>
+                </div>
+              ) : (
+                <div className="space-y-3">
+                  <div
+                    className={`rounded-2xl border px-4 py-3 text-sm font-medium text-center ${gapCorrect
+                      ? 'border-emerald-700 bg-emerald-950/30 text-emerald-300'
+                      : 'border-red-800 bg-red-950/20 text-red-400'
+                      }`}
+                  >
+                    {gapCorrect ? '✓ Správne!' : `✗ Správna odpoveď: ${current.de}`}
+                  </div>
+
+                  {!gapCorrect && !explanation && (
+                    <button
+                      onClick={async () => {
+                        setLoadingWhy(true);
+                        try {
+                          const res = await getExplanation({
+                            question: "Prelož text/vetu do nemčiny: " + (gapSentence ? current.example : current.sk),
+                            correctAnswer: current.de,
+                            userAnswer: gapInput
+                          });
+                          setExplanation(res);
+                        } catch (e) {
+                          setExplanation("Chyba API kľúča.");
+                        } finally {
+                          setLoadingWhy(false);
+                        }
+                      }}
+                      disabled={loadingWhy}
+                      className="w-full btn-secondary bg-amber-950/20 py-3 flex items-center justify-center gap-2 text-sm font-semibold border-amber-800 text-amber-500 hover:bg-amber-950/40 hover:border-amber-600 transition-all border border-dashed"
+                    >
+                      <Brain size={16} className={loadingWhy ? "animate-pulse" : ""} />
+                      {loadingWhy ? 'Generujem...' : 'Prečo to je nesprávne?'}
+                    </button>
+                  )}
+                  {explanation && (
+                    <div className="bg-amber-950/40 border border-amber-800/50 rounded-xl p-4 animate-fade-in flex items-start gap-3 text-left">
+                      <Brain size={18} className="text-amber-400 flex-shrink-0 mt-0.5" />
+                      <p className="text-amber-200 text-sm leading-relaxed">{explanation}</p>
+                    </div>
+                  )}
+
+                  <button
+                    onClick={() => advance(gapCorrect)}
+                    className="w-full btn-primary flex items-center justify-center gap-2 py-3"
+                  >
+                    Ďalej
+                    <ChevronRight size={16} />
+                  </button>
                 </div>
               )}
-              <button
-                onClick={() => advance(mcqSelected === current.sk)}
-                className="w-full btn-primary flex items-center justify-center gap-2 py-3"
-              >
-                Ďalej
-                <ChevronRight size={16} />
-              </button>
-            </div>
-          )}
-        </>
-      )}
-
-      {/* ── MODE C: Gap-fill ── */}
-      {mode === 'C' && (
-        <>
-          <div className="relative rounded-3xl border border-gray-700 bg-gray-900 min-h-36 flex flex-col items-center justify-center p-8 select-none">
-            <span className="absolute top-4 left-4 text-xs text-gray-600">{current.lessonTitle}</span>
-            {vocabSeen[current.de]?.mastered && (
-              <span className="absolute top-4 right-4 flex items-center gap-1 text-xs text-emerald-500">
-                <CheckCircle size={12} /> zvládnuté
-              </span>
-            )}
-            <p className="text-sm text-gray-400 mb-3">Doplň chýbajúce slovo:</p>
-            {gapSentence ? (
-              <p className="text-xl font-semibold text-white text-center leading-relaxed">
-                {gapSentence.split('___').map((part, i, arr) => (
-                  <React.Fragment key={i}>
-                    {part}
-                    {i < arr.length - 1 && (
-                      <span
-                        className={`inline-block min-w-16 border-b-2 mx-1 font-black ${gapChecked
-                          ? gapCorrect
-                            ? 'text-emerald-400 border-emerald-500'
-                            : 'text-red-400 border-red-500'
-                          : 'text-indigo-300 border-indigo-500'
-                          }`}
-                      >
-                        {gapChecked ? current.de : gapInput || '\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0'}
-                      </span>
-                    )}
-                  </React.Fragment>
-                ))}
-              </p>
-            ) : (
-              <p className="text-lg font-semibold text-white text-center">
-                Napíš: <span className="text-indigo-300">{current.de}</span>
-              </p>
-            )}
-            {current.sk && (
-              <p className="text-sm text-gray-500 mt-3">{current.sk}</p>
-            )}
-          </div>
-
-          {!gapChecked ? (
-            <div className="flex gap-2">
-              <input
-                ref={inputRef}
-                type="text"
-                value={gapInput}
-                onChange={(e) => setGapInput(e.target.value)}
-                onKeyDown={handleGapKeyDown}
-                placeholder="Napíš nemecké slovo…"
-                className="flex-1 bg-gray-800 border border-gray-700 rounded-xl px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-indigo-500 text-sm"
-              />
-              <button
-                onClick={handleGapCheck}
-                disabled={!gapInput.trim()}
-                className="btn-primary px-5 py-3 disabled:opacity-40"
-              >
-                Skontrolovať
-              </button>
-            </div>
-          ) : (
-            <div className="space-y-3">
-              <div
-                className={`rounded-2xl border px-4 py-3 text-sm font-medium text-center ${gapCorrect
-                  ? 'border-emerald-700 bg-emerald-950/30 text-emerald-300'
-                  : 'border-red-800 bg-red-950/20 text-red-400'
-                  }`}
-              >
-                {gapCorrect ? '✓ Správne!' : `✗ Správna odpoveď: ${current.de}`}
-              </div>
-
-              {!gapCorrect && !explanation && (
-                <button
-                  onClick={async () => {
-                    setLoadingWhy(true);
-                    try {
-                      const res = await getExplanation({
-                        question: "Prelož text/vetu do nemčiny: " + (gapSentence ? current.example : current.sk),
-                        correctAnswer: current.de,
-                        userAnswer: gapInput
-                      });
-                      setExplanation(res);
-                    } catch (e) {
-                      setExplanation("Chyba API kľúča.");
-                    } finally {
-                      setLoadingWhy(false);
-                    }
-                  }}
-                  disabled={loadingWhy}
-                  className="w-full btn-secondary bg-amber-950/20 py-3 flex items-center justify-center gap-2 text-sm font-semibold border-amber-800 text-amber-500 hover:bg-amber-950/40 hover:border-amber-600 transition-all border border-dashed"
-                >
-                  <Brain size={16} className={loadingWhy ? "animate-pulse" : ""} />
-                  {loadingWhy ? 'Generujem...' : 'Prečo to je nesprávne?'}
-                </button>
-              )}
-              {explanation && (
-                <div className="bg-amber-950/40 border border-amber-800/50 rounded-xl p-4 animate-fade-in flex items-start gap-3 text-left">
-                  <Brain size={18} className="text-amber-400 flex-shrink-0 mt-0.5" />
-                  <p className="text-amber-200 text-sm leading-relaxed">{explanation}</p>
-                </div>
-              )}
-
-              <button
-                onClick={() => advance(gapCorrect)}
-                className="w-full btn-primary flex items-center justify-center gap-2 py-3"
-              >
-                Ďalej
-                <ChevronRight size={16} />
-              </button>
-            </div>
+            </>
           )}
         </>
       )}

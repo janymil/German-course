@@ -1,389 +1,870 @@
-﻿export const lesson22 = {
+export const lesson22 = {
   id: 22,
   week: 5,
   day: 2,
-  title: "Imperativ (Sie-Form)",
-  topic: "Rozkazovací spôsob — formálna forma",
+  title: "Kannst du Rollschuh fahren?",
+  topic: "Modálne sloveso *können* (Vedieť, môcť) a pravidlo vetného rámca.",
   cefr: "A1",
-  xpReward: 25,
-  narrativeContext:
-    "Jana braucht eine Wegbeschreibung. Sie fragt einen Passanten nach dem Weg zum Rathaus. Er gibt ihr Anweisungen: 'Gehen Sie geradeaus. Biegen Sie links ab...' Jana lernt, formelle Anweisungen zu verstehen und zu geben.",
-  communicativeGoal:
-    "Po tejto lekcii viem dávať a chápať formálne pokyny a popísať cestu pomocou imperatívu vo formálnej forme (Sie-Form).",
-  skillFocus: ["grammar", "speaking", "listening", "vocabulary"],
-
-  grammarNote: {
-    rule: "Imperatív — Sie-forma (formálna): infinitív + Sie za slovesom",
-    explanation:
-      "Sie-forma imperatívu sa tvorí jednoducho: infinitív slovesa + Sie za slovesom. Je totožná s tvarom prítomného času v 3. osobe množného čísla. Odlučiteľné predpony idú na koniec vety. Nepravidelný tvar: sein → Seien Sie! Neformálna du-forma: Geh! / Nimm! (kmeňová zmena e→i pri niektorých slovesách). Ihr-forma: Geht! / Nehmt!",
-    examples: [
-      { de: "Gehen Sie geradeaus!", sk: "Choďte priamo!" },
-      { de: "Nehmen Sie die U-Bahn.", sk: "Nastúpte na metro." },
-      { de: "Biegen Sie links ab!", sk: "Odbočte vľavo!" },
-      { de: "Seien Sie bitte ruhig!", sk: "Buďte prosím ticho!" },
-      { de: "Geh! (du) / Geht! (ihr) / Gehen Sie! (Sie)", sk: "Choď! / Choďte! (plur. neform.) / Choďte! (formálne)" }
-    ],
-    slovakContrastNote:
-      "Slovenčina tvorí formálny imperatív príponou ‚-te': ‚Choďte!', ‚Odbočte!'. Nemecká Sie-forma je vlastne ešte jednoduchšia — je rovnaká ako infinitív slovesa, len sa za ňu pridá ‚Sie'. Pri odlučiteľných slovesách ide predpona na koniec: ‚Biegen Sie ab!' (nie ‚Abbiegen Sie!')."
-  },
-
+  xpReward: 20,
+  narrativeContext: "Petra möchte Rollschuh fahren. Sie fragt ihre Freundin Jana.",
+  communicativeGoal: "Nach dieser Lektion kann ich sagen, was ich kann, und das Verb 'können' richtig im Satz benutzen.",
+  skillFocus: [
+    "grammar",
+    "speaking",
+    "vocabulary"
+  ],
+  lessonNotes: "V tejto lekcii sa naučíš modálne sloveso *können* (vedieť, môcť) a jeho časovanie. Zistíš, ako sa mení poradie slov vo vete, keď použiješ modálne sloveso. Precvičíme si to na téme korčuľovania.",
+  grammarNotes: [
+    {
+      rule: "Modálne sloveso \"können\" (vedieť, môcť)",
+      explanation: "\n      <p>Modálne sloveso <strong>können</strong> je jedným z najdôležitejších modálnych slovies v nemčine. Vyjadruje <strong>schopnosť</strong> (vedieť niečo robiť), <strong>možnosť</strong> (môcť niečo urobiť) alebo <strong>povolenie</strong> (smieť niečo urobiť). V slovenčine ho prekladáme ako „vedieť“ alebo „môcť“.</p>\n      <p>Modálne slovesá majú v nemčine špecifické pravidlá konjugácie. V jednotnom čísle (<em>ich, du, er/sie/es</em>) menia svoj kmeň a 1. a 3. osoba jednotného čísla (<em>ich, er/sie/es</em>) nemajú koncovku. Vždy sa spájajú s iným plnovýznamovým slovesom v neurčitku (infinitíve), ktoré stojí na konci vety.</p>\n      <p>Pozrite si konjugáciu slovesa <em>können</em>:</p>\n      <table>\n        <thead>\n          <tr>\n            <th>Osoba</th>\n            <th>Können</th>\n            <th>Preklad</th>\n          </tr>\n        </thead>\n        <tbody>\n          <tr><td>ich</td><td>kann</td><td>ja viem/môžem</td></tr>\n          <tr><td>du</td><td>kannst</td><td>ty vieš/môžeš</td></tr>\n          <tr><td>er/sie/es</td><td>kann</td><td>on/ona/ono vie/môže</td></tr>\n          <tr><td>wir</td><td>können</td><td>my vieme/môžeme</td></tr>\n          <tr><td>ihr</td><td>könnt</td><td>vy viete/môžete</td></tr>\n          <tr><td>sie/Sie</td><td>können</td><td>oni/Vy viete/môžete</td></tr>\n        </tbody>\n      </table>\n      <div class=\"tip-box\">\n        Pamätajte, že po modálnom slovese nasleduje vždy plnovýznamové sloveso v neurčitku (infinitíve) na konci vety!\n      </div>\n    ",
+      examples: [
+        {
+          de: "Ich kann Deutsch sprechen.",
+          sk: "Vieme po nemecky hovoriť."
+        },
+        {
+          de: "Kannst du schwimmen?",
+          sk: "Vieš plávať?"
+        },
+        {
+          de: "Er kann gut kochen.",
+          sk: "Vie dobre variť."
+        },
+        {
+          de: "Wir können heute nicht kommen.",
+          sk: "Dnes nemôžeme prísť."
+        },
+        {
+          de: "Könnt ihr mir helfen?",
+          sk: "Môžete mi pomôcť?"
+        },
+        {
+          de: "Sie können hier parken.",
+          sk: "Môžete tu parkovať."
+        },
+        {
+          de: "Ich kann leider nicht singen.",
+          sk: "Žiaľ, neviem spievať."
+        }
+      ],
+      slovakContrastNote: "\n      V slovenčine sú slovesá „vedieť“ a „môcť“ plnovýznamové a ich konjugácia je pravidelná. V nemčine je <em>können</em> modálne a má nepravidelnú konjugáciu v jednotnom čísle. Najväčší rozdiel je v tom, že v nemčine stojí druhé sloveso (infinitív) vždy na konci vety, oddelené od modálneho slovesa, zatiaľ čo v slovenčine stoja obe slovesá zvyčajne vedľa seba (napr. „viem plávať“).\n    "
+    },
+    {
+      rule: "Vetný rámec (Satzrahmen) s modálnymi slovesami",
+      explanation: "\n      <p>Nemecká veta má často pevnú štruktúru, ktorú nazývame <strong>vetný rámec</strong> (<em>Satzrahmen</em>). To znamená, že niektoré časti slovesa alebo slovesné dvojice „rámcujú“ vetu, pričom jedna časť je na druhej pozícii a druhá na úplnom konci vety.</p>\n      <p>Pri modálnych slovesách je to tak, že <strong>konjugované modálne sloveso</strong> (napr. <em>kann, kannst, können</em>) stojí na <strong>druhej pozícii</strong> vo vete a <strong>plnovýznamové sloveso v neurčitku</strong> (infinitív) stojí na <strong>úplnom konci vety</strong>. Medzi modálnym slovesom a infinitívom môžu byť ďalšie časti vety, ako sú predmety, príslovky času, miesta alebo spôsobu.</p>\n      <p>Táto štruktúra je pre slovenčinu nezvyčajná a je kľúčová pre správne tvorenie nemeckých viet. Je dôležité si ju osvojiť a aktívne ju precvičovať.</p>\n      <div class=\"warn-box\">\n        <strong>Pozor!</strong> Nikdy nedávajte infinitív hneď za modálne sloveso, ak sú vo vete ďalšie informácie. Infinitív patrí vždy na koniec!\n      </div>\n    ",
+      examples: [
+        {
+          de: "Ich kann heute Abend nicht kommen.",
+          sk: "Dnes večer nemôžem prísť."
+        },
+        {
+          de: "Kannst du mir bitte helfen?",
+          sk: "Môžeš mi, prosím, pomôcť?"
+        },
+        {
+          de: "Wir können sehr gut Tennis spielen.",
+          sk: "Vieme veľmi dobre hrať tenis."
+        },
+        {
+          de: "Er kann leider kein Deutsch sprechen.",
+          sk: "Žiaľ, nevie hovoriť po nemecky."
+        },
+        {
+          de: "Meine Schwester kann gut Gitarre spielen.",
+          sk: "Moja sestra vie dobre hrať na gitare."
+        },
+        {
+          de: "Ihr könnt den Bus nehmen.",
+          sk: "Môžete ísť autobusom."
+        },
+        {
+          de: "Ich kann das Buch nicht finden.",
+          sk: "Nemôžem nájsť tú knihu."
+        }
+      ],
+      slovakContrastNote: "\n      V slovenčine stoja obe slovesá (modálne a plnovýznamové) zvyčajne vedľa seba, napr. „môžem prísť“, „viem hrať“. V nemčine je medzi nimi často celá veta. Toto je kľúčový rozdiel a veľmi častá chyba pre slovenských študentov, ktorí majú tendenciu prekladať doslovne. Napríklad, slovenský študent by mohol povedať „Ich kann nicht kommen heute Abend“, čo je nesprávne. Správne je „Ich kann heute Abend nicht kommen.“\n    "
+    }
+  ],
   vocab: [
     {
-      de: "Gehen Sie!",
-      sk: "Choďte!",
-      example: "Gehen Sie geradeaus!",
-      exampleSk: "Choďte priamo!",
-      gender: null,
+      de: "der Rollschuh",
+      sk: "koliesková korčuľa",
+      gender: "M",
       srsId: "L22_V01",
+      example: "Der Rollschuh ist neu.",
+      exampleSk: "Koliesková korčuľa je nová.",
       recycledFrom: []
     },
     {
-      de: "Biegen Sie ab!",
-      sk: "Odbočte!",
-      example: "Biegen Sie links ab!",
-      exampleSk: "Odbočte vľavo!",
-      gender: null,
+      de: "der Prater",
+      sk: "Prater (viedenský zábavný park)",
+      gender: "M",
       srsId: "L22_V02",
+      example: "Wir gehen am Samstag in den Prater.",
+      exampleSk: "V sobotu ideme do Prateru.",
       recycledFrom: []
     },
     {
-      de: "Nehmen Sie!",
-      sk: "Vezmite si! / Nastúpte!",
-      example: "Nehmen Sie die U-Bahn.",
-      exampleSk: "Nastúpte na metro.",
-      gender: null,
+      de: "der Samstag",
+      sk: "sobota",
+      gender: "M",
       srsId: "L22_V03",
+      example: "Am Samstag habe ich Zeit.",
+      exampleSk: "V sobotu mám čas.",
       recycledFrom: []
     },
     {
-      de: "geradeaus",
-      sk: "priamo / rovno",
-      example: "Gehen Sie geradeaus.",
-      exampleSk: "Choďte priamo.",
-      gender: null,
+      de: "die Übung",
+      sk: "cvičenie, prax",
+      gender: "F",
       srsId: "L22_V04",
+      example: "Die Übung ist wichtig.",
+      exampleSk: "Cvičenie je dôležité.",
       recycledFrom: []
     },
     {
-      de: "die Kreuzung",
-      sk: "križovatka",
-      example: "An der Kreuzung links abbiegen.",
-      exampleSk: "Na križovatke odbočte vľavo.",
+      de: "die Hilfe",
+      sk: "pomoc",
       gender: "F",
       srsId: "L22_V05",
+      example: "Ich brauche Hilfe.",
+      exampleSk: "Potrebujem pomoc.",
       recycledFrom: []
     },
     {
-      de: "die Ampel",
-      sk: "semafor",
-      example: "An der Ampel biegen Sie rechts ab.",
-      exampleSk: "Pri semafore odbočte vpravo.",
-      gender: "F",
+      de: "der Lehrer",
+      sk: "učiteľ",
+      gender: "M",
       srsId: "L22_V06",
+      example: "Der Lehrer erklärt das gut.",
+      exampleSk: "Učiteľ to dobre vysvetľuje.",
       recycledFrom: []
     },
     {
-      de: "die Ecke",
-      sk: "roh / rohový dom",
-      example: "Um die Ecke, bitte.",
-      exampleSk: "Za rohom, prosím.",
+      de: "die Lehrerin",
+      sk: "učiteľka",
       gender: "F",
       srsId: "L22_V07",
+      example: "Die Lehrerin kann gut lehren.",
+      exampleSk: "Učiteľka vie dobre učiť.",
       recycledFrom: []
     },
     {
-      de: "weit",
-      sk: "ďaleko",
-      example: "Ist es weit?",
-      exampleSk: "Je to ďaleko?",
+      de: "lernen",
+      sk: "učiť sa",
       gender: null,
       srsId: "L22_V08",
+      example: "Petra möchte etwas Neues lernen.",
+      exampleSk: "Petra sa chce naučiť niečo nové.",
       recycledFrom: []
     },
     {
-      de: "nah / in der Nähe",
-      sk: "blízko / v blízkosti",
-      example: "Das ist ganz in der Nähe.",
-      exampleSk: "To je úplne blízko.",
+      de: "erklären",
+      sk: "vysvetliť",
       gender: null,
       srsId: "L22_V09",
+      example: "Jana kann nicht gut erklären.",
+      exampleSk: "Jana nevie dobre vysvetľovať.",
       recycledFrom: []
     },
     {
-      de: "die Straße",
-      sk: "ulica",
-      example: "Die erste Straße links.",
-      exampleSk: "Prvá ulica vľavo.",
-      gender: "F",
+      de: "lehren",
+      sk: "učiť (niekoho)",
+      gender: null,
       srsId: "L22_V10",
-      recycledFrom: [1]
-    },
-    {
-      de: "das Rathaus",
-      sk: "radnica / mestský úrad",
-      example: "Das Rathaus ist fünf Minuten entfernt.",
-      exampleSk: "Radnica je päť minút odtiaľto.",
-      gender: "N",
-      srsId: "L22_V11",
+      example: "Kannst du mich lehren?",
+      exampleSk: "Vieš ma učiť?",
       recycledFrom: []
     },
     {
-      de: "entfernt",
-      sk: "vzdialený / ďaleko odtiaľto",
-      example: "Wie weit ist es entfernt?",
-      exampleSk: "Ako ďaleko je to?",
+      de: "versuchen",
+      sk: "skúsiť, pokúsiť sa",
+      gender: null,
+      srsId: "L22_V11",
+      example: "Ich muss es versuchen.",
+      exampleSk: "Musím to skúsiť.",
+      recycledFrom: []
+    },
+    {
+      de: "üben",
+      sk: "cvičiť, trénovať",
       gender: null,
       srsId: "L22_V12",
+      example: "Wir müssen mehr üben.",
+      exampleSk: "Musíme viac cvičiť.",
+      recycledFrom: []
+    },
+    {
+      de: "gut",
+      sk: "dobrý, dobre",
+      gender: null,
+      srsId: "L22_V13",
+      example: "Das ist gut.",
+      exampleSk: "To je dobré.",
+      recycledFrom: []
+    },
+    {
+      de: "schlecht",
+      sk: "zlý, zle",
+      gender: null,
+      srsId: "L22_V14",
+      example: "Das ist nicht schlecht.",
+      exampleSk: "To nie je zlé.",
+      recycledFrom: []
+    },
+    {
+      de: "leicht",
+      sk: "ľahký, ľahko",
+      gender: null,
+      srsId: "L22_V15",
+      example: "Das ist ganz leicht.",
+      exampleSk: "To je celkom ľahké.",
+      recycledFrom: []
+    },
+    {
+      de: "schwer",
+      sk: "ťažký, ťažko",
+      gender: null,
+      srsId: "L22_V16",
+      example: "Das ist schwer zu verstehen.",
+      exampleSk: "To je ťažké pochopiť.",
+      recycledFrom: []
+    },
+    {
+      de: "zusammen",
+      sk: "spolu",
+      gender: null,
+      srsId: "L22_V17",
+      example: "Wir gehen zusammen in den Prater.",
+      exampleSk: "Ideme spolu do Prateru.",
+      recycledFrom: []
+    },
+    {
+      de: "am Samstag",
+      sk: "v sobotu",
+      gender: null,
+      srsId: "L22_V18",
+      example: "Wir treffen uns am Samstag.",
+      exampleSk: "Stretneme sa v sobotu.",
+      recycledFrom: []
+    },
+    {
+      de: "klar",
+      sk: "jasný, jasne",
+      gender: null,
+      srsId: "L22_V19",
+      example: "Ist das klar?",
+      exampleSk: "Je to jasné?",
+      recycledFrom: []
+    },
+    {
+      de: "lustig",
+      sk: "zábavný, smiešny",
+      gender: null,
+      srsId: "L22_V20",
+      example: "Das ist lustig!",
+      exampleSk: "To je zábavné!",
+      recycledFrom: []
+    },
+    {
+      de: "noch nicht",
+      sk: "ešte nie",
+      gender: null,
+      srsId: "L22_V21",
+      example: "Ich kann das noch nicht.",
+      exampleSk: "Ešte to neviem.",
+      recycledFrom: []
+    },
+    {
+      de: "Ich kann das!",
+      sk: "To viem! / Dokážem to!",
+      gender: null,
+      srsId: "L22_V22",
+      example: "Ich kann das! Kein Problem!",
+      exampleSk: "To viem! Žiadny problém!",
+      recycledFrom: []
+    },
+    {
+      de: "Kannst du...?",
+      sk: "Vieš ty...?",
+      gender: null,
+      srsId: "L22_V23",
+      example: "Kannst du das machen?",
+      exampleSk: "Vieš to urobiť?",
+      recycledFrom: []
+    },
+    {
+      de: "Wie geht das?",
+      sk: "Ako sa to robí? / Ako to funguje?",
+      gender: null,
+      srsId: "L22_V24",
+      example: "Wie geht das? Ich verstehe es nicht.",
+      exampleSk: "Ako sa to robí? Nerozumiem tomu.",
+      recycledFrom: []
+    },
+    {
+      de: "kein Problem",
+      sk: "žiadny problém",
+      gender: null,
+      srsId: "L22_V25",
+      example: "Das ist kein Problem für mich.",
+      exampleSk: "To pre mňa nie je žiadny problém.",
       recycledFrom: []
     }
   ],
-
   exercises: [
     {
       type: "flashcard",
-      instruction: "Prezri si slovíčka. Kartičky obsahujú imperatívne výrazy a slovnú zásobu k popisu cesty.",
-      items: [
-        "Gehen Sie! = Choďte!",
-        "Biegen Sie ab! = Odbočte!",
-        "Nehmen Sie! = Vezmite si! / Nastúpte!",
-        "geradeaus = priamo / rovno",
-        "die Kreuzung = križovatka",
-        "die Ampel = semafor",
-        "die Ecke = roh",
-        "weit = ďaleko",
-        "nah / in der Nähe = blízko",
-        "die Straße = ulica",
-        "das Rathaus = radnica",
-        "entfernt = vzdialený"
+      instruction: "Prezri si slovíčka tejto lekcie. Klikni na kartičku pre preklad."
+    },
+    {
+      type: "match",
+      instruction: "Priraďte nemecké slová a frázy k ich slovenským prekladom.",
+      pairs: [
+        [
+          "der Rollschuh",
+          "koliesková korčuľa"
+        ],
+        [
+          "die Übung",
+          "cvičenie, prax"
+        ],
+        [
+          "die Hilfe",
+          "pomoc"
+        ],
+        [
+          "lernen",
+          "učiť sa"
+        ],
+        [
+          "erklären",
+          "vysvetliť"
+        ],
+        [
+          "üben",
+          "cvičiť, trénovať"
+        ],
+        [
+          "zusammen",
+          "spolu"
+        ],
+        [
+          "am Samstag",
+          "v sobotu"
+        ],
+        [
+          "noch nicht",
+          "ešte nie"
+        ],
+        [
+          "kein Problem",
+          "žiadny problém"
+        ]
       ]
     },
     {
-      type: "mcq",
-      instruction: "Vyber správnu odpoveď.",
-      questions: [
+      type: "wordorder",
+      instruction: "Usporiadajte slová do správnej vety. Dávajte pozor na vetný rámec s modálnym slovesom.",
+      sentences: [
         {
-          question: "Ako sa tvorí Sie-forma imperatívu slovesa ‚fahren'?",
-          options: ["Fahren Sie!", "Fahr Sie!", "Fahre Sie!", "Sie fahren!"],
-          answer: "Fahren Sie!",
-          explanation: "Sie-forma imperatívu = infinitív + Sie za slovesom. ‚Fahren' → ‚Fahren Sie!' Je to rovnaké ako infinitív — veľmi jednoduché!"
+          words: [
+            "Ich",
+            "gut",
+            "Deutsch",
+            "sprechen",
+            "kann"
+          ],
+          correct: "Ich kann gut Deutsch sprechen",
+          hint: "Ja viem dobre hovoriť po nemecky.",
+          explanation: "Modálne sloveso 'können' je na druhom mieste vo vete a plnovýznamové sloveso 'sprechen' je na konci vety v neurčitku. Toto je typický 'vetný rámec' (Satzrahmen)."
         },
         {
-          question: "Passant hovorí Jane: ‚___ an der Ampel links ab!' Čo správne doplníme?",
-          options: ["Abbiegen Sie", "Biegen Sie ab", "Biege Sie ab", "Sie biegen ab"],
-          answer: "Biegen Sie ab",
-          explanation: "Pri odlučiteľných slovesách ide predpona ‚ab' na koniec vety: ‚Biegen Sie ab!' Nie ‚Abbiegen Sie!' — to by bolo nesprávne."
+          words: [
+            "Du",
+            "mir",
+            "helfen",
+            "kannst",
+            "bitte"
+          ],
+          correct: "Kannst du mir bitte helfen",
+          hint: "Vieš mi prosím pomôcť?",
+          explanation: "Pri otázkach s modálnym slovesom 'können' ide 'können' na prvé miesto a plnovýznamové sloveso 'helfen' na koniec vety."
         },
         {
-          question: "Čo znamená veta: ‚Ist es weit?'",
-          options: ["Je to blízko?", "Je to ďaleko?", "Kde je to?", "Ako sa tam dostanem?"],
-          answer: "Je to ďaleko?",
-          explanation: "‚Weit' = ďaleko. Opak je ‚nah' alebo ‚in der Nähe' = blízko."
+          words: [
+            "Wir",
+            "am Samstag",
+            "Prater",
+            "besuchen",
+            "können",
+            "den"
+          ],
+          correct: "Wir können am Samstag den Prater besuchen",
+          hint: "V sobotu môžeme navštíviť Prater.",
+          explanation: "Modálne sloveso 'können' je na druhom mieste, ostatné časti vety sú medzi ním a plnovýznamovým slovesom 'besuchen', ktoré je na konci vety."
         },
         {
-          question: "Jana chce povedať ‚Buďte prosím ticho'. Aký je správny imperatív slovesa ‚sein'?",
-          options: ["Sein Sie ruhig!", "Seien Sie ruhig!", "Sind Sie ruhig!", "Seid Sie ruhig!"],
-          answer: "Seien Sie ruhig!",
-          explanation: "Sloveso ‚sein' má nepravidelný imperatív: ‚Seien Sie!' — toto je výnimka, ktorú treba zapamätať."
+          words: [
+            "Er",
+            "noch nicht",
+            "Rollschuh",
+            "fahren",
+            "kann"
+          ],
+          correct: "Er kann noch nicht Rollschuh fahren",
+          hint: "Ešte nevie jazdiť na kolieskových korčuliach.",
+          explanation: "Modálne sloveso 'können' je na druhom mieste, 'noch nicht' je príslovková fráza a plnovýznamové sloveso 'fahren' je na konci vety."
         },
         {
-          question: "Passant vraví: ‚___ die erste Straße links.' Čo správne doplníme?",
-          options: ["Gehen Sie in", "Nehmen Sie", "Biegen Sie ab", "Fahren Sie nach"],
-          answer: "Nehmen Sie",
-          explanation: "‚Nehmen Sie die erste Straße links' = Vezmite (odbočte do) prvú ulicu vľavo. ‚Nehmen Sie' sa bežne používa pri popisovaní smeru."
+          words: [
+            "Ihr",
+            "gut",
+            "zusammen",
+            "lernen",
+            "könnt"
+          ],
+          correct: "Ihr könnt gut zusammen lernen",
+          hint: "Dobre sa viete učiť spolu.",
+          explanation: "Modálne sloveso 'können' je na druhom mieste, príslovky a doplnky sú v strede a plnovýznamové sloveso 'lernen' je na konci vety."
         }
       ]
     },
     {
       type: "fill",
-      instruction: "Doplň správny tvar imperatívu do medzery ___.",
+      instruction: "Doplňte správne slovo do vety.",
       questions: [
         {
-          sentence: "___ Sie geradeaus, bis zur Ampel.",
-          answer: "Gehen",
-          hint: "Ísť / chodiť",
-          explanation: "‚Gehen Sie geradeaus' = Choďte priamo. Sie-forma = infinitív + Sie."
+          sentence: "Ich ___ gut Deutsch sprechen.",
+          answer: "kann",
+          hint: "Ja viem dobre hovoriť po nemecky.",
+          explanation: "Modálne sloveso 'können' sa časuje s 'ich' ako 'kann'."
         },
         {
-          sentence: "An der Kreuzung ___ Sie bitte links ___.",
-          answer: "biegen / ab",
-          hint: "Odlučiteľné sloveso — predpona ide na koniec!",
-          explanation: "‚Abbiegen' je odlučiteľné: ‚Biegen Sie... ab!' Predpona ‚ab' ide na koniec vety."
+          sentence: "___ du mir bitte helfen?",
+          answer: "Kannst",
+          hint: "Vieš mi prosím pomôcť?",
+          explanation: "Modálne sloveso 'können' sa časuje s 'du' ako 'kannst'. V otázke ide na prvé miesto."
         },
         {
-          sentence: "___ Sie die U-Bahn, das ist schneller.",
-          answer: "Nehmen",
-          hint: "Zobrať / nastúpiť na",
-          explanation: "‚Nehmen Sie die U-Bahn' = Nastúpte na metro / Vezmite metro."
+          sentence: "Wir ___ am Samstag den Prater besuchen.",
+          answer: "können",
+          hint: "V sobotu môžeme navštíviť Prater.",
+          explanation: "Modálne sloveso 'können' sa časuje s 'wir' ako 'können'."
         },
         {
-          sentence: "Das Rathaus ist drei Minuten ___.",
-          answer: "entfernt",
-          hint: "Vyjadrenie vzdialenosti",
-          explanation: "‚Entfernt' = vzdialený / ďaleko odtiaľto. ‚Drei Minuten entfernt' = tri minúty odtiaľto."
+          sentence: "Sie (form.) ___ sehr gut erklären.",
+          answer: "können",
+          hint: "Vy (form.) viete veľmi dobre vysvetľovať.",
+          explanation: "Modálne sloveso 'können' sa časuje s formálnym 'Sie' ako 'können'."
         },
         {
-          sentence: "___ Sie bitte ruhig! Hier ist eine Bibliothek.",
-          answer: "Seien",
-          hint: "Nepravidelný imperatív slovesa ‚sein'",
-          explanation: "‚Sein' má nepravidelný imperatív: ‚Seien Sie' — výnimka z pravidla!"
+          sentence: "Ich brauche ___ Stift für die Übung.",
+          answer: "einen",
+          hint: "Potrebujem pero na cvičenie.",
+          explanation: "Slovo 'Stift' je maskulínum (der Stift) a je v akuzatíve, preto použijeme neurčitý člen 'einen'."
+        },
+        {
+          sentence: "Meine Schwester ist ___ Lehrerin.",
+          answer: "eine",
+          hint: "Moja sestra je učiteľka.",
+          explanation: "Slovo 'Lehrerin' je feminínum (die Lehrerin), preto použijeme neurčitý člen 'eine'."
+        },
+        {
+          sentence: "Das ist ___ Problem.",
+          answer: "kein",
+          hint: "To nie je žiadny problém.",
+          explanation: "Slovo 'Problem' je neutrum (das Problem), preto použijeme záporný člen 'kein'."
         }
       ]
     },
     {
       type: "listen",
-      instruction: "Počúvaj pokyny a nájdi ich slovenský preklad.",
+      instruction: "Vypočujte si nemecké slovo alebo frázu a priraďte ju k správnemu slovenskému prekladu.",
       questions: [
-        { de: "Gehen Sie geradeaus!", sk: "Choďte priamo!" },
-        { de: "Biegen Sie links ab!", sk: "Odbočte vľavo!" },
-        { de: "Nehmen Sie die erste Straße rechts.", sk: "Vezmite prvú ulicu vpravo." },
-        { de: "Das Rathaus ist ganz in der Nähe.", sk: "Radnica je úplne blízko." },
-        { de: "Ist es weit von hier?", sk: "Je to ďaleko odtiaľto?" },
-        { de: "An der Ampel biegen Sie rechts ab.", sk: "Pri semafore odbočte vpravo." },
-        { de: "Seien Sie vorsichtig an der Kreuzung!", sk: "Buďte opatrní na križovatke!" }
+        {
+          de: "der Rollschuh",
+          sk: "koliesková korčuľa"
+        },
+        {
+          de: "die Übung",
+          sk: "cvičenie, prax"
+        },
+        {
+          de: "die Hilfe",
+          sk: "pomoc"
+        },
+        {
+          de: "lernen",
+          sk: "učiť sa"
+        },
+        {
+          de: "erklären",
+          sk: "vysvetliť"
+        },
+        {
+          de: "üben",
+          sk: "cvičiť, trénovať"
+        },
+        {
+          de: "gut",
+          sk: "dobrý, dobre"
+        },
+        {
+          de: "zusammen",
+          sk: "spolu"
+        },
+        {
+          de: "am Samstag",
+          sk: "v sobotu"
+        },
+        {
+          de: "Ich kann das!",
+          sk: "To viem! / Dokážem to!"
+        }
       ]
     },
     {
-      type: "match",
-      instruction: "Spoj nemecké výrazy s ich slovenským prekladom.",
-      pairs: [
-        ["Biegen Sie ab!", "Odbočte!"],
-        ["geradeaus", "priamo / rovno"],
-        ["die Kreuzung", "križovatka"],
-        ["die Ampel", "semafor"],
-        ["weit", "ďaleko"],
-        ["das Rathaus", "radnica"],
-        ["entfernt", "vzdialený"],
-        ["in der Nähe", "v blízkosti / blízko"]
-      ]
-    },
-    {
-      type: "dialogue",
-      instruction: "Prečítaj si dialóg, kde Jana žiada pocestného o popis cesty k Rathaus.",
-      lines: [
-        { speaker: "A", de: "Entschuldigung! Können Sie mir helfen? Ich suche das Rathaus.", sk: "Prepáčte! Môžete mi pomôcť? Hľadám radnicu." },
-        { speaker: "B", de: "Natürlich! Gehen Sie hier geradeaus, bis zur Kreuzung.", sk: "Samozrejme! Choďte tu priamo, až na križovatku." },
-        { speaker: "A", de: "Bis zur Kreuzung — gut. Und dann?", sk: "Až na križovatku — dobre. A potom?" },
-        { speaker: "B", de: "An der Kreuzung biegen Sie links ab. Dann sehen Sie die Ampel.", sk: "Na križovatke odbočte vľavo. Potom uvidíte semafor." },
-        { speaker: "A", de: "Links abbiegen — verstanden. Und dann?", sk: "Odbočiť vľavo — rozumiem. A potom?" },
-        { speaker: "B", de: "An der Ampel nehmen Sie die zweite Straße rechts.", sk: "Pri semafore vezmite druhú ulicu vpravo." },
-        { speaker: "A", de: "Die zweite Straße rechts. Ist es dann weit?", sk: "Druhá ulica vpravo. Je to potom ďaleko?" },
-        { speaker: "B", de: "Nein, nein! Das Rathaus ist ganz in der Nähe — nur drei Minuten entfernt.", sk: "Nie, nie! Radnica je úplne blízko — len tri minúty odtiaľto." },
-        { speaker: "A", de: "Wunderbar! Vielen Dank für Ihre Hilfe!", sk: "Výborne! Veľmi vám ďakujem za pomoc!" },
-        { speaker: "B", de: "Kein Problem! Seien Sie vorsichtig an der Kreuzung!", sk: "Žiadny problém! Buďte opatrní na križovatke!" }
-      ],
-      comprehensionQuestions: [
+      type: "mcq",
+      instruction: "Vyberte správnu odpoveď.",
+      questions: [
         {
-          question: "Čo Jana hľadá?",
-          answer: "Jana hľadá radnicu (Rathaus).",
-          options: ["Supermarket", "Radnicu", "Banku", "Hotel"]
+          question: "Ich ___ gut schwimmen.",
+          options: [
+            "kannst",
+            "kann",
+            "können",
+            "könnt"
+          ],
+          answer: 1,
+          explanation: "Modálne sloveso 'können' sa časuje s osobným zámenom 'ich' ako 'kann'."
         },
         {
-          question: "Na ktorú stranu má Jana odbočiť na križovatke?",
-          answer: "Jana má odbočiť vľavo.",
-          options: ["Vpravo", "Vľavo", "Priamo", "Vzad"]
+          question: "Ktorá veta má správny vetný rámec s 'können'?",
+          options: [
+            "Ich kann Deutsch gut sprechen.",
+            "Ich spreche kann gut Deutsch.",
+            "Ich kann gut Deutsch sprechen.",
+            "Ich gut Deutsch kann sprechen."
+          ],
+          answer: 2,
+          explanation: "Modálne sloveso 'können' je na druhom mieste a plnovýznamové sloveso 'sprechen' je na konci vety v neurčitku. Toto je správny 'vetný rámec'."
         },
         {
-          question: "Ako ďaleko je radnica od tohto miesta?",
-          answer: "Radnica je len tri minúty odtiaľto.",
-          options: ["Päť minút", "Tri minúty", "Desať minút", "Veľmi ďaleko"]
+          question: "Čo znamená 'noch nicht'?",
+          options: [
+            "ešte áno",
+            "už nie",
+            "ešte nie",
+            "nikdy"
+          ],
+          answer: 2,
+          explanation: "'Noch nicht' v nemčine znamená 'ešte nie' v slovenčine."
+        },
+        {
+          question: "Ako povieš po nemecky 'cvičiť, trénovať'?",
+          options: [
+            "lernen",
+            "erklären",
+            "üben",
+            "lehren"
+          ],
+          answer: 2,
+          explanation: "Sloveso 'üben' znamená 'cvičiť, trénovať'."
+        },
+        {
+          question: "Du ___ Deutsch.",
+          options: [
+            "sprechen",
+            "sprichst",
+            "spricht",
+            "sprichst du"
+          ],
+          answer: 1,
+          explanation: "Sloveso 'sprechen' má pri 'du' zmenu kmeňovej samohlásky z 'e' na 'i' a koncovku '-st', teda 'sprichst'."
+        },
+        {
+          question: "Ich habe ___ Hund.",
+          options: [
+            "ein",
+            "einen",
+            "eine",
+            "kein"
+          ],
+          answer: 1,
+          explanation: "Slovo 'Hund' je maskulínum (der Hund) a je v akuzatíve (objekt slovesa 'haben'), preto použijeme neurčitý člen 'einen'."
+        },
+        {
+          question: "Ich spiele ___ Fußball.",
+          options: [
+            "gern",
+            "gut",
+            "schlecht",
+            "leicht"
+          ],
+          answer: 0,
+          explanation: "Na vyjadrenie obľúbenej činnosti sa používa príslovka 'gern' po slovese."
         }
       ]
     },
     {
       type: "minitext",
-      instruction: "Prečítaj si email od šéfa s pokynmi na cestu na stretnutie. Odpovedz na otázky.",
-      text:
-        "Liebe Jana, bitte kommen Sie morgen zum Meeting in der Herrengasse 5. Nehmen Sie die U3 bis Herrengasse. Gehen Sie dann geradeaus, ca. 200 Meter. Biegen Sie an der Ampel rechts ab. Das Büro ist in der Nähe — nur zwei Minuten entfernt. Seien Sie bitte pünktlich um 10 Uhr! Mit freundlichen Grüßen, Ihr Chef",
-      textSk:
-        "Drahá Jana, prosím príďte zajtra na stretnutie na Herrengasse 5. Vezmite U3 do stanice Herrengasse. Potom choďte priamo, asi 200 metrov. Pri semafore odbočte vpravo. Kancelária je blízko — len dve minúty odtiaľto. Prosím buďte dochvíľna o 10:00! S pozdravom, Váš šéf",
+      instruction: "Lies den Dialog und beantworte die Fragen.",
+      text: "Petra: Hallo Jana! Kannst du Rollschuh fahren? Ich möchte das lernen.\nJana: Ja, klar! Ich kann das! Rollschuh fahren ist leicht für mich. Aber ich kann nicht gut erklären. Ich bin keine Lehrerin.\nPetra: Kein Problem! Können wir zusammen üben? Vielleicht am Samstag im Prater?\nJana: Ja, das können wir machen!\n(Am Samstag im Prater)\nJana: Okay, Petra. Du musst... äh... warte! Stell dich so hin... Nein, das ist falsch! Ich kann das wirklich nicht gut lehren. Es ist schwer, Hilfe zu geben.\nPetra: Haha, das ist lustig! Wir können es aber trotzdem versuchen. Mit etwas Übung geht das sicher!",
+      textSk: "Petra: Ahoj Jana! Vieš korčuľovať na kolieskových korčuliach? Chcem sa to naučiť.\nJana: Áno, jasné! To viem! Kolieskové korčuľovanie je pre mňa ľahké. Ale neviem dobre vysvetľovať. Nie som učiteľka.\nPetra: Žiadny problém! Môžeme spolu trénovať? Možno v sobotu v Pratri?\nJana: Áno, to môžeme urobiť!\n(V sobotu v Pratri)\nJana: Dobre, Petra. Musíš... ehm... počkaj! Postav sa takto... Nie, to je zle! Naozaj to neviem dobre učiť. Je ťažké pomáhať.\nPetra: Haha, to je zábavné! Ale môžeme to aj tak skúsiť. S trochou praxe to určite pôjde!",
       questions: [
         {
-          question: "Ktorú linku metra má Jana vziať?",
-          answer: "Jana má vziať U3.",
-          options: ["U1", "U2", "U3", "U4"]
+          question: "Was möchte Petra lernen?",
+          options: [
+            "Deutsch sprechen",
+            "Rollschuh fahren",
+            "gut erklären",
+            "eine Lehrerin sein"
+          ],
+          answer: 1,
+          explanation: "Petra sagt: \"Ich möchte das lernen.\" und vorher fragt: \"Kannst du Rollschuh fahren?\" Sie möchte Rollschuh fahren lernen."
         },
         {
-          question: "Na ktorú stranu má Jana odbočiť pri semafore?",
-          answer: "Jana má odbočiť vpravo.",
-          options: ["Vľavo", "Vpravo", "Priamo", "Vzad"]
+          question: "Was kann Jana gut?",
+          options: [
+            "gut erklären",
+            "gut lehren",
+            "Rollschuh fahren",
+            "nicht gut Rollschuh fahren"
+          ],
+          answer: 2,
+          explanation: "Jana sagt: \"Ja, klar! Ich kann das! Rollschuh fahren ist leicht für mich.\""
         },
         {
-          question: "O koľkej hodine musí Jana byť v kancelárii?",
-          answer: "Jana musí byť v kancelárii o 10:00.",
-          options: ["O 9:00", "O 10:00", "O 11:00", "O 12:00"]
-        }
-      ]
-    },
-    {
-      type: "wordorder",
-      instruction: "Zoraď slová do správnej nemeckej vety.",
-      sentences: [
-        {
-          words: ["Jana", "geht", "durch", "den", "Park", "zur", "Arbeit"],
-          correct: "Jana geht durch den Park zur Arbeit",
-          hint: "Jana ide do práce cez park.",
-          explanation: "'Durch' vyžaduje akuzatív: der Park → durch den Park."
+          question: "Warum ist Jana keine gute Lehrerin für Rollschuh fahren?",
+          options: [
+            "Sie kann nicht gut Rollschuh fahren.",
+            "Sie hat keine Zeit.",
+            "Sie kann nicht gut erklären und lehren.",
+            "Sie mag Petra nicht."
+          ],
+          answer: 2,
+          explanation: "Jana sagt: \"Aber ich kann nicht gut erklären. Ich bin keine Lehrerin.\" und \"Ich kann das wirklich nicht gut lehren.\""
         },
         {
-          words: ["Ich", "kaufe", "Büromaterial", "für", "das", "Büro"],
-          correct: "Ich kaufe Büromaterial für das Büro",
-          hint: "Kupujem kancelárske potreby pre kanceláriu.",
-          explanation: "'Für' vyžaduje akuzatív: das Büro zostáva das Büro (Neutrum)."
-        },
-        {
-          words: ["Ohne", "einen", "Stadtplan", "ist", "es", "schwierig"],
-          correct: "Ohne einen Stadtplan ist es schwierig",
-          hint: "Bez mapy mesta je to ťažké.",
-          explanation: "'Ohne' vyžaduje akuzatív: ein Stadtplan → ohne einen Stadtplan."
-        },
-        {
-          words: ["Um", "die", "Ecke", "ist", "ein", "Supermarkt"],
-          correct: "Um die Ecke ist ein Supermarkt",
-          hint: "Za rohom je supermarket.",
-          explanation: "'Um' vyžaduje akuzatív: die Ecke zostáva die Ecke (F, Akk=Nom)."
-        },
-        {
-          words: ["Das", "ist", "ein", "Geschenk", "für", "meinen", "Chef"],
-          correct: "Das ist ein Geschenk für meinen Chef",
-          hint: "Toto je darček pre môjho šéfa.",
-          explanation: "'Für' vyžaduje akuzatív: mein Chef → für meinen Chef."
+          question: "Wo möchten Petra und Jana üben?",
+          options: [
+            "zu Hause",
+            "im Prater",
+            "in der Schule",
+            "im Park"
+          ],
+          answer: 1,
+          explanation: "Petra fragt: \"Vielleicht am Samstag im Prater?\" und Jana stimmt zu."
         }
       ]
     },
     {
       type: "speaking",
-      instruction: "Počúvaj nemeckú vetu. Potom hovor nahlas a skontroluj sa.",
+      instruction: "Höre zu und sprich nach.",
       phrases: [
         {
-          de: "Ich gehe durch den Park spazieren.",
-          sk: "Prechádzam sa cez park.",
-          tip: "durch+den Park=Akk, M→den"
+          de: "können",
+          sk: "vedieť, môcť",
+          tip: "Ö ako [ø], ako v slove \"dörfer\"."
         },
         {
-          de: "Das ist ein Kaffee für meinen Kollegen.",
-          sk: "Toto je káva pre môjho kolegu.",
-          tip: "für+meinen Kollegen=Akk M"
+          de: "üben",
+          sk: "cvičiť, trénovať",
+          tip: "Ü ako [y], ako v slove \"müde\"."
         },
         {
-          de: "Ohne meinen Kaffee kann ich nicht arbeiten.",
-          sk: "Bez mojej kávy nemôžem pracovať.",
-          tip: "ohne+meinen Kaffee=Akk"
+          de: "am Samstag",
+          sk: "v sobotu",
+          tip: "S na začiatku ako [z]. G na konci ako [k]."
         },
         {
-          de: "Um die Ecke gibt es eine Bäckerei.",
-          sk: "Za rohom je pekáreň.",
-          tip: "um+die Ecke=Akk, F nezmenená"
+          de: "Ich kann das!",
+          sk: "To viem! / Dokážem to!",
+          tip: "CH ako [ç], ako v slove \"ich\"."
         },
         {
-          de: "Ich kaufe das gegen Kopfschmerzen.",
-          sk: "Kupujem to proti bolesti hlavy.",
-          tip: "gegen+Akk: der K. → den K."
+          de: "Kannst du mir helfen?",
+          sk: "Vieš mi pomôcť?",
+          tip: "H na začiatku ako jemné vydýchnutie."
+        },
+        {
+          de: "Wir können zusammen üben.",
+          sk: "Môžeme spolu cvičiť.",
+          tip: "W ako [v]. Z ako [ts]. Ü ako [y]."
+        },
+        {
+          de: "Der Lehrer kann das gut erklären.",
+          sk: "Učiteľ to vie dobre vysvetliť.",
+          tip: "R na konci slova je tiché. CH ako [ç]."
+        }
+      ]
+    },
+    {
+      type: "truefalse",
+      instruction: "Prečítaj si vety o modálnom slovese 'können' a vetnom rámci. Rozhodni, či sú pravdivé (Wahr) alebo nepravdivé (Falsch).",
+      statements: [
+        {
+          statement: "Modálne sloveso „können“ vyjadruje schopnosť alebo možnosť.",
+          isTrue: true,
+          explanation: "Áno, „können“ znamená 'vedieť' alebo 'môcť' niečo urobiť."
+        },
+        {
+          statement: "Veta „Ich kann gut Deutsch sprechen.“ je príkladom vetného rámca.",
+          isTrue: true,
+          explanation: "Áno, modálne sloveso 'kann' je na druhom mieste a hlavné sloveso 'sprechen' v infinitíve je na konci vety, čo tvorí vetný rámec."
+        },
+        {
+          statement: "Pri použití „können“ ide hlavné sloveso v infinitíve na druhé miesto vo vete.",
+          isTrue: false,
+          explanation: "Nie, hlavné sloveso v infinitíve ide vždy na koniec vety, nie na druhé miesto. Na druhom mieste je vyčasované modálne sloveso."
+        },
+        {
+          statement: "Tvar „können“ pre „ich“ je „ich kann“.",
+          isTrue: true,
+          explanation: "Áno, toto je správny tvar pre prvú osobu jednotného čísla."
+        },
+        {
+          statement: "Sloveso „können“ sa časuje úplne pravidelne vo všetkých osobách.",
+          isTrue: false,
+          explanation: "Nie, „können“ je nepravidelné modálne sloveso, najmä v jednotnom čísle (napr. 'ich kann', 'du kannst', 'er kann')."
+        }
+      ]
+    },
+    {
+      type: "dictation",
+      instruction: "Počúvaj nahrávku a napíš, čo počuješ. Potom si skontroluj odpoveď.",
+      sentences: [
+        {
+          de: "Ich kann das.",
+          sk: "To viem. / Dokážem to."
+        },
+        {
+          de: "Kannst du helfen?",
+          sk: "Vieš pomôcť?"
+        },
+        {
+          de: "Wir können zusammen üben.",
+          sk: "Môžeme spolu cvičiť."
+        },
+        {
+          de: "Er kann gut Deutsch lernen.",
+          sk: "On sa vie dobre učiť po nemecky."
+        },
+        {
+          de: "Am Samstag können wir in den Prater gehen.",
+          sk: "V sobotu môžeme ísť do Pratra."
+        }
+      ]
+    },
+    {
+      type: "categorysort",
+      instruction: "Roztrieď slová do kategórií podľa ich typu.",
+      categories: [
+        {
+          name: "Podstatné mená (Nomen)",
+          color: "blue",
+          words: [
+            "der Rollschuh",
+            "die Hilfe",
+            "der Lehrer",
+            "die Übung",
+            "der Prater"
+          ]
+        },
+        {
+          name: "Slovesá (Verben)",
+          color: "green",
+          words: [
+            "lernen",
+            "erklären",
+            "üben",
+            "versuchen"
+          ]
+        },
+        {
+          name: "Prídavné mená a príslovky (Adjektive & Adverbien)",
+          color: "amber",
+          words: [
+            "gut",
+            "schlecht",
+            "leicht",
+            "schwer",
+            "zusammen",
+            "klar"
+          ]
+        }
+      ],
+      explanation: "Slová v nemčine delíme na rôzne druhy, napríklad podstatné mená (Nomen), slovesá (Verben) a prídavné mená (Adjektive) alebo príslovky (Adverbien). Podstatné mená majú v nemčine vždy veľké začiatočné písmeno a rod (der, die, das)."
+    },
+    {
+      type: "translation",
+      instruction: "Prelož nasledujúce vety zo slovenčiny do nemčiny. Použi modálne sloveso 'können' a dávaj pozor na vetný rámec.",
+      sentences: [
+        {
+          sk: "Vieš dobre korčuľovať na kolieskových korčuliach?",
+          answer: "Kannst du gut Rollschuh fahren?",
+          hint: "Rollschuh fahren",
+          explanation: "Modálne sloveso „können“ je na druhom mieste, hlavné sloveso „fahren“ v infinitíve je na konci vety – vetný rámec."
+        },
+        {
+          sk: "Môžeme sa učiť spolu.",
+          answer: "Wir können zusammen lernen.",
+          hint: "zusammen lernen",
+          explanation: "Sloveso „können“ je na druhom mieste, hlavné sloveso „lernen“ v infinitíve je na konci vety."
+        },
+        {
+          sk: "Učiteľka nám to vie ľahko vysvetliť.",
+          answer: "Die Lehrerin kann uns das leicht erklären.",
+          hint: "leicht erklären",
+          explanation: "Opäť vidíme vetný rámec: „kann“ na druhom mieste, „erklären“ na konci."
+        },
+        {
+          sk: "Ešte neviem dobre po nemecky.",
+          answer: "Ich kann noch nicht gut Deutsch.",
+          hint: "noch nicht",
+          explanation: "„Können“ sa používa aj na vyjadrenie znalosti jazyka. „noch nicht“ znamená „ešte nie“."
+        }
+      ]
+    },
+    {
+      type: "conjugation",
+      instruction: "Vyčasuj sloveso 'können' (vedieť, môcť) v prítomnom čase (Präsens).",
+      verbs: [
+        {
+          infinitive: "können",
+          translation: "vedieť, môcť",
+          forms: [
+            {
+              pronoun: "ich",
+              correct: "kann"
+            },
+            {
+              pronoun: "du",
+              correct: "kannst"
+            },
+            {
+              pronoun: "er/sie/es",
+              correct: "kann"
+            },
+            {
+              pronoun: "wir",
+              correct: "können"
+            },
+            {
+              pronoun: "ihr",
+              correct: "könnt"
+            },
+            {
+              pronoun: "sie/Sie",
+              correct: "können"
+            }
+          ],
+          note: "Modálne sloveso „können“ je nepravidelné, najmä v jednotnom čísle, kde sa mení kmeňová samohláska (o → a) a prvá a tretia osoba jednotného čísla nemajú koncovku. V množnom čísle je časovanie pravidelné."
         }
       ]
     }
   ],
-
-  reviewWords: ["L18_V11", "L18_V12", "L20_V01"],
-  lessonNotes:
-    "Kľúčové pravidlo: Sie-forma imperatívu = infinitív + Sie (napr. Gehen Sie!, Nehmen Sie!). Výnimka: sein → Seien Sie! Pri odlučiteľných slovesách predpona vždy ide na koniec: Biegen Sie ab! Fahren Sie ab! Pre lepšie zapamätanie si precvič popis cesty nahlas."
+  reviewWords: []
 };

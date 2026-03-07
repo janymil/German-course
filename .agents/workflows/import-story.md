@@ -27,9 +27,10 @@ You write: "Import this story: [YOUR RAW GERMAN TEXT]"
     *   I will generate exactly 3 reading comprehension questions in German based on the text.
     *   Each question will have 4 options in German, one correct `answer` index (0-3), and a short Slovak `explanation`.
 
-4.  **Deep Grammar Mapping:**
-    *   I will identify the most important verbs, nouns, and adjectives in the text.
-    *   For *every single one of these words*, I will generate the exact massive JSON dictionary structure required by `useAI.js`. 
+4.  **Deep Grammar Mapping & ALL NOUN COLORIZATION:**
+    *   I will identify the most important verbs and adjectives in the text.
+    *   **CRITICAL REQUIREMENT:** I MUST identify **EVERY SINGLE NOUN** (podstatné meno) in the text. There are no exceptions. This is strictly required so that the app can automatically colorize the words according to their gender (der/die/das).
+    *   For *every single one of these verbs, adjectives, and ALL nouns*, I will generate the exact massive JSON dictionary structure required by `useAI.js`. 
         *   Nouns: `type`, `sk`, `article`, `plural`, `cases` (Nominativ, Akkusativ, Dativ, Genitiv), `example`, `exampleSk`.
         *   Verbs: `type`, `sk`, `infinitiv`, `conjugation` (ich, du, er/sie/es, wir, ihr, sie), `example`, `exampleSk`.
         *   Adjectives: `type`, `sk`, `example`, `exampleSk`.

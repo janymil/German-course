@@ -1,557 +1,875 @@
-﻿export const lesson40 = {
+export const lesson40 = {
   id: 40,
   week: 8,
   day: 5,
-  title: "Reflexive Verben — sich fühlen",
-  topic: "Reflexívne slovesá — cítiť sa, ponáhľať sa",
+  title: "Salzburg: Meine Reise",
+  topic: "Jednoduchý minulý čas od *sein* a *haben*. Cestovateľské spomienky.",
   cefr: "A1",
-  xpReward: 30,
-  narrativeContext:
-    "Montag früh, kurz vor 8 Uhr. Jana fühlt sich nicht gut — sie ist müde, hat Kopfschmerzen und möchte eigentlich im Bett bleiben. Sie muss aber ihre Chefin anrufen: 'Ich fühle mich heute leider nicht gut.' Die Chefin fragt: 'Wie fühlst du dich? Beeilst du dich jeden Morgen so?' Jana lacht: 'Nein, ich beeil mich eigentlich nie!'",
-  communicativeGoal:
-    "Po tejto lekcii viem používať reflexívne slovesá (sich fühlen, sich vorstellen, sich beeilen, sich freuen) a poznám reflexívne zámená pre všetky osoby.",
-  skillFocus: ["grammar", "vocabulary", "speaking", "writing"],
-
-  grammarNote: {
-    rule: "Reflexívne slovesá + reflexívne zámená (Akkusativ)",
-    explanation:
-      "Reflexívne slovesá vyžadujú reflexívne zámeno (= zámeno, ktoré sa vzťahuje na subjekt). V nemčine: ich fühle MICH, du fühlst DICH, er/sie/es fühlt SICH, wir fühlen UNS, ihr fühlt EUCH, sie/Sie fühlen SICH. Dôležité: 3. os. sg. a pl. aj formálne Sie = SICH. Zámeno stojí hneď za slovesom (alebo modálnym slovesom). Mnoho reflexívnych slovies zodpovedá slovenským slovesám so 'sa/si'.",
-    examples: [
-      { de: "Ich fühle mich müde.", sk: "Cítim sa unavená." },
-      { de: "Du fühlst dich gut.", sk: "Cítiš sa dobre." },
-      { de: "Er/Sie fühlt sich krank.", sk: "Cíti sa chorý/á." },
-      { de: "Wir beeilen uns.", sk: "Ponáhľame sa." },
-      { de: "Ihr freut euch.", sk: "Tešíte sa." },
-      { de: "Sie/sie freuen sich.", sk: "Tešia sa. / Tešíte sa (formálne)." },
-    ],
-    slovakContrastNote:
-      "Slovenčina používa reflexívnu časticku 'sa' alebo 'si': 'cítiť sa', 'predstaviť sa', 'ponáhľať sa'. Nem. používa 'sich' pre 3. os. a formálne Sie, pre ostatné osoby: mich, dich, uns, euch. Koncept je rovnaký — len zámená sa líšia.",
-  },
-
+  xpReward: 20,
+  narrativeContext: "Jana schreibt eine Postkarte. Sie ist in Wien und denkt an ihre Reise nach Salzburg.",
+  communicativeGoal: "Nach dieser Lektion kann ich einfache Sätze über die Vergangenheit mit 'war' und 'hatte' bilden.",
+  skillFocus: [
+    "grammar",
+    "writing",
+    "reading",
+    "vocabulary"
+  ],
+  lessonNotes: "V tejto lekcii sa naučíme jednoduchý minulý čas (Präteritum) slovies *sein* (byť) a *haben* (mať). Je to dôležité pre rozprávanie o minulosti, najmä v písomnej forme. Budeme čítať pohľadnicu od Jany a písať o cestovateľských spomienkach.",
+  grammarNotes: [
+    {
+      rule: "Präteritum od \"sein\" (bol som)",
+      explanation: "<p>V nemčine existujú dva hlavné minulé časy: <strong>Perfektum</strong> (ktoré už poznáte) a <strong>Präteritum</strong>. Zatiaľ čo Perfektum sa často používa v hovorenej reči pre väčšinu slovies, Präteritum je jednoduchší minulý čas, ktorý sa používa najmä v písomnej forme (napríklad v knihách, novinách, rozprávaniach). Avšak, pre slovesá <strong>\"sein\" (byť)</strong> a <strong>\"haben\" (mať)</strong> je Präteritum veľmi bežné aj v hovorenej reči a často sa uprednostňuje pred Perfektom. Tvar Präterita pre \"sein\" je <strong>\"war\"</strong> (bol/a/o som, si, bol/a/o atď.).</p><p>Konjugácia slovesa \"sein\" v Präterite:</p><table><tr><th>Osoba</th><th>Präteritum</th><th>Slovenský preklad</th></tr><tr><td>ich</td><td>war</td><td>bol som / bola som</td></tr><tr><td>du</td><td>warst</td><td>bol si / bola si</td></tr><tr><td>er/sie/es</td><td>war</td><td>bol / bola / bolo</td></tr><tr><td>wir</td><td>waren</td><td>boli sme</td></tr><tr><td>ihr</td><td>wart</td><td>boli ste</td></tr><tr><td>sie/Sie</td><td>waren</td><td>boli / boli ste</td></tr></table>",
+      examples: [
+        {
+          de: "Ich war gestern in Berlin.",
+          sk: "Včera som bol v Berlíne."
+        },
+        {
+          de: "Du warst müde nach der Reise.",
+          sk: "Bol si unavený po ceste."
+        },
+        {
+          de: "Das Wetter war sehr schön.",
+          sk: "Počasie bolo veľmi pekné."
+        },
+        {
+          de: "Wir waren letztes Jahr in der Slowakei.",
+          sk: "Minulý rok sme boli na Slovensku."
+        },
+        {
+          de: "Ihr wart pünktlich.",
+          sk: "Boli ste presní."
+        },
+        {
+          de: "Sie waren sehr freundlich zu uns.",
+          sk: "Boli k nám veľmi priateľskí."
+        }
+      ],
+      slovakContrastNote: "V slovenčine používame pre minulý čas slovesa \"byť\" zložený tvar \"bol som\", \"bol si\" atď., ktorý je štruktúrou podobný nemeckému Perfektu. V nemčine je však \"war\" jednoduchý, jednoslovný tvar Präterita, ktorý sa používa veľmi často aj v bežnej konverzácii, na rozdiel od väčšiny iných slovies."
+    },
+    {
+      rule: "Präteritum od \"haben\" (mal som)",
+      explanation: "<p>Podobne ako pri slovese \"sein\", aj pre sloveso <strong>\"haben\" (mať)</strong> sa v nemčine veľmi často používa Präteritum, a to aj v hovorenej reči. Tvar Präterita pre \"haben\" je <strong>\"hatte\"</strong> (mal/a/o som, si, mal/a/o atď.). Je dôležité si zapamätať tieto tvary, pretože sú základom pre vyjadrovanie minulosti v mnohých situáciách.</p><p>Konjugácia slovesa \"haben\" v Präterite:</p><table><tr><th>Osoba</th><th>Präteritum</th><th>Slovenský preklad</th></tr><tr><td>ich</td><td>hatte</td><td>mal som / mala som</td></tr><tr><td>du</td><td>hattest</td><td>mal si / mala si</td></tr><tr><td>er/sie/es</td><td>hatte</td><td>mal / mala / malo</td></tr><tr><td>wir</td><td>hatten</td><td>mali sme</td></tr><tr><td>ihr</td><td>hattet</td><td>mali ste</td></tr><tr><td>sie/Sie</td><td>hatten</td><td>mali / mali ste</td></tr></table>",
+      examples: [
+        {
+          de: "Ich hatte gestern viel Arbeit.",
+          sk: "Včera som mal veľa práce."
+        },
+        {
+          de: "Du hattest Glück mit dem Wetter.",
+          sk: "Mal si šťastie s počasím."
+        },
+        {
+          de: "Er hatte ein altes Auto.",
+          sk: "Mal staré auto."
+        },
+        {
+          de: "Wir hatten eine tolle Zeit in Wien.",
+          sk: "Mali sme skvelý čas vo Viedni."
+        },
+        {
+          de: "Hattet ihr genug Essen?",
+          sk: "Mali ste dosť jedla?"
+        },
+        {
+          de: "Sie hatten keine Probleme mit der Reservierung.",
+          sk: "Nemali problémy s rezerváciou."
+        }
+      ],
+      slovakContrastNote: "Aj v prípade slovesa \"mať\" používame v slovenčine zložený tvar \"mal som\". Nemecké \"hatte\" je opäť jednoduchý, jednoslovný tvar Präterita, ktorý je v hovorenej reči pre toto sloveso veľmi preferovaný."
+    }
+  ],
   vocab: [
     {
-      de: "sich fühlen",
-      sk: "cítiť sa (⚠️ reflexívne)",
-      example: "Ich fühle mich heute nicht gut.",
-      exampleSk: "Dnes sa necítim dobre.",
-      gender: null,
+      de: "die Postkarte",
+      sk: "pohľadnica",
+      gender: "F",
       srsId: "L40_V01",
-      recycledFrom: [],
+      example: "Ich schreibe eine Postkarte an meine Mutter.",
+      exampleSk: "Píšem pohľadnicu mojej matke.",
+      recycledFrom: []
     },
     {
-      de: "sich vorstellen",
-      sk: "predstaviť sa (⚠️ reflexívne, tiež: predstavovať si)",
-      example: "Ich stelle mich vor: Ich bin Jana.",
-      exampleSk: "Predstavujem sa: Som Jana.",
-      gender: null,
+      de: "die Mutter",
+      sk: "matka",
+      gender: "F",
       srsId: "L40_V02",
-      recycledFrom: [],
+      example: "Meine Mutter war auch in Salzburg.",
+      exampleSk: "Moja matka bola tiež v Salzburgu.",
+      recycledFrom: []
     },
     {
-      de: "sich beeilen",
-      sk: "ponáhľať sa (⚠️ reflexívne)",
-      example: "Ich muss mich beeilen — der Bus kommt!",
-      exampleSk: "Musím sa ponáhľať — ide autobus!",
-      gender: null,
+      de: "das Glück",
+      sk: "šťastie",
+      gender: "N",
       srsId: "L40_V03",
-      recycledFrom: [],
+      example: "Ich hatte viel Glück mit dem Wetter.",
+      exampleSk: "Mal som veľa šťastia s počasím.",
+      recycledFrom: []
     },
     {
-      de: "sich freuen",
-      sk: "tešiť sa (⚠️ reflexívne)",
-      example: "Ich freue mich auf das Wochenende!",
-      exampleSk: "Teším sa na víkend!",
-      gender: null,
+      de: "die Sonne",
+      sk: "slnko",
+      gender: "F",
       srsId: "L40_V04",
-      recycledFrom: [],
+      example: "Die Sonne war sehr warm.",
+      exampleSk: "Slnko bolo veľmi teplé.",
+      recycledFrom: []
     },
     {
-      de: "sich setzen",
-      sk: "sadnúť si (⚠️ reflexívne)",
-      example: "Bitte setzen Sie sich!",
-      exampleSk: "Prosím sadnite si!",
-      gender: null,
-      srsId: "L40_V05",
-      recycledFrom: [],
-    },
-    {
-      de: "sich erinnern",
-      sk: "pamätať si, spomínať (⚠️ reflexívne)",
-      example: "Ich erinnere mich an Wien.",
-      exampleSk: "Spomínam na Viedeň.",
-      gender: null,
-      srsId: "L40_V06",
-      recycledFrom: [],
-    },
-    {
-      de: "sich waschen",
-      sk: "umývať sa (⚠️ reflexívne)",
-      example: "Jeden Morgen wasche ich mich.",
-      exampleSk: "Každé ráno sa umývam.",
-      gender: null,
-      srsId: "L40_V07",
-      recycledFrom: [],
-    },
-    {
-      de: "sich anziehen",
-      sk: "obliekať sa (⚠️ reflexívne + odlučiteľné)",
-      example: "Ich ziehe mich schnell an.",
-      exampleSk: "Rýchlo sa obliekam.",
-      gender: null,
-      srsId: "L40_V08",
-      recycledFrom: [],
-    },
-    {
-      de: "krank",
-      sk: "chorý",
-      example: "Ich bin krank — ich bleibe zu Hause.",
-      exampleSk: "Som chorý/á — zostávam doma.",
-      gender: null,
-      srsId: "L40_V09",
-      recycledFrom: [],
-    },
-    {
-      de: "fit",
-      sk: "fit, v kondícii",
-      example: "Heute fühle ich mich sehr fit.",
-      exampleSk: "Dnes sa cítim veľmi fit.",
-      gender: null,
-      srsId: "L40_V10",
-      recycledFrom: [],
-    },
-    {
-      de: "der Körper",
-      sk: "telo",
-      example: "Mein Körper braucht Ruhe.",
-      exampleSk: "Moje telo potrebuje odpočinok.",
+      de: "der Himmel",
+      sk: "obloha",
       gender: "M",
-      srsId: "L40_V11",
-      recycledFrom: [],
+      srsId: "L40_V05",
+      example: "Der Himmel war blau.",
+      exampleSk: "Obloha bola modrá.",
+      recycledFrom: []
     },
     {
-      de: "der Kopf",
-      sk: "hlava",
-      example: "Mein Kopf tut weh.",
-      exampleSk: "Bolí ma hlava.",
+      de: "die Freude",
+      sk: "radosť",
+      gender: "F",
+      srsId: "L40_V06",
+      example: "Ich hatte viel Freude in Salzburg.",
+      exampleSk: "Mal som veľa radosti v Salzburgu.",
+      recycledFrom: []
+    },
+    {
+      de: "das Gefühl",
+      sk: "pocit",
+      gender: "N",
+      srsId: "L40_V07",
+      example: "Ich habe ein positives Gefühl.",
+      exampleSk: "Mám pozitívny pocit.",
+      recycledFrom: []
+    },
+    {
+      de: "die Erinnerung",
+      sk: "spomienka",
+      gender: "F",
+      srsId: "L40_V08",
+      example: "Ich habe viele schöne Erinnerungen.",
+      exampleSk: "Mám veľa pekných spomienok.",
+      recycledFrom: []
+    },
+    {
+      de: "das Land",
+      sk: "krajina",
+      gender: "N",
+      srsId: "L40_V09",
+      example: "Österreich ist ein schönes Land.",
+      exampleSk: "Rakúsko je krásna krajina.",
+      recycledFrom: []
+    },
+    {
+      de: "die Stadtrundfahrt",
+      sk: "prehliadka mesta",
+      gender: "F",
+      srsId: "L40_V10",
+      example: "Die Stadtrundfahrt war sehr interessant.",
+      exampleSk: "Prehliadka mesta bola veľmi zaujímavá.",
+      recycledFrom: []
+    },
+    {
+      de: "die Heimat",
+      sk: "vlasť",
+      gender: "F",
+      srsId: "L40_V11",
+      example: "Meine Heimat ist die Slowakei.",
+      exampleSk: "Moja vlasť je Slovensko.",
+      recycledFrom: []
+    },
+    {
+      de: "der Aufenthalt",
+      sk: "pobyt",
       gender: "M",
       srsId: "L40_V12",
-      recycledFrom: [],
+      example: "Der Aufenthalt in Salzburg war kurz.",
+      exampleSk: "Pobyt v Salzburgu bol krátky.",
+      recycledFrom: []
     },
     {
-      de: "der Bauch",
-      sk: "brucho",
-      example: "Mein Bauch tut weh.",
-      exampleSk: "Bolí ma brucho.",
-      gender: "M",
+      de: "die Wohnung",
+      sk: "byt",
+      gender: "F",
       srsId: "L40_V13",
-      recycledFrom: [],
+      example: "Meine Wohnung in Wien ist klein.",
+      exampleSk: "Môj byt vo Viedni je malý.",
+      recycledFrom: []
     },
     {
-      de: "der Rücken",
-      sk: "chrbát",
-      example: "Mein Rücken schmerzt nach der Arbeit.",
-      exampleSk: "Chrbát ma bolí po práci.",
+      de: "der Ort",
+      sk: "miesto",
       gender: "M",
       srsId: "L40_V14",
-      recycledFrom: [],
+      example: "Salzburg ist ein toller Ort.",
+      exampleSk: "Salzburg je skvelé miesto.",
+      recycledFrom: []
     },
     {
-      de: "müde sein",
-      sk: "byť unavený",
-      example: "Ich bin heute sehr müde.",
-      exampleSk: "Dnes som veľmi unavená.",
-      gender: null,
+      de: "die Aussicht",
+      sk: "výhľad",
+      gender: "F",
       srsId: "L40_V15",
-      recycledFrom: [3],
+      example: "Die Aussicht war fantastisch.",
+      exampleSk: "Výhľad bol fantastický.",
+      recycledFrom: []
     },
+    {
+      de: "fühlen",
+      sk: "cítiť",
+      gender: null,
+      srsId: "L40_V16",
+      example: "Ich fühle mich jetzt sehr wohl.",
+      exampleSk: "Teraz sa cítim veľmi dobre.",
+      recycledFrom: []
+    },
+    {
+      de: "wohnen",
+      sk: "bývať",
+      gender: null,
+      srsId: "L40_V17",
+      example: "Ich wohne jetzt in Wien.",
+      exampleSk: "Teraz bývam vo Viedni.",
+      recycledFrom: []
+    },
+    {
+      de: "lieben",
+      sk: "milovať",
+      gender: null,
+      srsId: "L40_V18",
+      example: "Ich liebe Wien sehr.",
+      exampleSk: "Viedeň veľmi milujem.",
+      recycledFrom: []
+    },
+    {
+      de: "glücklich",
+      sk: "šťastný",
+      gender: null,
+      srsId: "L40_V19",
+      example: "Ich bin sehr glücklich in Wien.",
+      exampleSk: "Som veľmi šťastný vo Viedni.",
+      recycledFrom: []
+    },
+    {
+      de: "wunderschön",
+      sk: "nádherný",
+      gender: null,
+      srsId: "L40_V20",
+      example: "Salzburg war wunderschön.",
+      exampleSk: "Salzburg bol nádherný.",
+      recycledFrom: []
+    },
+    {
+      de: "sehr",
+      sk: "veľmi",
+      gender: null,
+      srsId: "L40_V21",
+      example: "Ich bin sehr müde.",
+      exampleSk: "Som veľmi unavený.",
+      recycledFrom: []
+    },
+    {
+      de: "jetzt",
+      sk: "teraz",
+      gender: null,
+      srsId: "L40_V22",
+      example: "Jetzt bin ich wieder zu Hause.",
+      exampleSk: "Teraz som opäť doma.",
+      recycledFrom: []
+    },
+    {
+      de: "hier",
+      sk: "tu",
+      gender: null,
+      srsId: "L40_V23",
+      example: "Hier ist es sehr ruhig.",
+      exampleSk: "Tu je veľmi ticho.",
+      recycledFrom: []
+    },
+    {
+      de: "liebe Grüße",
+      sk: "srdečné pozdravy",
+      gender: null,
+      srsId: "L40_V24",
+      example: "Liebe Grüße aus Wien!",
+      exampleSk: "Srdečné pozdravy z Viedne!",
+      recycledFrom: []
+    },
+    {
+      de: "es gibt",
+      sk: "existuje / sú",
+      gender: null,
+      srsId: "L40_V25",
+      example: "Es gibt viele tolle Orte.",
+      exampleSk: "Existuje (je) veľa skvelých miest.",
+      recycledFrom: []
+    }
   ],
-
   exercises: [
     {
       type: "flashcard",
-      instruction:
-        "Kartičky — reflexívne slovesá a časti tela. Pre každé reflexívne sloveso povedz celú vetu so správnym zámenom: ich fühle MICH, du fühlst DICH...",
-      items: [
-        "L40_V01",
-        "L40_V02",
-        "L40_V03",
-        "L40_V04",
-        "L40_V05",
-        "L40_V06",
-        "L40_V07",
-        "L40_V08",
-        "L40_V09",
-        "L40_V10",
-        "L40_V11",
-        "L40_V12",
-        "L40_V13",
-        "L40_V14",
-        "L40_V15",
-      ],
-    },
-    {
-      type: "mcq",
-      instruction: "Vyber správne reflexívne zámeno.",
-      questions: [
-        {
-          question: "Jana fühlt ___ heute nicht gut.",
-          options: ["mich", "dich", "sich", "uns"],
-          answer: "sich",
-          explanation:
-            "3. osoba sg. (Jana = sie) → reflexívne zámeno = 'sich'. 'Jana fühlt sich heute nicht gut.'",
-        },
-        {
-          question: "Wir beeilen ___ jeden Morgen.",
-          options: ["mich", "sich", "euch", "uns"],
-          answer: "uns",
-          explanation: "1. osoba pl. (wir) → reflexívne zámeno = 'uns'. 'Wir beeilen uns.'",
-        },
-        {
-          question: "Ich erinnere ___ gern an Wien.",
-          options: ["sich", "mich", "dich", "uns"],
-          answer: "mich",
-          explanation: "1. osoba sg. (ich) → reflexívne zámeno = 'mich'. 'Ich erinnere mich.'",
-        },
-        {
-          question: "Ihr freut ___ auf das Konzert.",
-          options: ["sich", "uns", "mich", "euch"],
-          answer: "euch",
-          explanation: "2. osoba pl. (ihr) → reflexívne zámeno = 'euch'. 'Ihr freut euch.'",
-        },
-        {
-          question: "S modálnym slovesom: 'Ich muss ___ beeilen.' Kam ide zámeno?",
-          options: [
-            "Na koniec: 'Ich muss beeilen mich.'",
-            "Hneď za modálnym slovesom: 'Ich muss mich beeilen.'",
-            "Na začiatok: 'Mich ich muss beeilen.'",
-            "Pred infinitívom na konci: 'Ich muss mich beeilen.' — toto je správne!",
-          ],
-          answer: "Hneď za modálnym slovesom: 'Ich muss mich beeilen.'",
-          explanation:
-            "S modálnym slovesom: reflexívne zámeno stojí hneď za modálnym (P2): 'Ich muss mich beeilen.' Infinitív reflexívneho slovesa ide na koniec celý.",
-        },
-      ],
-    },
-    {
-      type: "fill",
-      instruction: "Doplň správne reflexívne zámeno.",
-      questions: [
-        {
-          sentence: "Jana fühlt ___ heute leider krank.",
-          answer: "sich",
-          hint: "Jana = sie/3. os. sg. → reflexívne zámeno?",
-          explanation: "3. os. sg. → 'sich'. 'Jana fühlt sich heute leider krank.'",
-        },
-        {
-          sentence: "Ich muss ___ beeilen — der Zug fährt um 8 Uhr!",
-          answer: "mich",
-          hint: "ich → reflexívne zámeno?",
-          explanation: "1. os. sg. → 'mich'. 'Ich muss mich beeilen.'",
-        },
-        {
-          sentence: "Erinnerst du ___ an unseren ersten Tag in Wien?",
-          answer: "dich",
-          hint: "du → reflexívne zámeno?",
-          explanation: "2. os. sg. → 'dich'. 'Erinnerst du dich an...?'",
-        },
-        {
-          sentence: "Wir freuen ___ sehr auf das Wochenende!",
-          answer: "uns",
-          hint: "wir → reflexívne zámeno?",
-          explanation: "1. os. pl. → 'uns'. 'Wir freuen uns sehr auf...'",
-        },
-        {
-          sentence: "Er fühlt ___ heute nicht fit — er hat Kopfschmerzen.",
-          answer: "sich",
-          hint: "er = 3. os. sg. → reflexívne zámeno?",
-          explanation: "3. os. sg. → 'sich'. 'Er fühlt sich nicht fit.'",
-        },
-        {
-          sentence: "Bitte setzen Sie ___! (Prosím sadnite si — formálne)",
-          answer: "sich",
-          hint: "Formálne 'Sie' → reflexívne zámeno?",
-          explanation: "Formálne 'Sie' → 'sich'. 'Bitte setzen Sie sich!' = Prosím sadnite si!",
-        },
-      ],
-    },
-    {
-      type: "listen",
-      instruction: "Počúvaj vety s reflexívnymi slovesami. Opakuj so správnym zámenom.",
-      questions: [
-        { de: "Ich fühle mich heute nicht gut.", sk: "Dnes sa necítim dobre." },
-        { de: "Wie fühlst du dich?", sk: "Ako sa cítiš?" },
-        { de: "Er fühlt sich sehr müde.", sk: "Cíti sa veľmi unavený." },
-        { de: "Wir beeilen uns — der Bus kommt!", sk: "Ponáhľame sa — ide autobus!" },
-        { de: "Ich erinnere mich gern an Bratislava.", sk: "Rád/rada spomínam na Bratislavu." },
-        { de: "Jana freut sich auf das Wochenende.", sk: "Jana sa teší na víkend." },
-        { de: "Bitte setzen Sie sich!", sk: "Prosím sadnite si!" },
-        { de: "Ich muss mich beeilen!", sk: "Musím sa ponáhľať!" },
-      ],
+      instruction: "Prezri si slovíčka tejto lekcie. Klikni na kartičku pre preklad."
     },
     {
       type: "match",
-      instruction: "Spoj osobné zámeno s jeho reflexívnym zámenom (Akkusativ).",
+      instruction: "Priraďte nemecké slová k ich slovenským prekladom.",
       pairs: [
-        ["ich", "mich"],
-        ["du", "dich"],
-        ["er/sie/es", "sich"],
-        ["wir", "uns"],
-        ["ihr", "euch"],
-        ["sie/Sie", "sich"],
-        ["sich fühlen", "cítiť sa"],
-        ["sich beeilen", "ponáhľať sa"],
-        ["sich freuen", "tešiť sa"],
-        ["sich erinnern", "spomínať, pamätať si"],
-      ],
-    },
-    {
-      type: "dialogue",
-      instruction: "Jana volá šéfke, pretože je chorá. Reflexívne slovesá v každej replike.",
-      lines: [
-        {
-          speaker: "Chefin",
-          de: "Schwarz, guten Morgen!",
-          sk: "Schwarzová, dobré ráno!",
-        },
-        {
-          speaker: "Jana",
-          de: "Guten Morgen, Frau Schwarz! Hier ist Jana Nováková. Ich fühle mich heute leider gar nicht gut.",
-          sk: "Dobré ráno, pani Schwarzová! Tu je Jana Nováková. Dnes sa žiaľ vôbec necítim dobre.",
-        },
-        {
-          speaker: "Chefin",
-          de: "Oh! Wie fühlst du dich denn?",
-          sk: "Och! Ako sa teda cítiš?",
-        },
-        {
-          speaker: "Jana",
-          de: "Ich habe Kopfschmerzen und einen Rückenschmerz. Ich bin sehr müde.",
-          sk: "Mám bolesť hlavy a chrbát. Som veľmi unavená.",
-        },
-        {
-          speaker: "Chefin",
-          de: "Ach, das tut mir leid. Bist du erkältet?",
-          sk: "Och, je mi ľúto. Si nachladená?",
-        },
-        {
-          speaker: "Jana",
-          de: "Ich glaube schon. Ich erinnere mich, dass ich gestern im Regen war.",
-          sk: "Myslím, že áno. Spomínam si, že som bola včera v daždi.",
-        },
-        {
-          speaker: "Chefin",
-          de: "Du musst dich erholen! Bleib bitte zu Hause.",
-          sk: "Musíš si oddýchnuť! Zostaň prosím doma.",
-        },
-        {
-          speaker: "Jana",
-          de: "Danke, Frau Schwarz. Ich freue mich, dass Sie Verständnis haben.",
-          sk: "Ďakujem, pani Schwarzová. Teší ma, že máte pochopenie.",
-        },
-        {
-          speaker: "Chefin",
-          de: "Das ist selbstverständlich! Wann fühlst du dich besser?",
-          sk: "To je samozrejmé! Kedy sa budeš cítiť lepšie?",
-        },
-        {
-          speaker: "Jana",
-          de: "Ich hoffe, morgen früh fühle ich mich besser.",
-          sk: "Dúfam, že zajtra ráno sa budem cítiť lepšie.",
-        },
-        {
-          speaker: "Chefin",
-          de: "Gut. Erhol dich! Und setz dich nicht an den Computer heute.",
-          sk: "Dobre. Oddýchni si! A nezasadaj dnes k počítaču.",
-        },
-        {
-          speaker: "Jana",
-          de: "Ich verspreche es! Danke, Frau Schwarz. Auf Wiederhören!",
-          sk: "Sľubujem! Ďakujem, pani Schwarzová. Dovidenia!",
-        },
-      ],
-      comprehensionQuestions: [
-        {
-          question: "Warum ruft Jana ihre Chefin an?",
-          options: [
-            "Sie kommt zu spät.",
-            "Sie fühlt sich krank und kann nicht arbeiten.",
-            "Sie hat eine Frage über ein Projekt.",
-            "Sie möchte Urlaub nehmen.",
-          ],
-          answer: "Sie fühlt sich krank und kann nicht arbeiten.",
-          explanation: "Jana sagt: 'Ich fühle mich heute leider gar nicht gut.'",
-        },
-        {
-          question: "Was hat Jana? (Wähle ALLES Richtige aus der Geschichte)",
-          options: [
-            "Bauchschmerzen",
-            "Kopfschmerzen und Rückenschmerzen",
-            "Fieber",
-            "Halsweh",
-          ],
-          answer: "Kopfschmerzen und Rückenschmerzen",
-          explanation: "Jana sagt: 'Ich habe Kopfschmerzen und einen Rückenschmerz.'",
-        },
-        {
-          question: "Was sagt die Chefin zu Jana?",
-          options: [
-            "'Du musst ins Büro kommen.'",
-            "'Du musst dich erholen und zu Hause bleiben.'",
-            "'Geh zum Arzt und komm danach ins Büro.'",
-            "'Du hast keine Arbeit heute.'",
-          ],
-          answer: "'Du musst dich erholen und zu Hause bleiben.'",
-          explanation: "Chefin sagt: 'Du musst dich erholen! Bleib bitte zu Hause.'",
-        },
-      ],
-    },
-    {
-      type: "minitext",
-      instruction: "Prečítaj si Janin zápisok do denníčka a odpovedz na otázky.",
-      text: `Montag, 8. November
-
-Heute fühle ich mich wirklich schlecht. Ich habe mich morgens gebeilt, aber der Bus ist trotzdem gegangen. Ich erinnere mich, dass ich nicht genug geschlafen habe.
-
-Ich habe mich um 7 Uhr gewaschen und angezogen — in 10 Minuten! Dann habe ich mich bei der Arbeit krank gemeldet. Meine Chefin war sehr nett.
-
-Jetzt setze ich mich in den Sessel und trinke Tee. Ich freue mich schon auf morgen — wenn ich mich besser fühle, gehe ich wieder ins Büro.
-
-Jana`,
-      textSk: `Pondelok, 8. novembra
-
-Dnes sa naozaj cítim zle. Ráno som sa ponáhľala, ale autobus aj tak odišiel. Spomínam si, že som nemala dosť spánku.
-
-O 7:00 som sa umyla a obliekla — za 10 minút! Potom som sa na práci odhlásila chorá. Moja šéfka bola veľmi milá.
-
-Teraz si sadám do kresla a pijem čaj. Teším sa už na zajtra — keď sa budem cítiť lepšie, pôjdem znovu do práce.
-
-Jana`,
-      questions: [
-        {
-          question: "Wie fühlt sich Jana heute?",
-          options: ["Sehr fit", "Müde aber okay", "Wirklich schlecht", "Normal"],
-          answer: "Wirklich schlecht",
-          explanation: "Jana schreibt: 'Heute fühle ich mich wirklich schlecht.'",
-        },
-        {
-          question: "Warum hat Jana den Bus verpasst?",
-          options: [
-            "Sie hat zu lang geschlafen.",
-            "Sie hat sich beeilt, aber der Bus ist trotzdem gegangen.",
-            "Sie hat auf einen Freund gewartet.",
-            "Der Bus war zu früh.",
-          ],
-          answer: "Sie hat sich beeilt, aber der Bus ist trotzdem gegangen.",
-          explanation: "'Ich habe mich beeilt, aber der Bus ist trotzdem gegangen.'",
-        },
-        {
-          question: "Worauf freut sich Jana?",
-          options: [
-            "Auf ein Konzert.",
-            "Auf das Wochenende.",
-            "Auf morgen — wenn sie sich besser fühlt.",
-            "Auf eine Besprechung.",
-          ],
-          answer: "Auf morgen — wenn sie sich besser fühlt.",
-          explanation: "'Ich freue mich schon auf morgen — wenn ich mich besser fühle.'",
-        },
-      ],
-    },
-    {
-      type: "freewrite",
-      instruction: "Napíš krátky text o tom, ako sa cítiš.",
-      prompt:
-        "Wie fühlst du dich heute? Beeilst du dich oft morgens? Freust du dich auf etwas in dieser Woche? Erinnerst du dich an etwas Schönes? Benutze mindestens 4 verschiedene Reflexivverben!",
-      minWords: 30,
-      exampleAnswer:
-        "Heute fühle ich mich sehr gut und fit! Morgens beeil ich mich immer ein bisschen — der Bus wartet nicht! Ich freue mich sehr auf das Wochenende. Ich treffe mich mit Freunden am Samstag. Ich erinnere mich gern an unseren letzten Ausflug nach Salzburg. Das war wunderschön!",
+        [
+          "die Postkarte",
+          "pohľadnica"
+        ],
+        [
+          "die Mutter",
+          "matka"
+        ],
+        [
+          "das Glück",
+          "šťastie"
+        ],
+        [
+          "die Sonne",
+          "slnko"
+        ],
+        [
+          "die Freude",
+          "radosť"
+        ],
+        [
+          "die Erinnerung",
+          "spomienka"
+        ],
+        [
+          "wunderschön",
+          "nádherný"
+        ],
+        [
+          "der Aufenthalt",
+          "pobyt"
+        ]
+      ]
     },
     {
       type: "wordorder",
-      instruction: "Zoraď slová do správnej nemeckej vety.",
+      instruction: "Usporiadajte slová do správneho poradia a vytvorte zmysluplnú vetu.",
       sentences: [
         {
-          words: ["Jana", "spricht", "nicht", "nur", "Deutsch,", "sondern", "auch", "Englisch."],
-          correct: "Jana spricht nicht nur Deutsch, sondern auch Englisch.",
-          hint: "Jana hovorí nielen nemecky, ale aj anglicky.",
-          explanation: "'nicht nur...sondern auch' spája dve rovnocenné výrazy: Deutsch a Englisch.",
+          words: [
+            "Ich",
+            "in",
+            "war",
+            "Berlin"
+          ],
+          correct: "Ich war in Berlin",
+          hint: "Bol som v Berlíne.",
+          explanation: "Sloveso 'sein' v Präterite ('war') je na druhom mieste vo vete. 'Ich' je podmet."
         },
         {
-          words: ["Entweder", "kommst", "du", "mit,", "oder", "wir", "gehen", "ohne", "dich."],
-          correct: "Entweder kommst du mit, oder wir gehen ohne dich.",
-          hint: "Buď pôjdeš s nami, alebo pôjdeme bez teba.",
-          explanation: "'entweder...oder' = buď...alebo. Po 'entweder' Inversion: 'kommst du'.",
+          words: [
+            "Wir",
+            "hatten",
+            "viel",
+            "Glück"
+          ],
+          correct: "Wir hatten viel Glück",
+          hint: "Mali sme veľa šťastia.",
+          explanation: "Sloveso 'haben' v Präterite ('hatten') je na druhom mieste. 'Wir' je podmet."
         },
         {
-          words: ["Sowohl", "Jana", "als", "auch", "Lukas", "lernen", "Deutsch."],
-          correct: "Sowohl Jana als auch Lukas lernen Deutsch.",
-          hint: "Ako Jana, tak aj Lukáš sa učia nemčinu.",
-          explanation: "'sowohl...als auch' = ako...tak aj. Sloveso v pluráli, lebo dve subjekty.",
+          words: [
+            "du",
+            "eine",
+            "Hattest",
+            "schöne",
+            "Reise"
+          ],
+          correct: "Hattest du eine schöne Reise",
+          hint: "Mal si peknú cestu?",
+          explanation: "V otázkach bez opytovacieho slova je sloveso ('Hattest') na prvom mieste."
         },
         {
-          words: ["Ich", "lerne", "nicht", "nur", "Deutsch,", "sondern", "auch", "Spanisch."],
-          correct: "Ich lerne nicht nur Deutsch, sondern auch Spanisch.",
-          hint: "Neučím sa len nemčinu, ale aj španielčinu.",
-          explanation: "'nicht nur...sondern auch' spája dve objekty.",
+          words: [
+            "Er",
+            "sehr",
+            "glücklich",
+            "war"
+          ],
+          correct: "Er war sehr glücklich",
+          hint: "Bol veľmi šťastný.",
+          explanation: "Sloveso 'sein' v Präterite ('war') je na druhom mieste. 'Er' je podmet."
         },
         {
-          words: ["Entweder", "sie", "kommt", "heute,", "oder", "sie", "kommt", "morgen."],
-          correct: "Entweder sie kommt heute, oder sie kommt morgen.",
-          hint: "Buď príde dnes, alebo príde zajtra.",
-          explanation: "'entweder...oder': dve možnosti.",
+          words: [
+            "Ich",
+            "keine",
+            "hatte",
+            "Probleme"
+          ],
+          correct: "Ich hatte keine Probleme",
+          hint: "Nemal som žiadne problémy.",
+          explanation: "Sloveso 'haben' v Präterite ('hatte') je na druhom mieste. Negácia 'keine' stojí pred podstatným menom."
+        }
+      ]
+    },
+    {
+      type: "fill",
+      instruction: "Doplňte do viet správny tvar slovesa alebo slova.",
+      questions: [
+        {
+          sentence: "Letztes Jahr ___ ich in Italien.",
+          answer: "war",
+          hint: "Minulý rok som bol v Taliansku.",
+          explanation: "Pre 'ich' je Präteritum od 'sein' tvar 'war'."
         },
-      ],
+        {
+          sentence: "Wir ___ viel Spaß auf der Party.",
+          answer: "hatten",
+          hint: "Na párty sme sa veľmi bavili.",
+          explanation: "Pre 'wir' je Präteritum od 'haben' tvar 'hatten'."
+        },
+        {
+          sentence: "___ ihr gestern zu Hause?",
+          answer: "Wart",
+          hint: "Boli ste včera doma?",
+          explanation: "Pre 'ihr' je Präteritum od 'sein' tvar 'wart'. Vo vete bez opytovacieho slova je sloveso na prvom mieste."
+        },
+        {
+          sentence: "Er ___ keine Zeit für uns.",
+          answer: "hatte",
+          hint: "Nemal pre nás čas.",
+          explanation: "Pre 'er' je Präteritum od 'haben' tvar 'hatte'."
+        },
+        {
+          sentence: "Was ___ du am Wochenende ___?",
+          answer: "hast ... gemacht",
+          hint: "Čo si robil cez víkend?",
+          explanation: "Pre Perfektum s 'haben' potrebujeme pomocné sloveso 'haben' v správnom tvare ('hast') a príčastie minulé ('gemacht') na konci vety."
+        },
+        {
+          sentence: "Ich ___ gut Deutsch sprechen.",
+          answer: "kann",
+          hint: "Ja viem dobre hovoriť po nemecky.",
+          explanation: "Pre 'ich' je tvar modálneho slovesa 'können' tvar 'kann'. Infinitív 'sprechen' ide na koniec vety."
+        },
+        {
+          sentence: "Ich brauche ___ neuen Laptop.",
+          answer: "einen",
+          hint: "Potrebujem nový laptop.",
+          explanation: "Sloveso 'brauchen' vyžaduje Akkusativ. 'Laptop' je maskulínum, preto 'einen'."
+        }
+      ]
+    },
+    {
+      type: "listen",
+      instruction: "Prečítajte si nemecké slovo a pozrite si jeho slovenský preklad.",
+      questions: [
+        {
+          de: "die Sonne",
+          sk: "slnko"
+        },
+        {
+          de: "das Glück",
+          sk: "šťastie"
+        },
+        {
+          de: "fühlen",
+          sk: "cítiť"
+        },
+        {
+          de: "glücklich",
+          sk: "šťastný"
+        },
+        {
+          de: "die Freude",
+          sk: "radosť"
+        },
+        {
+          de: "die Erinnerung",
+          sk: "spomienka"
+        },
+        {
+          de: "wunderschön",
+          sk: "nádherný"
+        },
+        {
+          de: "die Stadtrundfahrt",
+          sk: "prehliadka mesta"
+        }
+      ]
+    },
+    {
+      type: "mcq",
+      instruction: "Vyberte správnu odpoveď.",
+      questions: [
+        {
+          question: "Vyberte správny tvar Präterita pre 'Ich ___ in Paris'.",
+          options: [
+            "bin",
+            "war",
+            "habe",
+            "hatte"
+          ],
+          answer: 1,
+          explanation: "Pre 'ich' je Präteritum od 'sein' tvar 'war'."
+        },
+        {
+          question: "Ktorá veta je správna?",
+          options: [
+            "Wir war viel Spaß.",
+            "Wir hatten viel Spaß.",
+            "Wir haben viel Spaß war.",
+            "Wir hat viel Spaß."
+          ],
+          answer: 1,
+          explanation: "Präteritum od 'haben' pre 'wir' je 'hatten'. 'Viel Spaß haben' znamená 'baviť sa'."
+        },
+        {
+          question: "Čo znamená 'die Erinnerung'?",
+          options: [
+            "radosť",
+            "šťastie",
+            "spomienka",
+            "výhľad"
+          ],
+          answer: 2,
+          explanation: "'Die Erinnerung' znamená 'spomienka'."
+        },
+        {
+          question: "Doplňte vetu: 'Gestern ___ ich müde, aber ich ___ keine Zeit zum Schlafen.'",
+          options: [
+            "war / hatte",
+            "hatte / war",
+            "bin / habe",
+            "habe / bin"
+          ],
+          answer: 0,
+          explanation: "'Byť unavený' používa 'sein' (war), 'mať čas' používa 'haben' (hatte)."
+        },
+        {
+          question: "Vyberte správnu vetu v Perfekte.",
+          options: [
+            "Ich bin nach Hause gegangen.",
+            "Ich habe nach Hause gegangen.",
+            "Ich bin nach Hause gehst.",
+            "Ich bin nach Hause gehen."
+          ],
+          answer: 0,
+          explanation: "Slovesá pohybu ako 'gehen' tvoria Perfektum s pomocným slovesom 'sein' a príčastím minulým 'gegangen'."
+        },
+        {
+          question: "Doplňte vetu: 'Mein Bruder ___ sehr gut Fußball spielen.'",
+          options: [
+            "kann",
+            "können",
+            "könnt",
+            "will"
+          ],
+          answer: 0,
+          explanation: "Pre 'mein Bruder' (er) je správny tvar modálneho slovesa 'können' tvar 'kann'. Infinitív 'spielen' ide na koniec vety."
+        },
+        {
+          question: "Čo je 'die Stadtrundfahrt'?",
+          options: [
+            "výlet loďou",
+            "prehliadka mesta",
+            "cesta vlakom",
+            "návšteva múzea"
+          ],
+          answer: 1,
+          explanation: "'Die Stadtrundfahrt' je 'prehliadka mesta'."
+        }
+      ]
+    },
+    {
+      type: "minitext",
+      instruction: "Lies den Text und beantworte die Fragen.",
+      text: "Liebe Mutter,\n\nich schreibe dir eine Postkarte aus Wien. Letzte Woche war ich in Salzburg. Es war wunderschön dort! Ich hatte viel Glück mit dem Wetter. Der Himmel war blau und die Sonne schien jeden Tag. Mein Aufenthalt in Salzburg war kurz, aber sehr schön. Ich hatte auch eine tolle Stadtrundfahrt. Die Aussicht vom Berg war fantastisch.\n\nJetzt bin ich wieder hier in Wien. Ich fühle mich sehr glücklich. Ich liebe meine Wohnung und die Stadt. Ich habe viele schöne Erinnerungen an Salzburg und ein gutes Gefühl für die Zukunft.\n\nLiebe Grüße,\nDeine Jana",
+      textSk: "Milá mama,\n\npíšem ti pohľadnicu z Viedne. Minulý týždeň som bola v Salzburgu. Bolo tam nádherne! Mala som veľké šťastie s počasím. Obloha bola modrá a slnko svietilo každý deň. Môj pobyt v Salzburgu bol krátky, ale veľmi pekný. Mala som aj skvelú prehliadku mesta. Výhľad z hory bol fantastický.\n\nTeraz som opäť tu vo Viedni. Cítim sa veľmi šťastná. Milujem svoj byt a mesto. Mám veľa krásnych spomienok na Salzburg a dobrý pocit z budúcnosti.\n\nSrdečné pozdravy,\nTvoja Jana",
+      questions: [
+        {
+          question: "Wo war Jana letzte Woche?",
+          options: [
+            "In Salzburg.",
+            "In Wien.",
+            "In ihrer Wohnung.",
+            "In der Heimat."
+          ],
+          answer: 0,
+          explanation: "Jana schreibt: \"Letzte Woche war ich in Salzburg.\""
+        },
+        {
+          question: "Wie war das Wetter in Salzburg?",
+          options: [
+            "Es regnete viel.",
+            "Es war kalt und windig.",
+            "Die Sonne schien jeden Tag.",
+            "Es gab Nebel."
+          ],
+          answer: 2,
+          explanation: "Jana schreibt: \"Ich hatte viel Glück mit dem Wetter. Der Himmel war blau und die Sonne schien jeden Tag.\""
+        },
+        {
+          question: "Was hatte Jana in Salzburg noch gemacht?",
+          options: [
+            "Sie hatte gearbeitet.",
+            "Sie hatte eine Stadtrundfahrt.",
+            "Sie hatte ihre Mutter besucht.",
+            "Sie hatte eine neue Wohnung gefunden."
+          ],
+          answer: 1,
+          explanation: "Jana schreibt: \"Ich hatte auch eine tolle Stadtrundfahrt.\""
+        },
+        {
+          question: "Wie fühlt sich Jana jetzt in Wien?",
+          options: [
+            "Sie ist traurig.",
+            "Sie ist müde.",
+            "Sie ist gelangweilt.",
+            "Sie ist sehr glücklich."
+          ],
+          answer: 3,
+          explanation: "Jana schreibt: \"Jetzt bin ich wieder hier in Wien. Ich fühle mich sehr glücklich.\""
+        }
+      ]
     },
     {
       type: "speaking",
-      instruction: "Počúvaj nemeckú vetu. Potom hovor nahlas a skontroluj sa.",
+      instruction: "Höre zu und sprich nach.",
       phrases: [
         {
-          de: "Ich spreche nicht nur Deutsch, sondern auch Englisch.",
-          sk: "Hovorím nielen po nemecky, ale aj po anglicky.",
-          tip: "sondern: [zon-dern], s=z",
+          de: "wunderschön",
+          sk: "nádherný",
+          tip: "W=[v], sch=[ʃ] ako 'š', ö=[ø] ako 'oe'"
         },
         {
-          de: "Entweder komme ich heute, oder ich komme morgen.",
-          sk: "Buď prídem dnes, alebo prídem zajtra.",
-          tip: "entweder: [ent-ve-der]",
+          de: "Die Sonne war",
+          sk: "Slnko bolo",
+          tip: "Sonne: S=[z]. War: W=[v]"
         },
         {
-          de: "Sowohl Jana als auch Lukas sind hier.",
-          sk: "Ako Jana, tak aj Lukáš sú tu.",
-          tip: "sowohl: [zo-vohl], w=v",
+          de: "Ich war glücklich.",
+          sk: "Bol som šťastný.",
+          tip: "Ich: [ɪç] ako 'ich'. Glücklich: G=[g], ch=[ç]"
         },
         {
-          de: "Er mag nicht nur Kaffee, sondern auch Tee.",
-          sk: "Má rád nielen kávu, ale aj čaj.",
-          tip: "nicht nur: zdôrazniť 'nur'",
+          de: "Ich hatte eine Postkarte.",
+          sk: "Mal som pohľadnicu.",
+          tip: "Hatte: H=[h]. Postkarte: P=[p], K=[k]"
         },
         {
-          de: "Wir fahren entweder nach Wien oder nach Graz.",
-          sk: "Jedeme buď do Viedne alebo do Grazu.",
-          tip: "Graz: [grats]",
+          de: "Der Himmel war wunderschön.",
+          sk: "Obloha bola nádherná.",
+          tip: "Himmel: H=[h]. Wunderschön: W=[v], sch=[ʃ]"
         },
-      ],
+        {
+          de: "Ich hatte große Freude.",
+          sk: "Mal som veľkú radosť.",
+          tip: "Große: G=[g], s na konci je [s]. Freude: eu=[ɔɪ]"
+        },
+        {
+          de: "Mein Aufenthalt war sehr schön.",
+          sk: "Môj pobyt bol veľmi pekný.",
+          tip: "Aufenthalt: au=[aʊ], H=[h]. Sehr: S=[z]"
+        },
+        {
+          de: "Die Aussicht war wunderschön und ich hatte große Freude.",
+          sk: "Výhľad bol nádherný a mal som veľkú radosť.",
+          tip: "Aussicht: au=[aʊ], ch=[ç]. Freude: eu=[ɔɪ]"
+        }
+      ]
     },
+    {
+      type: "truefalse",
+      instruction: "Prečítaj si vety a rozhodni, či sú pravdivé (Wahr) alebo nepravdivé (Falsch) vzhľadom na pravidlá Préterita od 'sein' a 'haben'.",
+      statements: [
+        {
+          statement: "Veta 'Ich war gestern im Park' používa Préteritum slovesa 'sein'.",
+          isTrue: true,
+          explanation: "Áno, 'war' je správny tvar Préterita pre 'ich' od slovesa 'sein'."
+        },
+        {
+          statement: "Tvar 'hatte' je Préteritum slovesa 'haben' pre 'ich' a 'er/sie/es'.",
+          isTrue: true,
+          explanation: "Áno, 'hatte' je správny tvar Préterita pre tieto osoby. Pre ostatné osoby sa menia koncovky (napr. 'wir hatten')."
+        },
+        {
+          statement: "Veta 'Wir sind glücklich gewesen' je správny tvar Préterita.",
+          isTrue: false,
+          explanation: "Nie, 'sind gewesen' je Perfektum. Správny tvar Préterita by bol 'Wir waren glücklich'."
+        },
+        {
+          statement: "Pre 'du' je Préteritum slovesa 'sein' tvar 'warst'.",
+          isTrue: true,
+          explanation: "Áno, 'du warst' je správny tvar Préterita pre druhú osobu jednotného čísla od slovesa 'sein'."
+        },
+        {
+          statement: "Sloveso 'haben' v Préterite pre 'ihr' je 'habt'.",
+          isTrue: false,
+          explanation: "Nie, 'habt' je tvar v prézente. Správny tvar Préterita pre 'ihr' od slovesa 'haben' je 'hattet'."
+        }
+      ]
+    },
+    {
+      type: "dictation",
+      instruction: "Počúvaj vety a napíš ich v nemčine. Potom skontroluj preklad.",
+      sentences: [
+        {
+          de: "Ich war glücklich.",
+          sk: "Bol som šťastný."
+        },
+        {
+          de: "Du hattest eine Postkarte.",
+          sk: "Mal si pohľadnicu."
+        },
+        {
+          de: "Wir waren in der Stadt.",
+          sk: "Boli sme v meste."
+        },
+        {
+          de: "Sie hatten eine wunderschöne Aussicht.",
+          sk: "Mali nádherný výhľad."
+        },
+        {
+          de: "Ich war sehr müde nach dem Aufenthalt.",
+          sk: "Bol som veľmi unavený po pobyte."
+        }
+      ]
+    },
+    {
+      type: "categorysort",
+      instruction: "Roztrieď slová do kategórií podľa ich rodu (der, die, das).",
+      categories: [
+        {
+          name: "der (mužský rod)",
+          color: "blue",
+          words: [
+            "der Himmel",
+            "der Aufenthalt",
+            "der Ort"
+          ]
+        },
+        {
+          name: "die (ženský rod)",
+          color: "rose",
+          words: [
+            "die Postkarte",
+            "die Mutter",
+            "die Sonne",
+            "die Freude",
+            "die Erinnerung",
+            "die Aussicht"
+          ]
+        },
+        {
+          name: "das (stredný rod)",
+          color: "green",
+          words: [
+            "das Glück",
+            "das Gefühl",
+            "das Land"
+          ]
+        }
+      ],
+      explanation: "V nemčine majú podstatné mená rod (mužský, ženský, stredný), ktorý je dôležitý pre správne používanie členov. Tieto kategórie ti pomôžu zapamätať si rod slov."
+    },
+    {
+      type: "translation",
+      instruction: "Prelož nasledujúce vety zo slovenčiny do nemčiny. Použi Préteritum od 'sein' a 'haben'.",
+      sentences: [
+        {
+          sk: "Bol som veľmi šťastný.",
+          answer: "Ich war sehr glücklich.",
+          hint: "sein, glücklich",
+          explanation: "Používame Préteritum slovesa 'sein' pre 'ich', čo je 'war'."
+        },
+        {
+          sk: "Mali sme nádherný výhľad.",
+          answer: "Wir hatten eine wunderschöne Aussicht.",
+          hint: "haben, Aussicht",
+          explanation: "Préteritum slovesa 'haben' pre 'wir' je 'hatten'. Nezabudni na ženský rod 'die Aussicht'."
+        },
+        {
+          sk: "Mala si pohľadnicu?",
+          answer: "Hattest du eine Postkarte?",
+          hint: "haben, Postkarte",
+          explanation: "Pre otázku v Préterite so slovesom 'haben' pre 'du' použijeme 'Hattest du...?'. Sloveso ide na prvé miesto."
+        },
+        {
+          sk: "Boli ste v Berlíne na prehliadke mesta?",
+          answer: "Wart ihr in Berlin auf einer Stadtrundfahrt?",
+          hint: "sein, Stadtrundfahrt",
+          explanation: "Préteritum slovesa 'sein' pre 'ihr' je 'wart'. 'Auf einer Stadtrundfahrt' znamená 'na prehliadke mesta'."
+        }
+      ]
+    },
+    {
+      type: "conjugation",
+      instruction: "Doplň správne tvary Préterita pre slovesá 'sein' a 'haben'.",
+      verbs: [
+        {
+          infinitive: "sein",
+          translation: "byť",
+          forms: [
+            {
+              pronoun: "ich",
+              correct: "war"
+            },
+            {
+              pronoun: "du",
+              correct: "warst"
+            },
+            {
+              pronoun: "er/sie/es",
+              correct: "war"
+            },
+            {
+              pronoun: "wir",
+              correct: "waren"
+            },
+            {
+              pronoun: "ihr",
+              correct: "wart"
+            },
+            {
+              pronoun: "sie/Sie",
+              correct: "waren"
+            }
+          ],
+          note: "Sloveso 'sein' je v Préterite nepravidelné, ale jeho tvary sú veľmi dôležité a často používané. Zapamätaj si ich."
+        },
+        {
+          infinitive: "haben",
+          translation: "mať",
+          forms: [
+            {
+              pronoun: "ich",
+              correct: "hatte"
+            },
+            {
+              pronoun: "du",
+              correct: "hattest"
+            },
+            {
+              pronoun: "er/sie/es",
+              correct: "hatte"
+            },
+            {
+              pronoun: "wir",
+              correct: "hatten"
+            },
+            {
+              pronoun: "ihr",
+              correct: "hattet"
+            },
+            {
+              pronoun: "sie/Sie",
+              correct: "hatten"
+            }
+          ],
+          note: "Sloveso 'haben' je tiež nepravidelné, ale v Préterite je jeho kmeň 'hatt-' pre všetky osoby, menia sa len koncovky."
+        }
+      ]
+    }
   ],
-
-  reviewWords: [
-    "sich fühlen",
-    "sich vorstellen",
-    "sich beeilen",
-    "sich freuen",
-    "sich setzen",
-    "sich erinnern",
-    "sich waschen",
-    "sich anziehen",
-    "mich / dich / sich / uns / euch / sich",
-    "krank",
-    "fit",
-    "der Kopf",
-    "der Bauch",
-    "der Rücken",
-    "müde",
-  ],
-  lessonNotes:
-    "Tabuľka reflexívnych zámen: ich→mich, du→dich, er/sie/es→sich, wir→uns, ihr→euch, sie/Sie→sich. Zámeno stojí hneď za ohýbaným slovesom (alebo za modálnym). S odlučiteľným reflexívnym slovesom: 'Ich ziehe mich an.' (anziehen → ziche ... an, mich hneď za ich-ziehe). Slovenčina: 'sa/si' = nemčina: 'sich/mich/dich/uns/euch'.",
+  reviewWords: []
 };

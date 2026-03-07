@@ -4,7 +4,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Volume2, VolumeX, CheckCircle, XCircle, Play } from 'lucide-react';
 import { useTTS } from '../../hooks/useTTS';
-import { normalizeGerman } from '../../utils/text';
+import { isAnswerCloseEnough } from '../../utils/text';
 import { GenderText } from '../../utils/genderColors';
 
 export function ListenExercise({ exercise, onComplete }) {
@@ -17,7 +17,8 @@ export function ListenExercise({ exercise, onComplete }) {
   const [finished, setFinished] = useState(false);
   const [showAnswer, setShowAnswer] = useState(false);
   const inputRef = useRef();
-  const { speak, speaking } = useTTS();
+  const { speak, stop, speaking } = useTTS();
+  const lastCheckRef = useRef(0);
 
   const q = questions[qIndex];
 
@@ -26,31 +27,23 @@ export function ListenExercise({ exercise, onComplete }) {
     setPlayed(true);
   };
 
-  // Enter key: advance when checked
-  useEffect(() => {
-    const handleKey = (e) => {
-      if (e.key === 'Enter' && checked && !finished) {
-        e.preventDefault();
-        next();
-      }
-    };
-    document.addEventListener('keydown', handleKey);
-    return () => document.removeEventListener('keydown', handleKey);
-  }, [checked, finished, qIndex, input]);
+  // Removed fragile document listener. Using input-bound handleKeyDown instead.
 
   const check = () => {
-    if (!input.trim()) return;
+    if (!input.trim() || checked) return;
     setChecked(true);
+
+    // Evaluate correctness correctly here instead of in next() otherwise it's out of sync
+    const correct = isAnswerCloseEnough(input.trim(), q.de);
+    setAnswers([...answers, correct]);
+
     // Speak at normal speed to confirm
     speak(q.de, 'de-DE', 0.9);
   };
 
-  const isCorrect = normalizeGerman(input) === normalizeGerman(q.de);
+  const isCorrect = isAnswerCloseEnough(input.trim(), q.de);
 
   const next = () => {
-    const correct = normalizeGerman(input) === normalizeGerman(q.de);
-    const newAnswers = [...answers, correct];
-    setAnswers(newAnswers);
     if (qIndex < questions.length - 1) {
       setQIndex(qIndex + 1);
       setInput('');
@@ -60,8 +53,20 @@ export function ListenExercise({ exercise, onComplete }) {
       setTimeout(() => inputRef.current?.focus(), 50);
     } else {
       setFinished(true);
-      const score = Math.round((newAnswers.filter(Boolean).length / questions.length) * 100);
+      const score = Math.round((answers.filter(Boolean).length / questions.length) * 100);
       setTimeout(() => onComplete(score), 1200);
+    }
+  };
+
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      if (!checked) {
+        if (played) check();
+      } else {
+        stop();
+        next();
+      }
     }
   };
 
@@ -83,7 +88,7 @@ export function ListenExercise({ exercise, onComplete }) {
       <div className="flex gap-1">
         {questions.map((_, i) => (
           <div key={i} className={`flex-1 h-1.5 rounded-full ${i < qIndex ? (answers[i] ? 'bg-emerald-500' : 'bg-rose-500') :
-              i === qIndex ? 'bg-sky-500' : 'bg-gray-700'
+            i === qIndex ? 'bg-sky-500' : 'bg-gray-700'
             }`} />
         ))}
       </div>
@@ -117,9 +122,9 @@ export function ListenExercise({ exercise, onComplete }) {
             type="text"
             value={input}
             onChange={(e) => setInput(e.target.value)}
-            onKeyDown={(e) => e.key === 'Enter' && played && check()}
+            onKeyDown={handleKeyDown}
             placeholder="Napíš nemeckú vetu..."
-            disabled={!played}
+            disabled={!played || checked}
             className="w-full bg-gray-800 border border-gray-700 focus:border-sky-500 rounded-xl px-4 py-3 text-white outline-none text-base placeholder-gray-600 transition-colors disabled:opacity-40"
           />
           <div className="flex gap-2">
@@ -151,7 +156,7 @@ export function ListenExercise({ exercise, onComplete }) {
               <p><span className="text-gray-500">Preklad:</span> <span className="text-gray-400">{q.sk}</span></p>
             </div>
           </div>
-          <button onClick={next} className="w-full btn-primary justify-center">
+          <button autoFocus onClick={() => { stop(); next(); }} className="w-full btn-primary justify-center">
             {qIndex < questions.length - 1 ? 'Ďalšia →' : 'Dokončiť'}
           </button>
         </div>

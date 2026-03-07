@@ -1,310 +1,900 @@
-﻿export const lesson64 = {
+export const lesson64 = {
   id: 64,
   week: 13,
   day: 4,
-  title: "Genitiv (Einführung — nur Possessivsätze)",
-  topic: "Genitív — úvod (vlastníctvo a von + datív)",
+  title: "Wer ist er?",
+  topic: "Opisovanie fyzického vzhľadu ľudí.",
   cefr: "A1",
-  xpReward: 25,
-  narrativeContext: "Jana sa učí vyjadrovať vlastnícke vzťahy — 'Das ist das Büro meiner Chefin.' 'Das ist Lukas' Fahrrad.' Vidí genitív v adresách a formálnych nápisoch po celej Viedni. Táto lekcia je ľahký úvod — plný genitív je na A2.",
-  communicativeGoal: "Po tejto lekcii viem vyjadriť vlastníctvo pomocou genitívu a tvaru 'von + Dativ' ako alternatívu.",
-  skillFocus: ["grammar", "reading", "vocabulary"],
-  grammarNote: {
-    rule: "Genitív — vyjadrenie vlastníctva",
-    explanation: "Genitív (4. pád v nemčine) vyjadruje vlastníctvo. Na úrovni A1 sa sústreďujeme na: 1) Vlastné mená: Lukas' Fahrrad (meno na -s/-z/-x dostane apostrof). 2) von + Datív (bežné v hovorenej reči!): das Fahrrad von Lukas. 3) Genitívny článok: M/N = des + (-s/-es na substantíve), F/Pl = der. Frázy ako kusy: am Ende des Monats, in der Mitte der Woche.",
-    examples: [
-      { de: "Das ist das Büro meiner Chefin.", sk: "To je kancelária mojej šéfky." },
-      { de: "Das ist Lukas' Buch.", sk: "To je Lukášova kniha." },
-      { de: "Das ist das Buch von Lukas.", sk: "To je Lukášova kniha. (alternatíva)" },
-      { de: "Am Ende des Monats zahle ich die Miete.", sk: "Na konci mesiaca platím nájom." }
-    ],
-    slovakContrastNote: "Slovenčina má genitív (2. pád = koho/čoho): 'Počítač Lukáša' = 'Lukas' Computer'. Slovenčina ale častejšie používa privlastňovacie prídavné meno: 'Lukov počítač'. V nemčine ide primárne o genitívny článok alebo von+datív. Apostróf v nemčine používa len pri menách na -s/-z/-x!"
-  },
+  xpReward: 20,
+  narrativeContext: "Jana hat ein Date. Sie spricht mit ihrer Freundin Luisa über ihren neuen Bekannten.",
+  communicativeGoal: "Nach dieser Lektion kann ich das Aussehen einer Person beschreiben.",
+  skillFocus: [
+    "vocabulary",
+    "speaking"
+  ],
+  lessonNotes: "V tejto lekcii sa naučíš slovnú zásobu na opisovanie ľudí. Zameriame sa na vlasy, oči a celkovú postavu. Potrénujeme si, ako tieto slová použiť v jednoduchých vetách.",
+  grammarNotes: [
+    {
+      rule: "Adjektivdeklination nach Possessivartikel (Nominativ und Akkusativ)",
+      explanation: "<p>Keď opisujeme vzhľad osoby pomocou prídavných mien, musíme ich správne skloňovať. V nemčine sa prídavné mená skloňujú podľa pádu, rodu a čísla podstatného mena, ktoré opisujú. V A1 úrovni sa zameriavame na skloňovanie po zámenách ako 'mein', 'dein', 'sein', 'ihr' a pod. V nominatíve a akuzatíve sa koncovka prídavného mena mení.</p><p><strong>Pravidlá pre nominatív:</strong></p><ul><li>Po 'mein', 'dein', 'sein', 'ihr', 'unser', 'euer', 'ihr' (a 'kein') v jednotnom čísle mužského rodu sa pridáva koncovka <strong>-er</strong> (napr. mein jung<strong>er</strong> Bruder).</li><li>V jednotnom čísle ženského rodu sa pridáva koncovka <strong>-e</strong> (napr. meine jung<strong>e</strong> Schwester).</li><li>V jednotnom čísle stredného rodu sa pridáva koncovka <strong>-es</strong> (napr. mein alt<strong>es</strong> Haus).</li><li>V množnom čísle sa pridáva koncovka <strong>-en</strong> (napr. meine alt<strong>en</strong> Freunde).</li></ul><p><strong>Pravidlá pre akuzatív:</strong></p><ul><li>V akuzatíve sa koncovky mierne líšia. Po mužskom rode v akuzatíve sa pridáva koncovka <strong>-en</strong> (napr. Ich sehe meinen jung<strong>en</strong> Bruder).</li><li>Ženský a stredný rod, ako aj množné číslo, majú v akuzatíve rovnaké koncovky ako v nominatíve (napr. Ich sehe meine jung<strong>e</strong> Schwester, Ich sehe mein alt<strong>es</strong> Haus, Ich sehe meine alt<strong>en</strong> Freunde).</li></ul>",
+      examples: [
+        {
+          de: "Mein Bruder ist groß.",
+          sk: "Môj brat je vysoký."
+        },
+        {
+          de: "Meine Schwester ist klein.",
+          sk: "Moja sestra je malá."
+        },
+        {
+          de: "Mein Auge ist blau.",
+          sk: "Moje oko je modré."
+        },
+        {
+          de: "Meine Haare sind lang.",
+          sk: "Moje vlasy sú dlhé."
+        },
+        {
+          de: "Ich sehe meinen kleinen Bruder.",
+          sk: "Vidím môjho malého brata."
+        },
+        {
+          de: "Ich sehe meine kleine Schwester.",
+          sk: "Vidím moju malú sestru."
+        },
+        {
+          de: "Ich sehe mein kleines Kind.",
+          sk: "Vidím moje malé dieťa."
+        },
+        {
+          de: "Ich sehe meine kleinen Kinder.",
+          sk: "Vidím moje malé deti."
+        }
+      ],
+      slovakContrastNote: "V slovenčine sa prídavné mená skloňujú podľa pádu, rodu a čísla, ale nemáme osobitné pravidlá pre skloňovanie po privlastňovacích zámenách ako v nemčine. Slovenský systém je komplexnejší v tom, že závisí od pádu a rodu podstatného mena, ale nemecký systém pridáva ďalšiu vrstvu pravidiel po určitých typoch zámenných slovies (ako sú privlastňovacie zámená). V slovenčine máme len jednu formu pre 'môj' v nominatíve, zatiaľ čo v nemčine sa 'mein' mení na 'meine', 'meines', 'meinen' v závislosti od podstatného mena a pádu."
+    },
+    {
+      rule: "Farby ako prídavné mená",
+      explanation: "<p>Pri opisovaní fyzického vzhľadu často používame farby. V nemčine sa názvy farieb správajú ako prídavné mená a musia sa skloňovať podľa rodu, čísla a pádu podstatného mena, ktoré opisujú. V A1 úrovni sa najčastejšie stretávame s nominatívom a akuzatívom.</p><p>Napríklad, ak chceme povedať 'modré oči', v nemčine povieme 'blaue Augen'. 'Augen' je množné číslo, preto prídavné meno 'blau' dostane koncovku <strong>-e</strong>. Ak povieme 'môj modrý sveter', 'mein Pullover' (mužský rod, nominatív), prídavné meno 'blau' dostane koncovku <strong>-er</strong>: 'mein blau<strong>er</strong> Pullover'. Ak by sme chceli povedať 'vidím môj modrý sveter', v akuzatíve by to bolo 'Ich sehe meinen blau<strong>en</strong> Pullover'.</p>",
+      examples: [
+        {
+          de: "Sie hat blaue Augen.",
+          sk: "Ona má modré oči."
+        },
+        {
+          de: "Er hat braune Haare.",
+          sk: "On má hnedé vlasy."
+        },
+        {
+          de: "Mein T-Shirt ist rot.",
+          sk: "Moje tričko je červené."
+        },
+        {
+          de: "Deine Jacke ist grün.",
+          sk: "Tvoja bunda je zelená."
+        },
+        {
+          de: "Ich mag gelbe Blumen.",
+          sk: "Mám rád žlté kvety."
+        },
+        {
+          de: "Sein Auto ist schwarz.",
+          sk: "Jeho auto je čierne."
+        }
+      ],
+      slovakContrastNote: "Slovenské názvy farieb sa skloňujú rovnako ako iné prídavné mená a ich skloňovanie závisí od pádu, rodu a čísla podstatného mena. V nemčine je dôležité si uvedomiť, že názvy farieb sa skloňujú podľa rovnakých pravidiel ako ostatné prídavné mená, najmä po privlastňovacích zámenách, kde sa pridávajú špecifické koncovky (-er, -e, -es, -en)."
+    }
+  ],
   vocab: [
-    { de: "der Genitiv", sk: "genitív (2. pád)", example: "Der Genitiv zeigt Besitz.", exampleSk: "Genitív vyjadruje vlastníctvo.", gender: "M", srsId: "L64_V01", recycledFrom: [] },
-    { de: "von + Dativ", sk: "od, z + datív (náhrada genitívu)", example: "Das ist das Buch von Jana.", exampleSk: "To je Janina kniha.", gender: null, srsId: "L64_V02", recycledFrom: [] },
-    { de: "Das ist das Büro meiner Chefin.", sk: "To je kancelária mojej šéfky.", example: "Das ist das Büro meiner Chefin.", exampleSk: "To je kancelária mojej šéfky.", gender: null, srsId: "L64_V03", recycledFrom: [] },
-    { de: "Das ist Lukas' Buch.", sk: "To je Lukášova kniha.", example: "Das ist Lukas' Fahrrad.", exampleSk: "To je Lukášov bicykel.", gender: null, srsId: "L64_V04", recycledFrom: [] },
-    { de: "des Mannes (M, Gen.)", sk: "muža (genitív)", example: "das Auto des Mannes", exampleSk: "auto muža", gender: null, srsId: "L64_V05", recycledFrom: [] },
-    { de: "der Frau (F, Gen.)", sk: "ženy (genitív)", example: "die Tasche der Frau", exampleSk: "taška ženy", gender: null, srsId: "L64_V06", recycledFrom: [] },
-    { de: "am Ende des Monats", sk: "na konci mesiaca", example: "Am Ende des Monats ist Zahltag.", exampleSk: "Na konci mesiaca je výplatný deň.", gender: null, srsId: "L64_V07", recycledFrom: [] },
-    { de: "die Mitte der Woche", sk: "stred týždňa", example: "In der Mitte der Woche haben wir ein Meeting.", exampleSk: "V strede týždňa máme poradu.", gender: null, srsId: "L64_V08", recycledFrom: [] },
-    { de: "am Anfang des Jahres", sk: "na začiatku roka", example: "Am Anfang des Jahres plane ich meine Urlaubsreisen.", exampleSk: "Na začiatku roka plánujem dovolenkové cesty.", gender: null, srsId: "L64_V09", recycledFrom: [] },
-    { de: "der Anfang", sk: "začiatok", example: "Am Anfang war es schwer.", exampleSk: "Na začiatku to bolo ťažké.", gender: "M", srsId: "L64_V10", recycledFrom: [] },
-    { de: "die Mitte", sk: "stred", example: "Die Wohnung liegt in der Mitte des Bezirks.", exampleSk: "Byt leží v strede obvodu.", gender: "F", srsId: "L64_V11", recycledFrom: [] },
-    { de: "das Ende", sk: "koniec", example: "Am Ende des Films war ich müde.", exampleSk: "Na konci filmu som bol/a unavený/á.", gender: "N", srsId: "L64_V12", recycledFrom: [21, 60] },
-    { de: "wegen + Genitiv", sk: "kvôli (genitív)", example: "Wegen des Regens bleibe ich zu Hause.", exampleSk: "Kvôli dažďu zostanem doma.", gender: null, srsId: "L64_V13", recycledFrom: [] },
-    { de: "gehören (Dativ review)", sk: "patriť (komu)", example: "Das gehört mir.", exampleSk: "To patrí mne.", gender: null, srsId: "L64_V14", recycledFrom: [63] },
-    { de: "Das gehört meiner Mutter.", sk: "To patrí mojej mame.", example: "Das Buch gehört meiner Mutter.", exampleSk: "Tá kniha patrí mojej mame.", gender: null, srsId: "L64_V15", recycledFrom: [63] }
+    {
+      de: "das Haar",
+      sk: "vlas",
+      gender: "N",
+      srsId: "L64_V01",
+      example: "Er hat kurze, braune Haare.",
+      exampleSk: "Má krátke, hnedé vlasy.",
+      recycledFrom: []
+    },
+    {
+      de: "das Auge",
+      sk: "oko",
+      gender: "N",
+      srsId: "L64_V02",
+      example: "Sie hat blaue Augen.",
+      exampleSk: "Má modré oči.",
+      recycledFrom: []
+    },
+    {
+      de: "der Bart",
+      sk: "brada",
+      gender: "M",
+      srsId: "L64_V03",
+      example: "Er hat einen Bart.",
+      exampleSk: "Má bradu.",
+      recycledFrom: []
+    },
+    {
+      de: "der Mann",
+      sk: "muž",
+      gender: "M",
+      srsId: "L64_V04",
+      example: "Der Mann ist groß.",
+      exampleSk: "Muž je vysoký.",
+      recycledFrom: []
+    },
+    {
+      de: "die Frau",
+      sk: "žena",
+      gender: "F",
+      srsId: "L64_V05",
+      example: "Die Frau ist klein.",
+      exampleSk: "Žena je nízka.",
+      recycledFrom: []
+    },
+    {
+      de: "der Freund",
+      sk: "priateľ",
+      gender: "M",
+      srsId: "L64_V06",
+      example: "Mein Freund ist nett.",
+      exampleSk: "Môj priateľ je milý.",
+      recycledFrom: []
+    },
+    {
+      de: "die Freundin",
+      sk: "priateľka",
+      gender: "F",
+      srsId: "L64_V07",
+      example: "Meine Freundin ist lustig.",
+      exampleSk: "Moja priateľka je zábavná.",
+      recycledFrom: []
+    },
+    {
+      de: "das Gesicht",
+      sk: "tvár",
+      gender: "N",
+      srsId: "L64_V08",
+      example: "Er hat ein freundliches Gesicht.",
+      exampleSk: "Má priateľskú tvár.",
+      recycledFrom: []
+    },
+    {
+      de: "die Nase",
+      sk: "nos",
+      gender: "F",
+      srsId: "L64_V09",
+      example: "Sie hat eine kleine Nase.",
+      exampleSk: "Má malý nos.",
+      recycledFrom: []
+    },
+    {
+      de: "der Mund",
+      sk: "ústa",
+      gender: "M",
+      srsId: "L64_V10",
+      example: "Sein Mund ist klein.",
+      exampleSk: "Jeho ústa sú malé.",
+      recycledFrom: []
+    },
+    {
+      de: "das Kleid",
+      sk: "šaty",
+      gender: "N",
+      srsId: "L64_V11",
+      example: "Sie trägt ein schönes Kleid.",
+      exampleSk: "Má na sebe pekné šaty.",
+      recycledFrom: []
+    },
+    {
+      de: "die Hose",
+      sk: "nohavice",
+      gender: "F",
+      srsId: "L64_V12",
+      example: "Er trägt eine blaue Hose.",
+      exampleSk: "Má na sebe modré nohavice.",
+      recycledFrom: []
+    },
+    {
+      de: "der Schuh",
+      sk: "topánka",
+      gender: "M",
+      srsId: "L64_V13",
+      example: "Seine Schuhe sind neu.",
+      exampleSk: "Jeho topánky sú nové.",
+      recycledFrom: []
+    },
+    {
+      de: "aussehen",
+      sk: " vyzerať",
+      gender: null,
+      srsId: "L64_V14",
+      example: "Er sieht gut aus.",
+      exampleSk: "Vyzerá dobre.",
+      recycledFrom: []
+    },
+    {
+      de: "tragen",
+      sk: "nosiť",
+      gender: null,
+      srsId: "L64_V15",
+      example: "Was trägst du heute?",
+      exampleSk: "Čo dnes nosíš?",
+      recycledFrom: []
+    },
+    {
+      de: "haben",
+      sk: "mať",
+      gender: null,
+      srsId: "L64_V16",
+      example: "Sie hat lange Haare.",
+      exampleSk: "Má dlhé vlasy.",
+      recycledFrom: []
+    },
+    {
+      de: "sein",
+      sk: "byť",
+      gender: null,
+      srsId: "L64_V17",
+      example: "Er ist groß und schlank.",
+      exampleSk: "Je vysoký a štíhly.",
+      recycledFrom: []
+    },
+    {
+      de: "groß",
+      sk: "vysoký",
+      gender: null,
+      srsId: "L64_V18",
+      example: "Der Mann ist groß.",
+      exampleSk: "Muž je vysoký.",
+      recycledFrom: []
+    },
+    {
+      de: "klein",
+      sk: "malý, nízky",
+      gender: null,
+      srsId: "L64_V19",
+      example: "Die Frau ist klein.",
+      exampleSk: "Žena je nízka.",
+      recycledFrom: []
+    },
+    {
+      de: "schlank",
+      sk: "štíhly",
+      gender: null,
+      srsId: "L64_V20",
+      example: "Er ist sehr schlank.",
+      exampleSk: "Je veľmi štíhly.",
+      recycledFrom: []
+    },
+    {
+      de: "braun",
+      sk: "hnedý",
+      gender: null,
+      srsId: "L64_V21",
+      example: "Sie hat braune Haare.",
+      exampleSk: "Má hnedé vlasy.",
+      recycledFrom: []
+    },
+    {
+      de: "blau",
+      sk: "modrý",
+      gender: null,
+      srsId: "L64_V22",
+      example: "Er hat blaue Augen.",
+      exampleSk: "Má modré oči.",
+      recycledFrom: []
+    },
+    {
+      de: "kurz",
+      sk: "krátky",
+      gender: null,
+      srsId: "L64_V23",
+      example: "Er hat kurze Haare.",
+      exampleSk: "Má krátke vlasy.",
+      recycledFrom: []
+    },
+    {
+      de: "lang",
+      sk: "dlhý",
+      gender: null,
+      srsId: "L64_V24",
+      example: "Sie hat lange Haare.",
+      exampleSk: "Má dlhé vlasy.",
+      recycledFrom: []
+    },
+    {
+      de: "Wie sieht er aus?",
+      sk: "Ako vyzerá?",
+      gender: null,
+      srsId: "L64_V25",
+      example: "Luisa fragt: \"Wie sieht er aus?\"",
+      exampleSk: "Luisa sa pýta: \"Ako vyzerá?\"",
+      recycledFrom: []
+    }
   ],
   exercises: [
     {
       type: "flashcard",
-      instruction: "Prezri si genitívne tvary a frázy vlastníctva.",
-      items: [
-        "der Genitiv = genitív (vyjadruje vlastníctvo)",
-        "von + Dativ = praktická náhrada genitívu v hovore",
-        "Lukas' Buch = Lukášova kniha (apostrof pri menách na -s)",
-        "das Büro meiner Chefin = kancelária mojej šéfky (F, Gen.)",
-        "des Mannes = muža (M/N, Gen. → des + -es/-s)",
-        "der Frau = ženy (F, Gen. → der bez zmeny)",
-        "am Ende des Monats = na konci mesiaca",
-        "die Mitte der Woche = stred týždňa",
-        "am Anfang des Jahres = na začiatku roka",
-        "der Anfang = začiatok (M)",
-        "die Mitte = stred (F)",
-        "das Ende = koniec (N)",
-        "wegen + Genitiv = kvôli",
-        "Das gehört meiner Mutter. = To patrí mojej mame.",
-        "das Buch von Jana = Janina kniha (von + Dativ)"
+      instruction: "Prezri si slovíčka tejto lekcie. Klikni na kartičku pre preklad."
+    },
+    {
+      type: "match",
+      instruction: "Spojte nemecké slová so slovenskými výrazmi.",
+      pairs: [
+        [
+          "das Haar",
+          "vlas"
+        ],
+        [
+          "das Auge",
+          "oko"
+        ],
+        [
+          "der Bart",
+          "brada"
+        ],
+        [
+          "das Gesicht",
+          "tvár"
+        ],
+        [
+          "die Nase",
+          "nos"
+        ],
+        [
+          "der Mund",
+          "ústa"
+        ],
+        [
+          "das Kleid",
+          "šaty"
+        ],
+        [
+          "die Hose",
+          "nohavice"
+        ],
+        [
+          "der Schuh",
+          "topánka"
+        ],
+        [
+          "aussehen",
+          " vyzerať"
+        ]
       ]
     },
     {
-      type: "mcq",
-      instruction: "Vyber správny spôsob vyjadrenia vlastníctva.",
-      questions: [
+      type: "wordorder",
+      instruction: "Usporiadajte slová do správneho nemeckého poradia.",
+      sentences: [
         {
-          question: "Ako správne vyjadríme 'auto môjho šéfa'? (Chef = M)",
-          options: [
-            "das Auto des Chefs",
-            "das Auto der Chef",
-            "das Auto den Chefs",
-            "das Auto von den Chef"
+          words: [
+            "Sie",
+            "hat",
+            "lange",
+            "braune",
+            "Haare"
           ],
-          answer: "das Auto des Chefs",
-          explanation: "Mužský rod v genitíve: des + podstatné meno + -s. das Auto des Chefs. Alternatíva: das Auto vom Chef (von + Dativ)."
+          correct: "Sie hat lange braune Haare",
+          hint: "Ona má dlhé hnedé vlasy.",
+          explanation: "V oznamovacej vete je sloveso na druhej pozícii. Prídavné mená pred podstatným menom sa skloňujú."
         },
         {
-          question: "Jana hovorí o kabelke svojej mamy. Vyberte správnu vetu:",
-          options: [
-            "Das ist die Tasche der Mutter.",
-            "Das ist die Tasche von der Mutter.",
-            "Obe sú správne.",
-            "Das ist die Tasche dem Mutter."
+          words: [
+            "Er",
+            "trägt",
+            "eine",
+            "blaue",
+            "Hose"
           ],
-          answer: "Obe sú správne.",
-          explanation: "Genitív 'der Mutter' aj 'von der Mutter' (von + Dativ) sú obe správne! Von + Dativ je bežnejšie v hovorenej reči."
+          correct: "Er trägt eine blaue Hose",
+          hint: "On nosí modré nohavice.",
+          explanation: "V oznamovacej vete je sloveso na druhej pozícii. Prídavné mená pred podstatným menom sa skloňujú."
         },
         {
-          question: "Kedy používame apostrof pri nemeckom vlastnom mene?",
-          options: [
-            "Vždy, ako v angličtine (Jana's Buch)",
-            "Len pri menách končiacich na -s, -z, -x (Lukas' Buch)",
-            "Nikdy v nemčine",
-            "Len pri ženských menách"
+          words: [
+            "Wie",
+            "sieht",
+            "dein",
+            "Freund",
+            "aus"
           ],
-          answer: "Len pri menách končiacich na -s, -z, -x (Lukas' Buch)",
-          explanation: "V nemčine apostrof NEPATRÍ za bežné vlastné mená! Len pri menách na -s/-z/-x, kde by sa pridalo ďalšie -s vyslovene ťažko: Lukas' Buch (nie: Lukas's Buch). Jana Buch = Janas Buch (bez apostrofu!)."
+          correct: "Wie sieht dein Freund aus",
+          hint: "Ako vyzerá tvoj priateľ?",
+          explanation: "Vo W-otázke je opytovacie slovo na prvej pozícii, sloveso na druhej a sloveso 'aussehen' sa rozdelí."
         },
         {
-          question: "'Am Ende ___ Jahres fahre ich nach Hause.' Doplň genitívny člen:",
-          options: ["den", "des", "der", "dem"],
-          answer: "des",
-          explanation: "Jahr je stredný rod (das Jahr). Genitív M/N = des. Am Ende des Jahres. Tiež: des Monats, des Tages."
+          words: [
+            "Meine",
+            "Freundin",
+            "hat",
+            "grüne",
+            "Augen"
+          ],
+          correct: "Meine Freundin hat grüne Augen",
+          hint: "Moja priateľka má zelené oči.",
+          explanation: "V oznamovacej vete je sloveso na druhej pozícii. Prídavné mená pred podstatným menom sa skloňujú."
         },
         {
-          question: "'wegen' sa používa s ktorým pádom?",
-          options: ["Nominatív", "Akuzatív", "Datív", "Genitív"],
-          answer: "Genitív",
-          explanation: "'wegen' vyžaduje genitív: wegen des Regens (kvôli dažďu), wegen der Arbeit (kvôli práci). V hovorenej nemčine sa ale často používa aj s datívom."
+          words: [
+            "Der",
+            "Mann",
+            "ist",
+            "groß",
+            "und",
+            "schlank"
+          ],
+          correct: "Der Mann ist groß und schlank",
+          hint: "Ten muž je vysoký a štíhly.",
+          explanation: "V oznamovacej vete je sloveso na druhej pozícii. Prídavné mená po slovese 'sein' sa nesklonujú."
         }
       ]
     },
     {
       type: "fill",
-      instruction: "Doplň správny genitívny tvar alebo von+Dativ alternatívu.",
+      instruction: "Doplňte správne slová alebo tvary slovies.",
       questions: [
         {
-          sentence: "Das ist das Fahrrad ___ Kollegen. (des/der)",
-          answer: "des",
-          hint: "Kollege je mužský rod. Genitív M = des.",
-          explanation: "Mužský rod v genitíve = des. Das ist das Fahrrad des Kollegen."
+          sentence: "Sie hat ___ Haare.",
+          answer: "lange",
+          hint: "dlhé",
+          explanation: "Prídavné meno 'lang' sa skloňuje podľa rodu a pádu podstatného mena 'Haare' (Akkusativ Plural). Tu je správny tvar 'lange'."
         },
         {
-          sentence: "Am Anfang ___ Woche haben wir ein Meeting. (des/der)",
-          answer: "der",
-          hint: "Woche je ženský rod. Genitív F = der.",
-          explanation: "Woche je ženský rod (die Woche). Genitív F = der. Am Anfang der Woche."
+          sentence: "Er hat ___ Augen.",
+          answer: "blaue",
+          hint: "modré",
+          explanation: "Prídavné meno 'blau' sa skloňuje podľa rodu a pádu podstatného mena 'Augen' (Akkusativ Plural). Tu je správny tvar 'blaue'."
         },
         {
-          sentence: "Das ist ___ Büro. (von meiner Chefin / meiner Chefin)",
-          answer: "das Büro meiner Chefin",
-          hint: "Chefin = ženský rod. Genitív F = meiner.",
-          explanation: "Pri privlastňovacích zámenách: meine → meiner v genitíve F. Das ist das Büro meiner Chefin."
+          sentence: "Wie ___ du ___?",
+          answer: "sieht, aus",
+          hint: "vyzeráš?",
+          explanation: "Sloveso 'aussehen' je nepravidelné a v tretej osobe jednotného čísla znie 'sieht aus'. V otázke je sloveso na druhej pozícii."
         },
         {
-          sentence: "Wegen ___ Regens bleibe ich zu Hause. (des/der/den)",
-          answer: "des",
-          hint: "Regen je mužský rod. Genitív M = des.",
-          explanation: "der Regen → des Regens (genitív M). wegen des Regens = kvôli dažďu."
+          sentence: "Mein Vater ___ einen Bart.",
+          answer: "hat",
+          hint: "má",
+          explanation: "Toto je sloveso 'haben' v tretej osobe jednotného čísla pre 'mein Vater'."
         },
         {
-          sentence: "Das ist das Auto ___ (von + Lukas).",
-          answer: "von Lukas",
-          hint: "von + Dativ (bežná hovorená alternatíva)",
-          explanation: "V hovorenej nemčine: von + Dativ = praktická náhrada genitívu. das Auto von Lukas."
+          sentence: "Das ist ___ Kleid.",
+          answer: "ein",
+          hint: "jedny (šaty)",
+          explanation: "Používame neurčitý člen 'ein', pretože 'Kleid' je stredného rodu v nominatíve."
+        },
+        {
+          sentence: "Ich ___ gern Hosen.",
+          answer: "trage",
+          hint: "nosím",
+          explanation: "Toto je sloveso 'tragen' v prvej osobe jednotného čísla (ich)."
+        },
+        {
+          sentence: "Wir ___ müde.",
+          answer: "sind",
+          hint: "sme",
+          explanation: "Toto je sloveso 'sein' v prvej osobe množného čísla (wir) - testuje sa gramatika z lekcie L01."
+        },
+        {
+          sentence: "Was ___ du?",
+          answer: "machst",
+          hint: "robíš?",
+          explanation: "Toto je sloveso 'machen' v druhej osobe jednotného čísla (du) - testuje sa gramatika z lekcie L06."
         }
       ]
     },
     {
       type: "listen",
-      instruction: "Počúvaj vety s genitívom a opakuj ich nahlas.",
+      instruction: "Počúvajte a vyberte správny nemecký výraz.",
       questions: [
-        { de: "Das ist das Büro meiner Chefin.", sk: "To je kancelária mojej šéfky." },
-        { de: "Am Ende des Monats zahle ich die Miete.", sk: "Na konci mesiaca platím nájom." },
-        { de: "Das ist Lukas' Fahrrad.", sk: "To je Lukášov bicykel." },
-        { de: "In der Mitte der Woche haben wir ein Meeting.", sk: "V strede týždňa máme poradu." },
-        { de: "Das ist das Auto von meinem Chef.", sk: "To je auto môjho šéfa." },
-        { de: "Am Anfang des Jahres plane ich alles.", sk: "Na začiatku roka všetko plánujem." },
-        { de: "Die Tasche der Frau ist rot.", sk: "Kabelka tej ženy je červená." },
-        { de: "Wegen des Wetters bleiben wir zu Hause.", sk: "Kvôli počasiu zostaneme doma." }
+        {
+          de: "das Haar",
+          sk: "vlas"
+        },
+        {
+          de: "das Auge",
+          sk: "oko"
+        },
+        {
+          de: "der Bart",
+          sk: "brada"
+        },
+        {
+          de: "das Gesicht",
+          sk: "tvár"
+        },
+        {
+          de: "die Nase",
+          sk: "nos"
+        },
+        {
+          de: "der Mund",
+          sk: "ústa"
+        },
+        {
+          de: "das Kleid",
+          sk: "šaty"
+        },
+        {
+          de: "die Hose",
+          sk: "nohavice"
+        },
+        {
+          de: "der Schuh",
+          sk: "topánka"
+        },
+        {
+          de: "braun",
+          sk: "hnedý"
+        }
       ]
     },
     {
-      type: "match",
-      instruction: "Spoj výraz s jeho genitívnym alebo von+Dativ ekvivalentom.",
-      pairs: [
-        ["das Buch von Jana", "Janas Buch (genitív mena)"],
-        ["das Auto des Chefs", "das Auto vom Chef (von+Dativ)"],
-        ["die Tasche der Frau", "die Tasche von der Frau"],
-        ["am Ende des Monats", "na konci mesiaca"],
-        ["am Anfang des Jahres", "na začiatku roka"],
-        ["wegen des Regens", "kvôli dažďu"],
-        ["das Büro meiner Chefin", "kancelária mojej šéfky"],
-        ["Lukas' Fahrrad", "das Fahrrad von Lukas"]
-      ]
-    },
-    {
-      type: "dialogue",
-      instruction: "Jana a Lukas identifikujú veci v kancelárii. Dávaj pozor na vlastnícke tvary.",
-      lines: [
-        { speaker: "A", de: "Sucht jemand eine schwarze Tasche?", sk: "Hľadá niekto čiernu kabelku?" },
-        { speaker: "B", de: "Ja! Das ist die Tasche von Ana.", sk: "Áno! To je Anina kabelka." },
-        { speaker: "A", de: "Und dieses Handy hier — wem gehört das?", sk: "A tento telefón tu — čí je?" },
-        { speaker: "B", de: "Das Handy ist vom Chef! Er sucht es schon seit einer Stunde.", sk: "Telefón je od šéfa! Hľadá ho už hodinu." },
-        { speaker: "A", de: "Ist das hier Lukas' Fahrrad vor dem Büro?", sk: "Je to tu Lukášov bicykel pred kanceláriou?" },
-        { speaker: "B", de: "Ja, das ist das Fahrrad von Lukas.", sk: "Áno, to je Lukášov bicykel." },
-        { speaker: "A", de: "Am Ende des Tages räumen wir das Büro auf, oder?", sk: "Na konci dňa upraceme kanceláriu, nie?" },
-        { speaker: "B", de: "Ja! Am Anfang der Woche ist das Büro immer sauber.", sk: "Áno! Na začiatku týždňa je kancelária vždy čistá." },
-        { speaker: "A", de: "Das ist das Büro meiner Chefin — da darf ich nicht rein.", sk: "To je kancelária mojej šéfky — tam nesmiem vojsť." },
-        { speaker: "B", de: "Wegen des Meetings ist sie heute sehr beschäftigt.", sk: "Kvôli porade je dnes veľmi zaneprázdnená." }
-      ],
-      comprehensionQuestions: [
+      type: "mcq",
+      instruction: "Vyberte správnu možnosť.",
+      questions: [
         {
-          question: "Čia je čierna kabelka?",
-          options: ["Janina", "Anina", "Šéfova", "Lukášova"],
-          answer: "Anina"
+          question: "Wie ___ er aus?",
+          options: [
+            "sieht",
+            "sehen",
+            "siehst",
+            "schaut"
+          ],
+          answer: 0,
+          explanation: "Sloveso 'aussehen' sa v tretej osobe jednotného čísla (er) časuje ako 'sieht aus'."
         },
         {
-          question: "Komu patrí telefón?",
-          options: ["Lukášovi", "Jany", "Šéfovi", "Anine"],
-          answer: "Šéfovi"
+          question: "Meine Freundin hat ___ Haare.",
+          options: [
+            "kurz",
+            "kurze",
+            "kurzem",
+            "kurzen"
+          ],
+          answer: 1,
+          explanation: "Prídavné meno 'kurz' sa skloňuje podľa rodu a pádu podstatného mena 'Haare' (Akkusativ Plural). Správny tvar je 'kurze'."
         },
         {
-          question: "Prečo je šéfka dnes zaneprázdnená?",
-          options: ["Kvôli počasiu", "Kvôli Jany", "Kvôli porade", "Kvôli dovolenke"],
-          answer: "Kvôli porade"
+          question: "Er trägt ___ Hose.",
+          options: [
+            "eine blaue",
+            "ein blaues",
+            "einen blauen",
+            "keine blaue"
+          ],
+          answer: 0,
+          explanation: "'Hose' je ženského rodu. V akuzatíve s neurčitým členom je to 'eine blaue Hose'."
+        },
+        {
+          question: "Welche Farbe haben seine Augen?",
+          options: [
+            "Sie sind braun.",
+            "Er ist braun.",
+            "Er hat braun.",
+            "Seine Augen ist braun."
+          ],
+          answer: 0,
+          explanation: "Správna odpoveď opisuje farbu očí pomocou 'Sie sind...' alebo 'Er hat...'."
+        },
+        {
+          question: "Welches Wort passt nicht?",
+          options: [
+            "das Haar",
+            "das Auge",
+            "der Bart",
+            "der Tisch"
+          ],
+          answer: 3,
+          explanation: "'Der Tisch' (stôl) nepatrí do kategórie častí ľudského tela alebo vzhľadu."
+        },
+        {
+          question: "Was bedeutet 'schlank'?",
+          options: [
+            "malý",
+            "vysoký",
+            "štíhly",
+            "hrubý"
+          ],
+          answer: 2,
+          explanation: "'Schlank' znamená štíhly."
+        },
+        {
+          question: "Wie viele ___ hast du?",
+          options: [
+            "Augen",
+            "Auge",
+            "Augen",
+            "Auges"
+          ],
+          answer: 0,
+          explanation: "V otázke 'Koľko...' sa používa podstatné meno v pluráli. 'Augen' je plurál od 'Auge'. Toto testuje znalosť plurálov z predchádzajúcich lekcií."
+        },
+        {
+          question: "Sie ___ gern Kleider.",
+          options: [
+            "trägt",
+            "tragen",
+            "trage",
+            "trägst"
+          ],
+          answer: 0,
+          explanation: "Sloveso 'tragen' v tretej osobe jednotného čísla (sie) je 'trägt'. Toto testuje slovesnú konjugáciu z lekcie L06."
         }
       ]
     },
     {
       type: "minitext",
-      instruction: "Prečítaj krátky úryvok z múzejného sprievodcu a odpovedaj na otázky.",
-      text: "Das Kunsthistorische Museum in Wien ist eines der bedeutendsten Museen der Welt. Am Anfang des 20. Jahrhunderts war es ein Treffpunkt der Kunstwelt. Die Sammlung des Museums umfasst Werke von Weltrang. Am Ende des Museumsbesuchs können Sie im Café des Museums einen Kaffee trinken. In der Mitte des Museums befindet sich ein wunderbarer Innenhof. Der Eingang des Museums liegt am Maria-Theresien-Platz.",
-      textSk: "Kunsthistorisches Museum vo Viedni je jedno z najvýznamnejších múzeí sveta. Na začiatku 20. storočia bolo stretávacím miestom sveta umenia. Zbierka múzea obsahuje diela svetového formátu. Na konci návštevy múzea si môžete vypiť kávu v kaviarni múzea. Uprostred múzea sa nachádza nádherný vnútorný dvor. Vchod múzea leží na námestí Márie Terézie.",
+      instruction: "Lies den Dialog und beantworte die Fragen.",
+      text: "Jana: Luisa, ich treffe mich heute Abend mit einem neuen Mann. Ich bin so aufgeregt!\nLuisa: Oh, das ist schön! Wie sieht er denn aus?\nJana: Er ist groß und schlank. Er hat kurze, braune Haare und blaue Augen. Er trägt keine Brille, aber er hat einen kleinen Bart.\nLuisa: Klingt gut! Und wie heißt er?\nJana: Er heißt Tom. Er sieht wirklich gut aus! Ich hoffe, er mag mich auch.\nLuisa: Natürlich mag er dich! Du bist eine tolle Frau. Viel Spaß heute Abend!\nJana: Danke, Luisa! Ich rufe dich später an.",
+      textSk: "Jana: Luisa, dnes večer sa stretnem s novým mužom. Som taká vzrušená!\nLuisa: Ó, to je pekné! Ako vyzerá?\nJana: Je vysoký a štíhly. Má krátke, hnedé vlasy a modré oči. Nenosí okuliare, ale má malú bradu.\nLuisa: Znie to dobre! A ako sa volá?\nJana: Volá sa Tom. Vyzerá naozaj dobre! Dúfam, že sa mu páčim aj ja.\nLuisa: Samozrejme, že sa mu páčiš! Si skvelá žena. Uži si dnešný večer!\nJana: Ďakujem, Luisa! Zavolám ti neskôr.",
       questions: [
         {
-          question: "Kde leží vchod múzea?",
-          options: ["Na Ringstraße", "Na Maria-Theresien-Platz", "Pri Stephansdom", "Na Praterstraße"],
-          answer: "Na Maria-Theresien-Platz"
+          question: "Wie sind Janas Haare?",
+          options: [
+            "Sie sind lang und blond.",
+            "Sie sind kurz und braun.",
+            "Sie sind kurz und schwarz.",
+            "Sie sind lang und rot."
+          ],
+          answer: 1,
+          explanation: "Jana sagt: \"Er hat kurze, braune Haare...\""
         },
         {
-          question: "Čo sa nachádza uprostred múzea?",
-          options: ["Kaviareň", "Vchod", "Nádherný vnútorný dvor", "Pokladňa"],
-          answer: "Nádherný vnútorný dvor"
+          question: "Welche Augenfarbe hat der Mann?",
+          options: [
+            "Grün",
+            "Braun",
+            "Blau",
+            "Grau"
+          ],
+          answer: 2,
+          explanation: "Jana sagt: \"...und blaue Augen.\""
         },
         {
-          question: "'Die Sammlung des Museums' — aký pád je 'des Museums'?",
-          options: ["Nominatív", "Akuzatív", "Datív", "Genitív"],
-          answer: "Genitív"
-        }
-      ]
-    },
-    {
-      type: "freewrite",
-      instruction: "Popíš, komu patria rôzne veci vo tvojom dome alebo byte.",
-      prompt: "Beschreibe, wem verschiedene Dinge in deinem Haus gehören. Benutze: Das ist das/die/der [Ding] meiner/meines [Person]. Oder: Das gehört [Person]. Oder: Das ist das [Ding] von [Person].",
-      minWords: 30,
-      exampleAnswer: "Das ist das Zimmer meiner Schwester — sie hat viele Bücher. Das ist das Auto meines Vaters. Am Ende des Monats zahlt er die Versicherung. Das Buch auf dem Tisch gehört mir. Das Fahrrad vor dem Haus ist von meinem Bruder."
-    },
-    {
-      type: "wordorder",
-      instruction: "Zoraď slová do správnej nemeckej vety.",
-      sentences: [
-        {
-          words: ["Als", "Jana", "ankam,", "hatte", "sie", "schon", "alles", "gepackt"],
-          correct: "Als Jana ankam, hatte sie schon alles gepackt",
-          hint: "Keď Jana prišla, mala už všetko zbalené.",
-          explanation: "Plusquamperfekt 'hatte gepackt' vyjadruje dej, ktorý nastal PRED dejem v minulom čase ('ankam')."
+          question: "Hat der Mann einen Bart?",
+          options: [
+            "Ja, einen großen Bart.",
+            "Nein, er hat keinen Bart.",
+            "Ja, einen kleinen Bart.",
+            "Er trägt einen Schnurrbart."
+          ],
+          answer: 2,
+          explanation: "Jana sagt: \"...aber er hat einen kleinen Bart.\""
         },
         {
-          words: ["Er", "hatte", "schon", "gegessen,", "bevor", "ich", "ankam"],
-          correct: "Er hatte schon gegessen, bevor ich ankam",
-          hint: "Už bol zajedol, skôr ako som prišiel/prišla.",
-          explanation: "'bevor ich ankam' = pred mojím príchodom. Dej pred týmto → Plusquamperfekt 'hatte gegessen'."
+          question: "Wie heißt der Mann, den Jana trifft?",
+          options: [
+            "Carlos",
+            "Tom",
+            "Herr Gruber",
+            "Dr. Hirsch"
+          ],
+          answer: 1,
+          explanation: "Jana sagt: \"Er heißt Tom.\""
         },
         {
-          words: ["Sie", "war", "schon", "gegangen,", "als", "wir", "ankamen"],
-          correct: "Sie war schon gegangen, als wir ankamen",
-          hint: "Bola už odišla, keď sme prišli.",
-          explanation: "'war gegangen' = Plusquamperfekt so 'sein' (pohybové slovesá). Dej nastal pred 'ankamen'."
-        },
-        {
-          words: ["Das", "Kind", "hatte", "schon", "geschlafen"],
-          correct: "Das Kind hatte schon geschlafen",
-          hint: "Dieťa už bolo spalo.",
-          explanation: "Plusquamperfekt: 'hatte' (préteritum od haben) + Partizip II 'geschlafen' na konci vety."
-        },
-        {
-          words: ["Jana", "hatte", "den", "Brief", "schon", "geschrieben"],
-          correct: "Jana hatte den Brief schon geschrieben",
-          hint: "Jana už bola napísala list.",
-          explanation: "'hatte geschrieben' = Plusquamperfekt. 'schon' zdôrazňuje, že dej bol dokončený ešte pred ďalším dejom."
+          question: "Wie ist die Körpergröße des Mannes?",
+          options: [
+            "Er ist klein.",
+            "Er ist mittelgroß.",
+            "Er ist groß.",
+            "Das wird nicht erwähnt."
+          ],
+          answer: 2,
+          explanation: "Jana sagt: \"Er ist groß und schlank.\""
         }
       ]
     },
     {
       type: "speaking",
-      instruction: "Počúvaj nemeckú vetu. Potom hovor nahlas a skontroluj sa.",
+      instruction: "Počúvaj a opakuj.",
       phrases: [
         {
-          de: "Als Jana ankam, hatte sie schon alles gepackt.",
-          sk: "Keď Jana prišla, mala už všetko zbalené.",
-          tip: "hatte gepackt: Plusquamperfekt, -t na konci"
+          de: "das Haar",
+          sk: "vlas",
+          tip: "Hlasné R na konci: [haːɐ̯]"
         },
         {
-          de: "Er hatte schon gegessen.",
-          sk: "Už bol zajedol.",
-          tip: "hatte gegessen: haben-Plusquamperfekt"
+          de: "das Auge",
+          sk: "oko",
+          tip: "Dvojhláska au: [aʊ̯]"
         },
         {
-          de: "Sie war schon gegangen.",
-          sk: "Bola už odišla.",
-          tip: "war gegangen: sein-Verb im Plusquam."
+          de: "der Bart",
+          sk: "brada",
+          tip: "T na konci: [baʁt]"
         },
         {
-          de: "Das hatte ich nicht gewusst.",
-          sk: "To som nevedel/a.",
-          tip: "hatte gewusst: wissen→gewusst"
+          de: "Er hat kurze Haare.",
+          sk: "Má krátke vlasy.",
+          tip: "Znie to ako: [ɛɐ̯ hat kʊɐ̯t͡sə haːɐ̯ə]"
         },
         {
-          de: "Bevor er ankam, hatte sie aufgeräumt.",
-          sk: "Skôr ako prišiel, ona upratala.",
-          tip: "bevor + Satz; hatte aufgeräumt am Ende"
+          de: "Sie hat blaue Augen.",
+          sk: "Má modré oči.",
+          tip: "Znie to ako: [ziː hat blaʊ̯ə aʊ̯ɡn̩]"
+        },
+        {
+          de: "Wie sieht er aus?",
+          sk: "Ako vyzerá?",
+          tip: "Znie to ako: [viː ziːt ɛɐ̯ aʊ̯s]"
+        },
+        {
+          de: "Er sieht groß aus.",
+          sk: "Vyzerá vysoko.",
+          tip: "Znie to ako: [ɛɐ̯ ziːt ɡroːs aʊ̯s]"
+        },
+        {
+          de: "Sie trägt ein Kleid.",
+          sk: "Ona nosí šaty.",
+          tip: "Znie to ako: [ziː tʁɛːkt aɪ̯n klaɪ̯t]"
+        }
+      ]
+    },
+    {
+      type: "truefalse",
+      instruction: "Rozhodnite, či sú nasledujúce tvrdenia pravdivé alebo nepravdivé.",
+      statements: [
+        {
+          statement: "Muž má dlhé hnedé vlasy.",
+          isTrue: false,
+          explanation: "Tvrdenie je nepravdivé, pretože nevieme, či má muž dlhé vlasy. V nemčine by to bolo: 'Der Mann hat lange braune Haare.' Toto tvrdenie je len príkladom."
+        },
+        {
+          statement: "Žena má modré oči.",
+          isTrue: true,
+          explanation: "Toto je pravdivé tvrdenie, ak predpokladáme, že žena má modré oči. V nemčine: 'Die Frau hat blaue Augen.'"
+        },
+        {
+          statement: "Krátke vlasy sú dlhé vlasy.",
+          isTrue: false,
+          explanation: "Toto je logicky nepravdivé tvrdenie. 'Kurze Haare' sú opakom 'lange Haare'."
+        },
+        {
+          statement: "Nos je súčasťou tváre.",
+          isTrue: true,
+          explanation: "Toto je pravdivé tvrdenie. V nemčine: 'Die Nase ist Teil des Gesichts.'"
+        },
+        {
+          statement: "Muž nosí šaty.",
+          isTrue: false,
+          explanation: "Toto je nepravdivé tvrdenie. Muži zvyčajne nenosia šaty. V nemčine: 'Der Mann trägt ein Kleid.'"
+        }
+      ]
+    },
+    {
+      type: "dictation",
+      instruction: "Napíšte nasledujúce vety, ktoré počujete.",
+      sentences: [
+        {
+          de: "Er hat Haare.",
+          sk: "On má vlasy."
+        },
+        {
+          de: "Sie hat blaue Augen.",
+          sk: "Ona má modré oči."
+        },
+        {
+          de: "Der Mann trägt eine Hose.",
+          sk: "Muž nosí nohavice."
+        },
+        {
+          de: "Meine Freundin hat lange Haare.",
+          sk: "Moja priateľka má dlhé vlasy."
+        },
+        {
+          de: "Wie sieht dein Freund aus?",
+          sk: "Ako vyzerá tvoj priateľ?"
+        }
+      ]
+    },
+    {
+      type: "categorysort",
+      instruction: "Roztrieďte slová do správnych kategórií.",
+      categories: [
+        {
+          name: "Časti tváre",
+          color: "blue",
+          words: [
+            "das Haar",
+            "das Auge",
+            "der Bart",
+            "das Gesicht",
+            "die Nase",
+            "der Mund"
+          ]
+        },
+        {
+          name: "Odevy",
+          color: "rose",
+          words: [
+            "das Kleid",
+            "die Hose",
+            "der Schuh"
+          ]
+        },
+        {
+          name: "Ľudia",
+          color: "green",
+          words: [
+            "der Mann",
+            "die Frau",
+            "der Freund",
+            "die Freundin"
+          ]
+        }
+      ],
+      explanation: "Slová sú rozdelené do kategórií: časti tváre, odevy a ľudia. Toto pomáha organizovať slovnú zásobu a pochopiť jej význam v kontexte."
+    },
+    {
+      type: "translation",
+      instruction: "Preložte nasledujúce vety zo slovenčiny do nemčiny.",
+      sentences: [
+        {
+          sk: "Muž je vysoký.",
+          answer: "Der Mann ist groß.",
+          hint: "ist, groß",
+          explanation: "Používame sloveso 'sein' (je) a prídavné meno 'groß' (vysoký). V nemčine: 'Der Mann ist groß.'"
+        },
+        {
+          sk: "Žena má hnedé oči.",
+          answer: "Die Frau hat braune Augen.",
+          hint: "hat, braune",
+          explanation: "Používame sloveso 'haben' (má) a prídavné meno 'braun' (hnedý), ktoré sa skloňuje podľa podstatného mena 'Augen' (oči) v akuzatíve: 'braune Augen'. V nemčine: 'Die Frau hat braune Augen.'"
+        },
+        {
+          sk: "Priateľka má krátke vlasy.",
+          answer: "Die Freundin hat kurze Haare.",
+          hint: "hat, kurze",
+          explanation: "Používame sloveso 'haben' (má) a prídavné meno 'kurz' (krátky), ktoré sa skloňuje podľa podstatného mena 'Haare' (vlasy) v akuzatíve: 'kurze Haare'. V nemčine: 'Die Freundin hat kurze Haare.'"
+        },
+        {
+          sk: "Ako vyzerá muž?",
+          answer: "Wie sieht der Mann aus?",
+          hint: "Wie, sieht aus",
+          explanation: "Používame dopytovaciu vetu 'Wie sieht ... aus?' na opísanie vzhľadu. V nemčine: 'Wie sieht der Mann aus?'"
+        }
+      ]
+    },
+    {
+      type: "conjugation",
+      instruction: "Doplňte správne tvary slovesa 'haben'.",
+      verbs: [
+        {
+          infinitive: "haben",
+          translation: "mať",
+          forms: [
+            {
+              pronoun: "ich",
+              correct: "habe"
+            },
+            {
+              pronoun: "du",
+              correct: "hast"
+            },
+            {
+              pronoun: "er/sie/es",
+              correct: "hat"
+            },
+            {
+              pronoun: "wir",
+              correct: "haben"
+            },
+            {
+              pronoun: "ihr",
+              correct: "habt"
+            },
+            {
+              pronoun: "sie/Sie",
+              correct: "haben"
+            }
+          ],
+          note: "Sloveso 'haben' je nepravidelné a je jedným z najčastejšie používaných slovies v nemčine. Je dôležité naučiť sa jeho časovanie v prítomnom čase."
         }
       ]
     }
   ],
-  reviewWords: ["der Genitiv", "von + Dativ", "des Mannes", "der Frau", "am Ende", "am Anfang", "die Mitte", "das Ende", "wegen", "gehören"],
-  lessonNotes: "Genitív A1 — len základy: Vlastné mená: Lukas' (apostrof len pri menách na -s/-z/-x), Janas (bez apostrofu). von+Dativ = praktická náhrada. Genitívny člen: M/N=des+(-s/-es), F/Pl=der. Frázy: am Ende des Monats, am Anfang der Woche. Plný genitív = A2+."
+  reviewWords: []
 };

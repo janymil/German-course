@@ -10,9 +10,12 @@
   },
   "dependencies": {
     "@google/genai": "^1.43.0",
+    "better-sqlite3": "^12.6.2",
     "dotenv": "^17.3.1",
+    "fastest-levenshtein": "^1.0.16",
     "get-video-id": "^4.1.7",
     "lucide-react": "^0.344.0",
+    "openai": "^6.25.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-speech-recognition": "^4.0.1",

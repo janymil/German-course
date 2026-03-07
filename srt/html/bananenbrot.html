@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interaktive Lektion: Bananenbrot backen</title>
+    <!-- React & ReactDOM -->
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+    <!-- Babel for JSX -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f3f4f6; }
+        .m { color: #2563eb; font-weight: 700; } /* der - Blue */
+        .f { color: #dc2626; font-weight: 700; } /* die - Red */
+        .n { color: #16a34a; font-weight: 700; } /* das - Green */
+        .pl { color: #9333ea; font-weight: 700; } /* plural - Purple */
+        .glass-panel { background: white; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); padding: 24px; }
+        .btn { padding: 10px 16px; border-radius: 8px; font-weight: 600; cursor: pointer; transition: all 0.2s; }
+        .btn-primary { background-color: #3b82f6; color: white; }
+        .btn-primary:hover { background-color: #2563eb; }
+        .btn-outline { border: 2px solid #e5e7eb; color: #4b5563; }
+        .btn-outline:hover { background-color: #f3f4f6; }
+        .btn-active { border: 2px solid #3b82f6; background-color: #eff6ff; color: #1d4ed8; }
+        select { border: 2px solid #cbd5e1; border-radius: 6px; padding: 4px 8px; outline: none; font-weight: bold; }
+        select:focus { border-color: #3b82f6; }
+        input[type="text"] { border: 2px solid #cbd5e1; border-radius: 6px; padding: 6px 12px; outline: none; }
+        input[type="text"]:focus { border-color: #3b82f6; }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        const { useState, useEffect } = React;
+
+        // --- COMPONENTS ---
+
+        const Story = () => (
+            <div className="glass-panel space-y-4 text-lg leading-relaxed">
+                <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">📖 Teil 1: Die Geschichte (Erweitert)</h2>
+                <p className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-400 mb-6 text-sm text-gray-700">
+                    <strong>Všimni si farby!</strong><br/>
+                    <span className="m">Modrá = mužský rod (der)</span> | 
+                    <span className="f">Červená = ženský rod (die)</span> | 
+                    <span className="n">Zelená = stredný rod (das)</span> | 
+                    <span className="pl">Fialová = množné číslo (die)</span>.<br/>
+                    Farby platia aj pre vyskloňované tvary v Dative a Akuzative.
+                </p>
+
+                <p>
+                    Heute ist Sonntag und wir sind zu Hause in <span className="f">der Küche</span>. Auf <span className="m">dem Tisch</span> liegen <span className="pl">drei alte Bananen</span>. <span className="f">Die Banane</span> sieht nicht mehr appetitlich aus, sie hat <span className="pl">viele braune Stellen</span> und ist sehr reif. Aber ich werfe <span className="pl">die Bananen</span> nicht in <span className="m">den Müll</span>! Denn mit reifen Bananen kann man sehr leckeres <span className="n">Bananenbrot</span> backen.
+                </p>
+                <p>
+                    Zuerst brauche ich <span className="f">eine große Glasschüssel</span>. Ich schäle <span className="pl">die Bananen</span> und werfe <span className="f">die Bananenschale</span> in <span className="m">den Mülleimer</span>. Dann nehme ich <span className="f">eine Gabel</span>. Da <span className="pl">die Bananen</span> sehr weich sind, ist es sehr einfach. Ich zerdrücke <span className="pl">die Bananen</span> mit <span className="f">der Gabel</span>.
+                </p>
+                <p>
+                    Als Nächstes gebe ich 80 ml Öl in <span className="m">den Messbecher</span> und schütte <span className="n">das Öl</span> in <span className="f">die Schüssel</span>. Dann schlage ich <span className="n">ein Ei</span> auf und gebe es dazu. Jetzt brauchen wir <span className="f">eine Waage</span>. Mit <span className="f">der Waage</span> wiege ich <span className="m">den Zucker</span> ab. Wir brauchen 150 g braunen Zucker. Ich verrühre alles sehr gut mit <span className="m">dem Schneebesen</span>.
+                </p>
+                <p>
+                    Nun brauche ich <span className="n">ein Sieb</span>. Mit <span className="n">dem Sieb</span> siebe ich 190 g Mehl in <span className="f">die Schüssel</span> ein. Dann kommen noch <span className="n">das Backpulver</span> und <span className="f">eine kleine Prise</span> Salz in <span className="m">den Teig</span>. 
+                </p>
+                <p>
+                    Ach ja, ich habe vergessen, <span className="m">den Backofen</span> einzuschalten! Ich schalte <span className="m">den Ofen</span> ein auf 170 Grad Umluft. Wir wollen <span className="n">ein paar Walnüsse</span> in <span className="m">den Teig</span> geben. Mit <span className="n">einem großen Messer</span> zerhacke ich grob <span className="pl">die Nüsse</span>.
+                </p>
+                <p>
+                    Ich lege <span className="f">die Kastenform</span> mit <span className="n">dem Backpapier</span> aus und fülle <span className="m">den Teig</span> hinein. Dann streiche ich <span className="f">die Oberfläche</span> glatt. Jetzt kommt <span className="m">der Kuchen</span> in <span className="m">den Ofen</span>. Nach 35 Minuten teste ich mit <span className="f">der Messerspitze</span>, ob <span className="m">der Kuchen</span> fertig ist. <span className="f">Die Spitze</span> ist sauber! Ich nehme <span className="n">das fertige Brot</span> heraus, schneide mir <span className="f">eine Scheibe</span> ab und trinke <span className="m">einen Kaffee</span> dazu. Sehr lecker!
+                </p>
+            </div>
+        );
+
+        const Vocab = () => (
+            <div className="glass-panel">
+                <h2 className="text-2xl font-bold mb-4">🧠 Teil 2: Wortschatz (In der Küche)</h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    
+                    <div className="bg-blue-50 p-4 rounded-lg border border-blue-200">
+                        <h3 className="font-bold text-blue-800 border-b border-blue-200 pb-2 mb-2">Masculine (der)</h3>
+                        <ul className="space-y-2">
+                            <li><span className="m">der Backofen, -</span> (rúra na pečenie)</li>
+                            <li><span className="m">der Teig, -e</span> (cesto)</li>
+                            <li><span className="m">der Zucker, -</span> (cukor)</li>
+                            <li><span className="m">der Schneebesen, -</span> (metlička na šľahanie)</li>
+                            <li><span className="m">der Messbecher, -</span> (odmerka)</li>
+                            <li><span className="m">der Müll / der Mülleimer</span> (odpad / kôš)</li>
+                            <li><span className="m">der Kuchen, -</span> (koláč)</li>
+                        </ul>
+                    </div>
+
+                    <div className="bg-red-50 p-4 rounded-lg border border-red-200">
+                        <h3 className="font-bold text-red-800 border-b border-red-200 pb-2 mb-2">Feminine (die)</h3>
+                        <ul className="space-y-2">
+                            <li><span className="f">die Banane, -n</span> (banán)</li>
+                            <li><span className="f">die Gabel, -n</span> (vidlička)</li>
+                            <li><span className="f">die Schüssel, -n</span> (miska)</li>
+                            <li><span className="f">die Waage, -n</span> (váha)</li>
+                            <li><span className="f">die Kastenform, -en</span> (forma na pečenie chleba)</li>
+                            <li><span className="f">die Walnuss, -nüsse</span> (vlašský orech)</li>
+                            <li><span className="f">die Scheibe, -n</span> (plátok, krajec)</li>
+                        </ul>
+                    </div>
+
+                    <div className="bg-green-50 p-4 rounded-lg border border-green-200">
+                        <h3 className="font-bold text-green-800 border-b border-green-200 pb-2 mb-2">Neuter (das) & Verben</h3>
+                        <ul className="space-y-2">
+                            <li><span className="n">das Bananenbrot</span> (banánový chlieb)</li>
+                            <li><span className="n">das Mehl</span> (múka)</li>
+                            <li><span className="n">das Ei, -er</span> (vajce)</li>
+                            <li><span className="n">das Öl</span> (olej)</li>
+                            <li><span className="n">das Messer, -</span> (nôž)</li>
+                            <li><span className="n">das Sieb, -e</span> (sitko)</li>
+                            <hr className="my-2 border-green-200" />
+                            <li className="text-gray-700"><strong>zerdrücken</strong> (roztlačiť)</li>
+                            <li className="text-gray-700"><strong>verrühren</strong> (rozmiešať)</li>
+                            <li className="text-gray-700"><strong>backen</strong> (piecť)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        );
+
+        const Grammar = () => (
+            <div className="glass-panel space-y-6">
+                <h2 className="text-2xl font-bold">📐 Teil 3: Grammatik</h2>
+                
+                <div className="bg-yellow-50 p-6 rounded-lg border border-yellow-200">
+                    <h3 className="text-xl font-bold mb-3 text-yellow-800">1. Nástroje: Womit? (S čím? Pomocou čoho?) ➡️ DATÍV</h3>
+                    <p className="mb-4 text-gray-700">Keď v nemčine hovoríme, aký nástroj používame na nejakú činnosť, použijeme predložku <strong>mit</strong> (s). Predložka "mit" sa viaže <strong>vždy s Datívom</strong>.</p>
+                    
+                    <ul className="space-y-3 bg-white p-4 rounded border border-gray-100 mb-6">
+                        <li>Ich zerdrücke die Bananen <strong>mit</strong> <span className="f">der Gabel</span>. (pomocou vidličky - die Gabel -> der Gabel)</li>
+                        <li>Ich verrühre alles <strong>mit</strong> <span className="m">dem Schneebesen</span>. (metličkou - der Schneebesen -> dem)</li>
+                        <li>Ich schneide die Nüsse <strong>mit</strong> <span className="n">dem Messer</span>. (nožom - das Messer -> dem)</li>
+                        <li>Ich wiege den Zucker <strong>mit</strong> <span className="f">der Waage</span> ab. (na váhe/váhou - die Waage -> der)</li>
+                    </ul>
+
+                    <h3 className="text-xl font-bold mb-3 text-yellow-800">2. Smer: Wohin? (Kam?) ➡️ AKUZATÍV</h3>
+                    <p className="mb-4 text-gray-700">Pri vkladaní ingrediencií niekam používame predložku <strong>in</strong>. Keďže ide o pohyb (smerovanie dnu), použijeme <strong>Akuzatív</strong>.</p>
+                    
+                    <ul className="space-y-3 bg-white p-4 rounded border border-gray-100">
+                        <li>Ich werfe die Schale <strong>in</strong> <span className="m">den Müll</span>. (do koša - der Müll -> den)</li>
+                        <li>Ich gebe das Mehl <strong>in</strong> <span className="f">die Schüssel</span>. (do misky - die Schüssel -> die)</li>
+                        <li>Der Teig kommt <strong>in</strong> <span className="f">die Kastenform</span>. (do formy - die Kastenform -> die)</li>
+                        <li>Der Kuchen kommt <strong>in</strong> <span className="m">den Backofen</span>. (do rúry - der Ofen -> den)</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 className="text-xl font-bold mb-3">Skloňovanie určitých členov (Pripomenutie z predchádzajúcej lekcie)</h3>
+                    <div className="overflow-x-auto">
+                        <table className="w-full text-left border-collapse">
+                            <thead>
+                                <tr className="bg-gray-100">
+                                    <th className="p-3 border">Pád</th>
+                                    <th className="p-3 border">Mužský (der)</th>
+                                    <th className="p-3 border">Ženský (die)</th>
+                                    <th className="p-3 border">Stredný (das)</th>
+                                    <th className="p-3 border">Množné (die)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td className="p-3 border font-bold">1. Nominatív (Kto/Čo)</td>
+                                    <td className="p-3 border"><span className="m">der</span></td>
+                                    <td className="p-3 border"><span className="f">die</span></td>
+                                    <td className="p-3 border"><span className="n">das</span></td>
+                                    <td className="p-3 border"><span className="pl">die</span></td>
+                                </tr>
+                                <tr className="bg-gray-50">
+                                    <td className="p-3 border font-bold">4. Akuzatív (Kam do? in...)</td>
+                                    <td className="p-3 border"><span className="m">den</span></td>
+                                    <td className="p-3 border"><span className="f">die</span></td>
+                                    <td className="p-3 border"><span className="n">das</span></td>
+                                    <td className="p-3 border"><span className="pl">die</span></td>
+                                </tr>
+                                <tr>
+                                    <td className="p-3 border font-bold">3. Datív (S čím? mit...)</td>
+                                    <td className="p-3 border"><span className="m">dem</span></td>
+                                    <td className="p-3 border"><span className="f">der</span></td>
+                                    <td className="p-3 border"><span className="n">dem</span></td>
+                                    <td className="p-3 border"><span className="pl">den + n</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        );
+
+        // --- EXERCISE COMPONENTS ---
+
+        const ExMultipleChoice = ({ data, onScore }) => {
+            const [answers, setAnswers] = useState({});
+            const [checked, setChecked] = useState(false);
+
+            const handleCheck = () => {
+                setChecked(true);
+                let score = 0;
+                data.forEach((q, i) => { if (answers[i] === q.correct) score++; });
+                onScore(score, data.length);
+            };
+
+            return (
+                <div className="space-y-6">
+                    <h3 className="text-xl font-bold mb-4">Übung 1: Leseverstehen (Čítanie s porozumením)</h3>
+                    {data.map((q, i) => (
+                        <div key={i} className="bg-white p-4 rounded border border-gray-200 shadow-sm">
+                            <p className="font-bold mb-3">{i + 1}. {q.question}</p>
+                            <div className="space-y-2">
+                                {q.options.map((opt, j) => (
+                                    <label key={j} className="flex items-center space-x-3 cursor-pointer p-2 rounded hover:bg-gray-50">
+                                        <input type="radio" name={`q${i}`} value={j} 
+                                            onChange={() => setAnswers({...answers, [i]: j})}
+                                            disabled={checked}
+                                            className="w-4 h-4 text-blue-600"
+                                        />
+                                        <span className={`${checked && j === q.correct ? 'text-green-600 font-bold' : ''} ${checked && answers[i] === j && j !== q.correct ? 'text-red-600 line-through' : ''}`}>
+                                            {opt}
+                                        </span>
+                                    </label>
+                                ))}
+                            </div>
+                        </div>
+                    ))}
+                    {!checked && <button onClick={handleCheck} className="btn btn-primary mt-4">Kontrolovať</button>}
+                </div>
+            );
+        };
+
+        const ExFillBlanks = ({ data, onScore }) => {
+            const [answers, setAnswers] = useState({});
+            const [checked, setChecked] = useState(false);
+
+            const handleCheck = () => {
+                setChecked(true);
+                let score = 0;
+                data.forEach((q, i) => { if (answers[i] === q.correct) score++; });
+                onScore(score, data.length);
+            };
+
+            return (
+                <div className="space-y-6 mt-8 border-t pt-8">
+                    <h3 className="text-xl font-bold mb-4">Übung 2: Präpositionen & Artikel (Predložky a členy)</h3>
+                    <p className="mb-4 text-gray-600">Vyber správnu predložku a člen (mit = Datív, in = Akuzatív).</p>
+                    <div className="space-y-4">
+                        {data.map((q, i) => (
+                            <div key={i} className="flex flex-wrap items-center gap-2 bg-white p-3 rounded border border-gray-200">
+                                <span>{i + 1}. {q.part1}</span>
+                                <select 
+                                    onChange={(e) => setAnswers({...answers, [i]: e.target.value})}
+                                    disabled={checked}
+                                    className={`${checked && answers[i] === q.correct ? 'bg-green-100 border-green-500' : ''} ${checked && answers[i] !== q.correct ? 'bg-red-100 border-red-500' : ''}`}
+                                >
+                                    <option value="">---</option>
+                                    {q.options.map(opt => <option key={opt} value={opt}>{opt}</option>)}
+                                </select>
+                                <span>{q.part2}</span>
+                                {checked && answers[i] !== q.correct && <span className="text-green-600 text-sm ml-2">✓ {q.correct}</span>}
+                            </div>
+                        ))}
+                    </div>
+                    {!checked && <button onClick={handleCheck} className="btn btn-primary mt-4">Kontrolovať</button>}
+                </div>
+            );
+        };
+
+        const ExMatching = ({ data, onScore }) => {
+            const [selectedDe, setSelectedDe] = useState(null);
+            const [matches, setMatches] = useState({});
+            const [completed, setCompleted] = useState(false);
+            
+            // Randomize right column initially
+            const [rightCol, setRightCol] = useState([]);
+            useEffect(() => {
+                setRightCol([...data].sort(() => Math.random() - 0.5));
+            }, []);
+
+            const handleLeftClick = (de) => {
+                if (!matches[de]) setSelectedDe(de);
+            };
+
+            const handleRightClick = (sk) => {
+                if (!selectedDe) return;
+                
+                // Check if correct
+                const correctPair = data.find(d => d.de === selectedDe);
+                if (correctPair.sk === sk) {
+                    const newMatches = {...matches, [selectedDe]: sk};
+                    setMatches(newMatches);
+                    setSelectedDe(null);
+                    
+                    if (Object.keys(newMatches).length === data.length) {
+                        setCompleted(true);
+                        onScore(data.length, data.length);
+                    }
+                } else {
+                    setSelectedDe(null); // wrong, reset selection
+                }
+            };
+
+            return (
+                <div className="space-y-6 mt-8 border-t pt-8">
+                    <h3 className="text-xl font-bold mb-4">Übung 3: Wortschatz verbinden (Spájanie slovíčok)</h3>
+                    <p className="mb-4 text-gray-600">Klikni na nemecké slovo a potom na jeho slovenský preklad.</p>
+                    
+                    <div className="flex flex-col md:flex-row gap-8">
+                        <div className="flex-1 space-y-2">
+                            {data.map((item, i) => (
+                                <button 
+                                    key={i} 
+                                    onClick={() => handleLeftClick(item.de)}
+                                    disabled={!!matches[item.de]}
+                                    className={`w-full text-left px-4 py-3 rounded border-2 transition-all 
+                                        ${matches[item.de] ? 'bg-green-100 border-green-500 opacity-50 cursor-not-allowed' : 
+                                          selectedDe === item.de ? 'bg-blue-100 border-blue-500 shadow-md transform scale-105' : 
+                                          'bg-white border-gray-200 hover:border-blue-300'}`}
+                                >
+                                    {item.deHtml ? <span dangerouslySetInnerHTML={{__html: item.deHtml}}></span> : item.de}
+                                </button>
+                            ))}
+                        </div>
+                        <div className="flex-1 space-y-2">
+                            {rightCol.map((item, i) => {
+                                const isMatched = Object.values(matches).includes(item.sk);
+                                return (
+                                    <button 
+                                        key={i} 
+                                        onClick={() => handleRightClick(item.sk)}
+                                        disabled={isMatched}
+                                        className={`w-full text-left px-4 py-3 rounded border-2 transition-all
+                                            ${isMatched ? 'bg-green-100 border-green-500 opacity-50 cursor-not-allowed' : 
+                                              'bg-white border-gray-200 hover:border-blue-300'}`}
+                                    >
+                                        {item.sk}
+                                    </button>
+                                );
+                            })}
+                        </div>
+                    </div>
+                </div>
+            );
+        };
+
+        const ExSentenceBuilder = ({ data, onScore }) => {
+            const [sentences, setSentences] = useState(data.map(d => ({
+                words: [...d.words].sort(() => Math.random() - 0.5),
+                built: [],
+                isCorrect: null
+            })));
+
+            const handleWordClick = (sentenceIndex, word, fromBuilt) => {
+                const s = [...sentences];
+                if (fromBuilt) {
+                    s[sentenceIndex].built = s[sentenceIndex].built.filter(w => w !== word);
+                    s[sentenceIndex].words.push(word);
+                } else {
+                    s[sentenceIndex].words = s[sentenceIndex].words.filter(w => w !== word);
+                    s[sentenceIndex].built.push(word);
+                }
+                s[sentenceIndex].isCorrect = null; // reset validation
+                setSentences(s);
+            };
+
+            const handleCheck = () => {
+                let score = 0;
+                const checkedSentences = sentences.map((s, i) => {
+                    const builtStr = s.built.join(" ");
+                    const isCorrect = builtStr === data[i].correct;
+                    if (isCorrect) score++;
+                    return { ...s, isCorrect };
+                });
+                setSentences(checkedSentences);
+                onScore(score, data.length);
+            };
+
+            return (
+                <div className="space-y-6 mt-8 border-t pt-8">
+                    <h3 className="text-xl font-bold mb-4">Übung 4: Sätze bauen (Skladanie viet)</h3>
+                    <p className="mb-4 text-gray-600">Klikaj na slová v správnom poradí, aby si vytvoril zmysluplnú vetu.</p>
+                    
+                    <div className="space-y-6">
+                        {sentences.map((s, i) => (
+                            <div key={i} className={`p-4 rounded border-2 ${s.isCorrect === true ? 'border-green-400 bg-green-50' : s.isCorrect === false ? 'border-red-400 bg-red-50' : 'border-gray-200 bg-white'}`}>
+                                <p className="text-sm text-gray-500 mb-2">{data[i].hint}</p>
+                                
+                                <div className="min-h-[50px] bg-gray-50 rounded border border-gray-300 p-2 mb-3 flex flex-wrap gap-2">
+                                    {s.built.map((w, j) => (
+                                        <button key={j} onClick={() => handleWordClick(i, w, true)} className="bg-blue-600 text-white px-3 py-1 rounded shadow cursor-pointer hover:bg-blue-700">
+                                            {w}
+                                        </button>
+                                    ))}
+                                    {s.built.length === 0 && <span className="text-gray-400 italic">Poskladaná veta tu...</span>}
+                                </div>
+
+                                <div className="flex flex-wrap gap-2">
+                                    {s.words.map((w, j) => (
+                                        <button key={j} onClick={() => handleWordClick(i, w, false)} className="bg-white border border-gray-300 px-3 py-1 rounded shadow-sm hover:bg-gray-100">
+                                            {w}
+                                        </button>
+                                    ))}
+                                </div>
+                                {s.isCorrect === false && <p className="text-red-600 text-sm mt-2 font-bold">Správne: {data[i].correct}</p>}
+                            </div>
+                        ))}
+                    </div>
+                    <button onClick={handleCheck} className="btn btn-primary mt-4">Kontrolovať vety</button>
+                </div>
+            );
+        };
+
+        const ExTranslation = ({ data, onScore }) => {
+            const [answers, setAnswers] = useState({});
+            const [checked, setChecked] = useState(false);
+
+            const handleCheck = () => {
+                setChecked(true);
+                let score = 0;
+                data.forEach((q, i) => {
+                    const isCorrect = answers[i]?.trim().toLowerCase() === q.correct.toLowerCase();
+                    if (isCorrect) score++;
+                });
+                onScore(score, data.length);
+            };
+
+            return (
+                <div className="space-y-6 mt-8 border-t pt-8">
+                    <h3 className="text-xl font-bold mb-4">Übung 5: Schreiben (Písanie a preklad)</h3>
+                    <p className="mb-4 text-gray-600">Prelož do nemčiny. Nezabudni na správny určitý člen (der, die, das) a veľké písmeno!</p>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        {data.map((q, i) => (
+                            <div key={i} className="bg-white p-3 rounded border border-gray-200">
+                                <label className="block mb-2 font-bold">{i + 1}. {q.sk}</label>
+                                <input 
+                                    type="text" 
+                                    className={`w-full ${checked && answers[i]?.trim().toLowerCase() === q.correct.toLowerCase() ? 'border-green-500 bg-green-50' : checked ? 'border-red-500 bg-red-50' : ''}`}
+                                    onChange={(e) => setAnswers({...answers, [i]: e.target.value})}
+                                    disabled={checked}
+                                    placeholder="Napr. der Kuchen"
+                                />
+                                {checked && answers[i]?.trim().toLowerCase() !== q.correct.toLowerCase() && 
+                                    <p className="text-green-600 text-sm mt-1">✓ {q.correct}</p>}
+                            </div>
+                        ))}
+                    </div>
+                    {!checked && <button onClick={handleCheck} className="btn btn-primary mt-4">Kontrolovať preklad</button>}
+                </div>
+            );
+        }
+
+        // --- MAIN APP ---
+
+        const App = () => {
+            const [activeTab, setActiveTab] = useState('story');
+            const [scores, setScores] = useState({});
+
+            const handleScore = (exName, score, max) => {
+                setScores(prev => ({...prev, [exName]: {score, max}}));
+            };
+
+            const totalScore = Object.values(scores).reduce((acc, curr) => acc + curr.score, 0);
+            const totalMax = Object.values(scores).reduce((acc, curr) => acc + curr.max, 0);
+
+            // --- DATA FOR EXERCISES ---
+            const mcData = [
+                { question: "Was machen wir mit den reifen Bananen?", options: ["Wir werfen sie in den Müll.", "Wir backen ein Bananenbrot.", "Wir machen einen Bananensaft.", "Wir geben sie dem Hund."], correct: 1 },
+                { question: "Womit zerdrücken wir die Bananen?", options: ["Mit dem Messer", "Mit dem Schneebesen", "Mit der Gabel", "Mit den Händen"], correct: 2 },
+                { question: "Was hat die Person vergessen einzuschalten?", options: ["Die Waage", "Den Mixer", "Das Licht", "Den Backofen"], correct: 3 },
+                { question: "Womit testen wir, ob der Kuchen fertig ist?", options: ["Mit der Messerspitze", "Mit der Gabel", "Mit dem Finger", "Mit dem Thermometer"], correct: 0 },
+                { question: "Wie lange muss das Bananenbrot backen?", options: ["10 Minuten", "Eine Stunde", "35 Minuten", "20 Minuten"], correct: 2 }
+            ];
+
+            const fillBlankData = [
+                { part1: "Ich zerdrücke die Bananen", options: ["mit dem", "mit der", "in den", "in die"], part2: "Gabel. (Dat. fem.)", correct: "mit der" },
+                { part1: "Ich verrühre alles gut", options: ["mit den", "mit das", "mit dem", "mit der"], part2: "Schneebesen. (Dat. masc.)", correct: "mit dem" },
+                { part1: "Wir schneiden die Nüsse", options: ["mit der", "mit den", "mit das", "mit dem"], part2: "Messer. (Dat. neut.)", correct: "mit dem" },
+                { part1: "Ich werfe die Bananenschale", options: ["in der", "in den", "in dem", "auf den"], part2: "Müll. (Akk. masc.)", correct: "in den" },
+                { part1: "Das Mehl kommt", options: ["in die", "in der", "in den", "auf das"], part2: "Schüssel. (Akk. fem.)", correct: "in die" },
+                { part1: "Der Teig kommt", options: ["in der", "in die", "in dem", "in den"], part2: "Kastenform. (Akk. fem.)", correct: "in die" },
+                { part1: "Wir stellen den Kuchen", options: ["in der", "in dem", "in das", "in den"], part2: "Backofen. (Akk. masc.)", correct: "in den" },
+                { part1: "Ich wiege den Zucker", options: ["mit dem", "mit den", "mit der", "mit das"], part2: "Waage ab. (Dat. fem.)", correct: "mit der" }
+            ];
+
+            const matchData = [
+                { de: "das Messer", deHtml: "<span class='n'>das Messer</span>", sk: "nôž" },
+                { de: "die Gabel", deHtml: "<span class='f'>die Gabel</span>", sk: "vidlička" },
+                { de: "der Backofen", deHtml: "<span class='m'>der Backofen</span>", sk: "rúra na pečenie" },
+                { de: "der Teig", deHtml: "<span class='m'>der Teig</span>", sk: "cesto" },
+                { de: "der Schneebesen", deHtml: "<span class='m'>der Schneebesen</span>", sk: "metlička na šľahanie" },
+                { de: "das Mehl", deHtml: "<span class='n'>das Mehl</span>", sk: "múka" },
+                { de: "backen", sk: "piecť" },
+            ];
+
+            const sentenceData = [
+                { words: ["zerdrücke", "Ich", "die Bananen", "mit der Gabel."], correct: "Ich zerdrücke die Bananen mit der Gabel.", hint: "Roztláčam banány vidličkou." },
+                { words: ["werfe", "die Schale", "in den Müll.", "Ich"], correct: "Ich werfe die Schale in den Müll.", hint: "Hádžem šupku do koša." },
+                { words: ["ein Bananenbrot.", "backen", "heute", "Wir"], correct: "Wir backen heute ein Bananenbrot.", hint: "Dnes pečieme banánový chlieb." },
+                { words: ["kommt", "in den", "Der Kuchen", "Ofen."], correct: "Der Kuchen kommt in den Ofen.", hint: "Koláč ide do rúry." },
+                { words: ["eine Scheibe", "schneide", "Ich", "ab."], correct: "Ich schneide eine Scheibe ab.", hint: "Odkrojím plátok." }
+            ];
+
+            const translationData = [
+                { sk: "cesto", correct: "der Teig" },
+                { sk: "miska", correct: "die Schüssel" },
+                { sk: "cukor", correct: "der Zucker" },
+                { sk: "vidlička", correct: "die Gabel" },
+                { sk: "piecť", correct: "backen" }
+            ];
+
+            return (
+                <div className="max-w-5xl mx-auto p-4 md:p-8">
+                    <header className="mb-8 text-center">
+                        <h1 className="text-4xl font-extrabold text-gray-800 mb-2">🇩🇪 Lektion: Bananenbrot backen</h1>
+                        <p className="text-gray-600 text-lg">Ein interaktiver Kochkurs in der Küche (A1-A2)</p>
+                    </header>
+
+                    {/* Navigation Tabs */}
+                    <div className="flex flex-wrap gap-2 mb-6 bg-white p-2 rounded-xl shadow-sm border border-gray-200">
+                        <button onClick={() => setActiveTab('story')} className={`flex-1 btn ${activeTab === 'story' ? 'btn-active' : 'btn-outline'}`}>📖 Geschichte</button>
+                        <button onClick={() => setActiveTab('vocab')} className={`flex-1 btn ${activeTab === 'vocab' ? 'btn-active' : 'btn-outline'}`}>🧠 Wortschatz</button>
+                        <button onClick={() => setActiveTab('grammar')} className={`flex-1 btn ${activeTab === 'grammar' ? 'btn-active' : 'btn-outline'}`}>📐 Grammatik</button>
+                        <button onClick={() => setActiveTab('exercises')} className={`flex-1 btn ${activeTab === 'exercises' ? 'btn-active text-white bg-blue-600' : 'btn-outline'}`}>✍️ Übungen ({totalMax > 0 ? `${totalScore}/${totalMax}` : '30'})</button>
+                    </div>
+
+                    {/* Main Content Area */}
+                    <main>
+                        {activeTab === 'story' && <Story />}
+                        {activeTab === 'vocab' && <Vocab />}
+                        {activeTab === 'grammar' && <Grammar />}
+                        {activeTab === 'exercises' && (
+                            <div className="glass-panel">
+                                <h2 className="text-2xl font-bold mb-2">✍️ Teil 4: Interaktive Übungen</h2>
+                                <p className="mb-6 text-gray-600">Löse die folgenden 30 Aufgaben, um dein Wissen zu testen!</p>
+                                
+                                <ExMultipleChoice data={mcData} onScore={(s, m) => handleScore('mc', s, m)} />
+                                <ExFillBlanks data={fillBlankData} onScore={(s, m) => handleScore('blanks', s, m)} />
+                                <ExMatching data={matchData} onScore={(s, m) => handleScore('match', s, m)} />
+                                <ExSentenceBuilder data={sentenceData} onScore={(s, m) => handleScore('sentences', s, m)} />
+                                <ExTranslation data={translationData} onScore={(s, m) => handleScore('trans', s, m)} />
+                                
+                                {totalMax === 30 && ( // 5+8+7+5+5 = 30
+                                    <div className="mt-12 p-6 bg-blue-600 text-white rounded-xl text-center shadow-lg">
+                                        <h3 className="text-2xl font-bold">Lektion abgeschlossen! 🎉</h3>
+                                        <p className="text-xl mt-2">Dein Ergebnis: {totalScore} von {totalMax} Punkten.</p>
+                                    </div>
+                                )}
+                            </div>
+                        )}
+                    </main>
+                </div>
+            );
+        };
+
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<App />);
+    </script>
+</body>
+</html>

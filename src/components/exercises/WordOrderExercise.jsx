@@ -1,10 +1,11 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { CheckCircle, XCircle, ArrowRight, Volume2, RotateCcw, X } from 'lucide-react';
 import { useTTS } from '../../hooks/useTTS';
-import { getGenderForWord, GENDER_COLORS } from '../../utils/genderColors';
+import { getGenderForWord, GENDER_COLORS, GenderText } from '../../utils/genderColors';
 
 export function WordOrderExercise({ exercise, lesson, onComplete }) {
   const { speak, stop, speaking } = useTTS();
+  const lastCheckRef = useRef(0);
   const sentences = exercise?.sentences ?? [];
   const total = sentences.length;
 
@@ -16,11 +17,12 @@ export function WordOrderExercise({ exercise, lesson, onComplete }) {
   const [score, setScore] = useState(0);
   const [done, setDone] = useState(false);
 
-  // Initialise bank from current sentence words (already shuffled)
+  // Initialise bank from current sentence words (shuffle them to prevent AI returning them in order)
   useEffect(() => {
     if (sentences[current]) {
+      const shuffled = [...sentences[current].words].sort(() => Math.random() - 0.5);
       // Give each word a unique id so duplicate words are handled correctly
-      setBank(sentences[current].words.map((w, i) => ({ id: i, text: w })));
+      setBank(shuffled.map((w, i) => ({ id: i, text: w })));
       setBuilt([]);
       setChecked(false);
       setIsCorrect(false);
@@ -44,13 +46,21 @@ export function WordOrderExercise({ exercise, lesson, onComplete }) {
 
   function handleCheck() {
     const assembled = built.map(t => t.text).join(' ').trim();
-    const correct = (sentence.correct ?? '').trim();
-    const ok = assembled.toLowerCase() === correct.toLowerCase();
+    const correctRaw = (sentence.correct ?? '').trim();
+
+    // Normalize both strings: remove trailing punctuation and lowercase
+    // This allows the 'correct' string to contain punctuation for display/TTS
+    // while the user's assembled sentence (built from tokens without punctuation) matches.
+    const normalize = (s) => s.replace(/[.?!]+$/, '').trim().toLowerCase();
+
+    const ok = normalize(assembled) === normalize(correctRaw);
+
     setIsCorrect(ok);
     setChecked(true);
+    lastCheckRef.current = Date.now();
     if (ok) {
       setScore(s => s + 1);
-      speak(correct, 'de-DE', 0.85);
+      speak(correctRaw, 'de-DE', 0.85);
     }
   }
 
@@ -79,6 +89,8 @@ export function WordOrderExercise({ exercise, lesson, onComplete }) {
       if (e.key === 'Enter' && !done) {
         e.preventDefault();
         if (checked) {
+          if (Date.now() - lastCheckRef.current < 800) return;
+          stop();
           handleNext();
         } else if (built.length > 0) {
           handleCheck();
@@ -150,13 +162,12 @@ export function WordOrderExercise({ exercise, lesson, onComplete }) {
           )}
         </div>
         <div
-          className={`min-h-[60px] border-2 border-dashed rounded-xl p-3 flex flex-wrap gap-2 items-start transition-colors ${
-            checked
+          className={`min-h-[60px] border-2 border-dashed rounded-xl p-3 flex flex-wrap gap-2 items-start transition-colors ${checked
               ? isCorrect
                 ? 'border-green-500 bg-green-950/30'
                 : 'border-red-500 bg-red-950/30'
               : 'border-gray-700 bg-gray-900/50'
-          }`}
+            }`}
         >
           {built.length === 0 ? (
             <span className="text-gray-600 text-sm italic self-center">
@@ -168,13 +179,12 @@ export function WordOrderExercise({ exercise, lesson, onComplete }) {
                 key={tile.id}
                 onClick={() => !checked && moveToBank(tile)}
                 disabled={checked}
-                className={`inline-flex items-center gap-1 px-3 py-1.5 rounded-lg text-sm font-medium transition-all ${
-                  checked
+                className={`inline-flex items-center gap-1 px-3 py-1.5 rounded-lg text-sm font-medium transition-all ${checked
                     ? isCorrect
                       ? 'bg-green-700 text-white cursor-default'
                       : 'bg-red-700 text-white cursor-default'
                     : 'bg-indigo-700 hover:bg-indigo-600 text-white cursor-pointer'
-                }`}
+                  }`}
               >
                 {tile.text}
                 {!checked && <X className="w-3 h-3 opacity-70" />}
@@ -187,11 +197,10 @@ export function WordOrderExercise({ exercise, lesson, onComplete }) {
       {/* Feedback block */}
       {checked && (
         <div
-          className={`rounded-2xl border p-4 flex flex-col gap-2 ${
-            isCorrect
+          className={`rounded-2xl border p-4 flex flex-col gap-2 ${isCorrect
               ? 'bg-green-950/40 border-green-700'
               : 'bg-red-950/40 border-red-700'
-          }`}
+            }`}
         >
           <div className="flex items-center gap-2">
             {isCorrect ? (
@@ -204,11 +213,10 @@ export function WordOrderExercise({ exercise, lesson, onComplete }) {
             </span>
             <button
               onClick={handleSpeak}
-              className={`ml-auto flex items-center gap-1 text-xs px-2 py-1 rounded-lg transition-colors ${
-                speaking
+              className={`ml-auto flex items-center gap-1 text-xs px-2 py-1 rounded-lg transition-colors ${speaking
                   ? 'bg-indigo-700 text-white'
                   : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
-              }`}
+                }`}
             >
               <Volume2 className="w-3.5 h-3.5" />
               {speaking ? 'Stop' : 'Počuť'}
@@ -218,7 +226,7 @@ export function WordOrderExercise({ exercise, lesson, onComplete }) {
           {!isCorrect && (
             <div className="text-sm text-gray-300">
               <span className="text-gray-500">Správna odpoveď: </span>
-              <span className="text-green-300 font-medium">{sentence.correct}</span>
+              <span className="text-green-300 font-medium"><GenderText text={sentence.correct} /></span>
             </div>
           )}
 
@@ -240,13 +248,13 @@ export function WordOrderExercise({ exercise, lesson, onComplete }) {
               const g = getGenderForWord(tile.text);
               const genderCls = g ? GENDER_COLORS[g].text : 'text-white';
               return (
-              <button
-                key={tile.id}
-                onClick={() => moveToBuilt(tile)}
-                className={`px-3 py-1.5 bg-gray-800 hover:bg-gray-700 border border-gray-700 hover:border-gray-500 rounded-lg text-sm font-medium transition-all ${genderCls}`}
-              >
-                {tile.text}
-              </button>
+                <button
+                  key={tile.id}
+                  onClick={() => moveToBuilt(tile)}
+                  className={`px-3 py-1.5 bg-gray-800 hover:bg-gray-700 border border-gray-700 hover:border-gray-500 rounded-lg text-sm font-medium transition-all ${genderCls}`}
+                >
+                  {tile.text}
+                </button>
               );
             })}
             {bank.length === 0 && (
@@ -262,11 +270,10 @@ export function WordOrderExercise({ exercise, lesson, onComplete }) {
           <button
             onClick={handleCheck}
             disabled={!canCheck}
-            className={`flex-1 py-2.5 rounded-xl font-semibold text-sm transition-all ${
-              canCheck
+            className={`flex-1 py-2.5 rounded-xl font-semibold text-sm transition-all ${canCheck
                 ? 'bg-indigo-600 hover:bg-indigo-500 text-white'
                 : 'bg-gray-800 text-gray-600 cursor-not-allowed'
-            }`}
+              }`}
           >
             Skontrolovať
           </button>

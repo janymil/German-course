@@ -1,466 +1,858 @@
-﻿export const lesson77 = {
+export const lesson77 = {
   id: 77,
   week: 16,
   day: 2,
-  title: "Zahlen, Statistik und Vergleiche",
-  topic: "Veľké čísla, percentá a štatistiky",
+  title: "Ich würde gerne sprechen!",
+  topic: "Vyjadrovanie želaní a zdvorilých návrhov pomocou Konjunktívu II s formou *würde*.",
   cefr: "A1",
-  xpReward: 25,
-  narrativeContext:
-    "Jana reads an article about Vienna statistics: 'Wien hat 1,9 Millionen Einwohner. 47% sprechen Deutsch als Muttersprache.' She learns to read, say, and comment on large numbers and statistics in German — a useful skill for reading newspapers and exam texts.",
-  communicativeGoal:
-    "Po tejto lekcii viem čítať a vyslovovať veľké čísla, percentá a zlomky a komentovať štatistiky.",
-  skillFocus: ["vocabulary", "reading", "speaking"],
-  grammarNote: {
-    rule: "Veľké čísla, percentá a zlomky v nemčine",
-    explanation:
-      "Veľké čísla: 1.000 = tausend | 10.000 = zehntausend | 100.000 = hunderttausend | 1.000.000 = eine Million (vždy 'eine', nie 'ein'!) | 1.000.000.000 = eine Milliarde. DÔLEŽITÉ: nemčina používa bodku pre tisíce: 1.000 (nie 1,000 ako v angličtine!). Zlomky a percentá: 1/2 = halb | 1/4 = ein Viertel | 3/4 = drei Viertel | 50% = fünfzig Prozent (Prozent je nepremenné!). Výrazy pre aproximáciu: 'Ungefähr...' / 'Circa...' / 'Etwa...' = približne.",
-    examples: [
-      { de: "Wien hat etwa 1,9 Millionen Einwohner.", sk: "Viedeň má približne 1,9 milióna obyvateľov." },
-      { de: "Fast die Hälfte der Menschen sind Touristen.", sk: "Takmer polovica ľudí sú turisti." },
-      { de: "Ungefähr ein Viertel der Wiener kommt aus dem Ausland.", sk: "Približne štvrtina Viedňanov pochádza zo zahraničia." },
-      { de: "Die Preise sind um 5 Prozent gestiegen.", sk: "Ceny vzrástli o 5 percent." },
-    ],
-    slovakContrastNote:
-      "Slovenčina a nemčina majú podobný systém veľkých čísel. 'milión' = 'Million'. Ale nemčina používa bodku (.) pre tisíce kde slovenčina používa medzeru: '1 000 000' (SK) vs '1.000.000' (DE). Toto je bežná zámennosť! Tiež: 'ein Viertel' = 'štvrtina' — zlomky majú odlišné tvary. Dôležité: v nemčine 'eine Million' (ženský rod), v slovenčine 'milión' (mužský rod).",
-  },
+  xpReward: 20,
+  narrativeContext: "Jana ist auf einer Party. Sie soll eine Rede halten. Sie hat Angst. Luisa hilft ihr.",
+  communicativeGoal: "Nach dieser Lektion kann ich meine Wünsche und höflichen Vorschläge mit 'Ich würde gerne...' und 'Ich würde...' ausdrücken.",
+  skillFocus: [
+    "grammar",
+    "speaking",
+    "vocabulary"
+  ],
+  lessonNotes: "V tejto lekcii sa naučíš používať Konjunktív II s formou *würde*, aby si mohol/mohla vyjadriť svoje priania alebo zdvorilé návrhy. Napríklad: 'Ich würde gerne tanzen.' alebo 'Ich würde dir helfen.'",
+  grammarNotes: [
+    {
+      rule: "Konjunktiv II mit 'würde'",
+      explanation: "<p>V nemčine sa Konjunktív II s tvarom <strong>würde</strong> používa na vyjadrenie želaní, prianí alebo na veľmi zdvorilé žiadosti. Je to ekvivalent slovenského 'by som', 'by si', 'by' atď., ale v nemčine sa často používa namiesto iných konjunktívnych foriem, najmä v hovorenej reči.</p><p>Konštrukcia je jednoduchá: <strong>würde</strong> + príčastie trpné (Partizip II) hlavného slovesa. Toto sa hodí najmä vtedy, keď nechceme použiť menej bežné tvary Konjunktívu II alebo keď chceme zdôrazniť zdvorilosť.</p><p>Najčastejšie sa s týmto tvarom stretnete vo frázach ako:</p><ul><li><strong>Ich würde gerne...</strong> (Veľmi rád by som...)</li><li><strong>Möchtest du...?</strong> (Chcel by si...?)</li><li><strong>Könnten Sie bitte...?</strong> (Mohli by ste prosím...?)</li></ul><p>Používa sa na vyjadrenie niečoho, čo si želáme, ale nemusí to byť reálne alebo sa to ešte nestalo.</p>",
+      examples: [
+        {
+          de: "Ich würde gerne einen Kaffee trinken.",
+          sk: "Veľmi rád by som si dal kávu."
+        },
+        {
+          de: "Er würde jetzt gerne schlafen.",
+          sk: "On by teraz veľmi rád spal."
+        },
+        {
+          de: "Sie würde gerne nach Deutschland reisen.",
+          sk: "Ona by veľmi rada cestovala do Nemecka."
+        },
+        {
+          de: "Wir würden gerne im Park spazieren gehen.",
+          sk: "Veľmi radi by sme sa išli prejsť do parku."
+        },
+        {
+          de: "Was würdest du gerne essen?",
+          sk: "Čo by si veľmi rád jedol?"
+        },
+        {
+          de: "Ich würde Ihnen gerne helfen.",
+          sk: "Veľmi rád by som Vám pomohol."
+        },
+        {
+          de: "Sie würden gerne ein neues Auto kaufen.",
+          sk: "Oni by veľmi radi kúpili nové auto."
+        },
+        {
+          de: "Das würde mir sehr gefallen.",
+          sk: "To by sa mi veľmi páčilo."
+        }
+      ],
+      slovakContrastNote: "V slovenčine používame na vyjadrenie želaní a zdvorilých žiadostí spojenie 'by' s príslušnou osobou (by som, by si, by, by sme, by ste, by). Nemecký Konjunktív II s 'würde' je veľmi podobný, ale jeho použitie je v nemčine oveľa častejšie a flexibilnejšie, najmä v hovorenej reči. Nemčina často preferuje 'würde' + Partizip II pred tradičnými tvarmi Konjunktívu II (napr. 'ich tränke' namiesto 'ich würde trinken'), ktoré sú menej bežné."
+    },
+    {
+      rule: "Zdvorilé žiadosti s 'würde'",
+      explanation: "<p>Konjunktív II s tvarom <strong>würde</strong> sa používa aj na formulovanie veľmi zdvorilých žiadostí, podobne ako keď v slovenčine povieme 'Mohol by ste mi prosím pomôcť?'. Táto forma pôsobí menej priamočiare a viac ohľaduplne.</p><p>V týchto prípadoch sa často používa sloveso 'können' (môcť) v Konjunktíve II s 'würde', teda <strong>könnte</strong>, alebo priamo konštrukcia <strong>würde</strong> + sloveso v Partizip II.</p><p>Príklady zdvorilých žiadostí:</p><ul><li><strong>Könnten Sie mir bitte helfen?</strong> (Mohli by ste mi prosím pomôcť?)</li><li><strong>Würden Sie bitte das Fenster schließen?</strong> (Zavreli by ste prosím okno?)</li></ul><p>Použitie 'würde' v žiadostiach robí komunikáciu jemnejšou a je bežné v situáciách, kde chceme byť obzvlášť zdvorilí, napríklad pri oslovení cudzích ľudí alebo nadriadených.</p>",
+      examples: [
+        {
+          de: "Würden Sie mir bitte das Salz reichen?",
+          sk: "Podali by ste mi prosím soľ?"
+        },
+        {
+          de: "Könnten Sie mir bitte sagen, wie spät es ist?",
+          sk: "Mohli by ste mi prosím povedať, koľko je hodín?"
+        },
+        {
+          de: "Ich würde gerne wissen, wann der Zug abfährt.",
+          sk: "Veľmi rád by som vedel, kedy odchádza vlak."
+        },
+        {
+          de: "Würden Sie bitte das Fenster öffnen?",
+          sk: "Otvorili by ste prosím okno?"
+        },
+        {
+          de: "Könnten Sie das bitte wiederholen?",
+          sk: "Mohli by ste to prosím zopakovať?"
+        },
+        {
+          de: "Ich würde gerne eine Reservierung machen.",
+          sk: "Veľmi rád by som urobil rezerváciu."
+        }
+      ],
+      slovakContrastNote: "Slovenčina používa na zdvorilé žiadosti predovšetkým podmieňovací spôsob slovesa 'môcť' (mohol by som, mohli by ste) alebo priamo sloveso v podmieňovacom spôsobe (podali by ste, zavreli by ste). Nemecká konštrukcia 'würde' + Partizip II je v tomto kontexte ekvivalentom slovenského 'by' a používa sa na dosiahnutie podobného efektu zdvorilosti. V nemčine je táto forma veľmi bežná a často sa uprednostňuje pred inými konjunktívnymi tvarmi."
+    }
+  ],
   vocab: [
     {
-      de: "tausend",
-      sk: "tisíc",
-      example: "Tausend Euro ist viel Geld.",
-      exampleSk: "Tisíc eur je veľa peňazí.",
-      gender: null,
+      de: "die Rede",
+      sk: "reč, prejav",
+      gender: "F",
       srsId: "L77_V01",
-      recycledFrom: [34],
+      example: "Ich muss eine Rede halten.",
+      exampleSk: "Musím predniesť prejav.",
+      recycledFrom: []
     },
     {
-      de: "die Million",
-      sk: "milión",
-      example: "Wien hat fast zwei Millionen Einwohner.",
-      exampleSk: "Viedeň má takmer dva milióny obyvateľov.",
+      de: "die Angst",
+      sk: "strach",
       gender: "F",
       srsId: "L77_V02",
-      recycledFrom: [],
+      example: "Ich habe Angst vor der Rede.",
+      exampleSk: "Mám strach z prejavu.",
+      recycledFrom: []
     },
     {
-      de: "die Milliarde",
-      sk: "miliarda",
-      example: "Die Weltbevölkerung ist über acht Milliarden.",
-      exampleSk: "Svetová populácia je nad osem miliárd.",
+      de: "die Hilfe",
+      sk: "pomoc",
       gender: "F",
       srsId: "L77_V03",
-      recycledFrom: [],
+      example: "Kannst du mir Hilfe geben?",
+      exampleSk: "Môžeš mi pomôcť?",
+      recycledFrom: []
     },
     {
-      de: "das Prozent",
-      sk: "percento",
-      example: "50 Prozent der Bevölkerung sind Frauen.",
-      exampleSk: "50 percent populácie sú ženy.",
-      gender: "N",
+      de: "die Party",
+      sk: "párty, oslava",
+      gender: "F",
       srsId: "L77_V04",
-      recycledFrom: [],
+      example: "Wir sind auf einer Party.",
+      exampleSk: "Sme na párty.",
+      recycledFrom: []
     },
     {
-      de: "halb",
-      sk: "polovičný / pol",
-      example: "Fast die Hälfte der Einwohner sind jung.",
-      exampleSk: "Takmer polovica obyvateľov je mladá.",
-      gender: null,
+      de: "die Stelle",
+      sk: "miesto (v zmysle pozícia, situácia)",
+      gender: "F",
       srsId: "L77_V05",
-      recycledFrom: [],
+      example: "Ich würde an deiner Stelle ehrlich sein.",
+      exampleSk: "Na tvojom mieste by som bol úprimný.",
+      recycledFrom: []
     },
     {
-      de: "ein Viertel",
-      sk: "štvrtina",
-      example: "Ein Viertel der Welt spricht Englisch.",
-      exampleSk: "Štvrtina sveta hovorí po anglicky.",
-      gender: "N",
+      de: "der Satz",
+      sk: "veta",
+      gender: "M",
       srsId: "L77_V06",
-      recycledFrom: [],
+      example: "Dieser Satz ist schwer.",
+      exampleSk: "Táto veta je ťažká.",
+      recycledFrom: []
     },
     {
-      de: "drei Viertel",
-      sk: "tri štvrtiny",
-      example: "Drei Viertel der Studenten lernen eine Fremdsprache.",
-      exampleSk: "Tri štvrtiny študentov sa učia cudzí jazyk.",
-      gender: null,
+      de: "der Deutschkurs",
+      sk: "nemčinársky kurz",
+      gender: "M",
       srsId: "L77_V07",
-      recycledFrom: [],
+      example: "Ich besuche einen Deutschkurs.",
+      exampleSk: "Navštevujem kurz nemčiny.",
+      recycledFrom: []
     },
     {
-      de: "ungefähr / circa / etwa",
-      sk: "približne",
-      example: "Wien hat ungefähr 1,9 Millionen Einwohner.",
-      exampleSk: "Viedeň má približne 1,9 milióna obyvateľov.",
-      gender: null,
+      de: "der Mut",
+      sk: "odvaha",
+      gender: "M",
       srsId: "L77_V08",
-      recycledFrom: [],
+      example: "Ich brauche Mut für die Rede.",
+      exampleSk: "Potrebujem odvahu na prejav.",
+      recycledFrom: []
     },
     {
-      de: "die Einwohner (pl.)",
-      sk: "obyvatelia",
-      example: "Wie viele Einwohner hat deine Stadt?",
-      exampleSk: "Koľko obyvateľov má tvoje mesto?",
+      de: "die Prüfung",
+      sk: "skúška",
       gender: "F",
       srsId: "L77_V09",
-      recycledFrom: [],
+      example: "Ich habe die Prüfung bestanden.",
+      exampleSk: "Zložil som skúšku.",
+      recycledFrom: []
     },
     {
-      de: "die Statistik",
-      sk: "štatistika",
-      example: "Diese Statistik zeigt die Bevölkerung von Wien.",
-      exampleSk: "Táto štatistika ukazuje populáciu Viedne.",
-      gender: "F",
+      de: "das Niveau",
+      sk: "úroveň",
+      gender: "N",
       srsId: "L77_V10",
-      recycledFrom: [],
+      example: "Mein Niveau ist A1.",
+      exampleSk: "Moja úroveň je A1.",
+      recycledFrom: []
     },
     {
-      de: "der Anteil",
-      sk: "podiel",
-      example: "Der Anteil der Touristen ist sehr groß.",
-      exampleSk: "Podiel turistov je veľmi veľký.",
-      gender: "M",
+      de: "sagen",
+      sk: "povedať",
+      gender: null,
       srsId: "L77_V11",
-      recycledFrom: [],
+      example: "Ich möchte etwas sagen.",
+      exampleSk: "Chcel by som niečo povedať.",
+      recycledFrom: []
     },
     {
-      de: "die Mehrheit",
-      sk: "väčšina",
-      example: "Die Mehrheit der Wiener spricht Deutsch.",
-      exampleSk: "Väčšina Viedňanov hovorí po nemecky.",
-      gender: "F",
+      de: "sprechen",
+      sk: "hovoriť",
+      gender: null,
       srsId: "L77_V12",
-      recycledFrom: [],
+      example: "Ich spreche nicht so gut Deutsch.",
+      exampleSk: "Nemčina mi nejde tak dobre.",
+      recycledFrom: []
     },
     {
-      de: "die Minderheit",
-      sk: "menšina",
-      example: "Eine Minderheit spricht Türkisch.",
-      exampleSk: "Menšina hovorí po turecky.",
-      gender: "F",
+      de: "vorbereiten",
+      sk: "pripraviť",
+      gender: null,
       srsId: "L77_V13",
-      recycledFrom: [],
+      example: "Wir bereiten die Rede vor.",
+      exampleSk: "Pripravujeme prejav.",
+      recycledFrom: []
     },
     {
-      de: "steigen / gestiegen",
-      sk: "rásť / vzrásť",
-      example: "Die Preise sind um 3 Prozent gestiegen.",
-      exampleSk: "Ceny vzrástli o 3 percentá.",
+      de: "üben",
+      sk: "cvičiť, trénovať",
       gender: null,
       srsId: "L77_V14",
-      recycledFrom: [],
+      example: "Wir üben zusammen.",
+      exampleSk: "Cvičíme spolu.",
+      recycledFrom: []
     },
     {
-      de: "fallen / gefallen (klesať)",
-      sk: "klesať / klesnúť",
-      example: "Die Temperaturen sind gefallen.",
-      exampleSk: "Teploty klesli.",
+      de: "sein",
+      sk: "byť",
       gender: null,
       srsId: "L77_V15",
-      recycledFrom: [],
+      example: "Ich wäre gern mutiger.",
+      exampleSk: "Bol by som radšej odvážnejší.",
+      recycledFrom: []
     },
+    {
+      de: "Ich würde gerne...",
+      sk: "Rád by som...",
+      gender: null,
+      srsId: "L77_V16",
+      example: "Ich würde gerne ein bisschen sprechen.",
+      exampleSk: "Rád by som trochu prehovoril.",
+      recycledFrom: []
+    },
+    {
+      de: "Ich würde an deiner Stelle...",
+      sk: "Na tvojom mieste by som...",
+      gender: null,
+      srsId: "L77_V17",
+      example: "Ich würde an deiner Stelle keine Angst haben.",
+      exampleSk: "Na tvojom mieste by som sa nebál.",
+      recycledFrom: []
+    },
+    {
+      de: "nicht so gut",
+      sk: "nie tak dobre",
+      gender: null,
+      srsId: "L77_V18",
+      example: "Ich spreche nicht so gut Deutsch.",
+      exampleSk: "Nemčina mi nejde tak dobre.",
+      recycledFrom: []
+    },
+    {
+      de: "ehrlich sein",
+      sk: "byť úprimný",
+      gender: null,
+      srsId: "L77_V19",
+      example: "Es ist besser, ehrlich zu sein.",
+      exampleSk: "Je lepšie byť úprimný.",
+      recycledFrom: []
+    },
+    {
+      de: "zusammen üben",
+      sk: "cvičiť spolu",
+      gender: null,
+      srsId: "L77_V20",
+      example: "Wir können zusammen üben.",
+      exampleSk: "Môžeme cvičiť spolu.",
+      recycledFrom: []
+    },
+    {
+      de: "etwas sagen",
+      sk: "niečo povedať",
+      gender: null,
+      srsId: "L77_V21",
+      example: "Ich möchte etwas über mich sagen.",
+      exampleSk: "Chcel by som niečo o sebe povedať.",
+      recycledFrom: []
+    },
+    {
+      de: "Hilfe geben",
+      sk: "dať pomoc, pomôcť",
+      gender: null,
+      srsId: "L77_V22",
+      example: "Kannst du mir Hilfe geben?",
+      exampleSk: "Môžeš mi pomôcť?",
+      recycledFrom: []
+    },
+    {
+      de: "Angst haben",
+      sk: "mať strach",
+      gender: null,
+      srsId: "L77_V23",
+      example: "Ich habe Angst vor der Prüfung.",
+      exampleSk: "Mám strach zo skúšky.",
+      recycledFrom: []
+    }
   ],
   exercises: [
     {
       type: "flashcard",
-      instruction: "Precvič si slovnú zásobu čísel a štatistík. Pozri nemecké slovo a daj slovenský ekvivalent.",
-      items: [
-        "L77_V01",
-        "L77_V02",
-        "L77_V03",
-        "L77_V04",
-        "L77_V05",
-        "L77_V06",
-        "L77_V07",
-        "L77_V08",
-        "L77_V09",
-        "L77_V10",
-        "L77_V11",
-        "L77_V12",
-        "L77_V13",
-        "L77_V14",
-        "L77_V15",
-      ],
-    },
-    {
-      type: "mcq",
-      instruction: "Vyber správnu odpoveď o číslach, percentách a štatistikách v nemčine.",
-      questions: [
-        {
-          question: "Ako sa správne povie 1.000.000 po nemecky?",
-          options: [
-            "ein Million",
-            "eine Million",
-            "tausend Tausend",
-            "ein Milliard",
-          ],
-          answer: "eine Million",
-          explanation: "'Million' je ženského rodu v nemčine — preto 'EINE Million' (nie 'ein'). 'Milliarde' je tiež F: 'eine Milliarde'. Pozor: slovensky 'milión' je mužský rod!",
-        },
-        {
-          question: "Ako nemčina zapisuje číslo 'jeden milión'?",
-          options: [
-            "1,000,000",
-            "1.000.000",
-            "1 000 000",
-            "1/000/000",
-          ],
-          answer: "1.000.000",
-          explanation: "Nemčina používa BODKU (.) ako oddeľovač tisícov: 1.000.000. Angličtina používa čiarku: 1,000,000. Slovenčina používa medzeru: 1 000 000. Toto je bežná zámennosť!",
-        },
-        {
-          question: "Čo znamená 'die Mehrheit'?",
-          options: ["Menšina", "Rovnosť", "Väčšina", "Podiel"],
-          answer: "Väčšina",
-          explanation: "'die Mehrheit' = väčšina (od 'mehr' = viac). Opak: 'die Minderheit' = menšina (od 'minder' = menej). Obidve sú dôležité pri komentovaní štatistík.",
-        },
-        {
-          question: "Ako je 'Prozent' (percento) v nemčine gramaticky zvláštne?",
-          options: [
-            "Má množné číslo 'Prozente'.",
-            "Je nepremenné — '50 Prozent' (nie 'Prozente').",
-            "Je vždy v akuzatíve.",
-            "Používa sa len s 'die'.",
-          ],
-          answer: "Je nepremenné — '50 Prozent' (nie 'Prozente').",
-          explanation: "'Prozent' je invariabilné podstatné meno: '50 Prozent', '10 Prozent', '100 Prozent' — vždy 'Prozent' bez zmeny. Podobne ako 'Euro' — '10 Euro' (nie '10 Euros').",
-        },
-        {
-          question: "Čo znamená 'Die Preise sind gestiegen'?",
-          options: [
-            "Ceny klesli.",
-            "Ceny zostali rovnaké.",
-            "Ceny vzrástli.",
-            "Ceny sú nové.",
-          ],
-          answer: "Ceny vzrástli.",
-          explanation: "'steigen' = rásť, 'gestiegen' = vzrástol/a (Perfekt s 'sein'). 'Die Preise sind gestiegen.' = Ceny vzrástli. Opak: 'fallen' / 'gefallen' = klesať/klesnúť.",
-        },
-        {
-          question: "Ako vyjadríš 'tri štvrtiny' po nemecky?",
-          options: [
-            "drei Halb",
-            "drei Viertel",
-            "dreiviertel",
-            "3/4 Viertel",
-          ],
-          answer: "drei Viertel",
-          explanation: "'ein Viertel' = 1/4 = štvrtina. 'zwei Viertel' = 1/2. 'drei Viertel' = 3/4. Pozor: 'dreiviertel' (jedno slovo) sa používa na čas: 'dreiviertel vier' = 3/4 4 = 15:45.",
-        },
-      ],
-    },
-    {
-      type: "fill",
-      instruction: "Doplň správne číslo, zlomok alebo štatistický výraz.",
-      questions: [
-        {
-          sentence: "Wien hat ___ 1,9 Millionen Einwohner.",
-          answer: "ungefähr",
-          hint: "približne (approximation)",
-          explanation: "'ungefähr' = približne. Synonymá: 'circa', 'etwa'. Používa sa, keď číslo nie je presné. 'Wien hat ungefähr 1,9 Millionen Einwohner.' = Viedeň má približne 1,9 milióna obyvateľov.",
-        },
-        {
-          sentence: "Die Weltbevölkerung ist ___ acht Milliarden Menschen.",
-          answer: "über",
-          hint: "nad / viac ako",
-          explanation: "'über' = nad/viac ako. 'über acht Milliarden' = viac ako 8 miliárd. Ďalšie výrazy: 'unter' (menej ako), 'fast' (takmer), 'genau' (presne).",
-        },
-        {
-          sentence: "___ der Wiener spricht Deutsch als Muttersprache.",
-          answer: "Die Mehrheit",
-          hint: "väčšina",
-          explanation: "'die Mehrheit' = väčšina. Veta: 'Die Mehrheit der Wiener spricht Deutsch.' — 'der Wiener' je genitív množného čísla: Viedňanov.",
-        },
-        {
-          sentence: "Die Preise sind um fünf ___ gestiegen.",
-          answer: "Prozent",
-          hint: "percento (nepremenné)",
-          explanation: "'Prozent' je nepremenné: 'fünf Prozent' (nie 'Prozente'). 'um fünf Prozent gestiegen' = vzrástli o 5 percent.",
-        },
-        {
-          sentence: "___ der Studenten lernen zwei oder mehr Fremdsprachen.",
-          answer: "Ein Viertel",
-          hint: "1/4",
-          explanation: "'Ein Viertel' = 1/4 = štvrtina. 'Ein Viertel der Studenten' = Štvrtina študentov. Článok 'Ein' sa tu používa ako neurčitý člen (štvrtina).",
-        },
-      ],
-    },
-    {
-      type: "listen",
-      instruction: "Počúvaj vety so štatistikami a číslami a opakuj ich nahlas.",
-      questions: [
-        { de: "Wien hat ungefähr 1,9 Millionen Einwohner.", sk: "Viedeň má približne 1,9 milióna obyvateľov." },
-        { de: "Fast die Hälfte der Touristen kommt aus Deutschland.", sk: "Takmer polovica turistov pochádza z Nemecka." },
-        { de: "Die Preise sind um drei Prozent gestiegen.", sk: "Ceny vzrástli o tri percentá." },
-        { de: "Ein Viertel der Weltbevölkerung lebt in Asien.", sk: "Štvrtina svetovej populácie žije v Ázii." },
-        { de: "Die Mehrheit spricht Deutsch.", sk: "Väčšina hovorí po nemecky." },
-        { de: "Circa zwei Millionen Menschen besuchen Wien pro Jahr.", sk: "Približne dva milióny ľudí navštívi Viedeň za rok." },
-      ],
+      instruction: "Prezri si slovíčka tejto lekcie. Klikni na kartičku pre preklad."
     },
     {
       type: "match",
-      instruction: "Spoj číslo alebo výraz s jeho slovenským prekladom.",
+      instruction: "Spojte nemecké slová so slovenskými významami:",
       pairs: [
-        ["tausend", "tisíc"],
-        ["die Million", "milión"],
-        ["die Milliarde", "miliarda"],
-        ["ungefähr", "približne"],
-        ["die Mehrheit", "väčšina"],
-        ["die Minderheit", "menšina"],
-        ["ein Viertel", "štvrtina"],
-        ["gestiegen sein", "vzrásť (Perfekt)"],
-      ],
-    },
-    {
-      type: "dialogue",
-      instruction:
-        "Jana a jej kolega diskutujú o článku so štatistikami o Viedni.",
-      lines: [
-        { speaker: "A", de: "Schau mal diesen Artikel! Wie viele Menschen wohnen in Wien?", sk: "Pozri na tento článok! Koľko ľudí býva vo Viedni?" },
-        { speaker: "B", de: "Ungefähr 1,9 Millionen. Das ist viel, oder?", sk: "Približne 1,9 milióna. To je veľa, nie?" },
-        { speaker: "A", de: "Ja! Bratislava hat nur etwa 450.000 Einwohner.", sk: "Áno! Bratislava má len asi 450 000 obyvateľov." },
-        { speaker: "B", de: "Interessant. Und wie viele Touristen kommen nach Wien pro Jahr?", sk: "Zaujímavé. A koľko turistov príde do Viedne za rok?" },
-        { speaker: "A", de: "Etwa 17 Millionen Touristen pro Jahr!", sk: "Asi 17 miliónov turistov za rok!" },
-        { speaker: "B", de: "Wow! Das ist fast zehnmal mehr als Einwohner.", sk: "Wow! To je takmer desaťkrát viac ako obyvateľov." },
-        { speaker: "A", de: "Und schau: 47% sprechen Deutsch als Muttersprache.", sk: "A pozri: 47% hovorí po nemecky ako materinský jazyk." },
-        { speaker: "B", de: "Das bedeutet, die Mehrheit spricht Deutsch zu Hause.", sk: "To znamená, väčšina hovorí po nemecky doma." },
-        { speaker: "A", de: "Ja. Und die Preise in Wien sind auch gestiegen — um 8% letztes Jahr.", sk: "Áno. A ceny vo Viedni tiež vzrástli — o 8% minulý rok." },
-        { speaker: "B", de: "Das ist schwierig für junge Menschen wie uns.", sk: "To je ťažké pre mladých ľudí ako my." },
-        { speaker: "A", de: "Stimmt. Aber Wien ist ein Viertel der österreichischen Wirtschaft!", sk: "Pravda. Ale Viedeň je štvrtina rakúskej ekonomiky!" },
-        { speaker: "B", de: "Das habe ich nicht gewusst. Eine sehr interessante Statistik!", sk: "To som nevedel/a. Veľmi zaujímavá štatistika!" },
-      ],
-      comprehensionQuestions: [
-        {
-          question: "Koľko turistov navštívi Viedeň za rok?",
-          options: ["1,9 milióna", "17 miliónov", "450 000", "8 miliónov"],
-          answer: "17 miliónov",
-        },
-        {
-          question: "Koľko percent Viedňanov hovorí po nemecky ako materinský jazyk?",
-          options: ["30%", "47%", "75%", "90%"],
-          answer: "47%",
-        },
-        {
-          question: "O koľko percent vzrástli ceny vo Viedni minulý rok?",
-          options: ["3%", "5%", "8%", "10%"],
-          answer: "8%",
-        },
-      ],
-    },
-    {
-      type: "minitext",
-      instruction: "Prečítaj si fakty o Viedni zo štatistického hárka. Potom odpovedz na otázky.",
-      text:
-        "Wien — Statistik 2025\n\nEinwohner: ca. 1,93 Millionen (Stand: 2025)\nFlächenanteil: Wien macht 0,5% der österreichischen Fläche aus.\nSprachen: 47% Deutsch als Erstsprache; 13% Türkisch; 10% Serbisch/Kroatisch.\nTourismus: ca. 17 Millionen Übernachtungen pro Jahr.\nWirtschaft: Wien produziert etwa 25% (ein Viertel) des österreichischen BIP.\nPreise: Mieten sind in den letzten 5 Jahren um durchschnittlich 30% gestiegen.",
-      textSk:
-        "Viedeň — Štatistika 2025\n\nObyvateľov: asi 1,93 milióna (stav: 2025)\nPodiel plochy: Viedeň tvorí 0,5% rakúskej plochy.\nJazyky: 47% nemčina ako prvý jazyk; 13% turečtina; 10% srbčina/chorvátčina.\nCestovný ruch: asi 17 miliónov prenocovaní za rok.\nEkonomika: Viedeň produkuje asi 25% (štvrtinu) rakúskeho HDP.\nCeny: Nájmy za posledných 5 rokov vzrástli v priemere o 30%.",
-      questions: [
-        {
-          question: "Koľko percent rakúskej plochy zaberá Viedeň?",
-          options: ["0,5%", "5%", "25%", "47%"],
-          answer: "0,5%",
-        },
-        {
-          question: "Aký podiel rakúskeho HDP produkuje Viedeň?",
-          options: ["Jednu desatinu", "Jednu štvrtinu", "Jednu polovicu", "Tri štvrtiny"],
-          answer: "Jednu štvrtinu",
-        },
-        {
-          question: "O koľko percent vzrástli nájmy za posledných 5 rokov?",
-          options: ["8%", "13%", "25%", "30%"],
-          answer: "30%",
-        },
-      ],
-    },
-    {
-      type: "freewrite",
-      instruction: "Napíš text po nemecky o meste s číslami a štatistikami.",
-      prompt:
-        "Beschreibe deine Stadt mit Zahlen und Statistiken. Wie viele Einwohner? Wie viele Touristen pro Jahr? Was ist gestiegen oder gefallen? (Opíš svoje mesto číslami a štatistikami. Koľko obyvateľov? Koľko turistov ročne? Čo vzrástlo alebo kleslo?)",
-      minWords: 35,
-      exampleAnswer:
-        "Bratislava hat ungefähr 450.000 Einwohner. Das ist viel kleiner als Wien! Pro Jahr kommen etwa 2 Millionen Touristen. Die Preise in Bratislava sind auch gestiegen — um circa 20% in fünf Jahren. Die Mehrheit der Einwohner spricht Slowakisch. Etwa ein Viertel spricht auch Ungarisch oder Tschechisch. Bratislava ist eine schöne und internationale Stadt!",
+        [
+          "die Rede",
+          "reč, prejav"
+        ],
+        [
+          "die Angst",
+          "strach"
+        ],
+        [
+          "die Hilfe",
+          "pomoc"
+        ],
+        [
+          "die Party",
+          "párty, oslava"
+        ],
+        [
+          "die Stelle",
+          "miesto (pozícia)"
+        ],
+        [
+          "der Mut",
+          "odvaha"
+        ],
+        [
+          "die Prüfung",
+          "skúška"
+        ],
+        [
+          "das Niveau",
+          "úroveň"
+        ],
+        [
+          "sagen",
+          "povedať"
+        ],
+        [
+          "sprechen",
+          "hovoriť"
+        ]
+      ]
     },
     {
       type: "wordorder",
-      instruction: "Zoraď slová do správnej nemeckej vety.",
+      instruction: "Usporiadajte slová do správneho nemeckého poradia.",
       sentences: [
         {
-          words: ["Zuerst", "lese", "ich", "die", "Aufgabe", "genau", "durch"],
-          correct: "Zuerst lese ich die Aufgabe genau durch",
-          hint: "Najprv si dôkladne prečítam úlohu.",
-          explanation: "'Zuerst' na začiatku → Inversion; 'durchlesen' je trennbares Verb — 'durch' stojí na konci.",
+          words: [
+            "Ich",
+            "gerne",
+            "würde",
+            "ein",
+            "Buch",
+            "lesen"
+          ],
+          correct: "Ich würde gerne ein Buch lesen",
+          hint: "Rád by som si prečítal knihu.",
+          explanation: "Konjunktív II s 'würde' sa používa na vyjadrenie želaní. V tejto konštrukcii je 'würde' na druhom mieste a sloveso v infinitíve na konci vety."
         },
         {
-          words: ["Dann", "markiere", "ich", "die", "Schlüsselwörter", "im", "Text"],
-          correct: "Dann markiere ich die Schlüsselwörter im Text",
-          hint: "Potom v texte označím kľúčové slová.",
-          explanation: "'Dann' = potom — temporálny adverb spôsobuje inverziu.",
+          words: [
+            "du",
+            "an",
+            "deiner",
+            "Stelle",
+            "würde",
+            "Ich",
+            "nichts",
+            "sagen"
+          ],
+          correct: "Ich würde an deiner Stelle nichts sagen",
+          hint: "Na tvojom mieste by som nič nepovedal.",
+          explanation: "Fráza 'an deiner Stelle' (na tvojom mieste) sa používa na radu. Konštrukcia 'Ich würde an deiner Stelle...' je bežný spôsob, ako niečo odporučiť."
         },
         {
-          words: ["Jana", "hört", "den", "Dialog", "zweimal", "und", "macht", "Notizen"],
-          correct: "Jana hört den Dialog zweimal und macht Notizen",
-          hint: "Jana počúva dialóg dvakrát a robí si poznámky.",
-          explanation: "Stratégia Hören: počúvať dvakrát + robiť poznámky — dve súradnicové vety spojené 'und'.",
+          words: [
+            "Sie",
+            "mir",
+            "bitte",
+            "helfen",
+            "könnten",
+            "würden"
+          ],
+          correct: "Sie würden mir bitte helfen",
+          hint: "Pomohli by ste mi, prosím?",
+          explanation: "Táto forma s 'würden' je veľmi zdvorilý spôsob, ako niečo požiadať. 'würden' je na druhom mieste, sloveso 'helfen' je na konci."
         },
         {
-          words: ["Man", "muss", "nicht", "jedes", "Wort", "verstehen"],
-          correct: "Man muss nicht jedes Wort verstehen",
-          hint: "Nemusíš rozumieť každému slovu.",
-          explanation: "'nicht' stojí pred infinitívom na konci vety — kľúčová skúšobná stratégia.",
+          words: [
+            "wir",
+            "zusammen",
+            "üben",
+            "würden",
+            "gerne",
+            "Deutsch"
+          ],
+          correct: "Wir würden gerne zusammen Deutsch üben",
+          hint: "Radi by sme spolu cvičili nemčinu.",
+          explanation: "Vyjadrenie spoločného želania. 'würden' je na druhom mieste, infinitív 'üben' na konci vety."
         },
         {
-          words: ["Bei", "der", "Aufgabe", "suche", "ich", "nach", "konkreten", "Informationen"],
-          correct: "Bei der Aufgabe suche ich nach konkreten Informationen",
-          hint: "Pri úlohe hľadám konkrétne informácie.",
-          explanation: "'Bei der Aufgabe' na začiatku → inverzia; 'suchen nach' = hľadať + Dativ.",
+          words: [
+            "Ich",
+            "Angst",
+            "die",
+            "Prüfung",
+            "vor",
+            "hätte",
+            "würde"
+          ],
+          correct: "Ich würde vor der Prüfung Angst haben",
+          hint: "Mal by som strach zo skúšky.",
+          explanation: "Vyjadrenie hypotetického stavu alebo pocitu. 'würde' je na druhom mieste, 'haben' na konci."
+        }
+      ]
+    },
+    {
+      type: "fill",
+      instruction: "Doplňte správne slovo alebo tvar slova.",
+      questions: [
+        {
+          sentence: "Ich ______ gerne mehr Deutsch sprechen.",
+          answer: "würde",
+          hint: "Použite Konjunktív II s 'würde' na vyjadrenie želania.",
+          explanation: "Použitie 'würde' + infinitív je štandardný spôsob, ako vyjadriť želanie v nemčine."
         },
-      ],
+        {
+          sentence: "Wenn ich du wäre, ______ ich mehr üben.",
+          answer: "würde",
+          hint: "Na tvojom mieste by si...",
+          explanation: "Konštrukcia 'Wenn ich du wäre, würde ich...' sa používa na radu."
+        },
+        {
+          sentence: "Er hat ______ keine Angst vor der Prüfung.",
+          answer: "mehr",
+          hint: "Nie je to 'viac' strach?",
+          explanation: "Použitie 'mehr' (viac) v spojení so strachom alebo inými pocitmi."
+        },
+        {
+          sentence: "Kannst du mir bitte ______?",
+          answer: "helfen",
+          hint: "Potrebujem pomoc.",
+          explanation: "Po slovese 'kannst du' nasleduje infinitív slovesa, ktoré vyjadruje akciu."
+        },
+        {
+          sentence: "Wir ______ gerne eine Party machen.",
+          answer: "würden",
+          hint: "Chceli by sme urobiť párty.",
+          explanation: "Vyjadrenie priania pomocou 'würden' + infinitív."
+        },
+        {
+          sentence: "Sie ______ nicht so gut Deutsch.",
+          answer: "spricht",
+          hint: "Tretia osoba jednotného čísla od 'sprechen'.",
+          explanation: "Správne časovanie slovesa 'sprechen' pre tretiu osobu jednotného čísla (er/sie/es)."
+        },
+        {
+          sentence: "Ich ______ gerne den Deutschkurs besuchen.",
+          answer: "würde",
+          hint: "Rád by som navštívil kurz.",
+          explanation: "Vyjadrenie želania pomocou 'würde' + infinitív."
+        }
+      ]
+    },
+    {
+      type: "listen",
+      instruction: "Zapíšte si, čo počujete:",
+      questions: [
+        {
+          de: "die Rede",
+          sk: "reč, prejav"
+        },
+        {
+          de: "die Angst",
+          sk: "strach"
+        },
+        {
+          de: "die Hilfe",
+          sk: "pomoc"
+        },
+        {
+          de: "die Party",
+          sk: "párty, oslava"
+        },
+        {
+          de: "die Stelle",
+          sk: "miesto (pozícia)"
+        },
+        {
+          de: "der Mut",
+          sk: "odvaha"
+        },
+        {
+          de: "die Prüfung",
+          sk: "skúška"
+        },
+        {
+          de: "das Niveau",
+          sk: "úroveň"
+        },
+        {
+          de: "Ich würde gerne...",
+          sk: "Rád by som..."
+        },
+        {
+          de: "Ich würde an deiner Stelle...",
+          sk: "Na tvojom mieste by som..."
+        }
+      ]
+    },
+    {
+      type: "mcq",
+      instruction: "Vyberte správnu možnosť.",
+      questions: [
+        {
+          question: "Čo znamená 'Ich würde gerne...?'",
+          options: [
+            "Chcel som...",
+            "Budem chcieť...",
+            "Rád by som...",
+            "Chcel som byť..."
+          ],
+          answer: 2,
+          explanation: "'Ich würde gerne...' je zdvorilý spôsob, ako vyjadriť želanie, podobne ako 'Rád by som...'"
+        },
+        {
+          question: "Ktorá veta správne používa Konjunktív II s 'würde'?",
+          options: [
+            "Ich würde lesen ein Buch.",
+            "Ich ein Buch würde lesen.",
+            "Ich würde ein Buch lesen.",
+            "Ein Buch ich würde lesen."
+          ],
+          answer: 2,
+          explanation: "V Konjunktíve II s 'würde' je 'würde' na druhom mieste a infinitív slovesa na konci vety."
+        },
+        {
+          question: "Ako by ste preložili 'Ich würde an deiner Stelle nichts sagen.'?",
+          options: [
+            "Povedal som ti, že nič nepovieš.",
+            "Na tvojom mieste by som nič nepovedal.",
+            "Nemal by som nič povedať na tvojom mieste.",
+            "Povedz mi, čo by si povedal."
+          ],
+          answer: 1,
+          explanation: "Fráza 'an deiner Stelle' znamená 'na tvojom mieste' a používa sa na radu."
+        },
+        {
+          question: "Čo znamená 'die Angst'?",
+          options: [
+            "odvaha",
+            "strach",
+            "pomoc",
+            "reč"
+          ],
+          answer: 1,
+          explanation: "'Die Angst' je nemecké slovo pre 'strach'."
+        },
+        {
+          question: "Ktoré sloveso sa hodí do vety: 'Er hat ______ vor der Prüfung.'",
+          options: [
+            "die",
+            "den",
+            "Angst",
+            "Mut"
+          ],
+          answer: 2,
+          explanation: "Fráza 'Angst haben vor' znamená 'mať strach z niečoho'."
+        },
+        {
+          question: "Ako sa povie 'cvičiť spolu'?",
+          options: [
+            "zusammen sprechen",
+            "zusammen sagen",
+            "zusammen üben",
+            "zusammen helfen"
+          ],
+          answer: 2,
+          explanation: "'Zusammen üben' znamená 'cvičiť spolu'."
+        },
+        {
+          question: "Čo znamená 'die Prüfung'?",
+          options: [
+            "úroveň",
+            "miesto (pozícia)",
+            "skúška",
+            "reč"
+          ],
+          answer: 2,
+          explanation: "'Die Prüfung' je nemecké slovo pre 'skúška'."
+        }
+      ]
+    },
+    {
+      type: "minitext",
+      instruction: "Lies den Dialog und beantworte die Fragen.",
+      text: "Jana: Hallo Luisa. Ich habe ein Problem.\nLuisa: Hallo Jana. Was ist los?\nJana: Heute ist eine Party. Ich soll eine Rede halten. Ich habe große Angst.\nLuisa: Oh je. Aber du sprichst schon gut Deutsch.\nJana: Nicht so gut. Ich würde gerne etwas sagen, aber ich habe Angst, Fehler zu machen.\nLuisa: Ich würde an deiner Stelle einfach ehrlich sein. Sag, dass du noch lernst. Das ist kein Problem.\nJana: Ehrlich sein? Das ist eine gute Idee. Können wir zusammen üben?\nLuisa: Ja, klar! Ich würde dir gerne helfen. Wir üben jetzt zusammen.",
+      textSk: "Jana: Ahoj Luisa. Mám problém.\nLuisa: Ahoj Jana. Čo sa deje?\nJana: Dnes je párty. Mám predniesť reč. Veľmi sa bojím.\nLuisa: Ach jaj. Ale ty už hovoríš dobre po nemecky.\nJana: Nie tak dobre. Rád by som niečo povedal, ale bojím sa urobiť chyby.\nLuisa: Na tvojom mieste by som bola úprimná. Povedz, že sa ešte učíš. To nie je problém.\nJana: Byť úprimná? To je dobrý nápad. Môžeme spolu cvičiť?\nLuisa: Áno, jasné! Rád by som ti pomohol. Cvičíme spolu teraz.",
+      questions: [
+        {
+          question: "Warum hat Jana Angst?",
+          options: [
+            "Sie muss eine Rede halten.",
+            "Sie mag die Party nicht.",
+            "Sie spricht nicht gerne Deutsch.",
+            "Sie hat keine Hilfe von Luisa."
+          ],
+          answer: 0,
+          explanation: "Jana sagt: \"Ich soll eine Rede halten. Ich habe große Angst.\""
+        },
+        {
+          question: "Was sagt Jana über ihre Deutschkenntnisse?",
+          options: [
+            "Sie spricht schon perfekt Deutsch.",
+            "Sie spricht noch nicht so gut Deutsch.",
+            "Sie will kein Deutsch mehr sprechen.",
+            "Sie spricht nur mit Luisa Deutsch."
+          ],
+          answer: 1,
+          explanation: "Jana sagt: \"Ich würde gerne etwas sagen, aber ich spreche noch nicht so gut Deutsch.\""
+        },
+        {
+          question: "Was schlägt Luisa vor?",
+          options: [
+            "Jana soll die Rede nicht halten.",
+            "Jana soll die Rede auf Slowakisch halten.",
+            "Jana soll ehrlich sein und sagen, dass sie noch lernt.",
+            "Jana soll die Rede zu Hause üben."
+          ],
+          answer: 2,
+          explanation: "Luisa sagt: \"Ich würde an deiner Stelle einfach ehrlich sein. Sag, dass du noch lernst.\""
+        },
+        {
+          question: "Was machen Jana und Luisa am Ende?",
+          options: [
+            "Sie gehen zur Party.",
+            "Sie üben zusammen die Rede.",
+            "Jana lernt Deutsch in einem Kurs.",
+            "Luisa gibt Jana eine Prüfung."
+          ],
+          answer: 1,
+          explanation: "Jana fragt: \"Können wir zusammen üben?\" und Luisa antwortet: \"Ja, klar! Ich würde dir gerne helfen. Wir üben jetzt zusammen.\""
+        }
+      ]
     },
     {
       type: "speaking",
-      instruction: "Počúvaj nemeckú vetu. Potom hovor nahlas a skontroluj sa.",
+      instruction: "Höre zu und sprich nach.",
       phrases: [
         {
-          de: "Zuerst lese ich die Aufgabe genau durch.",
-          sk: "Najprv si dôkladne prečítam úlohu.",
-          tip: "zuerst: cu-ÉRST — zu=cu, er=er",
+          de: "Angst",
+          sk: "strach",
+          tip: "ng=[ŋ], t=[tʰ]"
         },
         {
-          de: "Ich markiere die Schlüsselwörter im Text.",
-          sk: "Označujem kľúčové slová v texte.",
-          tip: "Schlüsselwörter: ŠLÜS-sel-vör-ter — ü=ü, ö=ö",
+          de: "Mut",
+          sk: "odvaha",
+          tip: "u=[u], t=[tʰ]"
         },
         {
-          de: "Man muss nicht jedes Wort verstehen.",
-          sk: "Nemusíš rozumieť každému slovu.",
-          tip: "muss: mus — u krátke, ss=s",
+          de: "Ich habe Angst.",
+          sk: "Mám strach.",
+          tip: "Ich=[iç], habe=[ˈhaːbə]"
         },
         {
-          de: "Jana hört den Dialog zweimal.",
-          sk: "Jana počúva dialóg dvakrát.",
-          tip: "zweimal: CVAJ-mal — zw=cv, ei=aj",
+          de: "Ich würde gerne üben.",
+          sk: "Rád by som cvičil.",
+          tip: "würde=[ˈvyːrdə], üben=[ˈyːbn̩]"
         },
         {
-          de: "Dann schreibe ich die Antwort auf.",
-          sk: "Potom napíšem odpoveď.",
-          tip: "Antwort: ANT-vort — w=v, or=or",
+          de: "Ich würde gerne helfen.",
+          sk: "Rád by som pomohol.",
+          tip: "helfen=[ˈhɛlfŋ̩]"
         },
-      ],
+        {
+          de: "Ich würde gerne zusammen üben.",
+          sk: "Rád by som cvičil spolu.",
+          tip: "zusammen=[t͡suˈzamən]"
+        },
+        {
+          de: "Ich würde gerne den Deutschkurs vorbereiten.",
+          sk: "Rád by som pripravil nemčinársky kurz.",
+          tip: "vorbereiten=[fɔʁbəˌʁaɪtn̩]"
+        },
+        {
+          de: "Ich würde an deiner Stelle die Prüfung nicht so leicht nehmen.",
+          sk: "Na tvojom mieste by som skúšku nebral tak ľahko.",
+          tip: "Stelle=[ˈʃtɛlə], leicht=[laɪçt]"
+        }
+      ]
     },
+    {
+      type: "truefalse",
+      instruction: "Rozhodnite, či sú nasledujúce tvrdenia pravdivé (Wahr) alebo nepravdivé (Falsch).",
+      statements: [
+        {
+          statement: "Ich würde gerne die Prüfung machen.",
+          isTrue: true,
+          explanation: "Toto je správne použitie 'würde gerne' na vyjadrenie priania."
+        },
+        {
+          statement: "Er würde nicht so gut sprechen.",
+          isTrue: true,
+          explanation: "Toto je správne použitie 'würde' na vyjadrenie predpokladu alebo situácie."
+        },
+        {
+          statement: "Sie würde Angst haben die Rede.",
+          isTrue: false,
+          explanation: "Správne by bolo: 'Sie hätte Angst vor der Rede.' alebo 'Sie würde Angst vor der Rede haben.' Tvar 'Angst haben' sa v Konjunktíve II s 'würde' používa s predložkou 'vor'."
+        },
+        {
+          statement: "Wir würde zusammen üben.",
+          isTrue: false,
+          explanation: "Správny tvar pre 'wir' je 'würden'. Teda: 'Wir würden zusammen üben.'"
+        },
+        {
+          statement: "Ich würde an deiner Stelle Hilfe geben.",
+          isTrue: true,
+          explanation: "Toto je správne použitie 'Ich würde an deiner Stelle...' na vyjadrenie rady."
+        }
+      ]
+    },
+    {
+      type: "dictation",
+      instruction: "Napíšte vety, ktoré počujete.",
+      sentences: [
+        {
+          de: "Ich übe Deutsch.",
+          sk: "Učím sa po nemecky."
+        },
+        {
+          de: "Ich habe Angst.",
+          sk: "Mám strach."
+        },
+        {
+          de: "Ich würde gerne helfen.",
+          sk: "Rád by som pomohol."
+        },
+        {
+          de: "Wir üben zusammen den Satz.",
+          sk: "Cvičíme spolu túto vetu."
+        },
+        {
+          de: "Ich würde an deiner Stelle die Prüfung vorbereiten.",
+          sk: "Na tvojom mieste by som pripravil tú skúšku."
+        }
+      ]
+    },
+    {
+      type: "categorysort",
+      instruction: "Roztrieďte slová do správnych kategórií.",
+      categories: [
+        {
+          name: "Veci (Nomen)",
+          color: "blue",
+          words: [
+            "die Rede",
+            "die Angst",
+            "die Hilfe",
+            "die Party",
+            "die Stelle",
+            "der Satz",
+            "der Deutschkurs",
+            "der Mut",
+            "die Prüfung",
+            "das Niveau"
+          ]
+        },
+        {
+          name: "Činnosti (Verben)",
+          color: "rose",
+          words: [
+            "sagen",
+            "sprechen",
+            "vorbereiten",
+            "üben",
+            "sein"
+          ]
+        }
+      ],
+      explanation: "Slová sú rozdelené na podstatné mená (Nomen) a slovesá (Verben)."
+    },
+    {
+      type: "translation",
+      instruction: "Preložte slovenské vety do nemčiny.",
+      sentences: [
+        {
+          sk: "Rád by som išiel na párty.",
+          answer: "Ich würde gerne zur Party gehen.",
+          hint: "Ich würde gerne",
+          explanation: "Použili sme 'Ich würde gerne...', aby sme vyjadrili prianie. Sloveso 'gehen' je na konci v infinitíve."
+        },
+        {
+          sk: "Na tvojom mieste by som povedal pravdu.",
+          answer: "Ich würde an deiner Stelle die Wahrheit sagen.",
+          hint: "Ich würde an deiner Stelle",
+          explanation: "Fráza 'Ich würde an deiner Stelle...' sa používa na vyjadrenie rady. Sloveso 'sagen' je na konci v infinitíve."
+        },
+        {
+          sk: "Nemčina nie je tak dobrá.",
+          answer: "Mein Deutsch ist nicht so gut.",
+          hint: "nicht so gut",
+          explanation: "Táto veta opisuje stav, nie je to Konjunktív II. Použili sme 'Mein Deutsch' (moja nemčina) a 'ist nicht so gut'."
+        },
+        {
+          sk: "Mohli by ste mi pomôcť?",
+          answer: "Könnten Sie mir bitte helfen?",
+          hint: "Könnten Sie",
+          explanation: "Toto je zdvorilá otázka. Použili sme Konjunktív II slovesa 'können' ('Könnten Sie...'). Alternatívne by sa dalo použiť aj 'Ich würde Sie gerne um Hilfe bitten.'"
+        }
+      ]
+    },
+    {
+      type: "conjugation",
+      instruction: "Doplňte správne tvary slovesa 'haben' v Konjunktíve II s 'würde'.",
+      verbs: [
+        {
+          infinitive: "haben",
+          translation: "mať",
+          forms: [
+            {
+              pronoun: "ich",
+              correct: "Ich würde haben"
+            },
+            {
+              pronoun: "du",
+              correct: "Du würdest haben"
+            },
+            {
+              pronoun: "er/sie/es",
+              correct: "Er/Sie/Es würde haben"
+            },
+            {
+              pronoun: "wir",
+              correct: "Wir würden haben"
+            },
+            {
+              pronoun: "ihr",
+              correct: "Ihr würdet haben"
+            },
+            {
+              pronoun: "sie/Sie",
+              correct: "Sie/Sie würden haben"
+            }
+          ],
+          note: "Sloveso 'haben' v Konjunktíve II s 'würde' sa používa na vyjadrenie prianí alebo hypotetických situácií, napr. 'Ich würde gerne mehr Zeit haben.' (Rád by som mal viac času.)"
+        }
+      ]
+    }
   ],
-  reviewWords: [
-    "die Million",
-    "die Milliarde",
-    "ungefähr / circa / etwa",
-    "die Mehrheit",
-    "die Minderheit",
-    "ein Viertel",
-    "das Prozent",
-    "steigen / gestiegen",
-    "fallen / gefallen",
-  ],
-  lessonNotes:
-    "Výborne! Teraz vieš pracovať s veľkými číslami a štatistikami. Pamätaj: 'eine Million' (nie 'ein'!), 'Prozent' je nepremenné, nemčina používa bodku pre tisíce. Ďalšia lekcia: zdravie a výživa — odporúčania s 'sollen'.",
+  reviewWords: []
 };

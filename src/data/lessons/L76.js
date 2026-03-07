@@ -1,513 +1,934 @@
-﻿export const lesson76 = {
+export const lesson76 = {
   id: 76,
   week: 16,
   day: 1,
-  title: "Wetter und Kleidung im Alltag",
-  topic: "Počasie a oblečenie v každodennom živote",
+  title: "Adjektive mit -los und gute Wünsche",
+  topic: "Tvorba nových prídavných mien pomocou prípony *-los*. Priania pre iných.",
   cefr: "A1",
-  xpReward: 25,
-  narrativeContext:
-    "Vienna autumn has arrived. Jana checks the weather forecast on her phone in the morning and decides what to wear. 'Es wird regnen. Ich ziehe einen Mantel an.' She and Lukas chat about the weather and their clothing choices for the day.",
-  communicativeGoal:
-    "Po tejto lekcii viem kombinovať predpoveď počasia s výberom oblečenia a použijem budúci čas v každodennej konverzácii.",
-  skillFocus: ["vocabulary", "speaking", "grammar"],
-  grammarNote: {
-    rule: "Werden pre predpoveď počasia + anziehen vs. tragen",
-    explanation:
-      "Predpoveď počasia používa 'werden + infinitív' pre budúcnosť: 'Morgen wird es regnen.' / 'Es wird kalt sein.' Prítomný čas opisuje aktuálne počasie: 'Es ist bewölkt.' / 'Es schneit.' Reťazec rozhodnutí: 'Wenn es regnet, ziehe ich einen Regenmantel an.' / 'Weil es kalt ist, trage ich eine Jacke.' Kľúčový rozdiel — anziehen vs. tragen: anziehen = obliecť si (akcia, separabilné!): 'Ich ziehe den Mantel an.' tragen = nosiť (stav): 'Ich trage einen Mantel.'",
-    examples: [
-      { de: "Morgen wird es regnen.", sk: "Zajtra bude pršať." },
-      { de: "Es ist minus 5 Grad — ich ziehe die Stiefel an.", sk: "Je mínus 5 stupňov — obujem si čižmy." },
-      { de: "Ich trage heute eine dicke Jacke.", sk: "Dnes mám oblečenú hrubú bundu." },
-      { de: "Es wird wolkig sein, aber es regnet nicht.", sk: "Bude zamračene, ale nebude pršať." },
-    ],
-    slovakContrastNote:
-      "Slovensky 'obliekam si' (reflexívne) = 'ich ziehe mich an.' Slovensky 'nosím' = 'ich trage.' Rozdielna štruktúra pre 'obliekanie' (reflexívne SK) vs. 'nosenie'. V nemčine 'anziehen' je separabilné: 'ich ziehe... an' (predpona 'an' ide na koniec).",
-  },
+  xpReward: 20,
+  narrativeContext: "Brigitte geht in Rente. Jana schreibt eine Karte für Brigitte. Sie möchte ihr alles Gute wünschen.",
+  communicativeGoal: "Nach dieser Lektion kann ich neue Adjektive mit der Endung -los bilden und Wünsche für andere ausdrücken.",
+  skillFocus: [
+    "vocabulary",
+    "grammar",
+    "writing",
+    "speaking"
+  ],
+  lessonNotes: "V tejto lekcii sa naučíme tvoriť nové prídavné mená pomocou prípony -los. Taktiež si precvičíme vyjadrovanie prianí a gratulácií pre iných ľudí. Zameriame sa na slovnú zásobu a gramatiku.",
+  grammarNotes: [
+    {
+      rule: "Adjektive mit der Endung -los",
+      explanation: "<p>V nemčine môžeme tvoriť nové prídavné mená od podstatných mien pomocou prípony <strong>-los</strong>. Táto prípona má význam 'bez' alebo 'nedostatok niečoho'. V slovenčine sa podobný význam často vyjadruje pomocou predpony <strong>bez-</strong> alebo slovného spojenia 'bez niečoho'. Napríklad, ak niečo nemá cenu, povieme 'bezcenné'. V nemčine by sme použili slovo 'wertlos'. Je dôležité si zapamätať, že tieto slová sú prídavné mená a skloňujú sa podľa pravidiel pre prídavné mená.</p><p>Prípona -los sa pripája priamo na kmeň podstatného mena. Napríklad: <em>Mühe</em> (námaha) -> <em>mühelos</em> (bez námahy). <em>Gefahr</em> (nebezpečenstvo) -> <em>gefahrlos</em> (bezpečný, bez nebezpečenstva).</p><div class='tip-box'><strong>Tip:</strong> Vždy si overte, či dané slovo s príponou -los naozaj existuje v nemčine. Nie všetky podstatné mená tvoria takéto prídavné mená.</div>",
+      examples: [
+        {
+          de: "Das ist <strong>kostenlos</strong>.",
+          sk: "Toto je <strong>zadarmo</strong> (bez nákladov)."
+        },
+        {
+          de: "Er arbeitet <strong>mühelos</strong>.",
+          sk: "On pracuje <strong>bez námahy</strong>."
+        },
+        {
+          de: "Die Reise war <strong>gefahrlos</strong>.",
+          sk: "Cesta bola <strong>bezpečná</strong> (bez nebezpečenstva)."
+        },
+        {
+          de: "Er ist <strong>hilflos</strong>.",
+          sk: "On je <strong>bezmocný</strong>."
+        },
+        {
+          de: "Das Buch ist <strong>interesselos</strong>.",
+          sk: "Kniha je <strong>nezaujímavá</strong> (bez záujmu)."
+        },
+        {
+          de: "Sie ist <strong>ratlos</strong>.",
+          sk: "Ona je <strong>bezradná</strong>."
+        },
+        {
+          de: "Das ist <strong>sinnlos</strong>.",
+          sk: "Toto je <strong>nezmyselné</strong>."
+        },
+        {
+          de: "Er ist <strong>arbeitslos</strong>.",
+          sk: "On je <strong>nezamestnaný</strong>."
+        }
+      ],
+      slovakContrastNote: "V slovenčine často používame predponu 'bez-' (napr. bezcenný, bezmocný, bezstarostný) alebo slovné spojenia ako 'bez problémov'. Nemčina používa príponu '-los', ktorá sa pripája k podstatnému menu a tvorí prídavné meno. Je dôležité si uvedomiť, že '-los' nie je predpona, ale prípona, a výsledné slovo je prídavné meno, ktoré sa skloňuje."
+    },
+    {
+      rule: "Wünsche für andere Personen",
+      explanation: "<p>V nemčine môžeme vyjadriť priania pre iné osoby rôznymi spôsobmi. Jedným z najbežnejších je použitie spojenia <strong>'Ich wünsche dir/Ihnen...'</strong> (Prajem ti/Vám...). Môžeme tiež použiť jednoduchšie frázy ako <strong>'Viel Glück!'</strong> (Veľa šťastia!) alebo <strong>'Gute Reise!'</strong> (Šťastnú cestu!).</p><p>Pre zložitejšie priania, najmä v slávnostnejších situáciách alebo keď chceme vyjadriť silnejšiu túžbu, môžeme použiť konjunktív II s <em>würde</em> alebo priamo konjunktív II (hoci ten je pre úroveň A1 menej bežný). Napríklad: <em>'Ich wünschte, du wärst hier.'</em> (Želal by som si, aby si tu bol.) alebo <em>'Mögest du erfolgreich sein!'</em> (Nech si úspešný!). Pre úroveň A1 sa však sústreďte na jednoduchšie formy.</p><div class='warn-box'><strong>Pozor:</strong> Pri prianiach pre jednu osobu používame 'dir' (ty, datív) a pre viacero osôb alebo pri formálnom oslovení 'Ihnen' (Vy, datív).</div>",
+      examples: [
+        {
+          de: "Ich wünsche dir <strong>viel Glück</strong>!",
+          sk: "Prajem ti <strong>veľa šťastia</strong>!"
+        },
+        {
+          de: "Wir wünschen Ihnen <strong>einen schönen Urlaub</strong>.",
+          sk: "Prajeme Vám <strong>peknú dovolenku</strong>."
+        },
+        {
+          de: "<strong>Gute Besserung!</strong>",
+          sk: "<strong>Skoré uzdravenie!</strong>"
+        },
+        {
+          de: "Ich wünsche euch <strong>alles Gute</strong>.",
+          sk: "Prajem vám (všetkým) <strong>všetko dobré</strong>."
+        },
+        {
+          de: "Frohe Weihnachten!",
+          sk: "Veselé Vianoce!"
+        },
+        {
+          de: "Alles Liebe zum Geburtstag!",
+          sk: "Všetko najlepšie k narodeninám!"
+        },
+        {
+          de: "Ich wünsche dir eine gute Fahrt.",
+          sk: "Prajem ti dobrú cestu."
+        },
+        {
+          de: "Mögen Sie erfolgreich sein.",
+          sk: "Nech ste úspešný."
+        }
+      ],
+      slovakContrastNote: "Slovenčina používa podobné obraty ako 'Prajem ti/Vám...', ale často používame aj priame zvolania ako 'Veľa šťastia!', 'Šťastnú cestu!', 'Skoré uzdravenie!'. V nemčine sú tieto frázy tiež bežné. Rozdiel môže byť v štruktúre zložitejších prianí, kde nemčina často využíva konjunktív, zatiaľ čo slovenčina môže použiť iné väzby alebo jednoduchšie formulácie."
+    }
+  ],
   vocab: [
     {
-      de: "die Wettervorhersage",
-      sk: "predpoveď počasia",
-      example: "Ich schaue jeden Morgen die Wettervorhersage.",
-      exampleSk: "Každé ráno pozerám predpoveď počasia.",
+      de: "die Feier",
+      sk: "oslava",
       gender: "F",
       srsId: "L76_V01",
-      recycledFrom: [],
+      example: "Wir machen eine Feier für Brigitte.",
+      exampleSk: "Robíme oslavu pre Brigittu.",
+      recycledFrom: []
     },
     {
-      de: "Es wird regnen.",
-      sk: "Bude pršať.",
-      example: "Morgen wird es regnen — nimm einen Regenschirm!",
-      exampleSk: "Zajtra bude pršať — vezmi si dáždnik!",
-      gender: null,
+      de: "die Überraschung",
+      sk: "prekvapenie",
+      gender: "F",
       srsId: "L76_V02",
-      recycledFrom: [29, 66],
+      example: "Die Party ist eine Überraschung.",
+      exampleSk: "Párty je prekvapenie.",
+      recycledFrom: []
     },
     {
-      de: "Es wird wolkig sein.",
-      sk: "Bude zamračene.",
-      example: "Es wird wolkig sein, aber es regnet nicht.",
-      exampleSk: "Bude zamračene, ale nebude pršať.",
-      gender: null,
+      de: "der Abschied",
+      sk: "rozlúčka",
+      gender: "M",
       srsId: "L76_V03",
-      recycledFrom: [],
+      example: "Wir wünschen Brigitte einen schönen Abschied.",
+      exampleSk: "Prajeme Brigitte peknú rozlúčku.",
+      recycledFrom: []
     },
     {
-      de: "anziehen → zieht an",
-      sk: "obliecť si (akcia)",
-      example: "Ich ziehe heute einen Mantel an.",
-      exampleSk: "Dnes si oblečiem kabát.",
-      gender: null,
+      de: "das Geschenk",
+      sk: "darček",
+      gender: "N",
       srsId: "L76_V04",
-      recycledFrom: [31],
+      example: "Wir kaufen ein Geschenk für sie.",
+      exampleSk: "Kúpime jej darček.",
+      recycledFrom: []
     },
     {
-      de: "tragen → trägt",
-      sk: "nosiť / mať oblečené (stav)",
-      example: "Sie trägt heute eine rote Jacke.",
-      exampleSk: "Dnes má oblečenú červenú bundu.",
-      gender: null,
+      de: "die Karte",
+      sk: "karta (blahoželanie)",
+      gender: "F",
       srsId: "L76_V05",
-      recycledFrom: [31],
+      example: "Jana schreibt in die Karte.",
+      exampleSk: "Jana píše do karty.",
+      recycledFrom: []
     },
     {
-      de: "der Mantel",
-      sk: "kabát",
-      example: "Im Winter trage ich immer einen Mantel.",
-      exampleSk: "V zime vždy nosím kabát.",
+      de: "der Kollege / die Kollegin",
+      sk: "kolega / kolegyňa",
       gender: "M",
       srsId: "L76_V06",
-      recycledFrom: [31],
+      example: "Brigitte ist unsere Kollegin.",
+      exampleSk: "Brigitta je naša kolegyňa.",
+      recycledFrom: []
     },
     {
-      de: "der Regenschirm",
-      sk: "dáždnik",
-      example: "Vergiss den Regenschirm nicht!",
-      exampleSk: "Nezabudni na dáždnik!",
+      de: "der Ruhestand",
+      sk: "dôchodok",
       gender: "M",
       srsId: "L76_V07",
-      recycledFrom: [29],
+      example: "Brigitte geht in den Ruhestand.",
+      exampleSk: "Brigitta odchádza do dôchodku.",
+      recycledFrom: []
     },
     {
-      de: "die Stiefel (pl.)",
-      sk: "čižmy",
-      example: "Ich ziehe die Stiefel an — es schneit!",
-      exampleSk: "Obujem si čižmy — sneží!",
-      gender: "F",
+      de: "das Wort",
+      sk: "slovo",
+      gender: "N",
       srsId: "L76_V08",
-      recycledFrom: [31],
+      example: "Ich suche ein gutes Wort für die Karte.",
+      exampleSk: "Hľadám dobré slovo do karty.",
+      recycledFrom: []
     },
     {
-      de: "die Handschuhe (pl.)",
-      sk: "rukavice",
-      example: "Ohne Handschuhe ist es zu kalt.",
-      exampleSk: "Bez rukavíc je príliš zima.",
-      gender: "F",
+      de: "das Adjektiv",
+      sk: "prídavné meno",
+      gender: "N",
       srsId: "L76_V09",
-      recycledFrom: [31],
+      example: "Wie heißt dieses Adjektiv auf Deutsch?",
+      exampleSk: "Ako sa volá toto prídavné meno po nemecky?",
+      recycledFrom: []
     },
     {
-      de: "die Mütze",
-      sk: "čiapka",
-      example: "Ich trage eine Mütze, wenn es kalt ist.",
-      exampleSk: "Nosím čiapku, keď je zima.",
+      de: "die Endung",
+      sk: "prípona",
       gender: "F",
       srsId: "L76_V10",
-      recycledFrom: [31],
+      example: "Die Endung ist \"-los\".",
+      exampleSk: "Prípona je \"-los\".",
+      recycledFrom: []
     },
     {
-      de: "der Schal",
-      sk: "šál",
-      example: "Ein Schal ist warm und modisch.",
-      exampleSk: "Šál je teplý a módny.",
-      gender: "M",
+      de: "wünschen",
+      sk: "želať",
+      gender: null,
       srsId: "L76_V11",
-      recycledFrom: [],
+      example: "Ich wünsche dir alles Gute!",
+      exampleSk: "Prajem ti všetko dobré!",
+      recycledFrom: []
     },
     {
-      de: "frieren",
-      sk: "mrznúť / byť mi zima",
-      example: "Ich friere! Wo sind meine Handschuhe?",
-      exampleSk: "Je mi zima! Kde sú moje rukavice?",
+      de: "feiern",
+      sk: "oslavovať",
       gender: null,
       srsId: "L76_V12",
-      recycledFrom: [],
+      example: "Wir feiern Brigittes Abschied.",
+      exampleSk: "Oslavujeme rozlúčku Brigitty.",
+      recycledFrom: []
     },
     {
-      de: "schwitzen",
-      sk: "potiť sa",
-      example: "Bei 30 Grad schwitze ich sehr.",
-      exampleSk: "Pri 30 stupňoch sa veľmi potím.",
+      de: "schreiben",
+      sk: "písať",
       gender: null,
       srsId: "L76_V13",
-      recycledFrom: [],
+      example: "Jana schreibt in die Karte.",
+      exampleSk: "Jana píše do karty.",
+      recycledFrom: []
     },
     {
-      de: "der Wetterbericht",
-      sk: "správa o počasí",
-      example: "Der Wetterbericht sagt: Regen am Nachmittag.",
-      exampleSk: "Správa o počasí hovorí: dážď popoludní.",
-      gender: "M",
+      de: "suchen",
+      sk: "hľadať",
+      gender: null,
       srsId: "L76_V14",
-      recycledFrom: [],
+      example: "Wir suchen ein schönes Wort.",
+      exampleSk: "Hľadáme pekné slovo.",
+      recycledFrom: []
     },
     {
-      de: "der Grad",
-      sk: "stupeň (teploty)",
-      example: "Es ist heute 5 Grad. Das ist kalt!",
-      exampleSk: "Dnes je 5 stupňov. To je zima!",
-      gender: "M",
+      de: "brauchen",
+      sk: "potrebovať",
+      gender: null,
       srsId: "L76_V15",
-      recycledFrom: [],
+      example: "Wir brauchen ein Adjektiv.",
+      exampleSk: "Potrebujeme prídavné meno.",
+      recycledFrom: []
     },
     {
-      de: "die Temperatur",
-      sk: "teplota",
-      example: "Wie ist die Temperatur heute?",
-      exampleSk: "Aká je dnes teplota?",
-      gender: "F",
+      de: "alles Gute wünschen",
+      sk: "popriať všetko dobré",
+      gender: null,
       srsId: "L76_V16",
-      recycledFrom: [],
+      example: "Ich wünsche dir alles Gute zum Ruhestand!",
+      exampleSk: "Prajem ti všetko dobré do dôchodku!",
+      recycledFrom: []
     },
     {
-      de: "minus",
-      sk: "mínus",
-      example: "Es ist minus 5 Grad. Zieh die Stiefel an!",
-      exampleSk: "Je mínus 5 stupňov. Obuť si čižmy!",
+      de: "unglaublich",
+      sk: "neuveriteľný",
       gender: null,
       srsId: "L76_V17",
-      recycledFrom: [],
+      example: "Du bist unglaublich!",
+      exampleSk: "Si neuveriteľná!",
+      recycledFrom: []
     },
     {
-      de: "beschreiben",
-      sk: "opísať",
-      example: "Beschreibe das Wetter heute.",
-      exampleSk: "Opíš dnešné počasie.",
+      de: "wunderbar",
+      sk: "úžasný, nádherný",
       gender: null,
       srsId: "L76_V18",
-      recycledFrom: [41, 45],
+      example: "Das ist eine wunderbare Idee!",
+      exampleSk: "To je úžasný nápad!",
+      recycledFrom: []
     },
+    {
+      de: "herzlos",
+      sk: "bezcitný",
+      gender: null,
+      srsId: "L76_V19",
+      example: "Das ist nicht nett, das ist herzlos.",
+      exampleSk: "To nie je milé, to je bezcitné.",
+      recycledFrom: []
+    },
+    {
+      de: "grenzenlos",
+      sk: "bezhraničný, nekonečný",
+      gender: null,
+      srsId: "L76_V20",
+      example: "Die Freude war grenzenlos.",
+      exampleSk: "Radosť bola nekonečná.",
+      recycledFrom: []
+    },
+    {
+      de: "hoffnungslos",
+      sk: "beznádejný",
+      gender: null,
+      srsId: "L76_V21",
+      example: "Die Situation ist hoffnungslos.",
+      exampleSk: "Situácia je beznádejná.",
+      recycledFrom: []
+    },
+    {
+      de: "Wie schön!",
+      sk: "Aké pekné!",
+      gender: null,
+      srsId: "L76_V22",
+      example: "Du hast die Prüfung bestanden? Wie schön!",
+      exampleSk: "Zložila si skúšku? Aké pekné!",
+      recycledFrom: []
+    },
+    {
+      de: "Alles Gute!",
+      sk: "Všetko dobré!",
+      gender: null,
+      srsId: "L76_V23",
+      example: "Alles Gute zum Geburtstag!",
+      exampleSk: "Všetko dobré k narodeninám!",
+      recycledFrom: []
+    },
+    {
+      de: "Viel Erfolg!",
+      sk: "Veľa úspechu!",
+      gender: null,
+      srsId: "L76_V24",
+      example: "Viel Erfolg bei der neuen Arbeit!",
+      exampleSk: "Veľa úspechu v novej práci!",
+      recycledFrom: []
+    },
+    {
+      de: "Herzlichen Glückwunsch!",
+      sk: "Srdečné blahoželanie!",
+      gender: null,
+      srsId: "L76_V25",
+      example: "Herzlichen Glückwunsch zur Beförderung!",
+      exampleSk: "Srdečne blahoželám k povýšeniu!",
+      recycledFrom: []
+    }
   ],
   exercises: [
     {
       type: "flashcard",
-      instruction: "Precvič si slovnú zásobu počasia a oblečenia. Pozri nemecké slovo a povedz slovenský preklad.",
-      items: [
-        "L76_V01",
-        "L76_V02",
-        "L76_V03",
-        "L76_V04",
-        "L76_V05",
-        "L76_V06",
-        "L76_V07",
-        "L76_V08",
-        "L76_V09",
-        "L76_V10",
-        "L76_V11",
-        "L76_V12",
-        "L76_V13",
-        "L76_V14",
-        "L76_V15",
-      ],
-    },
-    {
-      type: "mcq",
-      instruction: "Vyber správnu odpoveď o počasí, oblečení a gramatike.",
-      questions: [
-        {
-          question: "Aký je rozdiel medzi 'anziehen' a 'tragen'?",
-          options: [
-            "Nie je žiadny rozdiel.",
-            "anziehen = obliecť si (akcia); tragen = nosiť (stav)",
-            "anziehen = nosiť; tragen = obliecť si",
-            "anziehen = vyzliecť; tragen = obliecť",
-          ],
-          answer: "anziehen = obliecť si (akcia); tragen = nosiť (stav)",
-          explanation: "'anziehen' = akcia obliekania: 'Ich ziehe den Mantel an.' (teraz si ho obliekam). 'tragen' = stav nosenia: 'Ich trage einen Mantel.' (mám ho na sebe). Podobne: SK 'obliekam si' vs 'nosím'.",
-        },
-        {
-          question: "Ako správne vyjadríš budúce počasie: 'Zajtra bude snežiť'?",
-          options: [
-            "Morgen schneit es.",
-            "Morgen wird es schneien.",
-            "Morgen schneit wird es.",
-            "Es schneien morgen wird.",
-          ],
-          answer: "Morgen wird es schneien.",
-          explanation: "Budúcnosť s 'werden': Subjekt + 'wird' + infinitív na konci. 'Morgen wird es schneien.' = Zajtra bude snežiť. Ak je čas ('Morgen') na začiatku, potom inversion: wird (2. miesto)!",
-        },
-        {
-          question: "Čo si oblečieš pri teplote mínus 5 stupňov?",
-          options: [
-            "Ein T-Shirt und kurze Hosen.",
-            "Stiefel, Handschuhe, Mütze und einen Mantel.",
-            "Nur ein Hemd.",
-            "Einen Badeanzug.",
-          ],
-          answer: "Stiefel, Handschuhe, Mütze und einen Mantel.",
-          explanation: "Pri mínus 5 °C potrebuješ teplé oblečenie: Stiefel (čižmy), Handschuhe (rukavice), Mütze (čiapka) a Mantel (kabát). Slovenská zima je podobná viedenskej!",
-        },
-        {
-          question: "Ako správne použiješ separabilné sloveso 'anziehen'?",
-          options: [
-            "Ich anziehe den Mantel.",
-            "Ich ziehe den Mantel an.",
-            "Den Mantel ich anziehe.",
-            "Ich ziehe an den Mantel.",
-          ],
-          answer: "Ich ziehe den Mantel an.",
-          explanation: "'anziehen' je separabilné: 'an-' ide na koniec. 'Ich ziehe den Mantel an.' Porovnaj: 'Ich räume auf.' / 'Ich sehe fern.' — vždy predpona na koniec.",
-        },
-        {
-          question: "Čo znamená 'Ich friere'?",
-          options: [
-            "Zásobím mrazom jedlo.",
-            "Je mi zima / Mrznie mi.",
-            "Potím sa.",
-            "Mrzne vonku.",
-          ],
-          answer: "Je mi zima / Mrznie mi.",
-          explanation: "'Ich friere.' = Je mi zima. (nie 'Mrzne vonku' — to by bolo 'Es friert.') 'Ich friere!' = osobný pocit chladu, podobne ako SK 'Je mi zima / Mrznie mi'.",
-        },
-        {
-          question: "Aká je nemecká predpoveď: 'Bude oblačno a 3 stupne'?",
-          options: [
-            "Es ist wolkig und 3 Grad.",
-            "Es wird wolkig sein und 3 Grad haben.",
-            "Morgen ist wolkig und es hat 3 Grad.",
-            "Es werden wolkig und 3 Grad.",
-          ],
-          answer: "Es wird wolkig sein und 3 Grad haben.",
-          explanation: "'werden + infinitív' pre predpoveď: 'Es wird wolkig sein.' (bude zamračene) + 'und 3 Grad haben' (a mať 3 stupne). Alebo jednoducho: 'Es werden 3 Grad.' v predpovedi.",
-        },
-      ],
-    },
-    {
-      type: "fill",
-      instruction: "Doplň správne slovo do vety o počasí alebo oblečení.",
-      questions: [
-        {
-          sentence: "Morgen ___ es regnen. Nimm den Regenschirm!",
-          answer: "wird",
-          hint: "budúcnosť s werden",
-          explanation: "'werden' pre budúcnosť: 'Morgen wird es regnen.' = Zajtra bude pršať. Sloveso 'werden' sa časuje: ich werde, du wirst, er/sie/es wird.",
-        },
-        {
-          sentence: "Es ist minus 10 Grad. Ich ___ die Stiefel ___.",
-          answer: "ziehe / an",
-          hint: "obliecť si (separabilné sloveso)",
-          explanation: "'anziehen' → 'ich ziehe... an'. Predpona 'an' ide na koniec. 'Ich ziehe die Stiefel an.' = Obujem si čižmy.",
-        },
-        {
-          sentence: "Der ___ sagt: Regen von 14 bis 18 Uhr.",
-          answer: "Wetterbericht",
-          hint: "správa o počasí",
-          explanation: "'Der Wetterbericht' = správa o počasí. 'Die Wettervorhersage' = predpoveď počasia. Obe slová môžeš použiť.",
-        },
-        {
-          sentence: "Ich ___ heute, weil es so kalt ist!",
-          answer: "friere",
-          hint: "je mi zima",
-          explanation: "'frieren' → 'ich friere' = je mi zima. Pravidelné sloveso. 'Es ist kalt' = Je zima (vonku). 'Ich friere' = Je MI zima.",
-        },
-        {
-          sentence: "Sie ___ jeden Tag eine Mütze, weil es kalt ist.",
-          answer: "trägt",
-          hint: "nosiť (stav, 3. os. jedn. č.)",
-          explanation: "'tragen' je nepravidelné: ich trage, du trägst, er/sie/es TRÄGT (zmena a→ä). 'Sie trägt eine Mütze.' = Nosí čiapku.",
-        },
-      ],
-    },
-    {
-      type: "listen",
-      instruction: "Počúvaj vety o počasí a oblečení a opakuj ich nahlas.",
-      questions: [
-        { de: "Morgen wird es regnen.", sk: "Zajtra bude pršať." },
-        { de: "Ich ziehe einen Mantel an.", sk: "Oblečiem si kabát." },
-        { de: "Es ist minus fünf Grad.", sk: "Je mínus päť stupňov." },
-        { de: "Vergiss den Regenschirm nicht!", sk: "Nezabudni na dáždnik!" },
-        { de: "Ich friere — wo sind meine Handschuhe?", sk: "Je mi zima — kde sú moje rukavice?" },
-        { de: "Sie trägt heute einen Schal.", sk: "Dnes má oblečený šál." },
-      ],
+      instruction: "Prezri si slovíčka tejto lekcie. Klikni na kartičku pre preklad."
     },
     {
       type: "match",
-      instruction: "Spoj nemecké oblekanie/počasie so slovenským prekladom.",
+      instruction: "Spojte nemecké slová s ich slovenskými ekvivalentmi.",
       pairs: [
-        ["die Wettervorhersage", "predpoveď počasia"],
-        ["der Regenschirm", "dáždnik"],
-        ["der Schal", "šál"],
-        ["die Mütze", "čiapka"],
-        ["frieren", "mrznúť / byť mi zima"],
-        ["schwitzen", "potiť sa"],
-        ["anziehen", "obliecť si (akcia)"],
-        ["tragen", "nosiť (stav)"],
-      ],
-    },
-    {
-      type: "dialogue",
-      instruction:
-        "Jana a Lukas si ráno kontrolujú aplikáciu počasia a rozhodujú, čo si obliecť.",
-      lines: [
-        { speaker: "A", de: "Guten Morgen, Lukas! Schau mal — was sagt die Wettervorhersage?", sk: "Dobré ráno, Lukas! Pozri — čo hovorí predpoveď počasia?" },
-        { speaker: "B", de: "Moment... Es wird heute regnen und es werden nur 8 Grad sein.", sk: "Počkaj... Dnes bude pršať a bude len 8 stupňov." },
-        { speaker: "A", de: "Oh nein! Dann friere ich bestimmt.", sk: "Ó nie! Potom mi určite bude zima." },
-        { speaker: "B", de: "Ja, zieh den Mantel an! Und vergiss den Regenschirm nicht.", sk: "Áno, oblecť si kabát! A nezabudni na dáždnik." },
-        { speaker: "A", de: "Was soll ich noch anziehen?", sk: "Čo si mám ešte obliecť?" },
-        { speaker: "B", de: "Handschuhe und eine Mütze — es ist ziemlich kalt.", sk: "Rukavice a čiapku — je dosť zima." },
-        { speaker: "A", de: "Und du? Was trägst du heute?", sk: "A ty? Čo máš dnes oblečené?" },
-        { speaker: "B", de: "Ich trage eine dicke Jacke und Stiefel. Ich hasse den Herbst!", sk: "Mám oblečenú hrubú bundu a čižmy. Nenávidím jeseň!" },
-        { speaker: "A", de: "Ich liebe den Herbst — aber nicht den Regen!", sk: "Ja milujem jeseň — ale nie dážď!" },
-        { speaker: "B", de: "Morgen wird es besser sein — nur 50% Regenwahrscheinlichkeit.", sk: "Zajtra bude lepšie — len 50% pravdepodobnosť dažďa." },
-        { speaker: "A", de: "Super! Vielleicht gehen wir dann in den Prater?", sk: "Super! Možno potom pôjdeme do Prateru?" },
-        { speaker: "B", de: "Ja, gute Idee! Bis dann, Jana!", sk: "Áno, dobrý nápad! Dovidenia, Jana!" },
-      ],
-      comprehensionQuestions: [
-        {
-          question: "Aká bude teplota podľa predpovede?",
-          options: ["18 stupňov", "8 stupňov", "0 stupňov", "Mínus 5 stupňov"],
-          answer: "8 stupňov",
-        },
-        {
-          question: "Čo si Jana musí obliecť? (Podľa Lukasovej rady)",
-          options: [
-            "Len bundu",
-            "Kabát, dáždnik, rukavice a čiapku",
-            "Len dáždnik",
-            "Ľahké oblečenie",
-          ],
-          answer: "Kabát, dáždnik, rukavice a čiapku",
-        },
-        {
-          question: "Kam chcú Jana a Lukas ísť, keď bude lepšie počasie?",
-          options: ["Do múzea", "Na nakupovanie", "Do Prateru", "Na strechu"],
-          answer: "Do Prateru",
-        },
-      ],
-    },
-    {
-      type: "minitext",
-      instruction: "Prečítaj si 5-dňovú predpoveď počasia pre Viedeň. Potom odpovedz na otázky.",
-      text:
-        "Wettervorhersage Wien — Diese Woche\n\nMontag: bewölkt, 8°C, Regen am Nachmittag. Mittwoch: 10°C, sonnig am Vormittag, bewölkt am Nachmittag. Donnerstag: Schneefall möglich, Temperaturen um 0°C. Freitag: klar und sonnig, 12°C — ideales Wetter für einen Spaziergang! Samstag: starker Wind und Regen, 6°C. Empfehlung: Diese Woche immer einen Regenschirm mitnehmen!",
-      textSk:
-        "Predpoveď počasia Viedeň — Tento týždeň\n\nPondelok: zamračene, 8°C, dážď popoludní. Streda: 10°C, slnečno dopoludnia, zamračene popoludní. Štvrtok: možný snehový pád, teploty okolo 0°C. Piatok: jasno a slnečno, 12°C — ideálne počasie na prechádzku! Sobota: silný vietor a dážď, 6°C. Odporúčanie: Tento týždeň vždy si zobrať dáždnik!",
-      questions: [
-        {
-          question: "V ktorý deň je možný sneh?",
-          options: ["V pondelok", "V stredu", "Vo štvrtok", "V piatok"],
-          answer: "Vo štvrtok",
-        },
-        {
-          question: "Aká je predpoveď pre piatok?",
-          options: [
-            "Silný vietor a dážď",
-            "Zamračene a 8°C",
-            "Jasno a slnečno, 12°C",
-            "Snehový pád",
-          ],
-          answer: "Jasno a slnečno, 12°C",
-        },
-        {
-          question: "Čo sa odporúča nosiť celý týždeň?",
-          options: ["Kabát", "Slnečné okuliare", "Dáždnik", "Šál"],
-          answer: "Dáždnik",
-        },
-        {
-          question: "V ktorý deň je najvyššia teplota?",
-          options: ["Pondelok", "Streda", "Štvrtok", "Piatok"],
-          answer: "Piatok",
-        },
-      ],
-    },
-    {
-      type: "freewrite",
-      instruction: "Napíš krátky text po nemecky o počasí a oblečení.",
-      prompt:
-        "Beschreibe das Wetter heute und was du deshalb trägst. Wie ist das Wetter in deiner Lieblingsstadt im Winter? (Opíš dnešné počasie a čo preto nosíš. Aké je počasie v tvojom obľúbenom meste v zime?)",
-      minWords: 35,
-      exampleAnswer:
-        "Heute ist es bewölkt und kalt — etwa 5 Grad. Ich trage einen warmen Mantel, Handschuhe und eine Mütze. Den Regenschirm nehme ich auch mit, weil es regnen wird. Meine Lieblingsstadt ist Wien. Im Winter ist es hier kalt — manchmal minus 10 Grad! Dann ziehe ich die Stiefel an und trinke heißen Kakao.",
+        [
+          "die Feier",
+          "oslava"
+        ],
+        [
+          "die Überraschung",
+          "prekvapenie"
+        ],
+        [
+          "der Abschied",
+          "rozlúčka"
+        ],
+        [
+          "das Geschenk",
+          "darček"
+        ],
+        [
+          "die Karte",
+          "karta (blahoželanie)"
+        ],
+        [
+          "der Ruhestand",
+          "dôchodok"
+        ],
+        [
+          "wünschen",
+          "želať"
+        ],
+        [
+          "feiern",
+          "oslavovať"
+        ],
+        [
+          "unglaublich",
+          "neuveriteľný"
+        ],
+        [
+          "wunderbar",
+          "úžasný, nádherný"
+        ]
+      ]
     },
     {
       type: "wordorder",
-      instruction: "Zoraď slová do správnej nemeckej vety.",
+      instruction: "Usporiadajte slová do správneho nemeckého poradia.",
       sentences: [
         {
-          words: ["Erstens", "lerne", "ich", "jeden", "Tag", "neue", "Vokabeln"],
-          correct: "Erstens lerne ich jeden Tag neue Vokabeln",
-          hint: "Po prvé sa každý deň učím nové slovíčka.",
-          explanation: "'Erstens' na začiatku vety → inverzia: sloveso 'lerne' pred podmietom 'ich'.",
+          words: [
+            "alles",
+            "Gute",
+            "wünsche",
+            "ich",
+            "dir"
+          ],
+          correct: "ich wünsche dir alles Gute",
+          hint: "Prajem ti všetko dobré.",
+          explanation: "V oznamovacej vete je sloveso na druhej pozícii. Ostatné vetné členy nasledujú po slovese."
         },
         {
-          words: ["Zweitens", "höre", "ich", "deutsche", "Podcasts", "auf", "dem", "Weg", "zur", "Arbeit"],
-          correct: "Zweitens höre ich deutsche Podcasts auf dem Weg zur Arbeit",
-          hint: "Po druhé počúvam nemecké podcasty cestou do práce.",
-          explanation: "'Zweitens' — adverbiálny konjektor; spôsobuje Inversion rovnako ako 'Erstens'.",
+          words: [
+            "eine",
+            "das",
+            "war",
+            "Überraschung",
+            "große"
+          ],
+          correct: "das war eine große Überraschung",
+          hint: "To bolo veľké prekvapenie.",
+          explanation: "V minulom čase s 'war' je sloveso na druhej pozícii. Prídavné meno 'große' sa zhoduje s podstatným menom 'Überraschung'."
         },
         {
-          words: ["Außerdem", "lese", "ich", "jeden", "Abend", "auf", "Deutsch"],
-          correct: "Außerdem lese ich jeden Abend auf Deutsch",
-          hint: "Okrem toho čítam každý večer po nemecky.",
-          explanation: "'Außerdem' = okrem toho — adverbiálny konjektor s Inversion.",
+          words: [
+            "wir",
+            "die",
+            "Kollegen",
+            "für",
+            "ein",
+            "Abschiedsgeschenk",
+            "suchen"
+          ],
+          correct: "wir suchen für die Kollegen ein Abschiedsgeschenk",
+          hint: "Hľadáme pre kolegov rozlúčkový darček.",
+          explanation: "V oznamovacej vete je sloveso na druhej pozícii. Predložka 'für' vyžaduje akuzatív."
         },
         {
-          words: ["Schließlich", "spreche", "ich", "mit", "meinen", "Kollegen", "auf", "Deutsch"],
-          correct: "Schließlich spreche ich mit meinen Kollegen auf Deutsch",
-          hint: "Nakoniec hovorím so svojimi kolegami po nemecky.",
-          explanation: "'Schließlich' = nakoniec — záverový konjektor textu; Inversion nasleduje.",
+          words: [
+            "viel",
+            "Erfolg",
+            "ich",
+            "wünsche",
+            "dir"
+          ],
+          correct: "ich wünsche dir viel Erfolg",
+          hint: "Prajem ti veľa úspechu.",
+          explanation: "V oznamovacej vete je sloveso na druhej pozícii. 'Viel Erfolg' je ustálené slovné spojenie."
         },
         {
-          words: ["Jana", "erklärt", "erstens", "ihr", "Ziel", "und", "zweitens", "ihren", "Plan"],
-          correct: "Jana erklärt erstens ihr Ziel und zweitens ihren Plan",
-          hint: "Jana vysvetľuje po prvé svoj cieľ a po druhé svoj plán.",
-          explanation: "Konnektoren 'erstens/zweitens' môžu stáť aj vnútri vety — tu bez inverzie po 'und'.",
+          words: [
+            "herzlos",
+            "das",
+            "ist",
+            "sehr"
+          ],
+          correct: "das ist sehr herzlos",
+          hint: "To je veľmi bezcitné.",
+          explanation: "V oznamovacej vete je sloveso na druhej pozícii. 'Herzlos' je prídavné meno tvorené príponou -los."
+        }
+      ]
+    },
+    {
+      type: "fill",
+      instruction: "Doplňte správne slovo alebo tvar slova.",
+      questions: [
+        {
+          sentence: "Wir feiern heute die ______.",
+          answer: "Feier",
+          hint: "Čo oslavujeme?",
+          explanation: "Dopĺňame podstatné meno 'die Feier' (oslava)."
         },
-      ],
+        {
+          sentence: "Das ist eine wunderbare ______.",
+          answer: "Überraschung",
+          hint: "Čo je to?",
+          explanation: "Dopĺňame podstatné meno 'die Überraschung' (prekvapenie)."
+        },
+        {
+          sentence: "Ich ______ dir alles Gute zum Geburtstag.",
+          answer: "wünsche",
+          hint: "Čo robíš?",
+          explanation: "Dopĺňame sloveso 'wünschen' v 1. osobe jednotného čísla: 'ich wünsche'."
+        },
+        {
+          sentence: "Er hat uns ein schönes ______ geschenkt.",
+          answer: "Geschenk",
+          hint: "Čo nám daroval?",
+          explanation: "Dopĺňame podstatné meno 'das Geschenk' (darček) v akuzatíve."
+        },
+        {
+          sentence: "Die Kollegin geht in den ______.",
+          answer: "Ruhestand",
+          hint: "Kam ide kolegyňa?",
+          explanation: "Dopĺňame podstatné meno 'der Ruhestand' (dôchodok)."
+        },
+        {
+          sentence: "Das ist hoffnungs______.",
+          answer: "los",
+          hint: "Aký je to pocit?",
+          explanation: "Dopĺňame príponu '-los', ktorá tvorí prídavné meno 'hoffnungslos' (beznádejný)."
+        },
+        {
+          sentence: "Wie ______ du?",
+          answer: "heißt",
+          hint: "Ako sa voláš?",
+          explanation: "Testuje sa minulá lekcia L03: sloveso 'heißen' v 2. osobe jednotného čísla (du heißt)."
+        },
+        {
+          sentence: "Ich ______ einen Kaffee.",
+          answer: "trinke",
+          hint: "Čo robíš?",
+          explanation: "Testuje sa minulá lekcia L03: sloveso 'trinken' v 1. osobe jednotného čísla (ich trinke)."
+        }
+      ]
+    },
+    {
+      type: "listen",
+      instruction: "Napíšte, čo počujete.",
+      questions: [
+        {
+          de: "die Feier",
+          sk: "oslava"
+        },
+        {
+          de: "das Geschenk",
+          sk: "darček"
+        },
+        {
+          de: "wünschen",
+          sk: "želať"
+        },
+        {
+          de: "wunderbar",
+          sk: "úžasný, nádherný"
+        },
+        {
+          de: "grenzenlos",
+          sk: "bezhraničný, nekonečný"
+        },
+        {
+          de: "hoffnungslos",
+          sk: "beznádejný"
+        },
+        {
+          de: "Herzlichen Glückwunsch",
+          sk: "Srdečné blahoželanie"
+        },
+        {
+          de: "Alles Gute",
+          sk: "Všetko dobré"
+        },
+        {
+          de: "die Überraschung",
+          sk: "prekvapenie"
+        },
+        {
+          de: "der Abschied",
+          sk: "rozlúčka"
+        }
+      ]
+    },
+    {
+      type: "mcq",
+      instruction: "Vyberte správnu možnosť.",
+      questions: [
+        {
+          question: "Čo znamená prípona '-los'?",
+          options: [
+            "s",
+            "bez",
+            "veľmi",
+            "malo"
+          ],
+          answer: 1,
+          explanation: "Prípona '-los' v nemčine znamená 'bez' alebo nedostatok niečoho (napr. herzlos - bezcitný)."
+        },
+        {
+          question: "Čo znamená 'Herzlichen Glückwunsch!'?",
+          options: [
+            "Všetko najlepšie!",
+            "Veľa šťastia!",
+            "Srdečné blahoželanie!",
+            "Gratulujem k narodeninám!"
+          ],
+          answer: 2,
+          explanation: "'Herzlichen Glückwunsch!' je nemecký výraz pre 'Srdečné blahoželanie!'."
+        },
+        {
+          question: "Ktoré slovo je prídavné meno?",
+          options: [
+            "die Feier",
+            "feiern",
+            "wunderbar",
+            "das Wort"
+          ],
+          answer: 2,
+          explanation: "'Wunderbar' je prídavné meno (úžasný, nádherný). Ostatné sú podstatné mená alebo sloveso."
+        },
+        {
+          question: "Ako sa povie po nemecky 'beznádejný'?",
+          options: [
+            "grenzenlos",
+            "hoffnungslos",
+            "herzlos",
+            "unglaublich"
+          ],
+          answer: 1,
+          explanation: "'Hoffnungslos' znamená beznádejný. '-los' je prípona, ktorá vyjadruje nedostatok."
+        },
+        {
+          question: "Ktorý tvar slovesa 'haben' je správny pre 'sie' (ona)?",
+          options: [
+            "habe",
+            "hast",
+            "hat",
+            "haben"
+          ],
+          answer: 2,
+          explanation: "Správny tvar slovesa 'haben' pre 3. osobu jednotného čísla (er, sie, es) je 'hat'. (Testuje sa L04)."
+        },
+        {
+          question: "Ako sa povie po nemecky 'rozlúčka'?",
+          options: [
+            "die Feier",
+            "das Geschenk",
+            "der Abschied",
+            "die Karte"
+          ],
+          answer: 2,
+          explanation: "'Der Abschied' je nemecké slovo pre 'rozlúčka'."
+        },
+        {
+          question: "Čo znamená 'Ich wünsche dir viel Erfolg!'?",
+          options: [
+            "Prajem ti všetko dobré!",
+            "Prajem ti veľa úspechu!",
+            "Gratulujem k úspechu!",
+            "Dúfam v tvoj úspech!"
+          ],
+          answer: 1,
+          explanation: "'Viel Erfolg' znamená 'veľa úspechu'. Celá fráza je 'Prajem ti veľa úspechu!'."
+        },
+        {
+          question: "Ktoré sloveso sa používa na vyjadrenie priania?",
+          options: [
+            "suchen",
+            "brauchen",
+            "feiern",
+            "wünschen"
+          ],
+          answer: 3,
+          explanation: "'Wünschen' je nemecké sloveso pre 'želať' alebo 'priať'."
+        }
+      ]
+    },
+    {
+      type: "minitext",
+      instruction: "Lies den Dialog und beantworte die Fragen.",
+      text: "Jana: Brigitte geht in den Ruhestand. Wir wollen eine Feier machen. Hast du eine Idee für ein Geschenk?\nPetra: Ja, wir brauchen eine Karte. Ich schreibe: „Liebe Brigitte, alles Gute zum Abschied!“ Aber das ist zu kurz.\nJana: Wir brauchen mehr Worte. Sie war 30 Jahre hier. Sie ist eine tolle Kollegin. Sie ist nicht herzlos.\nPetra: Genau! Sie ist wunderbar und unglaublich. Wir wünschen ihr grenzenlos viel Glück! Sie ist nie hoffnungslos.\nJana: Super! Dann schreiben wir das in die Karte. Das ist eine schöne Überraschung für die Feier.",
+      textSk: "Jana: Brigitte odchádza do dôchodku. Chceme urobiť oslavu. Máš nápad na darček?\nPetra: Áno, potrebujeme blahoželanie. Napíšem: „Milá Brigitte, všetko dobré k rozlúčke!“ Ale to je príliš krátke.\nJana: Potrebujeme viac slov. Bola tu 30 rokov. Je to skvelá kolegyňa. Nie je bezcitná.\nPetra: Presne! Je úžasná a neuveriteľná. Želáme jej nekonečne veľa šťastia! Nikdy nie je beznádejná.\nJana: Super! Tak to napíšeme do karty. To bude pekné prekvapenie na oslavu.",
+      questions: [
+        {
+          question: "Warum machen die Kollegen eine Feier?",
+          options: [
+            "Weil Brigitte in den Ruhestand geht.",
+            "Weil sie Geburtstag hat.",
+            " Weil sie ein neues Geschenk brauchen.",
+            " Weil sie eine neue Kollegin bekommen."
+          ],
+          answer: 0,
+          explanation: "Jana sagt: „Brigitte geht in den Ruhestand. Wir wollen eine Feier machen.“"
+        },
+        {
+          question: "Was schreiben sie auf die Karte?",
+          options: [
+            " Nur „Alles Gute!“",
+            " „Liebe Brigitte, alles Gute zum Abschied!“ und mehr.",
+            " „Herzlichen Glückwunsch!“",
+            " „Viel Erfolg!“"
+          ],
+          answer: 1,
+          explanation: "Petra sagt: „Ich schreibe: „Liebe Brigitte, alles Gute zum Abschied!“ Aber das ist zu kurz.“ Jana sagt: „Super! Dann schreiben wir das in die Karte.“"
+        },
+        {
+          question: "Wie beschreiben sie Brigitte?",
+          options: [
+            " Sie ist herzlos und hoffnungslos.",
+            " Sie ist unglaublich und wunderbar.",
+            " Sie ist nur eine Kollegin.",
+            " Sie ist nicht unglaublich."
+          ],
+          answer: 1,
+          explanation: "Jana sagt: „Sie ist eine tolle Kollegin. Sie ist nicht herzlos.“ Petra sagt: „Sie ist wunderbar und unglaublich.“"
+        },
+        {
+          question: "Was wünschen sie Brigitte?",
+          options: [
+            " Sie wünschen ihr nur Erfolg.",
+            " Sie wünschen ihr ein Geschenk.",
+            " Sie wünschen ihr grenzenlos viel Glück.",
+            " Sie wünschen ihr alles Gute für die Arbeit."
+          ],
+          answer: 2,
+          explanation: "Petra sagt: „Wir wünschen ihr grenzenlos viel Glück!“"
+        }
+      ]
     },
     {
       type: "speaking",
-      instruction: "Počúvaj nemeckú vetu. Potom hovor nahlas a skontroluj sa.",
+      instruction: "Höre zu und sprich nach.",
       phrases: [
         {
-          de: "Erstens lerne ich Vokabeln, zweitens lese ich Texte.",
-          sk: "Po prvé sa učím slovíčka, po druhé čítam texty.",
-          tip: "erstens: ÉR-stens — er=er, st=st",
+          de: "die Feier",
+          sk: "oslava",
+          tip: "ch=[ç], r=[ʀ]"
         },
         {
-          de: "Außerdem schreibe ich jeden Tag auf Deutsch.",
-          sk: "Okrem toho píšem každý deň po nemecky.",
-          tip: "Außerdem: AUS-ser-dem — au=au",
+          de: "die Überraschung",
+          sk: "prekvapenie",
+          tip: "Ü=[y], sch=[ʃ]"
         },
         {
-          de: "Schließlich spreche ich mit meinen Freunden.",
-          sk: "Nakoniec hovorím so svojimi priateľmi.",
-          tip: "Schließlich: ŠLÍS-lich — sch=š, ie=í",
+          de: "das Geschenk",
+          sk: "darček",
+          tip: "sch=[ʃ], en=[ən]"
         },
         {
-          de: "Jana erklärt ihren Plan Schritt für Schritt.",
-          sk: "Jana vysvetľuje svoj plán krok za krokom.",
-          tip: "Schritt: ŠRIT — sch=š, itt=it",
+          de: "Ich wünsche dir alles Gute.",
+          sk: "Želám ti všetko dobré.",
+          tip: "w=[v], ü=[y]"
         },
         {
-          de: "Alles in allem bin ich mit meinem Fortschritt zufrieden.",
-          sk: "Celkovo som spokojná so svojím pokrokom.",
-          tip: "zufrieden: cu-FRÍ-den — zu=cu",
+          de: "Das ist wunderbar!",
+          sk: "To je úžasné!",
+          tip: "u=[u], a=[a]"
         },
-      ],
+        {
+          de: "Das ist grenzenlos.",
+          sk: "To je bezhraničné.",
+          tip: "g=[g], en=[ən]"
+        },
+        {
+          de: "Herzlichen Glückwunsch!",
+          sk: "Srdečné blahoželanie!",
+          tip: "z=[ts], ch=[ç]"
+        },
+        {
+          de: "Alles Gute zum Ruhestand!",
+          sk: "Všetko dobré do dôchodku!",
+          tip: "R=[ʀ], st=[st]"
+        }
+      ]
     },
+    {
+      type: "truefalse",
+      instruction: "Rozhodnite, či sú nasledujúce tvrdenia pravdivé (P) alebo nepravdivé (N).",
+      statements: [
+        {
+          statement: "Prípona '-los' v nemčine znamená 's niečím'.",
+          isTrue: false,
+          explanation: "Prípona '-los' znamená 'bez niečoho' alebo 'nedostatok niečoho'."
+        },
+        {
+          statement: "Slovo 'herzlos' znamená, že niekto má veľa sŕdc.",
+          isTrue: false,
+          explanation: "'Herzlos' znamená bezcitný, teda nemá srdce (v prenesenom zmysle)."
+        },
+        {
+          statement: "Môžeme povedať 'Ich wünsche dir alles Gute zum Geburtstag'.",
+          isTrue: true,
+          explanation: "Toto je bežný spôsob, ako popriať niekomu všetko najlepšie k narodeninám."
+        },
+        {
+          statement: "Prídavné meno 'grenzenlos' opisuje niečo, čo má hranice.",
+          isTrue: false,
+          explanation: "'Grenzenlos' znamená bezhraničný, teda nemá žiadne hranice."
+        },
+        {
+          statement: "V nemčine môžeme použiť príponu '-los' na tvorbu nových prídavných mien.",
+          isTrue: true,
+          explanation: "Áno, prípona '-los' sa používa na tvorbu prídavných mien od podstatných mien."
+        }
+      ]
+    },
+    {
+      type: "dictation",
+      instruction: "Napíšte vety, ktoré počujete.",
+      sentences: [
+        {
+          de: "Alles Gute!",
+          sk: "Všetko dobré!"
+        },
+        {
+          de: "Ich schreibe eine Karte.",
+          sk: "Píšem blahoželanie."
+        },
+        {
+          de: "Wir feiern die Feier.",
+          sk: "Oslavujeme oslavu."
+        },
+        {
+          de: "Das ist ein wunderbares Geschenk.",
+          sk: "To je úžasný darček."
+        },
+        {
+          de: "Ich wünsche dir viel Erfolg im Ruhestand.",
+          sk: "Prajem ti veľa úspechu v dôchodku."
+        }
+      ]
+    },
+    {
+      type: "categorysort",
+      instruction: "Roztrieďte slová do správnych kategórií.",
+      categories: [
+        {
+          name: "Oslava a darčeky",
+          color: "rose",
+          words: [
+            "die Feier",
+            "die Überraschung",
+            "das Geschenk",
+            "die Karte",
+            "feiern",
+            "Herzlichen Glückwunsch!"
+          ]
+        },
+        {
+          name: "Prídavné mená s -los",
+          color: "blue",
+          words: [
+            "herzlos",
+            "grenzenlos",
+            "hoffnungslos",
+            "unglaublich",
+            "wunderbar"
+          ]
+        },
+        {
+          name: "Ostatné",
+          color: "green",
+          words: [
+            "der Abschied",
+            "der Kollege",
+            "der Ruhestand",
+            "das Wort",
+            "brauchen",
+            "wünschen"
+          ]
+        }
+      ],
+      explanation: "Slová sú rozdelené do troch kategórií: slová týkajúce sa osláv a darčekov, prídavné mená s príponou '-los' a ostatné slová z lekcie."
+    },
+    {
+      type: "translation",
+      instruction: "Preložte vety zo slovenčiny do nemčiny.",
+      sentences: [
+        {
+          sk: "Prajem ti všetko najlepšie!",
+          answer: "Ich wünsche dir alles Gute!",
+          hint: "wünsche, alles Gute",
+          explanation: "Použili sme priamu frázu na želanie. 'dir' je datív zámena 'du'."
+        },
+        {
+          sk: "Tento darček je úžasný.",
+          answer: "Dieses Geschenk ist wunderbar.",
+          hint: "Geschenk, wunderbar",
+          explanation: "Použili sme prídavné meno 'wunderbar' na opis darčeka."
+        },
+        {
+          sk: "Jeho odchod bol bezcitný.",
+          answer: "Sein Abschied war herzlos.",
+          hint: "Abschied, herzlos",
+          explanation: "Použili sme prídavné meno 'herzlos' s príponou '-los', ktoré znamená 'bezcitný'."
+        },
+        {
+          sk: "Potrebujeme slovo.",
+          answer: "Wir brauchen ein Wort.",
+          hint: "brauchen, Wort",
+          explanation: "Použili sme sloveso 'brauchen' (potrebovať) a podstatné meno 'das Wort' (slovo)."
+        }
+      ]
+    },
+    {
+      type: "conjugation",
+      instruction: "Doplňte správne tvary slovies.",
+      verbs: [
+        {
+          infinitive: "wünschen",
+          translation: "želať",
+          forms: [
+            {
+              pronoun: "ich",
+              correct: "wünsche"
+            },
+            {
+              pronoun: "du",
+              correct: "wünschst"
+            },
+            {
+              pronoun: "er/sie/es",
+              correct: "wünscht"
+            },
+            {
+              pronoun: "wir",
+              correct: "wünschen"
+            },
+            {
+              pronoun: "ihr",
+              correct: "wünscht"
+            },
+            {
+              pronoun: "sie/Sie",
+              correct: "wünschen"
+            }
+          ],
+          note: "Sloveso 'wünschen' je pravidelné sloveso v prítomnom čase."
+        },
+        {
+          infinitive: "brauchen",
+          translation: "potrebovať",
+          forms: [
+            {
+              pronoun: "ich",
+              correct: "brauche"
+            },
+            {
+              pronoun: "du",
+              correct: "brauchst"
+            },
+            {
+              pronoun: "er/sie/es",
+              correct: "braucht"
+            },
+            {
+              pronoun: "wir",
+              correct: "brauchen"
+            },
+            {
+              pronoun: "ihr",
+              correct: "braucht"
+            },
+            {
+              pronoun: "sie/Sie",
+              correct: "brauchen"
+            }
+          ],
+          note: "Sloveso 'brauchen' je pravidelné sloveso v prítomnom čase."
+        }
+      ]
+    }
   ],
-  reviewWords: [
-    "die Wettervorhersage",
-    "Es wird regnen.",
-    "anziehen",
-    "tragen",
-    "frieren",
-    "der Mantel",
-    "der Regenschirm",
-    "die Stiefel",
-    "die Handschuhe",
-  ],
-  lessonNotes:
-    "Výborne! Teraz vieš hovoriť o počasí a oblečení. Kľúčový rozdiel: anziehen (akcia obliekania, separabilné) vs. tragen (stav nosenia). Predpoveď: werden + infinitív. Ďalšia lekcia: veľké čísla a štatistiky!",
+  reviewWords: []
 };

@@ -1,550 +1,932 @@
-﻿export const lesson52 = {
+export const lesson52 = {
   id: 52,
   week: 11,
   day: 2,
-  title: "Über die Vergangenheit sprechen",
-  topic: "Plynulá konverzácia o minulosti – haben + sein, časové výrazy, negácia",
+  title: "Zeitpläne planen",
+  topic: "Časové predložky *in, vor, nach* s datívom.",
   cefr: "A1",
-  xpReward: 30,
-  narrativeContext:
-    "Jana a Lukas sa stretli na obede a vymieňajú si víkendové príbehy. Lukas pracoval celý víkend, Jana navštívila priateľky. Rozprávajú sa vo voľnom tempe, prirodzene prepínajú medzi haben a sein, používajú výrazy ako 'gestern Abend', 'am Wochenende', a otázky 'Hast du schon...?' a 'Ich habe noch nicht...' Konverzácia znie autenticky a živо.",
-  communicativeGoal:
-    "Po tejto lekcii viem viesť plynulý rozhovor o minulosti s haben a sein, časovými výrazmi a negáciou v Perfekte.",
-  skillFocus: ["speaking", "listening", "writing"],
-  grammarNote: {
-    rule: "Perfektum – časové výrazy, negácia, schon / noch nicht",
-    explanation:
-      "Perfektum s časovými výrazmi: časový výraz stojí bezprostredne za haben/sein alebo na začiatku vety (potom nastane inverzia). Vzorec: Subjekt + haben/sein + ČAS + ... + Partizip II. Negácia: 'nicht' stojí pred Partizip II: 'Ich habe das nicht gemacht.' 'Schon' (už) a 'noch nicht' (ešte nie) sú veľmi časté v otázkach a odpovediach: 'Hast du schon gefrühstückt?' – 'Ich habe noch nicht gefrühstückt.'",
-    examples: [
-      { de: "Gestern Abend habe ich Netflix geschaut.", sk: "Včera večer som sledoval/a Netflix." },
-      { de: "Am Wochenende bin ich ins Kino gegangen.", sk: "Cez víkend som šiel/šla do kina." },
-      { de: "Ich habe das nicht gemacht.", sk: "To som neurobil/neurobila." },
-      { de: "Hast du schon gegessen?", sk: "Už si jedol/jedla?" },
-      { de: "Ich habe noch nicht gefrühstückt.", sk: "Ešte som nesniadala/nesníladal." },
-    ],
-    slovakContrastNote:
-      "V slovenčine sa negácia tvorí predponou 'ne-' priamo na slovese: 'nešiel som', 'neurobil som'. Nemčina používa samostatné slovo 'nicht' umiestnené pred Partizip II. Toto je dôležitý rozdiel – nikdy nehovor 'Ich bin nichtgegangen' ako jedno slovo!",
-  },
+  xpReward: 20,
+  narrativeContext: "Jana spricht mit einem Handwerker. Sie muss ihre Zeit planen, weil sie auch arbeitet.",
+  communicativeGoal: "Nach dieser Lektion kann ich über Zeitpläne sprechen und die Zeitpunkte mit 'in', 'vor' und 'nach' angeben.",
+  skillFocus: [
+    "grammar",
+    "speaking",
+    "listening",
+    "vocabulary"
+  ],
+  lessonNotes: "V tejto lekcii sa naučíme používať časové predložky 'in', 'vor' a 'nach' v spojení s datívom. Tieto predložky nám pomôžu presnejšie určiť časové momenty, napríklad kedy niekto príde alebo kedy sa niečo stane. Zameriame sa na ich použitie v bežných rozhovoroch o plánovaní.",
+  grammarNotes: [
+    {
+      rule: "Časové predložky 'in', 'vor', 'nach' s datívom",
+      explanation: "\n      <p>V nemčine sa na vyjadrenie času pred udalosťou alebo po nej používajú špecifické predložky v kombinácii s datívom. Predložka <strong>'in'</strong> sa používa na označenie, že sa niečo stane v blízkej budúcnosti, zvyčajne v rámci dňa alebo týždňa. Napríklad, 'in einer Stunde' znamená 'o hodinu'. Predložka <strong>'vor'</strong> sa používa na označenie času pred určitým bodom v minulosti alebo budúcnosti. 'Vor einer Woche' znamená 'pred týždňom'. Predložka <strong>'nach'</strong> sa používa na označenie času po určitej udalosti alebo bode v čase. 'Nach dem Essen' znamená 'po jedle'. Všetky tieto predložky vyžadujú, aby nasledoval podstatné meno alebo zámeno v datívnom páde.</p>\n      <p>Všimnite si, že pri určitých podstatných menách sa v datíve pridáva koncovka <strong>-n</strong> (napr. 'dem Mann' -> 'dem Mann<strong>en</strong>', 'der Frau' -> 'der Frau<strong>en</strong>', 'dem Kind' -> 'dem Kind<strong>e</strong>'). Toto pravidlo platí pre väčšinu podstatných mien mužského a stredného rodu, ako aj pre niektoré ženské podstatné mená. Pri podstatných menách ženského rodu sa často pridáva iba koncovka <strong>-n</strong>. Pri podstatných menách mužského rodu sa často pridáva <strong>-en</strong>.</p>\n      <p><strong>Prehľad datívu s predložkami:</strong></p>\n      <table>\n        <thead>\n          <tr>\n            <th>Predložka</th>\n            <th>Význam</th>\n            <th>Príklad (datív)</th>\n          </tr>\n        </thead>\n        <tbody>\n          <tr>\n            <td>in</td>\n            <td>o (v rámci), za (časový úsek)</td>\n            <td>in einer Stunde, in zwei Tagen</td>\n          </tr>\n          <tr>\n            <td>vor</td>\n            <td>pred (časový úsek)</td>\n            <td>vor einer Woche, vor drei Jahren</td>\n          </tr>\n          <tr>\n            <td>nach</td>\n            <td>po (časový úsek)</td>\n            <td>nach dem Unterricht, nach drei Stunden</td>\n          </tr>\n        </tbody>\n      </table>\n      <div class=\"tip-box\">\n        <strong>Tip:</strong> V slovenčine používame na vyjadrenie podobných časových vzťahov iné predložky a pády (napr. 'o hodinu' - akuzatív, 'pred týždňom' - datív, 'po obede' - datív). V nemčine je kľúčové zapamätať si, že 'in', 'vor', 'nach' vždy vyžadujú datív.\n      </div>\n    ",
+      examples: [
+        {
+          de: "Wir treffen uns in einer Stunde.",
+          sk: "Stretneme sa o hodinu."
+        },
+        {
+          de: "Das Konzert beginnt in zwei Tagen.",
+          sk: "Koncert začína o dva dni."
+        },
+        {
+          de: "Ich habe vor drei Wochen Deutsch gelernt.",
+          sk: "Učil som sa nemecky pred tromi týždňami."
+        },
+        {
+          de: "Er kam vor einem Monat nach Deutschland.",
+          sk: "Prišiel do Nemecka pred jedným mesiacom."
+        },
+        {
+          de: "Nach dem Essen machen wir einen Spaziergang.",
+          sk: "Po jedle pôjdeme na prechádzku."
+        },
+        {
+          de: "Nach dem Unterricht gehe ich nach Hause.",
+          sk: "Po vyučovaní idem domov."
+        },
+        {
+          de: "Wir lernen Deutsch nach dem Kurs.",
+          sk: "Učíme sa nemecky po kurze."
+        },
+        {
+          de: "Sie kommt in einer Woche zurück.",
+          sk: "Vráti sa o týždeň."
+        }
+      ],
+      slovakContrastNote: "V slovenčine používame na vyjadrenie časového úseku pred udalosťou predložku 'pred' s datívom (pred obedom), alebo na vyjadrenie času, kedy sa niečo stane, predložku 'o' s akuzatívom (o hodinu). V nemčine sa na vyjadrenie času pred udalosťou používa predložka 'vor' s datívom (vor dem Mittagessen) a na vyjadrenie času, kedy sa niečo stane, predložka 'in' s datívom (in einer Stunde). Predložka 'nach' s datívom (nach dem Mittagessen) zodpovedá slovenskému 'po' s datívom."
+    },
+    {
+      rule: "Perfekt s 'haben' a 'sein' - opakovanie",
+      explanation: "\n      <p>V minulom čase Perfekt sa dej vyjadruje pomocou dvoch pomocných slovies: <strong>'haben'</strong> (mať) a <strong>'sein'</strong> (byť). Väčšina slovies tvorí Perfekt s 'haben'. Slovesá, ktoré vyjadrujú pohyb (napr. gehen, fahren, kommen) alebo zmenu stavu (napr. aufwachen, sterben, einschlafen), tvoria Perfekt s 'sein'.</p>\n      <p>Tvorba Perfekta:</p>\n      <ul>\n        <li>Pomocné sloveso ('haben' alebo 'sein') v prítomnom čase (na druhom mieste vo vete).</li>\n        <li>Príčastie trpné (Partizip II) hlavného slovesa na konci vety.</li>\n      </ul>\n      <p><strong>Príklady tvorby Partizip II:</strong></p>\n      <ul>\n        <li>Pravidelné slovesá: ge + kmeň slovesa + t (gelernt, gemacht, gespielt)</li>\n        <li>Nepravidelné slovesá: často ge + zmena kmeňa + en (gesehen, geschrieben, getrunken)</li>\n        <li>Slovesá s oddeľiteľnou predponou: predpona sa oddeľuje a medzi ňu a kmeň sa vkladá 'ge' (aufstehen -> <strong>aufgestanden</strong>, anrufen -> <strong>angerufen</strong>)</li>\n        <li>Slovesá s neoddeľiteľnou predponou (be-, ge-, er-, ver-, zer-, ent-, miss-): bez 'ge-' (besucht, erklärt, verstanden)</li>\n      </ul>\n      <div class=\"warn-box\">\n        <strong>Pozor:</strong> Pri slovesách s neoddeliteľnou predponou sa 'ge-' do príčastia netvorí. Napríklad: besuchen -> besucht, verstehen -> verstanden.\n      </div>\n    ",
+      examples: [
+        {
+          de: "Ich habe Deutsch gelernt.",
+          sk: "Učil som sa nemecky."
+        },
+        {
+          de: "Er hat das Buch gelesen.",
+          sk: "Čítal knihu."
+        },
+        {
+          de: "Wir haben im Park gespielt.",
+          sk: "Hrali sme sa v parku."
+        },
+        {
+          de: "Sie ist nach Hause gegangen.",
+          sk: "Išla domov."
+        },
+        {
+          de: "Wir sind gestern nach Berlin gefahren.",
+          sk: "Včera sme išli do Berlína."
+        },
+        {
+          de: "Er ist aufgewacht.",
+          sk: "Zobudil sa."
+        },
+        {
+          de: "Sie hat angerufen.",
+          sk: "Zavolala."
+        },
+        {
+          de: "Ich habe das Fenster aufgemacht.",
+          sk: "Otvoril som okno."
+        }
+      ],
+      slovakContrastNote: "Slovenčina používa na vyjadrenie minulého deja najčastejšie minulý čas (perfektum), ktorý sa tvorí pomocou príčastia činného a pomocného slovesa 'byť' (bol som, bola som). Nemčina má v tomto prípade dva hlavné spôsoby: Perfekt (s pomocnými slovesami 'haben' a 'sein') a Präteritum (minulý čas, ktorý sa používa najmä v písomnom prejave a pri slovesách 'sein' a 'haben'). Pre úroveň A1 je kľúčové zvládnuť Perfekt s 'haben' a 'sein'."
+    }
+  ],
   vocab: [
     {
-      de: "gestern Abend",
-      sk: "včera večer",
-      example: "Gestern Abend habe ich einen Film gesehen.",
-      exampleSk: "Včera večer som si pozrel/a film.",
-      gender: null,
+      de: "die Stunde",
+      sk: "hodina",
+      gender: "F",
       srsId: "L52_V01",
-      recycledFrom: [21, 50],
+      example: "Der Handwerker kommt in einer Stunde.",
+      exampleSk: "Remeselník príde o hodinu.",
+      recycledFrom: []
     },
     {
-      de: "am Wochenende",
-      sk: "cez víkend",
-      example: "Am Wochenende bin ich ins Kino gegangen.",
-      exampleSk: "Cez víkend som išiel/išla do kina.",
-      gender: null,
-      srsId: "L52_V02",
-      recycledFrom: [21, 50],
-    },
-    {
-      de: "vorgestern",
-      sk: "predvčerom",
-      example: "Vorgestern habe ich Lukas getroffen.",
-      exampleSk: "Predvčerom som stretol/stretla Lukasa.",
-      gender: null,
-      srsId: "L52_V03",
-      recycledFrom: [],
-    },
-    {
-      de: "letzte Woche",
-      sk: "minulý týždeň",
-      example: "Letzte Woche habe ich viel gearbeitet.",
-      exampleSk: "Minulý týždeň som veľa pracoval/a.",
-      gender: null,
-      srsId: "L52_V04",
-      recycledFrom: [50],
-    },
-    {
-      de: "letzten Monat",
-      sk: "minulý mesiac",
-      example: "Letzten Monat bin ich nach Berlin geflogen.",
-      exampleSk: "Minulý mesiac som letel/letela do Berlína.",
-      gender: null,
-      srsId: "L52_V05",
-      recycledFrom: [50],
-    },
-    {
-      de: "schon",
-      sk: "už",
-      example: "Hast du schon gefrühstückt?",
-      exampleSk: "Už si raňajkoval/a?",
-      gender: null,
-      srsId: "L52_V06",
-      recycledFrom: [11, 16],
-    },
-    {
-      de: "noch nicht",
-      sk: "ešte nie",
-      example: "Ich habe noch nicht gegessen.",
-      exampleSk: "Ešte som nejedol/nejedla.",
-      gender: null,
-      srsId: "L52_V07",
-      recycledFrom: [11],
-    },
-    {
-      de: "nie gemacht",
-      sk: "nikdy neurobil/a",
-      example: "Ich habe das noch nie gemacht.",
-      exampleSk: "To som ešte nikdy neurobil/a.",
-      gender: null,
-      srsId: "L52_V08",
-      recycledFrom: [],
-    },
-    {
-      de: "Was hast du gemacht?",
-      sk: "Čo si robil/a?",
-      example: "Was hast du am Wochenende gemacht?",
-      exampleSk: "Čo si robil/a cez víkend?",
-      gender: null,
-      srsId: "L52_V09",
-      recycledFrom: [50],
-    },
-    {
-      de: "Wo bist du gewesen?",
-      sk: "Kde si bol/bola?",
-      example: "Wo bist du gestern Abend gewesen?",
-      exampleSk: "Kde si bol/bola včera večer?",
-      gender: null,
-      srsId: "L52_V10",
-      recycledFrom: [],
-    },
-    {
-      de: "Hast du schon...?",
-      sk: "Už si...?",
-      example: "Hast du schon zu Mittag gegessen?",
-      exampleSk: "Už si oobedoval/a?",
-      gender: null,
-      srsId: "L52_V11",
-      recycledFrom: [],
-    },
-    {
-      de: "das Wochenende",
-      sk: "víkend",
-      example: "Das Wochenende war super!",
-      exampleSk: "Víkend bol skvelý!",
+      de: "das Mittagessen",
+      sk: "obed",
       gender: "N",
+      srsId: "L52_V02",
+      example: "Wir essen nach dem Mittagessen.",
+      exampleSk: "Po obede sa najeme.",
+      recycledFrom: []
+    },
+    {
+      de: "das Abendessen",
+      sk: "večera",
+      gender: "N",
+      srsId: "L52_V03",
+      example: "Vor dem Abendessen bin ich weg.",
+      exampleSk: "Pred večerou budem preč.",
+      recycledFrom: []
+    },
+    {
+      de: "der Termin",
+      sk: "termín",
+      gender: "M",
+      srsId: "L52_V04",
+      example: "Der Termin ist nach dem Mittagessen.",
+      exampleSk: "Termín je po obede.",
+      recycledFrom: []
+    },
+    {
+      de: "die Arbeit",
+      sk: "práca",
+      gender: "F",
+      srsId: "L52_V05",
+      example: "Ich muss nach der Arbeit nach Hause gehen.",
+      exampleSk: "Po práci musím ísť domov.",
+      recycledFrom: []
+    },
+    {
+      de: "die Zeit",
+      sk: "čas",
+      gender: "F",
+      srsId: "L52_V06",
+      example: "Ich habe keine Zeit.",
+      exampleSk: "Nemám čas.",
+      recycledFrom: []
+    },
+    {
+      de: "der Anruf",
+      sk: "telefonát",
+      gender: "M",
+      srsId: "L52_V07",
+      example: "Ich habe einen Anruf bekommen.",
+      exampleSk: "Dostal som telefonát.",
+      recycledFrom: []
+    },
+    {
+      de: "das Telefon",
+      sk: "telefón",
+      gender: "N",
+      srsId: "L52_V08",
+      example: "Mein Telefon ist kaputt.",
+      exampleSk: "Môj telefón je pokazený.",
+      recycledFrom: []
+    },
+    {
+      de: "die Wohnung",
+      sk: "byt",
+      gender: "F",
+      srsId: "L52_V09",
+      example: "Ich bin erst ab drei Uhr zu Hause in der Wohnung.",
+      exampleSk: "Doma v byte budem až od tretej.",
+      recycledFrom: []
+    },
+    {
+      de: "die Hausnummer",
+      sk: "číslo domu",
+      gender: "F",
+      srsId: "L52_V10",
+      example: "Wie ist Ihre Hausnummer?",
+      exampleSk: "Aké je vaše číslo domu?",
+      recycledFrom: []
+    },
+    {
+      de: "der Nachmittag",
+      sk: "poobedie",
+      gender: "M",
+      srsId: "L52_V11",
+      example: "Ich bin am Nachmittag zu Hause.",
+      exampleSk: "Poobede som doma.",
+      recycledFrom: []
+    },
+    {
+      de: "der Morgen",
+      sk: "ráno",
+      gender: "M",
       srsId: "L52_V12",
-      recycledFrom: [21],
+      example: "Ich bin am Morgen zu Hause.",
+      exampleSk: "Ráno som doma.",
+      recycledFrom: []
     },
     {
       de: "der Abend",
       sk: "večer",
-      example: "Der Abend war sehr entspannend.",
-      exampleSk: "Večer bol veľmi relaxačný.",
       gender: "M",
       srsId: "L52_V13",
-      recycledFrom: [21],
+      example: "Am Abend esse ich zu Hause.",
+      exampleSk: "Večer jem doma.",
+      recycledFrom: []
     },
     {
-      de: "erzählen",
-      sk: "rozprávať / vyrozprávať",
-      example: "Erzähl mir, was du gemacht hast!",
-      exampleSk: "Porozprávaj mi, čo si robil/a!",
+      de: "kommen",
+      sk: "prísť",
       gender: null,
       srsId: "L52_V14",
-      recycledFrom: [28, 33],
+      example: "Der Handwerker kommt nach dem Mittagessen.",
+      exampleSk: "Remeselník príde po obede.",
+      recycledFrom: []
     },
     {
-      de: "Ich auch! / Ich nicht.",
-      sk: "Ja tiež! / Ja nie.",
-      example: "Ich habe Netflix geschaut. – Ich auch!",
-      exampleSk: "Sledoval/a som Netflix. – Ja tiež!",
+      de: "planen",
+      sk: "plánovať",
       gender: null,
       srsId: "L52_V15",
-      recycledFrom: [],
+      example: "Ich muss meinen Tag planen.",
+      exampleSk: "Musím si naplánovať svoj deň.",
+      recycledFrom: []
     },
+    {
+      de: "wissen",
+      sk: "vedieť",
+      gender: null,
+      srsId: "L52_V16",
+      example: "Ich weiß nicht, wann er kommt.",
+      exampleSk: "Neviem, kedy príde.",
+      recycledFrom: []
+    },
+    {
+      de: "sein",
+      sk: "byť",
+      gender: null,
+      srsId: "L52_V17",
+      example: "Ich war gestern zu Hause.",
+      exampleSk: "Včera som bol doma.",
+      recycledFrom: [
+        "L51_V22"
+      ]
+    },
+    {
+      de: "haben",
+      sk: "mať",
+      gender: null,
+      srsId: "L52_V18",
+      example: "Ich hatte keine Zeit.",
+      exampleSk: "Nemal som čas.",
+      recycledFrom: [
+        "L51_V23"
+      ]
+    },
+    {
+      de: "in einer Stunde",
+      sk: "o hodinu",
+      gender: null,
+      srsId: "L52_V19",
+      example: "Bis bald! Ich bin in einer Stunde zurück.",
+      exampleSk: "Ahoj! Budem späť o hodinu.",
+      recycledFrom: []
+    },
+    {
+      de: "nach dem Mittagessen",
+      sk: "po obede",
+      gender: null,
+      srsId: "L52_V20",
+      example: "Können Sie nach dem Mittagessen kommen?",
+      exampleSk: "Môžete prísť po obede?",
+      recycledFrom: []
+    },
+    {
+      de: "vor dem Abendessen",
+      sk: "pred večerou",
+      gender: null,
+      srsId: "L52_V21",
+      example: "Vor dem Abendessen muss ich noch arbeiten.",
+      exampleSk: "Pred večerou musím ešte pracovať.",
+      recycledFrom: []
+    },
+    {
+      de: "erst ab drei Uhr",
+      sk: "až od tretej",
+      gender: null,
+      srsId: "L52_V22",
+      example: "Ich bin erst ab drei Uhr zu Hause.",
+      exampleSk: "Doma budem až od tretej.",
+      recycledFrom: []
+    },
+    {
+      de: "zu Hause sein",
+      sk: "byť doma",
+      gender: null,
+      srsId: "L52_V23",
+      example: "Ich bin jetzt zu Hause.",
+      exampleSk: "Teraz som doma.",
+      recycledFrom: []
+    },
+    {
+      de: "weg sein",
+      sk: "byť preč",
+      gender: null,
+      srsId: "L52_V24",
+      example: "Ich bin vor dem Abendessen weg.",
+      exampleSk: "Pred večerou som preč.",
+      recycledFrom: []
+    }
   ],
   exercises: [
     {
       type: "flashcard",
-      instruction: "Nauč sa časové výrazy a kľúčové frázy pre rozhovor o minulosti.",
-      items: [
-        "gestern Abend = včera večer",
-        "am Wochenende = cez víkend",
-        "vorgestern = predvčerom",
-        "letzte Woche = minulý týždeň",
-        "letzten Monat = minulý mesiac",
-        "schon = už",
-        "noch nicht = ešte nie",
-        "Was hast du gemacht? = Čo si robil/a?",
-        "Wo bist du gewesen? = Kde si bol/bola?",
-        "Hast du schon gefrühstückt? = Už si raňajkoval/a?",
-        "Ich habe noch nicht gegessen. = Ešte som nejedol/nejedla.",
-        "Ich auch! = Ja tiež!",
-        "Ich nicht. = Ja nie.",
-        "erzählen = rozprávať",
-      ],
-    },
-    {
-      type: "mcq",
-      instruction: "Vyber správnu možnosť pre každú otázku o minulosti.",
-      questions: [
-        {
-          question: "Kde stojí 'nicht' v Perfekte?",
-          options: [
-            "Pred pomocným slovesom (haben/sein)",
-            "Na konci vety, za Partizipom II",
-            "Pred Partizipom II",
-            "Na začiatku vety",
-          ],
-          answer: "Pred Partizipom II",
-          explanation:
-            "V Perfekte stojí 'nicht' priamo pred Partizipom II: 'Ich habe das nicht gemacht.' Nie 'Ich nicht habe gemacht.' Partizip II je vždy na konci.",
-        },
-        {
-          question: "Ktorá veta je správna?",
-          options: [
-            "Gestern bin ich gegangen ins Kino.",
-            "Gestern bin ich ins Kino gegangen.",
-            "Gestern ich bin ins Kino gegangen.",
-            "Ich bin gestern gegangen ins Kino.",
-          ],
-          answer: "Gestern bin ich ins Kino gegangen.",
-          explanation:
-            "Partizip II musí stáť vždy na konci vety! Keď je časový výraz ('gestern') na začiatku, nastáva inverzia: verb (bin) pred subjektom (ich). Partizip II (gegangen) zostáva na konci.",
-        },
-        {
-          question: "Ako sa povie 'Ešte som neraňajkoval/a' po nemecky?",
-          options: [
-            "Ich habe noch nicht gefrühstückt.",
-            "Ich habe nicht noch gefrühstückt.",
-            "Ich nicht habe gefrühstückt.",
-            "Noch nicht ich habe gefrühstückt.",
-          ],
-          answer: "Ich habe noch nicht gefrühstückt.",
-          explanation:
-            "'Noch nicht' (ešte nie) stojí pred Partizipom II. Správny slovosled: Subjekt + haben/sein + noch nicht + Partizip II.",
-        },
-        {
-          question: "Čo znamená 'vorgestern'?",
-          options: ["včera", "predvčerom", "minulý týždeň", "dnes ráno"],
-          answer: "predvčerom",
-          explanation:
-            "'Gestern' = včera, 'vorgestern' = predvčerom (doslova: 'pred včerajškom'). Porovnaj: 'übermorgen' = pozajtra.",
-        },
-        {
-          question: "Ktorá odpoveď je správna na otázku 'Hast du schon gegessen?'",
-          options: [
-            "Ja, ich habe gegessen schon.",
-            "Ja, ich schon gegessen habe.",
-            "Ja, ich habe schon gegessen.",
-            "Ja, schon ich habe gegessen.",
-          ],
-          answer: "Ja, ich habe schon gegessen.",
-          explanation:
-            "'Schon' stojí v Perfekte pred Partizipom II alebo za pomocným slovesom. Správne: 'Ich habe schon gegessen.' Partizip II je vždy na konci vety.",
-        },
-        {
-          question: "Preložte: 'Letztes Wochenende bin ich ins Theater gegangen.'",
-          options: [
-            "Minulý víkend som šiel/šla do divadla.",
-            "Tento víkend pôjdem do divadla.",
-            "Minulý mesiac som bol/bola v divadle.",
-            "Každý víkend chodím do divadla.",
-          ],
-          answer: "Minulý víkend som šiel/šla do divadla.",
-          explanation:
-            "'Letztes Wochenende' = minulý víkend, 'bin gegangen' = Perfektum od gehen (sein-sloveso), 'ins Theater' = do divadla.",
-        },
-        {
-          question: "Jana hovorí: 'Am Wochenende habe ich meine Freundinnen ___.' (besuchen)",
-          options: ["besucht", "besuchte", "besuchen", "besucht haben"],
-          answer: "besucht",
-          explanation:
-            "Partizip II pravidelného slovesa 'besuchen' je 'besucht' (ge- + bezn + -t). Besuchen používa haben (nie sein), pretože nejde o pohyb z A do B, ale o aktivitu.",
-        },
-      ],
-    },
-    {
-      type: "fill",
-      instruction: "Doplň správny tvar pomocného slovesa (haben/sein) a Partizip II. Použij ___ pre medzery.",
-      questions: [
-        {
-          sentence: "Gestern Abend ___ ich einen Film ___. (sehen)",
-          answer: "habe gesehen",
-          hint: "sehen = haben; Partizip II: gesehen",
-          explanation:
-            "Sehen (vidieť) je bežné činnostné sloveso → haben. Partizip II: gesehen (nepravidelné). Výsledok: 'Gestern Abend habe ich einen Film gesehen.'",
-        },
-        {
-          sentence: "Am Wochenende ___ Lukas viel ___. (arbeiten)",
-          answer: "hat gearbeitet",
-          hint: "arbeiten = haben; Lukas = er → hat; Partizip II: gearbeitet",
-          explanation:
-            "Arbeiten (pracovať) → haben. Pre Lukas (er) je forma 'hat'. Partizip II pravidelného slovesa: ge-arbeit-et.",
-        },
-        {
-          sentence: "Ich ___ noch nicht ___. (frühstücken)",
-          answer: "habe gefrühstückt",
-          hint: "frühstücken = haben; Partizip II: gefrühstückt; 'noch nicht' stojí pred Partizipom II",
-          explanation:
-            "'Noch nicht' (ešte nie) sa vkladá pred Partizip II. Frühstücken → haben. Partizip II: gefrühstückt.",
-        },
-        {
-          sentence: "Wo ___ du am Samstag ___? (sein)",
-          answer: "bist gewesen",
-          hint: "sein (byť) → sein; du → bist; Partizip II: gewesen",
-          explanation:
-            "Sloveso sein (byť) v Perfekte: bin/bist/ist/sind/seid/sind + gewesen. Pre du: 'bist gewesen'. Trhák pre slovenčinu: 'kde si bol/bola?'.",
-        },
-        {
-          sentence: "Ich ___ letzten Monat nicht nach Hause ___. (fahren)",
-          answer: "bin gefahren",
-          hint: "fahren = sein; 'nicht' stojí pred Partizipom II, ale po časovom výraze",
-          explanation:
-            "Fahren → sein. Negácia s 'nicht' pred Partizipom II: 'Ich bin letzten Monat nicht nach Hause gefahren.' Pozor na slovosled!",
-        },
-        {
-          sentence: "___ du schon Kaffee ___? (trinken)",
-          answer: "Hast getrunken",
-          hint: "trinken = haben; du → hast; Partizip II: getrunken (nepravidelné)",
-          explanation:
-            "Trinken je nepravidelné: Partizip II = getrunken. Používa haben. Otázka: 'Hast du schon Kaffee getrunken?'",
-        },
-        {
-          sentence: "Letzte Woche ___ Jana ihre Mutter in Bratislava ___. (besuchen)",
-          answer: "hat besucht",
-          hint: "besuchen = haben; Jana = sie → hat; Partizip II: besucht",
-          explanation:
-            "Besuchen (navštíviť) → haben. Jana = sie, forma 'hat'. Partizip II pravidelného slovesa: ge-besuch-t.",
-        },
-      ],
-    },
-    {
-      type: "listen",
-      instruction: "Prečítaj si vety a sústred sa na slovosled v Perfekte s časovými výrazmi.",
-      questions: [
-        { de: "Gestern Abend habe ich Netflix geschaut.", sk: "Včera večer som sledoval/a Netflix." },
-        { de: "Am Wochenende bin ich ins Kino gegangen.", sk: "Cez víkend som šiel/šla do kina." },
-        { de: "Ich habe noch nicht gegessen.", sk: "Ešte som nejedol/nejedla." },
-        { de: "Hast du schon gefrühstückt?", sk: "Už si raňajkoval/a?" },
-        { de: "Letzte Woche habe ich viel gearbeitet.", sk: "Minulý týždeň som veľa pracoval/a." },
-        { de: "Ich habe das nicht gemacht.", sk: "To som neurobil/neurobila." },
-        { de: "Wo bist du am Samstag gewesen?", sk: "Kde si bol/bola v sobotu?" },
-        { de: "Letzten Monat bin ich nach Berlin geflogen.", sk: "Minulý mesiac som letel/letela do Berlína." },
-      ],
+      instruction: "Prezri si slovíčka tejto lekcie. Klikni na kartičku pre preklad."
     },
     {
       type: "match",
-      instruction: "Spoj časové výrazy s ich slovenskými ekvivalentmi.",
+      instruction: "Spojte nemecké slová so slovenskými ekvivalentmi.",
       pairs: [
-        ["gestern Abend", "včera večer"],
-        ["am Wochenende", "cez víkend"],
-        ["vorgestern", "predvčerom"],
-        ["letzte Woche", "minulý týždeň"],
-        ["letzten Monat", "minulý mesiac"],
-        ["schon", "už"],
-        ["noch nicht", "ešte nie"],
-        ["Ich auch!", "Ja tiež!"],
-      ],
-    },
-    {
-      type: "dialogue",
-      instruction:
-        "Jana a Lukas si vymenú víkendové zážitky. Pozoruj, ako prirodzene miešajú haben a sein Perfekt s časovými výrazmi.",
-      lines: [
-        {
-          speaker: "A",
-          de: "Lukas, erzähl mir! Was hast du am Wochenende gemacht?",
-          sk: "Lukas, porozprávaj mi! Čo si robil cez víkend?",
-        },
-        {
-          speaker: "B",
-          de: "Ach, ich habe leider viel gearbeitet. Samstag und Sonntag. Sehr langweilig.",
-          sk: "Ach, bohužiaľ som veľa pracoval. V sobotu aj nedeľu. Veľmi nudné.",
-        },
-        {
-          speaker: "A",
-          de: "Oh nein! Das tut mir leid. Ich war ganz anders. Am Samstag habe ich meine Freundinnen besucht.",
-          sk: "Ó nie! Je mi ľúto. Mňa to bolo úplne inak. V sobotu som navštívila priateľky.",
-        },
-        {
-          speaker: "B",
-          de: "Toll! Und was habt ihr zusammen gemacht?",
-          sk: "Super! A čo ste spolu robili?",
-        },
-        {
-          speaker: "A",
-          de: "Wir sind in ein neues Restaurant gegangen und haben sehr gut gegessen. Und dann bin ich am Abend ins Theater gegangen.",
-          sk: "Išli sme do nového reštaurátu a výborne sme jedli. A potom som večer šla do divadla.",
-        },
-        {
-          speaker: "B",
-          de: "Das Theater! Was hast du gesehen?",
-          sk: "Divadlo! Čo si videla?",
-        },
-        {
-          speaker: "A",
-          de: "Ich habe ein Stück von Brecht gesehen. Es war sehr interessant. Hast du schon mal Theater gespielt?",
-          sk: "Videla som Brechtovo divadelné predstavenie. Bolo veľmi zaujímavé. Bol si niekedy v divadle hrať?",
-        },
-        {
-          speaker: "B",
-          de: "Nein, ich nicht. Und am Sonntag? Was bist du da gemacht — oder gewesen?",
-          sk: "Nie, ja nie. A v nedeľu? Čo si robila – alebo kde si bola?",
-        },
-        {
-          speaker: "A",
-          de: "Ich bin lange geschlafen! Bis zehn Uhr! Und dann habe ich gelesen und Kaffee getrunken.",
-          sk: "Dlho som spala! Do desiatej! A potom som čítala a pila kávu.",
-        },
-        {
-          speaker: "B",
-          de: "Das klingt herrlich. Ich habe vorgestern auch versucht, lange zu schlafen – aber es hat nicht geklappt.",
-          sk: "To znie nádherně. Ja som predvčerom tiež skúsil dlho spať – ale nepodarilo sa.",
-        },
-        {
-          speaker: "A",
-          de: "Hast du schon zu Mittag gegessen? Ich noch nicht!",
-          sk: "Už si obedoval? Ja ešte nie!",
-        },
-        {
-          speaker: "B",
-          de: "Ich auch nicht! Lass uns gehen – ich kenne hier ein gutes Lokal!",
-          sk: "Ja tiež nie! Poďme – poznám tu dobré miesto!",
-        },
-      ],
-      comprehensionQuestions: [
-        {
-          question: "Was hat Lukas am Wochenende gemacht?",
-          options: ["Er ist ins Kino gegangen", "Er hat viel gearbeitet", "Er hat seine Freunde besucht", "Er ist gereist"],
-          answer: "Er hat viel gearbeitet",
-        },
-        {
-          question: "Wo ist Jana am Samstagabend gewesen?",
-          options: ["Im Kino", "Bei Freundinnen", "Im Theater", "Im Restaurant"],
-          answer: "Im Theater",
-        },
-        {
-          question: "Haben Jana und Lukas schon zu Mittag gegessen?",
-          options: ["Ja, beide haben schon gegessen", "Jana hat gegessen, Lukas nicht", "Nein, beide haben noch nicht gegessen", "Lukas hat gegessen, Jana nicht"],
-          answer: "Nein, beide haben noch nicht gegessen",
-        },
-      ],
-    },
-    {
-      type: "minitext",
-      instruction:
-        "Prečítaj si SMS konverzáciu medzi Janou a Miou o ich víkende. Sústred sa na prirodzenú hovorovú nemčinu.",
-      text:
-        "Mia: Hey Jana! Was hast du am WE gemacht? 😊\nJana: Hi Mia! Ich bin samstags mit den Mädels essen gegangen und dann ins Theater! Du?\nMia: Cool!! Ich habe noch nicht so viel gemacht tbh 😅 Ich bin bis 11 geschlafen lol\nJana: Haha ich auch Sonntag!! Vorgestern bin ich übrigens nach Bratislava gefahren\nMia: Wirklich?? Wie war\'s??\nJana: Sehr schön!! Ich habe meine Eltern besucht und wir haben zusammen zu Abend gegessen 🥰\nMia: Awww! Hast du schon das neue Café in der Naschmarktgasse probiert?\nJana: Noch nicht! Wollen wir mal zusammen gehen? 😊",
-      textSk:
-        "Mia: Čau Jana! Čo si robila cez víkend? 😊\nJana: Čau Mia! V sobotu som šla jesť s dievčatami a potom do divadla! Ty?\nMia: Super!! Ja som ešte veľa nespravila 😅 Spala som do 11 lol\nJana: Haha ja tiež v nedeľu!! Predvčerom som šla do Bratislavy\nMia: Naozaj?? Aké to bolo??\nJana: Veľmi pekne!! Navštívila som rodičov a spolu sme večerali 🥰\nMia: Awww! Už si skúsila tú novú kaviareň na Naschmarktgasse?\nJana: Ešte nie! Chceš ísť spolu? 😊",
-      questions: [
-        {
-          question: "Wohin ist Jana am Samstag gegangen?",
-          options: [
-            "Ins Kino und dann essen",
-            "Essen und dann ins Theater",
-            "Nach Bratislava",
-            "In ein Café",
-          ],
-          answer: "Essen und dann ins Theater",
-        },
-        {
-          question: "Was hat Mia am Wochenende gemacht?",
-          options: [
-            "Sie ist ins Theater gegangen",
-            "Sie hat ihre Eltern besucht",
-            "Sie hat lange geschlafen",
-            "Sie hat in einem Café gearbeitet",
-          ],
-          answer: "Sie hat lange geschlafen",
-        },
-        {
-          question: "Wohin ist Jana vorgestern gefahren?",
-          options: ["Nach Wien", "Nach Berlin", "Nach Bratislava", "Nach Venedig"],
-          answer: "Nach Bratislava",
-        },
-      ],
-    },
-    {
-      type: "freewrite",
-      instruction:
-        "Napíš krátky odstavec (alebo niekoľko viet) o tom, čo si robil/a minulý víkend. Použi časové výrazy, schon/noch nicht, a miešaj haben a sein Perfekt!",
-      prompt:
-        "Was hast du letztes Wochenende gemacht? Was ist passiert? Schreib alles auf Perfekt!",
-      minWords: 45,
-      exampleAnswer:
-        "Letztes Wochenende habe ich viel gemacht! Am Samstag bin ich mit meiner Freundin einkaufen gegangen und wir haben in einem netten Café Kaffee getrunken. Ich habe noch nicht den neuen Film gesehen, aber am Abend bin ich ins Kino gegangen – endlich! Am Sonntag habe ich lange geschlafen und dann zu Hause gelesen. Ich habe meine Familie angerufen und wir haben lange geredet. Es war ein schönes Wochenende!",
+        [
+          "die Stunde",
+          "hodina"
+        ],
+        [
+          "das Mittagessen",
+          "obed"
+        ],
+        [
+          "das Abendessen",
+          "večera"
+        ],
+        [
+          "der Termin",
+          "termín"
+        ],
+        [
+          "die Arbeit",
+          "práca"
+        ],
+        [
+          "in einer Stunde",
+          "o hodinu"
+        ],
+        [
+          "nach dem Mittagessen",
+          "po obede"
+        ],
+        [
+          "vor dem Abendessen",
+          "pred večerou"
+        ],
+        [
+          "zu Hause sein",
+          "byť doma"
+        ],
+        [
+          "weg sein",
+          "byť preč"
+        ]
+      ]
     },
     {
       type: "wordorder",
-      instruction: "Zoraď slová do správnej nemeckej vety.",
+      instruction: "Usporiadajte slová do správneho nemeckého poradia.",
       sentences: [
         {
-          words: ["Komm", "doch", "mal", "vorbei"],
-          correct: "Komm doch mal vorbei",
-          hint: "Prídi predsa k nám!",
-          explanation: "'doch mal' = kombinácia modálnych partikúl: 'doch' vyjadruje zdvorilý nátlak, 'mal' zmierňuje výzvu. Vorbei je separovaná predpona.",
+          words: [
+            "ich",
+            "bin",
+            "in",
+            "einer",
+            "Stunde",
+            "fertig"
+          ],
+          correct: "ich bin in einer Stunde fertig",
+          hint: "Som o hodinu hotový.",
+          explanation: "Časové predložky ako 'in einer Stunde' zvyčajne nasledujú po slovese alebo osobnom zájmene v hlavnej vete."
         },
         {
-          words: ["Das", "ist", "ja", "schön"],
-          correct: "Das ist ja schön",
-          hint: "To je predsa krásne!",
-          explanation: "'ja' ako modálna partikula vyjadruje prekvapenie alebo potvrdzuje niečo, čo hovorí hovoriaci považuje za samozrejmé.",
+          words: [
+            "wir",
+            "essen",
+            "nach",
+            "dem",
+            "Mittagessen"
+          ],
+          correct: "wir essen nach dem Mittagessen",
+          hint: "Po obede jeme.",
+          explanation: "Predložka 'nach' s datívom (dem Mittagessen) sa používa na označenie času po udalosti."
         },
         {
-          words: ["Das", "ist", "eben", "so"],
-          correct: "Das ist eben so",
-          hint: "Tak to jednoducho je.",
-          explanation: "'eben' vyjadruje rezignáciu alebo prijatie faktu — 'tak to proste je'. Nestojí na začiatku ani na konci.",
+          words: [
+            "er",
+            "hat",
+            "vor",
+            "dem",
+            "Abendessen",
+            "einen",
+            "Termin"
+          ],
+          correct: "er hat vor dem Abendessen einen Termin",
+          hint: "Pred večerou má termín.",
+          explanation: "Predložka 'vor' s datívom (dem Abendessen) označuje čas pred udalosťou."
         },
         {
-          words: ["Kannst", "du", "mal", "kurz", "helfen"],
-          correct: "Kannst du mal kurz helfen",
-          hint: "Môžeš mi len chvíľu pomôcť?",
-          explanation: "'mal' v otázke zmierňuje žiadosť — bez 'mal' znie otázka priamejšie a menej zdvorilo.",
+          words: [
+            "sie",
+            "ist",
+            "erst",
+            "ab",
+            "drei",
+            "Uhr",
+            "da"
+          ],
+          correct: "sie ist erst ab drei Uhr da",
+          hint: "Je tu až od tretej.",
+          explanation: "Spojenie 'ab' s časom (ab drei Uhr) znamená 'od' určitého času."
         },
         {
-          words: ["Eigentlich", "habe", "ich", "keine", "Zeit"],
-          correct: "Eigentlich habe ich keine Zeit",
-          hint: "Vlastne nemám čas.",
-          explanation: "'eigentlich' na začiatku vety vyjadruje výhradu alebo obmedzenie — 'vlastne/v princípe'. Ovplyvňuje invertovanie slovesa.",
+          words: [
+            "du",
+            "bist",
+            "jetzt",
+            "zu",
+            "Hause"
+          ],
+          correct: "du bist jetzt zu Hause",
+          hint: "Si teraz doma.",
+          explanation: "Výraz 'zu Hause' znamená 'doma'."
         },
-      ],
+        {
+          words: [
+            "er",
+            "war",
+            "gestern",
+            "weg"
+          ],
+          correct: "er war gestern weg",
+          hint: "Včera bol preč.",
+          explanation: "Préteritum slovesa 'sein' (war) sa používa na opis minulého stavu. 'weg sein' znamená byť preč."
+        }
+      ]
+    },
+    {
+      type: "fill",
+      instruction: "Doplňte správne slovo alebo tvar slova.",
+      questions: [
+        {
+          sentence: "Ich habe ____ ____ ____.",
+          answer: "in einer Stunde",
+          hint: "o hodinu",
+          explanation: "Fráza 'in einer Stunde' znamená 'o hodinu' a používa sa na vyjadrenie času v budúcnosti."
+        },
+        {
+          sentence: "Wir machen ____ ____ ____.",
+          answer: "nach dem Essen",
+          hint: "po jedle",
+          explanation: "Predložka 'nach' s datívom vyjadruje čas po nejakej udalosti alebo činnosti."
+        },
+        {
+          sentence: "____ ____ ____ ____ ____.",
+          answer: "Vor dem Unterricht",
+          hint: "Pred vyučovaním",
+          explanation: "Predložka 'vor' s datívom vyjadruje čas pred nejakou udalosťou alebo činnosťou."
+        },
+        {
+          sentence: "Der Termin ist ____ ____ ____.",
+          answer: "ab Montag",
+          hint: "od pondelka",
+          explanation: "Predložka 'ab' sa používa na označenie začiatku platnosti alebo dostupnosti od určitého času alebo dňa."
+        },
+        {
+          sentence: "Er ____ gestern ____.",
+          answer: "war weg",
+          hint: "bol preč",
+          explanation: "Préteritum slovesa 'sein' je 'war'. 'weg sein' znamená byť preč."
+        },
+        {
+          sentence: "Sie ____ ____ ____ ____.",
+          answer: "ist zu Hause",
+          hint: "je doma",
+          explanation: "Výraz 'zu Hause' znamená 'doma'."
+        },
+        {
+          sentence: "Ich ____ ____ ____ ____.",
+          answer: "habe Hunger",
+          hint: "mám hlad",
+          explanation: "Toto je test z predchádzajúcej lekcie. 'haben' sa spája s podstatným menom 'Hunger' na vyjadrenie pocitu hladu."
+        },
+        {
+          sentence: "____ ____ ____ ____ ____?",
+          answer: "Woher kommst du?",
+          hint: "Odkiaľ pochádzaš?",
+          explanation: "Toto je test z predchádzajúcej lekcie. 'Woher' je opytovacie slovo na pôvod a 'kommen' je sloveso."
+        }
+      ]
+    },
+    {
+      type: "listen",
+      instruction: "Počúvajte a napíšte, čo počujete.",
+      questions: [
+        {
+          de: "die Stunde",
+          sk: "hodina"
+        },
+        {
+          de: "das Mittagessen",
+          sk: "obed"
+        },
+        {
+          de: "das Abendessen",
+          sk: "večera"
+        },
+        {
+          de: "der Termin",
+          sk: "termín"
+        },
+        {
+          de: "in einer Stunde",
+          sk: "o hodinu"
+        },
+        {
+          de: "nach dem Mittagessen",
+          sk: "po obede"
+        },
+        {
+          de: "vor dem Abendessen",
+          sk: "pred večerou"
+        },
+        {
+          de: "zu Hause sein",
+          sk: "byť doma"
+        },
+        {
+          de: "erst ab drei Uhr",
+          sk: "až od tretej"
+        },
+        {
+          de: "weg sein",
+          sk: "byť preč"
+        }
+      ]
+    },
+    {
+      type: "mcq",
+      instruction: "Vyberte správnu možnosť.",
+      questions: [
+        {
+          question: "Čo znamená 'in einer Stunde'?",
+          options: [
+            "pred hodinou",
+            "o hodinu",
+            "po hodine",
+            "v hodine"
+          ],
+          answer: 1,
+          explanation: "'in einer Stunde' znamená 'o hodinu' a používa sa na vyjadrenie času v budúcnosti."
+        },
+        {
+          question: "Ktorá predložka sa používa na označenie času PRED večerou?",
+          options: [
+            "nach",
+            "in",
+            "vor",
+            "ab"
+          ],
+          answer: 2,
+          explanation: "Predložka 'vor' s datívom sa používa na označenie času pred nejakou udalosťou."
+        },
+        {
+          question: "Čo znamená 'nach dem Mittagessen'?",
+          options: [
+            "pred obedom",
+            "o obede",
+            "v obede",
+            "po obede"
+          ],
+          answer: 3,
+          explanation: "'nach dem Mittagessen' znamená 'po obede' a používa sa na označenie času po udalosti."
+        },
+        {
+          question: "Ako sa povie 'byť preč' v nemčine?",
+          options: [
+            "zu Hause sein",
+            "weg sein",
+            "hier sein",
+            "dort sein"
+          ],
+          answer: 1,
+          explanation: "'weg sein' je nemecký výraz pre 'byť preč'."
+        },
+        {
+          question: "Ako sa povie 'Mám hlad' v nemčine?",
+          options: [
+            "Ich bin Hunger",
+            "Ich habe Hunger",
+            "Ich bin hungrig",
+            "Ich habe hungrig"
+          ],
+          answer: 1,
+          explanation: "V nemčine sa na vyjadrenie hladu používa spojenie 'haben Hunger'."
+        },
+        {
+          question: "Čo znamená 'ab Montag'?",
+          options: [
+            "do pondelka",
+            "po pondelku",
+            "v pondelok",
+            "od pondelka"
+          ],
+          answer: 3,
+          explanation: "'ab Montag' znamená 'od pondelka' a označuje začiatok platnosti alebo dostupnosti."
+        },
+        {
+          question: "Ktorý tvar slovesa 'sein' je správny pre 'er' v minulom čase (Präteritum)?",
+          options: [
+            "bist",
+            "seid",
+            "war",
+            "sind"
+          ],
+          answer: 2,
+          explanation: "Préteritum slovesa 'sein' pre tretiu osobu jednotného čísla (er, sie, es) je 'war'."
+        },
+        {
+          question: "Čo znamená 'Der Termin ist um drei Uhr'?",
+          options: [
+            "Termín je pred treťou.",
+            "Termín je po tretej.",
+            "Termín je o tretej.",
+            "Termín je od tretej."
+          ],
+          answer: 2,
+          explanation: "Predložka 'um' s časom znamená 'o' (presný čas). V tejto lekcii sa zameriavame na 'in', 'vor', 'nach', ale toto je test predchádzajúcej lekcie."
+        }
+      ]
+    },
+    {
+      type: "minitext",
+      instruction: "Lies den Dialog und beantworte die Fragen.",
+      text: "Jana: Hallo Herr Gruber!\nHerr Gruber: Guten Tag, Frau Nováková. Ich rufe wegen des Termins in Ihrer Wohnung an.\nJana: Ah ja. Wann können Sie denn kommen?\nHerr Gruber: Ich kann in einer Stunde kommen. Oder nach dem Mittagessen. Was ist besser für Sie?\nJana: Hmm, nach dem Mittagessen wäre gut. Ich bin erst ab drei Uhr zu Hause. Vor dem Abendessen muss ich leider weg.\nHerr Gruber: Verstehe. Nach dem Mittagessen also. Um wie viel Uhr genau?\nJana: Sagen wir um zwei Uhr? Dann habe ich noch Zeit für die Arbeit vorher.\nHerr Gruber: Perfekt. Bis später, Frau Nováková!\nJana: Danke, auf Wiederhören!",
+      textSk: "Jana: Dobrý deň, pán Gruber!\nPán Gruber: Dobrý deň, pani Nováková. Volám kvôli termínu vo vašom byte.\nJana: Ach áno. Kedy môžete prísť?\nPán Gruber: Môžem prísť o hodinu. Alebo po obede. Čo je pre vás lepšie?\nJana: Hmm, po obede by bolo dobre. Budem doma až od tretej. Pred večerou musím bohužiaľ odísť.\nPán Gruber: Rozumiem. Po obede teda. O koľkej presne?\nJana: Povedzme o druhej? Potom mám ešte čas na prácu predtým.\nPán Gruber: Perfektné. Dovidenia neskôr, pani Nováková!\nJana: Ďakujem, dovidenia!",
+      questions: [
+        {
+          question: "Wann kann Herr Gruber kommen?",
+          options: [
+            "In einer Stunde",
+            "Nach dem Abendessen",
+            "Vor dem Mittagessen",
+            "Sofort"
+          ],
+          answer: 0,
+          explanation: "Herr Gruber sagt: 'Ich kann in einer Stunde kommen. Oder nach dem Mittagessen.'"
+        },
+        {
+          question: "Wann ist Jana zu Hause?",
+          options: [
+            "Den ganzen Tag",
+            "Erst ab drei Uhr",
+            "Nur vor dem Mittagessen",
+            "Nach dem Abendessen"
+          ],
+          answer: 1,
+          explanation: "Jana sagt: 'Ich bin erst ab drei Uhr zu Hause.'"
+        },
+        {
+          question: "Warum kann Jana nicht vor dem Abendessen?",
+          options: [
+            "Sie hat einen anderen Termin.",
+            "Sie muss zur Arbeit.",
+            "Sie muss weg.",
+            "Sie ist nicht zu Hause."
+          ],
+          answer: 2,
+          explanation: "Jana sagt: 'Vor dem Abendessen muss ich leider weg.'"
+        },
+        {
+          question: "Wann ist der Termin jetzt geplant?",
+          options: [
+            "In einer Stunde",
+            "Um drei Uhr",
+            "Nach dem Abendessen",
+            "Um zwei Uhr nach dem Mittagessen"
+          ],
+          answer: 3,
+          explanation: "Jana schlägt vor: 'Sagen wir um zwei Uhr?'. Herr Gruber antwortet: 'Perfekt.'"
+        }
+      ]
     },
     {
       type: "speaking",
-      instruction: "Počúvaj nemeckú vetu. Potom hovor nahlas a skontroluj sa.",
+      instruction: "Höre zu und sprich nach.",
       phrases: [
         {
-          de: "Komm doch mal vorbei!",
-          sk: "Prídi predsa k nám!",
-          tip: "doch mal spolu, vorbei=[foːɐ̯baɪ]",
+          de: "in einer Stunde",
+          sk: "o hodinu",
+          tip: "W=[v], [ø] ako v slove "
         },
         {
-          de: "Das ist ja schön!",
-          sk: "To je predsa krásne!",
-          tip: "ja = prekvapenie/súhlas, nie otázka",
+          de: "vor dem Abendessen",
+          sk: "pred večerou",
+          tip: "ch=[ç] ako v slove "
         },
         {
-          de: "Das ist eben so.",
-          sk: "Tak to jednoducho je.",
-          tip: "eben=[eːbən] – e dlhé, b=b",
+          de: "nach dem Mittagessen",
+          sk: "po obede",
+          tip: "ng=[ŋ] ako v anglickom "
         },
         {
-          de: "Kannst du mal kurz helfen?",
-          sk: "Môžeš mi len chvíľu pomôcť?",
-          tip: "mal zmierňuje žiadosť, kurz=[kʊʁts]",
+          de: "Ich bin zu Hause.",
+          sk: "Som doma.",
+          tip: "z=[c] ako v slove "
         },
         {
-          de: "Eigentlich habe ich keine Zeit.",
-          sk: "Vlastne nemám čas.",
-          tip: "Ei-gent-lich – g=[g], ch=[ç]",
+          de: "Ich bin weg.",
+          sk: "Som preč.",
+          tip: "g=[k] na konci slova"
         },
-      ],
+        {
+          de: "Ich habe einen Termin.",
+          sk: "Mám termín.",
+          tip: "ein=[ajn]"
+        },
+        {
+          de: "Der Anruf ist in einer Stunde.",
+          sk: "Telefonát bude o hodinu.",
+          tip: "r=[r] jemné"
+        },
+        {
+          de: "Ich plane das Abendessen.",
+          sk: "Plánujem večeru.",
+          tip: "pl=[pl]"
+        }
+      ]
     },
+    {
+      type: "truefalse",
+      instruction: "Rozhodnite, či sú nasledujúce tvrdenia pravdivé (Wahr) alebo nepravdivé (Falsch).",
+      statements: [
+        {
+          statement: "Ich habe einen Termin vor der Stunde.",
+          isTrue: true,
+          explanation: "Predložka 'vor' s datívom sa používa na označenie času pred udalosťou. 'die Stunde' je ženského rodu, takže v datíve je 'der Stunde'."
+        },
+        {
+          statement: "Das Mittagessen ist nach dem Abendessen.",
+          isTrue: false,
+          explanation: "Obvykle je obed pred večerou. 'das Abendessen' je stredného rodu, takže v datíve je 'dem Abendessen'."
+        },
+        {
+          statement: "Wir treffen uns in einer Stunde.",
+          isTrue: true,
+          explanation: "'in einer Stunde' znamená o hodinu. 'die Stunde' je ženského rodu, takže v datíve je 'einer Stunde'."
+        },
+        {
+          statement: "Er kommt vor dem Mittagessen.",
+          isTrue: true,
+          explanation: "'vor dem Mittagessen' znamená pred obedom. 'das Mittagessen' je stredného rodu, takže v datíve je 'dem Mittagessen'."
+        },
+        {
+          statement: "Sie ist nach der Arbeit zu Hause.",
+          isTrue: false,
+          explanation: "Predložka 'nach' sa používa s datívom. 'die Arbeit' je ženského rodu, takže v datíve je 'der Arbeit'. Tvrdenie je gramaticky správne, ale významovo neobvyklé - po práci je človek zvyčajne doma."
+        }
+      ]
+    },
+    {
+      type: "dictation",
+      instruction: "Napíšte vety, ktoré počujete.",
+      sentences: [
+        {
+          de: "Ich habe Zeit.",
+          sk: "Mám čas."
+        },
+        {
+          de: "Wir essen nach dem Abendessen.",
+          sk: "Jeme po večeri."
+        },
+        {
+          de: "Er kommt in einer Stunde.",
+          sk: "O hodinu príde."
+        },
+        {
+          de: "Sie plant den Termin vor dem Mittagessen.",
+          sk: "Plánuje termín pred obedom."
+        },
+        {
+          de: "Ich war vor der Arbeit zu Hause.",
+          sk: "Bol som doma pred prácou."
+        }
+      ]
+    },
+    {
+      type: "categorysort",
+      instruction: "Roztrieďte slová do správnych kategórií.",
+      categories: [
+        {
+          name: "Časové predložky + Datív",
+          color: "blue",
+          words: [
+            "in einer Stunde",
+            "vor dem Mittagessen",
+            "nach dem Abendessen",
+            "vor der Arbeit",
+            "in drei Tagen"
+          ]
+        },
+        {
+          name: "Časové pojmy",
+          color: "rose",
+          words: [
+            "die Stunde",
+            "das Mittagessen",
+            "das Abendessen",
+            "der Nachmittag",
+            "der Morgen",
+            "der Abend"
+          ]
+        }
+      ],
+      explanation: "Prvá kategória obsahuje časové predložky 'in', 'vor', 'nach' v spojení s datívom. Druhá kategória obsahuje pojmy súvisiace s časom."
+    },
+    {
+      type: "translation",
+      instruction: "Preložte slovenské vety do nemčiny.",
+      sentences: [
+        {
+          sk: "O hodinu je večera.",
+          answer: "Das Abendessen ist in einer Stunde.",
+          hint: "in einer Stunde",
+          explanation: "Predložka 'in' s datívom sa používa na vyjadrenie času v budúcnosti. 'die Stunde' (ženský rod) sa v datíve stáva 'einer Stunde'."
+        },
+        {
+          sk: "Bol som doma pred obedom.",
+          answer: "Ich war vor dem Mittagessen zu Hause.",
+          hint: "vor dem",
+          explanation: "Predložka 'vor' s datívom sa používa na označenie času pred udalosťou. 'das Mittagessen' (stredný rod) sa v datíve stáva 'dem Mittagessen'."
+        },
+        {
+          sk: "Pracujem po obede.",
+          answer: "Ich arbeite nach dem Mittagessen.",
+          hint: "nach dem",
+          explanation: "Predložka 'nach' s datívom sa používa na označenie času po udalosti. 'das Mittagessen' (stredný rod) sa v datíve stáva 'dem Mittagessen'."
+        },
+        {
+          sk: "Termín bol pred večerou.",
+          answer: "Der Termin war vor dem Abendessen.",
+          hint: "vor dem",
+          explanation: "Predložka 'vor' s datívom. 'das Abendessen' (stredný rod) sa v datíve stáva 'dem Abendessen'."
+        }
+      ]
+    },
+    {
+      type: "conjugation",
+      instruction: "Slovesá v prítomnom čase (Präsens).",
+      verbs: [
+        {
+          infinitive: "wissen",
+          translation: "vedieť",
+          forms: [
+            {
+              pronoun: "ich",
+              correct: "weiß"
+            },
+            {
+              pronoun: "du",
+              correct: "weißt"
+            },
+            {
+              pronoun: "er/sie/es",
+              correct: "weiß"
+            },
+            {
+              pronoun: "wir",
+              correct: "wissen"
+            },
+            {
+              pronoun: "ihr",
+              correct: "wisst"
+            },
+            {
+              pronoun: "sie/Sie",
+              correct: "wissen"
+            }
+          ],
+          note: "Sloveso 'wissen' má nepravidelnú zmenu kmeňovej samohlásky v 1. a 3. osobe jednotného čísla (i -> ei)."
+        },
+        {
+          infinitive: "kommen",
+          translation: "prísť",
+          forms: [
+            {
+              pronoun: "ich",
+              correct: "komme"
+            },
+            {
+              pronoun: "du",
+              correct: "kommst"
+            },
+            {
+              pronoun: "er/sie/es",
+              correct: "kommt"
+            },
+            {
+              pronoun: "wir",
+              correct: "kommen"
+            },
+            {
+              pronoun: "ihr",
+              correct: "kommt"
+            },
+            {
+              pronoun: "sie/Sie",
+              correct: "kommen"
+            }
+          ],
+          note: "Pravidelné sloveso v prítomnom čase."
+        }
+      ]
+    }
   ],
-  reviewWords: ["L52_V01", "L52_V02", "L52_V06", "L52_V07", "L52_V09", "L52_V14"],
-  lessonNotes:
-    "Táto lekcia rozvíja schopnosť plynule hovoriť o minulosti. Kľúčové: 1) Partizip II vždy na konci vety, 2) 'nicht' stojí pred Partizipom II, 3) 'schon/noch nicht' sú veľmi bežné v dennej konverzácii. Hovorová nemčina (ako SMS v texte) skracuje výrazy – ale gramtická štruktúra zostáva rovnaká.",
+  reviewWords: []
 };

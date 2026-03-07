@@ -1,13 +1,16 @@
-import React, { useState, useCallback } from 'react';
-import { STORIES } from '../data/stories';
+import React, { useState, useCallback, useMemo } from 'react';
+import { STORIES, ALL_STORY_WORDS } from '../data/stories';
+import { GLOBAL_NOUNS } from '../data/globalNouns';
 import { useTTS } from '../hooks/useTTS';
 import { useProgress } from '../hooks/useProgress';
 import {
     Volume2, ChevronRight, BookmarkPlus, BookmarkCheck,
     CheckCircle, Brain, ArrowLeft, Trophy, Play, Square, X,
-    Eye, EyeOff, Loader2
+    Eye, EyeOff, Loader2, Mic, MicOff, Send, XCircle
 } from 'lucide-react';
 import { generateGrammarCard } from '../hooks/useAI';
+import { useNativeSpeechRecognition } from '../hooks/useSpeech';
+import { normalizeGerman, isAnswerCloseEnough } from '../utils/text';
 import GrammarCard from '../components/GrammarCard';
 
 // ─── CONSTANTS ─────────────────────────────────────────────────────────────────
@@ -22,9 +25,16 @@ const SLUG_MAP = {
 const SPEEDS = [0.5, 0.75, 1, 1.25, 1.5];
 
 // ─── READING PHASE ─────────────────────────────────────────────────────────────
-function ReadingPhase({ story, onStartQuiz, onMarkVocab, generatedWords, onSaveGenerated }) {
+export function ReadingPhase({ story, onStartQuiz, onMarkVocab, generatedWords, onSaveGenerated }) {
     const { speak, speakStory, stop, speaking } = useTTS();
-    const storyWords = { ...story.words, ...generatedWords };
+    const storyWords = useMemo(() => {
+        return {
+            ...ALL_STORY_WORDS,
+            ...GLOBAL_NOUNS,
+            ...story?.words,
+            ...generatedWords
+        };
+    }, [story?.words, generatedWords]);
     const [activeWord, setActiveWord] = useState(null);
     const [isGenerating, setIsGenerating] = useState(false);
     const [savedWords, setSavedWords] = useState(new Set());
@@ -32,6 +42,49 @@ function ReadingPhase({ story, onStartQuiz, onMarkVocab, generatedWords, onSaveG
     const [playerState, setPlayerState] = useState('idle'); // 'idle' | 'playing' | 'paused'
     const [speed, setSpeed] = useState(1);
     const audioRef = React.useRef(null);
+
+    const nounColors = useMemo(() => {
+        const colors = {};
+        const articleToColor = {
+            'der': 'text-blue-400 font-bold',
+            'die': 'text-rose-400 font-bold',
+            'das': 'text-emerald-400 font-bold'
+        };
+        const activeArticleToColor = {
+            'der': 'bg-blue-600 text-white font-bold',
+            'die': 'bg-rose-600 text-white font-bold',
+            'das': 'bg-emerald-600 text-white font-bold'
+        };
+
+        const addWord = (w, color, activeColor) => {
+            if (!w) return;
+            const cleanW = w.replace(/[.,!?;:"„"()\-]/g, '').trim();
+            if (cleanW && cleanW !== '-') {
+                colors[cleanW] = { color, activeColor, base: color.split('-')[1] };
+            }
+        };
+
+        Object.entries(storyWords).forEach(([baseWord, data]) => {
+            if (data?.type === 'noun' && data?.article) {
+                const color = articleToColor[data.article];
+                const activeColor = activeArticleToColor[data.article];
+                if (!color) return;
+
+                addWord(baseWord, color, activeColor);
+                if (data.plural) {
+                    const pl = data.plural.split(' ').pop();
+                    addWord(pl, color, activeColor);
+                }
+                if (data.cases) {
+                    Object.values(data.cases).forEach(caseStr => {
+                        const cw = caseStr.split(' ').pop();
+                        addWord(cw, color, activeColor);
+                    });
+                }
+            }
+        });
+        return colors;
+    }, [storyWords]);
 
     // ── Audio: load or reuse the <Audio> element ──────────────────────────────
     const ensureAudio = () => {
@@ -50,6 +103,18 @@ function ReadingPhase({ story, onStartQuiz, onMarkVocab, generatedWords, onSaveG
         audioRef.current = audio;
         return audio;
     };
+
+    React.useEffect(() => {
+        return () => {
+            if (audioRef.current) {
+                audioRef.current.pause();
+                audioRef.current.currentTime = 0;
+                audioRef.current = null;
+            }
+            stop(); // stops TTS
+            setPlayerState('idle');
+        }
+    }, []);
 
     const handlePlay = () => {
         if (playerState === 'playing') return;
@@ -223,24 +288,57 @@ function ReadingPhase({ story, onStartQuiz, onMarkVocab, generatedWords, onSaveG
                             </button>
                             <div className="flex-1 min-w-0">
                                 <p className="text-base text-white leading-relaxed flex flex-wrap gap-x-1">
-                                    {sentence.de.split(' ').map((token, ti) => {
+                                    {sentence.de.split(' ').map((token, ti, arr) => {
                                         const clean = token.replace(/[.,!?;:"„"()\-]/g, '').trim();
                                         const hasGrammar = !!storyWords[clean];
                                         const isSaved = savedWords.has(clean);
                                         const isActiveGrammar = activeWord === clean;
+                                        let nounConfig = nounColors[clean];
+
+                                        if (!nounConfig) {
+                                            const articles = ['der', 'die', 'das', 'den', 'dem', 'des', 'ein', 'eine', 'einen', 'einem', 'eines', 'mein', 'meine', 'meinen', 'meinem', 'meines', 'dein', 'deine', 'deinen', 'deinem', 'deines', 'sein', 'seine', 'seinen', 'seinem', 'seines', 'ihr', 'ihre', 'ihren', 'ihrem', 'ihres', 'unser', 'unsere', 'unseren', 'unserem', 'unseres', 'euer', 'eure', 'euren', 'eurem', 'eures', 'kein', 'keine', 'keinen', 'keinem', 'keines', 'am', 'im', 'zum', 'zur', 'beim', 'vom', 'ans', 'ins', 'ums'];
+                                            if (articles.includes(clean.toLowerCase())) {
+                                                for (let k = 1; k <= 3; k++) {
+                                                    if (ti + k < arr.length) {
+                                                        const ahead = arr[ti + k].replace(/[.,!?;:"„"()\-]/g, '').trim();
+                                                        if (nounColors[ahead]) {
+                                                            nounConfig = {
+                                                                color: nounColors[ahead].color,
+                                                                activeColor: nounColors[ahead].activeColor,
+                                                                base: nounColors[ahead].base,
+                                                                isArticle: true
+                                                            };
+                                                            break;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+
+                                        let tokenClass = "cursor-pointer rounded px-0.5 transition-all select-none leading-7 ";
+                                        if (isActiveGrammar) {
+                                            tokenClass += nounConfig && !nounConfig.isArticle ? nounConfig.activeColor : 'bg-indigo-700 text-white';
+                                        } else if (hasGrammar || (nounConfig && !nounConfig.isArticle)) {
+                                            if (isSaved) {
+                                                tokenClass += nounConfig
+                                                    ? `${nounConfig.color} underline decoration-dotted decoration-${nounConfig.base}-600`
+                                                    : 'text-emerald-400 underline decoration-dotted decoration-emerald-600';
+                                            } else {
+                                                tokenClass += nounConfig
+                                                    ? `${nounConfig.color} underline decoration-dotted decoration-${nounConfig.base}-500/50 hover:bg-white/10`
+                                                    : 'text-white underline decoration-dotted decoration-indigo-500 hover:bg-indigo-900/40';
+                                            }
+                                        } else if (nounConfig && nounConfig.isArticle) {
+                                            tokenClass += `${nounConfig.color} hover:bg-white/10`;
+                                        } else {
+                                            tokenClass += 'text-white hover:bg-gray-800/60';
+                                        }
 
                                         return (
                                             <span key={ti} className="relative inline-block">
                                                 <span
                                                     onClick={() => handleWordClick(token, sentence.de)}
-                                                    className={`cursor-pointer rounded px-0.5 transition-all select-none leading-7 ${isActiveGrammar
-                                                        ? 'bg-indigo-700 text-white'
-                                                        : hasGrammar
-                                                            ? isSaved
-                                                                ? 'text-emerald-400 underline decoration-dotted decoration-emerald-600'
-                                                                : 'text-white underline decoration-dotted decoration-indigo-500 hover:bg-indigo-900/40'
-                                                            : 'text-white hover:bg-gray-800/60'
-                                                        }`}
+                                                    className={tokenClass}
                                                 >
                                                     {token}
                                                 </span>
@@ -306,19 +404,82 @@ function QuizPhase({ story, onDone, onBack }) {
     const [selected, setSelected] = useState(null);
     const [confirmed, setConfirmed] = useState(false);
     const [score, setScore] = useState(0);
-    // Ref tracks score synchronously — fixes stale-closure double-count bug
-    // where the last correct answer was added twice (once in setState, once in handleNext)
     const scoreRef = React.useRef(0);
 
     const q = story.quiz[qIndex];
 
-    const handleConfirm = () => {
+    // For OPEN type questions
+    const [inputText, setInputText] = useState('');
+    const [evaluating, setEvaluating] = useState(false);
+    const [aiResult, setAiResult] = useState(null);
+    const [error, setError] = useState(null);
+    const { transcript, isListening, startListening, stopListening, resetTranscript } = useNativeSpeechRecognition();
+
+    React.useEffect(() => {
+        if (isListening && transcript) {
+            setInputText(transcript);
+        }
+    }, [transcript, isListening]);
+
+    const handleConfirmMCQ = () => {
         if (selected === null) return;
         if (selected === q.answer) {
             scoreRef.current += 1;
-            setScore(scoreRef.current); // update display
+            setScore(scoreRef.current);
         }
         setConfirmed(true);
+    };
+
+    const handleCheckOpen = () => {
+        if (!inputText.trim()) return;
+        setEvaluating(true);
+        setError(null);
+        setAiResult(null);
+        stopListening();
+
+        try {
+            const possibleAnswers = Array.isArray(q.correctAnswer) ? q.correctAnswer : [q.correctAnswer || ''];
+            let isCorrect = false;
+            let isExactMatch = false;
+            let matchedAnswer = possibleAnswers[0];
+            const isFree = possibleAnswers.some(ans => ans.toLowerCase().includes('voľná odpoveď') || ans.toLowerCase().includes('volna odpoved'));
+
+            if (isFree) {
+                isCorrect = true;
+            } else {
+                const actualStr = normalizeGerman(inputText);
+                for (const ans of possibleAnswers) {
+                    const expectedStr = normalizeGerman(ans);
+                    if (isAnswerCloseEnough(inputText, ans)) {
+                        isCorrect = true;
+                        matchedAnswer = ans;
+                        if (actualStr === expectedStr && inputText.trim() === ans.trim()) {
+                            isExactMatch = true;
+                        }
+                        break;
+                    }
+                }
+            }
+
+            const res = {
+                correct: isCorrect,
+                corrected: matchedAnswer,
+                explanation: isFree ? 'Voľná odpoveď bola akceptovaná.' :
+                    (!isExactMatch && isCorrect ? 'Pozor na veľké a malé písmená. Začiatok vety a podstatné mená sa v nemčine píšu s veľkým písmenom.' :
+                        (isCorrect ? '' : 'Odpoveď sa nezhoduje s textom.'))
+            };
+
+            setAiResult(res);
+            if (res.correct) {
+                scoreRef.current += 1;
+                setScore(scoreRef.current);
+            }
+            setConfirmed(true);
+        } catch (e) {
+            setError('app');
+        } finally {
+            setEvaluating(false);
+        }
     };
 
     const handleNext = () => {
@@ -326,9 +487,18 @@ function QuizPhase({ story, onDone, onBack }) {
             setQIndex(i => i + 1);
             setSelected(null);
             setConfirmed(false);
+            setInputText('');
+            setAiResult(null);
+            setError(null);
+            resetTranscript();
         } else {
-            onDone(scoreRef.current); // always accurate — no double-count
+            onDone(scoreRef.current);
         }
+    };
+
+    const handleMic = () => {
+        if (isListening) stopListening();
+        else { resetTranscript(); startListening(); }
     };
 
     return (
@@ -353,38 +523,96 @@ function QuizPhase({ story, onDone, onBack }) {
                 <p className="text-white font-semibold text-lg">{q.question}</p>
             </div>
 
-            <div className="space-y-2">
-                {q.options.map((opt, i) => {
-                    let cls = 'w-full text-left rounded-2xl border px-5 py-4 text-sm font-medium transition-all flex items-center gap-2 ';
-                    if (!confirmed) {
-                        cls += selected === i ? 'border-indigo-500 bg-indigo-900/50 text-white' : 'border-gray-700 bg-gray-900 text-gray-300 hover:border-gray-600 hover:bg-gray-800/60';
-                    } else {
-                        if (i === q.answer) cls += 'border-emerald-500 bg-emerald-900/30 text-emerald-300';
-                        else if (i === selected && i !== q.answer) cls += 'border-red-700 bg-red-950/30 text-red-400';
-                        else cls += 'border-gray-800 bg-gray-900 text-gray-600 opacity-40';
-                    }
-                    return (
-                        <button key={i} className={cls} onClick={() => !confirmed && setSelected(i)} disabled={confirmed}>
-                            {confirmed && i === q.answer && <CheckCircle size={14} className="text-emerald-400 flex-shrink-0" />}
-                            {opt}
-                        </button>
-                    );
-                })}
-            </div>
+            {q.type === 'open' ? (
+                <div className="space-y-4">
+                    {!confirmed ? (
+                        <>
+                            <div className="relative">
+                                <textarea
+                                    value={inputText}
+                                    onChange={e => setInputText(e.target.value)}
+                                    placeholder="Odpovedzte po nemecky..."
+                                    rows={3}
+                                    className="w-full bg-gray-800/60 border border-gray-700/60 rounded-2xl px-4 py-3 pb-12 text-white text-base placeholder-gray-600 focus:outline-none focus:border-indigo-500 transition-colors resize-none"
+                                    disabled={evaluating}
+                                />
+                                <button
+                                    onClick={handleMic}
+                                    className={`absolute bottom-3 right-3 p-2 rounded-full transition-all ${isListening ? 'bg-rose-500/20 text-rose-400 animate-pulse' : 'bg-gray-700 hover:bg-gray-600 text-gray-300'}`}
+                                >
+                                    {isListening ? <MicOff size={18} /> : <Mic size={18} />}
+                                </button>
+                            </div>
+                            <button
+                                onClick={handleCheckOpen}
+                                disabled={!inputText.trim() || evaluating}
+                                className={`w-full py-4 rounded-2xl font-bold flex items-center justify-center gap-2 transition-all ${evaluating ? 'bg-indigo-900/50 text-indigo-400' : inputText.trim() ? 'btn-primary' : 'bg-gray-800 text-gray-600'}`}
+                            >
+                                {evaluating ? <><Loader2 size={18} className="animate-spin" /> Hodnotí sa...</> : <><Send size={18} /> Skontrolovať</>}
+                            </button>
+                            {error === 'key' && <p className="text-amber-400 text-sm">Chýba API kľúč pre Gemini.</p>}
+                            {error === 'api' && <p className="text-red-400 text-sm">Chyba API.</p>}
+                        </>
+                    ) : aiResult ? (
+                        <div className={`rounded-2xl border p-5 space-y-4 ${aiResult.correct ? 'bg-emerald-950/30 border-emerald-700/40' : 'bg-red-950/20 border-red-800/30'}`}>
+                            <div className="flex items-center gap-2">
+                                {aiResult.correct ? <CheckCircle size={18} className="text-emerald-400" /> : <XCircle size={18} className="text-red-400" />}
+                                <span className={`font-bold text-sm ${aiResult.correct ? 'text-emerald-300' : 'text-red-300'}`}>
+                                    {aiResult.correct ? 'Správne!' : 'Nie celkom správne'}
+                                </span>
+                            </div>
+                            <div>
+                                <p className="text-[11px] text-gray-600 font-semibold uppercase tracking-wider mb-1">Tvoja odpoveď</p>
+                                <p className={`text-sm font-mono ${aiResult.correct ? 'text-emerald-200' : 'text-red-300 line-through opacity-70'}`}>{inputText.trim()}</p>
+                            </div>
+                            {!aiResult.correct && (
+                                <div>
+                                    <p className="text-[11px] text-gray-600 font-semibold uppercase tracking-wider mb-1">Správne</p>
+                                    <p className="text-sm font-mono text-emerald-200 bg-emerald-950/40 rounded-xl px-3 py-2">{aiResult.corrected}</p>
+                                </div>
+                            )}
+                            {aiResult.explanation && (
+                                <div className="bg-white/5 rounded-xl px-4 py-3">
+                                    <p className="text-xs text-gray-300 leading-relaxed">{aiResult.explanation}</p>
+                                </div>
+                            )}
+                        </div>
+                    ) : null}
+                </div>
+            ) : (
+                <div className="space-y-2">
+                    {q.options.map((opt, i) => {
+                        let cls = 'w-full text-left rounded-2xl border px-5 py-4 text-sm font-medium transition-all flex items-center gap-2 ';
+                        if (!confirmed) {
+                            cls += selected === i ? 'border-indigo-500 bg-indigo-900/50 text-white' : 'border-gray-700 bg-gray-900 text-gray-300 hover:border-gray-600 hover:bg-gray-800/60';
+                        } else {
+                            if (i === q.answer) cls += 'border-emerald-500 bg-emerald-900/30 text-emerald-300';
+                            else if (i === selected && i !== q.answer) cls += 'border-red-700 bg-red-950/30 text-red-400';
+                            else cls += 'border-gray-800 bg-gray-900 text-gray-600 opacity-40';
+                        }
+                        return (
+                            <button key={i} className={cls} onClick={() => !confirmed && setSelected(i)} disabled={confirmed}>
+                                {confirmed && i === q.answer && <CheckCircle size={14} className="text-emerald-400 flex-shrink-0" />}
+                                {opt}
+                            </button>
+                        );
+                    })}
+                </div>
+            )}
 
-            {confirmed && q.explanation && (
+            {confirmed && q.explanation && q.type !== 'open' && (
                 <div className="bg-gray-800/60 border border-gray-700 rounded-xl px-4 py-3 flex items-start gap-2 text-sm">
                     <Brain size={15} className="text-indigo-400 flex-shrink-0 mt-0.5" />
                     <p className="text-gray-300">{q.explanation}</p>
                 </div>
             )}
 
-            {!confirmed ? (
-                <button onClick={handleConfirm} disabled={selected === null} className="w-full btn-primary py-4 font-bold disabled:opacity-40">
+            {q.type !== 'open' && !confirmed ? (
+                <button onClick={handleConfirmMCQ} disabled={selected === null} className="w-full btn-primary py-4 font-bold disabled:opacity-40">
                     Potvrdiť
                 </button>
-            ) : (
-                <button onClick={handleNext} className="w-full btn-primary py-4 flex items-center justify-center gap-2 font-bold">
+            ) : confirmed && (
+                <button onClick={handleNext} className="w-full btn-primary py-4 flex items-center justify-center gap-2 font-bold mt-4">
                     {qIndex < story.quiz.length - 1 ? 'Ďalšia otázka' : 'Zobraziť výsledok'}
                     <ChevronRight size={18} />
                 </button>

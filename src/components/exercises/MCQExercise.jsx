@@ -1,7 +1,7 @@
 /**
  * MCQExercise — Multiple Choice Questions with instant feedback
  */
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { CheckCircle, XCircle, Volume2, Globe } from 'lucide-react';
 import { useTTS } from '../../hooks/useTTS';
 import { GenderText } from '../../utils/genderColors';
@@ -13,7 +13,8 @@ export function MCQExercise({ exercise, onComplete }) {
   const [answers, setAnswers] = useState([]);
   const [finished, setFinished] = useState(false);
   const [showTranslation, setShowTranslation] = useState(false);
-  const { speak } = useTTS();
+  const { speak, stop } = useTTS();
+  const lastSelectRef = useRef(0);
 
   const q = questions[qIndex];
 
@@ -21,7 +22,9 @@ export function MCQExercise({ exercise, onComplete }) {
   useEffect(() => {
     const handleKey = (e) => {
       if (e.key === 'Enter' && selected !== null && !finished) {
+        if (Date.now() - lastSelectRef.current < 800) return;
         e.preventDefault();
+        stop();
         next();
       }
     };
@@ -32,7 +35,7 @@ export function MCQExercise({ exercise, onComplete }) {
   const choose = (optIndex) => {
     if (selected !== null) return;
     setSelected(optIndex);
-    const correct = optIndex === q.answer;
+    lastSelectRef.current = Date.now();
   };
 
   const next = () => {
@@ -152,7 +155,7 @@ export function MCQExercise({ exercise, onComplete }) {
               )}
             </div>
           </div>
-          <button onClick={next} className="w-full btn-primary justify-center">
+          <button autoFocus onClick={next} className="w-full btn-primary justify-center">
             {qIndex < questions.length - 1 ? 'Ďalšia otázka →' : 'Dokončiť'}
           </button>
         </div>

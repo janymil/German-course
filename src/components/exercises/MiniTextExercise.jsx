@@ -5,6 +5,7 @@ import { GenderText, GenderLegend } from '../../utils/genderColors'
 
 export function MiniTextExercise({ exercise, lesson, onComplete }) {
   const { speak, stop, speaking } = useTTS()
+  const lastSelectRef = useRef(0)
 
   const [phase, setPhase] = useState('reading')
   const [translationOpen, setTranslationOpen] = useState(false)
@@ -24,7 +25,7 @@ export function MiniTextExercise({ exercise, lesson, onComplete }) {
 
   useEffect(() => {
     if (phase === 'questions' && questions[currentQ]) {
-      speak(questions[currentQ].question, 'de-DE', 0.85)
+      speak(questions[currentQ].question, 'de-DE', 0.85, true)
     }
   }, [phase, currentQ])
 
@@ -38,6 +39,8 @@ export function MiniTextExercise({ exercise, lesson, onComplete }) {
         } else if (finished) {
           handleComplete();
         } else if (selected !== null) {
+          if (Date.now() - lastSelectRef.current < 800) return;
+          stop();
           handleNext();
         }
       }
@@ -58,6 +61,7 @@ export function MiniTextExercise({ exercise, lesson, onComplete }) {
   function handleSelect(idx) {
     if (selected !== null) return
     setSelected(idx)
+    lastSelectRef.current = Date.now()
     if (idx === questions[currentQ].answer) setCorrect(c => c + 1)
   }
 
@@ -79,7 +83,7 @@ export function MiniTextExercise({ exercise, lesson, onComplete }) {
 
   function handleBasicTTS() {
     if (speaking) stop()
-    else speak(exercise.text, 'de-DE', 0.85)
+    else speak(exercise.text, 'de-DE', 0.85, true)
   }
 
   function toggleAudio() {
@@ -115,9 +119,9 @@ export function MiniTextExercise({ exercise, lesson, onComplete }) {
           )}
 
           <p className="text-base leading-relaxed text-white pr-12 whitespace-pre-wrap"><GenderText text={exercise.text} /></p>
-          
+
           <GenderLegend className="mt-3" />
-          
+
           <div className="mt-4 border-t border-gray-800 pt-3">
             <button onClick={() => setTranslationOpen(o => !o)} className="flex items-center gap-1 text-sm text-gray-400 hover:text-gray-200 transition-colors">
               {translationOpen ? <ChevronUp size={15} /> : <ChevronDown size={15} />}
@@ -189,11 +193,11 @@ export function MiniTextExercise({ exercise, lesson, onComplete }) {
         {showQTranslation && q.questionSk && (
           <p className="text-sm text-gray-400 italic border-t border-gray-700 pt-2">🇸🇰 {q.questionSk}</p>
         )}
-        
+
         <div className="space-y-2">
           {q.options.map((opt, idx) => {
             let btnClass = 'w-full text-left px-4 py-3 rounded-xl border text-sm transition-colors '
-            
+
             if (selected === null) {
               btnClass += 'border-gray-700 bg-gray-800 text-gray-200 hover:border-blue-500 hover:bg-gray-700'
             } else if (idx === q.answer) {

@@ -318,6 +318,11 @@ const LIBRARY_IDS = [
   { id: 'kZhSAffTLFQ', title: 'Extra – Folge 1: Ein Freund aus Amerika' },
   { id: '9dgyuTCugyw', title: 'Extra – Folge 2: Sam geht einkaufen' },
   { id: '_IxMzOZRRvM', title: 'Extra – Folge 3: Sam hat Hunger' },
+  // Vlogy a prechádzky
+  { id: 'uzNrP5ZyH0A', title: 'Learn German the Natural Way - Walk & Talk Through the City' },
+  { id: 'qGBJYuCoamg', title: 'Bananenbrot backen - Interaktiver Kochkurs' },
+  // Easy German
+  { id: 'D91icSuPYQ4', title: 'Supermarket in Slow German (Super Easy German 288)' },
 ];
 
 main().catch(err => { console.error(err); process.exit(1); });

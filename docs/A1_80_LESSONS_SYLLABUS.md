@@ -6,6 +6,23 @@ Pretože aplikácia je zameraná na digitálne samoštúdium pomalším tempom (
 
 Tento prístup zaručuje, že aj pomalý študent prejde kompletným A1 učivom a gramatikou (od časovania *sein* až po slovosled vo vedľajších vetách a *Perfektum*).
 
+
+create lessons content in a badge of 5, according lessons syllabus.md
+
+- create 5 sub agents, each for one lesson
+- use a storytelling for uvodny minitext for each lesson
+- remember lessons must follow curriculum of goethe
+- each lesson must contain new vocabulary. New vocabulary cannot repeat between lessons. For vocabulary repetition we have vocabulary app. But each lesson must have new vocabulary
+- each sub agent must first analyze the content of the lesson
+- each sub agent must first analyze the content of the exercises
+- exercises must have logic, must have sense. No stupid questions in exercises.
+- exercises must focus to practice the grammar and vocabulary from the lesson
+- each sub agent must balance the lesson content, vocabulary, grammar, exercisses. So the student feels the progress. 
+- each sub agent must assure and fact check the structcure of the lesson and the continuation of the knowledge that is bringing to the student
+- lesson content cannot be ad hoc. It must be structured, curriculum way. Backed by science. So the student has the progress and the time invested in this course pay the tuition.
+- when creating minitext, it must be a dialog form. Not short, not long. Balanced. With as many grammar and vocabulary variation from the lesson.
+- each sub agent must avoid pathetic, general content
+
 ---
 
 ## Modul 1: Úvod, Povolania a Rodina (Týždeň 1 a 2)

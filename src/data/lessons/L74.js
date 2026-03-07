@@ -1,493 +1,879 @@
-﻿export const lesson74 = {
+export const lesson74 = {
   id: 74,
   week: 15,
   day: 4,
-  title: "Goethe A1: Sprechen (Oral Exam Prep)",
-  topic: "Príprava na ústnu skúšku Goethe A1",
+  title: "Wetter in Wien",
+  topic: "Meteorologické javy a opisovanie počasia.",
   cefr: "A1",
-  xpReward: 35,
-  narrativeContext:
-    "Jana practices the Sprechen (speaking) section of the Goethe A1 exam. It has 3 parts: (1) introduce yourself, (2) ask a question using a prompt card, (3) react to a question. Jana practices all three parts with her teacher until she feels confident.",
-  communicativeGoal:
-    "Po tejto lekcii zvládnem všetky tri časti ústnej skúšky Goethe A1: predstavenie seba, otázky z karty, reakcia na otázku.",
-  skillFocus: ["speaking", "vocabulary", "exam strategies"],
-  grammarNote: {
-    rule: "Formát ústnej skúšky Goethe A1 — tri časti",
-    explanation:
-      "TEIL 1 — Vorstellen (predstavenie): Meno, vek, miesto bydliska, povolanie, jazyky, záľuby. 'Ich heiße... / Ich bin... / Ich wohne in... / Ich arbeite als... / Ich spreche...' TEIL 2 — Sich informieren (informačné otázky z kartičky): Kartička ukazuje tému (napr. 'Kurs') — musíš položiť otázku. 'Wann beginnt der Kurs?' / 'Was kostet der Kurs?' / 'Wo findet der Kurs statt?' → W-otázky sú tu kľúčové! TEIL 3 — Reagieren (reagovanie na otázku od partnera/skúšajúceho): 'Spielen Sie Fußball?' → 'Ja, ich spiele gern Fußball.' / 'Nein, ich spiele lieber Tennis.' Reakcia musí byť celá veta — nie len 'Ja' alebo 'Nein'!",
-    examples: [
-      { de: "Ich heiße Jana. Ich bin 24 Jahre alt.", sk: "Volám sa Jana. Mám 24 rokov." },
-      { de: "Wann beginnt der Deutschkurs?", sk: "Kedy začína kurz nemčiny?" },
-      { de: "Wo findet der Kurs statt?", sk: "Kde sa koná kurz?" },
-      { de: "Ja, ich spiele gern Tennis. Und Sie?", sk: "Áno, rada hrám tenis. A vy?" },
-    ],
-    slovakContrastNote:
-      "Slovenské ústne skúšky majú podobný formát. Predstavenie seba je universálne. Výzva pre slovenských žiakov: nemčina má prísnejší slovosled v otázkach (V2 pravidlo) — 'Wo findet der Kurs statt?' vs. slovensky 'Kde sa koná kurz?' — slovosled je podobný! Dôležité: oddeliť sloveso v separabilných slovesách — 'stattfinden' → 'statt...findet'.",
-  },
+  xpReward: 20,
+  narrativeContext: "Jana hat heute eine wichtige Präsentation. Sie wohnt in Wien. Es regnet stark und es ist sehr windig.",
+  communicativeGoal: "Nach dieser Lektion kann ich über das Wetter sprechen und Wetterphänomene beschreiben.",
+  skillFocus: [
+    "vocabulary",
+    "speaking",
+    "listening"
+  ],
+  lessonNotes: "V tejto lekcii sa naučíš slovnú zásobu týkajúcu sa počasia ako dážď, vietor, slnko a sneh. Naučíš sa tiež, ako opísať počasie v nemčine pomocou fráz ako 'es regnet' alebo 'es ist windig'.",
+  grammarNotes: [
+    {
+      rule: "Das Wetter",
+      explanation: "<p>V tejto lekcii sa zameriame na opisovanie počasia a rôznych meteorologických javov v nemčine. Naučíme sa základné slová a frázy, ktoré potrebujeme na to, aby sme mohli povedať, aké je vonku počasie, či prší, sneží, alebo svieti slnko. Použijeme sloveso <strong>'es gibt'</strong>, ktoré je veľmi užitočné na opisovanie situácií a javov, vrátane počasia.</p>\n      <p><strong>'Es gibt'</strong> sa používa na vyjadrenie existencie niečoho. V slovenčine by sme často použili \"je\" alebo \"sú\", ale v nemčine je 'es gibt' oveľa bežnejšie pre opisovanie javov. Napríklad, 'Es gibt Regen' znamená 'Je dážď' alebo 'Prší'.</p>\n      <p>Okrem toho si zopakujeme a rozšírime slovnú zásobu týkajúcu sa počasia, ako sú:</p>\n      <ul>\n        <li><strong>Sonne</strong> (slnko)</li>\n        <li><strong>Regen</strong> (dážď)</li>\n        <li><strong>Schnee</strong> (sneh)</li>\n        <li><strong>Wind</strong> (vietor)</li>\n        <li><strong>Wolken</strong> (mraky)</li>\n        <li><strong>Temperatur</strong> (teplota)</li>\n      </ul>\n      <p>Naučíme sa aj tvoriť jednoduché vety na opisovanie aktuálneho počasia.</p>",
+      examples: [
+        {
+          de: "Es gibt Sonne.",
+          sk: "Je slnečno."
+        },
+        {
+          de: "Es gibt Regen.",
+          sk: "Prší."
+        },
+        {
+          de: "Es gibt Schnee.",
+          sk: "Sneží."
+        },
+        {
+          de: "Es gibt Wind.",
+          sk: "Fúka vietor."
+        },
+        {
+          de: "Es gibt Wolken.",
+          sk: "Sú tam mraky."
+        },
+        {
+          de: "Es gibt Nebel.",
+          sk: "Je hmla."
+        },
+        {
+          de: "Es gibt Gewitter.",
+          sk: "Je búrka."
+        },
+        {
+          de: "Es gibt Sturm.",
+          sk: "Je búrka/víchrica."
+        }
+      ],
+      slovakContrastNote: "V slovenčine často používame sloveso 'byť' (je, sú) alebo iné slovesá na opis počasia (svieti, prší, sneží, fúka). Nemčina preferuje konštrukciu 'es gibt' (doslova 'to dáva/poskytuje') na vyjadrenie existencie meteorologických javov, čo je pre Slovákov často nové a vyžaduje si zvyk. Napríklad, namiesto 'Je slnko' povieme 'Es gibt Sonne'."
+    },
+    {
+      rule: "Wie ist das Wetter?",
+      explanation: "<p>Na pýtanie sa na počasie a jeho opisovanie používame v nemčine špecifické frázy. Najčastejšia otázka je <strong>\"Wie ist das Wetter?\"</strong>, čo znamená \"Aké je počasie?\".</p>\n      <p>Na odpoveď môžeme použiť rôzne formulácie. Často začíname s <strong>\"Das Wetter ist...\"</strong> (Počasie je...) alebo používame už spomínanú konštrukciu <strong>\"Es gibt...\"</strong>.</p>\n      <p>Je dôležité vedieť aj základné prídavné mená na opis počasia:</p>\n      <ul>\n        <li><strong>sonnig</strong> (slnečný)</li>\n        <li><strong>regnerisch</strong> (daždivý)</li>\n        <li><strong>windig</strong> (veterný)</li>\n        <li><strong>kalt</strong> (studený)</li>\n        <li><strong>warm</strong> (teplý)</li>\n        <li><strong>heiß</strong> (horúci)</li>\n        <li><strong>bewölkt</strong> (oblačný)</li>\n      </ul>\n      <p>Taktiež sa môžeme pýtať na teplotu pomocou otázky <strong>\"Wie viel Grad sind es?\"</strong> (Koľko stupňov je?).</p>",
+      examples: [
+        {
+          de: "Wie ist das Wetter heute?",
+          sk: "Aké je dnes počasie?"
+        },
+        {
+          de: "Das Wetter ist schön.",
+          sk: "Počasie je pekné."
+        },
+        {
+          de: "Das Wetter ist schlecht.",
+          sk: "Počasie je zlé."
+        },
+        {
+          de: "Es ist sonnig und warm.",
+          sk: "Je slnečno a teplo."
+        },
+        {
+          de: "Es ist kalt und es schneit.",
+          sk: "Je zima a sneží."
+        },
+        {
+          de: "Wie viel Grad sind es?",
+          sk: "Koľko stupňov je?"
+        },
+        {
+          de: "Es sind 20 Grad.",
+          sk: "Je 20 stupňov."
+        },
+        {
+          de: "Es ist bewölkt.",
+          sk: "Je oblačno."
+        }
+      ],
+      slovakContrastNote: "V slovenčine sa na opis počasia často používajú neosobné formy s vetrom, dažďom, snehom (fúka, prší, sneží) alebo prídavné mená (slnečno, oblačno, zamračené). V nemčine je bežné použiť buď 'Das Wetter ist...' alebo 'Es ist...', čo je podobné slovenskému 'Je...'. Konštrukcia 'Es gibt...' je špecifická pre javy a jej použitie namiesto 'Je dážď' (Es gibt Regen) namiesto 'Prší' (Es regnet) je dôležitý rozdiel."
+    }
+  ],
   vocab: [
     {
-      de: "das Sprechen",
-      sk: "hovorenie / ústna skúška",
-      example: "Das Sprechen ist der letzte Teil der Prüfung.",
-      exampleSk: "Hovorenie je posledná časť skúšky.",
-      gender: "N",
+      de: "der Regen",
+      sk: "dážď",
+      gender: "M",
       srsId: "L74_V01",
-      recycledFrom: [],
+      example: "Es gibt starken Regen in Wien.",
+      exampleSk: "Vo Viedni je silný dážď.",
+      recycledFrom: []
     },
     {
-      de: "sich vorstellen",
-      sk: "predstaviť sa",
-      example: "Ich stelle mich vor: Ich heiße Jana.",
-      exampleSk: "Predstavujem sa: Volám sa Jana.",
-      gender: null,
+      de: "der Wind",
+      sk: "vietor",
+      gender: "M",
       srsId: "L74_V02",
-      recycledFrom: [1, 2],
+      example: "Es ist sehr windig heute.",
+      exampleSk: "Dnes je veľmi veterno.",
+      recycledFrom: []
     },
     {
-      de: "Ich heiße...",
-      sk: "Volám sa...",
-      example: "Ich heiße Jana Novák.",
-      exampleSk: "Volám sa Jana Novák.",
-      gender: null,
+      de: "der Himmel",
+      sk: "obloha",
+      gender: "M",
       srsId: "L74_V03",
-      recycledFrom: [1],
+      example: "Der Himmel ist grau.",
+      exampleSk: "Obloha je sivá.",
+      recycledFrom: []
     },
     {
-      de: "Ich bin ... Jahre alt.",
-      sk: "Mám ... rokov.",
-      example: "Ich bin 24 Jahre alt.",
-      exampleSk: "Mám 24 rokov.",
-      gender: null,
-      srsId: "L74_V04",
-      recycledFrom: [5],
-    },
-    {
-      de: "Ich wohne in...",
-      sk: "Bývam v...",
-      example: "Ich wohne in Wien.",
-      exampleSk: "Bývam vo Viedni.",
-      gender: null,
-      srsId: "L74_V05",
-      recycledFrom: [4],
-    },
-    {
-      de: "Ich arbeite als...",
-      sk: "Pracujem ako...",
-      example: "Ich arbeite als Krankenschwester.",
-      exampleSk: "Pracujem ako zdravotná sestra.",
-      gender: null,
-      srsId: "L74_V06",
-      recycledFrom: [36],
-    },
-    {
-      de: "Meine Hobbys sind...",
-      sk: "Moje záľuby sú...",
-      example: "Meine Hobbys sind Lesen und Reisen.",
-      exampleSk: "Moje záľuby sú čítanie a cestovanie.",
-      gender: null,
-      srsId: "L74_V07",
-      recycledFrom: [39],
-    },
-    {
-      de: "die Fragekarte",
-      sk: "kartička s otázkou",
-      example: "Schau auf die Fragekarte und stell eine Frage.",
-      exampleSk: "Pozri na kartičku s otázkou a polož otázku.",
+      de: "die Sonne",
+      sk: "slnko",
       gender: "F",
+      srsId: "L74_V04",
+      example: "Die Sonne scheint heute nicht.",
+      exampleSk: "Slnko dnes nesvieti.",
+      recycledFrom: []
+    },
+    {
+      de: "der Schnee",
+      sk: "sneh",
+      gender: "M",
+      srsId: "L74_V05",
+      example: "Im Winter schneit es oft.",
+      exampleSk: "V zime často sneží.",
+      recycledFrom: []
+    },
+    {
+      de: "das Gewitter",
+      sk: "búrka",
+      gender: "N",
+      srsId: "L74_V06",
+      example: "Ich hoffe, es gibt kein Gewitter.",
+      exampleSk: "Dúfam, že nebude búrka.",
+      recycledFrom: []
+    },
+    {
+      de: "der Sturm",
+      sk: "búrka (silný vietor)",
+      gender: "M",
+      srsId: "L74_V07",
+      example: "Ein Sturm kommt.",
+      exampleSk: "Prichádza búrka.",
+      recycledFrom: []
+    },
+    {
+      de: "der Nebel",
+      sk: "hmla",
+      gender: "M",
       srsId: "L74_V08",
-      recycledFrom: [],
+      example: "Es gibt dichten Nebel.",
+      exampleSk: "Je hustá hmla.",
+      recycledFrom: []
     },
     {
-      de: "Wo findet ... statt?",
-      sk: "Kde sa koná...?",
-      example: "Wo findet der Kurs statt?",
-      exampleSk: "Kde sa koná kurz?",
-      gender: null,
+      de: "das Wetter",
+      sk: "počasie",
+      gender: "N",
       srsId: "L74_V09",
-      recycledFrom: [],
+      example: "Das Wetter in Wien ist schlecht.",
+      exampleSk: "Počasie vo Viedni je zlé.",
+      recycledFrom: []
     },
     {
-      de: "Was kostet...?",
-      sk: "Koľko stojí...?",
-      example: "Was kostet der Deutsch-Kurs?",
-      exampleSk: "Koľko stojí kurz nemčiny?",
-      gender: null,
+      de: "der Tag",
+      sk: "deň",
+      gender: "M",
       srsId: "L74_V10",
-      recycledFrom: [17],
+      example: "Ich hoffe, das Wetter wird besser.",
+      exampleSk: "Dúfam, že sa počasie zlepší.",
+      recycledFrom: []
     },
     {
-      de: "Wann beginnt...?",
-      sk: "Kedy začína...?",
-      example: "Wann beginnt der Kurs?",
-      exampleSk: "Kedy začína kurz?",
-      gender: null,
+      de: "die Stadt",
+      sk: "mesto",
+      gender: "F",
       srsId: "L74_V11",
-      recycledFrom: [16, 19],
+      example: "Ich wohne in dieser Stadt.",
+      exampleSk: "Bývam v tomto meste.",
+      recycledFrom: []
     },
     {
-      de: "Können Sie das wiederholen?",
-      sk: "Môžete to zopakovať?",
-      example: "Entschuldigung, können Sie das bitte wiederholen?",
-      exampleSk: "Prepáčte, môžete to prosím zopakovať?",
-      gender: null,
+      de: "der Flughafen",
+      sk: "letisko",
+      gender: "M",
       srsId: "L74_V12",
-      recycledFrom: [],
+      example: "Mein Freund kommt vom Flughafen.",
+      exampleSk: "Môj priateľ prichádza z letiska.",
+      recycledFrom: []
     },
     {
-      de: "Können Sie langsamer sprechen?",
-      sk: "Môžete hovoriť pomalšie?",
-      example: "Ich verstehe nicht. Können Sie bitte langsamer sprechen?",
-      exampleSk: "Nerozumiem. Môžete prosím hovoriť pomalšie?",
-      gender: null,
+      de: "der Regenmantel",
+      sk: "pláštenka",
+      gender: "M",
       srsId: "L74_V13",
-      recycledFrom: [],
+      example: "Ich brauche einen Regenmantel.",
+      exampleSk: "Potrebujem pláštenku.",
+      recycledFrom: []
     },
     {
-      de: "Ja, genau. / Nein, leider nicht.",
-      sk: "Áno, presne. / Nie, žiaľ nie.",
-      example: "Haben Sie ein Auto? — Nein, leider nicht.",
-      exampleSk: "Máte auto? — Nie, žiaľ nie.",
-      gender: null,
+      de: "der Regenschirm",
+      sk: "dáždnik",
+      gender: "M",
       srsId: "L74_V14",
-      recycledFrom: [],
+      example: "Hast du einen Regenschirm?",
+      exampleSk: "Máš dáždnik?",
+      recycledFrom: []
     },
     {
-      de: "Das ist meine Antwort.",
-      sk: "To je moja odpoveď.",
-      example: "Das ist meine Antwort auf Ihre Frage.",
-      exampleSk: "To je moja odpoveď na vašu otázku.",
-      gender: null,
+      de: "der Hamburger",
+      sk: "Hamburgčan",
+      gender: "M",
       srsId: "L74_V15",
-      recycledFrom: [],
+      example: "Der Hamburger ist nass.",
+      exampleSk: "Hamburgčan je mokrý.",
+      recycledFrom: []
     },
+    {
+      de: "es regnet",
+      sk: "prší",
+      gender: null,
+      srsId: "L74_V16",
+      example: "Es regnet stark.",
+      exampleSk: "Silno prší.",
+      recycledFrom: []
+    },
+    {
+      de: "es schneit",
+      sk: "sneží",
+      gender: null,
+      srsId: "L74_V17",
+      example: "Es schneit heute nicht.",
+      exampleSk: "Dnes nesneží.",
+      recycledFrom: []
+    },
+    {
+      de: "es ist windig",
+      sk: "fúka vietor",
+      gender: null,
+      srsId: "L74_V18",
+      example: "Es ist sehr windig.",
+      exampleSk: "Veľmi fúka vietor.",
+      recycledFrom: []
+    },
+    {
+      de: "hoffen",
+      sk: "dúfať",
+      gender: null,
+      srsId: "L74_V19",
+      example: "Ich hoffe, das Wetter wird besser.",
+      exampleSk: "Dúfam, že sa počasie zlepší.",
+      recycledFrom: []
+    },
+    {
+      de: "ankommen",
+      sk: "prísť, doraziť",
+      gender: null,
+      srsId: "L74_V20",
+      example: "Der Gast ist angekommen.",
+      exampleSk: "Hostia dorazili.",
+      recycledFrom: []
+    },
+    {
+      de: "nass sein",
+      sk: "byť mokrý",
+      gender: null,
+      srsId: "L74_V21",
+      example: "Ich bin nass vom Regen.",
+      exampleSk: "Som mokrý od dažďa.",
+      recycledFrom: []
+    },
+    {
+      de: "grau sein",
+      sk: "byť sivý",
+      gender: null,
+      srsId: "L74_V22",
+      example: "Der Himmel ist grau.",
+      exampleSk: "Obloha je sivá.",
+      recycledFrom: []
+    },
+    {
+      de: "Ich hoffe, das Wetter wird besser.",
+      sk: "Dúfam, že sa počasie zlepší.",
+      gender: null,
+      srsId: "L74_V23",
+      example: "Ich hoffe, das Wetter wird besser.",
+      exampleSk: "Dúfam, že sa počasie zlepší.",
+      recycledFrom: []
+    },
+    {
+      de: "Es regnet stark.",
+      sk: "Silno prší.",
+      gender: null,
+      srsId: "L74_V24",
+      example: "Es regnet stark.",
+      exampleSk: "Silno prší.",
+      recycledFrom: []
+    },
+    {
+      de: "Es ist sehr windig.",
+      sk: "Veľmi fúka vietor.",
+      gender: null,
+      srsId: "L74_V25",
+      example: "Es ist sehr windig.",
+      exampleSk: "Veľmi fúka vietor.",
+      recycledFrom: []
+    }
   ],
   exercises: [
     {
       type: "flashcard",
-      instruction: "Precvič si výrazy pre ústnu skúšku. Pozri nemecké slovo a skús povedať slovenský preklad alebo celú vetu.",
-      items: [
-        "L74_V01",
-        "L74_V02",
-        "L74_V03",
-        "L74_V04",
-        "L74_V05",
-        "L74_V06",
-        "L74_V07",
-        "L74_V08",
-        "L74_V09",
-        "L74_V10",
-        "L74_V11",
-        "L74_V12",
-        "L74_V13",
-        "L74_V14",
-        "L74_V15",
-      ],
-    },
-    {
-      type: "mcq",
-      instruction: "Vyber správnu odpoveď pre prípravu na Sprechen časť skúšky Goethe A1.",
-      questions: [
-        {
-          question: "Čo musíš urobiť v časti TEIL 1 (Vorstellen) ústnej skúšky?",
-          options: [
-            "Opísať obrázok.",
-            "Predstaviť seba — meno, vek, bydlisko, povolanie, záľuby.",
-            "Položiť otázku pomocou kartičky.",
-            "Reagovať na otázku skúšajúceho.",
-          ],
-          answer: "Predstaviť seba — meno, vek, bydlisko, povolanie, záľuby.",
-          explanation: "TEIL 1 = Vorstellen = predstavenie. Hovoríš o sebe: Ich heiße... / Ich bin ... Jahre alt. / Ich wohne in... / Ich arbeite als... / Meine Hobbys sind...",
-        },
-        {
-          question: "Čo musíš urobiť v časti TEIL 2 (Sich informieren)?",
-          options: [
-            "Správne skloňovať prídavné mená.",
-            "Položiť otázku na základe témy na kartičke.",
-            "Čítať krátky text nahlas.",
-            "Napísať e-mail.",
-          ],
-          answer: "Položiť otázku na základe témy na kartičke.",
-          explanation: "TEIL 2: dostaneš kartičku s témou (napr. 'Kurs', 'Restaurant'). Musíš položiť relevantnú otázku: 'Wann beginnt der Kurs?' / 'Was kostet der Kurs?'",
-        },
-        {
-          question: "Ako správne reagovať na otázku 'Spielen Sie Tennis?' v TEIL 3?",
-          options: [
-            "Ja.",
-            "Ja, Tennis.",
-            "Ja, ich spiele gern Tennis. Und Sie?",
-            "Tennis ja.",
-          ],
-          answer: "Ja, ich spiele gern Tennis. Und Sie?",
-          explanation: "Reakcia musí byť celá veta! 'Ja.' samo nestačí. Ideálne aj vrátiť otázku: 'Und Sie?' = 'A vy?' — ukazuje komunikatívnu kompetenciu.",
-        },
-        {
-          question: "Čo povieš, keď nerozumieš otázke skúšajúceho?",
-          options: [
-            "Mlčíš a čakáš.",
-            "Können Sie das bitte wiederholen? / Können Sie langsamer sprechen?",
-            "Das weiß ich nicht.",
-            "Entschuldigung, ich spreche kein Deutsch.",
-          ],
-          answer: "Können Sie das bitte wiederholen? / Können Sie langsamer sprechen?",
-          explanation: "Toto sú dôležité záchranné frázy na skúške! Skúšajúci musí zopakovať alebo spomaliť. Je to DOVOLENÉ a ukazuje komunikatívnu stratégiu!",
-        },
-        {
-          question: "Čo je 'die Fragekarte' pri ústnej skúške?",
-          options: [
-            "Kartička s odpoveďami",
-            "Kartička s témou, z ktorej musíš urobiť otázku",
-            "Kartička so slovami, ktoré musíš preložiť",
-            "Kartička s pravidlami skúšky",
-          ],
-          answer: "Kartička s témou, z ktorej musíš urobiť otázku",
-          explanation: "'Die Fragekarte' = kartička s otázkou/témou. V TEIL 2 skúška dostaneš kartičku — napríklad 'Kurs' — a musíš sformovať relevantnú otázku.",
-        },
-        {
-          question: "Ktorý slovosled je správny pri W-otázke?",
-          options: [
-            "Der Kurs beginnt wann?",
-            "Wann beginnt der Kurs?",
-            "Wann der Kurs beginnt?",
-            "Beginnt wann der Kurs?",
-          ],
-          answer: "Wann beginnt der Kurs?",
-          explanation: "V nemeckých otázkach: W-slovo (Wann) → sloveso → zvyšok. 'Wann beginnt der Kurs?' = Kedy začína kurz? Sloveso je VŽDY na druhom mieste!",
-        },
-      ],
-    },
-    {
-      type: "fill",
-      instruction: "Doplň správne slovo alebo frázu do vety pre ústnu skúšku.",
-      questions: [
-        {
-          sentence: "Ich ___ Jana. Ich bin 24 Jahre alt.",
-          answer: "heiße",
-          hint: "ako sa voláš",
-          explanation: "'Ich heiße' = Volám sa. Nepravidelné sloveso: heißen → ich heiße, du heißt, er/sie heißt.",
-        },
-        {
-          sentence: "Ich wohne ___ Wien.",
-          answer: "in",
-          hint: "predložka pre mesto",
-          explanation: "'in + mesto' = vo/v meste. 'Ich wohne in Wien.' = Bývam vo Viedni. Po 'in' s mestom WITHOUT article.",
-        },
-        {
-          sentence: "Wo ___ der Kurs statt?",
-          answer: "findet",
-          hint: "separabilné sloveso: stattfinden",
-          explanation: "'stattfinden' = konať sa. Separabilné: 'findet... statt'. 'Wo findet der Kurs statt?' = Kde sa koná kurz?",
-        },
-        {
-          sentence: "___ beginnt der Deutschkurs?",
-          answer: "Wann",
-          hint: "otázky na čas",
-          explanation: "'Wann' = kedy. W-otázky: Was (čo), Wo (kde), Wann (kedy), Wie (ako), Wer (kto), Was kostet (koľko stojí).",
-        },
-        {
-          sentence: "Können Sie ___ langsamer sprechen?",
-          answer: "bitte",
-          hint: "zdvorilostné slovo",
-          explanation: "'bitte' = prosím. Vždy pridaj 'bitte' pre zdvorilosť! 'Können Sie bitte langsamer sprechen?' = Môžete prosím hovoriť pomalšie?",
-        },
-      ],
-    },
-    {
-      type: "listen",
-      instruction: "Počúvaj vety z ústnej skúšky a opakuj nahlas. Tieto frázy sa nauč naspamäť!",
-      questions: [
-        { de: "Ich heiße Jana. Ich bin 24 Jahre alt.", sk: "Volám sa Jana. Mám 24 rokov." },
-        { de: "Ich wohne in Wien.", sk: "Bývam vo Viedni." },
-        { de: "Meine Hobbys sind Lesen und Kochen.", sk: "Moje záľuby sú čítanie a varenie." },
-        { de: "Wann beginnt der Kurs?", sk: "Kedy začína kurz?" },
-        { de: "Können Sie das bitte wiederholen?", sk: "Môžete to prosím zopakovať?" },
-        { de: "Ja, ich spiele gern Tennis. Und Sie?", sk: "Áno, rada hrám tenis. A vy?" },
-      ],
+      instruction: "Prezri si slovíčka tejto lekcie. Klikni na kartičku pre preklad."
     },
     {
       type: "match",
-      instruction: "Spoj nemecký výraz so slovenským prekladom alebo situáciou.",
+      instruction: "Spojte nemecké slová s ich slovenskými ekvivalentmi.",
       pairs: [
-        ["Ich heiße...", "Volám sa..."],
-        ["Ich wohne in...", "Bývam v..."],
-        ["Meine Hobbys sind...", "Moje záľuby sú..."],
-        ["Wann beginnt...?", "Kedy začína...?"],
-        ["Was kostet...?", "Koľko stojí...?"],
-        ["Wo findet...statt?", "Kde sa koná...?"],
-        ["Können Sie das wiederholen?", "Môžete to zopakovať?"],
-        ["Nein, leider nicht.", "Nie, žiaľ nie."],
-      ],
-    },
-    {
-      type: "dialogue",
-      instruction:
-        "Prečítaj modelovú ústnu skúšku. A = skúšajúci (Prüfer/in), B = Jana (Prüfling). Skúška má všetky 3 časti.",
-      lines: [
-        { speaker: "A", de: "Guten Tag. Bitte stellen Sie sich vor.", sk: "Dobrý deň. Prosím, predstavte sa." },
-        { speaker: "B", de: "Guten Tag! Ich heiße Jana Novák. Ich bin 24 Jahre alt.", sk: "Dobrý deň! Volám sa Jana Novák. Mám 24 rokov." },
-        { speaker: "B", de: "Ich wohne in Wien. Ich arbeite als Krankenschwester.", sk: "Bývam vo Viedni. Pracujem ako zdravotná sestra." },
-        { speaker: "B", de: "Meine Hobbys sind Lesen und Reisen. Ich spreche Slowakisch und Deutsch.", sk: "Moje záľuby sú čítanie a cestovanie. Hovorím po slovensky a po nemecky." },
-        { speaker: "A", de: "Danke. Jetzt Teil 2. Hier ist Ihre Karte. Das Thema ist: Kurs.", sk: "Ďakujem. Teraz časť 2. Tu je vaša kartička. Téma je: Kurz." },
-        { speaker: "B", de: "Wann beginnt der Kurs?", sk: "Kedy začína kurz?" },
-        { speaker: "A", de: "Der Kurs beginnt am Montag, um 18 Uhr.", sk: "Kurz začína v pondelok o 18:00." },
-        { speaker: "B", de: "Und was kostet der Kurs?", sk: "A koľko stojí kurz?" },
-        { speaker: "A", de: "Der Kurs kostet 120 Euro pro Monat. Jetzt Teil 3.", sk: "Kurz stojí 120 eur za mesiac. Teraz časť 3." },
-        { speaker: "A", de: "Haben Sie ein Auto?", sk: "Máte auto?" },
-        { speaker: "B", de: "Nein, leider nicht. Ich fahre mit dem Fahrrad oder mit der U-Bahn.", sk: "Nie, žiaľ nie. Jazdím na bicykli alebo metrom." },
-        { speaker: "A", de: "Sehr gut! Spielen Sie gern Fußball?", sk: "Veľmi dobre! Hráte radi futbal?" },
-        { speaker: "B", de: "Nein, ich spiele lieber Tennis. Pizza essen ist auch mein Hobby!", sk: "Nie, radšej hrám tenis. Jedenie pizze je tiež moje hobby!" },
-        { speaker: "A", de: "Ausgezeichnet! Das war Teil 3. Vielen Dank, Frau Novák.", sk: "Výborne! To bola časť 3. Ďakujem vám, pani Nováková." },
-      ],
-      comprehensionQuestions: [
-        {
-          question: "Kde Jana pracuje?",
-          options: ["V škole", "V nemocnici — ako zdravotná sestra", "V reštaurácii", "V kancelárii"],
-          answer: "V nemocnici — ako zdravotná sestra",
-        },
-        {
-          question: "Čo Jana hovorí o autách?",
-          options: [
-            "Má červené auto.",
-            "Nemá auto — jazdí na bicykli alebo metrom.",
-            "Chce si kúpiť auto.",
-            "Má auto, ale ho nepoužíva.",
-          ],
-          answer: "Nemá auto — jazdí na bicykli alebo metrom.",
-        },
-        {
-          question: "Koľko stojí kurz z kartičky (TEIL 2)?",
-          options: ["100 eur", "120 eur", "150 eur", "200 eur"],
-          answer: "120 eur",
-        },
-        {
-          question: "Aký šport Jana preferuje?",
-          options: ["Futbal", "Plávanie", "Tenis", "Beh"],
-          answer: "Tenis",
-        },
-      ],
-    },
-    {
-      type: "minitext",
-      instruction: "Prečítaj si popis formátu ústnej skúšky Goethe A1. Potom odpovedz na otázky.",
-      text:
-        "Goethe-Zertifikat A1: Sprechen\n\nDie Sprechen-Prüfung hat drei Teile. In Teil 1 (Vorstellen) stellen Sie sich vor: Name, Alter, Wohnort, Beruf und Hobbys. In Teil 2 (Sich informieren) bekommen Sie eine Karte mit einem Thema — zum Beispiel 'Kurs' oder 'Restaurant'. Sie lesen das Thema und stellen eine Frage dazu. In Teil 3 (Reagieren) reagieren Sie auf die Fragen Ihres Prüfungspartners. Alle Antworten sollen ganze Sätze sein. Die Prüfung dauert etwa 15 Minuten. Tipp: Sprechen Sie langsam und deutlich!",
-      textSk:
-        "Goethe certifikát A1: Hovorenie\n\nÚstna skúška má tri časti. V časti 1 (Predstavenie) sa predstavíš: meno, vek, miesto bydliska, povolanie a záľuby. V časti 2 (Získanie informácií) dostaneš kartičku s témou — napríklad 'Kurz' alebo 'Reštaurácia'. Prečítaš tému a položíš k nej otázku. V časti 3 (Reagovanie) reaguješ na otázky svojho skúšobného partnera. Všetky odpovede musia byť celé vety. Skúška trvá asi 15 minút. Tip: Hovor pomaly a zreteľne!",
-      questions: [
-        {
-          question: "Koľko minút trvá ústna skúška Goethe A1?",
-          options: ["5 minút", "10 minút", "15 minút", "30 minút"],
-          answer: "15 minút",
-        },
-        {
-          question: "Čo dostane kandidát v časti 2 (Sich informieren)?",
-          options: [
-            "Obrázok na opis",
-            "Kartičku s témou",
-            "Text na čítanie",
-            "Formát otázky",
-          ],
-          answer: "Kartičku s témou",
-        },
-        {
-          question: "Aký tip dáva text na záver?",
-          options: [
-            "Hovor rýchlo a nahlas.",
-            "Pamätaj si gramatiku.",
-            "Hovor pomaly a zreteľne.",
-            "Odpovedaj krátko.",
-          ],
-          answer: "Hovor pomaly a zreteľne.",
-        },
-      ],
-    },
-    {
-      type: "freewrite",
-      instruction: "Napíš svoju vlastnú úvodnú reč pre ústnu skúšku. Musíš byť Jana!",
-      prompt:
-        "Stelle dich vor, als wärst du Jana. Schreib alles auf Deutsch: Name, Alter, Wohnort, Beruf, Hobbys, Sprachen. (Predstav sa, akoby si bol/a Jana. Napíš všetko po nemecky: meno, vek, bydlisko, povolanie, záľuby, jazyky.)",
-      minWords: 50,
-      exampleAnswer:
-        "Ich heiße Jana Novák. Ich bin 24 Jahre alt. Ich wohne in Wien — das ist eine wunderschöne Stadt in Österreich! Ich komme aus der Slowakei, aus Bratislava. Ich arbeite als Krankenschwester in einem großen Krankenhaus. Meine Hobbys sind Lesen, Reisen und Kochen. Ich koche sehr gern slowakisches Essen! Ich spreche Slowakisch als Muttersprache und Deutsch als Fremdsprache. Ich lerne Deutsch seit acht Monaten und ich liebe es!",
+        [
+          "der Regen",
+          "dážď"
+        ],
+        [
+          "der Wind",
+          "vietor"
+        ],
+        [
+          "die Sonne",
+          "slnko"
+        ],
+        [
+          "der Schnee",
+          "sneh"
+        ],
+        [
+          "das Gewitter",
+          "búrka"
+        ],
+        [
+          "der Sturm",
+          "búrka (silný vietor)"
+        ],
+        [
+          "der Nebel",
+          "hmla"
+        ],
+        [
+          "es regnet",
+          "prší"
+        ],
+        [
+          "es schneit",
+          "sneží"
+        ],
+        [
+          "es ist windig",
+          "fúka vietor"
+        ]
+      ]
     },
     {
       type: "wordorder",
-      instruction: "Zoraď slová do správnej nemeckej vety.",
+      instruction: "Usporiadajte slová do správneho nemeckého poradia.",
       sentences: [
         {
-          words: ["Das", "Buch,", "das", "ich", "gestern", "gelesen", "habe,", "ist", "sehr", "spannend"],
-          correct: "Das Buch, das ich gestern gelesen habe, ist sehr spannend",
-          hint: "Kniha, ktorú som včera čítal/a, je veľmi napínavá.",
-          explanation: "Einschubs-Relativsatz: 'das' odkazuje na 'das Buch'; sloveso 'habe' stojí na konci vedľajšej vety.",
+          words: [
+            "es",
+            "regnet",
+            "stark"
+          ],
+          correct: "es regnet stark",
+          hint: "Prší silno.",
+          explanation: "V nemčine je bežné slovosled v jednoduchých oznamovacích vetách: podmet – sloveso – zvyšok vety. Tu je sloveso 'regnet' na druhom mieste."
         },
         {
-          words: ["Der", "Mann,", "der", "dort", "sitzt,", "ist", "mein", "Chef"],
-          correct: "Der Mann, der dort sitzt, ist mein Chef",
-          hint: "Muž, ktorý tam sedí, je môj šéf.",
-          explanation: "Relativpronomen 'der' sa zhoduje s rodom podstatného mena 'der Mann'.",
+          words: [
+            "ist",
+            "sehr",
+            "windig",
+            "es"
+          ],
+          correct: "es ist sehr windig",
+          hint: "Veľmi fúka vietor.",
+          explanation: "Pri opise počasia sa často používa 'es'. Sloveso 'ist' je na druhom mieste."
         },
         {
-          words: ["Die", "Frau,", "die", "Jana", "kennt,", "kommt", "aus", "Wien"],
-          correct: "Die Frau, die Jana kennt, kommt aus Wien",
-          hint: "Žena, ktorú Jana pozná, pochádza z Viedne.",
-          explanation: "Relativpronomen 'die' sa zhoduje s 'die Frau' — Einschubs-Relativsatz.",
+          words: [
+            "hoffe",
+            "Ich",
+            "besser",
+            "wird",
+            "das",
+            "Wetter"
+          ],
+          correct: "ich hoffe das Wetter wird besser",
+          hint: "Dúfam, že sa počasie zlepší.",
+          explanation: "V hlavnej vete je sloveso 'hoffe' na druhom mieste. Vedľajšia veta začínajúca sa 'dass' (tu implicitne) má sloveso na konci."
         },
         {
-          words: ["Das", "Wörterbuch,", "das", "Jana", "täglich", "benutzt,", "ist", "sehr", "alt"],
-          correct: "Das Wörterbuch, das Jana täglich benutzt, ist sehr alt",
-          hint: "Slovník, ktorý Jana denne používa, je veľmi starý.",
-          explanation: "Relativsatz je vložený do hlavnej vety — ohraničuje ho čiarka z oboch strán.",
+          words: [
+            "der",
+            "Himmel",
+            "grau",
+            "ist"
+          ],
+          correct: "der Himmel ist grau",
+          hint: "Obloha je sivá.",
+          explanation: "Podmet 'der Himmel' je na prvom mieste, sloveso 'ist' na druhom."
         },
         {
-          words: ["Die", "Aufgabe,", "die", "ich", "bekommen", "habe,", "ist", "nicht", "leicht"],
-          correct: "Die Aufgabe, die ich bekommen habe, ist nicht leicht",
-          hint: "Úloha, ktorú som dostala, nie je ľahká.",
-          explanation: "'bekommen habe' = Perfekt vo vnútri Relativsatz — sloveso stojí na konci.",
+          words: [
+            "der",
+            "Regenschirm",
+            "brauche",
+            "Ich",
+            "nicht"
+          ],
+          correct: "ich brauche den Regenschirm nicht",
+          hint: "Nepotrebujem dáždnik.",
+          explanation: "Sloveso 'brauche' je na druhom mieste. 'Den Regenschirm' je v akuzatíve, pretože je to predmet slovesa 'brauchen'."
+        }
+      ]
+    },
+    {
+      type: "fill",
+      instruction: "Doplňte správne slovo alebo sloveso.",
+      questions: [
+        {
+          sentence: "Heute ______ es stark.",
+          answer: "regnet",
+          hint: "Dnes silno prší.",
+          explanation: "Používame 'es regnet' na opis dažďa. Sloveso 'regnet' je v prítomnom čase."
         },
-      ],
+        {
+          sentence: "Im Winter ______ es oft.",
+          answer: "schneit",
+          hint: "V zime často sneží.",
+          explanation: "Používame 'es schneit' na opis sneženia. Sloveso 'schneit' je v prítomnom čase."
+        },
+        {
+          sentence: "Der Himmel ist heute ganz ______.",
+          answer: "grau",
+          hint: "Obloha je dnes celkom sivá.",
+          explanation: "Prídavné meno 'grau' opisuje farbu oblohy."
+        },
+        {
+          sentence: "Ich ______ das Wetter morgen besser.",
+          answer: "hoffe",
+          hint: "Dúfam, že počasie bude zajtra lepšie.",
+          explanation: "Sloveso 'hoffen' (dúfať) sa používa na vyjadrenie nádeje. Tu v prvej osobe jednotného čísla: 'ich hoffe'."
+        },
+        {
+          sentence: "Ich habe einen ______ gekauft.",
+          answer: "Regenschirm",
+          hint: "Kúpil som si dáždnik.",
+          explanation: "Používame 'einen Regenschirm' v akuzatíve, pretože je to predmet slovesa 'kaufen' (kúpiť) v perfektíve. 'Regenschirm' je mužského rodu."
+        },
+        {
+          sentence: "Es ist sehr ______.",
+          answer: "windig",
+          hint: "Veľmi fúka vietor.",
+          explanation: "Prídavné meno 'windig' opisuje počasie, keď fúka silný vietor."
+        },
+        {
+          sentence: "Gestern ______ es stark.",
+          answer: "regnete",
+          hint: "Včera silno pršalo.",
+          explanation: "Toto je test minulého času (Präteritum) slovesa 'regnen'. V písomnej forme sa často používa Präteritum pre 'sein' a 'haben', ale pre iné slovesá je Perfekt bežnejšie v hovorenej reči. Tu je však použitý Präteritum pre jednoduchosť."
+        },
+        {
+          sentence: "Du ______ sehr nett.",
+          answer: "bist",
+          hint: "Si veľmi milý.",
+          explanation: "Testuje sa sloveso 'sein' v druhej osobe jednotného čísla ('du bist') z lekcie L01."
+        }
+      ]
+    },
+    {
+      type: "listen",
+      instruction: "Počúvajte a napíšte, čo počujete.",
+      questions: [
+        {
+          de: "der Regen",
+          sk: "dážď"
+        },
+        {
+          de: "der Wind",
+          sk: "vietor"
+        },
+        {
+          de: "die Sonne",
+          sk: "slnko"
+        },
+        {
+          de: "der Schnee",
+          sk: "sneh"
+        },
+        {
+          de: "der Nebel",
+          sk: "hmla"
+        },
+        {
+          de: "es regnet",
+          sk: "prší"
+        },
+        {
+          de: "es schneit",
+          sk: "sneží"
+        },
+        {
+          de: "es ist windig",
+          sk: "fúka vietor"
+        },
+        {
+          de: "der Sturm",
+          sk: "búrka (silný vietor)"
+        },
+        {
+          de: "Ich hoffe, das Wetter wird besser.",
+          sk: "Dúfam, že sa počasie zlepší."
+        }
+      ]
+    },
+    {
+      type: "mcq",
+      instruction: "Vyberte správnu možnosť.",
+      questions: [
+        {
+          question: "Wie ist das Wetter heute?",
+          options: [
+            "Es ist sonnig.",
+            "Es ist regnerisch.",
+            "Es ist neblig.",
+            "Es ist stürmisch."
+          ],
+          answer: 0,
+          explanation: "Všetky možnosti opisujú počasie, ale 'Es ist sonnig' znamená, že svieti slnko, čo je bežná a pozitívna odpoveď."
+        },
+        {
+          question: "Was brauchst du, wenn es stark regnet?",
+          options: [
+            "einen Regenschirm",
+            "einen Sonnenhut",
+            "einen Schal",
+            "einen Pullover"
+          ],
+          answer: 0,
+          explanation: "Na dážď potrebujete dáždnik ('Regenschirm'). Ostatné veci sú na iné počasie alebo ročné obdobia."
+        },
+        {
+          question: "Welches Wort passt nicht?",
+          options: [
+            "der Regen",
+            "der Wind",
+            "die Sonne",
+            "der Tisch"
+          ],
+          answer: 3,
+          explanation: "'Der Tisch' (stôl) nie je meteorologický jav, zatiaľ čo ostatné slová (dážď, vietor, slnko) sú."
+        },
+        {
+          question: "Welches Wort ist ein meteorologischer Fachbegriff?",
+          options: [
+            "der Tag",
+            "die Stadt",
+            "das Gewitter",
+            "der Flughafen"
+          ],
+          answer: 2,
+          explanation: "'Das Gewitter' (búrka) je meteorologický jav. Ostatné slová označujú čas, miesto alebo budovu."
+        },
+        {
+          question: "Er ______ heute nicht zur Arbeit.",
+          options: [
+            "kommt",
+            "kommst",
+            "komme",
+            "kommen"
+          ],
+          answer: 0,
+          explanation: "Testuje sa správna konjugácia slovesa 'kommen' (prísť) pre tretiu osobu jednotného čísla ('er kommt') z lekcie L03."
+        },
+        {
+          question: "Wie viele Jahre ______ du?",
+          options: [
+            "hast",
+            "bist",
+            "hast du",
+            "bist du"
+          ],
+          answer: 3,
+          explanation: "Na otázku o veku sa používa sloveso 'sein' (byť) s 'wie alt bist du?'. Tu je však otázka 'Koľko rokov máš?', kde sa používa 'haben' v spojení s vekom. Správna otázka je 'Wie alt bist du?', ale ak by sa pýtalo 'Koľko rokov máš?', tak by to bolo 'Wie viele Jahre hast du?'. V kontexte A1 je bežnejšie 'Wie alt bist du?'. Avšak, ak by sme mali vybrať z možností, 'bist du' je správna forma pre 'Wie alt bist du?'. V tomto prípade, ak by otázka bola 'Wie viele Jahre ______ du?', správna odpoveď by bola 'hast'. Ale možnosť 'bist du' je pre 'Wie alt bist du?'. Vzhľadom na možnosti, najpravdepodobnejšia otázka je 'Wie alt bist du?', preto je správna odpoveď 3."
+        },
+        {
+          question: "Ich ______ einen Kaffee mit Milch.",
+          options: [
+            "trinke",
+            "trinkst",
+            "trinken",
+            "trink"
+          ],
+          answer: 0,
+          explanation: "Testuje sa správna konjugácia slovesa 'trinken' (piť) pre prvú osobu jednotného čísla ('ich trinke') z lekcie L06."
+        }
+      ]
+    },
+    {
+      type: "minitext",
+      instruction: "Lies den Dialog und beantworte die Fragen.",
+      text: "Jana: Hallo Luisa! Wie ist das Wetter bei dir?\nLuisa: Hallo Jana! Hier in Wien regnet es stark. Es ist auch sehr windig und der Himmel ist grau. Ich hoffe, das Wetter wird besser für deine Präsentation.\nJana: Oh nein! Mein Kunde aus Hamburg kommt bald am Flughafen an. Ich hoffe, er hat einen Regenschirm.\nLuisa: Ich hoffe es auch! Wenn er nass ist, können wir vielleicht einen Kaffee trinken gehen. Das Wetter ist hier oft unvorhersehbar.\nJana: Das ist eine gute Idee. Vielleicht mag er ja auch Wiener Schmäh! Bis später!",
+      textSk: "Jana: Ahoj Luisa! Aké je u teba počasie?\nLuisa: Ahoj Jana! Tu vo Viedni silno prší. Je aj veľmi veterno a obloha je sivá. Dúfam, že sa počasie zlepší na tvoju prezentáciu.\nJana: Ach nie! Môj klient z Hamburgu čoskoro dorazí na letisko. Dúfam, že má dáždnik.\nLuisa: Aj ja dúfam! Ak bude mokrý, možno si zájdeme na kávu. Počasie je tu často nepredvídateľné.\nJana: To je dobrý nápad. Možno má rád aj viedenský šarm! Uvidíme sa neskôr!",
+      questions: [
+        {
+          question: "Wie ist das Wetter in Wien laut Luisa?",
+          options: [
+            "Es ist sonnig und warm.",
+            "Es regnet stark und ist windig.",
+            "Es schneit und ist kalt.",
+            "Es ist neblig und ruhig."
+          ],
+          answer: 1,
+          explanation: "Luisa sagt: \"Hier in Wien regnet es stark. Es ist auch sehr windig und der Himmel ist grau.\""
+        },
+        {
+          question: "Was hofft Jana für ihren Kunden aus Hamburg?",
+          options: [
+            "Dass er den Flug verpasst.",
+            "Dass er keinen Regenschirm hat.",
+            "Dass er den Flughafen trocken erreicht.",
+            "Dass er sofort zur Präsentation kommt."
+          ],
+          answer: 2,
+          explanation: "Jana sagt: \"Ich hoffe, er hat einen Regenschirm.\""
+        },
+        {
+          question: "Was schlägt Luisa vor, wenn der Kunde nass ist?",
+          options: [
+            "Er soll nach Hause gehen.",
+            "Sie können zusammen einen Kaffee trinken gehen.",
+            "Er soll sofort zur Präsentation gehen.",
+            "Sie sollen im Regen spazieren gehen."
+          ],
+          answer: 1,
+          explanation: "Luisa sagt: \"Wenn er nass ist, können wir vielleicht einen Kaffee trinken gehen.\""
+        },
+        {
+          question: "Was ist eine wichtige Eigenschaft des Wetters in Wien laut Luisa?",
+          options: [
+            "Es ist immer gleich.",
+            "Es ist vorhersehbar.",
+            "Es ist oft unvorhersehbar.",
+            "Es ist immer schön."
+          ],
+          answer: 2,
+          explanation: "Luisa sagt: \"Das Wetter ist hier oft unvorhersehbar.\""
+        }
+      ]
     },
     {
       type: "speaking",
-      instruction: "Počúvaj nemeckú vetu. Potom hovor nahlas a skontroluj sa.",
+      instruction: "Höre zu und sprich nach.",
       phrases: [
         {
-          de: "Das Buch, das ich lese, ist sehr interessant.",
-          sk: "Kniha, ktorú čítam, je veľmi zaujímavá.",
-          tip: "lese: lé-ze, kurze e",
+          de: "der Regen",
+          sk: "dážď",
+          tip: "R je jemné, nie ako v slovenčine."
         },
         {
-          de: "Der Mann, der dort sitzt, ist mein Chef.",
-          sk: "Muž, ktorý tam sedí, je môj šéf.",
-          tip: "sitzt: zICt — itz krátke",
+          de: "der Wind",
+          sk: "vietor",
+          tip: "W=[v], dlhé i: [i:]"
         },
         {
-          de: "Das Wörterbuch, das Jana benutzt, ist sehr alt.",
-          sk: "Slovník, ktorý Jana používa, je veľmi starý.",
-          tip: "Wörterbuch: VÖR-ter-buch, ö=ö",
+          de: "es regnet",
+          sk: "prší",
+          tip: "R je jemné, [ɛs ʁɛgnət]"
         },
         {
-          de: "Die Frau, die hier arbeitet, kommt aus der Slowakei.",
-          sk: "Žena, ktorá tu pracuje, pochádza zo Slovenska.",
-          tip: "arbeitet: AR-baj-tet — ei=aj",
+          de: "es ist windig",
+          sk: "fúka vietor",
+          tip: "W=[v], [ɛs ɪst vɪndɪç]"
         },
         {
-          de: "Das Haus, das wir kaufen wollen, ist sehr teuer.",
-          sk: "Dom, ktorý chceme kúpiť, je veľmi drahý.",
-          tip: "teuer: TOJ-er — eu=oj",
+          de: "der Himmel ist grau",
+          sk: "obloha je sivá",
+          tip: "Himmel: [ˈhɪml̩], grau: [ɡʁaʊ̯]"
         },
-      ],
+        {
+          de: "Ich hoffe, es schneit nicht.",
+          sk: "Dúfam, že nesneží.",
+          tip: "hoffe: [ˈhɔfə], schneit: [ʃnaɪ̯t]"
+        },
+        {
+          de: "Es gibt Nebel und starken Wind.",
+          sk: "Je hmla a silný vietor.",
+          tip: "Nebel: [ˈneːbl̩], stark: [ʃtaʁk]"
+        },
+        {
+          de: "Ich hoffe, das Wetter wird besser.",
+          sk: "Dúfam, že sa počasie zlepší.",
+          tip: "hoffe: [ˈhɔfə], Wetter: [ˈvɛtɐ]"
+        }
+      ]
     },
+    {
+      type: "truefalse",
+      instruction: "Rozhodnite, či sú nasledujúce tvrdenia pravdivé (pravda) alebo nepravdivé (nepravda).",
+      statements: [
+        {
+          statement: "Der Himmel ist heute grau.",
+          isTrue: true,
+          explanation: "Slovo 'grau' znamená sivý a často sa používa na opis oblohy, keď je zamračené."
+        },
+        {
+          statement: "Es schneit im Sommer.",
+          isTrue: false,
+          explanation: "Sneh (der Schnee) zvyčajne padá v zime, nie v lete."
+        },
+        {
+          statement: "Der Wind ist stark und kalt.",
+          isTrue: true,
+          explanation: "Vietor (der Wind) môže byť silný (stark) a studený (kalt)."
+        },
+        {
+          statement: "Die Sonne scheint, wenn es regnet.",
+          isTrue: false,
+          explanation: "Zvyčajne, keď prší (es regnet), slnko (die Sonne) nesvieti."
+        },
+        {
+          statement: "Ein Sturm ist ein leichter Wind.",
+          isTrue: false,
+          explanation: "Sturm je veľmi silný vietor, nie ľahký."
+        }
+      ]
+    },
+    {
+      type: "dictation",
+      instruction: "Napíšte vety, ktoré počujete.",
+      sentences: [
+        {
+          de: "Es regnet.",
+          sk: "Prší."
+        },
+        {
+          de: "Der Wind weht.",
+          sk: "Fúka vietor."
+        },
+        {
+          de: "Der Himmel ist grau.",
+          sk: "Obloha je sivá."
+        },
+        {
+          de: "Es schneit heute stark.",
+          sk: "Dnes silno sneží."
+        },
+        {
+          de: "Ich hoffe, das Wetter wird besser.",
+          sk: "Dúfam, že sa počasie zlepší."
+        }
+      ]
+    },
+    {
+      type: "categorysort",
+      instruction: "Roztrieďte slová do správnych kategórií.",
+      categories: [
+        {
+          name: "Meteorologické javy",
+          color: "blue",
+          words: [
+            "der Regen",
+            "der Wind",
+            "der Schnee",
+            "das Gewitter",
+            "der Sturm",
+            "der Nebel"
+          ]
+        },
+        {
+          name: "Časti dňa",
+          color: "rose",
+          words: [
+            "der Tag"
+          ]
+        },
+        {
+          name: "Odev",
+          color: "green",
+          words: [
+            "der Regenmantel",
+            "der Regenschirm"
+          ]
+        }
+      ],
+      explanation: "Slová sme roztriedili podľa ich významu: meteorologické javy, časti dňa a oblečenie, ktoré súvisí s počasím."
+    },
+    {
+      type: "translation",
+      instruction: "Preložte nasledujúce vety zo slovenčiny do nemčiny.",
+      sentences: [
+        {
+          sk: "Dnes je veterno.",
+          answer: "Es ist heute windig.",
+          hint: "Es ist, windig",
+          explanation: "Na opis počasia používame 'Es ist...' alebo 'Es regnet/schneit...'. 'Veterno' je 'windig'."
+        },
+        {
+          sk: "Slnko svieti.",
+          answer: "Die Sonne scheint.",
+          hint: "Sonne, scheint",
+          explanation: "Sloveso 'scheinen' (svietiť) sa v tomto kontexte používa s podmetom 'die Sonne'."
+        },
+        {
+          sk: "Dúfam, že nebude pršať.",
+          answer: "Ich hoffe, es regnet nicht.",
+          hint: "hoffe, nicht",
+          explanation: "Fráza 'Ich hoffe' sa používa na vyjadrenie nádeje. Zápor 'nicht' sa používa na negáciu."
+        },
+        {
+          sk: "V meste je hmla.",
+          answer: "Es ist Nebel in der Stadt.",
+          hint: "Nebel, Stadt",
+          explanation: "Používame 'Es ist...' na opis stavu. 'Hmla' je 'der Nebel' a 'v meste' je 'in der Stadt'."
+        }
+      ]
+    },
+    {
+      type: "conjugation",
+      instruction: "Doplňte správne tvary slovesa 'hoffen' (dúfať) v prítomnom čase.",
+      verbs: [
+        {
+          infinitive: "hoffen",
+          translation: "dúfať",
+          forms: [
+            {
+              pronoun: "ich",
+              correct: "hoffe"
+            },
+            {
+              pronoun: "du",
+              correct: "hoffst"
+            },
+            {
+              pronoun: "er/sie/es",
+              correct: "hofft"
+            },
+            {
+              pronoun: "wir",
+              correct: "hoffen"
+            },
+            {
+              pronoun: "ihr",
+              correct: "hofft"
+            },
+            {
+              pronoun: "sie/Sie",
+              correct: "hoffen"
+            }
+          ],
+          note: "Sloveso 'hoffen' je pravidelné sloveso v nemčine. V prítomnom čase sa časuje podľa štandardných pravidiel."
+        }
+      ]
+    }
   ],
-  reviewWords: [
-    "sich vorstellen",
-    "Ich heiße...",
-    "Ich wohne in...",
-    "Ich arbeite als...",
-    "Wann beginnt...?",
-    "Was kostet...?",
-    "Wo findet...statt?",
-    "Können Sie das wiederholen?",
-    "Nein, leider nicht.",
-  ],
-  lessonNotes:
-    "Výborne! Teraz si pripravená na všetky tri časti ústnej skúšky Goethe A1. Pamätaj: celé vety vždy, pomaly a zreteľne, a neboj sa požiadať o zopakovanie. Ďalšia lekcia: domáce spotrebiče a každodenný život (L75).",
+  reviewWords: []
 };

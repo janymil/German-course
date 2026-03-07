@@ -1,490 +1,898 @@
-﻿export const lesson79 = {
+export const lesson79 = {
   id: 79,
   week: 16,
   day: 4,
-  title: "Mock Goethe A1: Simulation",
-  topic: "Simulácia celej skúšky Goethe A1",
+  title: "Jana plánuje výlet: Dátumy a poradové číslovky",
+  topic: "Radové číslovky (1., 2., 3...) a vyjadrenie presného dátumu (*Am dritten Mai...*)",
   cefr: "A1",
-  xpReward: 50,
-  narrativeContext:
-    "It's exam simulation day! Jana sits down at her desk, takes a deep breath, and begins the mock Goethe A1 exam. This lesson simulates ALL 4 sections: Hören, Lesen, Schreiben, Sprechen — in condensed app form. This is her final rehearsal before the real exam. 'Ich kann das! Ich bin bereit!'",
-  communicativeGoal:
-    "Po tejto lekcii si vyskúšam celý formát skúšky Goethe A1 v simulovaných podmienkach a identifikujem, čo ešte potrebujem precvičiť.",
-  skillFocus: ["speaking", "listening", "reading", "writing", "grammar", "vocabulary"],
-  grammarNote: {
-    rule: "Komplexný prehľad gramatiky A1 — kontrolný zoznam pred skúškou",
-    explanation:
-      "Celý rozsah gramatiky A1 skúšky: (1) Členy a pády (Nominatív/Akuzatív/Datív). (2) Kľúčové modálne slovesá: wollen, können, müssen, dürfen, möchten, sollen. (3) Perfekt s haben a sein. (4) Vedľajšie vety so weil/dass/wenn/ob. (5) Komparatív a superlatív. (6) Bežné konjugácie slovies vrátane nepravidelných. Kontrolný zoznam pripravenosti: □ Viem sa predstaviť v 5+ vetách □ Viem pýtať sa a odpovedať na W-otázky □ Viem rozprávať o minulých udalostiach pomocou Perfektu □ Viem napísať krátku správu/e-mail (30–50 slov) □ Viem čítať krátke oznamy/e-maily/tabuľky □ Viem hovoriť o zdraví, práci, záľubách, každodennom živote.",
-    examples: [
-      { de: "Ich habe gestern viel gelernt. (Perfekt)", sk: "Včera som sa veľa učil/a. (Perfekt)" },
-      { de: "Ich lerne Deutsch, weil es mir gefällt. (weil)", sk: "Učím sa nemčinu, pretože sa mi páči. (weil)" },
-      { de: "Können Sie das bitte wiederholen? (Modalverb)", sk: "Môžete to prosím zopakovať? (modálne sloveso)" },
-      { de: "Das war die beste Prüfung! (Superlativ)", sk: "To bola najlepšia skúška! (superlatív)" },
-    ],
-    slovakContrastNote:
-      "Na záver: slovenská gramatika a nemecká gramatika zdieľajú mnohé paralelné štruktúry — pády, zložené časy, modálne slovesá. Tvoje slovenské znalosti SÚ superpower! Pri A2 ich využiješ ešte viac. Skúška za 24 hodín — ty to zvládneš, Jana!",
-  },
+  xpReward: 20,
+  narrativeContext: "Jana und Luisa planen eine Reise. Sie wollen nach Salzburg fahren. Sie buchen ein Hotel für drei Tage.",
+  communicativeGoal: "Nach dieser Lektion kann ich über Daten sprechen und sie mit Hilfe von Ordnungszahlen und Präpositionen ausdrücken.",
+  skillFocus: [
+    "vocabulary",
+    "grammar",
+    "reading",
+    "speaking"
+  ],
+  lessonNotes: "Naučíme sa, ako sa tvoria a používajú radové číslovky (prvý, druhý, tretí...). Taktiež si povieme, ako sa v nemčine vyjadrujú presné dátumy, napríklad '3. mája' sa povie 'am dritten Mai'.",
+  grammarNotes: [
+    {
+      rule: "Ordinalzahlen",
+      explanation: "<p>Radové číslovky (ordinal numbers) vyjadrujú poradie alebo pozíciu v rade. V nemčine sa tvoria pridaním prípony <strong>-t</strong> k základnej číslovke (napr. <em>zwei</em> -> <em>zweite</em>), s výnimkou prvých troch čísloviek (<em>erstens, zweitens, drittens</em>) a po číslovke 19 (<em>neunzehn</em> -> <em>neunzehnte</em>).</p><p>Pri písaní sa za radovú číslovku pridáva bodka (napr. <em>der erste</em>, <em>die zweite</em>, <em>das dritte</em>). Táto bodka naznačuje, že ide o radovú číslovku a číta sa ako príslušný pád a rod (<em>der erste</em> - prvý, <em>die erste</em> - prvá, <em>das erste</em> - prvé).</p><p>Radové číslovky sa skloňujú ako určitý člen (<em>der, die, das</em>) a používajú sa na vyjadrenie dátumov, poradia v triede, alebo pri udávaní poradia.</p>",
+      examples: [
+        {
+          de: "Der erste Tag.",
+          sk: "Prvý deň."
+        },
+        {
+          de: "Die zweite Stunde.",
+          sk: "Druhá hodina."
+        },
+        {
+          de: "Das dritte Buch.",
+          sk: "Tretia kniha."
+        },
+        {
+          de: "Wir wohnen im vierten Stock.",
+          sk: "Bývame na štvrtom poschodí."
+        },
+        {
+          de: "Er ist der fünfte in der Schlange.",
+          sk: "Je piaty v rade."
+        },
+        {
+          de: "Das ist mein siebtes Auto.",
+          sk: "Toto je moje siedme auto."
+        },
+        {
+          de: "Am 21. Januar.",
+          sk: "21. januára."
+        },
+        {
+          de: "Der 1. Mai ist ein Feiertag.",
+          sk: "1. máj je sviatok."
+        }
+      ],
+      slovakContrastNote: "V slovenčine sa radové číslovky tvoria príponou -ý, -á, -é (prvý, prvá, prvé). V nemčine je to zložitejšie, najmä po číslovke 19, kde sa pridáva -te (<em>neunzehnte</em>). Bodka za číslovkou v nemčine je bežná pri radových číslovkách a naznačuje ich funkciu a skloňovanie, čo v slovenčine nie je takto štandardizované."
+    },
+    {
+      rule: "Datumsangaben",
+      explanation: "<p>Presný dátum v nemčine sa vyjadruje pomocou radových čísloviek a predložky <strong>am</strong>. Predložka <em>am</em> je skratka z <em>an dem</em> a používa sa pred dňami v týždni a pred dátumami.</p><p>Formát je <em>am + radová číslovka + mesiac</em>. Napríklad: <em>am ersten Januar</em> (prvého januára), <em>am zweiten Februar</em> (druhého februára), <em>am dritten März</em> (tretieho marca).</p><p>Pri písaní sa často používa skrátená forma s bodkou za radovou číslovkou: <em>am 1. Januar</em>, <em>am 2. Februar</em>, <em>am 3. März</em>.</p><p>Rok sa uvádza slovne alebo číselne, ale pri bežných konverzáciách sa často vynecháva, ak nie je dôležitý.</p>",
+      examples: [
+        {
+          de: "Mein Geburtstag ist am 5. Mai.",
+          sk: "Moje narodeniny sú 5. mája."
+        },
+        {
+          de: "Wir treffen uns am 10. Juni.",
+          sk: "Stretneme sa 10. júna."
+        },
+        {
+          de: "Der Unterricht beginnt am 1. September.",
+          sk: "Vyučovanie začína 1. septembra."
+        },
+        {
+          de: "Am 24. Dezember ist Weihnachten.",
+          sk: "24. decembra sú Vianoce."
+        },
+        {
+          de: "Sie kommt am 31. Oktober an.",
+          sk: "Príde 31. októbra."
+        },
+        {
+          de: "Das Konzert ist am 15. August.",
+          sk: "Koncert je 15. augusta."
+        }
+      ],
+      slovakContrastNote: "V slovenčine používame na vyjadrenie dátumu predložku 'v' alebo 'dňa' a radovú číslovku v genitíve (5. mája). V nemčine sa používa predložka 'am' (an dem) a radová číslovka v nominatíve alebo akuzatíve (v závislosti od kontextu, ale pri dátumoch najčastejšie nominatív alebo akuzatív s členom 'dem'/'den'). Slovosled je podobný, ale použitie predložky a pádu sa líši."
+    }
+  ],
   vocab: [
     {
-      de: "die Simulation",
-      sk: "simulácia",
-      example: "Die Simulation der Prüfung hilft sehr.",
-      exampleSk: "Simulácia skúšky veľmi pomáha.",
-      gender: "F",
+      de: "der Mai",
+      sk: "máj",
+      gender: "M",
       srsId: "L79_V01",
-      recycledFrom: [],
+      example: "Wir fahren im Mai.",
+      exampleSk: "Cestujeme v máji.",
+      recycledFrom: []
     },
     {
-      de: "der Prüfling",
-      sk: "skúšaný žiak / kandidát",
-      example: "Der Prüfling muss sich zuerst vorstellen.",
-      exampleSk: "Skúšaný sa musí najprv predstaviť.",
+      de: "der Tag",
+      sk: "deň",
       gender: "M",
       srsId: "L79_V02",
-      recycledFrom: [],
+      example: "Heute ist ein schöner Tag.",
+      exampleSk: "Dnes je pekný deň.",
+      recycledFrom: []
     },
     {
-      de: "der Prüfer / die Prüferin",
-      sk: "skúšajúci",
-      example: "Die Prüferin stellt Fragen auf Deutsch.",
-      exampleSk: "Skúšajúca kladie otázky po nemecky.",
-      gender: "M",
+      de: "die Reise",
+      sk: "cesta, výlet",
+      gender: "F",
       srsId: "L79_V03",
-      recycledFrom: [],
+      example: "Wir planen eine Reise.",
+      exampleSk: "Plánujeme výlet.",
+      recycledFrom: []
     },
     {
-      de: "Viel Erfolg!",
-      sk: "Veľa úspechu!",
-      example: "Viel Erfolg bei der Prüfung!",
-      exampleSk: "Veľa úspechu na skúške!",
-      gender: null,
+      de: "der Ort",
+      sk: "miesto",
+      gender: "M",
       srsId: "L79_V04",
-      recycledFrom: [],
+      example: "Salzburg ist ein schöner Ort.",
+      exampleSk: "Salzburg je pekné miesto.",
+      recycledFrom: []
     },
     {
-      de: "Toi toi toi!",
-      sk: "Veľa šťastia! (nemecký divadelný výraz)",
-      example: "Toi toi toi, Jana! Du schaffst das!",
-      exampleSk: "Veľa šťastia, Jana! Ty to zvládneš!",
-      gender: null,
+      de: "das Hotel",
+      sk: "hotel",
+      gender: "N",
       srsId: "L79_V05",
-      recycledFrom: [],
+      example: "Unser Hotel ist gebucht.",
+      exampleSk: "Náš hotel je rezervovaný.",
+      recycledFrom: []
     },
     {
-      de: "Das habe ich gewusst.",
-      sk: "To som vedel/a.",
-      example: "Das habe ich gewusst — die Antwort ist B!",
-      exampleSk: "To som vedela — odpoveď je B!",
-      gender: null,
+      de: "die Stadt",
+      sk: "mesto",
+      gender: "F",
       srsId: "L79_V06",
-      recycledFrom: [],
+      example: "Salzburg ist eine schöne Stadt.",
+      exampleSk: "Salzburg je pekné mesto.",
+      recycledFrom: []
     },
     {
-      de: "Ich bin sicher.",
-      sk: "Som si istý/á.",
-      example: "Ich bin sicher — das ist richtig.",
-      exampleSk: "Som si istá — to je správne.",
-      gender: null,
+      de: "die Planung",
+      sk: "plánovanie",
+      gender: "F",
       srsId: "L79_V07",
-      recycledFrom: [],
+      example: "Die Planung ist wichtig.",
+      exampleSk: "Plánovanie je dôležité.",
+      recycledFrom: []
     },
     {
-      de: "Ich bin unsicher.",
-      sk: "Nie som si istý/á.",
-      example: "Ich bin unsicher — a oder b?",
-      exampleSk: "Nie som si istá — a alebo b?",
-      gender: null,
+      de: "der Tourist / die Touristin",
+      sk: "turista / turistka",
+      gender: "M",
       srsId: "L79_V08",
-      recycledFrom: [],
+      example: "Wir sind Touristen.",
+      exampleSk: "Sme turisti.",
+      recycledFrom: []
     },
     {
-      de: "Das weiß ich nicht.",
-      sk: "To neviem.",
-      example: "Das weiß ich nicht genau, aber ich glaube...",
-      exampleSk: "To neviem presne, ale myslím...",
-      gender: null,
+      de: "der Termin",
+      sk: "termín",
+      gender: "M",
       srsId: "L79_V09",
-      recycledFrom: [],
+      example: "Wir haben einen Termin.",
+      exampleSk: "Máme termín.",
+      recycledFrom: []
     },
     {
-      de: "Ich glaube, es ist...",
-      sk: "Myslím, že je to...",
-      example: "Ich glaube, es ist die richtige Antwort.",
-      exampleSk: "Myslím, že to je správna odpoveď.",
-      gender: null,
+      de: "der Anfang",
+      sk: "začiatok",
+      gender: "M",
       srsId: "L79_V10",
-      recycledFrom: [65],
+      example: "Der Anfang der Reise ist am dritten Mai.",
+      exampleSk: "Začiatok cesty je tretí máj.",
+      recycledFrom: []
     },
     {
-      de: "Die Antwort ist... / Ich denke...",
-      sk: "Odpoveď je... / Myslím...",
-      example: "Die Antwort ist C — ich denke, das ist richtig.",
-      exampleSk: "Odpoveď je C — myslím, že to je správne.",
-      gender: null,
+      de: "das Ende",
+      sk: "koniec",
+      gender: "N",
       srsId: "L79_V11",
-      recycledFrom: [],
+      example: "Das Ende der Reise ist am fünften Mai.",
+      exampleSk: "Koniec cesty je piaty máj.",
+      recycledFrom: []
     },
     {
-      de: "bestehen",
-      sk: "zvládnuť / zložiť (skúšku)",
-      example: "Ich hoffe, ich bestehe die Prüfung!",
-      exampleSk: "Dúfam, že zvládnem skúšku!",
+      de: "buchen",
+      sk: "rezervovať",
       gender: null,
       srsId: "L79_V12",
-      recycledFrom: [],
+      example: "Wir buchen ein Hotel.",
+      exampleSk: "Rezervujeme hotel.",
+      recycledFrom: []
     },
     {
-      de: "nicht bestehen",
-      sk: "nezvládnuť / nezložiť (skúšku)",
-      example: "Wenn ich nicht bestehe, lerne ich weiter.",
-      exampleSk: "Ak nezvládnem, budem sa ďalej učiť.",
+      de: "planen",
+      sk: "plánovať",
       gender: null,
       srsId: "L79_V13",
-      recycledFrom: [],
+      example: "Wir planen die Reise.",
+      exampleSk: "Plánujeme výlet.",
+      recycledFrom: []
     },
     {
-      de: "wiederholen",
-      sk: "opakovať",
-      example: "Ich wiederhole alle Grammatikregeln.",
-      exampleSk: "Opakujem všetky gramatické pravidlá.",
+      de: "ankommen",
+      sk: "prísť, doraziť",
       gender: null,
       srsId: "L79_V14",
-      recycledFrom: [],
+      example: "Wir kommen am fünften Mai an.",
+      exampleSk: "Prídeme piateho mája.",
+      recycledFrom: []
     },
     {
-      de: "das Ergebnis",
-      sk: "výsledok",
-      example: "Das Ergebnis kommt in zwei Wochen.",
-      exampleSk: "Výsledok príde o dva týždne.",
-      gender: "N",
+      de: "abfahren",
+      sk: "odísť, odcestovať",
+      gender: null,
       srsId: "L79_V15",
-      recycledFrom: [],
+      example: "Wir fahren am dritten Mai ab.",
+      exampleSk: "Odchádzame tretieho mája.",
+      recycledFrom: []
     },
+    {
+      de: "zurückkommen",
+      sk: "vrátiť sa",
+      gender: null,
+      srsId: "L79_V16",
+      example: "Wir kommen am fünften Mai zurück.",
+      exampleSk: "Vraciavame sa piateho mája.",
+      recycledFrom: []
+    },
+    {
+      de: "vom ... bis ...",
+      sk: "od ... do ...",
+      gender: null,
+      srsId: "L79_V17",
+      example: "Das Hotel ist vom dritten bis fünften Mai gebucht.",
+      exampleSk: "Hotel je rezervovaný od tretieho do piateho mája.",
+      recycledFrom: []
+    },
+    {
+      de: "am ...",
+      sk: "v ... (dátum)",
+      gender: null,
+      srsId: "L79_V18",
+      example: "Wir fahren am dritten Mai.",
+      exampleSk: "Odchádzame tretí máj.",
+      recycledFrom: []
+    },
+    {
+      de: "der erste",
+      sk: "prvý",
+      gender: null,
+      srsId: "L79_V19",
+      example: "Der erste Tag ist wichtig.",
+      exampleSk: "Prvý deň je dôležitý.",
+      recycledFrom: []
+    },
+    {
+      de: "der zweite",
+      sk: "druhý",
+      gender: null,
+      srsId: "L79_V20",
+      example: "Der zweite Tag ist auch wichtig.",
+      exampleSk: "Druhý deň je tiež dôležitý.",
+      recycledFrom: []
+    },
+    {
+      de: "der dritte",
+      sk: "tretí",
+      gender: null,
+      srsId: "L79_V21",
+      example: "Der dritte Mai ist unser Abfahrtstag.",
+      exampleSk: "Tretí máj je náš deň odchodu.",
+      recycledFrom: []
+    },
+    {
+      de: "der vierte",
+      sk: "štvrtý",
+      gender: null,
+      srsId: "L79_V22",
+      example: "Der vierte Tag ist ein Ruhetag.",
+      exampleSk: "Štvrtý deň je deň odpočinku.",
+      recycledFrom: []
+    },
+    {
+      de: "der fünfte",
+      sk: "piaty",
+      gender: null,
+      srsId: "L79_V23",
+      example: "Am fünften Mai kommen wir zurück.",
+      exampleSk: "Piaty máj sa vraciame.",
+      recycledFrom: []
+    },
+    {
+      de: "Wie ist der Plan?",
+      sk: "Aký je plán?",
+      gender: null,
+      srsId: "L79_V24",
+      example: "Wie ist der Plan für morgen?",
+      exampleSk: "Aký je plán na zajtra?",
+      recycledFrom: []
+    },
+    {
+      de: "Wann fahren wir ab?",
+      sk: "Kedy odchádzame?",
+      gender: null,
+      srsId: "L79_V25",
+      example: "Wann fahren wir ab?",
+      exampleSk: "Kedy odchádzame?",
+      recycledFrom: []
+    }
   ],
   exercises: [
     {
       type: "flashcard",
-      instruction: "Rýchle opakovanie skúškovej slovnej zásoby. Toto sú posledné nové slová pred záverečnou skúškou!",
-      items: [
-        "L79_V01",
-        "L79_V02",
-        "L79_V03",
-        "L79_V04",
-        "L79_V05",
-        "L79_V06",
-        "L79_V07",
-        "L79_V08",
-        "L79_V09",
-        "L79_V10",
-        "L79_V11",
-        "L79_V12",
-        "L79_V13",
-        "L79_V14",
-        "L79_V15",
-      ],
-    },
-    {
-      type: "mcq",
-      instruction: "MOCK PRÜFUNG: Tieto otázky pokrývajú celú látku kurzu A1. Akoby si bol/a na skúške!",
-      questions: [
-        {
-          question: "Vyber správny tvar: 'Gestern ___ ich ins Kino gegangen.'",
-          options: ["habe", "bin", "hatte", "war"],
-          answer: "bin",
-          explanation: "'gehen' tvorí Perfekt so 'sein': ich BIN gegangen. Slovesá pohybu a zmeny stavu (gehen, fahren, kommen, werden) + 'sein'. Ostatné: 'haben'. Slovo 'gestern' = včera.",
-        },
-        {
-          question: "Čo je správna forma: 'Ich möchte ___ Kaffee.'",
-          options: [
-            "ein",
-            "einen",
-            "einem",
-            "eine",
-          ],
-          answer: "einen",
-          explanation: "'Kaffee' je mužského rodu (der Kaffee). Po 'möchte' nasleduje akuzatív: 'einen Kaffee' (M → Akk). Nom: ein Kaffee → Akk: einen Kaffee.",
-        },
-        {
-          question: "Vyber správnu vetu s 'weil':",
-          options: [
-            "Ich lerne Deutsch, weil es gefällt mir.",
-            "Ich lerne Deutsch, weil mir gefällt es.",
-            "Ich lerne Deutsch, weil es mir gefällt.",
-            "Weil es mir gefällt, ich lerne Deutsch.",
-          ],
-          answer: "Ich lerne Deutsch, weil es mir gefällt.",
-          explanation: "V vedľajšej vete s 'weil' ide sloveso na KONIEC: 'weil es mir gefällt.' Nie 'gefällt mir' ani 'mir gefällt es'. Klauzula: weil + [zvyšok] + [sloveso na koniec].",
-        },
-        {
-          question: "Doplň: 'Das ist ___ teuerste Restaurant in Wien.' (Superlativ)",
-          options: ["das", "am", "der", "dem"],
-          answer: "das",
-          explanation: "Superlatív s členom: 'das teuerste' (N, Nom). 'Das ist das teuerste Restaurant.' vs 'Hier esse ich am teuersten.' — 'am teuersten' pre predikáty; 'das teuerste' pred podstatným menom.",
-        },
-        {
-          question: "Čo znamená 'Toi toi toi!' v nemčine?",
-          options: [
-            "Pozor!",
-            "Veľa šťastia! (divadelný výraz)",
-            "Dobrý deň!",
-            "Gratulujeme!",
-          ],
-          answer: "Veľa šťastia! (divadelný výraz)",
-          explanation: "'Toi toi toi!' je tradičný nemecký výraz na prianie šťastia — pochádza z divadla. Podobné ako SK 'Veľa šťastia!' alebo 'Drž palce!'",
-        },
-        {
-          question: "Vyber správny tvar: 'Kannst du mir ___ Weg erklären?' (Dativ/Akkusativ)",
-          options: [
-            "der",
-            "den",
-            "dem",
-            "des",
-          ],
-          answer: "den",
-          explanation: "'Weg' je mužský rod. 'erklären' riadi akuzatív (čo vysvetliť?) → 'den Weg' (Akk M). 'mir' je datív (komu) = správne. Veta má dvojitý objekt: Dat (mir) + Akk (den Weg).",
-        },
-        {
-          question: "Ako sa správne pýtaš na čas, keď chceš vedieť koľko je hodín?",
-          options: [
-            "Wie spät ist es?",
-            "Was Zeit ist es?",
-            "Wann ist die Uhr?",
-            "Wie lange ist es?",
-          ],
-          answer: "Wie spät ist es?",
-          explanation: "'Wie spät ist es?' = Koľko je hodín? (doslova: Ako neskoro je?) Alternatíva: 'Wie viel Uhr ist es?' Odpoveď: 'Es ist drei Uhr.' / 'Es ist halb vier.'",
-        },
-      ],
-    },
-    {
-      type: "fill",
-      instruction: "MOCK PRÜFUNG LESEN/SCHREIBEN: Doplň medzery v skúšobnom cvičení. Komplexné opakovanie celého kurzu.",
-      questions: [
-        {
-          sentence: "Ich ___ gestern nicht in die Arbeit gegangen, weil ich krank ___ .",
-          answer: "bin / war",
-          hint: "Perfekt mit 'sein' + Vergangenheit von 'sein'",
-          explanation: "'gehen' + sein → 'ich BIN gegangen'. 'weil ich krank WAR' — vedľajšia veta s 'weil' + 'war' (Präteritum od 'sein') na konci. Kombinácia Perfekt + Präteritum (sein/haben sa bežne používajú v Präteritum).",
-        },
-        {
-          sentence: "Meine Schwester ist ___ als ich — sie ist 1,75 m groß.",
-          answer: "größer",
-          hint: "komparatív od 'groß'",
-          explanation: "'groß' → Komparatív: 'größer' (+ Umlaut ä/ö/ü). 'Sie ist größer als ich.' = Je vyššia ako ja. Komparatív + 'als' pre porovnanie.",
-        },
-        {
-          sentence: "Ich ___ schon in Wien, als ich 18 Jahre alt war.",
-          answer: "war",
-          hint: "Präteritum von 'sein'",
-          explanation: "'sein' v Präteritum: ich WAR, du warst, er/sie/es war. 'Als' + Präteritum pre minulú situáciu. 'Ich war in Wien' = Bol/a som vo Viedni.",
-        },
-        {
-          sentence: "Kannst du mir sagen, ___ die Prüfung beginnt?",
-          answer: "wann",
-          hint: "otázka na čas v nepriamej reči",
-          explanation: "'Kannst du mir sagen, wann...' = Môžeš mi povedať, kedy... Nepriama otázka s 'wann' — sloveso IDE na koniec: 'wann die Prüfung BEGINNT'.",
-        },
-        {
-          sentence: "Man ___ vor der Prüfung gut schlafen.",
-          answer: "soll",
-          hint: "modálne sloveso pre všeobecné odporúčanie",
-          explanation: "'sollen' pre všeobecné odporúčanie. 'Man soll gut schlafen.' = Malo by sa dobre spať. Alternatíva: 'Man sollte' (K. II, jemnejšie).",
-        },
-      ],
-    },
-    {
-      type: "listen",
-      instruction: "Počúvaj kľúčové skúšobné frázy z celého kurzu a opakuj ich. Toto je tvoje finálne zvukové opakovanie!",
-      questions: [
-        { de: "Ich habe die Prüfung bestanden!", sk: "Zložila som skúšku!" },
-        { de: "Toi toi toi! Viel Erfolg!", sk: "Veľa šťastia! Veľa úspechu!" },
-        { de: "Das weiß ich nicht, aber ich glaube...", sk: "To neviem, ale myslím..." },
-        { de: "Können Sie das bitte wiederholen?", sk: "Môžete to prosím zopakovať?" },
-        { de: "Ich bin sicher — die Antwort ist B.", sk: "Som si istá — odpoveď je B." },
-        { de: "Das Ergebnis kommt in zwei Wochen.", sk: "Výsledok príde o dva týždne." },
-      ],
+      instruction: "Prezri si slovíčka tejto lekcie. Klikni na kartičku pre preklad."
     },
     {
       type: "match",
-      instruction: "MOCK PRÜFUNG: Spoj nemecké gramatické pojmy alebo výrazy zo skúšky so slovenským prekladom.",
+      instruction: "Spojte nemecké slová s ich slovenskými ekvivalentmi.",
       pairs: [
-        ["bestehen", "zložiť / zvládnuť skúšku"],
-        ["Viel Erfolg!", "Veľa úspechu!"],
-        ["Toi toi toi!", "Veľa šťastia! (nem.)"],
-        ["das Ergebnis", "výsledok"],
-        ["wiederholen", "opakovať"],
-        ["der Prüfling", "skúšaný / kandidát"],
-        ["Ich bin sicher.", "Som si istý/á."],
-        ["Das habe ich gewusst.", "To som vedel/a."],
-      ],
-    },
-    {
-      type: "dialogue",
-      instruction:
-        "MOCK SPRECHEN skúška: Plný simulovaný ústny test. Prüfer/in a Jana. Presne imituje formát skúšky Goethe A1.",
-      lines: [
-        { speaker: "A", de: "Guten Morgen. Beginnen wir mit Teil 1. Stellen Sie sich bitte vor.", sk: "Dobré ráno. Začnime čas 1. Prosím, predstavte sa." },
-        { speaker: "B", de: "Guten Morgen! Ich heiße Jana Novák. Ich bin 24 Jahre alt.", sk: "Dobré ráno! Volám sa Jana Novák. Mám 24 rokov." },
-        { speaker: "B", de: "Ich komme aus der Slowakei, aber ich wohne jetzt in Wien.", sk: "Pochádzam zo Slovenska, ale teraz bývam vo Viedni." },
-        { speaker: "B", de: "Ich arbeite als Krankenschwester. Meine Hobbys sind Lesen und Reisen.", sk: "Pracujem ako zdravotná sestra. Moje záľuby sú čítanie a cestovanie." },
-        { speaker: "B", de: "Ich spreche Slowakisch und Deutsch. Ich lerne Deutsch seit 8 Monaten.", sk: "Hovorím po slovensky a po nemecky. Nemčinu sa učím 8 mesiacov." },
-        { speaker: "A", de: "Danke! Jetzt Teil 2. Ihre Karte: Restaurant. Stellen Sie eine Frage.", sk: "Ďakujem! Teraz časť 2. Vaša kartička: Reštaurácia. Položte otázku." },
-        { speaker: "B", de: "Wann ist das Restaurant geöffnet?", sk: "Kedy je reštaurácia otvorená?" },
-        { speaker: "A", de: "Das Restaurant ist täglich von 12 bis 22 Uhr geöffnet.", sk: "Reštaurácia je otvorená každý deň od 12 do 22 hodín." },
-        { speaker: "B", de: "Und was kostet ein Mittagessen?", sk: "A koľko stojí obed?" },
-        { speaker: "A", de: "Das Mittagsmenü kostet 12 Euro. Jetzt Teil 3 — ich stelle Ihnen eine Frage.", sk: "Obedné menu stojí 12 eur. Teraz časť 3 — kladiem vám otázku." },
-        { speaker: "A", de: "Haben Sie ein Haustier?", sk: "Máte domáce zviera?" },
-        { speaker: "B", de: "Nein, leider nicht. Ich lebe in einer kleinen Wohnung. Aber ich liebe Katzen!", sk: "Nie, žiaľ nie. Bývam v malom byte. Ale zbožňujem mačky!" },
-        { speaker: "A", de: "Kochen Sie gern zu Hause?", sk: "Varíte radi doma?" },
-        { speaker: "B", de: "Ja, ich koche sehr gern! Am liebsten koche ich slowakische Gerichte.", sk: "Áno, variť rada! Najradšej varím slovenské jedlá." },
-      ],
-      comprehensionQuestions: [
-        {
-          question: "Ako dlho sa Jana učí nemčinu?",
-          options: ["3 mesiace", "6 mesiacov", "8 mesiacov", "1 rok"],
-          answer: "8 mesiacov",
-        },
-        {
-          question: "Aká bola Jana kartička v časti 2 (Sich informieren)?",
-          options: ["Kurs", "Reštaurácia", "Hotel", "Nemocnica"],
-          answer: "Reštaurácia",
-        },
-        {
-          question: "Prečo Jana nemá domáce zviera?",
-          options: [
-            "Lebo je alergická na zvieratá.",
-            "Lebo bývam v malom byte.",
-            "Lebo nemá čas.",
-            "Lebo nemiluje zvieratá.",
-          ],
-          answer: "Lebo bývam v malom byte.",
-        },
-        {
-          question: "Aké jedlá Jana najradšej varí?",
-          options: ["Nemecké jedlá", "Talianske jedlá", "Slovenské jedlá", "Rakúske jedlá"],
-          answer: "Slovenské jedlá",
-        },
-      ],
-    },
-    {
-      type: "minitext",
-      instruction:
-        "MOCK HÖREN transkript: Prečítaj si prepis krátkeho telefonátu zo záznamníka. Potom vyplň medzery a odpovedz na otázky.",
-      text:
-        "Ansage auf dem Anrufbeantworter:\n\nHallo, hier ist die Arztpraxis Dr. Schneider. Sie haben am Dienstag, dem 10. März, einen Termin um 14:30 Uhr. Die Praxis ist in der Hauptstraße 15, zweiter Stock. Bitte bringen Sie Ihre Versicherungskarte mit. Wenn Sie den Termin absagen möchten, rufen Sie bitte bis Montag an. Unsere Telefonnummer ist 0043-1-555-78-90. Auf Wiederhören!",
-      textSk:
-        "Správa na záznamníku:\n\nAhoj, tu je lekárska ordinácia Dr. Schneider. Máte termín v utorok, 10. marca, o 14:30. Ordinácia je na Hauptstraße 15, druhé poschodie. Prosím prineste si zdravotnú kartičku. Ak chcete termín zrušiť, zavolajte prosím do pondelka. Naše telefónne číslo je 0043-1-555-78-90. Doslýšania!",
-      questions: [
-        {
-          question: "Na aký deň je Janin termín?",
-          options: ["Pondelok", "Utorok", "Streda", "Piatok"],
-          answer: "Utorok",
-        },
-        {
-          question: "Kde sa nachádza ordinácia?",
-          options: [
-            "Hauptstraße 15, prvé poschodie",
-            "Hauptstraße 15, druhé poschodie",
-            "Hauptstraße 50, prízemie",
-            "Hauptstraße 15, tretie poschodie",
-          ],
-          answer: "Hauptstraße 15, druhé poschodie",
-        },
-        {
-          question: "Do kedy musí Jana zavolať, ak chce zrušiť termín?",
-          options: ["Do utorka", "Do stredy", "Do piatka", "Do pondelka"],
-          answer: "Do pondelka",
-        },
-      ],
-    },
-    {
-      type: "freewrite",
-      instruction:
-        "MOCK SCHREIBEN: Toto je skúšobná úloha Schreiben presne vo formáte Goethe A1. Napíš správu s aspoň 30 slovami a adresuj všetky 3 body!",
-      prompt:
-        "Schreib eine Nachricht an deinen Chef/deine Chefin. Nenn: (1) dass du krank bist; (2) wann du wieder arbeiten kannst; (3) bitte ihn/sie um Rückmeldung. (Napíš správu šéfovi/šéfke. Uveď: (1) že si chorý/á; (2) kedy môžeš znova pracovať; (3) požiadaj o odpoveď.)",
-      minWords: 30,
-      exampleAnswer:
-        "Sehr geehrter Herr Müller, ich schreibe Ihnen, weil ich leider krank bin. Ich habe Fieber und kann heute nicht arbeiten. Ich denke, ich kann ab Donnerstag wieder kommen. Bitte geben Sie mir eine Rückmeldung. Mit freundlichen Grüßen, Jana Novák.",
+        [
+          "der Mai",
+          "máj"
+        ],
+        [
+          "der Tag",
+          "deň"
+        ],
+        [
+          "die Reise",
+          "cesta, výlet"
+        ],
+        [
+          "buchen",
+          "rezervovať"
+        ],
+        [
+          "planen",
+          "plánovať"
+        ],
+        [
+          "ankommen",
+          "prísť, doraziť"
+        ],
+        [
+          "der erste",
+          "prvý"
+        ],
+        [
+          "der zweite",
+          "druhý"
+        ],
+        [
+          "der dritte",
+          "tretí"
+        ],
+        [
+          "am dritten Mai",
+          "tretieho mája"
+        ]
+      ]
     },
     {
       type: "wordorder",
-      instruction: "Zoraď slová do správnej nemeckej vety.",
+      instruction: "Usporiadajte slová do správneho nemeckého poradia.",
       sentences: [
         {
-          words: ["In", "Österreich", "sagt", "man", "Grüß", "Gott", "statt", "Hallo"],
-          correct: "In Österreich sagt man Grüß Gott statt Hallo",
-          hint: "V Rakúsku sa hovorí Grüß Gott namiesto Hallo.",
-          explanation: "'man' = neosobné zámeno; 'statt' + Nominatív — porovnanie dialektálnych variantov.",
+          words: [
+            "wir",
+            "am",
+            "Freitag",
+            "fahren",
+            "ab"
+          ],
+          correct: "wir fahren am Freitag ab",
+          hint: "Odchádzame v piatok.",
+          explanation: "V prítomnom čase je sloveso na druhom mieste. Časové údaje (am Freitag) zvyčajne nasledujú po slovese."
         },
         {
-          words: ["Der", "Jänner", "ist", "der", "erste", "Monat", "des", "Jahres", "in", "Österreich"],
-          correct: "Der Jänner ist der erste Monat des Jahres in Österreich",
-          hint: "Jänner je prvý mesiac roku v Rakúsku.",
-          explanation: "'Jänner' = rakúske slovo pre 'Januar'; 'des Jahres' = Genitiv.",
+          words: [
+            "die",
+            "Reise",
+            "wir",
+            "planen",
+            "nächste",
+            "Woche"
+          ],
+          correct: "wir planen die Reise nächste Woche",
+          hint: "Plánujeme výlet budúci týždeň.",
+          explanation: "V prítomnom čase je sloveso na druhom mieste. Predmet (die Reise) nasleduje po slovese. Časový údaj (nächste Woche) môže ísť na koniec vety."
         },
         {
-          words: ["In", "der", "Schweiz", "heißt", "das", "Fahrrad", "das", "Velo"],
-          correct: "In der Schweiz heißt das Fahrrad das Velo",
-          hint: "V Švajčiarsku sa bicyklu hovorí das Velo.",
-          explanation: "'heißen' = volať sa/nazývať sa — používa sa na vysvetlenie dialektálnych názvov.",
+          words: [
+            "am",
+            "Geburtstag",
+            "mein",
+            "ist",
+            "der",
+            "elfte",
+            "Juni"
+          ],
+          correct: "mein Geburtstag ist am elften Juni",
+          hint: "Môj narodeninový deň je jedenásteho júna.",
+          explanation: "V prítomnom čase je sloveso (ist) na druhom mieste. Predložka 'am' sa používa s dátumami."
         },
         {
-          words: ["Jana", "kauft", "Paradeiser", "statt", "Tomaten", "auf", "dem", "Markt"],
-          correct: "Jana kauft Paradeiser statt Tomaten auf dem Markt",
-          hint: "Jana kupuje paradajky (rak.) namiesto Tomaten na trhu.",
-          explanation: "'Paradeiser' = rakúske slovo pre 'Tomate'; 'auf dem Markt' = Dativ miesta.",
+          words: [
+            "vom",
+            "bis",
+            "Hotel",
+            "wir",
+            "das",
+            "buchen",
+            "fünften",
+            "zehnten"
+          ],
+          correct: "wir buchen das Hotel vom fünften bis zum zehnten",
+          hint: "Rezervujeme hotel od piateho do desiateho.",
+          explanation: "V prítomnom čase je sloveso na druhom mieste. Predložka 'vom' (von dem) a 'bis zum' (bis zu dem) sa používajú na vyjadrenie časového rozsahu."
         },
         {
-          words: ["In", "Österreich", "sagt", "man", "auch", "Servus", "als", "Gruß"],
-          correct: "In Österreich sagt man auch Servus als Gruß",
-          hint: "V Rakúsku sa tiež hovorí Servus ako pozdrav.",
-          explanation: "'auch' = tiež — pridáva ďalší príklad; 'als Gruß' = Nominatív (predikatívne).",
+          words: [
+            "der",
+            "Touristen",
+            "kommen",
+            "viele",
+            "im",
+            "Sommer",
+            "an"
+          ],
+          correct: "viele Touristen kommen im Sommer an",
+          hint: "Veľa turistov prichádza v lete.",
+          explanation: "V prítomnom čase je sloveso na druhom mieste. Oddeliteľný predpona 'an' ide na koniec vety."
+        }
+      ]
+    },
+    {
+      type: "fill",
+      instruction: "Doplňte správne slová do viet.",
+      questions: [
+        {
+          sentence: "Der ____ ist der erste Tag im Mai.",
+          answer: "Mai",
+          hint: "Máj",
+          explanation: "Slovo 'Mai' je podstatné meno mužského rodu (der Mai) a označuje mesiac."
         },
-      ],
+        {
+          sentence: "Unsere Reise beginnt ____ 5. Mai und endet ____ 15. Mai.",
+          answer: "vom ... bis zum",
+          hint: "od ... do ...",
+          explanation: "Spojenie 'vom ... bis zum' sa používa na vyjadrenie časového rozsahu od dátumu do dátumu."
+        },
+        {
+          sentence: "Wir ____ ein Hotel für unsere Reise.",
+          answer: "buchen",
+          hint: "rezervujeme",
+          explanation: "Sloveso 'buchen' (rezervovať) je v správnom tvare pre 'wir' v prítomnom čase."
+        },
+        {
+          sentence: "Am ____ Tag wollen wir die Stadt besichtigen.",
+          answer: "vierten",
+          hint: "štvrtý",
+          explanation: "Radová číslovka 'vierten' (štvrtý) sa používa na označenie poradia dňa."
+        },
+        {
+          sentence: "Wann ____ ihr ____?",
+          answer: "fahrt ... ab",
+          hint: "odchádzate",
+          explanation: "Toto je otázka v prítomnom čase. Sloveso 'abfahren' je oddeliteľné, preto 'ab' ide na koniec vety. Tvar pre 'ihr' je 'fahrt'."
+        },
+        {
+          sentence: "Mein Bruder ____ heute Geburtstag.",
+          answer: "hat",
+          hint: "má",
+          explanation: "Toto je príklad z lekcie L04. Sloveso 'haben' sa používa na vyjadrenie narodenín."
+        },
+        {
+          sentence: "Ich ____ gut Deutsch.",
+          answer: "spreche",
+          hint: "hovorím",
+          explanation: "Toto je príklad z lekcie L03. Sloveso 'sprechen' má zmenu samohlásky pre 'ich' na 'spreche'."
+        }
+      ]
+    },
+    {
+      type: "listen",
+      instruction: "Počúvajte a vyberte správny nemecký výraz.",
+      questions: [
+        {
+          de: "der Tag",
+          sk: "deň"
+        },
+        {
+          de: "der Mai",
+          sk: "máj"
+        },
+        {
+          de: "buchen",
+          sk: "rezervovať"
+        },
+        {
+          de: "planen",
+          sk: "plánovať"
+        },
+        {
+          de: "ankommen",
+          sk: "prísť, doraziť"
+        },
+        {
+          de: "der erste",
+          sk: "prvý"
+        },
+        {
+          de: "der zweite",
+          sk: "druhý"
+        },
+        {
+          de: "der dritte",
+          sk: "tretí"
+        },
+        {
+          type: "audio",
+          path: "L79/am_fuenften_mai.mp3",
+          de: "am fünften Mai",
+          sk: "piateho mája"
+        },
+        {
+          type: "audio",
+          path: "L79/vom_ersten_bis_zum_dritten.mp3",
+          de: "vom ersten bis zum dritten",
+          sk: "od prvého do tretieho"
+        }
+      ]
+    },
+    {
+      type: "mcq",
+      instruction: "Vyberte správnu možnosť.",
+      questions: [
+        {
+          question: "Čo znamená 'die Reise'?",
+          options: [
+            "miesto",
+            "hotel",
+            "cesta, výlet",
+            "plánovanie"
+          ],
+          answer: 2,
+          explanation: "'Die Reise' znamená cesta alebo výlet."
+        },
+        {
+          question: "Ako sa povie 'rezervovať' v nemčine?",
+          options: [
+            "planen",
+            "ankommen",
+            "buchen",
+            "abfahren"
+          ],
+          answer: 2,
+          explanation: "Sloveso 'buchen' znamená rezervovať."
+        },
+        {
+          question: "Ktorý tvar radovej číslovky je správny pre 'tretí'?",
+          options: [
+            "drei",
+            "der dritte",
+            "dritte",
+            "dreißig"
+          ],
+          answer: 1,
+          explanation: "Radové číslovky sa tvoria s určitým členom 'der' a príponou '-te', napr. 'der dritte'."
+        },
+        {
+          question: "Ako vyjadríme dátum 'prvého júna'?",
+          options: [
+            "in Juni erste",
+            "am erste Juni",
+            "am ersten Juni",
+            "um ersten Juni"
+          ],
+          answer: 2,
+          explanation: "Pre vyjadrenie dátumu sa používa predložka 'am' spolu s radovou číslovkou v datívnom tvare (am ersten Juni)."
+        },
+        {
+          question: "Čo znamená 'Wann fahren wir ab?'",
+          options: [
+            "Kedy prídeme?",
+            "Kedy ideme?",
+            "Kedy odchádzame?",
+            "Kedy plánujeme?"
+          ],
+          answer: 2,
+          explanation: "'Wann fahren wir ab?' je otázka 'Kedy odchádzame?'."
+        },
+        {
+          question: "Ktorý z nasledujúcich výrazov vyjadruje časový rozsah 'od pondelka do piatka'?",
+          options: [
+            "am Montag bis Freitag",
+            "von Montag bis Freitag",
+            "vom Montag bis zum Freitag",
+            "bis Montag von Freitag"
+          ],
+          answer: 2,
+          explanation: "Pre vyjadrenie časového rozsahu sa používa 'vom' (von dem) a 'bis zum' (bis zu dem), napr. 'vom Montag bis zum Freitag'."
+        },
+        {
+          question: "Viete, kto je 'der Tourist'?",
+          options: [
+            "učiteľ",
+            "lekár",
+            "turista",
+            "hotelier"
+          ],
+          answer: 2,
+          explanation: "'Der Tourist' znamená turista."
+        },
+        {
+          question: "Ako sa povie 'plánovanie' v nemčine?",
+          options: [
+            "die Reise",
+            "der Ort",
+            "das Hotel",
+            "die Planung"
+          ],
+          answer: 3,
+          explanation: "'Die Planung' znamená plánovanie."
+        }
+      ]
+    },
+    {
+      type: "minitext",
+      instruction: "Lies den Dialog und beantworte die Fragen.",
+      text: "Jana: Hallo Luisa! Hast du schon den Plan für unsere Reise nach Salzburg?\nLuisa: Ja, Jana! Ich habe alles geplant. Wir fahren am dritten Mai ab.\nJana: Oh, das ist toll! Und wann kommen wir zurück?\nLuisa: Wir kommen am fünften Mai zurück. Unser Hotel ist vom dritten bis fünften Mai gebucht.\nJana: Perfekt! Das ist ein schöner Ort für eine Reise. Ich freue mich schon auf den ersten Tag dort!\nLuisa: Ich auch! Der zweite Tag ist für die Stadtbesichtigung. Wir werden viel sehen.",
+      textSk: "Jana: Ahoj Luisa! Už máš plán na náš výlet do Salzburgu?\nLuisa: Áno, Jana! Všetko som naplánovala. Odchádzame tretieho mája.\nJana: Ó, to je skvelé! A kedy sa vrátime?\nLuisa: Vraciame sa piateho mája. Náš hotel je rezervovaný od tretieho do piateho mája.\nJana: Perfektné! Je to pekné miesto na výlet. Už sa teším na prvý deň tam!\nLuisa: Aj ja! Druhý deň je na prehliadku mesta. Uvidíme veľa.",
+      questions: [
+        {
+          question: "Wann fahren Jana und Luisa ab?",
+          options: [
+            "Am zweiten Mai",
+            "Am dritten Mai",
+            "Am vierten Mai",
+            "Am fünften Mai"
+          ],
+          answer: 1,
+          explanation: "Luisa sagt: \"Wir fahren am dritten Mai ab.\""
+        },
+        {
+          question: "Wie lange ist das Hotel gebucht?",
+          options: [
+            "Vom zweiten bis zum vierten Mai",
+            "Vom dritten bis zum vierten Mai",
+            "Vom dritten bis zum fünften Mai",
+            "Vom vierten bis zum fünften Mai"
+          ],
+          answer: 2,
+          explanation: "Luisa sagt: \"Unser Hotel ist vom dritten bis fünften Mai gebucht.\""
+        },
+        {
+          question: "Was ist am zweiten Tag geplant?",
+          options: [
+            "Die Abreise",
+            "Die Rückkehr",
+            "Eine Reise nach Salzburg",
+            "Die Stadtbesichtigung"
+          ],
+          answer: 3,
+          explanation: "Luisa sagt: \"Der zweite Tag ist für die Stadtbesichtigung.\""
+        },
+        {
+          question: "Wann kommen sie zurück?",
+          options: [
+            "Am dritten Mai",
+            "Am vierten Mai",
+            "Am fünften Mai",
+            "Am sechsten Mai"
+          ],
+          answer: 2,
+          explanation: "Luisa sagt: \"Wir kommen am fünften Mai zurück.\""
+        }
+      ]
     },
     {
       type: "speaking",
-      instruction: "Počúvaj nemeckú vetu. Potom hovor nahlas a skontroluj sa.",
+      instruction: "Počúvaj a opakuj.",
       phrases: [
         {
-          de: "Grüß Gott! Wie geht es Ihnen?",
-          sk: "Grüß Gott! Ako sa máte? (formálne, Rakúsko)",
-          tip: "Grüß Gott: GRÜS GOT — ü=ü, ß=s",
+          de: "der erste",
+          sk: "prvý",
+          tip: "Rôzne od slovenského \"r\"."
         },
         {
-          de: "Der Jänner ist kalt in Wien.",
-          sk: "Január je studený vo Viedni.",
-          tip: "Jänner: JÉ-ner — ä=é, kurze e",
+          de: "der zweite",
+          sk: "druhý",
+          tip: "Napr. \"z\" ako v slove \"zoo\"."
         },
         {
-          de: "Ich kaufe Paradeiser und Erdäpfel.",
-          sk: "Kupujem paradajky a zemiaky. (rakúsky dialekt)",
-          tip: "Erdäpfel: ERT-äp-fel — ä=é",
+          de: "der dritte",
+          sk: "tretí",
+          tip: "Dôraz na \"t\"."
         },
         {
-          de: "In der Schweiz sagt man Merci.",
-          sk: "V Švajčiarsku sa hovorí Merci (ďakujem).",
-          tip: "Merci: MER-si — francúzsky výpožičok",
+          de: "am ersten Tag",
+          sk: "v prvý deň",
+          tip: "Am = v (dátum)."
         },
         {
-          de: "Servus! Wie geht's?",
-          sk: "Servus! Ako sa máš? (neformálne, Rakúsko)",
-          tip: "Servus: ZER-vus — s=z na začiatku",
+          de: "am zweiten Mai",
+          sk: "v druhý máj",
+          tip: "Mai = máj."
         },
-      ],
+        {
+          de: "Wann kommen wir an?",
+          sk: "Kedy prídeme?",
+          tip: "Wann = kedy."
+        },
+        {
+          de: "Die Reise beginnt am dritten.",
+          sk: "Cesta začína tretí (deň).",
+          tip: "beginnt = začína."
+        },
+        {
+          de: "Wir buchen das Hotel vom fünften bis zum zehnten.",
+          sk: "Rezervujeme hotel od piateho do desiateho.",
+          tip: "vom ... bis zum = od ... do ..."
+        }
+      ]
     },
+    {
+      type: "truefalse",
+      instruction: "Rozhodnite, či sú nasledujúce tvrdenia pravdivé (Wahr) alebo nepravdivé (Falsch).",
+      statements: [
+        {
+          statement: "Der erste Mai ist ein Feiertag.",
+          isTrue: true,
+          explanation: "Prvý máj je sviatok. V nemčine sa radové číslovky používajú na označenie dní v roku."
+        },
+        {
+          statement: "Wir fahren am fünfte Juni ab.",
+          isTrue: false,
+          explanation: "Správne je 'am fünften Juni'. Radové číslovky používajú príponu '-ten' po piatom."
+        },
+        {
+          statement: "Die Reise beginnt am zweiten Tag.",
+          isTrue: true,
+          explanation: "Cesta začína druhý deň. Použitie radovej číslovky 'zweiten' je správne."
+        },
+        {
+          statement: "Das Hotel ist am Ende der Stadt.",
+          isTrue: true,
+          explanation: "Hotel je na konci mesta. 'Am Ende' je bežný výraz."
+        },
+        {
+          statement: "Die Planung ist für der dritte Termin.",
+          isTrue: false,
+          explanation: "Správne je 'für den dritten Termin'. Po predložke 'für' nasleduje akuzatív a radová číslovka potrebuje správnu koncovku."
+        }
+      ]
+    },
+    {
+      type: "dictation",
+      instruction: "Napíšte vety, ktoré počujete.",
+      sentences: [
+        {
+          de: "Es ist Mai.",
+          sk: "Je máj."
+        },
+        {
+          de: "Der erste Tag ist gut.",
+          sk: "Prvý deň je dobrý."
+        },
+        {
+          de: "Wir planen die Reise.",
+          sk: "Plánujeme cestu."
+        },
+        {
+          de: "Am zweiten Tag kommen wir an.",
+          sk: "Druhý deň prídeme."
+        },
+        {
+          de: "Die Stadt ist am fünften Ort.",
+          sk: "Mesto je na piatom mieste."
+        }
+      ]
+    },
+    {
+      type: "categorysort",
+      instruction: "Roztrieďte slová do správnych kategórií.",
+      categories: [
+        {
+          name: "Čas (Zeit)",
+          color: "blue",
+          words: [
+            "der Mai",
+            "der Tag",
+            "der Termin",
+            "der Anfang",
+            "das Ende"
+          ]
+        },
+        {
+          name: "Cestovanie (Reise)",
+          color: "rose",
+          words: [
+            "die Reise",
+            "der Ort",
+            "das Hotel",
+            "die Stadt",
+            "der Tourist"
+          ]
+        },
+        {
+          name: "Činnosti (Aktivitäten)",
+          color: "green",
+          words: [
+            "die Planung",
+            "buchen",
+            "planen",
+            "ankommen",
+            "abfahren"
+          ]
+        }
+      ],
+      explanation: "Slová sú rozdelené do kategórií podľa ich významu: časové pojmy, miesta a činnosti súvisiace s cestovaním a plánovaním."
+    },
+    {
+      type: "translation",
+      instruction: "Preložte nasledujúce slovenské vety do nemčiny.",
+      sentences: [
+        {
+          sk: "Prvý máj je môj sviatok.",
+          answer: "Der erste Mai ist mein Feiertag.",
+          hint: "Der erste Mai",
+          explanation: "Použili sme radové číslovky ('erste') a predložku 'am' pre dátum. 'Mein' je privlastňovacie zámeno."
+        },
+        {
+          sk: "Kedy odchádzame?",
+          answer: "Wann fahren wir ab?",
+          hint: "Wann fahren wir ab",
+          explanation: "Toto je otázka na čas odchodu, ktorá používa slovíčko 'wann' a sloveso 'abfahren'."
+        },
+        {
+          sk: "Rezervujeme hotel od tretieho do piateho.",
+          answer: "Wir buchen das Hotel vom dritten bis zum fünften.",
+          hint: "buchen, vom ... bis zum",
+          explanation: "Použili sme radové číslovky ('dritten', 'fünften') a predložkovú väzbu 'vom ... bis zum' na vyjadrenie časového rozpätia."
+        },
+        {
+          sk: "Toto je druhý deň našej cesty.",
+          answer: "Das ist der zweite Tag unserer Reise.",
+          hint: "der zweite Tag",
+          explanation: "Použili sme radovú číslovku 'zweite' a genitívnu formu 'unserer Reise' na označenie príslušnosti."
+        }
+      ]
+    },
+    {
+      type: "conjugation",
+      instruction: "Doplňte správne tvary slovesa 'planen' v prítomnom čase.",
+      verbs: [
+        {
+          infinitive: "planen",
+          translation: "plánovať",
+          forms: [
+            {
+              pronoun: "ich",
+              correct: "plane"
+            },
+            {
+              pronoun: "du",
+              correct: "planst"
+            },
+            {
+              pronoun: "er/sie/es",
+              correct: "plant"
+            },
+            {
+              pronoun: "wir",
+              correct: "planen"
+            },
+            {
+              pronoun: "ihr",
+              correct: "plant"
+            },
+            {
+              pronoun: "sie/Sie",
+              correct: "planen"
+            }
+          ],
+          note: "Sloveso 'planen' je pravidelné sloveso v nemčine. V prítomnom čase sa časuje podľa štandardných pravidiel."
+        }
+      ]
+    }
   ],
-  reviewWords: [
-    "Viel Erfolg!",
-    "Toi toi toi!",
-    "bestehen",
-    "das Ergebnis",
-    "wiederholen",
-    "Ich bin sicher.",
-    "Das habe ich gewusst.",
-    "der Prüfling",
-  ],
-  lessonNotes:
-    "Gratulujeme k dokončeniu mock skúšky! Skontroluj si výsledky — kde si si istý/á a kde budeš ešte precvičovať. Zajtra je POSLEDNÁ lekcia celého kurzu — Jana sa dozvie výsledky skúšky a oslavuje! Du schaffst das! 🌟",
+  reviewWords: []
 };

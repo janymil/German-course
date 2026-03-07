@@ -1,0 +1,287 @@
+{
+  "topics": [
+    {
+      "title": "Udine Deutschlernen",
+      "description": "\"Učenie nemčiny v Udine\"",
+      "exercises": [
+        {
+          "type": "mcq",
+          "question": "Wo sind die Sprecher heute?",
+          "options": [
+            "In München",
+            "In Udine",
+            "In Italien",
+            "Auf einer Bank"
+          ],
+          "answer": 1,
+          "explanation": "V texte sa uvádza: 'Hallo, wir sind heute in Udine.'"
+        },
+        {
+          "type": "fill",
+          "sentence": "Es ist sehr ___ heute.",
+          "answer": "heiß",
+          "explanation": "V texte sa uvádza: 'denn heute ist es sehr heiß.'"
+        },
+        {
+          "type": "wordorder",
+          "words": [
+            "liegt",
+            "Taco",
+            "unter",
+            "der",
+            "Bank"
+          ],
+          "correct": "Taco liegt unter der Bank",
+          "explanation": "Správne poradie slov vo vete je 'Taco liegt unter der Bank'."
+        },
+        {
+          "type": "mcq",
+          "question": "Was liegt auf dem Boden?",
+          "options": [
+            "Eine Zigarette",
+            "Eine Bank",
+            "Eine Zigarettenpackung",
+            "Müll"
+          ],
+          "answer": 2,
+          "explanation": "V texte sa uvádza: 'Auf dem Boden liegt eine Zigarettenpackung.'"
+        },
+        {
+          "type": "fill",
+          "sentence": "In Deutschland und Österreich haben alle Supermärkte sonntags ___.",
+          "answer": "geschlossen",
+          "explanation": "V texte sa uvádza: 'In Deutschland und in Österreich haben alle Supermärkte und Läden sonntags geschlossen.'"
+        }
+      ]
+    },
+    {
+      "title": "Sonntagsöffnungen, Gastgarten",
+      "description": "\"Nedeľné otvorenia, záhrada\"",
+      "exercises": [
+        {
+          "type": "mcq",
+          "question": "Was ist in Italien sonntags geöffnet?",
+          "options": [
+            "Nur Restaurants",
+            "Einige Supermärkte",
+            "Alle Geschäfte",
+            "Nur die Post"
+          ],
+          "answer": 1,
+          "explanation": "V texte sa spomína, že 'Hier in Italien haben einige Supermärkte auch sonntags geöffnet.'"
+        },
+        {
+          "type": "fill",
+          "sentence": "Im Gastgarten gibt es Tische und ___. ",
+          "answer": "Stühle",
+          "explanation": "V texte sa uvádza: 'Im Gastgarten gibt es Tische und Stühle.'"
+        },
+        {
+          "type": "wordorder",
+          "words": [
+            "sonnigen",
+            "Tag",
+            "an",
+            "einem",
+            "Sitzt",
+            "lieber",
+            "im",
+            "Gastgarten",
+            "du",
+            "oder",
+            "im",
+            "Restaurant",
+            "schönen",
+            "einem",
+            "an"
+          ],
+          "correct": "Sitzt du an einem schönen, an einem sonnigen Tag lieber im Gastgarten oder im Restaurant",
+          "explanation": "Toto je otázka z textu, ktorá sa pýta na preferenciu miesta na sedenie v závislosti od počasia."
+        },
+        {
+          "type": "mcq",
+          "question": "Was stellen viele Restaurants für Hunde zur Verfügung?",
+          "options": [
+            "Hundekörbchen",
+            "Wassernöpfe",
+            "Leckerlis",
+            "Spielzeug"
+          ],
+          "answer": 1,
+          "explanation": "V texte sa píše: 'Viele Restaurants stellen für Hunde Wassernöpfe zur Verfügung.'"
+        },
+        {
+          "type": "fill",
+          "sentence": "Ich liebe Pflanzen, aber ich habe keinen ___ Daumen.",
+          "answer": "grünen",
+          "explanation": "Toto je fráza z textu, ktorá vyjadruje nedostatok talentu na pestovanie rastlín."
+        }
+      ]
+    },
+    {
+      "title": "Pflanzen und Verkehrsmittel",
+      "description": "Preklad: **Rastliny a dopravné prostriedky**",
+      "exercises": [
+        {
+          "type": "mcq",
+          "question": "Was bedeutet es, wenn eine Person einen grünen Daumen hat?",
+          "options": [
+            "Sie kann gut mit Pflanzen.",
+            "Sie vergisst zu gießen.",
+            "Sie hat viele Pflanzen, die verwelken.",
+            "Sie mag keine Pflanzen."
+          ],
+          "answer": 0,
+          "explanation": "Ak má niekto zelený palec, znamená to, že sa mu dobre darí s rastlinami."
+        },
+        {
+          "type": "fill",
+          "sentence": "Bei mir ___ die meisten Pflanzen.",
+          "answer": "verwelken",
+          "explanation": "V texte sa hovorí, že rastliny u hovoriaceho chradnú, čo znamená 'verwelken'."
+        },
+        {
+          "type": "mcq",
+          "question": "Was fließt unter der Brücke?",
+          "options": [
+            "Ein Fluss",
+            "Ein Motorrad",
+            "Ein Fahrrad",
+            "Ein Garagentor"
+          ],
+          "answer": 0,
+          "explanation": "Podľa textu pod mostom tečie rieka ('Ein Fluss')."
+        },
+        {
+          "type": "wordorder",
+          "words": [
+            "ein",
+            "orange",
+            "Fahrrad",
+            "Das",
+            "hat",
+            "Korb",
+            "Fahrrad"
+          ],
+          "correct": "Das orange Fahrrad hat einen Fahrradkorb",
+          "explanation": "Správne poradie slov na vytvorenie vety o oranžovom bicykli s košíkom."
+        },
+        {
+          "type": "fill",
+          "sentence": "Wir haben ein ___ gefunden, das bereits geöffnet hat.",
+          "answer": "Restaurant",
+          "explanation": "V texte sa spomína, že našli reštauráciu, ktorá je už otvorená."
+        }
+      ]
+    },
+    {
+      "title": "Restaurantbesuch, Kaffee, Tischdekoration",
+      "description": "Reštaurácia, káva, výzdoba stola",
+      "exercises": [
+        {
+          "type": "mcq",
+          "question": "Was liegt auf dem Tisch?",
+          "options": [
+            "Ein Buch",
+            "Das Besteck",
+            "Ein Ball",
+            "Ein Computer"
+          ],
+          "answer": 1,
+          "explanation": "V texte sa píše: 'Auf dem Tisch liegt das Besteck'."
+        },
+        {
+          "type": "fill",
+          "sentence": "Ich trinke Kaffee mit ___, einen Latte Macchiato.",
+          "answer": "Milch",
+          "explanation": "V texte sa píše: 'Ich trinke, wie immer, Kaffee mit Milch'."
+        },
+        {
+          "type": "wordorder",
+          "words": [
+            "Der",
+            "schönen",
+            "Restaurant",
+            "finde",
+            "ich",
+            "super"
+          ],
+          "correct": "Ich finde dieses Restaurant super schön",
+          "explanation": "Správne poradie slov vo vete je 'Ich finde dieses Restaurant super schön'."
+        },
+        {
+          "type": "mcq",
+          "question": "Welche Farbe hat der Stuhl, auf dem die Person sitzt?",
+          "options": [
+            "Blau",
+            "Grün",
+            "Grau",
+            "Gelb"
+          ],
+          "answer": 2,
+          "explanation": "V texte sa píše: 'Ich sitze auf einem grauen Stuhl'."
+        },
+        {
+          "type": "fill",
+          "sentence": "Man reserviert ein Hotelzimmer oder einen ___.",
+          "answer": "Tisch",
+          "explanation": "V texte sa píše: 'Man reserviert ein Hotelzimmer oder eben zum Beispiel einen Tisch'."
+        }
+      ]
+    },
+    {
+      "title": "Stadtleben, Einkaufen, Markt",
+      "description": "\"Mestský život, nakupovanie, trh\"",
+      "exercises": [
+        {
+          "type": "mcq",
+          "question": "Wo kann man Schmuck kaufen?",
+          "options": [
+            "Im Modegeschäft",
+            "Im Juwelier",
+            "In der Eisdiele",
+            "Im Bistro"
+          ],
+          "answer": 1,
+          "explanation": "V texte sa uvádza: 'Der Juwelier. Das Schmuckgeschäft. Hier kann man Schmuck kaufen.'"
+        },
+        {
+          "type": "fill",
+          "sentence": "Die Verkäuferin gibt ___ aus.",
+          "answer": "Kostproben",
+          "explanation": "V texte sa uvádza: 'Die Kostprobe. Die Verkäuferin gibt Kostproben aus.'"
+        },
+        {
+          "type": "wordorder",
+          "words": [
+            "kaufen",
+            "Kleidung",
+            "man",
+            "Hier",
+            "kann"
+          ],
+          "correct": "Hier kann man Kleidung kaufen",
+          "explanation": "Správne poradie slov vo vete je 'Hier kann man Kleidung kaufen'."
+        },
+        {
+          "type": "mcq",
+          "question": "Was verkaufen Landwirte auf dem Wochenmarkt?",
+          "options": [
+            "Zeitungen und Zeitschriften",
+            "Blumen und Sträuße",
+            "Käse, Obst und Gemüse",
+            "Taschen und Gürtel"
+          ],
+          "answer": 2,
+          "explanation": "V texte sa uvádza: 'Hier verkaufen Landwirte, Bauern und Winzer ihre eigenen Produkte. Es wird Käse verkauft und Obst, Gemüse, Pestos und Aufstriche...'"
+        },
+        {
+          "type": "fill",
+          "sentence": "Der Mann bestellt eine Kugel ___.",
+          "answer": "Eis",
+          "explanation": "V texte sa uvádza: 'Die Eisdiele. Der Mann bestellt eine Kugel Eis.'"
+        }
+      ]
+    }
+  ]
+}

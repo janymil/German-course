@@ -1,507 +1,854 @@
-﻿export const lesson13 = {
+export const lesson13 = {
   id: 13,
   week: 3,
   day: 3,
-  title: "Mein, dein, sein, ihr — Possessivpronomen",
-  topic: "Privlastňovacie zámená",
+  title: "Wie viel kostet das?",
+  topic: "Zisťovanie cien a veľké čísla do miliónov.",
   cefr: "A1",
-  xpReward: 25,
-  narrativeContext:
-    "Jana videotelefoniert mit ihrer Mutter in Bratislava. Mutter fragt nach Janas Familie, Kollegen und neuer Wohnung. Jana spricht über 'meine Wohnung', 'mein Kollege Lukas', 'sein Name ist Lukas'.",
-  communicativeGoal:
-    "Po tejto lekcii viem hovoriť o ľuďoch a veciach pomocou 'môj/moja/moje', 'tvoj/tvoja', 'jeho', 'jej' v nominatíve aj akuzatíve.",
-  skillFocus: ["grammar", "vocabulary", "speaking"],
-
-  grammarNote: {
-    rule: "Privlastňovacie zámená — skloňovanie podľa vzoru ein/eine/ein",
-    explanation:
-      "Všetky privlastňovacie zámená sa skloňujú presne ako ein/eine/ein. Osoby: mein (môj), dein (tvoj), sein (jeho), ihr (jej), unser (náš), euer (váš pl.), Ihr (Váš form.). POZOR: ihr = 4 rôzne významy! (jej privlastňovacie / váš pl. neur. / formálne Ihr / datív von sie — posledný príde neskôr). euer stráca -e- pred koncovkami: eure, euren (NIE euere!).",
-    examples: [
-      { de: "Das ist mein Bruder. (M, Nom)", sk: "To je môj brat." },
-      { de: "Ich liebe meine Mutter. (F, Akk)", sk: "Milujem svoju mamu." },
-      { de: "Sein Name ist Lukas. (M, Nom)", sk: "Jeho meno je Lukas." },
-      { de: "Ich kenne ihre Schwester. (F, Akk)", sk: "Poznám jej sestru." },
-    ],
-    slovakContrastNote:
-      "Slovenské privlastňovacie zámená sa tiež skloňujú. Nemecké však sledujú PRESNE rovnaký vzor ako ein/eine/ein. Ak vieš ein/einen, vieš aj meinen/deinen! Jediná výnimka: ich/er forma je rovnaká — mein/sein (bez -e).",
-  },
-
+  xpReward: 20,
+  narrativeContext: "Jana sieht eine Rechnung. Das Sofa kostet dreihundertneunundvierzig Euro. Sie ist überrascht und vergleicht Preise mit Petra.",
+  communicativeGoal: "Nach dieser Lektion kann ich nach Preisen fragen, große Zahlen verstehen und über Kosten sprechen.",
+  skillFocus: [
+    "vocabulary",
+    "grammar",
+    "listening",
+    "speaking"
+  ],
+  lessonNotes: "V tejto lekcii sa naučíme, ako sa pýtať na ceny a ako rozumieť veľkým číslam až do milióna. Budeme porovnávať ceny nábytku a počítať celkovú sumu. Zistíme, koľko stoja veci pre Janu a Petru.",
+  grammarNotes: [
+    {
+      rule: "Zahlen bis zu Millionen (Numbers up to Millions)",
+      explanation: "<p>V nemčine sa čísla tvoria podobne ako v slovenčine, ale s niekoľkými dôležitými rozdielmi, najmä pri čítaní a písaní. Čísla od 21 do 99 sa čítajú od jednotiek k desiatkam, pričom sa medzi ne vkladá spojka <strong>\"und\"</strong> (a). Napríklad 21 je <em>\"einundzwanzig\"</em> (doslova \"jedna a dvadsať\"). Pri stovkách a tisíckach sa \"und\" už nepoužíva na spojenie stoviek/tisícok s desiatkami/jednotkami. <em>\"Hundert\"</em> (sto) a <em>\"tausend\"</em> (tisíc) sú podstatné mená, ale často sa používajú ako číslovky bez členu. <em>\"Million\"</em> (milión) je vždy podstatné meno ženského rodu a vyžaduje člen (napr. <em>\"eine Million\"</em>) alebo sa skloňuje v množnom čísle (napr. <em>\"zwei Millionen\"</em>).</p>",
+      examples: [
+        {
+          de: "100 - einhundert",
+          sk: "100 - sto"
+        },
+        {
+          de: "250 - zweihundertfünfzig",
+          sk: "250 - dvestopäťdesiat"
+        },
+        {
+          de: "1.000 - (ein)tausend",
+          sk: "1.000 - (jeden)tisíc"
+        },
+        {
+          de: "1.500 - eintausendfünfhundert",
+          sk: "1.500 - tisícpäťsto"
+        },
+        {
+          de: "2.345 - zweitausenddreihundertfünfundvierzig",
+          sk: "2.345 - dvetisíctristoštyridsaťpäť"
+        },
+        {
+          de: "10.000 - zehntausend",
+          sk: "10.000 - desaťtisíc"
+        },
+        {
+          de: "100.000 - einhunderttausend",
+          sk: "100.000 - stotisíc"
+        },
+        {
+          de: "1.000.000 - eine Million",
+          sk: "1.000.000 - jeden milión"
+        },
+        {
+          de: "2.500.000 - zwei Millionen fünfhunderttausend",
+          sk: "2.500.000 - dva milióny päťstotisíc"
+        }
+      ],
+      slovakContrastNote: "V slovenčine sa čísla čítajú od najväčšej hodnoty k najmenšej bez spojky \"a\" (und) medzi jednotkami a desiatkami (napr. \"dvadsaťjeden\", nie \"dvadsať a jeden\"). Nemecké \"und\" pre čísla 21-99 je častým zdrojom chýb. Tiež si všimnite, že \"Million\" je v nemčine podstatné meno a vyžaduje si člen alebo je v množnom čísle, zatiaľ čo v slovenčine \"milión\" môže fungovať aj ako číslovka."
+    },
+    {
+      rule: "Preise erfragen und nennen (Asking for and stating prices)",
+      explanation: "<p>Ak sa chcete v nemčine opýtať na cenu, môžete použiť niekoľko fráz. Najbežnejšie sú <strong>\"Wie viel kostet...?\"</strong> (Koľko stojí...?) a <strong>\"Was kostet...?\"</strong> (Čo stojí...?). Pre zdôraznenie drahosti môžete použiť aj <strong>\"Wie teuer ist...?\"</strong> (Aký drahý je...?). Pri odpovedi sa často používa <strong>\"Es kostet...\"</strong> (Stojí to...) alebo <strong>\"Das kostet...\"</strong> (To stojí...). Dôležité je si uvedomiť, že namiesto \"es\" (ono) môžete použiť aj zámeno, ktoré zodpovedá rodu a číslu predmetu (napr. \"Er kostet...\" pre mužský rod, \"Sie kostet...\" pre ženský rod, \"Sie kosten...\" pre množné číslo).</p>",
+      examples: [
+        {
+          de: "Wie viel kostet der Apfel?",
+          sk: "Koľko stojí jablko (muž. rod)?",
+          note: "Pre mužský rod"
+        },
+        {
+          de: "Er kostet einen Euro fünfzig.",
+          sk: "Stojí jeden Euro päťdesiat."
+        },
+        {
+          de: "Was kostet die Hose?",
+          sk: "Čo stoja nohavice (žen. rod)?",
+          note: "Pre ženský rod"
+        },
+        {
+          de: "Sie kostet neunundzwanzig Euro.",
+          sk: "Stojí dvadsaťdeväť Euro."
+        },
+        {
+          de: "Wie teuer ist das Brot?",
+          sk: "Aké drahé je to pečivo (str. rod)?",
+          note: "Pre stredný rod"
+        },
+        {
+          de: "Es kostet drei Euro fünfzig.",
+          sk: "Stojí tri Euro päťdesiat."
+        },
+        {
+          de: "Wie viel kosten die Äpfel?",
+          sk: "Koľko stoja jablká (množ. číslo)?",
+          note: "Pre množné číslo"
+        },
+        {
+          de: "Sie kosten zwei Euro fünfzig.",
+          sk: "Stoja dve Euro päťdesiat."
+        }
+      ],
+      slovakContrastNote: "V slovenčine sa pýtame \"Koľko stojí...?\" alebo \"Aká je cena...?\", čo je veľmi podobné. Hlavný rozdiel spočíva v tom, že v nemčine pri odpovedi môžete použiť zámeno zodpovedajúce rodu a číslu predmetu (\"er\", \"sie\", \"es\", \"sie\" pre množné číslo), zatiaľ čo v slovenčine často stačí \"Stojí...\" alebo \"Stoja...\". Tiež si všimnite, že \"Euro\" sa v nemčine v množnom čísle nemení (napr. \"zwei Euro\"), zatiaľ čo v slovenčine sa skloňuje (\"dve eurá\")."
+    }
+  ],
   vocab: [
     {
-      de: "mein / meine",
-      sk: "môj / moja / moje",
-      example: "Das ist mein Bruder.",
-      exampleSk: "To je môj brat.",
-      gender: null,
+      de: "der Preis",
+      sk: "cena",
+      gender: "M",
       srsId: "L13_V01",
-      recycledFrom: [],
+      example: "Der Preis ist sehr hoch.",
+      exampleSk: "Cena je veľmi vysoká.",
+      recycledFrom: []
     },
     {
-      de: "dein / deine",
-      sk: "tvoj / tvoja / tvoje",
-      example: "Wie heißt deine Mutter?",
-      exampleSk: "Ako sa volá tvoja mama?",
-      gender: null,
+      de: "der Euro",
+      sk: "euro",
+      gender: "M",
       srsId: "L13_V02",
-      recycledFrom: [],
+      example: "Ein Euro ist hundert Cent.",
+      exampleSk: "Jedno euro je sto centov.",
+      recycledFrom: []
     },
     {
-      de: "sein / seine",
-      sk: "jeho",
-      example: "Sein Name ist Lukas.",
-      exampleSk: "Jeho meno je Lukas.",
-      gender: null,
-      srsId: "L13_V03",
-      recycledFrom: [],
-    },
-    {
-      de: "ihr / ihre",
-      sk: "jej; Ihr / Ihre = Váš / Vaša (formálne)",
-      example: "Ihr Bruder wohnt in Wien.",
-      exampleSk: "Jej brat býva vo Viedni.",
-      gender: null,
-      srsId: "L13_V04",
-      recycledFrom: [],
-    },
-    {
-      de: "unser / unsere",
-      sk: "náš / naša / naše",
-      example: "Das ist unsere Wohnung.",
-      exampleSk: "To je náš byt.",
-      gender: null,
-      srsId: "L13_V05",
-      recycledFrom: [],
-    },
-    {
-      de: "euer / eure",
-      sk: "váš / vaša (pl. neformálne)",
-      example: "Ist das euer Auto?",
-      exampleSk: "Je to vaše auto?",
-      gender: null,
-      srsId: "L13_V06",
-      recycledFrom: [],
-    },
-    {
-      de: "Ihr / Ihre",
-      sk: "Váš / Vaša (formálne)",
-      example: "Wie ist Ihr Name?",
-      exampleSk: "Ako sa voláte?",
-      gender: null,
-      srsId: "L13_V07",
-      recycledFrom: [],
-    },
-    {
-      de: "die Großmutter",
-      sk: "babička",
-      example: "Meine Großmutter wohnt in Bratislava.",
-      exampleSk: "Moja babička býva v Bratislave.",
+      de: "die Rechnung",
+      sk: "faktúra",
       gender: "F",
-      srsId: "L13_V08",
-      recycledFrom: [],
+      srsId: "L13_V03",
+      example: "Die Rechnung ist hier.",
+      exampleSk: "Faktúra je tu.",
+      recycledFrom: []
     },
     {
-      de: "der Großvater",
-      sk: "starý otec",
-      example: "Sein Großvater ist 80 Jahre alt.",
-      exampleSk: "Jeho starý otec má 80 rokov.",
+      de: "das Geschäft",
+      sk: "obchod",
+      gender: "N",
+      srsId: "L13_V04",
+      example: "Das Geschäft ist heute geschlossen.",
+      exampleSk: "Obchod je dnes zatvorený.",
+      recycledFrom: []
+    },
+    {
+      de: "das Geld",
+      sk: "peniaze",
+      gender: "N",
+      srsId: "L13_V05",
+      example: "Hast du genug Geld?",
+      exampleSk: "Máš dosť peňazí?",
+      recycledFrom: []
+    },
+    {
+      de: "die Nummer",
+      sk: "číslo",
+      gender: "F",
+      srsId: "L13_V06",
+      example: "Meine Telefonnummer ist hier.",
+      exampleSk: "Moje telefónne číslo je tu.",
+      recycledFrom: []
+    },
+    {
+      de: "das Produkt",
+      sk: "produkt",
+      gender: "N",
+      srsId: "L13_V07",
+      example: "Dieses Produkt ist neu.",
+      exampleSk: "Tento produkt je nový.",
+      recycledFrom: []
+    },
+    {
+      de: "der Artikel",
+      sk: "tovar",
+      gender: "M",
+      srsId: "L13_V08",
+      example: "Dieser Artikel ist sehr beliebt.",
+      exampleSk: "Tento tovar je veľmi obľúbený.",
+      recycledFrom: []
+    },
+    {
+      de: "der Computer",
+      sk: "počítač",
       gender: "M",
       srsId: "L13_V09",
-      recycledFrom: [],
+      example: "Ich möchte einen neuen Computer.",
+      exampleSk: "Chcem nový počítač.",
+      recycledFrom: []
     },
     {
-      de: "die Geschwister",
-      sk: "súrodenci (len množné číslo)",
-      example: "Hast du Geschwister?",
-      exampleSk: "Máš súrodencov?",
-      gender: "Pl",
+      de: "das Handy",
+      sk: "mobil",
+      gender: "N",
       srsId: "L13_V10",
-      recycledFrom: [],
+      example: "Mein Handy ist kaputt.",
+      exampleSk: "Môj mobil je pokazený.",
+      recycledFrom: []
     },
     {
-      de: "das Kind",
-      sk: "dieťa",
-      example: "Das ist mein Kind.",
-      exampleSk: "To je moje dieťa.",
-      gender: "N",
+      de: "bezahlen",
+      sk: "platiť",
+      gender: null,
       srsId: "L13_V11",
-      recycledFrom: [],
+      example: "Ich muss die Rechnung bezahlen.",
+      exampleSk: "Musím zaplatiť faktúru.",
+      recycledFrom: []
     },
     {
-      de: "der Ehemann",
-      sk: "manžel",
-      example: "Ihr Ehemann arbeitet in Wien.",
-      exampleSk: "Jej manžel pracuje vo Viedni.",
-      gender: "M",
+      de: "vergleichen",
+      sk: "porovnávať",
+      gender: null,
       srsId: "L13_V12",
-      recycledFrom: [],
+      example: "Wir können die Preise online vergleichen.",
+      exampleSk: "Môžeme porovnať ceny online.",
+      recycledFrom: []
     },
     {
-      de: "die Ehefrau",
-      sk: "manželka",
-      example: "Seine Ehefrau heißt Petra.",
-      exampleSk: "Jeho manželka sa volá Petra.",
-      gender: "F",
+      de: "kaufen",
+      sk: "kúpiť",
+      gender: null,
       srsId: "L13_V13",
-      recycledFrom: [],
+      example: "Ich möchte ein neues Handy kaufen.",
+      exampleSk: "Chcem si kúpiť nový mobil.",
+      recycledFrom: []
     },
     {
-      de: "die Eltern",
-      sk: "rodičia (len množné číslo)",
-      example: "Meine Eltern wohnen in Bratislava.",
-      exampleSk: "Moji rodičia bývajú v Bratislave.",
-      gender: "Pl",
+      de: "teuer",
+      sk: "drahý",
+      gender: null,
       srsId: "L13_V14",
-      recycledFrom: [],
+      example: "Das ist sehr teuer!",
+      exampleSk: "To je veľmi drahé!",
+      recycledFrom: []
     },
     {
-      de: "das Haustier",
-      sk: "domáce zviera",
-      example: "Haben Sie ein Haustier?",
-      exampleSk: "Máte domáce zviera?",
-      gender: "N",
+      de: "billig",
+      sk: "lacný",
+      gender: null,
       srsId: "L13_V15",
-      recycledFrom: [],
+      example: "Dieses Produkt ist billig.",
+      exampleSk: "Tento produkt je lacný.",
+      recycledFrom: []
     },
+    {
+      de: "insgesamt",
+      sk: "celkovo",
+      gender: null,
+      srsId: "L13_V16",
+      example: "Insgesamt sind das 500 Euro.",
+      exampleSk: "Celkovo je to 500 eur.",
+      recycledFrom: []
+    },
+    {
+      de: "Wie viel ist das?",
+      sk: "Koľko je to?",
+      gender: null,
+      srsId: "L13_V17",
+      example: "Wie viel ist das insgesamt?",
+      exampleSk: "Koľko je to celkovo?",
+      recycledFrom: []
+    },
+    {
+      de: "online",
+      sk: "online",
+      gender: null,
+      srsId: "L13_V18",
+      example: "Jana sucht online nach Preisen.",
+      exampleSk: "Jana hľadá ceny online.",
+      recycledFrom: []
+    }
   ],
-
   exercises: [
     {
       type: "flashcard",
-      instruction: "Prelistuj si slovíčka. Pamätaj: privlastňovacie zámená sa skloňujú ako ein!",
-      items: [
-        "mein / meine = môj / moja / moje",
-        "dein / deine = tvoj / tvoja / tvoje",
-        "sein / seine = jeho",
-        "ihr / ihre = jej; Ihr / Ihre = Váš (formálne)",
-        "unser / unsere = náš / naša / naše",
-        "euer / eure = váš / vaša (pl. neformálne)",
-        "Ihr / Ihre = Váš / Vaša (formálne)",
-        "die Großmutter = babička",
-        "der Großvater = starý otec",
-        "die Geschwister = súrodenci",
-        "das Kind = dieťa",
-        "der Ehemann = manžel",
-        "die Ehefrau = manželka",
-        "die Eltern = rodičia",
-        "das Haustier = domáce zviera",
-      ],
-    },
-    {
-      type: "mcq",
-      instruction: "Vyber správnu odpoveď.",
-      questions: [
-        {
-          question: "Jana rozpráva o svojom priateľovi Lukasovi. Ako povie 'jeho meno je Lukas'?",
-          options: [
-            "Ihr Name ist Lukas.",
-            "Sein Name ist Lukas.",
-            "Dein Name ist Lukas.",
-            "Ihre Name ist Lukas.",
-          ],
-          answer: 1,
-          explanation:
-            "Lukas je muž → 'jeho' = sein. Pozor na 'ihr' — to by znamenalo 'jej' (žena).",
-        },
-        {
-          question: "Mutter pýta Janiny kolege. Jana hovorí: 'Moji kolegovia sú milí.' Ako?",
-          options: [
-            "Mein Kollegen sind nett.",
-            "Meine Kollegen sind nett.",
-            "Meinen Kollegen sind nett.",
-            "Meine Kollege sind nett.",
-          ],
-          answer: 1,
-          explanation:
-            "V množnom čísle (Nominatív) používame 'meine' (rovnako ako 'eine' → 'meine' pre F, ale aj pre Pl!).",
-        },
-        {
-          question: "Jana pýta formálne: 'Ako sa voláte?' Čo povie?",
-          options: [
-            "Wie heißt dein Name?",
-            "Wie ist ihr Name?",
-            "Wie ist Ihr Name?",
-            "Wie ist sein Name?",
-          ],
-          answer: 2,
-          explanation:
-            "Formálne oslovenie = Ihr (píše sa s veľkým I!). 'ihr' s malým i = jej (privlastňovacie od sie).",
-        },
-        {
-          question: "Ako povie Jana 'naša nová wohnung'?",
-          options: [
-            "unser neue Wohnung",
-            "unsere neue Wohnung",
-            "unseren neue Wohnung",
-            "unser neuer Wohnung",
-          ],
-          answer: 1,
-          explanation:
-            "'Die Wohnung' je F. F nominatív = unsere (rovnako ako eine → keine → meine → unsere).",
-        },
-        {
-          question: "Čo je špeciálne na 'euer' keď pridáme koncovku?",
-          options: [
-            "Nič špeciálne, euer + e = euere",
-            "Stráca -e-: eure, euren (NIE euere!)",
-            "Zmení sa na eurer",
-            "Zostane vždy euer",
-          ],
-          answer: 1,
-          explanation:
-            "euer → eure (nie euere!). Toto je jediná irregular forma privlastňovacích zámen — eur- stráca jedno -e- keď pridáme koncovku.",
-        },
-        {
-          question: "Koľko rôznych významov má slovo 'ihr'?",
-          options: [
-            "1 (len jej)",
-            "2 (jej + váš formálny)",
-            "3 (jej + váš pl. + formálny Ihr)",
-            "4 (jej privlastňovacie + váš pl. + formálny Ihr + datív von sie)",
-          ],
-          answer: 3,
-          explanation:
-            "ihr je kontextovo závislé! (1) jej privlastňovacie — ihr Bruder = jej brat; (2) váš pl. neformálne — ihr kommt = vy prichádzate; (3) formálne Ihr (veľké I) = Váš/Vaša; (4) datív von sie — príde v neskoršej lekcii.",
-        },
-      ],
-    },
-    {
-      type: "fill",
-      instruction: "Doplň správne privlastňovacie zámeno do medzery ___.",
-      questions: [
-        {
-          sentence: "___ Name ist Jana. Ich komme aus Bratislava. (môj, M, Nom)",
-          answer: "Mein",
-          hint: "môj + M Nom = Mei___",
-          explanation: "M nominatív: mein (bez koncovky, rovnako ako 'ein').",
-        },
-        {
-          sentence: "Das ist Lukas. ___ Wohnung ist in Wien. (jeho, F, Nom)",
-          answer: "Seine",
-          hint: "jeho + F Nom = Sei___e",
-          explanation: "F nominatív po sein → seine (rovnako ako eine).",
-        },
-        {
-          sentence: "Wie heißt ___ Mutter, Jana? (tvoja, F, Nom)",
-          answer: "deine",
-          hint: "tvoja + F Nom = dei___e",
-          explanation: "F nominatív po dein → deine.",
-        },
-        {
-          sentence: "Ich liebe ___ Eltern sehr. (moji, Pl, Akk)",
-          answer: "meine",
-          hint: "moje + Pl Akk = mei___e",
-          explanation: "Množné číslo akuzatív: meine (rovnaká forma ako F Nom/Akk).",
-        },
-        {
-          sentence: "Wir haben ___ Wohnung gefunden. (naša, F, Akk)",
-          answer: "unsere",
-          hint: "naša + F Akk = unser___",
-          explanation: "F akuzatív po unser → unsere.",
-        },
-        {
-          sentence: "Ist das ___ Haustier? (váš formálne, N, Nom)",
-          answer: "Ihr",
-          hint: "Váš formálne + N Nom = I___ (veľké I!)",
-          explanation: "Formálne oslovenie: Ihr (veľké I!). N nominatív: Ihr (bez koncovky).",
-        },
-      ],
-    },
-    {
-      type: "listen",
-      instruction: "Počúvaj a zopakuj vety s privlastňovacími zámenami.",
-      questions: [
-        { de: "Das ist mein Kollege Lukas.", sk: "To je môj kolega Lukas." },
-        { de: "Wie heißt deine Mutter?", sk: "Ako sa volá tvoja mama?" },
-        { de: "Sein Name ist Lukas.", sk: "Jeho meno je Lukas." },
-        { de: "Ihr Bruder wohnt in Wien.", sk: "Jej brat býva vo Viedni." },
-        { de: "Das ist unsere Wohnung.", sk: "To je náš byt." },
-        { de: "Wie ist Ihr Name?", sk: "Ako sa voláte?" },
-        { de: "Meine Eltern wohnen in Bratislava.", sk: "Moji rodičia bývajú v Bratislave." },
-        { de: "Haben Sie ein Haustier?", sk: "Máte domáce zviera?" },
-      ],
+      instruction: "Prezri si slovíčka tejto lekcie. Klikni na kartičku pre preklad."
     },
     {
       type: "match",
-      instruction: "Spoj privlastňovacie zámena s ich slovenským prekladom.",
+      instruction: "Priraďte nemecké slová k ich slovenským prekladom.",
       pairs: [
-        ["mein / meine", "môj / moja / moje"],
-        ["dein / deine", "tvoj / tvoja / tvoje"],
-        ["sein / seine", "jeho"],
-        ["ihr / ihre", "jej"],
-        ["unser / unsere", "náš / naša / naše"],
-        ["eure", "vaša (pl. nef.)"],
-        ["Ihr / Ihre", "Váš / Vaša (formálne)"],
-        ["die Geschwister", "súrodenci"],
-      ],
-    },
-    {
-      type: "dialogue",
-      instruction:
-        "Prečítaj si dialóg. Jana videotelefonuje so svojou mamou v Bratislave.",
-      lines: [
-        {
-          speaker: "B",
-          de: "Jana, ich sehe deine neue Wohnung! Sie ist sehr schön!",
-          sk: "Jana, vidím tvoj nový byt! Je veľmi pekný!",
-        },
-        {
-          speaker: "A",
-          de: "Danke, Mama! Meine Wohnung ist hell und ruhig.",
-          sk: "Ďakujem, mama! Môj byt je svetlý a tichý.",
-        },
-        {
-          speaker: "B",
-          de: "Hast du schon Freunde in Wien? Wie ist dein Kollege?",
-          sk: "Máš už priateľov vo Viedni? Aký je tvoj kolega?",
-        },
-        {
-          speaker: "A",
-          de: "Ja! Mein Kollege heißt Lukas. Sein Name ist Lukas Bauer.",
-          sk: "Áno! Môj kolega sa volá Lukas. Jeho meno je Lukas Bauer.",
-        },
-        {
-          speaker: "B",
-          de: "Und wie ist seine Wohnung? Wohnt er allein?",
-          sk: "A aký je jeho byt? Býva sám?",
-        },
-        {
-          speaker: "A",
-          de: "Nein, er wohnt mit seiner Schwester. Ihre Wohnung ist sehr groß.",
-          sk: "Nie, býva so svojou sestrou. Jej byt je veľmi veľký.",
-        },
-        {
-          speaker: "B",
-          de: "Und dein Chef? Wie heißt er?",
-          sk: "A tvoj šéf? Ako sa volá?",
-        },
-        {
-          speaker: "A",
-          de: "Mein Chef heißt Herr Müller. Sein Büro ist sehr modern.",
-          sk: "Môj šéf sa volá pán Müller. Jeho kancelária je veľmi moderná.",
-        },
-        {
-          speaker: "B",
-          de: "Hast du ein Haustier in deiner Wohnung?",
-          sk: "Máš domáce zviera vo svojom byte?",
-        },
-        {
-          speaker: "A",
-          de: "Nein, leider kein Haustier. Aber meine Nachbarin hat eine Katze!",
-          sk: "Nie, žiaľ žiadne domáce zviera. Ale moja suseda má mačku!",
-        },
-        {
-          speaker: "B",
-          de: "Und wie sind deine Eltern? Sag ihnen Grüße!",
-          sk: "A ako sú tvoji rodičia? Pozdrav ich!",
-        },
-        {
-          speaker: "A",
-          de: "Ich bin deine Mutter, Jana! Deine Eltern sind hier! Wir sehen dich!",
-          sk: "Som tvoja mama, Jana! Tvoji rodičia sú tu! Vidíme ťa!",
-        },
-      ],
-      comprehensionQuestions: [
-        {
-          question: "Wie heißt Janas Kollege?",
-          options: ["Herr Müller", "Lukas Bauer", "Hans Beck"],
-          answer: 1,
-        },
-        {
-          question: "Mit wem wohnt Lukas?",
-          options: [
-            "Er wohnt allein.",
-            "Er wohnt mit seiner Schwester.",
-            "Er wohnt mit seinen Eltern.",
-          ],
-          answer: 1,
-        },
-        {
-          question: "Hat Jana ein Haustier in ihrer Wohnung?",
-          options: [
-            "Ja, eine Katze.",
-            "Ja, einen Hund.",
-            "Nein, leider kein Haustier.",
-          ],
-          answer: 2,
-        },
-      ],
+        [
+          "der Preis",
+          "cena"
+        ],
+        [
+          "der Euro",
+          "euro"
+        ],
+        [
+          "die Rechnung",
+          "faktúra"
+        ],
+        [
+          "das Geschäft",
+          "obchod"
+        ],
+        [
+          "das Geld",
+          "peniaze"
+        ],
+        [
+          "das Produkt",
+          "produkt"
+        ],
+        [
+          "der Artikel",
+          "tovar"
+        ],
+        [
+          "bezahlen",
+          "platiť"
+        ],
+        [
+          "teuer",
+          "drahý"
+        ],
+        [
+          "billig",
+          "lacný"
+        ]
+      ]
     },
     {
       type: "wordorder",
-      instruction: "Zoraď slová do správnej nemeckej vety.",
+      instruction: "Usporiadajte slová tak, aby ste vytvorili správne nemecké vety.",
       sentences: [
         {
-          words: ["Das", "ist", "mein", "Kollege", "Thomas."],
-          correct: "Das ist mein Kollege Thomas.",
-          hint: "To je môj kolega Thomas.",
-          explanation: "Kollege = M rod, nominatív → mein (ako ein)."
+          words: [
+            "kostet",
+            "der",
+            "Computer",
+            "Wie",
+            "viel"
+          ],
+          correct: "Wie viel kostet der Computer",
+          hint: "Koľko stojí počítač?",
+          explanation: "V otázkach s 'Wie viel' je sloveso (kostet) na druhom mieste, za opytovacím zámenom."
         },
         {
-          words: ["Meine", "Schwester", "wohnt", "in", "Bratislava."],
-          correct: "Meine Schwester wohnt in Bratislava.",
-          hint: "Moja sestra býva v Bratislave.",
-          explanation: "Schwester = F rod, nominatív → meine (koncovka -e pre F)."
+          words: [
+            "möchte",
+            "den",
+            "Ich",
+            "vergleichen",
+            "Preis"
+          ],
+          correct: "Ich möchte den Preis vergleichen",
+          hint: "Chcel by som porovnať cenu.",
+          explanation: "Modálne sloveso 'möchte' je na druhom mieste, plnovýznamové sloveso 'vergleichen' je na konci vety v infinitive."
         },
         {
-          words: ["Sein", "Name", "ist", "Lukas."],
-          correct: "Sein Name ist Lukas.",
-          hint: "Jeho meno je Lukas.",
-          explanation: "Name = M rod, nominatív → sein (pre M, on)."
+          words: [
+            "ist",
+            "Produkt",
+            "Das",
+            "sehr",
+            "teuer"
+          ],
+          correct: "Das Produkt ist sehr teuer",
+          hint: "Ten produkt je veľmi drahý.",
+          explanation: "Sloveso 'ist' je na druhom mieste vo vete."
         },
         {
-          words: ["Unsere", "Wohnung", "ist", "sehr", "schön."],
-          correct: "Unsere Wohnung ist sehr schön.",
-          hint: "Náš byt je veľmi krásny.",
-          explanation: "Wohnung = F rod, nominatív → unsere (my, F)."
+          words: [
+            "die",
+            "Rechnung",
+            "bitte",
+            "Bezahlen",
+            "Sie"
+          ],
+          correct: "Bezahlen Sie bitte die Rechnung",
+          hint: "Zaplaťte, prosím, faktúru.",
+          explanation: "V rozkazovacom spôsobe (Imperativ) pre formálne oslovenie 'Sie' je sloveso na prvom mieste."
         },
         {
-          words: ["Ich", "suche", "meinen", "Schlüssel."],
-          correct: "Ich suche meinen Schlüssel.",
-          hint: "Hľadám môj kľúč.",
-          explanation: "Schlüssel = M rod, akkuzatív → meinen (M akkuzatív: mein → meinen)."
+          words: [
+            "kostet",
+            "Euro",
+            "neunhundert",
+            "Ein",
+            "Handy"
+          ],
+          correct: "Ein Handy kostet neunhundert Euro",
+          hint: "Jeden mobil stojí deväťsto eur.",
+          explanation: "Sloveso 'kostet' je na druhom mieste vo vete, za podmetom 'Ein Handy'."
+        }
+      ]
+    },
+    {
+      type: "fill",
+      instruction: "Doplňte správne slovo do vety.",
+      questions: [
+        {
+          sentence: "Das Handy kostet ___ Euro.",
+          answer: "neunhundert",
+          hint: "Mobil stojí deväťsto eur.",
+          explanation: "Doplňte číslo 'neunhundert' (900)."
+        },
+        {
+          sentence: "Ich ___ den Preis wissen.",
+          answer: "möchte",
+          hint: "Chcel by som vedieť cenu.",
+          explanation: "Modálne sloveso 'möchte' (chcel by som) sa používa na vyjadrenie želania pre podmet 'Ich'."
+        },
+        {
+          sentence: "Sie müssen die ___ bezahlen.",
+          answer: "Rechnung",
+          hint: "Musíte zaplatiť faktúru.",
+          explanation: "Slovo 'Rechnung' (faktúra) je v akuzatíve (die Rechnung)."
+        },
+        {
+          sentence: "Ist das Produkt ___ oder billig?",
+          answer: "teuer",
+          hint: "Je ten produkt drahý alebo lacný?",
+          explanation: "Opakom slova 'billig' (lacný) je 'teuer' (drahý)."
+        },
+        {
+          sentence: "Wo ___ du?",
+          answer: "wohnst",
+          hint: "Kde bývaš?",
+          explanation: "Sloveso 'wohnen' (bývať) sa časuje pre 'du' ako 'wohnst'."
+        },
+        {
+          sentence: "Ist das ___ Buch?",
+          answer: "ein",
+          hint: "Je to kniha?",
+          explanation: "Pre neurčitý člen v nominatíve pre stredný rod (das Buch) používame 'ein'."
+        },
+        {
+          sentence: "___ ist dein Name?",
+          answer: "Wie",
+          hint: "Ako sa voláš?",
+          explanation: "Opytovacie zámeno 'Wie' (ako) sa používa na otázku o mene."
+        }
+      ]
+    },
+    {
+      type: "listen",
+      instruction: "Vypočujte si nemecké slová a frázy a priraďte ich k slovenským prekladom.",
+      questions: [
+        {
+          de: "der Preis",
+          sk: "cena"
+        },
+        {
+          de: "das Geld",
+          sk: "peniaze"
+        },
+        {
+          de: "teuer",
+          sk: "drahý"
+        },
+        {
+          de: "billig",
+          sk: "lacný"
+        },
+        {
+          de: "bezahlen",
+          sk: "platiť"
+        },
+        {
+          de: "der Computer",
+          sk: "počítač"
+        },
+        {
+          de: "das Handy",
+          sk: "mobil"
+        },
+        {
+          de: "Wie viel ist das?",
+          sk: "Koľko je to?"
+        },
+        {
+          de: "neunhundert Euro",
+          sk: "deväťsto eur"
+        },
+        {
+          de: "die Rechnung",
+          sk: "faktúra"
+        }
+      ]
+    },
+    {
+      type: "mcq",
+      instruction: "Vyberte správnu odpoveď.",
+      questions: [
+        {
+          question: "Ich ___ den Preis vergleichen.",
+          options: [
+            "möchte",
+            "möchten",
+            "möchtest",
+            "möchtet"
+          ],
+          answer: 0,
+          explanation: "Modálne sloveso 'möchten' sa pre podmet 'Ich' časuje ako 'möchte'."
+        },
+        {
+          question: "Čo znamená 'billig'?",
+          options: [
+            "drahý",
+            "lacný",
+            "veľký",
+            "malý"
+          ],
+          answer: 1,
+          explanation: "Slovo 'billig' v nemčine znamená 'lacný'."
+        },
+        {
+          question: "Wie viel ___ der Artikel?",
+          options: [
+            "kostet",
+            "kosten",
+            "kostest",
+            "koste"
+          ],
+          answer: 0,
+          explanation: "Sloveso 'kosten' (stáť) sa pre podmet 'der Artikel' (on/ono) časuje ako 'kostet'."
+        },
+        {
+          question: "___ ist das? (Pýtame sa na vec)",
+          options: [
+            "Wer",
+            "Was",
+            "Wo",
+            "Wie"
+          ],
+          answer: 1,
+          explanation: "Na otázku o veci (čo je to?) používame opytovacie zámeno 'Was'."
+        },
+        {
+          question: "Sie ___ in Berlin. (formálne 'Vy')",
+          options: [
+            "wohnt",
+            "wohnen",
+            "wohnst",
+            "wohne"
+          ],
+          answer: 0,
+          explanation: "Pre formálne oslovenie 'Sie' (Vy) sa sloveso 'wohnen' časuje ako 'wohnen'."
+        },
+        {
+          question: "Das Sofa ist sehr ___.",
+          options: [
+            "schön",
+            "schöne",
+            "schöner",
+            "schönes"
+          ],
+          answer: 0,
+          explanation: "Prídavné meno 'schön' (krásny) sa v tomto kontexte neohýba, pretože stojí za slovesom 'sein'."
+        },
+        {
+          question: "Aký je nemecký výraz pre 'faktúra'?",
+          options: [
+            "das Geld",
+            "die Nummer",
+            "die Rechnung",
+            "das Geschäft"
+          ],
+          answer: 2,
+          explanation: "Slovenské slovo 'faktúra' sa do nemčiny prekladá ako 'die Rechnung'."
         }
       ]
     },
     {
       type: "minitext",
-      instruction: "Prečítaj si krátky text o Jane. Potom odpovedaj na otázky.",
-      text: "Jana spricht per Video mit ihrer Mutter. 'Mama, mein Büro ist sehr schön. Meine Chefin ist nett. Mein Kollege Thomas ist lustig.' Die Mutter fragt: 'Und dein Freund?' Jana sagt: 'Lukas ist toll. Sein Zimmer ist groß, aber sein Schreibtisch ist immer unordentlich.' Die Mutter lacht: 'Und deine Wohnung?'",
-      textSk: "Jana hovorí cez video s mamou. 'Mama, moja kancelária je veľmi pekná. Moja šéfka je milá. Môj kolega Thomas je vtipný.' Mama sa pýta: 'A tvoj priateľ?' Jana povie: 'Lukas je skvelý. Jeho izba je veľká, ale jeho stôl je vždy neupratný.' Mama sa smeje: 'A tvoj byt?'",
+      instruction: "Lies den Dialog und beantworte die Fragen.",
+      text: "Jana: Petra, schau mal diese Rechnung! Das Sofa kostet dreihundertneunundvierzig Euro! Das ist sehr teuer!\nPetra: Oh, ja. Wir müssen die Preise vergleichen. Ich kaufe immer online. Mein Tisch kostet nur zweihundert Euro.\nJana: Wow! Mein Computer kostet achthundert Euro. Insgesamt ist das viel Geld.\nPetra: Ja, meine Möbel sind billiger.",
+      textSk: "Jana: Petra, pozri sa na túto faktúru! Pohovka stojí tristoštyridsaťdeväť eur! To je veľmi drahé!\nPetra: Och, áno. Musíme porovnať ceny. Vždy nakupujem online. Môj stôl stojí len dvesto eur.\nJana: Wow! Môj počítač stojí osemsto eur. Celkovo je to veľa peňazí.\nPetra: Áno, môj nábytok je lacnejší.",
       questions: [
         {
-          question: "Aká je Janina šéfka?",
-          options: ["Streng", "Nett", "Lustig", "Unfreundlich"],
+          question: "Was zeigt Jana Petra?",
+          options: [
+            "Eine Rechnung.",
+            "Ein Sofa.",
+            "Einen Computer.",
+            "Ein Handy."
+          ],
+          answer: 0,
+          explanation: "Jana sagt: \"Petra, schau mal diese Rechnung!\""
+        },
+        {
+          question: "Wie viel kostet Janas Sofa?",
+          options: [
+            "Zweihundert Euro.",
+            "Dreihundertneunundvierzig Euro.",
+            "Achthundert Euro.",
+            "Vierhundert Euro."
+          ],
           answer: 1,
-          explanation: "V texte: 'Meine Chefin ist nett.'"
+          explanation: "Jana sagt: \"Das Sofa kostet dreihundertneunundvierzig Euro!\""
         },
         {
-          question: "Čo je vždy neupratané u Lukasa?",
-          options: ["Sein Bett", "Seine Küche", "Sein Schreibtisch", "Sein Zimmer"],
-          answer: 2,
-          explanation: "V texte: 'sein Schreibtisch ist immer unordentlich.'"
+          question: "Wo kauft Petra ihre Sachen?",
+          options: [
+            "Im Geschäft.",
+            "Online.",
+            "Bei Jana.",
+            "Sie kauft nichts."
+          ],
+          answer: 1,
+          explanation: "Petra sagt: \"Ich kaufe immer online.\""
         },
         {
-          question: "Aký je Janin kolega Thomas?",
-          options: ["Nett", "Streng", "Lustig", "Unfreundlich"],
+          question: "Was sagt Petra über ihre Möbel?",
+          options: [
+            "Sie sind teuer.",
+            "Sie sind sehr alt.",
+            "Sie sind billiger.",
+            "Sie sind neu."
+          ],
           answer: 2,
-          explanation: "V texte: 'Mein Kollege Thomas ist lustig.'"
+          explanation: "Petra sagt: \"Ja, meine Möbel sind billiger.\""
         }
       ]
     },
     {
       type: "speaking",
-      instruction: "Počúvaj nemeckú vetu. Potom hovor nahlas a skontroluj sa.",
+      instruction: "Höre zu und sprich nach.",
       phrases: [
-        { de: "Das ist mein Kollege.", sk: "To je môj kolega.", tip: "mein: m=[m], ei=[ai]" },
-        { de: "Meine Schwester wohnt in Wien.", sk: "Moja sestra býva vo Viedni.", tip: "Schwester: schw=[šv]" },
-        { de: "Sein Name ist Thomas.", sk: "Jeho meno je Thomas.", tip: "sein: s=[z], ein=[ain]" },
-        { de: "Ich suche meinen Schlüssel.", sk: "Hľadám môj kľúč.", tip: "Schlüssel: sch=[š], ü=[ü]" },
-        { de: "Unsere Wohnung ist schön.", sk: "Náš byt je pekný.", tip: "unsere: u=[u], re=[rə]" }
+        {
+          de: "der Preis",
+          sk: "cena",
+          tip: "'ei' ako [aɪ], 's' na konci [s]."
+        },
+        {
+          de: "bezahlen",
+          sk: "platiť",
+          tip: "'z' ako [ts], 'h' tiché, 'a' dlhé."
+        },
+        {
+          de: "teuer oder billig",
+          sk: "drahý alebo lacný",
+          tip: "'eu' ako [ɔʏ], 'ch' po 'i' ako [ç]."
+        },
+        {
+          de: "fünfzig Euro",
+          sk: "päťdesiat eur",
+          tip: "'ü' ako [y], 'z' ako [ts], 'eu' ako [ɔʏ]."
+        },
+        {
+          de: "Wie viel ist das?",
+          sk: "Koľko je to?",
+          tip: "'W' ako [v], 'ie' ako [i:]."
+        },
+        {
+          de: "Der Computer kostet tausend Euro.",
+          sk: "Počítač stojí tisíc eur.",
+          tip: "'C' ako [k], 'o' dlhé, 's' ako [z] pred 't'."
+        },
+        {
+          de: "Das Handy kostet dreihundertfünfzig Euro.",
+          sk: "Mobil stojí tristo päťdesiat eur.",
+          tip: "'H' tiché, 'ü' ako [y], 'z' ako [ts]."
+        },
+        {
+          de: "Ich möchte das Produkt online kaufen.",
+          sk: "Chcel by som kúpiť ten produkt online.",
+          tip: "'ch' ako [ç], 'ö' ako [ø], 'k' ostré."
+        }
       ]
     },
+    {
+      type: "truefalse",
+      instruction: "Prečítajte si vety a rozhodnite, či sú pravdivé (Wahr) alebo nepravdivé (Falsch) podľa nemeckých pravidiel a informácií z lekcie.",
+      statements: [
+        {
+          statement: "V nemčine sa čísla od 21 do 99 čítajú od desiatok k jednotkám.",
+          isTrue: false,
+          explanation: "Nepravda. V nemčine sa čísla od 21 do 99 čítajú od jednotiek k desiatkam, napríklad 'einundzwanzig' (jeden a dvadsať)."
+        },
+        {
+          statement: "Fráza 'Wie viel kostet...?' sa používa na opýtanie sa na cenu.",
+          isTrue: true,
+          explanation: "Pravda. 'Wie viel kostet...?' je bežná fráza na zisťovanie cien v nemčine."
+        },
+        {
+          statement: "Slovo 'billig' znamená v nemčine 'drahý'.",
+          isTrue: false,
+          explanation: "Nepravda. Slovo 'billig' znamená 'lacný'. Opakom je 'teuer' (drahý)."
+        },
+        {
+          statement: "Číslo 'einhunderttausend' je 100 000.",
+          isTrue: true,
+          explanation: "Pravda. 'Einhunderttausend' je správny nemecký výraz pre 100 000."
+        },
+        {
+          statement: "Ak chcete povedať 'celkovo', použijete slovo 'insgesamt'.",
+          isTrue: true,
+          explanation: "Pravda. 'Insgesamt' sa v nemčine používa na vyjadrenie 'celkovo' alebo 'spolu'."
+        }
+      ]
+    },
+    {
+      type: "dictation",
+      instruction: "Počúvajte vety a zapíšte, čo počujete. Potom skontrolujte svoj pravopis.",
+      sentences: [
+        {
+          de: "Das Handy ist billig.",
+          sk: "Mobil je lacný."
+        },
+        {
+          de: "Wie viel kostet der Computer?",
+          sk: "Koľko stojí ten počítač?"
+        },
+        {
+          de: "Ich möchte ein Produkt kaufen.",
+          sk: "Chcem si kúpiť produkt."
+        },
+        {
+          de: "Die Rechnung ist insgesamt neunzig Euro.",
+          sk: "Faktúra je celkovo deväťdesiat eur."
+        },
+        {
+          de: "Wir müssen die Preise online vergleichen.",
+          sk: "Musíme porovnať ceny online."
+        }
+      ]
+    },
+    {
+      type: "categorysort",
+      instruction: "Roztrieďte slová do správnych kategórií podľa ich rodu (člena).",
+      categories: [
+        {
+          name: "der (mužský rod)",
+          color: "blue",
+          words: [
+            "der Preis",
+            "der Euro",
+            "der Computer",
+            "der Artikel"
+          ]
+        },
+        {
+          name: "die (ženský rod)",
+          color: "rose",
+          words: [
+            "die Rechnung",
+            "die Nummer"
+          ]
+        },
+        {
+          name: "das (stredný rod)",
+          color: "green",
+          words: [
+            "das Geschäft",
+            "das Geld",
+            "das Produkt",
+            "das Handy"
+          ]
+        }
+      ],
+      explanation: "V nemčine majú podstatné mená tri rody: mužský (der), ženský (die) a stredný (das). Je dôležité učiť sa podstatné mená spolu s ich členmi, pretože ovplyvňujú gramatiku vety."
+    },
+    {
+      type: "translation",
+      instruction: "Preložte nasledujúce vety zo slovenčiny do nemčiny.",
+      sentences: [
+        {
+          sk: "Chcem si kúpiť mobil.",
+          answer: "Ich möchte ein Handy kaufen.",
+          hint: "möchte, kaufen",
+          explanation: "Použitie modálneho slovesa 'möchten' (chcieť) a slovesa 'kaufen' na konci vety. 'Handy' je stredného rodu, preto 'ein Handy'."
+        },
+        {
+          sk: "Koľko stojí ten počítač?",
+          answer: "Wie viel kostet der Computer?",
+          hint: "Wie viel, kostet",
+          explanation: "Fráza 'Wie viel kostet...?' sa používa na opýtanie sa na cenu. Nezabudnite na správny člen 'der' pre 'Computer'."
+        },
+        {
+          sk: "Musíme porovnať ceny online.",
+          answer: "Wir müssen die Preise online vergleichen.",
+          hint: "müssen, vergleichen",
+          explanation: "Modálne sloveso 'müssen' (musieť) a sloveso 'vergleichen' na konci vety. 'Online' je príslovka. 'Ceny' sú 'die Preise'."
+        },
+        {
+          sk: "Faktúra je celkovo sto eur.",
+          answer: "Die Rechnung ist insgesamt einhundert Euro.",
+          hint: "Rechnung, insgesamt",
+          explanation: "Použitie 'insgesamt' pre 'celkovo' a čísla 'einhundert'. Nezabudnite na člen 'die' pre 'Rechnung'."
+        }
+      ]
+    },
+    {
+      type: "conjugation",
+      instruction: "Doplňte správne tvary slovesa v prítomnom čase (Präsens).",
+      verbs: [
+        {
+          infinitive: "bezahlen",
+          translation: "platiť",
+          forms: [
+            {
+              pronoun: "ich",
+              correct: "bezahle"
+            },
+            {
+              pronoun: "du",
+              correct: "bezahlst"
+            },
+            {
+              pronoun: "er/sie/es",
+              correct: "bezahlt"
+            },
+            {
+              pronoun: "wir",
+              correct: "bezahlen"
+            },
+            {
+              pronoun: "ihr",
+              correct: "bezahlt"
+            },
+            {
+              pronoun: "sie/Sie",
+              correct: "bezahlen"
+            }
+          ],
+          note: "Sloveso 'bezahlen' je pravidelné sloveso. Koncovky sú -e, -st, -t, -en, -t, -en. Predpona 'be-' je neoddeliteľná."
+        },
+        {
+          infinitive: "kaufen",
+          translation: "kúpiť",
+          forms: [
+            {
+              pronoun: "ich",
+              correct: "kaufe"
+            },
+            {
+              pronoun: "du",
+              correct: "kaufst"
+            },
+            {
+              pronoun: "er/sie/es",
+              correct: "kauft"
+            },
+            {
+              pronoun: "wir",
+              correct: "kaufen"
+            },
+            {
+              pronoun: "ihr",
+              correct: "kauft"
+            },
+            {
+              pronoun: "sie/Sie",
+              correct: "kaufen"
+            }
+          ],
+          note: "Sloveso 'kaufen' je tiež pravidelné sloveso a časuje sa rovnako ako 'bezahlen' s rovnakými koncovkami pre jednotlivé osoby."
+        }
+      ]
+    }
   ],
-
-  reviewWords: ["L03_V08", "L04_V11", "L03_V10", "L03_V11", "L03_V12"],
-  lessonNotes:
-    "Privlastňovacie zámená = ein-Wörter! Tabuľka: mein, dein, sein, ihr, unser, euer, ihr/Ihr. Najčastejšia chyba: zabudnuté -e v F a Pl (mein Mutter ✗ → meine Mutter ✓). Pamätaj: 'ihr' rozlíš podľa kontextu — veľké Ihr = formálne Váš.",
+  reviewWords: []
 };

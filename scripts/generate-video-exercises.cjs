@@ -62,9 +62,9 @@ async function callGemini(prompt) {
 
     let res = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body });
 
-    // Fallback to gemini-2.5-flash if lite fails
+    // Fallback to gemini-2.5-flash-lite if it fails
     if (!res.ok) {
-        const fallbackUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${GEMINI_API_KEY}`;
+        const fallbackUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent?key=${GEMINI_API_KEY}`;
         res = await fetch(fallbackUrl, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body });
     }
 

@@ -2,508 +2,679 @@
   id: 10,
   week: 2,
   day: 5,
-  title: "Im Gasthaus — Akkusativ und starke Verben",
-  topic: "V Gasthaus — Akkusatív a silné slovesá",
-  cefr: "A1",
-  xpReward: 30,
+  title: 'Wir sind eine Klasse — Verben im Plural',
+  topic: 'Slovesá v množnom čísle (wir, ihr, sie) — zhrnutie 2. týždňa',
+  cefr: 'A1',
+  xpReward: 25,
   narrativeContext:
-    "Jana ide na obed s kolegom Peterom do tradičného viedenského Gastropub (Gasthaus). Jana je hladná a smädná po dlhom ráne. Objednáva si prvýkrát celé jedlo — polievku, hlavné jedlo a nápoj. Prvý skutočný dialóg pri stole v nemčine!",
+    'Es ist Freitag — der letzte Tag der zweiten Woche. Anna sagt: Schreibt eine kurze Vorstellung! Jana schreibt über ihre Familie. Dann liest Jana den Text vor. Die Klasse hört zu.',
   communicativeGoal:
-    "Po tejto lekcii viem použiť Akkusatív s určitým aj neurčitým členom, viem objednávať jedlo v reštaurácii, poznám silné slovesá essen, trinken, sehen a viem povedať 'Ich habe Hunger/Durst!'",
-  skillFocus: ["grammar", "vocabulary", "speaking", "listening"],
+    'Nach dieser Lektion kann ich Verben für alle Personen konjugieren (wir, ihr, sie), mich und meine Familie auf Deutsch vorstellen und die Grammatik aus Woche 2 anwenden.',
+  skillFocus: ['grammar', 'speaking', 'vocabulary', 'reading'],
 
-  grammarNote: {
-    rule: "Akkusatív: der→den, ein→einen; F a N zostávajú. haben + Hunger/Durst (bez členu)",
-    explanation:
-      "Akkusatív je pád priameho objektu (čo? koho?). Pravidlo zmeny: MUŽSKÝ ROD MENÍ ČLEN — der→den, ein→einen, kein→keinen. Ženský a stredný rod sa v Akkusatíve NEMENIA (die→die, das→das, eine→eine). Silné slovesá essen, trinken, sehen menia kmeňovú samohlásku v 2. a 3. osobe jednotného čísla. Špeciálny prípad: 'Ich habe Hunger' / 'Ich habe Durst' — hunger a thirst sa používajú BEZ členu!",
-    examples: [
-      { de: "Ich sehe den Mann. (M → den)", sk: "Vidím toho muža. — der Mann → den Mann" },
-      { de: "Ich esse einen Kuchen. (M → einen)", sk: "Zjem koláč. — ein Kuchen → einen Kuchen" },
-      { de: "Ich trinke die Suppe. (F → die, nezmenené)", sk: "Pijem polievku. — die → die" },
-      { de: "Ich nehme das Glas. (N → das, nezmenené)", sk: "Zoberiem pohár. — das → das" },
-      { de: "Ich habe Hunger! / Ich habe Durst!", sk: "Mám hlad! / Mám smäd! — BEZ členu!" }
-    ],
-    slovakContrastNote:
-      "Slovenčina má tiež Akkusatív (4. pád), ale člen neexistuje — zmena je len v pádovej prípone podstatného mena. V nemčine sa mení ČLEN, nie prípona podstatného mena (Tisch zostáva Tisch, ale der→den). Silné slovesá (essen: du isst, er isst; sehen: du siehst, er sieht; trinken: ich trinke, du trinkst, er trinkt) — len essen/sehen majú vokalickú zmenu!"
-  },
+  grammarNotes: [
+    {
+      rule: 'Množné číslo slovies: Kde sa Nemci rozhodli šetriť námahu',
+      explanation: `<p>Množné číslo... my (wir), vy všetci (ihr), oni/Vy formálne (sie/Sie). Tu sa nemecký jazyk z ničoho nič rozhodol, že vám odpustí život. Namiesto troch nových koncoviek sa tu hráme s recykláciou.</p>
+<table><thead><tr><th>Kto?</th><th>Forma (na vzore wohnen)</th><th>Zmysel?</th></tr></thead><tbody>
+<tr><td><strong>Wir</strong> (my)</td><td>wohn<strong>en</strong></td><td>Je to kópiou základného tvaru (infinitívu). Žiadna námaha!</td></tr>
+<tr><td><strong>Ihr</strong> (vy, banda kamarátov)</td><td>wohn<strong>t</strong></td><td>Pozor zrada! Rozhodli sa skopírovať tvar, ktorý patrí <em>"On/Ona" (er/sie)</em>.</td></tr>
+<tr><td><strong>Sie / sie</strong> (Vy formálne / Oni)</td><td>wohn<strong>en</strong></td><td>Naspať u infinitívu. Kopírka funguje.</td></tr>
+</tbody></table>
+<div class="warn-box">⚠️ <strong>Pasca od Profesora:</strong> Študenti milujú lepiť "en" na všetko, čo je v množnom čísle a povedia "Ihr sprechen". Katastrofa! Nezabudnite, že <em>Ihr</em> je zlodej – ukradlo si len písmeno "t" od tretej osoby jednotného čísla. Správne znie tvrdo a krátko: <strong>Ihr sprecht.</strong></div>`,
+      examples: [
+        { de: 'Wir kommen aus der Slowakei.', sk: 'My pochádzame zo Slovenska.' },
+        { de: 'Ihr lernt sehr schnell!', sk: 'Počúvajte vy všetci vzadu, učíte sa rýchlo!', note: 'ihr + -t' },
+        { de: 'Sie wohnen in Berlin.', sk: 'Oni bývajú v Berlíne.' },
+      ],
+      slovakContrastNote: 'Oveľa, ale naozaj oveľa jednoduchšie, než v slovenčine. V slovenčine sa učíte tvary robíte, robia, robíme. V nemčine viete "wir" hneď, ako vidíte holé sloveso s -en.',
+    },
+    {
+      rule: 'Predstavovanie sa: Ja verzus My (Wir-forma)',
+      explanation: `<p>Hovoriť o sebe (Ich) už viete s prižmúrením oka aj o polnoci. Ale čo keď sedíte pri pive s polovičkou a chcete predstaviť <em>nás</em> ako tím?</p>
+<p>Kľúč slova <strong>Wir</strong> je ten slávny ušetrený infinitív.</p>
+<table><thead><tr><th>Sólo štart (Ich)</th><th>Tímový štart (Wir)</th></tr></thead><tbody>
+<tr><td>Ich heiße Jana.</td><td><strong>Wir</strong> heiß<strong>en</strong> Jana und Carlos.</td></tr>
+<tr><td>Ich wohne in Wien.</td><td><strong>Wir</strong> wohn<strong>en</strong> in Wien.</td></tr>
+<tr><td>Ich bin Arzt.</td><td><strong>Wir</strong> <strong>sind</strong> Ärzte. (Pozor na slovo Byť!)</td></tr>
+</tbody></table>
+<div class="tip-box">💡 <strong>Tip Profesora:</strong> Spoločenské záchranné frázy, s ktorými zniete ako na nemeckej recepcii: <em>"Darf ich mich vorstellen?"</em> (Smiem sa predstaviť?). Ak ste zabudli verbálne rošády, jednoducho sa usmejte a povedzte len: <em>"Ich heiße..."</em></div>`,
+      examples: [
+        { de: 'Wir sind eine Gruppe aus der Slowakei.', sk: 'Sme skupina zo Slovenska.', note: 'Pozvláštne nepravidelné sind.' },
+        { de: 'Meine Mutter wohnt in Bratislava.', sk: 'Moja mama býva v Bratislave.' },
+        { de: 'Wie heißt ihr? — Wir heißen Jana und Carlos.', sk: 'Ako sa voláte (vy dvaja tam)? — Voláme sa Jana a Carlos.' },
+      ],
+      slovakContrastNote: 'V slovenčine si opäť odsekávame jazyk na zložitostiach: "Dovoľte mi, aby som sa predstavil..." zneje oficiálne. V nemčine "Darf ich mich vorstellen?" je priam magická, slušná, bežne akceptovaná a plynulá vec, ktorú je najlepšie nabifliť sa ako jeden ucelený zvukový balík.',
+    },
+  ],
 
   vocab: [
     {
-      de: "trinken",
-      sk: "piť",
-      example: "Ich trinke Wasser. Was trinkst du?",
-      exampleSk: "Pijem vodu. Čo piješ?",
+      de: 'vorstellen',
+      sk: 'predstaviť sa (sich vorstellen)',
       gender: null,
-      srsId: "L10_V01",
-      recycledFrom: []
+      srsId: 'L10_V01',
+      example: 'Ich möchte mich vorstellen. Ich heiße Jana.',
+      exampleSk: 'Chcem sa predstaviť. Volám sa Jana.',
+      recycledFrom: [],
     },
     {
-      de: "essen",
-      sk: "jesť (⚠️ du isst, er isst!)",
-      example: "Ich esse Suppe. Du isst gern Kuchen, oder?",
-      exampleSk: "Jem polievku. Ty ješ rád koláč, však?",
+      de: 'schreiben',
+      sk: 'písať',
       gender: null,
-      srsId: "L10_V02",
-      recycledFrom: []
+      srsId: 'L10_V02',
+      example: 'Wir schreiben einen kurzen Text über unsere Familie.',
+      exampleSk: 'Píšeme krátky text o našej rodine.',
+      recycledFrom: [],
     },
     {
-      de: "sehen",
-      sk: "vidieť (⚠️ du siehst, er sieht!)",
-      example: "Siehst du die Speisekarte? — Ich sehe sie nicht.",
-      exampleSk: "Vidíš jedálny lístok? — Nevidím ho.",
+      de: 'lesen',
+      sk: 'čítať (⚠️ er/du liest)',
       gender: null,
-      srsId: "L10_V03",
-      recycledFrom: []
+      srsId: 'L10_V03',
+      example: 'Jana liest ihren Text vor der Klasse.',
+      exampleSk: 'Jana číta svoj text pred triedou.',
+      recycledFrom: [],
     },
     {
-      de: "brauchen",
-      sk: "potrebovať",
-      example: "Ich brauche einen Kellner!",
-      exampleSk: "Potrebujem čašníka!",
+      de: 'zuhören',
+      sk: 'pozorne počúvať',
       gender: null,
-      srsId: "L10_V04",
-      recycledFrom: []
+      srsId: 'L10_V04',
+      example: 'Die Klasse hört aufmerksam zu.',
+      exampleSk: 'Trieda pozorne počúva.',
+      recycledFrom: [],
     },
     {
-      de: "mögen",
-      sk: "mať rád (ich mag, du magst)",
-      example: "Ich mag Wiener Schnitzel sehr gern.",
-      exampleSk: "Mám veľmi rád Viedenský rezeň.",
+      de: 'lernen',
+      sk: 'učiť sa',
       gender: null,
-      srsId: "L10_V05",
-      recycledFrom: []
+      srsId: 'L10_V05',
+      example: 'Wir lernen zusammen Deutsch.',
+      exampleSk: 'Učíme sa spolu nemčinu.',
+      recycledFrom: [],
     },
     {
-      de: "der Apfelsaft",
-      sk: "jablkový džús",
-      example: "Einen Apfelsaft, bitte!",
-      exampleSk: "Jablkový džús, prosím!",
-      gender: "M",
-      srsId: "L10_V06",
-      recycledFrom: []
+      de: 'die Klasse',
+      sk: 'trieda / skupina (v kurze)',
+      gender: 'F',
+      srsId: 'L10_V06',
+      example: 'Die Klasse ist sehr nett und international.',
+      exampleSk: 'Trieda je veľmi milá a medzinárodná.',
+      recycledFrom: [],
     },
     {
-      de: "die Suppe",
-      sk: "polievka",
-      example: "Die Gulaschsuppe ist hier fantastisch!",
-      exampleSk: "Gulášová polievka je tu fantastická!",
-      gender: "F",
-      srsId: "L10_V07",
-      recycledFrom: []
+      de: 'die Vorstellung',
+      sk: 'predstavenie / prezentácia',
+      gender: 'F',
+      srsId: 'L10_V07',
+      example: 'Die Vorstellung von Jana ist sehr gut.',
+      exampleSk: 'Janino predstavenie je veľmi dobré.',
+      recycledFrom: [],
     },
     {
-      de: "der Käse",
-      sk: "syr",
-      example: "Brot mit Käse ist ein gutes Frühstück.",
-      exampleSk: "Chlieb so syrom je dobré raňajky.",
-      gender: "M",
-      srsId: "L10_V08",
-      recycledFrom: []
-    },
-    {
-      de: "das Glas",
-      sk: "pohár",
-      example: "Ein Glas Wasser, bitte.",
-      exampleSk: "Pohár vody, prosím.",
-      gender: "N",
-      srsId: "L10_V09",
-      recycledFrom: []
-    },
-    {
-      de: "die Tasse",
-      sk: "šálka",
-      example: "Eine Tasse Kaffee macht mich glücklich!",
-      exampleSk: "Šálka kávy ma urobí šťastnou!",
-      gender: "F",
-      srsId: "L10_V10",
-      recycledFrom: []
-    },
-    {
-      de: "der Hunger",
-      sk: "hlad",
-      example: "Ich habe großen Hunger nach der Arbeit!",
-      exampleSk: "Mám veľký hlad po práci!",
-      gender: "M",
-      srsId: "L10_V11",
-      recycledFrom: []
-    },
-    {
-      de: "der Durst",
-      sk: "smäd",
-      example: "Hast du Durst? Ich brauche ein Glas Wasser!",
-      exampleSk: "Máš smäd? Potrebujem pohár vody!",
-      gender: "M",
-      srsId: "L10_V12",
-      recycledFrom: []
-    },
-    {
-      de: "nehmen",
-      sk: "vziať si (recyklované z L08)",
-      example: "Ich nehme den Gulasch, bitte.",
-      exampleSk: "Dám si guláš, prosím.",
+      de: 'zusammen',
+      sk: 'spolu',
       gender: null,
-      srsId: "L10_V13",
-      recycledFrom: [8]
+      srsId: 'L10_V08',
+      example: 'Wir lernen alle zusammen in der Klasse.',
+      exampleSk: 'Všetci sa učíme spolu v triede.',
+      recycledFrom: [],
     },
     {
-      de: "bestellen",
-      sk: "objednať si (recyklované z L08)",
-      example: "Ich möchte bestellen. Wir bestellen zusammen.",
-      exampleSk: "Chcel/a by som si objednať. Objednávame spolu.",
+      de: 'alle',
+      sk: 'všetci / všetko',
       gender: null,
-      srsId: "L10_V14",
-      recycledFrom: [8]
-    }
+      srsId: 'L10_V09',
+      example: 'Alle in der Klasse sprechen ein bisschen Deutsch.',
+      exampleSk: 'Všetci v triede trochu hovoria po nemecky.',
+      recycledFrom: [],
+    },
+    {
+      de: 'wir',
+      sk: 'my',
+      gender: null,
+      srsId: 'L10_V10',
+      example: 'Wir sind eine internationale Gruppe.',
+      exampleSk: 'Sme medzinárodná skupina.',
+      recycledFrom: [],
+    },
+    {
+      de: 'ihr',
+      sk: 'vy (neformálne, množné číslo)',
+      gender: null,
+      srsId: 'L10_V11',
+      example: 'Woher kommt ihr? Ihr kommt aus vielen Ländern.',
+      exampleSk: 'Odkiaľ pochádzate? Pochádzate z mnohých krajín.',
+      recycledFrom: [],
+    },
+    {
+      de: 'der Unterricht',
+      sk: 'vyučovanie / hodina (vyuč.)',
+      gender: 'M',
+      srsId: 'L10_V12',
+      example: 'Der Unterricht beginnt um neun Uhr.',
+      exampleSk: 'Vyučovanie začína o deviatej.',
+      recycledFrom: [],
+    },
+    {
+      de: 'der Text',
+      sk: 'text',
+      gender: 'M',
+      srsId: 'L10_V13',
+      example: 'Jana liest ihren Text laut vor.',
+      exampleSk: 'Jana číta svoj text nahlas.',
+      recycledFrom: [],
+    },
+    {
+      de: 'das Plakat',
+      sk: 'plagát / tabuľka (na stenu)',
+      gender: 'N',
+      srsId: 'L10_V14',
+      example: 'Wir schreiben unsere Vorstellung auf ein Plakat.',
+      exampleSk: 'Píšeme naše predstavenie na plagát.',
+      recycledFrom: [],
+    },
+    {
+      de: 'Wir sind...',
+      sk: 'Sme... / Nás je...',
+      gender: null,
+      srsId: 'L10_V15',
+      example: 'Wir sind drei in meiner Familie.',
+      exampleSk: 'Nás sme traja v rodine.',
+      recycledFrom: [],
+    },
+    {
+      de: 'Wie heißt ihr?',
+      sk: 'Ako sa voláte? (vy, viacero ľudí)',
+      gender: null,
+      srsId: 'L10_V16',
+      example: 'Wie heißt ihr? — Wir heißen Jana und Carlos.',
+      exampleSk: 'Ako sa voláte? — Voláme sa Jana a Carlos.',
+      recycledFrom: [],
+    },
+    {
+      de: 'Sie kommen aus...',
+      sk: 'Oni pochádzajú z... / Prichádzajú z...',
+      gender: null,
+      srsId: 'L10_V17',
+      example: 'Sie kommen aus verschiedenen Ländern.',
+      exampleSk: 'Pochádzajú z rôznych krajín.',
+      recycledFrom: [],
+    },
+    {
+      de: 'Wir sprechen Deutsch.',
+      sk: 'Hovoríme po nemecky.',
+      gender: null,
+      srsId: 'L10_V18',
+      example: 'In der Klasse sprechen wir alle Deutsch.',
+      exampleSk: 'V triede hovoríme všetci po nemecky.',
+      recycledFrom: [],
+    },
   ],
 
   exercises: [
+    // 1 — FLASHCARD
     {
-      type: "flashcard",
-      instruction:
-        "Precvičuj silné slovesá a jedlá. Flip kartu pre preklad a pozornosť na ⚠️ formy.",
-      items: [
-        "trinken = piť (ich trinke, du trinkst, er trinkt)",
-        "essen = jesť (⚠️ du isst, er isst!)",
-        "sehen = vidieť (⚠️ du siehst, er sieht!)",
-        "brauchen = potrebovať",
-        "mögen = mať rád (ich mag, du magst)",
-        "der Apfelsaft = jablkový džús (M)",
-        "die Suppe = polievka (F)",
-        "der Käse = syr (M)",
-        "das Glas = pohár (N)",
-        "die Tasse = šálka (F)",
-        "der Hunger = hlad (M)",
-        "der Durst = smäd (M)",
-        "nehmen = vziať si / dám si (recykl. L08)",
-        "bestellen = objednať si (recykl. L08)"
-      ]
+      type: 'flashcard',
+      instruction: 'Lerne die neuen Wörter. Klick auf die Karte, um die Übersetzung zu sehen.',
     },
+
+    // 2 — MATCH
     {
-      type: "mcq",
-      instruction:
-        "Jana a Peter sú v Gasthaus. Vyber správnu akkusatívnu formu alebo správny tvar slovesa.",
-      questions: [
-        {
-          question: "Jana chce objednať guláš (der Gulasch). Povie: 'Ich nehme ___ Gulasch.'",
-          options: [
-            "der",
-            "die",
-            "das",
-            "den"
-          ],
-          answer: 3,
-          explanation:
-            "'Gulasch' je mužský rod (der Gulasch). V Akkusatíve mužský určitý člen der→DEN. 'Ich nehme den Gulasch.' = Dám si guláš. Pravidlo: len M mení člen v Akkusatíve: der→den."
-        },
-        {
-          question: "Peter hovorí: 'Ich habe ___.' (Mám hlad.) Čo doplní?",
-          options: [
-            "den Hunger",
-            "einen Hunger",
-            "Hunger",
-            "der Hunger"
-          ],
-          answer: 2,
-          explanation:
-            "'Ich habe Hunger' — Hunger a Durst sa po 'haben' používajú BEZ členu. Je to ustálená idiomatická vazba: Hunger haben, Durst haben, Angst haben, Recht haben. Nikdy: *'Ich habe den Hunger' alebo *'Ich habe einen Hunger'."
-        },
-        {
-          question: "Čašník sa pýta Petra: 'Was essen Sie?' Peter odpovie: 'Ich ___ Wiener Schnitzel.'",
-          options: [
-            "esse",
-            "isst",
-            "esst",
-            "essen"
-          ],
-          answer: 0,
-          explanation:
-            "Pre 1. osobu ich: ich ESS-e. Silné sloveso 'essen' mení kmeňovú samohlásku len v 2. a 3. osobe jednotného čísla: du ISST, er/sie ISST. Pre ich, wir, ihr, sie→ bežné formy: ich esse, wir essen, ihr esst, sie essen."
-        },
-        {
-          question: "Jana sa pýta Petra: '___  du die Speisekarte?' (Vidíš jedálny lístok?)",
-          options: [
-            "Sehst",
-            "Siehst",
-            "Sieht",
-            "Sehest"
-          ],
-          answer: 1,
-          explanation:
-            "'sehen' je silné sloveso: ich sehe, du SIEHST, er/sie SIEHT, wir sehen. Vokalická zmena e → ie v 2. a 3. osobe jednotného čísla. 'Siehst du die Speisekarte?' = Vidíš jedálny lístok?"
-        },
-        {
-          question: "Jana objednáva polievku (die Suppe). Povie: 'Ich nehme ___ Suppe.'",
-          options: [
-            "den",
-            "einen",
-            "die",
-            "eine"
-          ],
-          answer: 2,
-          explanation:
-            "'Suppe' je ženský rod (die Suppe). Ženský rod sa v Akkusatíve NEMENÍ: die→die. 'Ich nehme die Suppe.' = Dám si polievku. (Určitý člen — Jana ukázala na konkrétnu polievku v jedálnom lístku.)"
-        },
-        {
-          question: "Jana kupuje pohár džúsu (das Glas, der Apfelsaft). Povie: 'Ich nehme ___ Glas Apfelsaft.'",
-          options: [
-            "den",
-            "die",
-            "ein",
-            "einen"
-          ],
-          answer: 2,
-          explanation:
-            "'Glas' je stredný rod (das Glas). Neurčitý člen stredného rodu v Akkusatíve = EIN (nezmenený). 'Ich nehme ein Glas Apfelsaft.' = Dám si pohár jablkového džúsu. Stredný rod: das → ein (Nominatív aj Akkusatív rovnaké)."
-        }
-      ]
-    },
-    {
-      type: "fill",
-      instruction:
-        "Doplň správnu formu Akkusatívu alebo silného slovesa. Jana a Peter obedujú.",
-      questions: [
-        {
-          sentence: "Ich ___ großen Hunger! Wo ist der Kellner? (mať — ich-forma)",
-          answer: "habe",
-          hint: "haben — 1. osoba jednotného čísla",
-          explanation:
-            "'Ich habe Hunger!' = Mám hlad! haben: ich habe. Sloveso VŽDY prítomné — nikdy 'Ich Hunger!'."
-        },
-        {
-          sentence: "Siehst du ___ Kellner? (den / die / das / einen)",
-          answer: "den",
-          hint: "Kellner = M → Akkusatív určitý",
-          explanation:
-            "'der Kellner' (M) → Akkusatív určitý = DEN. 'Siehst du den Kellner?' = Vidíš čašníka? sehen: du siehst (vokalická zmena e→ie)."
-        },
-        {
-          sentence: "Ich ___ die Gulaschsuppe — sie ist sehr lecker! (jesť — ich-forma)",
-          answer: "esse",
-          hint: "essen — 1. osoba jedn. čísla",
-          explanation:
-            "essen: ich esse (bežná forma bez zmeny). Vokalická zmena e → i: len du isst, er/sie isst."
-        },
-        {
-          sentence: "Peter ___ ein Glas Bier. (piť — er-forma)",
-          answer: "trinkt",
-          hint: "trinken — 3. osoba jedn. čísla",
-          explanation:
-            "trinken: ich trinke, du trinkst, er/sie/es TRINKT. 'trinken' je silné sloveso, ale kmeňová samohláska sa v jednotnom čísle NEMENÍ (na rozdiel od essen a sehen). Konjugácia je pravidelná!"
-        },
-        {
-          sentence: "Jana ___ einen Kaffee nach dem Essen. (potrebovať — sie-forma)",
-          answer: "braucht",
-          hint: "brauchen — 3. osoba jedn. čísla",
-          explanation:
-            "brauchen: ich brauche, du brauchst, er/sie/es BRAUCHT. Pravidelné sloveso, -t prípona pre 3. osobu. 'Jana braucht einen Kaffee nach dem Essen.' = Jana potrebuje kávu po jedle."
-        },
-        {
-          sentence: "Ich ___ keine Suppe, danke. (jesť — ich-forma + záporný člen)",
-          answer: "esse",
-          hint: "essen — ich-forma, kein = záporka pred podstatným menom",
-          explanation:
-            "'Ich esse keine Suppe, danke.' = Nejem polievku, ďakujem. 'kein/keine' = záporka pred podstatným menom (negácia predmetu). 'keine Suppe' (F → keine)."
-        }
-      ]
-    },
-    {
-      type: "listen",
-      instruction:
-        "Počúvaj frázu z reštaurácie a identifikuj správny preklad.",
-      questions: [
-        { de: "Ich habe Hunger!", sk: "Mám hlad!" },
-        { de: "Ich habe Durst.", sk: "Mám smäd." },
-        { de: "Ich nehme den Gulasch.", sk: "Dám si guláš." },
-        { de: "Siehst du die Speisekarte?", sk: "Vidíš jedálny lístok?" },
-        { de: "Er isst Wiener Schnitzel.", sk: "Jedí Viedenský rezeň." },
-        { de: "Ein Glas Apfelsaft, bitte!", sk: "Pohár jablkového džúsu, prosím!" },
-        { de: "Die Suppe ist sehr lecker.", sk: "Polievka je veľmi chutná." },
-        { de: "Ich brauche eine Tasse Kaffee!", sk: "Potrebujem šálku kávy!" }
-      ]
-    },
-    {
-      type: "match",
-      instruction:
-        "Spoj nemecké slovo alebo frázu so slovenským prekladom.",
+      type: 'match',
+      instruction: 'Verbinde die deutschen Wörter mit der slowakischen Übersetzung.',
       pairs: [
-        ["essen", "jesť"],
-        ["trinken", "piť"],
-        ["sehen", "vidieť"],
-        ["der Hunger", "hlad"],
-        ["der Durst", "smäd"],
-        ["das Glas", "pohár"],
-        ["die Tasse", "šálka"],
-        ["die Suppe", "polievka"]
-      ]
-    },
-    {
-      type: "dialogue",
-      instruction:
-        "Prečítaj si dialóg medzi Janou a čašníkom v tradičnom viedenskom Gasthaus. Potom odpovedaj na otázky porozumenia.",
-      lines: [
-        {
-          speaker: "A",
-          de: "Guten Tag! Einen Tisch für zwei Personen, bitte.",
-          sk: "Dobrý deň! Stôl pre dve osoby, prosím."
-        },
-        {
-          speaker: "B",
-          de: "Natürlich, bitte sehr! Hier ist die Speisekarte.",
-          sk: "Samozrejme, prosím! Tu je jedálny lístok."
-        },
-        {
-          speaker: "A",
-          de: "Danke. Ich habe großen Hunger! Ich nehme die Gulaschsuppe als Vorspeise.",
-          sk: "Ďakujem. Mám veľký hlad! Ako predjedlo si dám gulášovú polievku."
-        },
-        {
-          speaker: "B",
-          de: "Sehr gut. Und als Hauptspeise?",
-          sk: "Výborne. A ako hlavné jedlo?"
-        },
-        {
-          speaker: "A",
-          de: "Ich esse gern Wiener Schnitzel. Haben Sie das?",
-          sk: "Rada jem Viedenský rezeň. Máte ho?"
-        },
-        {
-          speaker: "B",
-          de: "Ja, natürlich! Das Wiener Schnitzel ist unser Spezialität. Was möchten Sie trinken?",
-          sk: "Áno, samozrejme! Viedenský rezeň je naša špeciálita. Čo si dáte na pitie?"
-        },
-        {
-          speaker: "A",
-          de: "Ich habe auch Durst. Ich trinke ein Glas Apfelsaft, bitte.",
-          sk: "Mám aj smäd. Dám si pohár jablkového džúsu, prosím."
-        },
-        {
-          speaker: "B",
-          de: "Und Ihr Kollege — was nimmt er?",
-          sk: "A váš kolega — čo si dá?"
-        },
-        {
-          speaker: "A",
-          de: "Er nimmt auch die Suppe und dann einen Käsespätzle. Und eine Tasse Kaffee.",
-          sk: "On si tiež dá polievku a potom syrové halušky. A šálku kávy."
-        },
-        {
-          speaker: "B",
-          de: "Danke schön! Das Essen kommt in zehn Minuten.",
-          sk: "Pekne ďakujem! Jedlo príde za desať minút."
-        }
+        ['vorstellen', 'predstaviť sa'],
+        ['schreiben', 'písať'],
+        ['lesen', 'čítať'],
+        ['zuhören', 'pozorne počúvať'],
+        ['lernen', 'učiť sa'],
+        ['zusammen', 'spolu'],
+        ['alle', 'všetci'],
+        ['die Klasse', 'trieda'],
+        ['Wie heißt ihr?', 'Ako sa voláte?'],
+        ['Wir sprechen Deutsch.', 'Hovoríme po nemecky.'],
       ],
-      comprehensionQuestions: [
-        {
-          question: "Čo si Jana objedná ako predjedlo (Vorspeise)?",
-          options: [
-            "Wiener Schnitzel",
-            "Gulaschsuppe",
-            "Käsespätzle",
-            "Brot mit Butter"
-          ],
-          answer: 1
-        },
-        {
-          question: "Čo si Jana objedná na pitie?",
-          options: [
-            "Eine Tasse Kaffee",
-            "Ein Glas Wasser",
-            "Ein Glas Apfelsaft",
-            "Einen Tee"
-          ],
-          answer: 2
-        },
-        {
-          question: "Čo si objedná Janin kolega na pitie?",
-          options: [
-            "Ein Glas Apfelsaft",
-            "Ein Glas Wasser",
-            "Einen Tee",
-            "Eine Tasse Kaffee"
-          ],
-          answer: 3
-        }
-      ]
     },
+
+    // 3 — WORDORDER
     {
       type: 'wordorder',
-      instruction: 'Zoraď slová do správnej nemeckej vety.',
+      instruction: 'Bringe die Wörter in die richtige Reihenfolge. Achte auf die Verbform!',
       sentences: [
         {
-          words: ['Ich', 'nehme', 'den', 'Wiener', 'Schnitzel.'],
-          correct: 'Ich nehme den Wiener Schnitzel.',
-          hint: 'Dám si viedenský rezeň.',
-          explanation: 'Schnitzel = M rod. V akkuzatíve: der → den. "nehmen" = vziať si / dám si.'
+          words: ['Wir', 'sind', 'drei', 'in', 'meiner', 'Familie'],
+          correct: 'Wir sind drei in meiner Familie',
+          hint: 'Nás sme traja v rodine.',
+          explanation: 'wir + sein → wir sind (koncovka -en, rovnaká ako infinitív). Wir sind = sme.',
         },
         {
-          words: ['Jana', 'trinkt', 'einen', 'Apfelsaft.'],
-          correct: 'Jana trinkt einen Apfelsaft.',
-          hint: 'Jana pije jablčný džús.',
-          explanation: 'Apfelsaft = M rod. V akkuzatíve: ein → einen. trinkt = 3. osoba sg. od "trinken".'
+          words: ['Ihr', 'wohnt', 'in', 'Deutschland'],
+          correct: 'Ihr wohnt in Deutschland',
+          hint: 'Vy bývate v Nemecku.',
+          explanation: 'ihr + wohnen → ihr wohnt (koncovka -t, rovnaká ako er/sie/es). Pozor: nie "ihr wohnen"!',
         },
         {
-          words: ['Er', 'sieht', 'den', 'Kellner.'],
-          correct: 'Er sieht den Kellner.',
-          hint: 'On vidí čašníka.',
-          explanation: 'Kellner = M rod. Akkuzatív: den. sehen = silné sloveso: sieht (e→ie v 3. osobe).'
+          words: ['Sie', 'lernen', 'alle', 'zusammen', 'Deutsch'],
+          correct: 'Sie lernen alle zusammen Deutsch',
+          hint: 'Všetci sa učia spolu nemčinu.',
+          explanation: 'sie (množné číslo) + lernen → sie lernen (koncovka -en, rovnaká ako infinitív).',
         },
         {
-          words: ['Ich', 'esse', 'ein', 'Schnitzel', 'und', 'trinke', 'einen', 'Kaffee.'],
-          correct: 'Ich esse ein Schnitzel und trinke einen Kaffee.',
-          hint: 'Jem rezeň a pijem kávu.',
-          explanation: 'Schnitzel = N rod → ein (akkuzatív nezmení). Kaffee = M rod → einen (akkuzatív).'
+          words: ['Meine', 'Mutter', 'wohnt', 'in', 'Bratislava'],
+          correct: 'Meine Mutter wohnt in Bratislava',
+          hint: 'Moja mama býva v Bratislave.',
+          explanation: 'Opakujeme L08: possessívum meine + L06: ich wohne → sie wohnt. Er/sie/es → -t koncovka.',
         },
         {
-          words: ['Wir', 'essen', 'die', 'Suppe', 'und', 'den', 'Fisch.'],
-          correct: 'Wir essen die Suppe und den Fisch.',
-          hint: 'Jeme polievku a rybu.',
-          explanation: 'Suppe = F rod → die (akkuzatív F = nominatív). Fisch = M rod → den (akkuzatív).'
-        }
-      ]
+          words: ['Wir', 'kommen', 'aus', 'der', 'Slowakei'],
+          correct: 'Wir kommen aus der Slowakei',
+          hint: 'Pochádzame zo Slovenska.',
+          explanation: 'wir + kommen → wir kommen (= infinitív). Z L03: kommen aus + dativ die Slowakei → der Slowakei.',
+        },
+        {
+          words: ['Ihr', 'schreibt', 'einen', 'kurzen', 'Text'],
+          correct: 'Ihr schreibt einen kurzen Text',
+          hint: 'Vy píšete krátky text.',
+          explanation: 'ihr + schreiben → ihr schreibt (-t koncovka). Toto je typická chyba: nie "ihr schreiben"!',
+        },
+      ],
     },
+
+    // 4 — FILL
     {
-      type: 'minitext',
-      instruction: 'Prečítaj si krátky text o Jane. Potom odpovedaj na otázky.',
-      text: 'Jana geht mit Peter ins Gasthaus. Jana hat Hunger. Sie nimmt die Suppe und den Wiener Schnitzel. Peter isst den Fisch. Jana trinkt einen Apfelsaft, Peter trinkt ein Wasser. Der Kellner fragt: "Hat es Ihnen geschmeckt?" Jana sagt: "Ja, es war sehr lecker!"',
-      textSk: 'Jana ide s Petrom do Gasthausa. Jana má hlad. Zoberie si polievku a Viedenský rezeň. Peter je rybu. Jana pije jablčný džús, Peter pije vodu. Čašník sa pýta: "Chutilo vám?" Jana povie: "Áno, bolo veľmi chutné!"',
+      type: 'fill',
+      instruction: 'Füll die Lücken aus. Wähle die richtige Verbform.',
       questions: [
         {
-          question: 'Was nimmt Jana zum Essen?',
-          questionSk: 'Čo si Jana dá na jedenie?',
-          options: ['Den Fisch und das Wasser', 'Die Suppe und den Wiener Schnitzel', 'Den Salat und den Kaffee', 'Die Suppe und das Brot'],
-          answer: 1,
-          explanation: 'Im Text: "Sie nimmt die Suppe und den Wiener Schnitzel."'
+          sentence: 'Wir ___ aus vielen Ländern.',
+          answer: 'kommen',
+          hint: 'Pochádzame z mnohých krajín. (wir + kommen)',
+          explanation: 'wir + kommen → wir kommen. Koncovka -en = rovnaká ako infinitív.',
         },
         {
-          question: 'Was trinkt Peter?',
-          questionSk: 'Čo pije Peter?',
-          options: ['Einen Kaffee', 'Einen Apfelsaft', 'Ein Wasser', 'Eine Limonade'],
-          answer: 2,
-          explanation: 'Im Text: "Peter trinkt ein Wasser."'
+          sentence: 'Ihr ___ in München.',
+          answer: 'wohnt',
+          hint: 'Vy bývate v Mníchove. (ihr + wohnen)',
+          explanation: 'ihr + wohnen → ihr wohnt (-t). Pozor: ihr má rovnakú formu ako er/sie/es!',
         },
         {
-          question: 'Was fragt der Kellner am Ende?',
-          questionSk: 'Čo sa čašník pýta na konci?',
-          options: ['Bitte zahlen!', 'Noch etwas?', 'Hat es Ihnen geschmeckt?', 'Guten Appetit!'],
-          answer: 2,
-          explanation: 'Im Text: "Der Kellner fragt: Hat es Ihnen geschmeckt?"'
-        }
-      ]
+          sentence: 'Sie ___ alle zusammen Deutsch.',
+          answer: 'lernen',
+          hint: 'Všetci sa učia spolu nemčinu. (sie plural + lernen)',
+          explanation: 'sie (plural) + lernen → sie lernen (-en = infinitív).',
+        },
+        {
+          sentence: '___ Schwester heißt Eva.',
+          answer: 'Meine',
+          hint: 'Moja sestra sa volá Eva. (possessívum pre ženský rod)',
+          explanation: 'Opakujeme L08: mein/meine. Die Schwester → ženský rod → meine (nie mein).',
+        },
+        {
+          sentence: 'Wir ___ eine internationale Gruppe.',
+          answer: 'sind',
+          hint: 'Sme medzinárodná skupina. (wir + sein)',
+          explanation: 'Nepravidelné sloveso sein: wir sind. Toto treba naučiť naspamäť!',
+        },
+        {
+          sentence: 'Haben Sie Geschwister? — Ja, ich ___ zwei Schwestern.',
+          answer: 'habe',
+          hint: 'Áno, mám dve sestry. (ich + haben — opakujeme L07)',
+          explanation: 'Opakujeme L07: ich + haben → ich habe. Pravidelná koncovka -e.',
+        },
+        {
+          sentence: 'Woher kommt ___? Wir kommen aus Spanien.',
+          answer: 'ihr',
+          hint: 'Odkiaľ pochádzate? — zámenno pre vy (neformálne)',
+          explanation: 'Na otázku skupiny ľudí používame ihr. Ihr = neformálne množné číslo od du.',
+        },
+        {
+          sentence: 'Carlos und Jana ___ in Wien.',
+          answer: 'wohnen',
+          hint: 'Carlos a Jana bývajú vo Viedni. (sie plural + wohnen)',
+          explanation: 'Keď sú subjektom dve mená (Carlos und Jana) = sie plural → wohnen (-en).',
+        },
+      ],
     },
+
+    // 5 — LISTEN
+    {
+      type: 'listen',
+      instruction: 'Hör zu und schreib das deutsche Wort oder die Phrase.',
+      questions: [
+        { de: 'wir', sk: 'my' },
+        { de: 'ihr', sk: 'vy (viacero ľudí)' },
+        { de: 'lernen', sk: 'učiť sa' },
+        { de: 'schreiben', sk: 'písať' },
+        { de: 'zuhören', sk: 'pozorne počúvať' },
+        { de: 'die Klasse', sk: 'trieda' },
+        { de: 'zusammen', sk: 'spolu' },
+        { de: 'Wir sind drei in meiner Familie.', sk: 'Nás sme traja v rodine.' },
+        { de: 'Wie heißt ihr?', sk: 'Ako sa voláte?' },
+        { de: 'Sie lernen alle zusammen Deutsch.', sk: 'Všetci sa učia spolu nemčinu.' },
+      ],
+    },
+
+    // 6 — MCQ
+    {
+      type: 'mcq',
+      instruction: 'Wähle die richtige Antwort.',
+      questions: [
+        {
+          question: 'Wie lautet die richtige Form? "Ihr ___ in Wien."',
+          options: ['wohnen', 'wohnst', 'wohnt', 'wohne'],
+          answer: 2,
+          explanation: 'ihr + wohnen → ihr wohnt (-t). Ihr má rovnakú formu ako er/sie/es. Časté chyby: "ihr wohnen" (nesprávne!) alebo "ihr wohnst" (to je du).',
+        },
+        {
+          question: 'Was bedeutet "Wir sind eine Klasse"?',
+          options: ['Ja sme trieda.', 'Vy ste trieda.', 'Oni sú trieda.', 'Ona je trieda.'],
+          answer: 0,
+          explanation: 'wir = my → Wir sind = sme. Nepravidelné sloveso sein: ich bin, du bist, er ist, wir sind, ihr seid, sie sind.',
+        },
+        {
+          question: 'Welche Form ist korrekt? "Sie (sie plural) ___ aus Deutschland."',
+          options: ['kommt', 'kommst', 'kommen', 'komme'],
+          answer: 2,
+          explanation: 'sie (plural) + kommen → sie kommen (-en = rovnaká ako infinitív). Nezamieňať s er/sie(singular) kommt (-t).',
+        },
+        {
+          question: 'Jana fragt die ganze Gruppe: "Wie ___ ihr?"',
+          options: ['heißt', 'heiße', 'heißen', 'heißen wir'],
+          answer: 0,
+          explanation: 'ihr + heißen → ihr heißt (-t). Správna otázka: "Wie heißt ihr?" = "Ako sa voláte (vy všetci)?"',
+        },
+        {
+          question: 'L07 opakujeme: "Ich ___ zwei Brüder und eine Schwester." (haben)',
+          options: ['hast', 'habt', 'haben', 'habe'],
+          answer: 3,
+          explanation: 'Opakujeme L07: ich + haben → ich habe. Pravidelné -e pre prvú osobu jednotného čísla.',
+        },
+        {
+          question: 'L08 opakujeme: "___ Vater ist Ingenieur." (mein oder meine?)',
+          options: ['meine', 'mein', 'meiner', 'meinen'],
+          answer: 1,
+          explanation: 'Opakujeme L08: possessívum mein/meine. Der Vater → mužský rod → mein (nie meine).',
+        },
+        {
+          question: 'Was ist die wir-Form von "lernen"?',
+          options: ['lernt', 'lernst', 'lernen', 'lerne'],
+          answer: 2,
+          explanation: 'wir + lernen → wir lernen. Pravidlo: wir-forma = infinitív (s koncovkou -en).',
+        },
+        {
+          question: 'Wie sagt man auf Deutsch: "Všetci sa učia spolu."',
+          options: ['Alle lernt zusammen.', 'Alle lernst zusammen.', 'Alle lernen zusammen.', 'Alle lerne zusammen.'],
+          answer: 2,
+          explanation: 'alle (všetci) = plurálový subjekt → lernen (-en). Alle lernen zusammen = sie (plural) lernen.',
+        },
+      ],
+    },
+
+    // 7 — MINITEXT
+    {
+      type: 'minitext',
+      instruction: 'Lies den Text und beantworte die Fragen.',
+      text:
+        'Jana steht vor der Klasse. Sie liest ihren Text: "Wir sind drei in meiner Familie. Meine Mutter heißt Eva. Sie wohnt in Bratislava. Mein Vater ist Ingenieur. Ich bin in Wien." Die Klasse applaudiert. Anna sagt: "Sehr gut, Jana!" Dann liest Carlos: "Wir kommen aus Spanien. Ihr seid alle sehr nett!" Alle lachen zusammen.',
+      textSk:
+        'Jana stojí pred triedou. Číta svoj text: „Nás sme traja v rodine. Moja mama sa volá Eva. Býva v Bratislave. Môj otec je inžinier. Ja som vo Viedni." Trieda tlieskala. Anna hovorí: „Veľmi dobre, Jana!" Potom číta Carlos: „Pochádzame zo Španielska. Vy ste všetci veľmi milí!" Všetci sa smejú spolu.',
+      questions: [
+        {
+          question: 'Wie viele Personen sind in Janas Familie?',
+          options: ['zwei', 'drei', 'vier', 'fünf'],
+          answer: 1,
+          explanation: '"Wir sind drei in meiner Familie." — Jana hovorí, že sú traja (drei) v rodine.',
+        },
+        {
+          question: 'Wo wohnt Janas Mutter?',
+          options: ['in Wien', 'in Berlin', 'in Bratislava', 'in Spanien'],
+          answer: 2,
+          explanation: '"Meine Mutter heißt Eva. Sie wohnt in Bratislava." — Janas mama býva v Bratislave.',
+        },
+        {
+          question: 'Was ist Janas Vater von Beruf?',
+          options: ['Lehrer', 'Arzt', 'Ingenieur', 'Student'],
+          answer: 2,
+          explanation: '"Mein Vater ist Ingenieur." — Janin otec je inžinier.',
+        },
+        {
+          question: 'Woher kommt Carlos?',
+          options: ['aus Deutschland', 'aus Österreich', 'aus der Slowakei', 'aus Spanien'],
+          answer: 3,
+          explanation: '"Wir kommen aus Spanien." — Carlos hovorí, že pochádzajú zo Španielska.',
+        },
+        {
+          question: 'Was sagt Anna zu Jana?',
+          options: ['"Sehr gut, Jana!"', '"Danke, Jana!"', '"Bitte, Jana!"', '"Hallo, Jana!"'],
+          answer: 0,
+          explanation: '"Anna sagt: Sehr gut, Jana!" — Anna pochváli Janu slovami "Sehr gut!"',
+        },
+      ],
+    },
+
+    // 8 — SPEAKING
     {
       type: 'speaking',
-      instruction: 'Počúvaj nemeckú vetu. Potom hovor nahlas a skontroluj sa.',
+      instruction: 'Übe die Aussprache. Hör zu und sprich nach.',
       phrases: [
-        { de: 'Ich nehme den Wiener Schnitzel.', sk: 'Dám si viedenský rezeň.', tip: 'nehme: e krátke, e tiché' },
-        { de: 'Ich möchte einen Apfelsaft, bitte.', sk: 'Chcel/a by som jablčný džús, prosím.', tip: 'Apfelsaft: Apfel+saft' },
-        { de: 'Die Rechnung, bitte!', sk: 'Účet, prosím!', tip: 'Rechnung: ch=[x], ung=[uŋ]' },
-        { de: 'Hat es Ihnen geschmeckt?', sk: 'Chutilo vám?', tip: 'geschmeckt: g=[g], sch=[š]' },
-        { de: 'Ja, es war sehr lecker!', sk: 'Áno, bolo to veľmi chutné!', tip: 'lecker: l=[l], ck=[k]' }
-      ]
-    }
+        {
+          de: 'Wir sind drei in meiner Familie.',
+          sk: 'Nás sme traja v rodine.',
+          tip: 'Wir=[viːr], drei=[draɪ̯], Familie=[faˈmiːliə]',
+        },
+        {
+          de: 'Meine Mutter wohnt in Bratislava.',
+          sk: 'Moja mama býva v Bratislave.',
+          tip: 'Mutter=[ˈmʊtər], wohnt=[voːnt] — W ako V!',
+        },
+        {
+          de: 'Wie heißt ihr?',
+          sk: 'Ako sa voláte?',
+          tip: 'heißt=[haɪ̯st] — ei=[aɪ̯], ß=[s]',
+        },
+        {
+          de: 'Sie kommen aus Deutschland.',
+          sk: 'Oni pochádzajú z Nemecka.',
+          tip: 'Deutschland=[ˈdɔɪ̯tʃlant] — eu=[ɔɪ̯]',
+        },
+        {
+          de: 'Wir lernen zusammen Deutsch.',
+          sk: 'Učíme sa spolu nemčinu.',
+          tip: 'zusammen=[tsuˈzamən] — z=[ts]!',
+        },
+        {
+          de: 'Darf ich mich vorstellen?',
+          sk: 'Smiem sa predstaviť?',
+          tip: 'Darf=[darf], vorstellen=[ˈfoːɐ̯ʃtɛlən]',
+        },
+        {
+          de: 'Ihr wohnt in Deutschland.',
+          sk: 'Vy bývate v Nemecku.',
+          tip: 'wohnt=[voːnt] — W=V, -t koncovka pre ihr',
+        },
+        {
+          de: 'Alle hören zusammen zu.',
+          sk: 'Všetci spolu počúvajú.',
+          tip: 'hören=[ˈhøːrən] — ö=[ø], zu=[tsuː] na konci!',
+        },
+      ],
+    },
+
+    // 9 — TRUEFALSE
+    {
+      type: 'truefalse',
+      instruction: 'Stimmt das oder stimmt das nicht? Wahr oder falsch?',
+      statements: [
+        {
+          statement: 'Die wir-Form von "wohnen" ist "wohnen" (= Infinitiv).',
+          isTrue: true,
+          explanation: 'Áno! wir + wohnen → wir wohnen. Wir-forma = infinitív. Rovnako: wir lernen, wir kommen atď.',
+        },
+        {
+          statement: 'Die ihr-Form von "lernen" ist "ihr lernen".',
+          isTrue: false,
+          explanation: 'Nie! ihr + lernen → ihr lernt (-t koncovka, rovnaká ako er/sie/es). "ihr lernen" je nesprávne!',
+        },
+        {
+          statement: '"Sie kommen" kann Plural (sie = they) ODER höfliche Form (Sie = formal you) sein.',
+          isTrue: true,
+          explanation: 'Správne! V nemčine sú tieto formy totožné. Sie kommen = oni prichádzajú / Vy prichádzate (formálne). Rozlišuje kontext.',
+        },
+        {
+          statement: 'Im Deutschen sagt man "Ich habe Hunger" ohne Artikel.',
+          isTrue: true,
+          explanation: 'Áno! Hunger a Durst sa v tejto fráze používajú BEZ členu: Ich habe Hunger, Ich habe Durst. (Opakujeme z L07: haben.)',
+        },
+        {
+          statement: 'Die ihr-Form hat die Endung -en, wie der Infinitiv.',
+          isTrue: false,
+          explanation: 'Nie! ihr má koncovku -t (ihr wohnt, ihr lernt, ihr kommt). Len wir a sie/Sie majú -en (= infinitív). Ihr = -t!',
+        },
+        {
+          statement: '"Wir sprechen Deutsch" bedeutet "Hovoríme po nemecky."',
+          isTrue: true,
+          explanation: 'Správne! wir sprechen = hovoríme. sprechen sa v tejto lekcii opakuje ako wir-forma.',
+        },
+      ],
+    },
+
+    // 10 — DICTATION
+    {
+      type: 'dictation',
+      instruction: 'Hör zu und schreib den Satz.',
+      sentences: [
+        {
+          de: 'Wir lernen Deutsch.',
+          sk: 'Učíme sa nemčinu.',
+        },
+        {
+          de: 'Ihr wohnt in Wien.',
+          sk: 'Vy bývate vo Viedni.',
+        },
+        {
+          de: 'Sie kommen aus vielen Ländern.',
+          sk: 'Pochádzajú z mnohých krajín.',
+        },
+        {
+          de: 'Meine Mutter heißt Eva.',
+          sk: 'Moja mama sa volá Eva.',
+        },
+        {
+          de: 'Wir sind drei in meiner Familie.',
+          sk: 'Nás sme traja v rodine.',
+        },
+        {
+          de: 'Alle hören aufmerksam zu.',
+          sk: 'Všetci pozorne počúvajú.',
+        },
+      ],
+    },
+
+    // 11 — CATEGORYSORT
+    {
+      type: 'categorysort',
+      instruction: 'Sortiere die Verbformen in die richtige Kategorie.',
+      categories: [
+        {
+          name: 'ich / du / er, sie, es (Singular)',
+          items: ['ich wohne', 'du wohnst', 'er wohnt', 'ich lerne', 'du lernst', 'sie kommt'],
+        },
+        {
+          name: 'wir / sie, Sie (Plural = Infinitiv)',
+          items: ['wir wohnen', 'sie lernen', 'wir kommen', 'Sie wohnen', 'wir schreiben', 'sie hören zu'],
+        },
+        {
+          name: 'ihr (Plural = -t wie er/sie/es)',
+          items: ['ihr wohnt', 'ihr lernt', 'ihr kommt', 'ihr schreibt', 'ihr hört zu', 'ihr seid'],
+        },
+      ],
+    },
+
+    // 12 — TRANSLATION
+    {
+      type: 'translation',
+      instruction: 'Übersetz die Sätze ins Deutsche.',
+      prompts: [
+        {
+          sk: 'Učíme sa spolu nemčinu.',
+          hint: 'Wir lernen ...',
+          answer: 'Wir lernen zusammen Deutsch.',
+        },
+        {
+          sk: 'Odkiaľ pochádzate (vy — viacero ľudí)?',
+          hint: 'Woher kommt ...',
+          answer: 'Woher kommt ihr?',
+        },
+        {
+          sk: 'Oni bývajú v Berlíne.',
+          hint: 'Sie wohnen ...',
+          answer: 'Sie wohnen in Berlin.',
+        },
+        {
+          sk: 'Moja sestra má dvadsať rokov.',
+          hint: 'Meine Schwester ist ...',
+          answer: 'Meine Schwester ist zwanzig Jahre alt.',
+        },
+        {
+          sk: 'Všetci v triede hovoríme po nemecky.',
+          hint: 'Wir alle ...',
+          answer: 'Wir alle sprechen Deutsch in der Klasse.',
+        },
+      ],
+    },
+
+    // 13 — CONJUGATION
+    {
+      type: 'conjugation',
+      instruction: 'Konjugiere die Verben. Füll alle Formen aus.',
+      verbs: [
+        {
+          infinitive: 'wohnen',
+          meaning: 'bývať',
+          note: 'Pravidelné sloveso — vzorové pre celú tabuľku',
+          forms: [
+            { pronoun: 'ich', form: 'wohne' },
+            { pronoun: 'du', form: 'wohnst' },
+            { pronoun: 'er / sie / es', form: 'wohnt' },
+            { pronoun: 'wir', form: 'wohnen' },
+            { pronoun: 'ihr', form: 'wohnt' },
+            { pronoun: 'sie / Sie', form: 'wohnen' },
+          ],
+        },
+        {
+          infinitive: 'lernen',
+          meaning: 'učiť sa',
+          note: 'Pravidelné sloveso — procvičenie novej látky',
+          forms: [
+            { pronoun: 'ich', form: 'lerne' },
+            { pronoun: 'du', form: 'lernst' },
+            { pronoun: 'er / sie / es', form: 'lernt' },
+            { pronoun: 'wir', form: 'lernen' },
+            { pronoun: 'ihr', form: 'lernt' },
+            { pronoun: 'sie / Sie', form: 'lernen' },
+          ],
+        },
+        {
+          infinitive: 'sein',
+          meaning: 'byť',
+          note: '⚠️ Nepravidelné — TREBA SA NAUČIŤ NASPAMÄŤ',
+          forms: [
+            { pronoun: 'ich', form: 'bin' },
+            { pronoun: 'du', form: 'bist' },
+            { pronoun: 'er / sie / es', form: 'ist' },
+            { pronoun: 'wir', form: 'sind' },
+            { pronoun: 'ihr', form: 'seid' },
+            { pronoun: 'sie / Sie', form: 'sind' },
+          ],
+        },
+      ],
+    },
   ],
 
-  reviewWords: ["L08_V12", "L08_V13"],
+  reviewWords: ['L07_V12', 'L08_V01', 'L09_V01'],
+
   lessonNotes:
-    "Kľúčové pravidlo Akkusatívu: len MUŽSKÝ ROD mení člen (der→den, ein→einen, kein→keinen). F a N zostávajú nezmenené. Silné slovesá: essen (du isst, er isst), sehen (du siehst, er sieht) — vokalická zmena e→i alebo e→ie. trinken je silné, ale kmeňová samohláska sa v prítomnom čase nemení. haben + Hunger/Durst = BEZ členu — ustálená väzba. Táto lekcia obsahuje prvý plný dialóg — Jana sa plne zapojí do reálnej reštauračnej konverzácie."
+    'Lekcia L10 završuje 2. týždeň kurzu. Jana sa naučila kompletné časovanie pravidelných slovies vo všetkých šiestich osobách — vrátane plurálových foriem wir, ihr a sie. Kľúčové pravidlo: wir a sie/Sie majú formu rovnakú ako infinitív (-en), kým ihr má formu rovnakú ako er/sie/es (-t). Sloveso sein (byť) je nepravidelné a treba ho naučiť naspamäť: wir sind, ihr seid, sie sind. Po 2. týždni vieš predstaviť seba aj svoju rodinu, opísať bydlisko, povedať čísla 0–100 a použiť possesívne zámená mein/meine a dein/deine.',
 };

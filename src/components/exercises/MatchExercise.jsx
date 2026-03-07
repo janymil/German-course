@@ -33,7 +33,14 @@ export function MatchExercise({ exercise, onComplete }) {
       setAttempts((a) => a + 1);
       if (selectedLeft === selectedRight) {
         const newMatched = new Set([...matched, selectedLeft]);
-        speak(pairs[selectedLeft][0]);
+
+        // Find the matched item from leftItems to get the actual German text.
+        // Even if the user clicked right side first, leftItems ALWAYS contains the German words.
+        const germanItem = leftItems.find(item => item.id === selectedLeft);
+        if (germanItem) {
+          speak(germanItem.text);
+        }
+
         setMatched(newMatched);
         setSelectedLeft(null);
         setSelectedRight(null);
@@ -78,9 +85,9 @@ export function MatchExercise({ exercise, onComplete }) {
     <div className="space-y-6">
       <div className="flex items-center justify-between">
         <div className="flex flex-col gap-1.5">
-        <p className="text-sm text-gray-400">{matched.size} / {pairs.length} spárovaných</p>
-        <GenderLegend />
-      </div>
+          <p className="text-sm text-gray-400">{matched.size} / {pairs.length} spárovaných</p>
+          <GenderLegend />
+        </div>
         <div className="flex gap-1">
           {pairs.map((_, i) => (
             <div key={i} className={`w-5 h-1.5 rounded-full ${matched.has(i) ? 'bg-emerald-500' : 'bg-gray-700'}`} />

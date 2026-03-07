@@ -1,568 +1,942 @@
-﻿export const lesson80 = {
+export const lesson80 = {
   id: 80,
   week: 16,
   day: 5,
-  title: "Jana in Wien — Abschluss",
-  topic: "Jana vo Viedni — Záver kurzu A1",
+  title: "Mein Glückstag in Wien!",
+  topic: "Osobné rozprávanie o svojom 'šťastnom dni' a zhrnutie cesty Jany z lekcie 1 do cieľa vo Viedni. Finále kurzu A1!",
   cefr: "A1",
-  xpReward: 100,
-  narrativeContext:
-    "Jana hat die Goethe A1 Prüfung bestanden! Das Ergebnis kam heute Morgen: 87 von 100 Punkten — Bestanden! Sie kann es kaum glauben. Sie schreibt sofort an Lukas: 'Ich habe es geschafft!!! 🎉' Sie treffen sich am Nachmittag im Prater zum Feiern. Jana hält inne und denkt zurück: Vor 8 Monaten kam sie nach Wien und konnte kein Deutsch. Jetzt kann sie einkaufen, beim Arzt gehen, Freundschaften schließen, und eine offizielle Prüfung ablegen. Das ist ein langer Weg. Das ist ihr Weg.",
-  communicativeGoal:
-    "Po tejto lekcii som dokončil/a program A1, viem reflektovať na svoju cestu, oslavovať svoj pokrok a plánovať ďalší krok na úroveň A2.",
-  skillFocus: ["speaking", "writing", "grammar", "vocabulary", "reflection"],
-  grammarNote: {
-    rule: "Záverečná lekcia: syntéza a oslava — 7 pilierov gramatiky A1",
-    explanation:
-      "Prehľad všetkých 7 kľúčových gramatických pilierov: (1) Konjugácia slovies — prítomný čas, Perfekt, Präteritum (mať/byť). (2) Rod podstatných mien a pády — Nom, Akk, Dat. (3) Modálne slovesá — wollen, können, müssen, dürfen, möchten, sollen, sollten. (4) Vedľajšie vety — weil, dass, wenn, ob. (5) Perfekt — haben + Partizip II (gemacht, gegessen) + sein + Partizip II (gegangen, gekommen). (6) Komparatív a superlatív — größer als, am größten. (7) Základy skloňovania prídavných mien. Čo príde na A2: Preteritum/Imperfekt pre písaný minulý čas | Konjunktív II (würde + infinitív) pre priania/zdvorilosť | Plné skloňovanie prídavných mien | Dvojsmerné predložky | Rozšírené vedľajšie vety.",
-    examples: [
-      { de: "Ich habe es geschafft! (Perfekt — Höhepunkt)", sk: "Podarilo sa mi! (Perfekt — vrcholná veta kurzu)" },
-      { de: "Als ich nach Wien kam, konnte ich kein Deutsch.", sk: "Keď som prišla do Viedne, nevedela som po nemecky." },
-      { de: "Jetzt kann ich auf Deutsch kommunizieren!", sk: "Teraz viem komunikovať po nemecky!" },
-      { de: "Herzlichen Glückwunsch zum Abschluss!", sk: "Srdečne blahoželám k záverečnej skúške!" },
-    ],
-    slovakContrastNote:
-      "Záverečný odkaz: Slovenská gramatika a nemecká gramatika zdieľajú mnohé paralelné štruktúry — pády, reflexívne slovesá, modálne slovesá, zložené časy. Tvoje slovenské vedomosti SÚ a budú VŽDY superpower pri učení nemčiny. Na úrovni A2 ich využiješ ešte viac. Ďakujeme za túto cestu. Pokračuj — B2 ťa čaká!",
-  },
+  xpReward: 25,
+  narrativeContext: "Jana hat Deutsch gelernt. Heute ist ihre letzte Stunde. Die Lehrerin gibt eine Aufgabe: Erzähle über deinen Glückstag.",
+  communicativeGoal: "Nach dieser Lektion kann ich über meinen Glückstag sprechen und die wichtigsten Momente meiner Lernreise zusammenfassen.",
+  skillFocus: [
+    "speaking",
+    "vocabulary",
+    "grammar"
+  ],
+  lessonNotes: "Toto je posledná lekcia nášho kurzu! Zhrnieme si všetko, čo sme sa naučili, a Jana nám porozpráva o svojom 'šťastnom dni' – dni, keď prišla do Viedne. Pripravte sa na dojímavé momenty a oslavu!",
+  grammarNotes: [
+    {
+      rule: "Perfekt",
+      explanation: "<p>Perfekt je minulý čas, ktorý sa v nemčine používa najčastejšie na rozprávanie o minulých udalostiach, najmä v hovorovej reči. Skladá sa z dvoch častí: pomocného slovesa (haben alebo sein) v prítomnom čase a príčastia trpného (Partizip II) hlavného slovesa na konci vety.</p><p><strong>Kedy použiť haben a kedy sein?</strong></p><ul><li><strong>haben</strong> sa používa s väčšinou slovies, najmä s tými, ktoré nevyjadrujú pohyb alebo zmenu stavu (napr. machen, spielen, lernen, essen, trinken, sehen, hören).</li><li><strong>sein</strong> sa používa so slovesami vyjadrujúcimi pohyb (napr. gehen, fahren, fliegen, kommen, bleiben) alebo zmenu stavu (napr. aufwachen, einschlafen, sterben, wachsen).</li></ul><p>Príčasť trpné (Partizip II) sa tvorí väčšinou pridaním predpony <strong>ge-</strong> a prípony <strong>-t</strong> k slovu (napr. gemacht, gelernt, gespielt). Nepravidelné slovesá majú často špecifickú formu (napr. gesehen, getrunken, geschrieben).</p>",
+      examples: [
+        {
+          de: "Ich habe heute gut geschlafen.",
+          sk: "Dnes som dobre spal/a."
+        },
+        {
+          de: "Wir haben einen Kuchen gebacken.",
+          sk: "Upiekli sme koláč."
+        },
+        {
+          de: "Bist du nach Hause gegangen?",
+          sk: "Išiel/a si domov?"
+        },
+        {
+          de: "Sie ist nach Berlin gefahren.",
+          sk: "Išla (cestovala) do Berlína."
+        },
+        {
+          de: "Er hat einen Brief geschrieben.",
+          sk: "Napísal list."
+        },
+        {
+          de: "Das Kind hat Eis gegessen.",
+          sk: "Dieťa jedlo zmrzlinu."
+        },
+        {
+          de: "Wir sind ins Kino gegangen.",
+          sk: "Išli sme do kina."
+        },
+        {
+          de: "Ich habe die Prüfung bestanden.",
+          sk: "Zložil/a som skúšku."
+        }
+      ],
+      slovakContrastNote: "V slovenčine používame na vyjadrenie minulosti najčastejšie minulý čas (perfektívny alebo imperfektívny), ktorý sa tvorí ohýbaním slovesa. Nemčina používa na tento účel často skladaný tvar (Perfekt), ktorý sa skladá z dvoch slovies. Rozdiel je aj v tom, že v nemčine sa pri slovesách pohybu a zmeny stavu používa pomocné sloveso 'sein', zatiaľ čo v slovenčine sa používa 'byť' (ktoré je v minulom čase už súčasťou samotného slovesa)."
+    },
+    {
+      rule: "Präteritum von 'sein' und 'haben'",
+      explanation: "<p>Hoci sa v hovorovej nemčine na rozprávanie o minulosti používa najmä Perfekt, slovesá <strong>'sein'</strong> (byť) a <strong>'haben'</strong> (mať) sa často používajú aj v minulom čase Präteritum, a to aj v hovorovej reči. Tieto tvary sú veľmi dôležité a mali by ste si ich zapamätať.</p><p><strong>Präteritum slovesa 'sein':</strong></p><table><tr><td>ich</td><td>war</td></tr><tr><td>du</td><td>warst</td></tr><tr><td>er/sie/es</td><td>war</td></tr><tr><td>wir</td><td>waren</td></tr><tr><td>ihr</td><td>wart</td></tr><tr><td>sie/Sie</td><td>waren</td></tr></table><p><strong>Präteritum slovesa 'haben':</strong></p><table><tr><td>ich</td><td>hatte</td></tr><tr><td>du</td><td>hattest</td></tr><tr><td>er/sie/es</td><td>hatte</td></tr><tr><td>wir</td><td>hatten</td></tr><tr><td>ihr</td><td>hattet</td></tr><tr><td>sie/Sie</td><td>hatten</td></tr></table>",
+      examples: [
+        {
+          de: "Ich war gestern müde.",
+          sk: "Včera som bol/a unavený/á."
+        },
+        {
+          de: "Du warst sehr nett.",
+          sk: "Bol/a si veľmi milý/á."
+        },
+        {
+          de: "Wir waren im Urlaub.",
+          sk: "Boli sme na dovolenke."
+        },
+        {
+          de: "Sie hatten keine Zeit.",
+          sk: "Nemali čas."
+        },
+        {
+          de: "Er hatte Hunger.",
+          sk: "Mal hlad."
+        },
+        {
+          de: "Ich hatte ein Auto.",
+          sk: "Mal/a som auto."
+        }
+      ],
+      slovakContrastNote: "V slovenčine sa minulý čas tvorí ohýbaním slovesa 'byť' a 'mať' (bol som, mala som). V nemčine sa tieto slovesá v minulom čase tvoria nepravidelne (war, hatte) a používajú sa ako samostatné slovesá, nie ako pomocné slovesá v skladanom tvare (ako napr. v Perfekte). Je dôležité rozlišovať medzi Perfektom a Präteritom, hoci tieto dva tvary 'sein' a 'haben' v Präterite sú veľmi bežné a často sa používajú."
+    }
+  ],
   vocab: [
     {
-      de: "Ich habe es geschafft!",
-      sk: "Podarilo sa mi! / Zvládol/a som to!",
-      example: "Ich habe die Prüfung bestanden — ich habe es geschafft!",
-      exampleSk: "Zložila som skúšku — podarilo sa mi!",
-      gender: null,
-      srsId: "L80_V01",
-      recycledFrom: [],
-    },
-    {
-      de: "der Abschluss",
-      sk: "záver / ukončenie",
-      example: "Das ist unser Abschluss nach 80 Lektionen!",
-      exampleSk: "Toto je náš záver po 80 lekciách!",
+      de: "der Glückstag",
+      sk: "šťastný deň",
       gender: "M",
-      srsId: "L80_V02",
-      recycledFrom: [],
+      srsId: "L80_V01",
+      example: "Mein Glückstag war der Tag, an dem ich angekommen bin.",
+      exampleSk: "Môj šťastný deň bol deň, keď som prišiel/prišla.",
+      recycledFrom: []
     },
     {
-      de: "die Leistung",
-      sk: "výkon / úspech",
-      example: "Das war eine großartige Leistung, Jana!",
-      exampleSk: "To bol skvelý výkon, Jana!",
+      de: "die Erinnerung",
+      sk: "spomienka",
+      gender: "F",
+      srsId: "L80_V02",
+      example: "Ich habe eine schöne Erinnerung an Wien.",
+      exampleSk: "Mám peknú spomienku na Viedeň.",
+      recycledFrom: []
+    },
+    {
+      de: "die Klasse",
+      sk: "trieda",
       gender: "F",
       srsId: "L80_V03",
-      recycledFrom: [],
+      example: "Die ganze Klasse applaudiert Jana.",
+      exampleSk: "Celá trieda tlieska Jane.",
+      recycledFrom: []
     },
     {
-      de: "stolz sein auf",
-      sk: "byť hrdý/á na",
-      example: "Ich bin so stolz auf mich!",
-      exampleSk: "Som na seba tak hrdá!",
-      gender: null,
+      de: "die Minute",
+      sk: "minúta",
+      gender: "F",
       srsId: "L80_V04",
-      recycledFrom: [70],
+      example: "Jeder spricht eine Minute.",
+      exampleSk: "Každý hovorí jednu minútu.",
+      recycledFrom: []
     },
     {
-      de: "Herzlichen Glückwunsch!",
-      sk: "Srdečne blahoželám!",
-      example: "Herzlichen Glückwunsch zum Bestehen der Prüfung!",
-      exampleSk: "Srdečne blahoželám k úspešnému zloženiu skúšky!",
-      gender: null,
+      de: "die Träne",
+      sk: "slza",
+      gender: "F",
       srsId: "L80_V05",
-      recycledFrom: [47, 63],
+      example: "Ein paar Tränen fließen.",
+      exampleSk: "Pár sĺz tečie.",
+      recycledFrom: []
     },
     {
-      de: "Das war ein langer Weg.",
-      sk: "Bola to dlhá cesta.",
-      example: "Das war ein langer Weg — aber es hat sich gelohnt!",
-      exampleSk: "Bola to dlhá cesta — ale oplatilo sa to!",
-      gender: null,
-      srsId: "L80_V06",
-      recycledFrom: [],
-    },
-    {
-      de: "die Reise (metaforická)",
-      sk: "cesta (metaforická)",
-      example: "Diese Lernreise war wunderschön.",
-      exampleSk: "Táto učebná cesta bola nádherná.",
-      gender: "F",
-      srsId: "L80_V07",
-      recycledFrom: [49],
-    },
-    {
-      de: "Ich kann jetzt...",
-      sk: "Teraz viem / môžem...",
-      example: "Ich kann jetzt auf Deutsch kommunizieren!",
-      exampleSk: "Teraz viem komunikovať po nemecky!",
-      gender: null,
-      srsId: "L80_V08",
-      recycledFrom: [70],
-    },
-    {
-      de: "weiter lernen",
-      sk: "pokračovať v učení",
-      example: "Ich möchte weiter lernen — bis zum A2!",
-      exampleSk: "Chcem pokračovať v učení — až po A2!",
-      gender: null,
-      srsId: "L80_V09",
-      recycledFrom: [66, 70],
-    },
-    {
-      de: "die nächste Stufe",
-      sk: "ďalší krok / ďalšia úroveň",
-      example: "Die nächste Stufe heißt A2. Bist du bereit?",
-      exampleSk: "Ďalší krok sa volá A2. Si pripravený/á?",
-      gender: "F",
-      srsId: "L80_V10",
-      recycledFrom: [],
-    },
-    {
-      de: "das Niveau A2",
-      sk: "úroveň A2",
-      example: "Das Niveau A2 ist der nächste Schritt.",
-      exampleSk: "Úroveň A2 je ďalší krok.",
+      de: "das Finale",
+      sk: "finále",
       gender: "N",
+      srsId: "L80_V06",
+      example: "Das ist das Finale vom Kurs.",
+      exampleSk: "Toto je finále kurzu.",
+      recycledFrom: []
+    },
+    {
+      de: "das Ziel",
+      sk: "cieľ",
+      gender: "N",
+      srsId: "L80_V07",
+      example: "Wien war Janas Ziel.",
+      exampleSk: "Viedeň bol Janin cieľ.",
+      recycledFrom: []
+    },
+    {
+      de: "das Gefühl",
+      sk: "pocit",
+      gender: "N",
+      srsId: "L80_V08",
+      example: "Ich habe ein gutes Gefühl.",
+      exampleSk: "Mám dobrý pocit.",
+      recycledFrom: []
+    },
+    {
+      de: "der Applaus",
+      sk: "potlesk",
+      gender: "M",
+      srsId: "L80_V09",
+      example: "Der Applaus ist laut.",
+      exampleSk: "Potlesk je hlasný.",
+      recycledFrom: []
+    },
+    {
+      de: "der Moment",
+      sk: "okamih",
+      gender: "M",
+      srsId: "L80_V10",
+      example: "Das war ein besonderer Moment.",
+      exampleSk: "To bol zvláštny okamih.",
+      recycledFrom: []
+    },
+    {
+      de: "der Kurs",
+      sk: "kurz",
+      gender: "M",
       srsId: "L80_V11",
-      recycledFrom: [],
+      example: "Der Kurs ist zu Ende.",
+      exampleSk: "Kurz je na konci.",
+      recycledFrom: []
     },
     {
-      de: "Ich bin auf dem richtigen Weg.",
-      sk: "Som na správnej ceste.",
-      example: "Ich lerne jeden Tag. Ich bin auf dem richtigen Weg.",
-      exampleSk: "Každý deň sa učím. Som na správnej ceste.",
-      gender: null,
+      de: "der Tag",
+      sk: "deň",
+      gender: "M",
       srsId: "L80_V12",
-      recycledFrom: [],
+      example: "Mein Glückstag war ein besonderer Tag.",
+      exampleSk: "Môj šťastný deň bol zvláštny deň.",
+      recycledFrom: [
+        "L01"
+      ]
     },
     {
-      de: "feiern",
-      sk: "oslavovať",
-      example: "Wir feiern heute Janas Prüfungserfolg!",
-      exampleSk: "Dnes oslavujeme Janin úspech na skúške!",
+      de: "ankommen",
+      sk: "prísť, doraziť",
       gender: null,
       srsId: "L80_V13",
-      recycledFrom: [47],
+      example: "Ich bin in Wien angekommen.",
+      exampleSk: "Prišiel/Prišla som do Viedne.",
+      recycledFrom: [
+        "L01"
+      ]
     },
     {
-      de: "der Erfolg",
-      sk: "úspech",
-      example: "Das ist ein großer Erfolg für Jana!",
-      exampleSk: "To je veľký úspech pre Janu!",
-      gender: "M",
+      de: "können",
+      sk: "môcť, vedieť",
+      gender: null,
       srsId: "L80_V14",
-      recycledFrom: [],
+      example: "Jetzt kann ich Deutsch sprechen.",
+      exampleSk: "Teraz viem hovoriť po nemecky.",
+      recycledFrom: [
+        "L01"
+      ]
     },
     {
-      de: "Danke für alles!",
-      sk: "Ďakujem za všetko!",
-      example: "Danke für alles — das war eine wunderbare Reise!",
-      exampleSk: "Ďakujem za všetko — bola to nádherná cesta!",
+      de: "erinnern",
+      sk: "spomenúť si",
       gender: null,
       srsId: "L80_V15",
-      recycledFrom: [],
+      example: "Ich erinnere mich an die erste Stunde.",
+      exampleSk: "Spomínam si na prvú hodinu.",
+      recycledFrom: []
     },
     {
-      de: "Das war eine wunderbare Reise.",
-      sk: "Bola to nádherná cesta.",
-      example: "80 Lektionen — das war eine wunderbare Reise!",
-      exampleSk: "80 lekcií — bola to nádherná cesta!",
+      de: "applaudieren",
+      sk: "tlieskať",
       gender: null,
       srsId: "L80_V16",
-      recycledFrom: [],
+      example: "Die Klasse applaudiert Jana.",
+      exampleSk: "Trieda tlieska Jane.",
+      recycledFrom: []
     },
     {
-      de: "Ich habe Deutsch gelernt!",
-      sk: "Naučil/a som sa nemecky!",
-      example: "Ich habe in 8 Monaten Deutsch gelernt. Das ist unglaublich!",
-      exampleSk: "Za 8 mesiacov som sa naučila nemčinu. To je neuveriteľné!",
+      de: "nervös",
+      sk: "nervózny",
       gender: null,
       srsId: "L80_V17",
-      recycledFrom: [],
+      example: "Ich war sehr nervös.",
+      exampleSk: "Bol/Bola som veľmi nervózny/nervózna.",
+      recycledFrom: []
     },
     {
-      de: "Bis bald!",
-      sk: "Čoskoro! / Do videnia!",
-      example: "Bis bald, Jana! Viel Erfolg auf dem Weg zu A2!",
-      exampleSk: "Čoskoro sa uvidíme, Jana! Veľa šťastia na ceste k A2!",
+      de: "jetzt",
+      sk: "teraz",
       gender: null,
       srsId: "L80_V18",
-      recycledFrom: [2],
+      example: "Jetzt kann ich Deutsch.",
+      exampleSk: "Teraz viem po nemecky.",
+      recycledFrom: [
+        "L01"
+      ]
     },
     {
-      de: "Auf Wiedersehen!",
-      sk: "Dovidenia!",
-      example: "Auf Wiedersehen — bis zum A2-Kurs!",
-      exampleSk: "Dovidenia — do kurzu A2!",
+      de: "kein Deutsch können",
+      sk: "nevedieť po nemecky",
       gender: null,
       srsId: "L80_V19",
-      recycledFrom: [2],
+      example: "Am Anfang konnte ich kein Deutsch.",
+      exampleSk: "Na začiatku som nevedel/nevedela po nemecky.",
+      recycledFrom: [
+        "L01"
+      ]
     },
     {
-      de: "Tschüss!",
-      sk: "Čau! (neformálne)",
-      example: "Tschüss! Ich sehe dich beim A2-Kurs wieder!",
-      exampleSk: "Čau! Uvidíme sa na kurze A2!",
+      de: "ein bisschen",
+      sk: "trochu",
       gender: null,
       srsId: "L80_V20",
-      recycledFrom: [2],
+      example: "Ich kann jetzt ein bisschen Deutsch.",
+      exampleSk: "Teraz viem trochu po nemecky.",
+      recycledFrom: []
     },
+    {
+      de: "als ich ... bin",
+      sk: "keď som ...",
+      gender: null,
+      srsId: "L80_V21",
+      example: "Mein Glückstag war, als ich in Wien ankam.",
+      exampleSk: "Môj šťastný deň bol, keď som prišiel/prišla do Viedne.",
+      recycledFrom: []
+    },
+    {
+      de: "sich erinnern an",
+      sk: "spomenúť si na",
+      gender: null,
+      srsId: "L80_V22",
+      example: "Ich erinnere mich an den ersten Tag.",
+      exampleSk: "Spomínam si na prvý deň.",
+      recycledFrom: []
+    },
+    {
+      de: "nicht mehr",
+      sk: "už nie",
+      gender: null,
+      srsId: "L80_V23",
+      example: "Ich habe keine Angst mehr.",
+      exampleSk: "Už sa nebojím.",
+      recycledFrom: []
+    },
+    {
+      de: "ein bisschen Deutsch können",
+      sk: "vedieť trochu po nemecky",
+      gender: null,
+      srsId: "L80_V24",
+      example: "Ich kann jetzt ein bisschen Deutsch.",
+      exampleSk: "Teraz viem trochu po nemecky.",
+      recycledFrom: []
+    },
+    {
+      de: "zusammenfassen",
+      sk: "zhrnúť",
+      gender: null,
+      srsId: "L80_V25",
+      example: "Wir fassen den Kurs zusammen.",
+      exampleSk: "Zhrnieme kurz.",
+      recycledFrom: []
+    }
   ],
   exercises: [
     {
       type: "flashcard",
-      instruction:
-        "Posledné flashcards celého kurzu. Tieto slová uzatvárajú 80-lekciový program. Precvič si ich so všetkými emóciami záverečnej lekcie!",
-      items: [
-        "L80_V01",
-        "L80_V02",
-        "L80_V03",
-        "L80_V04",
-        "L80_V05",
-        "L80_V06",
-        "L80_V07",
-        "L80_V08",
-        "L80_V09",
-        "L80_V10",
-        "L80_V11",
-        "L80_V12",
-        "L80_V13",
-        "L80_V14",
-        "L80_V15",
-      ],
-    },
-    {
-      type: "mcq",
-      instruction:
-        "ZÁVEREČNÉ HODNOTENIE: Otázky pokrývajú celý kurz L01–L80. Toto je tvoje finálne preverenie kompetencií A1!",
-      questions: [
-        {
-          question: "Ako sa povie 'Naučila som sa nemčinu za 8 mesiacov' po nemecky? (Perfekt)",
-          options: [
-            "Ich lerne Deutsch seit 8 Monaten.",
-            "Ich habe Deutsch in 8 Monaten gelernt.",
-            "Ich lernte Deutsch für 8 Monate.",
-            "Deutsch habe gelernt ich in 8 Monate.",
-          ],
-          answer: "Ich habe Deutsch in 8 Monaten gelernt.",
-          explanation: "Perfekt s 'haben': 'Ich habe... gelernt.' 'in 8 Monaten' = za 8 mesiacov (trvanie dokončenej akcie). 'seit 8 Monaten' by znamenalo 'stále sa učím' (prebiehajúca akcia).",
-        },
-        {
-          question: "Ktorý člen je správny: 'Das ist ___ beste Erlebnis meines Lebens.'",
-          options: ["ein", "eine", "das", "dem"],
-          answer: "das",
-          explanation: "Superlatív s členom: 'das beste Erlebnis' (Nom, N). Superlatív s 'das/die/der' je atributívny (pred podstatným menom). 'Das ist das Beste.' — samostatne; 'Das ist das beste Erlebnis.' — pred podstatným menom.",
-        },
-        {
-          question: "Vyber správnu vetu s 'damit' / 'weil':",
-          options: [
-            "Ich lerne Deutsch, weil ich in Wien will wohnen.",
-            "Ich lerne Deutsch, weil ich in Wien wohnen will.",
-            "Ich lerne Deutsch, weil will ich in Wien wohnen.",
-            "Weil ich will wohnen in Wien, ich lerne Deutsch.",
-          ],
-          answer: "Ich lerne Deutsch, weil ich in Wien wohnen will.",
-          explanation: "'weil' + vedľajšia veta = sloveso IDE NA KONIEC. 'weil ich in Wien wohnen WILL.' — modálne sloveso ide na koniec vedľajšej vety ako posledné.",
-        },
-        {
-          question: "Ako sa pýtaš: 'Vieš mi povedať, kde je najbližší supermarket?'",
-          options: [
-            "Kannst du mir sagen, wo ist der nächste Supermarkt?",
-            "Kannst du mir sagen, wo der nächste Supermarkt ist?",
-            "Weißt du, wo ist der nächste Supermarkt?",
-            "Kannst du mir sagen wo der nächste Supermarkt ist.",
-          ],
-          answer: "Kannst du mir sagen, wo der nächste Supermarkt ist?",
-          explanation: "Nepriama otázka: sloveso ide na koniec: 'wo der nächste Supermarkt IST.' Nie 'wo IST der Supermarkt' (to je priama otázka). Tiež: čiarka pred 'wo'.",
-        },
-        {
-          question: "Ktoré modálne sloveso chýba: 'Als Kind ___ ich immer draußen spielen.'",
-          options: [
-            "wollte",
-            "musste",
-            "sollte",
-            "durfte",
-          ],
-          answer: "durfte",
-          explanation: "Kontext: ako dieťa SMI hrať vonku — to je povolenie. 'dürfen' = smieť/mať povolenie. Präteritum (Imperfekt) od 'dürfen': ich durfte. 'Als Kind durfte ich spielen.' = Ako dieťa som mohol/a hrať.",
-        },
-        {
-          question: "Čo sa stane so slovosledom v otázke 'Wann bist du nach Wien gekommen?'",
-          options: [
-            "Sloveso je na prvom mieste.",
-            "Sloveso 'bist' je na druhom mieste, partizip 'gekommen' je na konci.",
-            "Partizip 'gekommen' je na druhom mieste.",
-            "Slovosled je rovnaký ako vo vete.",
-          ],
-          answer: "Sloveso 'bist' je na druhom mieste, partizip 'gekommen' je na konci.",
-          explanation: "V otázke s W-slovom: W-slovo (Wann) → pomocné sloveso (bist) → subjekt (du) → zvyšok → partizip II (gekommen) na konci. 'Wann bist du nach Wien GEKOMMEN?' — rámc Perfektu.",
-        },
-        {
-          question: "Vyber NESPRÁVNU vetu:",
-          options: [
-            "Ich habe gestern viel gelernt.",
-            "Ich bin gestern nach Hause gefahren.",
-            "Ich habe gestern nach Hause gegangen.",
-            "Ich bin gestern früh aufgestanden.",
-          ],
-          answer: "Ich habe gestern nach Hause gegangen.",
-          explanation: "'gehen' vyžaduje 'sein' v Perfekte: 'Ich BIN gegangen' (NIE 'habe'!). 'fahren' → bin gefahren ✓. 'aufstehen' → bin aufgestanden ✓. Pohybové slovesá a slovesá zmeny stavu: vždy 'sein'!",
-        },
-        {
-          question: "Preložte do nemčiny: 'Hovorím po nemecky, hoci to nie je vždy jednoduché.'",
-          options: [
-            "Ich spreche Deutsch, obwohl es nicht immer einfach ist.",
-            "Ich spreche Deutsch, obwohl es ist nicht immer einfach.",
-            "Ich spreche Deutsch, obwohl nicht immer es einfach ist.",
-            "Obwohl es nicht immer einfach ist, ich spreche Deutsch.",
-          ],
-          answer: "Ich spreche Deutsch, obwohl es nicht immer einfach ist.",
-          explanation: "'obwohl' = hoci/aj keď. Vedľajšia veta: sloveso na koniec: 'obwohl es nicht immer einfach IST.' Hlavná veta môže byť pred ALEBO za vedľajšou vetou — ale vždy s čiarkou.",
-        },
-      ],
-    },
-    {
-      type: "fill",
-      instruction:
-        "ZÁVEREČNÉ OPAKOVANIE: Doplň medzery. Otázky pokrývajú všetky kľúčové gramatické témy kurzu L01–L80.",
-      questions: [
-        {
-          sentence: "Jana ___ die Prüfung ___ — sie hat 87 Punkte bekommen!",
-          answer: "hat / bestanden",
-          hint: "Perfekt od 'bestehen' s 'haben'",
-          explanation: "'bestehen' je pravidelné v Perfekte s 'haben': 'hat bestanden'. 'Jana hat die Prüfung bestanden!' = Jana zložila skúšku! Jedno z najkrajších nemeckých súvetí v tomto kurze.",
-        },
-        {
-          sentence: "Als Jana nach Wien ___, konnte sie kein Deutsch.",
-          answer: "kam",
-          hint: "Präteritum od 'kommen'",
-          explanation: "'kommen' v Präteritum: ich kam, du kamst, er/sie/es KAM. Präteritum sa používa v naratívnom texte a s 'als' (keď, v minulosti). 'Als Jana … kam' = Keď Jana prišla.",
-        },
-        {
-          sentence: "Jetzt kann Jana bei ___ Arzt Deutsch sprechen.",
-          answer: "dem",
-          hint: "Datív určitého člena mužského rodu + predložka 'bei'",
-          explanation: "'bei' riadi Datív. 'Arzt' = der Arzt (M) → Dat: 'dem Arzt'. 'beim' = 'bei dem' (stiahnutie). 'beim Arzt' = u lekára.",
-        },
-        {
-          sentence: "Das ist ___ schönste Moment meiner Deutschreise.",
-          answer: "der",
-          hint: "Superlatív s členom — mužský rod, Nominatív",
-          explanation: "'Moment' je mužského rodu (der Moment) → Nom: 'der schönste Moment'. Superlatív atributívny: 'der/die/das + [Superlatív]-e'. 'der schönste Moment' = najkrajší moment.",
-        },
-        {
-          sentence: "Ich bin so ___ auf meinen Fortschritt!",
-          answer: "stolz",
-          hint: "byť hrdý na (idiom s 'sein auf')",
-          explanation: "'stolz sein auf' = byť hrdý/á na. 'Ich bin stolz auf meinen Fortschritt.' = Som hrdá na môj pokrok. 'auf + Akk': 'auf meinen Fortschritt' (M, Akk).",
-        },
-      ],
-    },
-    {
-      type: "listen",
-      instruction:
-        "Záverečné počúvanie. Toto sú vety z Janinho príbehu — od prvej lekcie po záver. Počúvaj, zamysli sa a oslávuj svoju cestu.",
-      questions: [
-        { de: "Ich heiße Jana. Ich komme aus der Slowakei. (L01)", sk: "Volám sa Jana. Pochádzam zo Slovenska. (L01)" },
-        { de: "Entschuldigung, wo ist der Bahnhof? (L16)", sk: "Prepáčte, kde je nádraží? (L16)" },
-        { de: "Ich habe gestern Spaghetti gekocht. (L26)", sk: "Včera som varila špagety. (L26)" },
-        { de: "Man soll täglich Sport machen. (L78)", sk: "Malo by sa každý deň cvičiť. (L78)" },
-        { de: "Ich habe es geschafft! Ich habe die Prüfung bestanden! (L80)", sk: "Podarilo sa mi! Zložila som skúšku! (L80)" },
-        { de: "Tschüss und auf Wiedersehen! Bis zum A2-Kurs!", sk: "Čau a dovidenia! Do kurzu A2!" },
-      ],
+      instruction: "Prezri si slovíčka tejto lekcie. Klikni na kartičku pre preklad."
     },
     {
       type: "match",
-      instruction:
-        "ZÁVEREČNÉ SPÁJANIE: Spoj záverečné výrazy a ich slovenské preklady.",
+      instruction: "Spojte nemecké slová so slovenskými významami.",
       pairs: [
-        ["Ich habe es geschafft!", "Zvládol/a som to!"],
-        ["Herzlichen Glückwunsch!", "Srdečne blahoželám!"],
-        ["stolz sein auf", "byť hrdý/á na"],
-        ["der Abschluss", "záver / ukončenie"],
-        ["feiern", "oslavovať"],
-        ["weiter lernen", "pokračovať v učení"],
-        ["das Niveau A2", "úroveň A2"],
-        ["Bis bald!", "Čoskoro sa uvidíme!"],
-      ],
-    },
-    {
-      type: "dialogue",
-      instruction:
-        "Jana a Lukas sa stretávajú v Prateri po skúške. Jana mu oznámi, čo všetko teraz vie po nemecky. Toto je oslava!",
-      lines: [
-        { speaker: "A", de: "Lukas! Ich habe es geschafft! Ich habe die Prüfung bestanden!", sk: "Lukas! Zvládla som to! Zložila som skúšku!" },
-        { speaker: "B", de: "Jana! Das ist unglaublich! Herzlichen Glückwunsch! Ich bin so stolz auf dich!", sk: "Jana! To je neuveriteľné! Srdečne blahoželám! Som na teba taký hrdý!" },
-        { speaker: "A", de: "87 von 100 Punkten! Ich kann es kaum glauben.", sk: "87 zo 100 bodov! Takmer tomu neverím." },
-        { speaker: "B", de: "Das verdienst du! Du hast so hart gearbeitet. Was kannst du jetzt alles auf Deutsch?", sk: "To si zaslúžiš! Tak veľmi si pracovala. Čo všetko teraz vieš po nemecky?" },
-        { speaker: "A", de: "Ich kann einkaufen gehen und nach dem Preis fragen. Das konnte ich vor 8 Monaten nicht!", sk: "Môžem ísť nakupovať a spýtať sa na cenu. To som pred 8 mesiacmi nevedela!" },
-        { speaker: "B", de: "Und was noch?", sk: "A čo ešte?" },
-        { speaker: "A", de: "Ich kann beim Arzt mein Problem erklären. Ich kann Freunde auf Deutsch einladen.", sk: "Viem vysvetliť môj problém u lekára. Viem pozvať priateľov po nemecky." },
-        { speaker: "B", de: "Das ist fantastisch! Erinnerst du dich an deinen ersten Tag in Wien?", sk: "To je fantastické! Pamätáš si na prvý deň vo Viedni?" },
-        { speaker: "A", de: "Ja! Ich stand am Bahnhof und wusste nicht, was ich sagen soll.", sk: "Áno! Stála som na nádraží a nevedela som, čo mám povedať." },
-        { speaker: "B", de: "Und jetzt? Jetzt hast du die Goethe A1 Prüfung bestanden!", sk: "A teraz? Teraz si zložila skúšku Goethe A1!" },
-        { speaker: "A", de: "Das war ein langer Weg... aber es hat sich so sehr gelohnt!", sk: "Bola to dlhá cesta... ale veľmi sa to oplatilo!" },
-        { speaker: "B", de: "Was kommt jetzt? A2?", sk: "Čo príde teraz? A2?" },
-        { speaker: "A", de: "Ja! Die Reise geht weiter. Aber heute feiern wir! Auf Wien und auf Deutsch!", sk: "Áno! Cesta pokračuje. Ale dnes oslavujeme! Na Viedeň a na nemčinu!" },
-        { speaker: "B", de: "Auf Jana und auf eine wunderbare Reise! Prost!", sk: "Na Janu a na nádhernú cestu! Na zdravie!" },
-      ],
-      comprehensionQuestions: [
-        {
-          question: "Koľko bodov dostala Jana na skúške Goethe A1?",
-          options: ["75 zo 100", "80 zo 100", "87 zo 100", "95 zo 100"],
-          answer: "87 zo 100",
-        },
-        {
-          question: "Čo Jana hovorí, že vie urobiť po nemecky? (Vyber VŠETKY správne — najviac zastúpenú odpoveď)",
-          options: [
-            "Nakupovať, visited lekára, pozvať priateľov",
-            "Len čítať a písať",
-            "Len rozumieť, nie hovoriť",
-            "Len základné pozdravy",
-          ],
-          answer: "Nakupovať, visited lekára, pozvať priateľov",
-        },
-        {
-          question: "Na čo si Jana spomína zo svojho prvého dňa vo Viedni?",
-          options: [
-            "Zašla do reštaurácie.",
-            "Stála na nádraží a nevedela, čo povedať.",
-            "Stretla Lukasa na letisku.",
-            "Prihlásila sa na kurz nemčiny.",
-          ],
-          answer: "Stála na nádraží a nevedela, čo povedať.",
-        },
-        {
-          question: "Čo plánuje Jana ako ďalší krok?",
-          options: ["Vrátiť sa na Slovensko", "Začať kurz A2", "Urobiť skúšku B1", "Prestať sa učiť nemčinu"],
-          answer: "Začať kurz A2",
-        },
-      ],
-    },
-    {
-      type: "minitext",
-      instruction:
-        "Prečítaj si Janin záverečný denníkový zápis — najdlhší a najkomplexnejší text celého kurzu. Použi si celú svoju slovnú zásobu a gramatiku!",
-      text:
-        "Abschlusseintrag — Wien, 24. Februar\n\nLieber Tagebuch,\n\nIch kann es immer noch kaum glauben: Ich habe die Goethe A1 Prüfung bestanden! 87 von 100 Punkten — das ist mehr als ich erwartet habe. Als ich heute Morgen das Ergebnis gesehen habe, musste ich weinen — vor Freude.\n\nVor acht Monaten bin ich nach Wien gekommen. Damals konnte ich kein einziges deutsches Wort sagen, außer 'Hallo' und 'Danke'. Ich erinnere mich gut: Ich stand am Wiener Hauptbahnhof mit meinem Koffer und dachte: 'Was mache ich hier? Ich verstehe gar nichts!'\n\nAber dann habe ich angefangen zu lernen. Jeden Tag ein bisschen — oft früh morgens vor der Arbeit oder abends nach der Schicht. Manchmal war es schwer, manchmal war es frustrierend. Aber ich habe nicht aufgehört.\n\nJetzt kann ich so viel. Ich kann einkaufen und nach dem Preis fragen. Ich kann beim Arzt über meine Symptome sprechen. Ich kann Freunde einladen, Briefe schreiben, Fahrpläne lesen. Ich kann über meine Hobbys, meine Familie, meine Träume sprechen. Auf Deutsch!\n\nDas Wichtigste, was ich gelernt habe: Man muss keine Angst vor Fehlern haben. Fehler sind normal. Fehler sind gut. Durch Fehler lernt man.\n\nUnd jetzt? Die Reise geht weiter. Das A2-Niveau wartet auf mich. Ich werde weiter lernen, weiter üben, weiter wachsen. Weil Deutsch mehr ist als eine Sprache — es ist mein Schlüssel zu Wien, zu Österreich, zu Europa.\n\nDanke für alles, lieber Tagebuch. Bis zur nächsten Reise!\n\nEure Jana",
-      textSk:
-        "Záverečný zápis — Viedeň, 24. februára\n\nDrahý denník,\n\nStále tomu takmer neverím: Zložila som skúšku Goethe A1! 87 zo 100 bodov — to je viac, ako som čakala. Keď som dnes ráno videla výsledok, musela som plakať — od radosti.\n\nPred ôsmimi mesiacmi som prišla do Viedne. Vtedy som nevedela povedať ani jedno nemecké slovo okrem 'Hallo' a 'Danke'. Dobre sa pamätám: Stála som na viedenskom hlavnom nádraží s kufrom a myslela som si: 'Čo tu robím? Vôbec nič nerozumiem!'\n\nAle potom som začala učiť sa. Každý deň trochu — často skoro ráno pred prácou alebo večer po smene. Niekedy to bolo ťažké, niekedy frustrujúce. Ale neprestala som.\n\nTeraz viem toľko. Viem nakupovať a pýtať sa na cenu. Viem hovoriť u lekára o svojich príznakoch. Viem pozývať priateľov, písať listy, čítať cestovné poriadky. Viem hovoriť o svojich záľubách, rodine, snoch. Po nemecky!\n\nNajdôležitejšia vec, ktorú som sa naučila: Netreba sa báť chýb. Chyby sú normálne. Chyby sú dobré. Z chýb sa učíme.\n\nA teraz? Cesta pokračuje. Úroveň A2 na mňa čaká. Budem sa ďalej učiť, ďalej cvičiť, ďalej rásť. Pretože nemčina je viac ako jazyk — je mojim kľúčom k Viedni, k Rakúsku, k Európe.\n\nĎakujem za všetko, drahý denník. Do ďalšej cesty!\n\nVaša Jana",
-      questions: [
-        {
-          question: "Kde bola Jana po príchode do Viedne pred 8 mesiacmi?",
-          options: [
-            "Na letisku",
-            "Na viedenskom hlavnom nádraží",
-            "V nemocnici",
-            "V byte Lukasa",
-          ],
-          answer: "Na viedenskom hlavnom nádraží",
-        },
-        {
-          question: "Čo Jana hovorí o chybách (Fehlern)?",
-          options: [
-            "Chyby treba vždy opraviť.",
-            "Chyby sú hanba.",
-            "Chyby sú normálne a z chýb sa učíme.",
-            "Chyby na skúške sú neprijateľné.",
-          ],
-          answer: "Chyby sú normálne a z chýb sa učíme.",
-        },
-        {
-          question: "Čo Jana nazýva 'kľúčom k Viedni, Rakúsku a Európe'?",
-          options: ["Skúška Goethe", "Nemecký jazyk", "Jej práca", "Priateľstvo s Lukasom"],
-          answer: "Nemecký jazyk",
-        },
-      ],
-    },
-    {
-      type: "freewrite",
-      instruction:
-        "ZÁVEREČNÉ PÍSANIE — najdlhší freewrite celého kurzu. Napíš list niekomu, kto práve začína učiť sa nemčinu. Podeľ sa o 5 rád, ktoré by si chcel/a mať na začiatku. Buď úprimný/á, osobný/á a povzbudivý/á.",
-      prompt:
-        "Schreib einen Brief an jemanden, der jetzt anfängt, Deutsch zu lernen. Gib ihm/ihr 5 Ratschläge. Was hast du gelernt? Was ist wichtig? Was soll man nicht vergessen? (Napíš list niekomu, kto teraz začína učiť sa nemčinu. Daj mu/jej 5 rád. Čo si sa naučil/a? Čo je dôležité? Na čo treba nezabudnúť?)",
-      minWords: 70,
-      exampleAnswer:
-        "Liebe/r Deutschlernende/r,\n\nIch heiße Jana und ich habe gerade meinen A1-Kurs beendet. Ich möchte dir fünf Ratschläge geben, die mir sehr geholfen haben.\n\nErstens: Lerne jeden Tag — auch nur 15 Minuten! Kontinuität ist wichtiger als lange Lernstunden.\n\nZweitens: Hab keine Angst vor Fehlern. Fehler sind normal. Durch Fehler lernt man am besten. Sprich Deutsch — auch wenn du nicht perfekt bist!\n\nDrittens: Lerne Wörter immer in Sätzen, nicht allein. 'der Tisch' ist schwerer zu merken als 'Ich esse am Tisch'.\n\nViertens: Hör deutsche Musik, schau deutsche Serien, hör Podcasts. Je mehr du Deutsch hörst, desto besser wirst du.\n\nFünftens: Feier deinen Fortschritt! Jedes neue Wort ist ein Sieg. Du schaffst das — ich habe es auch geschafft!\n\nViel Erfolg auf deiner Deutschreise!\nJana",
+        [
+          "der Glückstag",
+          "šťastný deň"
+        ],
+        [
+          "die Erinnerung",
+          "spomienka"
+        ],
+        [
+          "die Minute",
+          "minúta"
+        ],
+        [
+          "das Ziel",
+          "cieľ"
+        ],
+        [
+          "das Gefühl",
+          "pocit"
+        ],
+        [
+          "der Applaus",
+          "potlesk"
+        ],
+        [
+          "der Moment",
+          "okamih"
+        ],
+        [
+          "ankommen",
+          "prísť, doraziť"
+        ],
+        [
+          "erinnern",
+          "spomenúť si"
+        ],
+        [
+          "nervös",
+          "nervózny"
+        ]
+      ]
     },
     {
       type: "wordorder",
-      instruction: "Zoraď slová do správnej nemeckej vety.",
+      instruction: "Usporiadajte slová do správneho nemeckého poradia.",
       sentences: [
         {
-          words: ["Jana", "hat", "die", "A1-Prüfung", "bestanden"],
-          correct: "Jana hat die A1-Prüfung bestanden",
-          hint: "Jana zložila skúšku A1.",
-          explanation: "Perfekt s 'haben': 'bestanden' = Partizip II od 'bestehen' — nepravidelné sloveso.",
+          words: [
+            "Ich",
+            "bin",
+            "jetzt",
+            "sehr",
+            "glücklich"
+          ],
+          correct: "Ich bin jetzt sehr glücklich",
+          hint: "Teraz som veľmi šťastný.",
+          explanation: "V nemčine je sloveso zvyčajne na druhom mieste vo vete. Príslovka miesta alebo času môže byť na prvom mieste."
         },
         {
-          words: ["Sie", "hat", "achtzig", "Lektionen", "gelernt", "und", "sehr", "viel", "Fortschritt", "gemacht"],
-          correct: "Sie hat achtzig Lektionen gelernt und sehr viel Fortschritt gemacht",
-          hint: "Naučila sa osemdesiat lekcií a urobila veľký pokrok.",
-          explanation: "Zwei Perfekt-Verben koordiniert: 'gelernt' und 'gemacht' — beide s 'hat'.",
+          words: [
+            "Sie",
+            "hat",
+            "die",
+            "Erinnerung",
+            "an",
+            "die",
+            "Reise",
+            "behütet"
+          ],
+          correct: "Sie hat die Erinnerung an die Reise behütet",
+          hint: "Ona si uchovala spomienku na cestu.",
+          explanation: "Vo vete v Perfekte je pomocné sloveso (haben/sein) na druhom mieste a hlavné sloveso (v tvare príčastia) na konci vety."
         },
         {
-          words: ["Ich", "bin", "sehr", "stolz", "auf", "meinen", "Fortschritt"],
-          correct: "Ich bin sehr stolz auf meinen Fortschritt",
-          hint: "Som veľmi hrdá/hrdý na môj pokrok.",
-          explanation: "'stolz auf + Akkusativ' — pevná väzba prídavného mena s predložkou.",
+          words: [
+            "Wir",
+            "können",
+            "das",
+            "Finale",
+            "nicht",
+            "verpassen"
+          ],
+          correct: "Wir können das Finale nicht verpassen",
+          hint: "Nemôžeme zmeškať finále.",
+          explanation: "S modálnym slovesom (können) je modálne sloveso na druhom mieste a hlavné sloveso v infinitíve na konci vety."
         },
         {
-          words: ["Nach", "achtzig", "Lektionen", "kann", "Jana", "auf", "Deutsch", "sprechen"],
-          correct: "Nach achtzig Lektionen kann Jana auf Deutsch sprechen",
-          hint: "Po osemdesiatich lekciách Jana vie hovoriť po nemecky.",
-          explanation: "'Nach + Dativ' na začiatku → inverzia; modálne sloveso 'kann' + infinitív na konci.",
+          words: [
+            "Der",
+            "Applaus",
+            "war",
+            "sehr",
+            "laut"
+          ],
+          correct: "Der Applaus war sehr laut",
+          hint: "Potlesk bol veľmi hlasný.",
+          explanation: "V jednoduchých oznamovacích vetách je sloveso (tu v minulom čase Präteritum) na druhom mieste."
         },
         {
-          words: ["Das", "Zertifikat", "ist", "der", "Beweis", "für", "Janas", "Deutschkenntnisse"],
-          correct: "Das Zertifikat ist der Beweis für Janas Deutschkenntnisse",
-          hint: "Certifikát je dôkazom Janiných znalostí nemčiny.",
-          explanation: "'Beweis für + Akkusativ' — nominálna väzba; 'Janas' = Genitiv vlastného mena.",
+          words: [
+            "Ein",
+            "bisschen",
+            "Deutsch",
+            "kann",
+            "ich",
+            "sprechen"
+          ],
+          correct: "Ein bisschen Deutsch kann ich sprechen",
+          hint: "Trochu nemecky viem hovoriť.",
+          explanation: "Keď je predmet alebo príslovka na prvom mieste, sloveso je stále na druhom mieste, po ktorom nasleduje podmet."
+        }
+      ]
+    },
+    {
+      type: "fill",
+      instruction: "Doplňte chýbajúce slová do viet.",
+      questions: [
+        {
+          sentence: "Das war mein persönlicher ______, als ich nach Wien gekommen bin.",
+          answer: "Glückstag",
+          hint: "šťastný deň",
+          explanation: "V kontexte osobného rozprávania o úspešnom dni sa hodí slovo 'Glückstag'."
         },
-      ],
+        {
+          sentence: "Ich habe mich an diesen ____ sehr gut erinnert.",
+          answer: "Moment",
+          hint: "okamih",
+          explanation: "Slovo 'Moment' sa hodí na označenie konkrétneho času alebo udalosti."
+        },
+        {
+          sentence: "Sie hat geweint, aber es war keine ____ der Traurigkeit.",
+          answer: "Träne",
+          hint: "slza",
+          explanation: "Veta hovorí o plači, ale nie zo smútku, takže 'Träne' je správne slovo."
+        },
+        {
+          sentence: "Nach dem Kurs hatten wir ein tolles ____.",
+          answer: "Gefühl",
+          hint: "pocit",
+          explanation: "Po kurze sa často spomína pozitívny 'Gefühl' (pocit)."
+        },
+        {
+          sentence: "Sie konnte ____ Deutsch sprechen, aber es war genug.",
+          answer: "ein bisschen",
+          hint: "trochu",
+          explanation: "Fráza 'ein bisschen' znamená 'trochu' a hodí sa sem."
+        },
+        {
+          sentence: "Ich ____ jetzt nicht mehr nervös.",
+          answer: "bin",
+          hint: "som (sloveso 'sein')",
+          explanation: "Toto je príklad použitia slovesa 'sein' v prítomnom čase. Správna forma pre 'Ich' je 'bin'."
+        },
+        {
+          sentence: "Wir ____ das Ziel in Wien erreicht.",
+          answer: "haben",
+          hint: "máme (pomocné sloveso 'haben')",
+          explanation: "Toto je príklad použitia pomocného slovesa 'haben' vo vete v Perfekte. Správna forma pre 'Wir' je 'haben'."
+        },
+        {
+          sentence: "Sie ____ schon gut Deutsch.",
+          answer: "kann",
+          hint: "vie, môže (sloveso 'können')",
+          explanation: "Toto je príklad použitia modálneho slovesa 'können' v prítomnom čase. Správna forma pre 'Sie' (ona) je 'kann'."
+        }
+      ]
+    },
+    {
+      type: "listen",
+      instruction: "Zapíšte si, čo počujete.",
+      questions: [
+        {
+          de: "der Glückstag",
+          sk: "šťastný deň"
+        },
+        {
+          de: "die Erinnerung",
+          sk: "spomienka"
+        },
+        {
+          de: "die Minute",
+          sk: "minúta"
+        },
+        {
+          de: "das Ziel",
+          sk: "cieľ"
+        },
+        {
+          de: "das Gefühl",
+          sk: "pocit"
+        },
+        {
+          de: "der Applaus",
+          sk: "potlesk"
+        },
+        {
+          de: "der Moment",
+          sk: "okamih"
+        },
+        {
+          de: "ankommen",
+          sk: "prísť, doraziť"
+        },
+        {
+          de: "erinnern",
+          sk: "spomenúť si"
+        },
+        {
+          de: "nervös",
+          sk: "nervózny"
+        },
+        {
+          de: "ein bisschen",
+          sk: "trochu"
+        },
+        {
+          de: "nicht mehr",
+          sk: "už nie"
+        }
+      ]
+    },
+    {
+      type: "mcq",
+      instruction: "Vyberte správnu možnosť.",
+      questions: [
+        {
+          question: "Čo znamená 'der Glückstag'?",
+          options: [
+            "Šťastná udalosť",
+            "Šťastný deň",
+            "Šťastný koniec",
+            "Šťastný pocit"
+          ],
+          answer: 1,
+          explanation: "'Glückstag' sa skladá zo slov 'Glück' (šťastie) a 'Tag' (deň), čo znamená 'šťastný deň'."
+        },
+        {
+          question: "Ako sa povie 'spomienka' po nemecky?",
+          options: [
+            "das Gefühl",
+            "der Moment",
+            "die Erinnerung",
+            "die Träne"
+          ],
+          answer: 2,
+          explanation: "'Die Erinnerung' je nemecké slovo pre 'spomienka'."
+        },
+        {
+          question: "Ktoré sloveso sa používa na vyjadrenie schopnosti?",
+          options: [
+            "haben",
+            "sein",
+            "können",
+            "werden"
+          ],
+          answer: 2,
+          explanation: "Modálne sloveso 'können' znamená 'môcť, vedieť' a používa sa na vyjadrenie schopnosti."
+        },
+        {
+          question: "Čo znamená 'nicht mehr'?",
+          options: [
+            "ešte nie",
+            "už nie",
+            "stále",
+            "vôbec nie"
+          ],
+          answer: 1,
+          explanation: "'Nicht mehr' je nemecký výraz pre 'už nie'."
+        },
+        {
+          question: "Ktorá forma slovesa 'sein' je správna pre 'ich' v prítomnom čase?",
+          options: [
+            "bin",
+            "bist",
+            "ist",
+            "sind"
+          ],
+          answer: 0,
+          explanation: "Správna forma slovesa 'sein' pre prvú osobu jednotného čísla ('ich') je 'bin'."
+        },
+        {
+          question: "Čo znamená 'ein bisschen Deutsch können'?",
+          options: [
+            "Vedieť veľa po nemecky",
+            "Nevedieť po nemecky",
+            "Vedieť trochu po nemecky",
+            "Chcieť vedieť po nemecky"
+          ],
+          answer: 2,
+          explanation: "'Ein bisschen' znamená 'trochu' a 'können' znamená 'vedieť', takže fráza znamená 'vedieť trochu po nemecky'."
+        },
+        {
+          question: "Ktorá veta je v správnom slovoslede?",
+          options: [
+            "Ich jetzt bin glücklich.",
+            "Jetzt ich bin glücklich.",
+            "Ich bin jetzt glücklich.",
+            "Glücklich bin ich jetzt."
+          ],
+          answer: 2,
+          explanation: "V nemeckej vete je sloveso zvyčajne na druhom mieste. 'Ich bin jetzt glücklich' je správny slovosled."
+        },
+        {
+          question: "Čo znamená 'das Ziel'?",
+          options: [
+            "Cesta",
+            "Cieľ",
+            "Začiatok",
+            "Koniec"
+          ],
+          answer: 1,
+          explanation: "'Das Ziel' je nemecké slovo pre 'cieľ'."
+        }
+      ]
+    },
+    {
+      type: "minitext",
+      instruction: "Lies den Text und beantworte die Fragen.",
+      text: "Anna Berg: Liebe Kursteilnehmer, das ist unser letztes Treffen! Bevor wir uns verabschieden, erzählt uns bitte kurz von eurem Glückstag. Jana, du zuerst?\nJana Nováková: Mein Glückstag war der Tag, als ich in Wien angekommen bin. Ich war sehr nervös und konnte kein Deutsch. Aber jetzt kann ich ein bisschen Deutsch sprechen! Ich erinnere mich an den ersten Tag im Kurs. Ich hatte Angst. Jetzt ist mein Ziel erreicht und ich habe viele schöne Erinnerungen. Ich bin so glücklich!\nAnna Berg: Wunderbar, Jana! Ein toller Glückstag!\n(Die Klasse applaudiert.)",
+      textSk: "Anna Berg: Milí účastníci kurzu, toto je naše posledné stretnutie! Skôr, než sa rozlúčime, povedzte nám prosím krátko o vašom šťastnom dni. Jana, ty prvá?\nJana Nováková: Môj šťastný deň bol deň, keď som prišla do Viedne. Bola som veľmi nervózna a nevedela som po nemecky. Ale teraz viem trochu po nemecky hovoriť! Spomínam si na prvý deň v kurze. Mala som strach. Teraz je môj cieľ dosiahnutý a mám veľa krásnych spomienok. Som taká šťastná!\nAnna Berg: Nádherné, Jana! Skvelý šťastný deň!\n(Trieda tlieska.)",
+      questions: [
+        {
+          question: "Wann war Janas Glückstag?",
+          options: [
+            "Als sie in Wien angekommen ist.",
+            "Am ersten Tag im Deutschkurs.",
+            "Als sie die Prüfung bestanden hat.",
+            "Als sie ihre Freundin getroffen hat."
+          ],
+          answer: 0,
+          explanation: "Jana sagt: 'Mein Glückstag war der Tag, als ich in Wien angekommen bin.'"
+        },
+        {
+          question: "Wie hat sich Jana gefühlt, als sie in Wien angekommen ist?",
+          options: [
+            "Sie war sehr glücklich.",
+            "Sie war sehr nervös.",
+            "Sie war müde.",
+            "Sie war gelangweilt."
+          ],
+          answer: 1,
+          explanation: "Jana sagt: 'Ich war sehr nervös und konnte kein Deutsch.'"
+        },
+        {
+          question: "Was kann Jana jetzt?",
+          options: [
+            "Sie kann perfekt Deutsch sprechen.",
+            "Sie kann kein Deutsch mehr.",
+            "Sie kann ein bisschen Deutsch sprechen.",
+            "Sie kann nur Deutsch hören."
+          ],
+          answer: 2,
+          explanation: "Jana sagt: 'Aber jetzt kann ich ein bisschen Deutsch sprechen!'"
+        },
+        {
+          question: "Was hat Jana am Ende des Textes?",
+          options: [
+            "Sie hat viele neue Probleme.",
+            "Sie hat viele schöne Erinnerungen.",
+            "Sie hat keine Erinnerungen mehr.",
+            "Sie hat ihren Kurs verloren."
+          ],
+          answer: 1,
+          explanation: "Jana sagt: 'Jetzt ist mein Ziel erreicht und ich habe viele schöne Erinnerungen.'"
+        }
+      ]
     },
     {
       type: "speaking",
-      instruction: "Počúvaj nemeckú vetu. Potom hovor nahlas a skontroluj sa.",
+      instruction: "Höre zu und sprich nach.",
       phrases: [
         {
-          de: "Jana hat die A1-Prüfung bestanden!",
-          sk: "Jana zložila skúšku A1!",
-          tip: "bestanden: be-ŠTAN-den — st=št",
+          de: "der Glückstag",
+          sk: "šťastný deň",
+          tip: "Glück: [y] nie [i]"
         },
         {
-          de: "Herzlichen Glückwunsch! Du hast es geschafft!",
-          sk: "Srdečne gratulujem! Zvládol/a si to!",
-          tip: "Glückwunsch: GLÜK-vunš — ü=ü, w=v",
+          de: "eine Erinnerung",
+          sk: "spomienka",
+          tip: "Erinnerung: [ɛ] nie [e]"
         },
         {
-          de: "Ich bin sehr stolz auf meinen Fortschritt.",
-          sk: "Som veľmi hrdá/hrdý na môj pokrok.",
-          tip: "stolz: štolc — st=št, z=c",
+          de: "Ich kann Deutsch",
+          sk: "Vieme po nemecky",
+          tip: "kann: [a] nie [ɔ]"
         },
         {
-          de: "Ich habe achtzig Lektionen auf Deutsch gelernt.",
-          sk: "Naučil/a som sa osemdesiat lekcií po nemecky.",
-          tip: "achtzig: ACH-tsich — ch hrdelné, zig=tsich",
+          de: "Wir sind im Finale",
+          sk: "Sme vo finále",
+          tip: "Finale: [a] nie [ɔ]"
         },
         {
-          de: "Weiter so! Das nächste Ziel ist A2.",
-          sk: "Pokračuj tak! Ďalší cieľ je A2.",
-          tip: "nächste: NÉCH-ste — ä=é, ch hrdelné",
+          de: "Das Ziel ist Wien",
+          sk: "Cieľ je Viedeň",
+          tip: "Ziel: [tsiːl]"
         },
-      ],
+        {
+          de: "Ich erinnere mich",
+          sk: "Spomínam si",
+          tip: "erinnere: [ɛ] nie [e]"
+        },
+        {
+          de: "Das war ein Glückstag",
+          sk: "To bol šťastný deň",
+          tip: "Glückstag: [y] nie [i]"
+        },
+        {
+          de: "Jetzt können wir Deutsch",
+          sk: "Teraz vieme po nemecky",
+          tip: "können: [ø]"
+        }
+      ]
     },
+    {
+      type: "truefalse",
+      instruction: "Rozhodnite, či sú nasledujúce tvrdenia pravdivé (Wahr) alebo nepravdivé (Falsch).",
+      statements: [
+        {
+          statement: "Jana mala vo Viedni svoj Glückstag.",
+          isTrue: true,
+          explanation: "Lekcia sa zameriava na Janin 'šťastný deň' vo Viedni."
+        },
+        {
+          statement: "Jana vedela po nemecky už pred kurzom.",
+          isTrue: false,
+          explanation: "Jana sa učila nemčinu a na začiatku vedela 'kein Deutsch können'."
+        },
+        {
+          statement: "Viedeň bol Janin cieľ.",
+          isTrue: true,
+          explanation: "Jana cestovala do Viedne, čo bol jej cieľ."
+        },
+        {
+          statement: "Jana nebola na konci kurzu nervózna.",
+          isTrue: false,
+          explanation: "Na konci kurzu bola Jana pravdepodobne nervózna, ako je bežné pred finále."
+        },
+        {
+          statement: "Applaus bedeutet Tränen.",
+          isTrue: false,
+          explanation: "Applaus (potlesk) je znakom radosti a úspechu, nie smútku (Tränen)."
+        }
+      ]
+    },
+    {
+      type: "dictation",
+      instruction: "Napíšte vety, ktoré počujete.",
+      sentences: [
+        {
+          de: "Das ist ein Glückstag.",
+          sk: "Toto je šťastný deň."
+        },
+        {
+          de: "Ich erinnere mich gut.",
+          sk: "Dobre si pamätám."
+        },
+        {
+          de: "Wir sind jetzt in Wien.",
+          sk: "Teraz sme vo Viedni."
+        },
+        {
+          de: "Das Finale war toll.",
+          sk: "Finále bolo skvelé."
+        },
+        {
+          de: "Ich konnte kein Deutsch.",
+          sk: "Nevedel som po nemecky."
+        }
+      ]
+    },
+    {
+      type: "categorysort",
+      instruction: "Roztrieďte slová do správnych kategórií.",
+      categories: [
+        {
+          name: "Časové pojmy",
+          color: "blue",
+          words: [
+            "der Tag",
+            "die Minute",
+            "der Moment",
+            "jetzt"
+          ]
+        },
+        {
+          name: "Pocity a emócie",
+          color: "rose",
+          words: [
+            "das Gefühl",
+            "die Träne",
+            "nervös",
+            "der Applaus"
+          ]
+        },
+        {
+          name: "Ciele a úspechy",
+          color: "green",
+          words: [
+            "das Ziel",
+            "das Finale",
+            "der Kurs",
+            "ankommen"
+          ]
+        }
+      ],
+      explanation: "Slová sú rozdelené do kategórií podľa ich významu: čas, pocity a ciele/úspechy."
+    },
+    {
+      type: "translation",
+      instruction: "Preložte vety zo slovenčiny do nemčiny.",
+      sentences: [
+        {
+          sk: "Toto bol môj najšťastnejší deň.",
+          answer: "Das war mein Glückstag.",
+          hint: "Glückstag",
+          explanation: "Použili sme podstatné meno 'der Glückstag' z lekcie."
+        },
+        {
+          sk: "Spomínam si na Viedeň.",
+          answer: "Ich erinnere mich an Wien.",
+          hint: "erinnern an",
+          explanation: "Použili sme reflexívne sloveso 'sich erinnern an' s predložkou 'an'."
+        },
+        {
+          sk: "Teraz viem trochu po nemecky.",
+          answer: "Ich kann jetzt ein bisschen Deutsch.",
+          hint: "können, ein bisschen",
+          explanation: "Použili sme modálne sloveso 'können' a spojenie 'ein bisschen'."
+        },
+        {
+          sk: "Cieľ bol dosiahnutý.",
+          answer: "Das Ziel ist angekommen.",
+          hint: "Ziel, ankommen",
+          explanation: "Použili sme podstatné meno 'das Ziel' a sloveso 'ankommen' vo forme Perfekt."
+        }
+      ]
+    },
+    {
+      type: "conjugation",
+      instruction: "Doplňte správne tvary slovies.",
+      verbs: [
+        {
+          infinitive: "können",
+          translation: "môcť, vedieť",
+          forms: [
+            {
+              pronoun: "ich",
+              correct: "kann"
+            },
+            {
+              pronoun: "du",
+              correct: "kannst"
+            },
+            {
+              pronoun: "er/sie/es",
+              correct: "kann"
+            },
+            {
+              pronoun: "wir",
+              correct: "können"
+            },
+            {
+              pronoun: "ihr",
+              correct: "könnt"
+            },
+            {
+              pronoun: "sie/Sie",
+              correct: "können"
+            }
+          ],
+          note: "Sloveso 'können' je modálne sloveso, ktoré sa v prítomnom čase časuje nepravidelne (zmena samohlásky v 1. a 3. osobe sg.)."
+        },
+        {
+          infinitive: "haben",
+          translation: "mať",
+          forms: [
+            {
+              pronoun: "ich",
+              correct: "hatte"
+            },
+            {
+              pronoun: "du",
+              correct: "hattest"
+            },
+            {
+              pronoun: "er/sie/es",
+              correct: "hatte"
+            },
+            {
+              pronoun: "wir",
+              correct: "hatten"
+            },
+            {
+              pronoun: "ihr",
+              correct: "hattet"
+            },
+            {
+              pronoun: "sie/Sie",
+              correct: "hatten"
+            }
+          ],
+          note: "Toto je minulý čas (Präteritum) slovesa 'haben'. V hovorovej reči sa často používa Perfekt ('ich habe gehabt'), ale Präteritum je dôležité pre toto sloveso."
+        }
+      ]
+    }
   ],
-  reviewWords: [
-    "Ich habe es geschafft!",
-    "Herzlichen Glückwunsch!",
-    "stolz sein auf",
-    "der Abschluss",
-    "die Leistung",
-    "feiern",
-    "weiter lernen",
-    "das Niveau A2",
-    "Danke für alles!",
-    "Bis bald!",
-  ],
-  lessonNotes:
-    "HERZLICHEN GLÜCKWUNSCH! Du hast alle 80 Lektionen des A1-Kurses abgeschlossen! Das ist eine außergewöhnliche Leistung. Du kannst jetzt auf Deutsch kommunizieren, einkaufen, beim Arzt gehen, Freunde einladen, und viel mehr. Jana hat ihre Prüfung bestanden — und du hast 80 Lektionen abgeschlossen. Sei stolz auf dich! Die nächste Stufe heißt A2. Viel Erfolg und Tschüss! 🎉 || SRDEČNE BLAHOŽELÁM! Dokončil/a si všetkých 80 lekcií kurzu A1. To je mimoriadny výkon. Teraz vieš komunikovať po nemecky, nakupovať, ísť k lekárovi, pozývať priateľov, a oveľa viac. Jana zložila skúšku — a ty si dokončil/a 80 lekcií. Buď na seba hrdý/á! Ďalší krok sa volá A2. Veľa úspechu a čau!",
+  reviewWords: []
 };

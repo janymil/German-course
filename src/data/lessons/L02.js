@@ -9,17 +9,47 @@ export const lesson02 = {
   narrativeContext: 'Jana sa učí klásť základné otázky pri zoznamovaní a reagovať na bežné situácie v rozhovoroch.',
   communicativeGoal: 'Po tejto lekcii viem klásť základné otázky a vyjadriť súhlas alebo nesúhlas.',
   skillFocus: ['vocabulary', 'grammar', 'reading', 'speaking'],
-  grammarNote: {
-    rule: 'Opytovacie zámená (W-Fragen) a poriadok slov',
-    explanation: 'V nemčine začíname opytovacie vety, pri ktorých očakávame konkrétnu informáciu (tzv. dopĺňacie otázky), vždy opytovacím zámenom. Tieto slová zväčša začínajú na písmeno W (preto sa volajú W-Fragen), napríklad: "wie" (ako), "was" (čo) alebo "wo" (kde). Ak veta začína opytovacím zámenom, hneď na druhom mieste nasleduje vyčasované sloveso a až potom podmet.',
-    examples: [
-      { de: 'Wie heißt du?', sk: 'Ako sa voláš?' },
-      { de: 'Was ist das?', sk: 'Čo je to?' },
-      { de: 'Wo bist du?', sk: 'Kde si?' },
-      { de: 'Wer ist das?', sk: 'Kto je to?' }
-    ],
-    slovakContrastNote: 'Opytovacie slovo kladieme zásadne na prvé miesto a za ním nasleduje sloveso. Na rozdiel od angličtiny tu nie sú žiadne pomocné slovesá ako "do/does", systém pripomína skôr slovenčinu.'
-  },
+  grammarNotes: [
+    {
+      rule: 'W-Fragen: Majáky nemeckého hľadania informácií',
+      explanation: `<p>Viete, ako začnete hľadať pevné fakty? Pomocou W-slov, ktoré znejú a plnia funkciu záchytných bodov, čiže majákov. Nemci idú priamo na vec, žiadna vata na začiatku. Otázka sa opiera o W, oprie sa oň celá intonácia a hneď viete, na čom ste.</p>
+<table><thead><tr><th>W-Wort</th><th>Význam a emócia</th><th>Príklad</th></tr></thead><tbody>
+<tr><td><strong>wie</strong></td><td>ako (spôsob)</td><td>Wie heißt du?</td></tr>
+<tr><td><strong>was</strong></td><td>čo (vec, abstrakcia)</td><td>Was ist das?</td></tr>
+<tr><td><strong>wo</strong></td><td>kde (miesto)</td><td>Wo bist du?</td></tr>
+<tr><td><strong>wer</strong></td><td>kto (osoba)</td><td>Wer ist das?</td></tr>
+<tr><td><strong>woher</strong></td><td>odkiaľ (pôvod)</td><td>Woher kommst du?</td></tr>
+</tbody></table>
+<div class="tip-box">💡 <strong>Tip Profesora:</strong> Predstavte si, že každé z týchto slov má v sebe úder na bubon dopytu. Intonácia u W-Fragen nenecháva hlas ísť na konci vysoko nahor (ako v slovenčine). Ide dolu, pretože si pýtame fakt, nie súhlas.</div>`,
+      examples: [
+        { de: 'Wie heißt du?', sk: 'Ako sa voláš?' },
+        { de: 'Was ist das?', sk: 'Čo je to?' },
+        { de: 'Wo bist du?', sk: 'Kde si?' },
+      ],
+      slovakContrastNote: 'V slovenčine vytiahneme hlas do výšin: "A ty sa voláš AKOOO?". Nemec ide rázne a dospodu: "WIE heißt du.".'
+    },
+    {
+      rule: 'Srdce vety: Posvätná 2. pozícia slovesa',
+      explanation: `<p>Toto si zapíšte za uši! V slovenčine si slová hádžeme, ako sa nám páči. "Kde si?", "Si kde?". Všetko prejde.</p>
+<p>Nemčina je inžinierske dielo. Má presný mechanizmus. Motorom vety je vždy <strong>Sloveso (časované)</strong> a pri W-otázke (aj pri bežnej oznamovacej vete) ho musia Nemci počuť na pevnej <strong>DRUHEJ POZÍCII</strong>.</p>
+<ol>
+<li><strong>Pozícia 1:</strong> Návesť (Opytovacie slovo: Wie, Wo...)</li>
+<li><strong>Pozícia 2: MOTOR VETY: Sloveso</strong></li>
+<li><strong>Pozícia 3:</strong> Podmet (kto ten motor poháňa)</li>
+</ol>
+<table><thead><tr><th>Pozícia 1 (Návesť)</th><th>Pozícia 2 (Motor)</th><th>Pozícia 3 (Vykonávateľ)</th></tr></thead><tbody>
+<tr><td>Wie</td><td><strong>heißt</strong></td><td>du?</td></tr>
+<tr><td>Wo</td><td><strong>bist</strong></td><td>du?</td></tr>
+<tr><td>Was</td><td><strong>ist</strong></td><td>das?</td></tr>
+</tbody></table>
+<div class="warn-box">⚠️ <strong>Varovanie Profesora:</strong> Ak dáte sloveso na koniec a poviete "Wie du heißt?" - ukázali ste, že váš nemecký motor má vyskočený remeň. Nedá sa to počúvať. Sloveso pevne na miesto č. 2!</div>`,
+      examples: [
+        { de: 'Wo wohnst du?', sk: 'Kde bývaš?', note: '1. Návesť (Wo) → 2. Motor (wohnst)' },
+        { de: 'Wer ist das?', sk: 'Kto je to?' },
+      ],
+      slovakContrastNote: 'Slovenský slovosled je ako tekutina, prispôsobí sa nálade ("Bývaš kde ty?"). Nemecký slovosled je Lego stavebnica. Dieliky musia zacvaknúť na presné piny.'
+    },
+  ],
   vocab: [
     {
       de: 'wie',
@@ -251,7 +281,9 @@ export const lesson02 = {
         { de: 'fragen und antworten', sk: 'pýtať sa a odpovedať' },
         { de: 'Das ist richtig.', sk: 'To je správne.' },
         { de: 'Sehr gut, und dir?', sk: 'Veľmi dobre, a tebe?' },
-        { de: 'Wo bist du?', sk: 'Kde si?' }
+        { de: 'Wo bist du?', sk: 'Kde si?' },
+        { de: 'lernen', sk: 'učiť sa' },
+        { de: 'schlecht', sk: 'zle, zlý' }
       ]
     },
     {
@@ -298,22 +330,22 @@ export const lesson02 = {
     {
       type: 'minitext',
       instruction: 'Prečítaj si text o Janinom prvom dni na jazykovom kurze a odpovedz na otázky.',
-      text: 'Jana ist in Wien. Heute ist der erste Tag im Deutschkurs. Die Frau fragt: "Hallo! Wie heißt du?" Jana antwortet: "Ich heiße Jana. Und wer bist du?" Die Frau sagt: "Ich bin Anna. Wie geht es dir?" Jana sagt: "Gut, danke! Was lernen wir?" Anna antwortet: "Wir lernen Deutsch. Das ist sehr gut!" Jana fragt: "Ist Deutsch schwer?" Anna lacht: "Nein!"',
-      textSk: 'Jana je vo Viedni. Dnes je prvý deň na kurze nemčiny. Žena sa pýta: "Ahoj! Ako sa voláš?" Jana odpovedá: "Volám sa Jana. A kto si ty?" Žena hovorí: "Ja som Anna. Ako sa máš?" Jana hovorí: "Dobre, ďakujem! Čo sa učíme?" Anna odpovedá: "Učíme sa nemčinu. To je veľmi dobre!" Jana sa pýta: "Je nemčina ťažká?" Anna sa smeje: "Nie!"',
+      text: 'Heute beginnt der Deutschkurs. Jana ist ein bisschen nervös. Im Kurs sind zehn Personen. Die Lehrerin heißt Frau Schmidt. Sie ist sehr nett. „Guten Tag! Wie heißen Sie?" Alle sagen ihren Namen. Jana lernt Anna kennen. Anna kommt aus Polen und ist auch neu in Wien. „Wie geht es dir, Jana?" — „Gut, danke! Und dir?" — „Auch gut!" Sie lernen zusammen. Der Deutschkurs ist toll.',
+      textSk: 'Dnes začína kurz nemčiny. Jana je trochu nervózna. V kurze je desať osôb. Učiteľka sa volá pani Schmidtová. Je veľmi milá. „Dobrý deň! Ako sa voláte?" Všetci povedia svoje meno. Jana spoznáva Annu. Anna pochádza z Poľska a je tiež nová vo Viedni. „Ako sa máš, Jana?" — „Dobre, ďakujem! A ty?" — „Tiež dobre!" Učia sa spolu. Kurz nemčiny je skvelý.',
       questions: [
         {
-          question: 'Wer fragt zuerst?',
-          questionSk: 'Kto sa pýta prvý?',
-          options: ['Jana', 'Anna', 'Lukas', 'Thomas'],
-          answer: 1,
-          explanation: 'Anna sa pýta prvá: "Hallo! Wie heißt du?"'
+          question: 'Wie heißt die Lehrerin?',
+          questionSk: 'Ako sa volá učiteľka?',
+          options: ['Jana', 'Anna', 'Frau Schmidt', 'Maria'],
+          answer: 2,
+          explanation: 'Text hovorí: "Die Lehrerin heißt Frau Schmidt."'
         },
         {
-          question: 'Was lernen Jana und Anna?',
-          questionSk: 'Čo sa učia Jana a Anna?',
-          options: ['Englisch', 'Deutsch', 'Slowakisch', 'Französisch'],
-          answer: 1,
-          explanation: 'Anna hovorí: "Wir lernen Deutsch."'
+          question: 'Woher kommt Anna?',
+          questionSk: 'Odkiaľ pochádza Anna?',
+          options: ['Aus der Slowakei', 'Aus Deutschland', 'Aus Polen', 'Aus Österreich'],
+          answer: 2,
+          explanation: 'Text hovorí: "Anna kommt aus Polen und ist auch neu in Wien."'
         },
         {
           question: 'Wie geht es Jana?',
@@ -354,6 +386,88 @@ export const lesson02 = {
           tip: 'Oder sa vyslovuje s dlhým o a mäkkým d.'
         }
       ]
+    },
+    {
+      type: 'truefalse',
+      instruction: 'Rozhodni, či je tvrdenie správne (Richtig) alebo nesprávne (Falsch).',
+      statements: [
+        {
+          statement: '„Wie" fragt nach dem Ort.',
+          isTrue: false,
+          explanation: '„Wie" bedeutet „ako" und fragt nach der Art/Weise. „Wo" fragt nach dem Ort (kde).'
+        },
+        {
+          statement: 'In einer W-Frage steht das Verb an zweiter Stelle.',
+          isTrue: true,
+          explanation: 'Správne! V W-otázke je sloveso vždy na 2. mieste: Wie heißt du?'
+        },
+        {
+          statement: '„Was" fragt nach einer Person.',
+          isTrue: false,
+          explanation: '„Was" fragt nach Dingen (čo). Nach Personen fragt man mit „Wer" (kto).'
+        },
+        {
+          statement: '„Gut" ist das Gegenteil von „schlecht".',
+          isTrue: true,
+          explanation: 'Správne! Gut (dobrý) je opakom slova schlecht (zlý).'
+        },
+        {
+          statement: '„Richtig oder falsch?" ist eine W-Frage.',
+          isTrue: false,
+          explanation: 'Nie je to W-otázka, pretože nezačína W-slovom. Je to Ja/Nein-otázka.'
+        }
+      ]
+    },
+    {
+      type: 'translation',
+      instruction: 'Prelož vety zo slovenčiny do nemčiny.',
+      sentences: [
+        {
+          sk: 'Ako sa máš?',
+          answer: 'Wie geht es dir',
+          hint: 'Wie...',
+          explanation: 'Ustálená fráza: „Wie geht es dir?" — doslova „Ako ide to tebe?"'
+        },
+        {
+          sk: 'Čo je to?',
+          answer: 'Was ist das',
+          hint: 'Was...',
+          explanation: '„Was" = čo, „ist" = je, „das" = to.'
+        },
+        {
+          sk: 'Kde si?',
+          answer: 'Wo bist du',
+          hint: 'Wo...',
+          explanation: '„Wo" sa pýta na miesto. Sloveso „bist" na 2. mieste.'
+        },
+        {
+          sk: 'To je správne.',
+          answer: 'Das ist richtig',
+          hint: 'Das ist...',
+          explanation: '„Richtig" = správne, opak „falsch".'
+        }
+      ]
+    },
+    {
+      type: 'dictation',
+      instruction: 'Počúvaj a zapíš nemeckú vetu.',
+      sentences: [
+        { de: 'Wie heißt du?', sk: 'Ako sa voláš?', hint: '3 slová' },
+        { de: 'Wo bist du?', sk: 'Kde si?', hint: '3 slová' },
+        { de: 'Das ist richtig.', sk: 'To je správne.' },
+        { de: 'Die Frau lernt Deutsch.', sk: 'Žena sa učí nemčinu.', hint: '4 slová' },
+        { de: 'Was ist das?', sk: 'Čo je to?' }
+      ]
+    },
+    {
+      type: 'categorysort',
+      instruction: 'Roztrieď slová do správnych skupín.',
+      categories: [
+        { name: 'W-Fragen (opytovacie)', color: 'blue', words: ['wie', 'was', 'wo', 'wer'] },
+        { name: 'Pozitívne', color: 'green', words: ['gut', 'richtig'] },
+        { name: 'Negatívne', color: 'rose', words: ['schlecht', 'falsch'] }
+      ],
+      explanation: 'W-otázky začínajú opytovacím slovom (wie, was, wo, wer). Gut a richtig majú pozitívny význam, schlecht a falsch negatívny.'
     }
   ],
   reviewWords: ['sein', 'heißen', 'ich', 'du'],

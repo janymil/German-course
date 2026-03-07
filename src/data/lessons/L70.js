@@ -1,362 +1,878 @@
-﻿export const lesson70 = {
+export const lesson70 = {
   id: 70,
   week: 14,
   day: 5,
-  title: "Großer Review: A1-Meilenstein",
-  topic: "Veľké opakovanie: A1 míľnik",
+  title: "Meinungsaustausch über Regeln",
+  topic: "Vyjadrovanie názoru na pravidlá, formulovanie diskusie.",
   cefr: "A1",
-  xpReward: 50,
-  narrativeContext: "Jana žije vo Viedni 3,5 mesiaca! Píše list svojmu minulému ja — pred tým, ako začala sa učiť nemčinu. Reflektuje na svoju cestu: prvé slová, prvý rozhovor, prvá chyba, prvý úspech. Táto lekcia je oslava — Jana prešla celou úrovňou A1!",
-  communicativeGoal: "Po tejto lekcii viem komplexne zopakovať celú A1 gramatiku (artikel, časy, modály, vedľajšie vety, minulý čas) a identifikovať medzery v znalostiach.",
-  skillFocus: ["grammar", "writing", "speaking", "reading"],
-  grammarNote: {
-    rule: "Veľké opakovanie A1 — všetky hlavné gramatické štruktúry",
-    explanation: "1. Členy + rod: der/die/das, Nom/Akk/Dat. 2. Prézens: pravidelné, nepravidelné, so zmenou kmeňa, modálne. 3. Odlučiteľné slovesá (prézens + Perfekt). 4. Perfekt: haben/sein voľba + príčastie. 5. Pády: Nom, Akk, Dat (+ Genitív úvod). 6. Modálne slovesá: müssen, können, dürfen, möchten, wollen, sollen. 7. Vedľajšie vety: weil, dass, wenn, ob + sloveso na konci. 8. Komparatív + Superlatív. 9. Imperatív (du/ihr/Sie). 10. Vzťažné vety (úvod).",
-    examples: [
-      { de: "Ich habe viel gelernt, weil ich jeden Tag geübt habe.", sk: "Veľa som sa naučila, lebo som každý deň cvičila." },
-      { de: "Am Anfang war es schwer, aber jetzt kann ich gut Deutsch sprechen.", sk: "Na začiatku to bolo ťažké, ale teraz viem dobre hovoriť po nemecky." },
-      { de: "Wien ist die Stadt, die ich am meisten liebe.", sk: "Viedeň je mesto, ktoré milujem najviac." },
-      { de: "Ich werde weiter lernen, weil Deutsch mir sehr gefällt.", sk: "Budem sa ďalej učiť, lebo nemčina sa mi veľmi páči." }
-    ],
-    slovakContrastNote: "Po 3,5 mesiacoch štúdia: slovenčina pomáhala v mnohých oblastiach (vedľajšie vety, datív, pády), ale nemčina mala aj vlastné výzvy (členy, rod, Perfekt s sein/haben, sklonné tvary). Teraz vieš na úrovni A1 — to je obrovský pokrok!"
-  },
+  xpReward: 20,
+  narrativeContext: "Jana und Luisa sprechen über die Regeln für Mülltrennung in Wien. Jana findet die Regeln kompliziert. Luisa denkt, die Regeln sind gut.",
+  communicativeGoal: "Nach dieser Lektion kann ich meine Meinung zu Regeln ausdrücken und einfache Diskussionen führen.",
+  skillFocus: [
+    "speaking",
+    "vocabulary",
+    "grammar"
+  ],
+  lessonNotes: "V tejto lekcii sa naučíš, ako vyjadriť svoj názor na pravidlá v nemčine. Použijeme frázy ako 'Ich finde, dass...' a 'Meiner Meinung nach...'. Taktiež si precvičíš základné diskusné obraty.",
+  grammarNotes: [
+    {
+      rule: "Meinung äußern: Ich finde, dass...",
+      explanation: "<p>V nemeckom jazyku sa názor často vyjadruje pomocou konštrukcie <strong>Ich finde, dass...</strong> (Myslím si, že...). Táto väzba je veľmi užitočná pri vyjadrovaní vlastných postojov a názorov na rôzne témy, pravidlá alebo situácie. Po spojke <strong>dass</strong> nasleduje vedľajšia veta, v ktorej sa sloveso nachádza na konci. Je dôležité pamätať na toto pravidlo o slovoslede, aby bola veta gramaticky správna. Táto konštrukcia je bežná v neformálnej aj formálnej reči a umožňuje jasne a zrozumiteľne prezentovať váš pohľad.</p>",
+      examples: [
+        {
+          de: "Ich finde, dass das wichtig ist.",
+          sk: "Myslím si, že toto je dôležité."
+        },
+        {
+          de: "Ich finde, dass wir die Regeln befolgen müssen.",
+          sk: "Myslím si, že musíme dodržiavať pravidlá."
+        },
+        {
+          de: "Ich finde, dass Mülltrennung gut ist.",
+          sk: "Myslím si, že separovanie odpadu je dobré."
+        },
+        {
+          de: "Ich finde, dass das zu kompliziert ist.",
+          sk: "Myslím si, že toto je príliš komplikované."
+        },
+        {
+          de: "Ich finde, dass Kinder mehr spielen sollen.",
+          sk: "Myslím si, že deti by mali viac hrať."
+        },
+        {
+          de: "Ich finde, dass das nicht fair ist.",
+          sk: "Myslím si, že toto nie je fér."
+        }
+      ],
+      slovakContrastNote: "V slovenčine často používame pri vyjadrovaní názoru slovesá ako 'myslím si', 'podľa mňa', 'zdá sa mi'. Nemecká konštrukcia 'Ich finde, dass...' je priama a vyžaduje špecifický slovosled s časovaným slovesom na konci vedľajšej vety, čo sa líši od bežného slovosledu v slovenčine."
+    },
+    {
+      rule: "Meinung äußern: Meiner Meinung nach",
+      explanation: "<p>Ďalším bežným spôsobom vyjadrenia názoru v nemčine je použitie frázy <strong>Meiner Meinung nach</strong> (Podľa môjho názoru). Táto konštrukcia sa zvyčajne stavia na začiatok vety a po nej nasleduje hlavná veta s časovaným slovesom na druhom mieste. Je to stručný a priamy spôsob, ako uviesť svoj názor. Fráza je veľmi podobná slovenskému 'Podľa môjho názoru' a je vhodná pre rôzne komunikačné situácie, či už ide o diskusiu o pravidlách, alebo o osobných postojoch.</p>",
+      examples: [
+        {
+          de: "Meiner Meinung nach ist das eine gute Idee.",
+          sk: "Podľa môjho názoru je to dobrý nápad."
+        },
+        {
+          de: "Meiner Meinung nach sollten wir pünktlich sein.",
+          sk: "Podľa môjho názoru by sme mali byť dochvíľni."
+        },
+        {
+          de: "Meiner Meinung nach ist Umweltschutz sehr wichtig.",
+          sk: "Podľa môjho názoru je ochrana životného prostredia veľmi dôležitá."
+        },
+        {
+          de: "Meiner Meinung nach ist das zu teuer.",
+          sk: "Podľa môjho názoru je to príliš drahé."
+        },
+        {
+          de: "Meiner Meinung nach hat er Recht.",
+          sk: "Podľa môjho názoru má pravdu."
+        },
+        {
+          de: "Meiner Meinung nach ist das nicht die Lösung.",
+          sk: "Podľa môjho názoru to nie je riešenie."
+        }
+      ],
+      slovakContrastNote: "Slovenská obdoba 'Podľa môjho názoru' je veľmi podobná nemeckej fráze 'Meiner Meinung nach'. Kľúčový rozdiel je v tom, že v nemčine po tejto fráze nasleduje hlavná veta, kde je sloveso na druhom mieste, zatiaľ čo v slovenčine môže byť slovosled voľnejší. V nemčine je táto štruktúra pevnejšia."
+    }
+  ],
   vocab: [
-    { de: "Ich habe... gelernt.", sk: "Naučil/a som sa...", example: "Ich habe viel Deutsch gelernt.", exampleSk: "Veľa som sa naučila po nemecky.", gender: null, srsId: "L70_V01", recycledFrom: [] },
-    { de: "zuerst... dann... schließlich", sk: "najprv... potom... nakoniec", example: "Zuerst war es schwer, dann einfacher, schließlich toll.", exampleSk: "Najprv to bolo ťažké, potom jednoduchšie, nakoniec skvelé.", gender: null, srsId: "L70_V02", recycledFrom: [60] },
-    { de: "Ich erinnere mich, dass...", sk: "Pamätám si, že...", example: "Ich erinnere mich, dass der erste Tag schwer war.", exampleSk: "Pamätám si, že prvý deň bol ťažký.", gender: null, srsId: "L70_V03", recycledFrom: [] },
-    { de: "sich erinnern an + Akk.", sk: "pamätať si na", example: "Ich erinnere mich an den ersten Tag.", exampleSk: "Pamätám si na prvý deň.", gender: null, srsId: "L70_V04", recycledFrom: [43] },
-    { de: "Ich bin stolz auf...", sk: "Som hrdý/á na...", example: "Ich bin stolz auf meinen Fortschritt.", exampleSk: "Som hrdá na môj pokrok.", gender: null, srsId: "L70_V05", recycledFrom: [] },
-    { de: "der Fortschritt", sk: "pokrok", example: "Ich habe große Fortschritte gemacht.", exampleSk: "Urobila som veľký pokrok.", gender: "M", srsId: "L70_V06", recycledFrom: [] },
-    { de: "Ich habe Fortschritte gemacht.", sk: "Dosiahol/a som pokrok. Urobil/a som pokrok.", example: "In drei Monaten habe ich viele Fortschritte gemacht.", exampleSk: "Za tri mesiace som urobila veľký pokrok.", gender: null, srsId: "L70_V07", recycledFrom: [] },
-    { de: "Es war schwer, aber...", sk: "Bolo to ťažké, ale...", example: "Es war schwer, aber ich habe nicht aufgehört.", exampleSk: "Bolo to ťažké, ale neprestala som.", gender: null, srsId: "L70_V08", recycledFrom: [] },
-    { de: "Ich kann jetzt...", sk: "Teraz viem/môžem...", example: "Ich kann jetzt auf Deutsch einkaufen.", exampleSk: "Teraz viem nakupovať po nemecky.", gender: null, srsId: "L70_V09", recycledFrom: [] },
-    { de: "die Fähigkeit", sk: "schopnosť", example: "Meine Fähigkeit in Deutsch hat sich verbessert.", exampleSk: "Moja schopnosť v nemčine sa zlepšila.", gender: "F", srsId: "L70_V10", recycledFrom: [] },
-    { de: "Ich habe Deutsch gelernt, weil...", sk: "Učil/a som sa nemčinu, lebo...", example: "Ich habe Deutsch gelernt, weil ich in Wien wohne.", exampleSk: "Učila som sa nemčinu, lebo bývam vo Viedni.", gender: null, srsId: "L70_V11", recycledFrom: [65] },
-    { de: "Wenn ich Deutsch spreche,...", sk: "Keď hovorím po nemecky,...", example: "Wenn ich Deutsch spreche, bin ich stolz.", exampleSk: "Keď hovorím po nemecky, som hrdá.", gender: null, srsId: "L70_V12", recycledFrom: [65] },
-    { de: "Das war gar nicht so schwer!", sk: "To vôbec nebolo také ťažké!", example: "Am Ende war das gar nicht so schwer!", exampleSk: "Na konci to vôbec nebolo také ťažké!", gender: null, srsId: "L70_V13", recycledFrom: [] },
-    { de: "Ich glaube, dass ich...", sk: "Myslím si, že...", example: "Ich glaube, dass ich gut Fortschritte gemacht habe.", exampleSk: "Myslím si, že som urobila dobrý pokrok.", gender: null, srsId: "L70_V14", recycledFrom: [65] },
-    { de: "Ich werde weiter lernen.", sk: "Budem sa ďalej učiť.", example: "Ich werde weiter Deutsch lernen und besser werden.", exampleSk: "Budem sa ďalej učiť nemčinu a budem lepšia.", gender: null, srsId: "L70_V15", recycledFrom: [66] },
-    { de: "das Ziel", sk: "cieľ", example: "Mein Ziel ist, fließend Deutsch zu sprechen.", exampleSk: "Môj cieľ je hovoriť plynule po nemecky.", gender: "N", srsId: "L70_V16", recycledFrom: [] },
-    { de: "erreichen", sk: "dosiahnuť", example: "Ich werde mein Ziel erreichen.", exampleSk: "Dosiahnem môj cieľ.", gender: null, srsId: "L70_V17", recycledFrom: [] },
-    { de: "das Deutsch", sk: "nemčina", example: "Mein Deutsch wird immer besser.", exampleSk: "Moja nemčina je stále lepšia.", gender: "N", srsId: "L70_V18", recycledFrom: [1] }
+    {
+      de: "die Meinung",
+      sk: "názor",
+      gender: "F",
+      srsId: "L70_V01",
+      example: "Ich habe eine andere Meinung.",
+      exampleSk: "Mám iný názor.",
+      recycledFrom: []
+    },
+    {
+      de: "die Regel",
+      sk: "pravidlo",
+      gender: "F",
+      srsId: "L70_V02",
+      example: "Das ist eine wichtige Regel.",
+      exampleSk: "To je dôležité pravidlo.",
+      recycledFrom: []
+    },
+    {
+      de: "der Müll",
+      sk: "smeti, odpad",
+      gender: "M",
+      srsId: "L70_V03",
+      example: "Der Müll muss raus.",
+      exampleSk: "Smeti musia ísť von.",
+      recycledFrom: []
+    },
+    {
+      de: "die Tonne",
+      sk: "smetiarska nádoba, kontajner",
+      gender: "F",
+      srsId: "L70_V04",
+      example: "Die Tonne ist voll.",
+      exampleSk: "Kontajner je plný.",
+      recycledFrom: []
+    },
+    {
+      de: "das Glas",
+      sk: "sklo",
+      gender: "N",
+      srsId: "L70_V05",
+      example: "Das Glas kommt in die blaue Tonne.",
+      exampleSk: "Sklo patrí do modrého kontajnera.",
+      recycledFrom: []
+    },
+    {
+      de: "das Papier",
+      sk: "papier",
+      gender: "N",
+      srsId: "L70_V06",
+      example: "Bitte werfen Sie das Papier in die Tonne.",
+      exampleSk: "Prosím, vhoďte papier do kontajnera.",
+      recycledFrom: []
+    },
+    {
+      de: "die Verpackung",
+      sk: "obal",
+      gender: "F",
+      srsId: "L70_V07",
+      example: "Die Verpackung ist aus Plastik.",
+      exampleSk: "Obal je z plastu.",
+      recycledFrom: []
+    },
+    {
+      de: "die Stadt",
+      sk: "mesto",
+      gender: "F",
+      srsId: "L70_V08",
+      example: "Wien ist eine schöne Stadt.",
+      exampleSk: "Viedeň je krásne mesto.",
+      recycledFrom: []
+    },
+    {
+      de: "der Verkehr",
+      sk: "doprava",
+      gender: "M",
+      srsId: "L70_V09",
+      example: "Der Verkehr in der Stadt ist laut.",
+      exampleSk: "Doprava v meste je hlučná.",
+      recycledFrom: []
+    },
+    {
+      de: "der Umweltschutz",
+      sk: "ochrana životného prostredia",
+      gender: "M",
+      srsId: "L70_V10",
+      example: "Umweltschutz ist wichtig.",
+      exampleSk: "Ochrana životného prostredia je dôležitá.",
+      recycledFrom: []
+    },
+    {
+      de: "das Plastik",
+      sk: "plast",
+      gender: "N",
+      srsId: "L70_V11",
+      example: "Diese Verpackung ist aus Plastik.",
+      exampleSk: "Tento obal je z plastu.",
+      recycledFrom: []
+    },
+    {
+      de: "finden",
+      sk: "nájsť, myslieť si",
+      gender: null,
+      srsId: "L70_V12",
+      example: "Ich finde das zu kompliziert.",
+      exampleSk: "Myslím si, že je to príliš komplikované.",
+      recycledFrom: []
+    },
+    {
+      de: "denken",
+      sk: "myslieť si",
+      gender: null,
+      srsId: "L70_V13",
+      example: "Ich denke, das ist eine gute Idee.",
+      exampleSk: "Myslím si, že to je dobrý nápad.",
+      recycledFrom: []
+    },
+    {
+      de: "sortieren",
+      sk: "triediť",
+      gender: null,
+      srsId: "L70_V14",
+      example: "Wir müssen den Müll sortieren.",
+      exampleSk: "Musíme triediť odpad.",
+      recycledFrom: []
+    },
+    {
+      de: "brauchen",
+      sk: "potrebovať",
+      gender: null,
+      srsId: "L70_V15",
+      example: "Brauchen wir eine neue Tonne?",
+      exampleSk: "Potrebujeme nový kontajner?",
+      recycledFrom: []
+    },
+    {
+      de: "meiner Meinung nach",
+      sk: "podľa môjho názoru",
+      gender: null,
+      srsId: "L70_V16",
+      example: "Meiner Meinung nach ist das gut so.",
+      exampleSk: "Podľa môjho názoru je to takto dobré.",
+      recycledFrom: []
+    },
+    {
+      de: "ich finde, dass...",
+      sk: "myslím si, že...",
+      gender: null,
+      srsId: "L70_V17",
+      example: "Ich finde, dass die Regeln klar sind.",
+      exampleSk: "Myslím si, že pravidlá sú jasné.",
+      recycledFrom: []
+    },
+    {
+      de: "ich denke, dass...",
+      sk: "myslím si, že...",
+      gender: null,
+      srsId: "L70_V18",
+      example: "Ich denke, dass das nicht stimmt.",
+      exampleSk: "Myslím si, že to nie je pravda.",
+      recycledFrom: []
+    },
+    {
+      de: "zu kompliziert",
+      sk: "príliš komplikované",
+      gender: null,
+      srsId: "L70_V19",
+      example: "Das System ist zu kompliziert.",
+      exampleSk: "Systém je príliš komplikovaný.",
+      recycledFrom: []
+    },
+    {
+      de: "gut so",
+      sk: "takto dobre",
+      gender: null,
+      srsId: "L70_V20",
+      example: "Ist das gut so?",
+      exampleSk: "Je to takto dobré?",
+      recycledFrom: []
+    },
+    {
+      de: "eine andere Meinung",
+      sk: "iný názor",
+      gender: null,
+      srsId: "L70_V21",
+      example: "Ich habe eine andere Meinung.",
+      exampleSk: "Mám iný názor.",
+      recycledFrom: []
+    },
+    {
+      de: "wichtig",
+      sk: "dôležitý",
+      gender: null,
+      srsId: "L70_V22",
+      example: "Das ist sehr wichtig.",
+      exampleSk: "To je veľmi dôležité.",
+      recycledFrom: []
+    },
+    {
+      de: "klar",
+      sk: "jasný",
+      gender: null,
+      srsId: "L70_V23",
+      example: "Die Regeln sind nicht klar.",
+      exampleSk: "Pravidlá nie sú jasné.",
+      recycledFrom: []
+    },
+    {
+      de: "stimmen",
+      sk: "byť správny, súhlasiť",
+      gender: null,
+      srsId: "L70_V24",
+      example: "Das stimmt nicht.",
+      exampleSk: "To nie je správne.",
+      recycledFrom: []
+    }
   ],
   exercises: [
     {
       type: "flashcard",
-      instruction: "Veľké opakovanie A1! Prezri si kľúčové frázy a gramatické vzory.",
-      items: [
-        "Nom/Akk/Dat člen: der/den/dem (M) | die/die/der (F) | das/das/dem (N)",
-        "Modálne: müssen-muss | können-kann | dürfen-darf | möchten-möchte | wollen-will | sollen-soll",
-        "Perfekt haben: ich habe... gemacht/gegessen/gekauft",
-        "Perfekt sein: ich bin... gegangen/gefahren/gekommen/geblieben",
-        "Vedľajšia veta: weil/dass/wenn/ob → SLOVESO NA KONCI",
-        "Superlatív: am größten, am besten, am schnellsten",
-        "Imperatív: Geh! Sprich! Sei! | Geht! Seid! | Gehen Sie! Seien Sie!",
-        "Vzťažná veta: der/die/das (rod=podst.meno) + sloveso na konci",
-        "Budúcnosť: werden + infinitív NA KONCI | alebo prézens + čas. určenie",
-        "Datívne zámená: mir/dir/ihm/ihr/uns/euch/ihnen",
-        "Datívne slovesá: helfen+D, gefallen+D, gehören+D, danken+D",
-        "Neurčité zámená: man/jemand/niemand/etwas/nichts",
-        "der Fortschritt = pokrok (M)",
-        "das Ziel = cieľ (N)",
-        "Ich bin stolz auf... = Som hrdý/á na..."
+      instruction: "Prezri si slovíčka tejto lekcie. Klikni na kartičku pre preklad."
+    },
+    {
+      type: "match",
+      instruction: "Spojte nemecké slová s ich slovenskými prekladmi.",
+      pairs: [
+        [
+          "die Meinung",
+          "názor"
+        ],
+        [
+          "die Regel",
+          "pravidlo"
+        ],
+        [
+          "der Müll",
+          "smeti"
+        ],
+        [
+          "die Tonne",
+          "smetiarska nádoba"
+        ],
+        [
+          "das Glas",
+          "sklo"
+        ],
+        [
+          "das Papier",
+          "papier"
+        ],
+        [
+          "die Verpackung",
+          "obal"
+        ],
+        [
+          "sortieren",
+          "triediť"
+        ],
+        [
+          "wichtig",
+          "dôležitý"
+        ],
+        [
+          "klar",
+          "jasný"
+        ]
       ]
     },
     {
-      type: "mcq",
-      instruction: "Zmiešané gramatické otázky pokrývajúce celú A1. Otestuj sa!",
-      questions: [
+      type: "wordorder",
+      instruction: "Usporiadajte slová tak, aby vytvorili správnu nemeckú vetu.",
+      sentences: [
         {
-          question: "Jana išla do práce autobusom. Perfekt od 'fahren' (pohyb = sein):",
-          options: [
-            "Jana hat mit dem Bus gefahren.",
-            "Jana ist mit dem Bus gefahren.",
-            "Jana hat mit dem Bus gefährt.",
-            "Jana ist mit dem Bus gefährt."
+          words: [
+            "Ich",
+            "finde",
+            "dass",
+            "das",
+            "zu",
+            "kompliziert",
+            "ist"
           ],
-          answer: "Jana ist mit dem Bus gefahren.",
-          explanation: "fahren = pohyb → Perfekt so sein! Príčastie: ge-fahr-en. Jana IST mit dem Bus gefahren. Príčastia so sein: fahren, gehen, kommen, fliegen, reisen, bleiben..."
+          correct: "Ich finde, dass das zu kompliziert ist",
+          hint: "Myslím si, že to je príliš komplikované.",
+          explanation: "Vo vedľajších vetách s 'dass' sa sloveso umiestňuje na koniec."
         },
         {
-          question: "Doplň správny modál: Jana ___ morgen früh aufstehen. (musí)",
-          options: ["kann", "darf", "muss", "möchte"],
-          answer: "muss",
-          explanation: "müssen = musieť (povinnosť). Jana MUSS morgen früh aufstehen. = Jana musí zajtra vstať skoro."
-        },
-        {
-          question: "Správna vedľajšia veta: 'Ich lerne Deutsch, ___'",
-          options: [
-            "weil ich wohne in Wien.",
-            "weil in Wien ich wohne.",
-            "weil ich in Wien wohne.",
-            "weil wohne in Wien ich."
+          words: [
+            "Meiner",
+            "Meinung",
+            "nach",
+            "ist",
+            "das",
+            "wichtig"
           ],
-          answer: "weil ich in Wien wohne.",
-          explanation: "Vedľajšia veta s 'weil': sloveso VŽDY na KONIEC! Správny slovosled: weil + subjekt + ostatné + SLOVESO."
+          correct: "Meiner Meinung nach ist das wichtig",
+          hint: "Podľa môjho názoru je to dôležité.",
+          explanation: "Fráza 'Meiner Meinung nach' sa zvyčajne stavia na začiatok vety, po ktorej nasleduje sloveso."
         },
         {
-          question: "Vzťažné zámeno: 'Das ist die Stadt, ___ ich liebe.' (Stadt = F, Akk.)",
-          options: ["der", "das", "den", "die"],
-          answer: "die",
-          explanation: "Stadt = ženský rod (F). Akuzatív F = die (rovnaký tvar ako nominatív!). Das ist die Stadt, DIE ich liebe."
-        },
-        {
-          question: "Správny datív: 'Ich gebe ___ Lehrerin das Buch.' (Lehrerin = F)",
-          options: ["die", "der", "das", "den"],
-          answer: "der",
-          explanation: "Datív ženského rodu: die → der. Ich gebe DER Lehrerin das Buch. (Dávam učiteľke knihu.)"
-        },
-        {
-          question: "Superlatív: 'Wien ist ___ schönsten.' (predikátívny superlatív)",
-          options: ["der", "am", "das", "an"],
-          answer: "am",
-          explanation: "Predikátívny superlatív: VŽDY 'am' + prídavné meno + -sten. Wien ist AM schönsten."
-        },
-        {
-          question: "Imperatív du-forma od 'sprechen':",
-          options: ["Spreche!", "Sprechst!", "Sprich!", "Sprechen!"],
-          answer: "Sprich!",
-          explanation: "sprechen má zmenu e→i: du sprichst → Imperatív: Sprich! (odstrán -st). Podobne: essen→Iss!, geben→Gib!, lesen→Lies!"
-        },
-        {
-          question: "Perfekt od 'helfen' (pravidelné/nepravidelné? Pomocné sloveso?)",
-          options: [
-            "ich habe geholft (haben + pravidelné)",
-            "ich habe geholfen (haben + nepravidelné)",
-            "ich bin geholfen (sein + nepravidelné)",
-            "ich habe helfet (haben + pravidelné)"
+          words: [
+            "Wir",
+            "müssen",
+            "den",
+            "Müll",
+            "sortieren"
           ],
-          answer: "ich habe geholfen (haben + nepravidelné)",
-          explanation: "helfen = nepravidelné sloveso. Príčastie: ge-holf-en (nepravidelný kmeň!). Pomocné sloveso: haben (nie pohyb/zmena stavu → haben). Ich habe dir geholfen."
+          correct: "Wir müssen den Müll sortieren",
+          hint: "Musíme triediť smeti.",
+          explanation: "V tomto prípade ide o hlavnú vetu s modálnym slovesom 'müssen'. Infinitív hlavného slovesa 'sortieren' ide na koniec."
+        },
+        {
+          words: [
+            "Findest",
+            "du",
+            "dass",
+            "das",
+            "eine",
+            "gute",
+            "Regel",
+            "ist"
+          ],
+          correct: "Findest du, dass das eine gute Regel ist",
+          hint: "Myslíš si, že je to dobré pravidlo?",
+          explanation: "Vo vedľajšej vete s 'dass' sa sloveso umiestňuje na koniec."
+        },
+        {
+          words: [
+            "Das",
+            "Papier",
+            "gehört",
+            "in",
+            "die",
+            "blaue",
+            "Tonne"
+          ],
+          correct: "Das Papier gehört in die blaue Tonne",
+          hint: "Papier patrí do modrého kontajnera.",
+          explanation: "V tomto prípade ide o hlavnú vetu. Sloveso 'gehört' je na druhom mieste."
         }
       ]
     },
     {
       type: "fill",
-      instruction: "Zmiešané doplňovanie — všetky typy gramatiky z A1. Opakovanie!",
+      instruction: "Doplňte správne slovo alebo slovnú spojenie.",
       questions: [
         {
-          sentence: "Jana ___ gestern ins Kino gegangen. (Perfekt so sein, 3. os. j.č.)",
-          answer: "ist",
-          hint: "gehen = pohyb → Perfekt so ? (haben/sein)",
-          explanation: "gehen = pohyb → Perfekt so SEIN. Jana IST gegangen. Minulý čas s pohybovými slovesami: sein!"
+          sentence: "Ich finde, dass wir den Müll richtig ____.",
+          answer: "sortieren",
+          hint: "Čo robíme so smetiami?",
+          explanation: "V kontexte triedenia odpadu je správne sloveso 'sortieren'."
         },
         {
-          sentence: "Ich kann nicht kommen, ___ ich krank bin. (lebo/pretože)",
-          answer: "weil",
-          hint: "lebo/pretože = ? (vedľajšia veta, sloveso na konci)",
-          explanation: "weil = lebo. Správny slovosled: weil ich krank BIN. Sloveso na konci vedľajšej vety!"
+          sentence: "____ ____ ____ ist Umweltschutz sehr wichtig.",
+          answer: "Meiner Meinung nach",
+          hint: "Ako vyjadríme 'podľa môjho názoru'?",
+          explanation: "'Meiner Meinung nach' je bežná fráza na vyjadrenie názoru."
         },
         {
-          sentence: "Das ist das Museum, ___ Jana am liebsten besucht. (N, Nom.)",
-          answer: "das",
-          hint: "Museum = N rod. Vzťažné zámeno N, Nom. = ?",
-          explanation: "das Museum (N). Vzťažné zámeno N, Nom. = das. Das ist das Museum, DAS Jana am liebsten besucht."
+          sentence: "Das ist ____ Regel. Wir müssen sie befolgen.",
+          answer: "eine",
+          hint: "Potrebujeme neurčitý člen pre 'Regel' (pravidlo).",
+          explanation: "'Regel' je ženského rodu (die Regel), preto sa používa neurčitý člen 'eine' v nominatíve."
         },
         {
-          sentence: "Jana ___ nächsten Monat die Prüfung machen. (werden, 3. os. j.č.)",
-          answer: "wird",
-          hint: "Jana = er/sie/es → werden tvary = ?",
-          explanation: "Jana → er/sie/es → WIRD. Jana WIRD nächsten Monat die Prüfung machen."
+          sentence: "Ich ____, dass Plastik nicht gut für die Umwelt ist.",
+          answer: "denke",
+          hint: "Ako vyjadríme 'myslím si'?",
+          explanation: "Sloveso 'denken' sa používa na vyjadrenie názoru, podobne ako 'finden'."
         },
         {
-          sentence: "Das Schnitzel hier schmeckt am ___! (superlatív od 'gut')",
-          answer: "besten",
-          hint: "gut → am ? (nepravidelný superlatív!)",
-          explanation: "gut → am besten (nepravidelné!). Das Schnitzel hier schmeckt AM BESTEN."
+          sentence: "____ du, dass das zu kompliziert ist?",
+          answer: "Findest",
+          hint: "Ako sa pýtame na názor pomocou slovesa 'finden' s 'du'?",
+          explanation: "Toto je otázka v prítomnom čase. Sloveso 'finden' sa časuje ako 'findest' pre 'du'."
         },
         {
-          sentence: "Ich danke ___ (Sie, formálne, datív) für Ihre Hilfe!",
-          answer: "Ihnen",
-          hint: "Sie (formálne) → datív = ? (s veľkým I!)",
-          explanation: "danken vyžaduje datív. Sie (formálne) → datív = IHNEN (vždy s veľkým I v strede vety!). Ich danke IHNEN."
+          sentence: "Wir ____ das Papier in die gelbe Tonne werfen.",
+          answer: "müssen",
+          hint: "Čo musíme urobiť s papierom?",
+          explanation: "Sloveso 'müssen' vyjadruje nutnosť alebo povinnosť."
         },
         {
-          sentence: "Hier ___ man nicht rauchen. (nesmieť = dürfen)",
-          answer: "darf",
-          hint: "nesmieť = dürfen, 3. os. j.č. (man = er/sie/es tvar)",
-          explanation: "man používa er/sie/es tvary. dürfen → er darf. Hier DARF man nicht rauchen."
+          sentence: "Die Verpackung ____ in den Müll.",
+          answer: "kommt",
+          hint: "Kam ide obal?",
+          explanation: "Toto je príklad z predchádzajúcich lekcií (L06). Pravidelné sloveso 'kommen' v 3. osobe sg. je 'kommt'."
+        },
+        {
+          sentence: "Ich habe ____ Buch gestern gekauft.",
+          answer: "ein",
+          hint: "Použi neurčitý člen pre 'Buch' (kniha) v akuzatíve.",
+          explanation: "Toto je príklad z predchádzajúcich lekcií (L17/L18). 'Buch' je stredného rodu (das Buch), v akuzatíve je 'ein Buch'."
         }
       ]
     },
     {
       type: "listen",
-      instruction: "Počúvaj Janine vety reflektujúce na jej cestu. Každá veta používa inú gramatiku!",
+      instruction: "Zapíšte si, čo počujete.",
       questions: [
-        { de: "Ich habe viel Deutsch gelernt.", sk: "Veľa som sa naučila po nemecky." },
-        { de: "Am Anfang war es schwer, aber jetzt ist es besser.", sk: "Na začiatku to bolo ťažké, ale teraz je to lepšie." },
-        { de: "Ich bin stolz auf meinen Fortschritt.", sk: "Som hrdá na môj pokrok." },
-        { de: "Ich werde weiter lernen, weil mir Deutsch sehr gefällt.", sk: "Budem sa ďalej učiť, lebo nemčina sa mi veľmi páči." },
-        { de: "Wien ist die Stadt, die ich am meisten liebe.", sk: "Viedeň je mesto, ktoré milujem najviac." },
-        { de: "Ich habe Fortschritte gemacht, die ich nie erwartet hätte.", sk: "Urobila som pokrok, ktorý by som nikdy nečakala." },
-        { de: "Das Deutsch wird immer besser — das ist das Schönste!", sk: "Nemčina ide stále lepšie — to je to najkrajšie!" },
-        { de: "Ich werde mein Ziel erreichen.", sk: "Dosiahnem môj cieľ." }
+        {
+          de: "die Meinung",
+          sk: "názor"
+        },
+        {
+          de: "die Regel",
+          sk: "pravidlo"
+        },
+        {
+          de: "der Müll",
+          sk: "smeti"
+        },
+        {
+          de: "die Tonne",
+          sk: "smetiarska nádoba"
+        },
+        {
+          de: "das Glas",
+          sk: "sklo"
+        },
+        {
+          de: "das Papier",
+          sk: "papier"
+        },
+        {
+          de: "die Verpackung",
+          sk: "obal"
+        },
+        {
+          de: "sortieren",
+          sk: "triediť"
+        },
+        {
+          de: "wichtig",
+          sk: "dôležitý"
+        },
+        {
+          de: "zu kompliziert",
+          sk: "príliš komplikované"
+        }
       ]
     },
     {
-      type: "match",
-      instruction: "Spoj gramatický pojem s jeho príkladom z nemčiny.",
-      pairs: [
-        ["Perfekt so sein", "Ich bin nach Wien gefahren."],
-        ["Vedľajšia veta s weil", "Ich lerne, weil es Spaß macht."],
-        ["Superlatív", "Wien ist am schönsten."],
-        ["Datívne sloveso", "Das gefällt mir sehr."],
-        ["Imperatív (du-forma)", "Sprich bitte langsamer!"],
-        ["Vzťažná veta", "Das ist ein Cafe, das ich liebe."],
-        ["Werden + Infinitiv", "Ich werde die Prüfung machen."],
-        ["Neurčité zámeno man", "Man darf hier nicht rauchen."]
-      ]
-    },
-    {
-      type: "dialogue",
-      instruction: "Jana telefonuje s mamou — predvádza svoju nemčinu a reflektuje na 3,5 mesiacov. Dialóg používa množstvo gramatických štruktúr.",
-      lines: [
-        { speaker: "A", de: "Mama! Ich rufe an, weil ich etwas Schönes erzählen möchte.", sk: "Mama! Volám, lebo ti chcem povedať niečo krásne." },
-        { speaker: "B", de: "Jana! Ich bin so froh, dass du anrufst. Wie geht es dir?", sk: "Jana! Som tak rada, že voláš. Ako sa máš?" },
-        { speaker: "A", de: "Mir geht es am besten seit langen! Ich habe heute drei Meetings auf Deutsch gemacht.", sk: "Mám sa najlepšie za dlhú dobu! Dnes som mala tri porady po nemecky." },
-        { speaker: "B", de: "Das ist fantastisch! Ich erinnere mich, dass du am Anfang kaum ein Wort Deutsch konntest.", sk: "To je fantastické! Pamätám si, že na začiatku si ledva vedela jedno slovo po nemecky." },
-        { speaker: "A", de: "Ja! Zuerst war es am schwersten. Aber täglich habe ich geübt, bis es besser wurde.", sk: "Áno! Najprv to bolo najťažšie. Ale každý deň som cvičila, kým sa to nezlepšilo." },
-        { speaker: "B", de: "Bist du stolz auf dich?", sk: "Si hrdá na seba?" },
-        { speaker: "A", de: "Ich bin sehr stolz! Ich habe Fortschritte gemacht, die ich nie erwartet hätte.", sk: "Som veľmi hrdá! Urobila som pokrok, ktorý by som nikdy nečakala." },
-        { speaker: "B", de: "Was gefällt dir am meisten an Wien?", sk: "Čo sa ti na Viedni páči najviac?" },
-        { speaker: "A", de: "Am liebsten mag ich die Kaffeehäuser — die sind am gemütlichsten!", sk: "Najradšej mám kaviarne — tie sú najútulnejšie!" },
-        { speaker: "B", de: "Ich weiß, dass du das schaffst. Wirst du nächstes Jahr die Prüfung machen?", sk: "Viem, že to zvládneš. Budeš budúci rok robiť skúšku?" },
-        { speaker: "A", de: "Ja! Ich werde die Goethe-Prüfung machen, weil ich mein Deutsch offiziell bestätigen möchte.", sk: "Áno! Budem robiť Goethe skúšku, lebo chcem moju nemčinu oficiálne potvrdiť." },
-        { speaker: "B", de: "Ich glaube, dass du die Beste in deinem Kurs bist!", sk: "Myslím si, že si najlepšia vo svojom kurze!" },
-        { speaker: "A", de: "Haha, das weiß ich nicht. Aber ich werde weiter lernen — das ist mein Ziel!", sk: "Haha, to neviem. Ale budem sa ďalej učiť — to je môj cieľ!" },
-        { speaker: "B", de: "Pass auf dich auf und komm bald nach Hause!", sk: "Dávaj na seba pozor a čoskoro príď domov!" }
-      ],
-      comprehensionQuestions: [
+      type: "mcq",
+      instruction: "Vyberte správnu možnosť.",
+      questions: [
         {
-          question: "Čo Jana dnes urobila v práci?",
-          options: ["Napísala správu", "Mala tri porady po nemecky", "Stretla sa s šéfom", "Začala nový projekt"],
-          answer: "Mala tri porady po nemecky"
+          question: "Čo znamená 'Ich finde, dass...'?",
+          options: [
+            "Podľa môjho názoru...",
+            "Myslím si, že...",
+            "Je to jasné.",
+            "Neviem."
+          ],
+          answer: 1,
+          explanation: "'Ich finde, dass...' je konštrukcia na vyjadrenie názoru, ktorá sa prekladá ako 'Myslím si, že...'."
         },
         {
-          question: "Čo sa Jane na Viedni páči najviac?",
-          options: ["Parky", "Múzeá", "Kaviarne", "Divadlá"],
-          answer: "Kaviarne"
+          question: "Ktoré slovo znamená 'pravidlo'?",
+          options: [
+            "der Müll",
+            "die Stadt",
+            "die Regel",
+            "der Verkehr"
+          ],
+          answer: 2,
+          explanation: "'Die Regel' je nemecké slovo pre 'pravidlo'."
         },
         {
-          question: "Čo je Janin cieľ?",
-          options: ["Presťahovať sa späť", "Nájsť nové zamestnanie", "Ďalej sa učiť nemčinu a urobiť Goethe skúšku", "Naučiť sa francúzčinu"],
-          answer: "Ďalej sa učiť nemčinu a urobiť Goethe skúšku"
+          question: "Ako sa povie 'Podľa môjho názoru'?",
+          options: [
+            "Ich denke, dass...",
+            "Ich finde, dass...",
+            "Meiner Meinung nach",
+            "Das ist wichtig."
+          ],
+          answer: 2,
+          explanation: "'Meiner Meinung nach' je ustálená fráza na vyjadrenie názoru."
         },
         {
-          question: "Ako Jana opisuje začiatok učenia nemčiny?",
-          options: ["Bolo to ľahké", "Bolo to najťažšie", "Bolo to nudné", "Bolo to vzrušujúce"],
-          answer: "Bolo to najťažšie"
+          question: "Čo znamená 'sortieren'?",
+          options: [
+            "vyhodiť",
+            "triediť",
+            "kúpiť",
+            "nájsť"
+          ],
+          answer: 1,
+          explanation: "'Sortieren' znamená 'triediť', často v kontexte odpadu."
+        },
+        {
+          question: "Doplňte: 'Meiner Meinung nach ____ das wichtig.'",
+          options: [
+            "bin",
+            "hast",
+            "ist",
+            "macht"
+          ],
+          answer: 2,
+          explanation: "Po 'Meiner Meinung nach' nasleduje sloveso 'ist' (je), ktoré tvorí hlavnú vetu."
+        },
+        {
+          question: "Doplňte: 'Ich finde, dass ____ zu kompliziert ist.'",
+          options: [
+            "er",
+            "sie",
+            "es",
+            "wir"
+          ],
+          answer: 2,
+          explanation: "V tomto prípade sa 'es' používa ako všeobecný zámenný výraz pre 'to'."
+        },
+        {
+          question: "Čo znamená 'die Verpackung'?",
+          options: [
+            "sklo",
+            "papier",
+            "obal",
+            "smetiarska nádoba"
+          ],
+          answer: 2,
+          explanation: "'Die Verpackung' znamená 'obal'."
+        },
+        {
+          question: "Doplňte: 'Wir ____ den Müll jeden Tag.'",
+          options: [
+            "sortiere",
+            "sortiert",
+            "sortieren",
+            "sortierst"
+          ],
+          answer: 2,
+          explanation: "Pre 'wir' (my) sa sloveso 'sortieren' časuje ako 'sortieren'."
         }
       ]
     },
     {
       type: "minitext",
-      instruction: "Prečítaj Janin 'Brief an mich selbst' — list minulému ja. Všetky gramatické štruktúry A1!",
-      text: "Liebe Jana vor drei Monaten!\n\nIch schreibe dir aus der Zukunft. Du stehst gerade am Anfang — du kannst kaum Deutsch und du bist sehr nervös. Aber ich möchte dir sagen: Es wird gut!\n\nZuerst war es am schwersten. Du hast nicht verstanden, was die Menschen sagen. Du wolltest aufgeben. Aber du hast nicht aufgehört, weil du ein Ziel hattest.\n\nJetzt kann ich sagen, dass ich stolz bin. Ich habe jeden Tag geübt. Ich bin mit der U-Bahn gefahren und habe Deutsch gehört. Ich habe Menschen getroffen, die mir geholfen haben. Ich habe Kolleginnen gefunden, die sehr nett sind.\n\nHeute weiß ich: Deutsch ist die Sprache, die mir die Türen geöffnet hat. Wien ist die Stadt, die ich am meisten liebe. Mein Deutsch ist noch nicht perfekt, aber ich werde weiter lernen. Das ist mein Ziel!\n\nSei mutig! Du wirst das schaffen!\n\nDeine Jana",
-      textSk: "Drahá Jana pred tromi mesiacmi!\n\nPíšem ti z budúcnosti. Stojíš práve na začiatku — takmer nevieš po nemecky a si veľmi nervózna. Ale chcem ti povedat: Bude to dobré!\n\nNajprv to bolo najťažšie. Nerozumela si, čo ľudia hovoria. Chcela si to vzdať. Ale neprestala si, lebo si mala cieľ.\n\nTeraz môžem povedať, že som hrdá. Každý deň som cvičila. Jazdila som metrom a počúvala nemčinu. Stretávala som ľudí, ktorí mi pomohli. Našla som kolegyne, ktoré sú veľmi milé.\n\nDnes viem: Nemčina je jazyk, ktorý mi otvoril dvere. Viedeň je mesto, ktoré milujem najviac. Moja nemčina ešte nie je perfektná, ale budem sa ďalej učiť. To je môj cieľ!\n\nBuď odvážna! Zvládneš to!\n\nTvoja Jana",
+      instruction: "Lies den Dialog und beantworte die Fragen.",
+      text: "Jana: Luisa, ich finde, die Regeln für den Müll in Wien sind zu kompliziert.\nLuisa: Ach, Jana. Meiner Meinung nach ist das gut so. Wir müssen den Müll sortieren.\nJana: Ja, aber wohin mit dem Plastik? Und die Verpackungen? Ich denke, das ist zu viel für mich.\nLuisa: Ich finde, das ist wichtig für den Umweltschutz. Wir brauchen klare Regeln.\nJana: Ich verstehe. Aber ich habe eine andere Meinung. Ich finde die Tonnen für Papier und Glas gut, aber alles andere ist kompliziert.\nLuisa: Klar, es braucht Übung. Aber meiner Meinung nach ist es nicht zu kompliziert.",
+      textSk: "Jana: Luisa, myslím si, že pravidlá pre odpad vo Viedni sú príliš komplikované.\nLuisa: Ach, Jana. Podľa môjho názoru je to takto dobre. Musíme triediť odpad.\nJana: Áno, ale kam s plastom? A obaly? Myslím si, že je to na mňa príliš.\nLuisa: Myslím si, že je to dôležité pre ochranu životného prostredia. Potrebujeme jasné pravidlá.\nJana: Rozumiem. Ale ja mám iný názor. Myslím si, že kontajnery na papier a sklo sú dobré, ale všetko ostatné je komplikované.\nLuisa: Jasné, chce to cvik. Ale podľa môjho názoru to nie je príliš komplikované.",
       questions: [
         {
-          question: "Ako sa Jana cítila na začiatku?",
-          options: ["Bola nadšená a sebavedomá", "Bola nervózna a takmer nič nevedela", "Bola lenivá", "Bola unavená"],
-          answer: "Bola nervózna a takmer nič nevedela"
-        },
-        {
-          question: "Prečo Jana neprestala? (vedľajšia veta s 'weil')",
-          options: ["Weil sie Geld brauchte", "Weil sie ein Ziel hatte", "Weil ihre Chefin es verlangte", "Weil Wien schön ist"],
-          answer: "Weil sie ein Ziel hatte"
-        },
-        {
-          question: "Identifikuj vzťažnú vetu v texte.",
+          question: "Was findet Jana zu kompliziert?",
           options: [
-            "'Ich habe jeden Tag geübt.'",
-            "'Deutsch ist die Sprache, die mir die Türen geöffnet hat.'",
-            "'Mein Deutsch ist noch nicht perfekt.'",
-            "'Sei mutig!'"
+            "Die Regeln für den Müll in Wien.",
+            "Die Tonnen für Papier und Glas.",
+            "Den Umweltschutz in Wien.",
+            "Die Verpackungen von Lebensmitteln."
           ],
-          answer: "'Deutsch ist die Sprache, die mir die Türen geöffnet hat.'"
+          answer: 0,
+          explanation: "Jana sagt: \"Ich finde, die Regeln für den Müll in Wien sind zu kompliziert.\""
         },
         {
-          question: "Čo znamená 'Sei mutig!' na konci listu?",
-          options: ["Buď šikovná!", "Buď trpezlivá!", "Buď odvážna!", "Buď rýchla!"],
-          answer: "Buď odvážna!"
-        }
-      ]
-    },
-    {
-      type: "freewrite",
-      instruction: "Napíš list sebe samému/samej pred 3 mesiacmi, keď si začal/a sa učiť nemčinu.",
-      prompt: "Schreib einen Brief an dich selbst vor 3 Monaten, bevor du angefangen hast, Deutsch zu lernen. Was würdest du dir raten? Was weißt du jetzt, was du damals nicht wusstest? Benutze: weil, dass, wenn, ob, Perfekt, werden, Relativsätze...",
-      minWords: 60,
-      exampleAnswer: "Liebe/r [dein Name] vor drei Monaten!\n\nIch schreibe dir, weil ich dir etwas Wichtiges sagen möchte. Du wirst Deutsch lernen — und das wird eine der besten Entscheidungen sein, die du je gemacht hast! Am Anfang wird es schwer sein. Du wirst Fehler machen, die dich frustrieren. Aber das ist okay! Ich glaube, dass jeder Fehler ein Lernschritt ist. Wenn du keine Lust hast zu lernen, denk daran, warum du angefangen hast. Ich habe Fortschritte gemacht, die ich nie erwartet hätte. Das Deutsch ist am schönsten, wenn man es wirklich benutzt! Also — sei mutig, lern täglich und gib nicht auf!"
-    },
-    {
-      type: "wordorder",
-      instruction: "Zoraď slová do správnej nemeckej vety.",
-      sentences: [
-        {
-          words: ["Jana", "sagte,", "sie", "sei", "sehr", "glücklich", "in", "Wien"],
-          correct: "Jana sagte, sie sei sehr glücklich in Wien",
-          hint: "Jana povedala, že je veľmi šťastná vo Viedni.",
-          explanation: "Konjunktiv I nepriamej reči: 'sie sei' (nie 'sie ist'). 'sein' → Konj.I 'sei'. Používa sa pri tlmočení cudzích slov."
+          question: "Wie ist Luisas Meinung zu den Regeln?",
+          options: [
+            "Sie sind zu kompliziert.",
+            "Sie sind nicht wichtig.",
+            "Sie sind gut so.",
+            "Sie sind nicht klar."
+          ],
+          answer: 2,
+          explanation: "Luisa sagt: \"Meiner Meinung nach ist das gut so.\""
         },
         {
-          words: ["Er", "sagte,", "er", "habe", "keine", "Zeit"],
-          correct: "Er sagte, er habe keine Zeit",
-          hint: "Povedal, že nemá čas.",
-          explanation: "'habe' = Konjunktiv I od 'haben'. V nepriamej reči: 'er hat' → 'er habe'. Táto forma signalizuje, že ide o citáciu."
+          question: "Warum sind die Regeln laut Luisa wichtig?",
+          options: [
+            "Weil sie Übung brauchen.",
+            "Weil sie für den Umweltschutz sind.",
+            "Weil sie klar sind.",
+            "Weil Jana eine andere Meinung hat."
+          ],
+          answer: 1,
+          explanation: "Luisa sagt: \"Ich finde, das ist wichtig für den Umweltschutz.\""
         },
         {
-          words: ["Sie", "berichtete,", "das", "Wetter", "sei", "schön"],
-          correct: "Sie berichtete, das Wetter sei schön",
-          hint: "Informovala, že počasie je pekné.",
-          explanation: "'berichtete' = oznamovanie (préteritum). Konjunktiv I 'sei' nahradzuje indikativ 'ist' v nepriamej reči."
-        },
-        {
-          words: ["Der", "Chef", "sagte,", "die", "Arbeit", "sei", "fertig"],
-          correct: "Der Chef sagte, die Arbeit sei fertig",
-          hint: "Šéf povedal, že práca je hotová.",
-          explanation: "Konj.I 'sei' v nepriamej reči. Forma Konj.I od 'sein': ich sei, du sei(e)st, er/sie/es sei — všetky bez -t."
-        },
-        {
-          words: ["Jana", "berichtete,", "Wien", "sei", "eine", "tolle", "Stadt"],
-          correct: "Jana berichtete, Wien sei eine tolle Stadt",
-          hint: "Jana informovala, že Viedeň je skvelé mesto.",
-          explanation: "'sei eine tolle Stadt' = Konjunktiv I nepriamej reči. Oznamujeme, čo Jana hovorila, bez posudzovania pravdivosti."
+          question: "Was braucht man laut Luisa, um die Regeln zu verstehen?",
+          options: [
+            "Eine andere Meinung.",
+            "Mehr Tonnen.",
+            "Übung.",
+            "Weniger Plastik."
+          ],
+          answer: 2,
+          explanation: "Luisa sagt: \"Klar, es braucht Übung.\""
         }
       ]
     },
     {
       type: "speaking",
-      instruction: "Počúvaj nemeckú vetu. Potom hovor nahlas a skontroluj sa.",
+      instruction: "Höre zu und sprich nach.",
       phrases: [
         {
-          de: "Jana sagte, sie sei glücklich.",
-          sk: "Jana povedala, že je šťastná.",
-          tip: "sei = Konj.I von sein; -ei betont"
+          de: "die Meinung",
+          sk: "názor",
+          tip: "ch sa nevyslovuje ako v slovenčine"
         },
         {
-          de: "Er sagte, er habe keine Zeit.",
-          sk: "Povedal, že nemá čas.",
-          tip: "habe = Konj.I von haben; h stumm"
+          de: "die Regel",
+          sk: "pravidlo",
+          tip: "dlhé é, nie krátke e"
         },
         {
-          de: "Sie berichtete, das Wetter sei schön.",
-          sk: "Informovala, že počasie je pekné.",
-          tip: "berichtete: be-RICH-te-te, 4 Silben"
+          de: "der Müll",
+          sk: "smeti",
+          tip: "ö ako v slove \"Österreich\""
         },
         {
-          de: "Der Chef sagte, die Arbeit sei gut.",
-          sk: "Šéf povedal, že práca je dobrá.",
-          tip: "Konj.I: sei/habe ≠ ist/hat"
+          de: "die Tonne",
+          sk: "kontajner",
+          tip: "dlhé o, nie krátke"
         },
         {
-          de: "Jana berichtete, Wien sei toll.",
-          sk: "Jana informovala, že Viedeň je skvelá.",
-          tip: "indirekte Rede: Konj.I statt Indikativ"
+          de: "Ich finde, dass...",
+          sk: "Myslím si, že...",
+          tip: "f ako v slove \"fajka\""
+        },
+        {
+          de: "Meiner Meinung nach",
+          sk: "Podľa môjho názoru",
+          tip: "ch ako v slove \"ich\""
+        },
+        {
+          de: "Das ist zu kompliziert.",
+          sk: "To je príliš komplikované.",
+          tip: "z ako v slove \"zebra\""
+        },
+        {
+          de: "Ich finde das wichtig.",
+          sk: "Myslím, že je to dôležité.",
+          tip: "w ako v slove \"voda\""
+        }
+      ]
+    },
+    {
+      type: "truefalse",
+      instruction: "Rozhodnite, či sú nasledujúce tvrdenia pravdivé (wahr) alebo nepravdivé (falsch).",
+      statements: [
+        {
+          statement: "Ich finde, dass Müll wichtig ist.",
+          isTrue: false,
+          explanation: "Müll (smeti) nie sú dôležité, ale ich správne triedenie a likvidácia áno."
+        },
+        {
+          statement: "Meiner Meinung nach ist Plastik gut für die Umwelt.",
+          isTrue: false,
+          explanation: "Plastik (plast) je často škodlivý pre životné prostredie, preto je dôležitý umweltschutz (ochrana životného prostredia)."
+        },
+        {
+          statement: "Man muss Papier in die grüne Tonne werfen.",
+          isTrue: false,
+          explanation: "Papier (papier) sa zvyčajne triedi do špeciálnych kontajnerov na papier, nie do bežných zelených smetiarskych nádob (Tonne)."
+        },
+        {
+          statement: "Ich finde, dass das Sortieren von Verpackungen wichtig ist.",
+          isTrue: true,
+          explanation: "Sortieren (triedenie) obalov (Verpackungen) je dôležité pre ochranu životného prostredia."
+        },
+        {
+          statement: "Meiner Meinung nach ist der Verkehr in der Stadt immer leise.",
+          isTrue: false,
+          explanation: "Verkehr (doprava) v meste (Stadt) býva často hlučný, nie tichý."
+        }
+      ]
+    },
+    {
+      type: "dictation",
+      instruction: "Napíšte správne vety, ktoré počujete.",
+      sentences: [
+        {
+          de: "Das ist Müll.",
+          sk: "Toto sú smeti."
+        },
+        {
+          de: "Ich brauche Papier.",
+          sk: "Potrebujem papier."
+        },
+        {
+          de: "Ich finde das gut so.",
+          sk: "Myslím si, že je to takto dobre."
+        },
+        {
+          de: "Meiner Meinung nach ist das zu kompliziert.",
+          sk: "Podľa môjho názoru je to príliš komplikované."
+        },
+        {
+          de: "Wir müssen den Müll sortieren.",
+          sk: "Musíme triediť smeti."
+        }
+      ]
+    },
+    {
+      type: "categorysort",
+      instruction: "Roztrieďte slová do správnych kategórií.",
+      categories: [
+        {
+          name: "Müllarten (Druhy odpadu)",
+          color: "rose",
+          words: [
+            "der Müll",
+            "das Glas",
+            "das Papier",
+            "das Plastik",
+            "die Verpackung"
+          ]
+        },
+        {
+          name: "Orte (Miestá)",
+          color: "blue",
+          words: [
+            "die Stadt",
+            "die Tonne"
+          ]
+        },
+        {
+          name: "Abstrakte Begriffe (Abstraktné pojmy)",
+          color: "green",
+          words: [
+            "die Meinung",
+            "die Regel",
+            "der Verkehr",
+            "der Umweltschutz"
+          ]
+        }
+      ],
+      explanation: "Slová sú rozdelené do kategórií podľa ich významu: druhy odpadu, miesta a abstraktné pojmy súvisiace s témou."
+    },
+    {
+      type: "translation",
+      instruction: "Preložte nasledujúce vety zo slovenčiny do nemčiny.",
+      sentences: [
+        {
+          sk: "Myslím si, že pravidlá sú dôležité.",
+          answer: "Ich finde, dass die Regeln wichtig sind.",
+          hint: "Ich finde, dass",
+          explanation: "Použite konštrukciu 'Ich finde, dass...' na vyjadrenie názoru. Po 'dass' nasleduje vedľajšia veta, kde sloveso ide na koniec."
+        },
+        {
+          sk: "Podľa môjho názoru je triedenie odpadu potrebné.",
+          answer: "Meiner Meinung nach ist die Müllsortierung nötig.",
+          hint: "Meiner Meinung nach",
+          explanation: "Fráza 'Meiner Meinung nach' sa stavia na začiatok vety. Po nej nasleduje sloveso."
+        },
+        {
+          sk: "Potrebujeme kontajner na papier.",
+          answer: "Wir brauchen eine Tonne für Papier.",
+          hint: "brauchen",
+          explanation: "Sloveso 'brauchen' (potrebovať) sa časuje v prítomnom čase."
+        },
+        {
+          sk: "Myslím si, že ochrana životného prostredia je jasná.",
+          answer: "Ich denke, dass der Umweltschutz klar ist.",
+          hint: "Ich denke, dass",
+          explanation: "Podobne ako 'Ich finde, dass...', aj 'Ich denke, dass...' uvádza vedľajšiu vetu so slovesom na konci."
+        }
+      ]
+    },
+    {
+      type: "conjugation",
+      instruction: "Doplňte správne tvary slovesa 'finden' v prítomnom čase.",
+      verbs: [
+        {
+          infinitive: "finden",
+          translation: "nájsť, myslieť si",
+          forms: [
+            {
+              pronoun: "ich",
+              correct: "finde"
+            },
+            {
+              pronoun: "du",
+              correct: "findest"
+            },
+            {
+              pronoun: "er/sie/es",
+              correct: "findet"
+            },
+            {
+              pronoun: "wir",
+              correct: "finden"
+            },
+            {
+              pronoun: "ihr",
+              correct: "findet"
+            },
+            {
+              pronoun: "sie/Sie",
+              correct: "finden"
+            }
+          ],
+          note: "Sloveso 'finden' je v prvej a tretej osobe jednotného čísla nepravidelné (ich finde, er/sie/es findet)."
         }
       ]
     }
   ],
-  reviewWords: ["der Fortschritt", "das Ziel", "erreichen", "die Fähigkeit", "stolz sein auf", "sich erinnern an", "zuerst/dann/schließlich", "weiter lernen", "das Deutsch", "Ich habe Fortschritte gemacht."],
-  lessonNotes: "A1 MÍĽNIK! Celková A1 gramatika: 1) Pády Nom/Akk/Dat s členmi. 2) Prézens + Perfekt (sein/haben). 3) Modálne slovesá. 4) Vedľajšie vety (weil/dass/wenn/ob). 5) Komparatív + superlatív. 6) Imperatív du/ihr/Sie. 7) Vzťažné vety. 8) werden + Infinitív. 9) Datívne zámená + slovesá. 10) Neurčité zámená. Gratulácia — A1 dosiahnutá!"
+  reviewWords: []
 };

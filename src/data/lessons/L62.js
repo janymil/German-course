@@ -1,334 +1,839 @@
-﻿export const lesson62 = {
+export const lesson62 = {
   id: 62,
   week: 13,
   day: 2,
-  title: "Adjektivdeklination (Nominativ und Akkusativ)",
-  topic: "Skloňovanie prídavných mien (nominatív a akuzatív)",
+  title: "Befehle im Haushalt!",
+  topic: "Rozkazovací spôsob (Imperatív) pre tykanie – jednotné a množné číslo (du, ihr). Príkazy v domácnosti.",
   cefr: "A1",
-  xpReward: 35,
-  narrativeContext: "Jana píše správu rodičom o svojom novom byte vo Viedni. 'Ich habe eine schöne, helle Wohnung.' Kupuje nový nábytok a opisuje každú vec. Prvýkrát sa stretáva so skloňovaním prívlastkových prídavných mien — a zisťuje, že záleží na rodu aj páde!",
-  communicativeGoal: "Po tejto lekcii viem používať prídavné mená s členom (ein schwarzer Schreibtisch, die helle Wohnung) v nominatíve a akuzatíve.",
-  skillFocus: ["grammar", "writing", "vocabulary"],
-  grammarNote: {
-    rule: "Skloňovanie prívlastkových prídavných mien — nominatív a akuzatív",
-    explanation: "Prívlastkové prídavné meno (stojace pred podstatným menom) dostáva rôzne koncovky podľa členu a pádu. S určitým členom (der/die/das): Nom. -e, Akk. -en (okrem F a N = -e). S neurčitým členom (ein/eine): Nom. M = -er, F = -e, N = -es; Akk. M = -en, ostatné = -e/-es. Kľúčový poznatok: pri neurčitom člene v nom. mask. dostane prídavné meno -er, lebo 'ein' neukáže rod — prídavné meno musí!",
-    examples: [
-      { de: "Der alte Mann kauft das neue Buch.", sk: "Starý muž kupuje novú knihu." },
-      { de: "Ein alter Mann kauft ein neues Buch.", sk: "Starý muž kupuje novú knihu." },
-      { de: "Ich habe eine schöne Wohnung.", sk: "Mám krásny byt." },
-      { de: "Ich kaufe einen neuen Schreibtisch.", sk: "Kupujem nový pracovný stôl." }
-    ],
-    slovakContrastNote: "Slovenské skloňovanie prídavných mien je omnoho komplexnejšie — 4 rody, 6 pádov, tvrdý/mäkký vzor. Nemecký systém je jednoduchší, ale prítomnosť alebo absencia členu mení koncovku. 'Starý muž' (SK) = 'der alte Mann' (DE s urč. členom) alebo 'ein alter Mann' (DE s neurč. členom)."
-  },
+  xpReward: 20,
+  narrativeContext: "Jana ist in ihrem Zimmer. Luisa ist in der Küche und kocht. Luisa gibt Jana Befehle.",
+  communicativeGoal: "Nach dieser Lektion kann ich einfache Befehle auf Deutsch geben und verstehen.",
+  skillFocus: [
+    "grammar",
+    "speaking",
+    "listening",
+    "vocabulary"
+  ],
+  lessonNotes: "Tento týždeň sa naučíš rozkazovací spôsob (Imperatív) pre tykanie. Pozrieme sa na tvorenie príkazov pre 'du' a 'ihr'. Zameriame sa na bežné príkazy v domácnosti a na slovesá s oddeľiteľnou predponou.",
+  grammarNotes: [
+    {
+      rule: "Imperativ (ihr-Form)",
+      explanation: "<p>V tejto lekcii sa naučíme tvoriť rozkazovací spôsob pre \"vy\" (ihr). Táto forma sa používa, keď hovoríme s viacerými ľuďmi naraz, ktorých tykáme. Tvorí sa jednoducho: vezmeme sloveso v <strong>prítomnom čase (Präsens)</strong>, odstránime osobnú záponu <strong>-t</strong> a pridáme <strong>-t</strong> na koniec.</p><p>Všimnite si, že kmeň slovesa sa v tejto forme nemení, na rozdiel od <strong>du-formy</strong>, kde sa pri slovesách s prehláskou (a <strong>e</strong> na <strong>i</strong>) kmeň mení.</p><p><strong>Príklad tvorby:</strong></p><table><tr><td>Sloveso</td><td>Präsens (ihr)</td><td>Imperativ (ihr)</td></tr><tr><td>machen</td><td>ihr macht</td><td>macht!</td></tr><tr><td>lernen</td><td>ihr lernt</td><td>lernt!</td></tr><tr><td>sprechen</td><td>ihr sprecht</td><td>sprecht!</td></tr><tr><td>lesen</td><td>ihr lest</td><td>lest!</td></tr></table><div class='tip-box'>Tip: Táto forma je veľmi podobná <strong>du-forme</strong>, len sa pridáva <strong>-t</strong> na koniec slovesa bez osobnej zápony.</div>",
+      examples: [
+        {
+          de: "Kinder, macht bitte eure Hausaufgaben!",
+          sk: "Deti, urobte si, prosím, svoje domáce úlohy!"
+        },
+        {
+          de: "Lernt fleißig für die Prüfung!",
+          sk: "Učte sa usilovne na skúšku!"
+        },
+        {
+          de: "Sprecht bitte lauter!",
+          sk: "Hovorte, prosím, hlasnejšie!"
+        },
+        {
+          de: "Lest das Buch zu Ende!",
+          sk: "Dočítajte knihu!"
+        },
+        {
+          de: "Kommt schnell her!",
+          sk: "Príďte rýchlo sem!"
+        },
+        {
+          de: "Helft mir bitte!",
+          sk: "Pomôžte mi, prosím!"
+        }
+      ],
+      slovakContrastNote: "V slovenčine používame pre \"vy\" (ihr) príponu <strong>-te</strong> (napr. rob<strong>te</strong>, uč<strong>te</strong>). V nemčine je to jednoduchšie, stačí odstrániť <strong>-t</strong> z tvaru pre \"ihr\" v prítomnom čase a pridať <strong>-t</strong> na koniec. Dávajte pozor na slovesá s prehláskou, kde sa kmeň v <strong>du-forme</strong> mení, ale v <strong>ihr-forme</strong> nie."
+    },
+    {
+      rule: "Imperativ (du-Form) - Opakovanie",
+      explanation: "<p>Predtým sme sa naučili tvoriť rozkazovací spôsob pre \"ty\" (du). Táto forma sa používa, keď hovoríme s jednou osobou, ktorej tykáme. Tvorí sa zvyčajne tak, že vezmeme sloveso v <strong>prítomnom čase (Präsens)</strong>, odstránime osobnú záponu <strong>-st</strong> a pridáme <strong>-e</strong> na koniec. Ak kmeň slovesa končí na <strong>-t</strong> alebo <strong>-d</strong>, pridáva sa <strong>-e</strong> vždy.</p><p>Dôležité je pamätať na slovesá, ktorých kmeň sa v <strong>du-forme</strong> mení. Pri slovesách s prehláskou <strong>e </strong>na <strong>i</strong> (napr. sprechen <strong>></strong> sprichst) sa táto zmena v rozkazovacom spôsobe <strong>nepoužíva</strong>. Pri slovesách s prehláskou <strong>a </strong>na <strong>></strong> (napr. fahren <strong>></strong> fährst) sa táto zmena <strong>používa</strong>.</p><p><strong>Príklad tvorby:</strong></p><table><tr><td>Sloveso</td><td>Präsens (du)</td><td>Imperativ (du)</td></tr><tr><td>machen</td><td>du machst</td><td>mach!</td></tr><tr><td>lernen</td><td>du lernst</td><td>lern!</td></tr><tr><td>sprechen</td><td>du sprichst</td><td>sprich!</td></tr><tr><td>lesen</td><td>du liest</td><td>lies!</td></tr><tr><td>fahren</td><td>du fährst</td><td>fahr!</td></tr></table>",
+      examples: [
+        {
+          de: "Mach bitte die Tür zu!",
+          sk: "Zavri, prosím, dvere!"
+        },
+        {
+          de: "Lern das Gedicht auswendig!",
+          sk: "Nauč sa báseň naspamäť!"
+        },
+        {
+          de: "Sprich klar und deutlich!",
+          sk: "Hovor jasne a zreteľne!"
+        },
+        {
+          de: "Lies das Buch langsam!",
+          sk: "Čítaj knihu pomaly!"
+        },
+        {
+          de: "Fahr vorsichtig!",
+          sk: "Choď opatrne!"
+        },
+        {
+          de: "Gib mir das Buch!",
+          sk: "Daj mi tú knihu!"
+        }
+      ],
+      slovakContrastNote: "V slovenčine rozkazovací spôsob pre \"ty\" často končí na <strong>-i</strong> (napr. rob<strong>i</strong>, uč<strong>i</strong>). V nemčine je to iné. Pri slovesách, ktoré nemenia kmeň v <strong>du-forme</strong>, sa často pridáva <strong>-e</strong> (napr. mach!). Pri slovesách, ktoré menia kmeň <strong>e </strong>na <strong>i</strong>, sa táto zmena v rozkazovacom spôsobe <strong>nepoužíva</strong> (sprich, nie sprich!). Pri slovesách s <strong>a </strong>na <strong>></strong> sa zmena zachováva (fahr!). Toto je častý zdroj chýb."
+    }
+  ],
   vocab: [
-    { de: "neu / neue / neuer / neues", sk: "nový", example: "Ich kaufe einen neuen Schreibtisch.", exampleSk: "Kupujem nový písací stôl.", gender: null, srsId: "L62_V01", recycledFrom: [] },
-    { de: "alt / alte / alter / altes", sk: "starý", example: "Das ist ein altes Gebäude.", exampleSk: "To je stará budova.", gender: null, srsId: "L62_V02", recycledFrom: [5, 31] },
-    { de: "groß / große / großer / großes", sk: "veľký", example: "Sie hat eine große Küche.", exampleSk: "Má veľkú kuchyňu.", gender: null, srsId: "L62_V03", recycledFrom: [7, 45] },
-    { de: "klein / kleine / kleiner / kleines", sk: "malý", example: "Ich habe ein kleines Zimmer.", exampleSk: "Mám malú izbu.", gender: null, srsId: "L62_V04", recycledFrom: [7, 45] },
-    { de: "schön / schöne / schöner / schönes", sk: "krásny, pekný", example: "Das ist eine schöne Wohnung.", exampleSk: "To je krásny byt.", gender: null, srsId: "L62_V05", recycledFrom: [45] },
-    { de: "hell / helle / heller / helles", sk: "svetlý", example: "Ich habe ein helles Zimmer.", exampleSk: "Mám svetlú izbu.", gender: null, srsId: "L62_V06", recycledFrom: [56] },
-    { de: "dunkel / dunkle / dunkler / dunkles", sk: "tmavý", example: "Das ist ein dunkler Keller.", exampleSk: "To je tmavý suterén.", gender: null, srsId: "L62_V07", recycledFrom: [56] },
-    { de: "schwarz / schwarze / schwarzer / schwarzes", sk: "čierny", example: "Ich will einen schwarzen Tisch.", exampleSk: "Chcem čierny stôl.", gender: null, srsId: "L62_V08", recycledFrom: [31] },
-    { de: "weiß / weiße / weißer / weißes", sk: "biely", example: "Sie kauft eine weiße Lampe.", exampleSk: "Kupuje bielu lampu.", gender: null, srsId: "L62_V09", recycledFrom: [31] },
-    { de: "ruhig / ruhige", sk: "pokojný", example: "Das ist eine ruhige Straße.", exampleSk: "To je pokojná ulica.", gender: null, srsId: "L62_V10", recycledFrom: [56] },
-    { de: "laut / laute", sk: "hlučný", example: "Er hat einen lauten Nachbar.", exampleSk: "Má hlučného suseda.", gender: null, srsId: "L62_V11", recycledFrom: [26] },
-    { de: "bequem / bequeme", sk: "pohodlný", example: "Das ist ein bequemer Stuhl.", exampleSk: "To je pohodlná stolička.", gender: null, srsId: "L62_V12", recycledFrom: [31] },
-    { de: "ein neuer Schreibtisch", sk: "nový písací stôl (M, Nom.)", example: "Ich kaufe einen neuen Schreibtisch.", exampleSk: "Kupujem nový písací stôl.", gender: null, srsId: "L62_V13", recycledFrom: [] },
-    { de: "eine helle Wohnung", sk: "svetlý byt (F, Nom.)", example: "Ich habe eine helle Wohnung.", exampleSk: "Mám svetlý byt.", gender: null, srsId: "L62_V14", recycledFrom: [] },
-    { de: "ein schönes Zimmer", sk: "krásna izba (N, Nom.)", example: "Das ist ein schönes Zimmer.", exampleSk: "To je krásna izba.", gender: null, srsId: "L62_V15", recycledFrom: [] }
+    {
+      de: "die Milch",
+      sk: "mlieko",
+      gender: "F",
+      srsId: "L62_V01",
+      example: "Kauf bitte Milch!",
+      exampleSk: "Kúp, prosím, mlieko!",
+      recycledFrom: []
+    },
+    {
+      de: "der Müll",
+      sk: "smeti",
+      gender: "M",
+      srsId: "L62_V02",
+      example: "Stell den Müll raus!",
+      exampleSk: "Vynes smeti von!",
+      recycledFrom: []
+    },
+    {
+      de: "das Fenster",
+      sk: "okno",
+      gender: "N",
+      srsId: "L62_V03",
+      example: "Mach das Fenster auf!",
+      exampleSk: "Otvori okno!",
+      recycledFrom: []
+    },
+    {
+      de: "der Tee",
+      sk: "čaj",
+      gender: "M",
+      srsId: "L62_V04",
+      example: "Bring mir bitte einen Tee!",
+      exampleSk: "Prines mi, prosím, čaj!",
+      recycledFrom: []
+    },
+    {
+      de: "die Tür",
+      sk: "dvere",
+      gender: "F",
+      srsId: "L62_V05",
+      example: "Mach bitte die Tür zu!",
+      exampleSk: "Zavri, prosím, dvere!",
+      recycledFrom: []
+    },
+    {
+      de: "das Bett",
+      sk: "posteľ",
+      gender: "N",
+      srsId: "L62_V06",
+      example: "Räum dein Bett auf!",
+      exampleSk: "Uprat si posteľ!",
+      recycledFrom: []
+    },
+    {
+      de: "der Stuhl",
+      sk: "stolička",
+      gender: "M",
+      srsId: "L62_V07",
+      example: "Stell den Stuhl an den Tisch.",
+      exampleSk: "Polož stoličku k stolu.",
+      recycledFrom: []
+    },
+    {
+      de: "die Lampe",
+      sk: "lampa",
+      gender: "F",
+      srsId: "L62_V08",
+      example: "Mach die Lampe an!",
+      exampleSk: "Zapni lampu!",
+      recycledFrom: []
+    },
+    {
+      de: "das Buch",
+      sk: "kniha",
+      gender: "N",
+      srsId: "L62_V09",
+      example: "Lies das Buch, Jana!",
+      exampleSk: "Čítaj tú knihu, Jana!",
+      recycledFrom: []
+    },
+    {
+      de: "der Tisch",
+      sk: "stôl",
+      gender: "M",
+      srsId: "L62_V10",
+      example: "Setz dich an den Tisch.",
+      exampleSk: "Sadni si za stôl.",
+      recycledFrom: []
+    },
+    {
+      de: "kaufen",
+      sk: "kúpiť",
+      gender: null,
+      srsId: "L62_V11",
+      example: "Kaufst du Milch?",
+      exampleSk: "Kúpiš mlieko?",
+      recycledFrom: []
+    },
+    {
+      de: "stellen",
+      sk: "postaviť",
+      gender: null,
+      srsId: "L62_V12",
+      example: "Stell die Tasche hier ab.",
+      exampleSk: "Polož tašku sem.",
+      recycledFrom: []
+    },
+    {
+      de: "aufmachen",
+      sk: "otvoriť",
+      gender: null,
+      srsId: "L62_V13",
+      example: "Mach bitte die Tür auf!",
+      exampleSk: "Otvori, prosím, dvere!",
+      recycledFrom: []
+    },
+    {
+      de: "bringen",
+      sk: "priniesť",
+      gender: null,
+      srsId: "L62_V14",
+      example: "Bringst du mir Wasser?",
+      exampleSk: "Prinesieš mi vodu?",
+      recycledFrom: []
+    },
+    {
+      de: "zumachen",
+      sk: "zavrieť",
+      gender: null,
+      srsId: "L62_V15",
+      example: "Mach das Fenster zu!",
+      exampleSk: "Zavri okno!",
+      recycledFrom: []
+    },
+    {
+      de: "aufräumen",
+      sk: "upratať",
+      gender: null,
+      srsId: "L62_V16",
+      example: "Räumt ihr euer Zimmer auf?",
+      exampleSk: "Upracete svoju izbu?",
+      recycledFrom: []
+    },
+    {
+      de: "lesen",
+      sk: "čítať",
+      gender: null,
+      srsId: "L62_V17",
+      example: "Lest ihr das Buch?",
+      exampleSk: "Čítate tú knihu?",
+      recycledFrom: []
+    },
+    {
+      de: "sei ruhig!",
+      sk: "buď ticho!",
+      gender: null,
+      srsId: "L62_V18",
+      example: "Sei ruhig, bitte!",
+      exampleSk: "Buď ticho, prosím!",
+      recycledFrom: []
+    },
+    {
+      de: "hab keine Angst!",
+      sk: "nemaj strach!",
+      gender: null,
+      srsId: "L62_V19",
+      example: "Hab keine Angst vor der Prüfung!",
+      exampleSk: "Nemaj strach zo skúšky!",
+      recycledFrom: []
+    },
+    {
+      de: "hilf mir bitte!",
+      sk: "pomôž mi, prosím!",
+      gender: null,
+      srsId: "L62_V20",
+      example: "Hilf mir bitte beim Kochen!",
+      exampleSk: "Pomôž mi, prosím, s varením!",
+      recycledFrom: []
+    },
+    {
+      de: "Mach das Fenster auf!",
+      sk: "Otvori okno!",
+      gender: null,
+      srsId: "L62_V21",
+      example: "Jana, mach das Fenster auf!",
+      exampleSk: "Jana, otvori okno!",
+      recycledFrom: []
+    },
+    {
+      de: "Stellt den Müll raus!",
+      sk: "Vyneste smeti von!",
+      gender: null,
+      srsId: "L62_V22",
+      example: "Kinder, stellt den Müll raus!",
+      exampleSk: "Deti, vyneste smeti von!",
+      recycledFrom: []
+    },
+    {
+      de: "Bringt mir bitte einen Tee!",
+      sk: "Prinesiete mi, prosím, čaj!",
+      gender: null,
+      srsId: "L62_V23",
+      example: "Ihr, bringt mir bitte einen Tee!",
+      exampleSk: "Vy, prinesiete mi, prosím, čaj!",
+      recycledFrom: []
+    },
+    {
+      de: "Kauft Milch!",
+      sk: "Kúpte mlieko!",
+      gender: null,
+      srsId: "L62_V24",
+      example: "Freunde, kauft Milch!",
+      exampleSk: "Priatelia, kúpte mlieko!",
+      recycledFrom: []
+    },
+    {
+      de: "Seid ruhig!",
+      sk: "Buďte ticho!",
+      gender: null,
+      srsId: "L62_V25",
+      example: "Seid ruhig, wir lernen!",
+      exampleSk: "Buďte ticho, učíme sa!",
+      recycledFrom: []
+    }
   ],
   exercises: [
     {
       type: "flashcard",
-      instruction: "Prezri si prídavné mená a ich tvary. Dávaj pozor na rôzne koncovky.",
-      items: [
-        "neu = nový | ein neuer (M-Nom) | eine neue (F-Nom) | ein neues (N-Nom)",
-        "alt = starý | ein alter (M-Nom) | eine alte (F-Nom) | ein altes (N-Nom)",
-        "hell = svetlý | ein heller (M-Nom) | eine helle (F-Nom) | ein helles (N-Nom)",
-        "schön = krásny | ein schöner (M-Nom) | eine schöne (F-Nom) | ein schönes (N-Nom)",
-        "schwarz = čierny | einen schwarzen (M-Akk) | eine schwarze (F-Akk) | ein schwarzes (N-Akk)",
-        "eine helle Wohnung = svetlý byt (F, Nom.)",
-        "ein neuer Schreibtisch = nový písací stôl (M, Nom.)",
-        "ein schönes Zimmer = krásna izba (N, Nom.)",
-        "einen neuen Schreibtisch = nový písací stôl (M, Akk.)",
-        "ruhig = pokojný | eine ruhige Straße",
-        "laut = hlučný | ein lauter Nachbar",
-        "bequem = pohodlný | ein bequemer Stuhl",
-        "groß → große / großer / großes",
-        "klein → kleine / kleiner / kleines",
-        "dunkel → dunkle / dunkler / dunkles"
+      instruction: "Prezri si slovíčka tejto lekcie. Klikni na kartičku pre preklad."
+    },
+    {
+      type: "match",
+      instruction: "Spojte nemecké slová s ich slovenskými ekvivalentmi.",
+      pairs: [
+        [
+          "die Milch",
+          "mlieko"
+        ],
+        [
+          "der Müll",
+          "smeti"
+        ],
+        [
+          "das Fenster",
+          "okno"
+        ],
+        [
+          "der Tee",
+          "čaj"
+        ],
+        [
+          "die Tür",
+          "dvere"
+        ],
+        [
+          "das Bett",
+          "posteľ"
+        ],
+        [
+          "der Stuhl",
+          "stolička"
+        ],
+        [
+          "die Lampe",
+          "lampa"
+        ],
+        [
+          "das Buch",
+          "kniha"
+        ],
+        [
+          "der Tisch",
+          "stôl"
+        ]
       ]
     },
     {
-      type: "mcq",
-      instruction: "Vyber správnu koncovku prídavného mena.",
-      questions: [
+      type: "wordorder",
+      instruction: "Usporiadajte slová tak, aby vytvorili správnu vetu v rozkazovacom spôsobe.",
+      sentences: [
         {
-          question: "Jana má krásnu, svetlú izbu. Vyber správnu vetu:",
-          options: [
-            "Jana hat ein schöner, heller Zimmer.",
-            "Jana hat ein schönes, helles Zimmer.",
-            "Jana hat eine schöne, helle Zimmer.",
-            "Jana hat ein schönem, hellem Zimmer."
+          words: [
+            "das",
+            "Fenster",
+            "Mach",
+            "auf"
           ],
-          answer: "Jana hat ein schönes, helles Zimmer.",
-          explanation: "Zimmer je stredného rodu (N). S neurčitým členom v nominatíve: ein + -es → ein schönes, helles Zimmer."
+          correct: "Mach das Fenster auf",
+          hint: "Otvori okno!",
+          explanation: "V slovenčine sa rozkazovací spôsob tvorí zvyčajne z 2. osoby jednotného čísla prítomného času (ty). V nemčine sa forma 'du' tvorí z kmeňa slovesa a často bez osobnej zámeny, napr. 'aufmachen' -> 'mach auf'."
         },
         {
-          question: "Jana kupuje nový písací stôl. 'Schreibtisch' je mužský rod, akuzatív:",
-          options: [
-            "Jana kauft ein neuen Schreibtisch.",
-            "Jana kauft einen neu Schreibtisch.",
-            "Jana kauft einen neuen Schreibtisch.",
-            "Jana kauft ein neuer Schreibtisch."
+          words: [
+            "ruhig",
+            "Seid"
           ],
-          answer: "Jana kauft einen neuen Schreibtisch.",
-          explanation: "Schreibtisch je mužského rodu (M). V akuzatíve: einen + prídavné meno + -en → einen neuen Schreibtisch."
+          correct: "Seid ruhig",
+          hint: "Buďte ticho!",
+          explanation: "Rozkazovací spôsob pre 'ihr' (vy) sa tvorí z 2. osoby množného čísla prítomného času, napr. 'sein' -> 'ihr seid' -> 'seid'."
         },
         {
-          question: "Das ist ___ alte Mann. (určitý člen, nominatív, mužský rod)",
-          options: ["der alten", "der alte", "der alter", "den alten"],
-          answer: "der alte",
-          explanation: "S určitým členom v nominatíve dostáva prídavné meno vždy -e (okrem plurálu a akuzatívu M). der alte Mann."
-        },
-        {
-          question: "Prečo je správne 'ein alter Mann' a nie 'ein alte Mann'?",
-          options: [
-            "Lebo Mann je veľké slovo",
-            "Lebo 'ein' neukáže rod, preto musí prídavné meno dostať -er (mužský rod, nom.)",
-            "Lebo 'alt' je nepravidelné",
-            "Lebo je to akuzatív"
+          words: [
+            "Müll",
+            "den",
+            "Stellt",
+            "raus"
           ],
-          answer: "Lebo 'ein' neukáže rod, preto musí prídavné meno dostať -er (mužský rod, nom.)",
-          explanation: "Toto je kľúčový princíp! 'Ein' nemá v nominatíve mužského rodu viditeľnú rodovú koncovku, preto ju musí vyjadriť prídavné meno: ein alter Mann (-er = mužský rod)."
+          correct: "Stellt den Müll raus",
+          hint: "Vyneste smeti von!",
+          explanation: "Rozkazovací spôsob pre 'ihr' (vy) sa tvorí z 2. osoby množného čísla prítomného času, napr. 'stellen' -> 'ihr stellt' -> 'stellt'."
         },
         {
-          question: "Ich habe ___ schöne Wohnung. (F, Akkusativ)",
-          options: ["einen", "eine", "ein", "einer"],
-          answer: "eine",
-          explanation: "Wohnung je ženského rodu (F). Ženský rod má rovnaký tvar v nominatíve aj akuzatíve: eine schöne Wohnung."
-        },
-        {
-          question: "Vyber správny tvar: 'Das ist ___ bequemer Stuhl.' alebo 'Das ist ___ bequeme Stuhl.'",
-          options: [
-            "ein bequemer Stuhl (neurčitý člen, M, Nom.)",
-            "ein bequeme Stuhl (neurčitý člen, M, Nom.)",
-            "der bequemer Stuhl (určitý člen, M, Nom.)",
-            "den bequemen Stuhl (M, Akk.)"
+          words: [
+            "Milch",
+            "Kauft"
           ],
-          answer: "ein bequemer Stuhl (neurčitý člen, M, Nom.)",
-          explanation: "Stuhl je mužského rodu. S neurčitým členom v nominatíve: ein + prídavné meno + -er → ein bequemer Stuhl."
+          correct: "Kauft Milch",
+          hint: "Kúpte mlieko!",
+          explanation: "Rozkazovací spôsob pre 'ihr' (vy) sa tvorí z 2. osoby množného čísla prítomného času, napr. 'kaufen' -> 'ihr kauft' -> 'kauft'."
+        },
+        {
+          words: [
+            "hilf",
+            "mir",
+            "bitte"
+          ],
+          correct: "hilf mir bitte",
+          hint: "Pomôž mi, prosím!",
+          explanation: "Rozkazovací spôsob pre 'du' (ty) sa tvorí z kmeňa slovesa, napr. 'helfen' -> 'hilf'."
         }
       ]
     },
     {
       type: "fill",
-      instruction: "Doplň správnu formu prídavného mena do vety.",
+      instruction: "Doplňte správne slovo alebo tvar slova.",
       questions: [
         {
-          sentence: "Ich habe eine hell___ Wohnung. (F, Nom.)",
-          answer: "helle",
-          hint: "Ženský rod, neurčitý člen, nominatív → -e",
-          explanation: "Ženský rod s neurčitým členom v nominatíve: eine + prídavné meno + -e → eine helle Wohnung."
+          sentence: "Bitte ___ das Fenster auf!",
+          answer: "mach",
+          hint: "Rozkazovací spôsob pre 'ty' (du).",
+          explanation: "Rozkazovací spôsob pre 'du' sa tvorí z kmeňa slovesa. Sloveso 'aufmachen' má kmeň 'mach'."
         },
         {
-          sentence: "Ich kaufe einen neu___ Schreibtisch. (M, Akk.)",
-          answer: "neuen",
-          hint: "Mužský rod, neurčitý člen, akuzatív → -en",
-          explanation: "Mužský rod s neurčitým členom v akuzatíve: einen + prídavné meno + -en → einen neuen Schreibtisch."
+          sentence: "___ ruhig!",
+          answer: "Seid",
+          hint: "Rozkazovací spôsob pre 'vy' (ihr).",
+          explanation: "Rozkazovací spôsob pre 'ihr' sa tvorí z 2. osoby množného čísla prítomného času. Sloveso 'sein' v tejto forme je 'seid'."
         },
         {
-          sentence: "Das ist ein schön___ Zimmer. (N, Nom.)",
-          answer: "schönes",
-          hint: "Stredný rod, neurčitý člen, nominatív → -es",
-          explanation: "Stredný rod s neurčitým členom v nominatíve: ein + prídavné meno + -es → ein schönes Zimmer."
+          sentence: "___ mir bitte einen Tee!",
+          answer: "Bringt",
+          hint: "Rozkazovací spôsob pre 'vy' (ihr).",
+          explanation: "Rozkazovací spôsob pre 'ihr' sa tvorí z 2. osoby množného čísla prítomného času. Sloveso 'bringen' v tejto forme je 'bringt'."
         },
         {
-          sentence: "Der alt___ Mann wohnt nebenan. (M, Nom., určitý člen)",
-          answer: "alte",
-          hint: "S určitým členom v nominatíve → vždy -e",
-          explanation: "S určitým členom v nominatíve dostáva prídavné meno vždy -e (okrem plurálu). der alte Mann."
+          sentence: "Ich ___ keine Milch mehr.",
+          answer: "habe",
+          hint: "Lekcia 4: sloveso 'haben' pre 'ich'.",
+          explanation: "V lekcii 4 sme sa naučili sloveso 'haben' v prítomnom čase. Pre 'ich' je to 'habe'."
         },
         {
-          sentence: "Sie kauft eine schwarz___ Lampe. (F, Akk.)",
-          answer: "schwarze",
-          hint: "Ženský rod, akuzatív = rovnaký tvar ako nominatív → -e",
-          explanation: "Ženský rod má rovnaký tvar v nominatíve aj akuzatíve: eine schwarze Lampe."
+          sentence: "Wo ___ du?",
+          answer: "wohnst",
+          hint: "Lekcia 6: sloveso 'wohnen' pre 'ty'.",
+          explanation: "V lekcii 6 sme sa naučili sloveso 'wohnen' v prítomnom čase. Pre 'du' je to 'wohnst'."
         },
         {
-          sentence: "Das ist ein ruhig___ Straße... Moment! Straße ist weiblich! Eine ruhig___ Straße.",
-          answer: "ruhige",
-          hint: "Straße je ženský rod (die Straße). Neurčitý člen + F, Nom. → -e",
-          explanation: "Pozor: die Straße je ženský rod! eine ruhige Straße. Dôležité: rod podstatného mena určuje koncovku!"
+          sentence: "___ du Deutsch?",
+          answer: "Sprichst",
+          hint: "Lekcia 3: sloveso 'sprechen' pre 'ty'.",
+          explanation: "V lekcii 3 sme sa naučili sloveso 'sprechen', ktoré má zmenu samohlásky v 2. a 3. osobe jednotného čísla. Pre 'du' je to 'sprichst'."
+        },
+        {
+          sentence: "Das ist ___ neues Buch.",
+          answer: "ein",
+          hint: "Lekcia 14: neurčitý člen v nominatíve.",
+          explanation: "V lekcii 14 sme sa naučili používať neurčitý člen 'ein' pre mužský rod v nominatíve."
         }
       ]
     },
     {
       type: "listen",
-      instruction: "Počúvaj Janin opis bytu. Opakuj každú vetu nahlas.",
+      instruction: "Počúvajte a napíšte, čo počujete.",
       questions: [
-        { de: "Ich habe eine schöne, helle Wohnung.", sk: "Mám krásny, svetlý byt." },
-        { de: "Das ist ein kleines, aber gemütliches Zimmer.", sk: "To je malá, ale útulná izba." },
-        { de: "Ich kaufe einen neuen Schreibtisch.", sk: "Kupujem nový písací stôl." },
-        { de: "Die alte Küche ist sehr praktisch.", sk: "Stará kuchyňa je veľmi praktická." },
-        { de: "Ich suche einen bequemen Sessel.", sk: "Hľadám pohodlné kreslo." },
-        { de: "Das ist ein ruhiges Viertel.", sk: "To je pokojná štvrť." },
-        { de: "Ich habe einen großen Balkon.", sk: "Mám veľký balkón." },
-        { de: "Das neue Sofa ist weiß.", sk: "Nová pohovka je biela." }
+        {
+          de: "die Milch",
+          sk: "mlieko"
+        },
+        {
+          de: "der Müll",
+          sk: "smeti"
+        },
+        {
+          de: "das Fenster",
+          sk: "okno"
+        },
+        {
+          de: "der Tee",
+          sk: "čaj"
+        },
+        {
+          de: "die Tür",
+          sk: "dvere"
+        },
+        {
+          de: "das Bett",
+          sk: "posteľ"
+        },
+        {
+          de: "der Stuhl",
+          sk: "stolička"
+        },
+        {
+          de: "die Lampe",
+          sk: "lampa"
+        },
+        {
+          de: "das Buch",
+          sk: "kniha"
+        },
+        {
+          de: "der Tisch",
+          sk: "stôl"
+        }
       ]
     },
     {
-      type: "match",
-      instruction: "Spoj nominácie — vyber správnu formu prídavného mena pre každý rod a pád.",
-      pairs: [
-        ["ein ___ Tisch (M, Nom.) ← neu", "ein neuer Tisch"],
-        ["eine ___ Lampe (F, Nom.) ← weiß", "eine weiße Lampe"],
-        ["ein ___ Sofa (N, Nom.) ← bequem", "ein bequemes Sofa"],
-        ["einen ___ Stuhl (M, Akk.) ← schwarz", "einen schwarzen Stuhl"],
-        ["der ___ Mann (M, Nom.) ← alt", "der alte Mann"],
-        ["die ___ Küche (F, Nom.) ← groß", "die große Küche"],
-        ["das ___ Kind (N, Nom.) ← klein", "das kleine Kind"],
-        ["eine ___ Wohnung (F, Akk.) ← hell", "eine helle Wohnung"]
-      ]
-    },
-    {
-      type: "dialogue",
-      instruction: "Počúvaj Janin telefonický rozhovor s mamou o novom byte.",
-      lines: [
-        { speaker: "A", de: "Jana, wie ist deine neue Wohnung?", sk: "Jana, aký je tvoj nový byt?" },
-        { speaker: "B", de: "Mama, es ist wunderbar! Ich habe eine schöne, helle Wohnung im dritten Bezirk.", sk: "Mama, je to úžasné! Mám krásny, svetlý byt v treťom obvode." },
-        { speaker: "A", de: "Wie viele Zimmer hast du?", sk: "Koľko izieb máš?" },
-        { speaker: "B", de: "Ich habe ein großes Wohnzimmer, ein kleines Schlafzimmer und eine moderne Küche.", sk: "Mám veľkú obývačku, malú spálňu a modernú kuchyňu." },
-        { speaker: "A", de: "Hast du auch einen Balkon?", sk: "Máš aj balkón?" },
-        { speaker: "B", de: "Ja! Einen kleinen, aber schönen Balkon. Ich kaufe einen neuen Tisch dafür.", sk: "Áno! Malý, ale krásny balkón. Kupujem preň nový stôl." },
-        { speaker: "A", de: "Und die Möbel — hast du schon einen bequemen Sessel?", sk: "A nábytok — máš už pohodlné kreslo?" },
-        { speaker: "B", de: "Noch nicht. Ich suche einen schwarzen Schreibtisch und eine weiße Lampe.", sk: "Ešte nie. Hľadám čierny písací stôl a bielu lampu." },
-        { speaker: "A", de: "Klingt sehr schön! Ist es eine ruhige Straße?", sk: "Znie to veľmi krásne! Je to pokojná ulica?" },
-        { speaker: "B", de: "Ja, es ist eine sehr ruhige, grüne Straße. Kein lauter Verkehr!", sk: "Áno, je to veľmi pokojná, zelená ulica. Žiadna hlučná premávka!" },
-        { speaker: "A", de: "Perfekt! Ich freue mich, die neue Wohnung zu sehen!", sk: "Perfektné! Teším sa, že uvidím nový byt!" },
-        { speaker: "B", de: "Du bist herzlich willkommen, Mama! Das alte Sofa muss aber noch weg.", sk: "Si srdečne vítaná, mama! Stará pohovka musí ale ešte preč." }
-      ],
-      comprehensionQuestions: [
+      type: "mcq",
+      instruction: "Vyberte správnu možnosť.",
+      questions: [
         {
-          question: "Koľko izieb má Jana?",
-          options: ["Jednu izbu", "Dve izby", "Tri izby (obývačka, spálňa, kuchyňa)", "Štyri izby"],
-          answer: "Tri izby (obývačka, spálňa, kuchyňa)"
+          question: "Ako sa tvorí rozkazovací spôsob pre 'ihr' (vy)?",
+          options: [
+            "Z 2. osoby jednotného čísla prítomného času",
+            "Z 3. osoby jednotného čísla prítomného času",
+            "Z 2. osoby množného čísla prítomného času",
+            "Z infinitívu"
+          ],
+          answer: 2,
+          explanation: "Rozkazovací spôsob pre 'ihr' sa tvorí z 2. osoby množného čísla prítomného času (napr. ihr macht -> macht)."
         },
         {
-          question: "Čo hľadá Jana?",
-          options: ["Biely stôl a čiernu lampu", "Čierny písací stôl a bielu lampu", "Nový balkón", "Veľkú pohovku"],
-          answer: "Čierny písací stôl a bielu lampu"
+          question: "Čo znamená 'Mach das Fenster auf!'?",
+          options: [
+            "Zavri okno!",
+            "Otvori okno!",
+            "Umy okno!",
+            "Uprataj okno!"
+          ],
+          answer: 1,
+          explanation: "'Aufmachen' znamená otvoriť. 'Mach' je rozkazovací spôsob pre 'du'."
         },
         {
-          question: "Aká je Janina ulica?",
-          options: ["Hlučná a rušná", "Tmavá a stará", "Veľmi pokojná a zelená", "Blízko centra"],
-          answer: "Veľmi pokojná a zelená"
+          question: "Ktorý tvar je správny rozkazovací spôsob pre 'du' od slovesa 'lesen'?",
+          options: [
+            "lies",
+            "les",
+            "lest",
+            "lest du"
+          ],
+          answer: 0,
+          explanation: "Sloveso 'lesen' má zmenu samohlásky v 2. a 3. osobe jednotného čísla (du liest, er liest). Rozkazovací spôsob pre 'du' je 'lies'."
+        },
+        {
+          question: "Ako sa povie 'Vyneste smeti von!' v nemčine?",
+          options: [
+            "Bringt den Müll raus!",
+            "Macht den Müll raus!",
+            "Stellt den Müll raus!",
+            "Kauft den Müll raus!"
+          ],
+          answer: 2,
+          explanation: "Sloveso 'stellen' sa používa vo význame 'postaviť', ale v tomto kontexte 'Stellt den Müll raus!' znamená 'Vyneste smeti von!'."
+        },
+        {
+          question: "Lekcia 17: Potrebujem ___ nový stôl.",
+          options: [
+            "ein",
+            "einen",
+            "eine",
+            "keinen"
+          ],
+          answer: 1,
+          explanation: "Sloveso 'brauchen' vyžaduje Akkusativ. 'Der Tisch' je mužského rodu, takže v Akkusatíve je to 'einen Tisch'."
+        },
+        {
+          question: "Lekcia 39: Včera som šiel do kina.",
+          options: [
+            "Ich bin gestern ins Kino gegangen.",
+            "Ich habe gestern ins Kino gegangen.",
+            "Ich war gestern ins Kino gegangen.",
+            "Ich gehe gestern ins Kino."
+          ],
+          answer: 0,
+          explanation: "Perfektum s 'sein' sa používa pre slovesá pohybu. 'Gehen' je sloveso pohybu, preto sa používa 'sein' (Ich bin gegangen)."
         }
       ]
     },
     {
       type: "minitext",
-      instruction: "Prečítaj Janin inzerát na byt a identifikuj tvary prídavných mien.",
-      text: "Wohnungsanzeige: Ich vermiete eine helle, moderne Wohnung in Wien, 3. Bezirk. Die Wohnung hat ein großes Wohnzimmer, ein kleines, aber gemütliches Schlafzimmer und eine neue, praktische Küche. Es gibt auch einen kleinen Balkon mit einem schönen Blick auf den grünen Garten. Die Wohnung liegt in einer ruhigen Straße. Perfekt für einen berufstätigen Mieter!",
-      textSk: "Inzerát na byt: Prenajímam svetlý, moderný byt vo Viedni, 3. obvod. Byt má veľkú obývačku, malú, ale útulnú spálňu a novú, praktickú kuchyňu. Je tu aj malý balkón s krásnym výhľadom na zelený záhradu. Byt sa nachádza v pokojnej ulici. Ideálne pre zamestnaného nájomníka!",
+      instruction: "Lies den Dialog und beantworte die Fragen.",
+      text: "Luisa: Jana, bist du in deinem Zimmer? Ich koche hier!\nJana: Ja, Luisa. Was ist?\nLuisa: Kauf bitte Milch! Und stell den Müll raus! Das Fenster ist offen.\nJana: Okay! Aber machst du mir bitte einen Tee?\nLuisa: Bring mir erst die Milch! Dann bringe ich dir einen Tee. Und räum dein Bett auf!\nJana: Puh, Luisa! Sei ruhig! Ich komme!\nLuisa: Gut! Und mach die Tür zu, wenn du kommst!",
+      textSk: "Luisa: Janka, si vo svojej izbe? Ja tu varím!\nJanka: Áno, Luisa. Čo sa deje?\nLuisa: Kúp, prosím, mlieko! A vyneste smeti von! Okno je otvorené.\nJanka: Dobre! Ale prinesieš mi, prosím, čaj?\nLuisa: Najprv mi prines mlieko! Potom ti prinesiem čaj. A uprac si posteľ!\nJanka: Fuj, Luisa! Buď ticho! Idem!\nLuisa: Dobre! A zavri dvere, keď prídeš!",
       questions: [
         {
-          question: "Aký je balkón?",
-          options: ["Velký a moderný", "Malý s krásnym výhľadom", "Tmavý a hlučný", "Starý ale útulný"],
-          answer: "Malý s krásnym výhľadom"
-        },
-        {
-          question: "Kde leží byt?",
-          options: ["Na hlučnej ulici", "V centre Viedne", "V pokojnej ulici", "Blízko parku"],
-          answer: "V pokojnej ulici"
-        },
-        {
-          question: "'Einen berufstätigen Mieter' — prečo je koncovka -en?",
+          question: "Wo ist Luisa?",
           options: [
-            "Lebo Mieter je ženský rod",
-            "Lebo je to stredný rod",
-            "Lebo je to mužský rod v akuzatíve s neurčitým členom (einen + -en)",
-            "Lebo je to plurál"
+            "Sie ist im Zimmer von Jana.",
+            "Sie kocht in der Küche.",
+            "Sie kauft Milch.",
+            "Sie räumt ihr Bett auf."
           ],
-          answer: "Lebo je to mužský rod v akuzatíve s neurčitým členom (einen + -en)"
-        }
-      ]
-    },
-    {
-      type: "freewrite",
-      instruction: "Opíš svoj byt alebo izbu s čo najviac prídavnými menami.",
-      prompt: "Beschreibe deine Wohnung oder dein Zimmer mit möglichst vielen Adjektiven. Zum Beispiel: Ich habe eine/einen... Das Zimmer ist... Ich habe einen/eine/ein...",
-      minWords: 45,
-      exampleAnswer: "Ich habe ein kleines, aber gemütliches Zimmer. Es gibt einen großen Schreibtisch und einen bequemen Stuhl. Das Zimmer hat ein helles Fenster und eine weiße Wand. Ich suche noch eine schöne Lampe. Mein Zimmer ist ruhig — es gibt keine lauten Nachbarn. Das ist sehr wichtig für mich!"
-    },
-    {
-      type: "wordorder",
-      instruction: "Zoraď slová do správnej nemeckej vety.",
-      sentences: [
-        {
-          words: ["Jana", "trifft", "sich", "mit", "ihrem", "Freund", "Lukas"],
-          correct: "Jana trifft sich mit ihrem Freund Lukas",
-          hint: "Jana sa stretáva so svojím priateľom Lukasom.",
-          explanation: "'mit' + dativ: posesívne zámeno 'ihr' v datíve M/N → 'ihrem'."
+          answer: 1,
+          explanation: "Luisa sagt: \"Ich koche hier!\""
         },
         {
-          words: ["Ich", "fahre", "mit", "meinem", "Bruder", "in", "die", "Stadt"],
-          correct: "Ich fahre mit meinem Bruder in die Stadt",
-          hint: "Idem s mojím bratom do mesta.",
-          explanation: "'mit' + dativ: 'mein' (M) → 'meinem'. Posesívne zámená v datíve M/N dostávajú príponu -em."
+          question: "Was soll Jana zuerst kaufen?",
+          options: [
+            "Einen Tee",
+            "Ein Buch",
+            "Milch",
+            "Einen Stuhl"
+          ],
+          answer: 2,
+          explanation: "Luisa sagt: \"Kauf bitte Milch!\""
         },
         {
-          words: ["Er", "wohnt", "bei", "seiner", "Kollegin", "Maria"],
-          correct: "Er wohnt bei seiner Kollegin Maria",
-          hint: "Býva u svojej kolegyne Márie.",
-          explanation: "'bei' + dativ: 'sein' (F) → 'seiner'. Posesívne zámená v datíve F dostávajú príponu -er."
+          question: "Was soll Jana noch machen?",
+          options: [
+            "Das Fenster zumachen",
+            "Den Müll rausstellen",
+            "Die Tür aufmachen",
+            "Die Lampe anmachen"
+          ],
+          answer: 1,
+          explanation: "Luisa sagt: \"Und stell den Müll raus!\""
         },
         {
-          words: ["Wir", "essen", "mit", "unserem", "Chef", "zu", "Mittag"],
-          correct: "Wir essen mit unserem Chef zu Mittag",
-          hint: "Jeme s naším šéfom na obed.",
-          explanation: "'mit' + dativ: 'unser' (M) → 'unserem'. Dativ M/N posesívnych zámen: -em prípona."
+          question: "Was möchte Jana von Luisa?",
+          options: [
+            "Sie möchte, dass Luisa ruhig ist.",
+            "Sie möchte, dass Luisa ihr das Fenster aufmacht.",
+            "Sie möchte einen Tee.",
+            "Sie möchte, dass Luisa ihr Bett aufräumt."
+          ],
+          answer: 2,
+          explanation: "Jana fragt: \"Aber machst du mir bitte einen Tee?\""
         },
         {
-          words: ["Sie", "spricht", "mit", "ihrer", "Mutter", "am", "Telefon"],
-          correct: "Sie spricht mit ihrer Mutter am Telefon",
-          hint: "Hovorí so svojou mamou po telefóne.",
-          explanation: "'mit' + dativ: 'ihr' (F) → 'ihrer'. Datív F posesívnych zámen dostáva príponu -er."
+          question: "Was soll Jana machen, wenn sie kommt?",
+          options: [
+            "Sie soll das Fenster aufmachen.",
+            "Sie soll die Tür zumachen.",
+            "Sie soll Luisa helfen.",
+            "Sie soll ruhig sein."
+          ],
+          answer: 1,
+          explanation: "Luisa sagt: \"Und mach die Tür zu, wenn du kommst!\""
         }
       ]
     },
     {
       type: "speaking",
-      instruction: "Počúvaj nemeckú vetu. Potom hovor nahlas a skontroluj sa.",
+      instruction: "Höre zu und sprich nach.",
       phrases: [
         {
-          de: "Jana trifft sich mit ihrem Freund.",
-          sk: "Jana sa stretáva so svojím priateľom.",
-          tip: "ihrem: M-Dat., ihr→ihrem"
+          de: "die Milch",
+          sk: "mlieko",
+          tip: "Ch [x] ako v slove Bach"
         },
         {
-          de: "Ich fahre mit meinem Bruder.",
-          sk: "Idem s mojím bratom.",
-          tip: "meinem: M-Dat., mein→meinem"
+          de: "der Müll",
+          sk: "smeti",
+          tip: "Ü [y] ako v nemeckom über"
         },
         {
-          de: "Er wohnt bei seiner Kollegin.",
-          sk: "Býva u svojej kolegyne.",
-          tip: "seiner: F-Dat., sein→seiner"
+          de: "das Fenster",
+          sk: "okno",
+          tip: "W [v] ako v slove Wasser"
         },
         {
-          de: "Wir essen mit unserem Chef.",
-          sk: "Jeme s naším šéfom.",
-          tip: "unserem: M-Dat., unser→unserem"
+          de: "Mach das Fenster auf!",
+          sk: "Otvori okno!",
+          tip: "au [aʊ] ako v slove Haus"
         },
         {
-          de: "Sie spricht mit ihrer Mutter.",
-          sk: "Hovorí so svojou mamou.",
-          tip: "ihrer: F-Dat., ihr→ihrer"
+          de: "Bringt mir bitte einen Tee!",
+          sk: "Prinesiete mi, prosím, čaj!",
+          tip: "ei [aɪ] ako v slove mein"
+        },
+        {
+          de: "Kauft Milch!",
+          sk: "Kúpte mlieko!",
+          tip: "au [aʊ] ako v slove Haus"
+        },
+        {
+          de: "Seid ruhig!",
+          sk: "Buďte ticho!",
+          tip: "r [r] jemné, ako v španielčine"
+        }
+      ]
+    },
+    {
+      type: "truefalse",
+      instruction: "Rozhodnite, či sú nasledujúce tvrdenia pravdivé (P) alebo nepravdivé (N).",
+      statements: [
+        {
+          statement: "Rozkazovací spôsob pre \"ihr\" sa tvorí z 3. osoby jednotného čísla.",
+          isTrue: false,
+          explanation: "Rozkazovací spôsob pre \"ihr\" sa tvorí z 2. osoby množného čísla prítomného času (ihr-forma slovesa)."
+        },
+        {
+          statement: "Veta \"Mach das Fenster auf!\" je v rozkazovacom spôsobe pre \"du\".",
+          isTrue: true,
+          explanation: "Áno, \"Mach\" je tvar slovesa \"machen\" pre \"du\" v rozkazovacom spôsobe."
+        },
+        {
+          statement: "Rozkaz \"Seid ruhig!\" je určený pre jednu osobu.",
+          isTrue: false,
+          explanation: "Rozkaz \"Seid ruhig!\" je určený pre viacero osôb (\"ihr\"), pretože \"seid\" je tvar slovesa \"sein\" pre \"ihr\"."
+        },
+        {
+          statement: "Veta \"Kauft Milch!\" znamená \"Kúpte mlieko!\".",
+          isTrue: true,
+          explanation: "Áno, \"Kauft\" je tvar slovesa \"kaufen\" pre \"ihr\" v rozkazovacom spôsobe."
+        },
+        {
+          statement: "Rozkazovací spôsob pre \"du\" sa tvorí z 1. osoby jednotného čísla.",
+          isTrue: false,
+          explanation: "Rozkazovací spôsob pre \"du\" sa tvorí z 2. osoby jednotného čísla prítomného času (du-forma slovesa)."
+        }
+      ]
+    },
+    {
+      type: "dictation",
+      instruction: "Napíšte, čo počujete.",
+      sentences: [
+        {
+          de: "Bring den Tee!",
+          sk: "Prines čaj!"
+        },
+        {
+          de: "Lest das Buch!",
+          sk: "Čítajte knihu!"
+        },
+        {
+          de: "Macht die Tür zu!",
+          sk: "Zavrite dvere!"
+        },
+        {
+          de: "Räumt das Bett auf!",
+          sk: "Upratajte posteľ!"
+        },
+        {
+          de: "Bringt mir bitte die Milch!",
+          sk: "Prinesiete mi, prosím, mlieko!"
+        }
+      ]
+    },
+    {
+      type: "categorysort",
+      instruction: "Roztrieďte slová do správnych kategórií.",
+      categories: [
+        {
+          name: "Veci v izbe",
+          color: "blue",
+          words: [
+            "das Fenster",
+            "das Bett",
+            "der Stuhl",
+            "die Lampe",
+            "das Buch",
+            "der Tisch"
+          ]
+        },
+        {
+          name: "Čo treba urobiť",
+          color: "rose",
+          words: [
+            "kaufen",
+            "aufmachen",
+            "zumachen",
+            "aufräumen",
+            "lesen",
+            "bringen"
+          ]
+        },
+        {
+          name: "Potraviny/Nápoje",
+          color: "green",
+          words: [
+            "die Milch",
+            "der Tee"
+          ]
+        }
+      ],
+      explanation: "Slová sú roztriedené podľa ich významu: veci, ktoré nájdeme v izbe, činnosti a nápoje/potraviny."
+    },
+    {
+      type: "translation",
+      instruction: "Preložte vety zo slovenčiny do nemčiny.",
+      sentences: [
+        {
+          sk: "Otvorte okno!",
+          answer: "Macht das Fenster auf!",
+          hint: "aufmachen, Fenster",
+          explanation: "Používame rozkazovací spôsob pre \"ihr\" (viacero osôb). Sloveso \"aufmachen\" sa v tejto forme časuje ako \"macht auf\"."
+        },
+        {
+          sk: "Buď ticho!",
+          answer: "Sei ruhig!",
+          hint: "sein, ruhig",
+          explanation: "Používame rozkazovací spôsob pre \"du\" (jedna osoba). Sloveso \"sein\" sa v tejto forme časuje ako \"sei\"."
+        },
+        {
+          sk: "Prines mi čaj!",
+          answer: "Bring mir Tee!",
+          hint: "bringen, Tee",
+          explanation: "Používame rozkazovací spôsob pre \"du\". Sloveso \"bringen\" sa v tejto forme časuje ako \"bring\"."
+        },
+        {
+          sk: "Pomôžte mi, prosím!",
+          answer: "Helft mir bitte!",
+          hint: "helfen, bitte",
+          explanation: "Používame rozkazovací spôsob pre \"ihr\". Sloveso \"helfen\" sa v tejto forme časuje ako \"helft\"."
+        }
+      ]
+    },
+    {
+      type: "conjugation",
+      instruction: "Doplňte správne tvary slovesa \"bringen\" v rozkazovacom spôsobe.",
+      verbs: [
+        {
+          infinitive: "bringen",
+          translation: "priniesť",
+          forms: [
+            {
+              pronoun: "du",
+              correct: "Bring"
+            },
+            {
+              pronoun: "ihr",
+              correct: "Bringt"
+            },
+            {
+              pronoun: "Sie",
+              correct: "Bringen Sie"
+            }
+          ],
+          note: "Rozkazovací spôsob pre \"du\" sa tvorí z kmeňa slovesa. Rozkazovací spôsob pre \"ihr\" je rovnaký ako 2. osoba množného čísla prítomného času."
         }
       ]
     }
   ],
-  reviewWords: ["neu", "alt", "groß", "klein", "schön", "hell", "dunkel", "schwarz", "weiß", "ruhig", "laut", "bequem"],
-  lessonNotes: "Prívlastkové adj. s neurčitým členom (Nom.): M=-er, F=-e, N=-es. S určitým členom (Nom.): vždy -e. Akuzatív M: -en (určitý aj neurčitý). Akuzatív F/N = rovnaký ako nominatív. Kľúč: v nom. M s 'ein' dáva prídavné meno -er, lebo 'ein' rod neukazuje."
+  reviewWords: []
 };

@@ -1,308 +1,904 @@
-﻿export const lesson68 = {
+export const lesson68 = {
   id: 68,
   week: 14,
   day: 3,
-  title: "Imperativ (Wiederholung und Erweiterung)",
-  topic: "Rozkazovací spôsob — opakovanie a rozšírenie",
+  title: "Regeln im Büro: Müssen oder Dürfen?",
+  topic: "Modálne slovesá povinností (*müssen*) a povolení (*dürfen*) v kontexte pravidiel v kancelárii.",
   cefr: "A1",
-  xpReward: 25,
-  narrativeContext: "Jana sa stáva mentorom nového kolegu Stefana. Ukazuje mu kanceláriu, dáva mu povzbudivé rady: 'Komm pünktlich!' 'Sei nicht so nervös!' Neskôr pred šéfom prejde do formálneho: 'Sprechen Sie bitte langsamer!' — Jana ovláda všetky tri formy rozkazovacieho spôsobu.",
-  communicativeGoal: "Po tejto lekcii viem použiť rozkazovací spôsob vo všetkých formách (du/ihr/Sie) vrátane nepravidelných slovies.",
-  skillFocus: ["grammar", "speaking", "vocabulary"],
-  grammarNote: {
-    rule: "Imperativ — du-forma, ihr-forma, Sie-forma",
-    explanation: "du-forma (neformálne jedn.č.): Kmeň bez -st: geh!, kauf!, lern! Zmena kmeňa e→i: sprechen→sprich!, essen→iss!, geben→gib!, lesen→lies! Nepravidelné: sein→sei! | ihr-forma (neformálne mn.č.): Geht! Kauft! Lernt! Seid! | Sie-forma (formálne): Gehen Sie! Kaufen Sie! Lernen Sie! Seien Sie! | Odlučiteľné slovesá: Ruf mich an! Komm mit! Pass auf! | 'bitte' robí imperatív zdvorilým.",
-    examples: [
-      { de: "Komm pünktlich!", sk: "Príď načas!" },
-      { de: "Sprich bitte langsamer!", sk: "Hovor prosím pomalšie!" },
-      { de: "Gehen Sie geradeaus!", sk: "Choďte priamo!" },
-      { de: "Pass auf!", sk: "Dávaj pozor!" }
-    ],
-    slovakContrastNote: "Slovenčina má 2 formy imperatívu: singulár (choď!) a plurál (choďte!). Nemčina pridáva formálnu formu 'Gehen Sie!' — rovnakú ako plurál, ale s 'Sie'. Navyše v nemčine existujú kmene so zmenou (sprich!, iss!) na rozdiel od jednotnej formy v slovenčine."
-  },
+  xpReward: 20,
+  narrativeContext: "Jana und Markus sind in ihrem neuen Büro. Sie sehen viele Schilder. Jana liest die Regeln.",
+  communicativeGoal: "Nach dieser Lektion kann ich über Regeln und Verbote sprechen und sagen, was man tun muss oder nicht darf.",
+  skillFocus: [
+    "vocabulary",
+    "grammar",
+    "reading",
+    "speaking"
+  ],
+  lessonNotes: "Naučíme sa rozlišovať medzi 'müssen' (musieť) a 'dürfen' (môcť, mať dovolené). Tieto slovesá sú dôležité na vyjadrenie povinností a zákazov. Zameriame sa na slovnú zásobu súvisiacu s pravidlami v kancelárii.",
+  grammarNotes: [
+    {
+      rule: "Müssen vs. Dürfen",
+      explanation: "<p>V tejto lekcii sa zameriame na dve dôležité modálne slovesá: <strong>müssen</strong> (musieť) a <strong>dürfen</strong> (smieť, môcť). Tieto slovesá vyjadrujú povinnosť, nutnosť alebo dovolenie.</p><p><strong>Müssen</strong> sa používa, keď je niečo nevyhnutné alebo povinné. Vyjadruje silnú nutnosť, ktorá pochádza buď z vonkajšej situácie, alebo z vlastného presvedčenia hovoriaceho.</p><p><strong>Dürfen</strong> sa používa na vyjadrenie dovolenia alebo povolenia. Vyjadruje, že niečo nie je zakázané a je povolené.</p><p>V nemčine sa modálne slovesá časujú v prítomnom čase (Präsens) a ich tvar sa mení v závislosti od osoby. V spojení s iným slovesom stojí hlavné sloveso v neurčitku (Infinitiv) na konci vety.</p>",
+      examples: [
+        {
+          de: "Ich muss jetzt gehen.",
+          sk: "Musím teraz ísť."
+        },
+        {
+          de: "Du musst Hausaufgaben machen.",
+          sk: "Musíš robiť domáce úlohy."
+        },
+        {
+          de: "Er muss arbeiten.",
+          sk: "On musí pracovať."
+        },
+        {
+          de: "Sie muss zum Arzt.",
+          sk: "Ona musí ísť k lekárovi."
+        },
+        {
+          de: "Wir müssen einkaufen.",
+          sk: "Musíme nakupovať."
+        },
+        {
+          de: "Ihr müsst leise sein.",
+          sk: "Musíte byť ticho."
+        },
+        {
+          de: "Sie müssen warten.",
+          sk: "Oni musia čakať."
+        },
+        {
+          de: "Darf ich hier parken?",
+          sk: "Môžem tu parkovať?"
+        },
+        {
+          de: "Du darfst nicht rauchen.",
+          sk: "Nesmieš fajčiť."
+        },
+        {
+          de: "Er darf fernsehen.",
+          sk: "On môže pozerať televíziu."
+        },
+        {
+          de: "Sie darf nach Hause gehen.",
+          sk: "Ona môže ísť domov."
+        },
+        {
+          de: "Wir dürfen schwimmen.",
+          sk: "Môžeme plávať."
+        },
+        {
+          de: "Ihr dürft spielen.",
+          sk: "Môžete sa hrať."
+        },
+        {
+          de: "Sie dürfen das Fenster öffnen.",
+          sk: "Oni môžu otvoriť okno."
+        }
+      ],
+      slovakContrastNote: "V slovenčine používame slovesá 'musieť' a 'smieť/môcť' podobne. Rozdiel je hlavne v tom, že v nemčine sa modálne slovesá časujú a hlavné sloveso stojí na konci vety v neurčitku. V slovenčine je slovosled voľnejší a často nepoužívame pomocné sloveso 'môcť' na vyjadrenie dovolenia, ale skôr zápor 'nesmieť' na vyjadrenie zákazu."
+    },
+    {
+      rule: "Časovanie modálnych slovies v Präsens",
+      explanation: "<p>Modálne slovesá v nemčine sa v prítomnom čase (Präsens) časujú nepravidelne. Ich kmeň sa často mení, najmä v 2. a 3. osobe jednotného čísla. Toto je kľúčové pre správne použitie.</p><p><strong>Müssen</strong>:</p><ul><li>ich muss</li><li>du musst</li><li>er/sie/es muss</li><li>wir müssen</li><li>ihr müsst</li><li>sie/Sie müssen</li></ul><p><strong>Dürfen</strong>:</p><ul><li>ich darf</li><li>du darfst</li><li>er/sie/es darf</li><li>wir dürfen</li><li>ihr dürft</li><li>sie/Sie dürfen</li></ul><p>Pamätajte, že v spojení s iným slovesom stojí toto druhé sloveso na konci vety v neurčitku (Infinitiv).</p>",
+      examples: [
+        {
+          de: "Ich muss lernen.",
+          sk: "Musím sa učiť."
+        },
+        {
+          de: "Du musst das verstehen.",
+          sk: "Ty to musíš pochopiť."
+        },
+        {
+          de: "Er muss pünktlich sein.",
+          sk: "On musí byť včas."
+        },
+        {
+          de: "Wir müssen nach Hause gehen.",
+          sk: "My musíme ísť domov."
+        },
+        {
+          de: "Ihr müsst aufpassen.",
+          sk: "Vy musíte dávať pozor."
+        },
+        {
+          de: "Sie müssen das machen.",
+          sk: "Oni to musia urobiť."
+        },
+        {
+          de: "Ich darf hier sitzen.",
+          sk: "Ja tu môžem sedieť."
+        },
+        {
+          de: "Du darfst das Buch lesen.",
+          sk: "Ty si môžeš prečítať tú knihu."
+        },
+        {
+          de: "Sie darf jetzt spielen.",
+          sk: "Ona si teraz môže hrať."
+        },
+        {
+          de: "Wir dürfen ins Kino gehen.",
+          sk: "My môžeme ísť do kina."
+        },
+        {
+          de: "Ihr dürft laut sprechen.",
+          sk: "Vy smiete hovoriť nahlas."
+        },
+        {
+          de: "Sie dürfen uns helfen.",
+          sk: "Oni nám smú pomôcť."
+        }
+      ],
+      slovakContrastNote: "Časovanie modálnych slovies v nemčine je nepravidelné a líši sa od slovenčiny, kde sú slovesá 'musieť' a 'smieť/môcť' časované pravidelnejšie. Dôležitý rozdiel je aj v umiestnení hlavného slovesa na konci vety v nemeckom jazyku, čo v slovenčine nie je bežné."
+    }
+  ],
   vocab: [
-    { de: "Komm! (du)", sk: "Poď!", example: "Komm, wir gehen!", exampleSk: "Poď, ideme!", gender: null, srsId: "L68_V01", recycledFrom: [22] },
-    { de: "Geh! (du)", sk: "Choď!", example: "Geh nach Hause!", exampleSk: "Choď domov!", gender: null, srsId: "L68_V02", recycledFrom: [] },
-    { de: "Sprich! (du, sprechen→sprich)", sk: "Hovor!", example: "Sprich bitte lauter!", exampleSk: "Hovor prosím hlasnejšie!", gender: null, srsId: "L68_V03", recycledFrom: [] },
-    { de: "Iss! (du, essen→iss)", sk: "Jedz!", example: "Iss dein Gemüse!", exampleSk: "Jedz svoju zeleninu!", gender: null, srsId: "L68_V04", recycledFrom: [] },
-    { de: "Sei! (du, sein→sei)", sk: "Buď!", example: "Sei nicht nervös!", exampleSk: "Nebuď nervózny!", gender: null, srsId: "L68_V05", recycledFrom: [] },
-    { de: "Hör zu! (zuhören, odlučiteľné)", sk: "Počúvaj!", example: "Hör bitte zu!", exampleSk: "Prosím počúvaj!", gender: null, srsId: "L68_V06", recycledFrom: [] },
-    { de: "Pass auf! (aufpassen, odlučiteľné)", sk: "Pozor! Dávaj pozor!", example: "Pass auf die Stufe auf!", exampleSk: "Pozor na schod!", gender: null, srsId: "L68_V07", recycledFrom: [] },
-    { de: "Macht das! (ihr)", sk: "Spravte to! (mn.č.)", example: "Macht das bitte heute!", exampleSk: "Spravte to prosím dnes!", gender: null, srsId: "L68_V08", recycledFrom: [] },
-    { de: "Gehen Sie! (Sie, formálne)", sk: "Choďte! (formálne)", example: "Gehen Sie bitte geradeaus.", exampleSk: "Choďte prosím priamo.", gender: null, srsId: "L68_V09", recycledFrom: [] },
-    { de: "bitte + Imperativ", sk: "prosím... (robí imperatív zdvorilým)", example: "Sprechen Sie bitte langsamer.", exampleSk: "Hovorte prosím pomalšie.", gender: null, srsId: "L68_V10", recycledFrom: [] },
-    { de: "Seien Sie ruhig! (formálne sein)", sk: "Buďte ticho! (formálne)", example: "Seien Sie bitte ruhig.", exampleSk: "Prosím buďte pokojní.", gender: null, srsId: "L68_V11", recycledFrom: [] },
-    { de: "aufpassen → pass auf", sk: "dávať pozor", example: "Pass auf dich auf!", exampleSk: "Dávaj na seba pozor!", gender: null, srsId: "L68_V12", recycledFrom: [23] },
-    { de: "pünktlich", sk: "načas, presne", example: "Komm bitte pünktlich!", exampleSk: "Prosím príď načas!", gender: null, srsId: "L68_V13", recycledFrom: [37] },
-    { de: "Vergiss das nicht! (vergessen→vergiss)", sk: "Nezabudni na to!", example: "Vergiss deinen Schlüssel nicht!", exampleSk: "Nezabudni na kľúč!", gender: null, srsId: "L68_V14", recycledFrom: [] },
-    { de: "Ruf mich an! (anrufen→ruf an)", sk: "Zavolaj mi!", example: "Ruf mich morgen an!", exampleSk: "Zavolaj mi zajtra!", gender: null, srsId: "L68_V15", recycledFrom: [] }
+    {
+      de: "das Gebäude",
+      sk: "budova",
+      gender: "N",
+      srsId: "L68_V01",
+      example: "Das Gebäude ist neu.",
+      exampleSk: "Budova je nová.",
+      recycledFrom: []
+    },
+    {
+      de: "die Regel",
+      sk: "pravidlo",
+      gender: "F",
+      srsId: "L68_V02",
+      example: "Das ist eine wichtige Regel.",
+      exampleSk: "Toto je dôležité pravidlo.",
+      recycledFrom: []
+    },
+    {
+      de: "das Schild",
+      sk: "značka, tabuľa",
+      gender: "N",
+      srsId: "L68_V03",
+      example: "Siehst du das Schild?",
+      exampleSk: "Vidíš tú značku?",
+      recycledFrom: []
+    },
+    {
+      de: "der Rauch",
+      sk: "dym",
+      gender: "M",
+      srsId: "L68_V04",
+      example: "Hier gibt es keinen Rauch.",
+      exampleSk: "Tu nie je žiaden dym.",
+      recycledFrom: []
+    },
+    {
+      de: "die Tür",
+      sk: "dvere",
+      gender: "F",
+      srsId: "L68_V05",
+      example: "Bitte schließen Sie die Tür.",
+      exampleSk: "Prosím, zatvorte dvere.",
+      recycledFrom: []
+    },
+    {
+      de: "der Boden",
+      sk: "podlaha, zem",
+      gender: "M",
+      srsId: "L68_V06",
+      example: "Der Boden ist sauber.",
+      exampleSk: "Podlaha je čistá.",
+      recycledFrom: []
+    },
+    {
+      de: "das Dach",
+      sk: "strecha",
+      gender: "N",
+      srsId: "L68_V07",
+      example: "Das Dach ist rot.",
+      exampleSk: "Strecha je červená.",
+      recycledFrom: []
+    },
+    {
+      de: "der Stock",
+      sk: "poschodie",
+      gender: "M",
+      srsId: "L68_V08",
+      example: "Wir wohnen im dritten Stock.",
+      exampleSk: "Bývame na treťom poschodí.",
+      recycledFrom: []
+    },
+    {
+      de: "der Eingang",
+      sk: "vchod",
+      gender: "M",
+      srsId: "L68_V09",
+      example: "Der Eingang ist dort.",
+      exampleSk: "Vchod je tam.",
+      recycledFrom: []
+    },
+    {
+      de: "der Ausgang",
+      sk: "východ",
+      gender: "M",
+      srsId: "L68_V10",
+      example: "Wo ist der Ausgang?",
+      exampleSk: "Kde je východ?",
+      recycledFrom: []
+    },
+    {
+      de: "der Schlüssel",
+      sk: "kľúč",
+      gender: "M",
+      srsId: "L68_V11",
+      example: "Ich habe den Schlüssel.",
+      exampleSk: "Mám kľúč.",
+      recycledFrom: []
+    },
+    {
+      de: "das Verbot",
+      sk: "zákaz",
+      gender: "N",
+      srsId: "L68_V12",
+      example: "Das ist ein Verbot.",
+      exampleSk: "Toto je zákaz.",
+      recycledFrom: []
+    },
+    {
+      de: "die Erlaubnis",
+      sk: "povolenie",
+      gender: "F",
+      srsId: "L68_V13",
+      example: "Brauchen wir eine Erlaubnis?",
+      exampleSk: "Potrebujeme povolenie?",
+      recycledFrom: []
+    },
+    {
+      de: "der Zettel",
+      sk: "papierik, lístoček",
+      gender: "M",
+      srsId: "L68_V14",
+      example: "Ich lese den Zettel.",
+      exampleSk: "Čítam papierik.",
+      recycledFrom: []
+    },
+    {
+      de: "abschließen",
+      sk: "zamknúť",
+      gender: null,
+      srsId: "L68_V15",
+      example: "Du musst die Tür abschließen.",
+      exampleSk: "Musíš zamknúť dvere.",
+      recycledFrom: []
+    },
+    {
+      de: "betreten",
+      sk: "vstúpiť, vchádzať",
+      gender: null,
+      srsId: "L68_V16",
+      example: "Wir dürfen das Dach nicht betreten.",
+      exampleSk: "Nesmieme vstúpiť na strechu.",
+      recycledFrom: []
+    },
+    {
+      de: "verbieten",
+      sk: "zakázať",
+      gender: null,
+      srsId: "L68_V17",
+      example: "Das verbietet die Regel.",
+      exampleSk: "Toto pravidlo zakazuje.",
+      recycledFrom: []
+    },
+    {
+      de: "erlauben",
+      sk: "povoliť",
+      gender: null,
+      srsId: "L68_V18",
+      example: "Die Regel erlaubt das Rauchen nicht.",
+      exampleSk: "Pravidlo fajčenie nepovoľuje.",
+      recycledFrom: []
+    },
+    {
+      de: "wichtig",
+      sk: "dôležitý",
+      gender: null,
+      srsId: "L68_V19",
+      example: "Das ist sehr wichtig.",
+      exampleSk: "Toto je veľmi dôležité.",
+      recycledFrom: []
+    },
+    {
+      de: "verboten",
+      sk: "zakázaný",
+      gender: null,
+      srsId: "L68_V20",
+      example: "Rauchen ist hier verboten.",
+      exampleSk: "Fajčenie je tu zakázané.",
+      recycledFrom: []
+    },
+    {
+      de: "erforderlich",
+      sk: "potrebný, nevyhnutný",
+      gender: null,
+      srsId: "L68_V21",
+      example: "Ist das für uns erforderlich?",
+      exampleSk: "Je to pre nás potrebné?",
+      recycledFrom: []
+    },
+    {
+      de: "hier darf man nicht rauchen",
+      sk: "tu sa nesmie fajčiť",
+      gender: null,
+      srsId: "L68_V22",
+      example: "Auf dem Schild steht: hier darf man nicht rauchen.",
+      exampleSk: "Na tabuli je napísané: tu sa nesmie fajčiť.",
+      recycledFrom: []
+    },
+    {
+      de: "man muss die Tür abschließen",
+      sk: "človek musí zamknúť dvere",
+      gender: null,
+      srsId: "L68_V23",
+      example: "Die Regel sagt: man muss die Tür abschließen.",
+      exampleSk: "Pravidlo hovorí: človek musí zamknúť dvere.",
+      recycledFrom: []
+    },
+    {
+      de: "wir dürfen das Dach nicht betreten",
+      sk: "my nesmieme vstúpiť na strechu",
+      gender: null,
+      srsId: "L68_V24",
+      example: "Markus liest: wir dürfen das Dach nicht betreten.",
+      exampleSk: "Markus číta: my nesmieme vstúpiť na strechu.",
+      recycledFrom: []
+    },
+    {
+      de: "was müssen wir sonst noch?",
+      sk: "čo ešte musíme?",
+      gender: null,
+      srsId: "L68_V25",
+      example: "Jana fragt: was müssen wir sonst noch?",
+      exampleSk: "Jana sa pýta: čo ešte musíme?",
+      recycledFrom: []
+    }
   ],
   exercises: [
     {
       type: "flashcard",
-      instruction: "Prezri si tvary imperatívu. Dávaj pozor na nepravidelné tvary!",
-      items: [
-        "gehen → Geh! (du) | Geht! (ihr) | Gehen Sie! (Sie)",
-        "kommen → Komm! (du) | Kommt! (ihr) | Kommen Sie! (Sie)",
-        "sprechen → Sprich! (du, e→i!) | Sprecht! (ihr) | Sprechen Sie! (Sie)",
-        "essen → Iss! (du, e→i!) | Esst! (ihr) | Essen Sie! (Sie)",
-        "lesen → Lies! (du, e→ie!) | Lest! (ihr) | Lesen Sie! (Sie)",
-        "geben → Gib! (du, e→i!) | Gebt! (ihr) | Geben Sie! (Sie)",
-        "sein → Sei! (du, nepravidelné!) | Seid! (ihr) | Seien Sie! (Sie)",
-        "Hör zu! = Počúvaj! (zuhören — odlučiteľné)",
-        "Pass auf! = Dávaj pozor! (aufpassen — odlučiteľné)",
-        "Ruf mich an! = Zavolaj mi! (anrufen — odlučiteľné)",
-        "Vergiss das nicht! = Nezabudni na to! (vergessen → vergiss!)",
-        "pünktlich = načas, presne",
-        "bitte + Imperativ = zdvorilý rozkaz",
-        "Seien Sie ruhig! = Buďte pokojní! (formálne sein)",
-        "Macht das! (ihr) = Spravte to!"
+      instruction: "Prezri si slovíčka tejto lekcie. Klikni na kartičku pre preklad."
+    },
+    {
+      type: "match",
+      instruction: "Spojte nemecké slová s ich slovenskými prekladmi.",
+      pairs: [
+        [
+          "das Gebäude",
+          "budova"
+        ],
+        [
+          "die Regel",
+          "pravidlo"
+        ],
+        [
+          "das Schild",
+          "značka, tabuľa"
+        ],
+        [
+          "der Rauch",
+          "dym"
+        ],
+        [
+          "abschließen",
+          "zamknúť"
+        ],
+        [
+          "betreten",
+          "vstúpiť"
+        ],
+        [
+          "verbieten",
+          "zakázať"
+        ],
+        [
+          "erlauben",
+          "povoliť"
+        ],
+        [
+          "verboten",
+          "zakázaný"
+        ],
+        [
+          "erforderlich",
+          "potrebný"
+        ]
       ]
     },
     {
-      type: "mcq",
-      instruction: "Vyber správnu formu imperatívu.",
-      questions: [
+      type: "wordorder",
+      instruction: "Usporiadajte slová do správneho nemeckého poradia.",
+      sentences: [
         {
-          question: "Jana hovorí Stefanovi (du): 'Hovor pomalšie!' Ktorá forma je správna?",
-          options: ["Sprechen langsamer!", "Spreche langsamer!", "Sprich langsamer!", "Sprech langsamer!"],
-          answer: "Sprich langsamer!",
-          explanation: "sprechen má zmenu kmeňa e→i v imperatíve du-formy: sprich! (tak ako v prézente: du sprichst, er spricht). Imperatív = kmeňový tvar bez -st."
-        },
-        {
-          question: "Jana hovorí kolegom (ihr) v kancelárií: 'Buďte potichu!' Ako to povie?",
-          options: ["Sei ruhig!", "Seien Sie ruhig!", "Seid ruhig!", "Sind ruhig!"],
-          answer: "Seid ruhig!",
-          explanation: "ihr-forma od sein: seid! (nie sie, nie seien). Seid ruhig! = Buďte ticho! Pre Sie-formu by bolo: Seien Sie ruhig!"
-        },
-        {
-          question: "Jana hovorí šéfovi (Sie): 'Prosím hovorte pomalšie.' Správna forma:",
-          options: ["Sprich bitte langsamer!", "Sprecht bitte langsamer!", "Sprechen Sie bitte langsamer!", "Spreche Sie bitte langsamer!"],
-          answer: "Sprechen Sie bitte langsamer!",
-          explanation: "Sie-forma: Infinitív + Sie! Sprechen Sie... V Sie-forme sa kmeň NEMENí (nie: Sprich Sie — to je chyba!). Pri Sie-forme 'bitte' zvyšuje zdvorilosť."
-        },
-        {
-          question: "Ako znie imperatív du-formy od 'essen'?",
-          options: ["Esse!", "Essst!", "Iss!", "Isst!"],
-          answer: "Iss!",
-          explanation: "essen → du isst (zmena kmeňa e→i). Imperatív du-formy: odstrán -t → Iss! Iss dein Gemüse! = Jedz svoju zeleninu!"
-        },
-        {
-          question: "'Ruf mich an!' — prečo nie 'Anruf mich!'?",
-          options: [
-            "Sú rovnocenné tvary",
-            "Pri odlučiteľných slovesách sa predpona oddeľuje na koniec vety",
-            "anrufen je nepravidelné",
-            "V imperatíve sa predpony nedajú použiť"
+          words: [
+            "muss",
+            "die",
+            "man",
+            "Tür",
+            "abschließen"
           ],
-          answer: "Pri odlučiteľných slovesách sa predpona oddeľuje na koniec vety",
-          explanation: "anrufen je odlučiteľné. V imperatíve: kmeň na začiatku, predpona na konci: 'Ruf mich AN!' Tak isto: Pass AUF! Hör ZU! Komm MIT!"
+          correct: "man muss die Tür abschließen",
+          hint: "Človek musí zamknúť dvere.",
+          explanation: "V nemeckej vete s modálnym slovesom je modálne sloveso na druhej pozícii a hlavné sloveso v infinitíve na konci vety."
+        },
+        {
+          words: [
+            "darf",
+            "hier",
+            "nicht",
+            "man",
+            "rauchen"
+          ],
+          correct: "man darf hier nicht rauchen",
+          hint: "Tu sa nesmie fajčiť.",
+          explanation: "Modálne sloveso 'dürfen' (smieť) sa časuje na druhej pozícii, zápor 'nicht' často nasleduje po modálnom slovese a hlavné sloveso v infinitíve je na konci."
+        },
+        {
+          words: [
+            "das",
+            "betreten",
+            "wir",
+            "Dach",
+            "nicht",
+            "dürfen"
+          ],
+          correct: "wir dürfen das Dach nicht betreten",
+          hint: "My nesmieme vstúpiť na strechu.",
+          explanation: "Poradie slov je: podmet, časované modálne sloveso, zvyšok vety, hlavné sloveso v infinitíve na konci."
+        },
+        {
+          words: [
+            "müssen",
+            "was",
+            "sonst",
+            "wir",
+            "noch"
+          ],
+          correct: "was müssen wir sonst noch",
+          hint: "Čo ešte musíme?",
+          explanation: "V otázke s modálnym slovesom je opytovacie slovo na prvej pozícii, časované modálne sloveso na druhej a zvyšok vety nasleduje pred infinitívom."
         }
       ]
     },
     {
       type: "fill",
-      instruction: "Doplň správnu formu imperatívu (du-forma, ak nie je inak uvedené).",
+      instruction: "Doplňte správne slovo alebo tvar slova.",
       questions: [
         {
-          sentence: "___ bitte pünktlich! (kommen, du)",
-          answer: "Komm",
-          hint: "kommen → imperatív du = ?",
-          explanation: "kommen → Komm! (zdvojená m). Komm bitte pünktlich! = Príď prosím načas!"
+          sentence: "Das ist ein wichtiges ______. (pravidlo)",
+          answer: "Regel",
+          hint: "Čo je to za slovo? Je to pravidlo.",
+          explanation: "Dopĺňame podstatné meno 'Regel' (pravidlo), ktoré je v nominatíve a je stredného rodu (das Regel), ale tu je v spojení s neurčitým členom 'ein' a je to ženského rodu (die Regel). V tomto prípade je to 'Regel'."
         },
         {
-          sentence: "___ das nicht! (vergessen, du — zmena kmeňa e→i)",
-          answer: "Vergiss",
-          hint: "vergessen → du vergisst → imperatív = ?",
-          explanation: "vergessen → du vergisst (zmena e→i). Imperatív: Vergiss! (odstrán -t). Vergiss das nicht! = Nezabudni na to!"
+          sentence: "Man darf hier nicht ______. (fajčiť)",
+          answer: "rauchen",
+          hint: "Čo nesmieme robiť?",
+          explanation: "Potrebujeme sloveso v infinitíve, ktoré vyjadruje činnosť, ktorá je zakázaná. 'rauchen' znamená fajčiť."
         },
         {
-          sentence: "___ ruhig, Stefan! (sein, du — nepravidelné)",
-          answer: "Sei",
-          hint: "sein → imperatív du = sei (nepravidelné!)",
-          explanation: "sein má nepravidelný imperatív: du → Sei! (nie Bist! ani Bin!) Sei ruhig! = Buď pokojný!"
+          sentence: "Die Tür ist ______. Du brauchst einen Schlüssel.",
+          answer: "verschlossen",
+          hint: "Ako je dvere, keď ich treba zamknúť?",
+          explanation: "Potrebujeme prídavné meno alebo príčastie, ktoré opisuje stav dverí. 'verschlossen' znamená zamknuté."
         },
         {
-          sentence: "___ Sie bitte Platz! (nehmen, Sie forma — zmena e→i)",
-          answer: "Nehmen",
-          hint: "Sie-forma = infinitív + Sie. Kmeň sa NEMENí!",
-          explanation: "Sie-forma: vždy Infinitív + Sie. Nehmen Sie bitte Platz! = Prosím sadnite si! (nie: Nimm Sie — to je chyba!)"
+          sentence: "Wir ______ das Gebäude nicht betreten.",
+          answer: "dürfen",
+          hint: "Máme povolenie alebo zákaz?",
+          explanation: "V kontexte zákazu vstupu do budovy používame modálne sloveso 'dürfen' v zápore."
         },
         {
-          sentence: "___ mir bitte! (zuhören, du — odlučiteľné)",
-          answer: "Hör",
-          hint: "zuhören → Hör... zu! (predpona na koniec)",
-          explanation: "zuhören je odlučiteľné. Kmeň: hör, predpona na koniec: Hör mir bitte ZU! = Prosím počúvaj ma!"
+          sentence: "Ist das ______? (Potrebné)",
+          answer: "erforderlich",
+          hint: "Je to potrebné?",
+          explanation: "Dopĺňame prídavné meno 'erforderlich', ktoré znamená potrebný."
         },
         {
-          sentence: "Stefan, ___ auf die Stufe ___! (aufpassen, du)",
-          answer: "Pass / auf",
-          hint: "aufpassen → Pass... auf! (odlučiteľné)",
-          explanation: "aufpassen: Pass auf! Predpona 'auf' ide na koniec. Pass auf die Stufe auf! = Dávaj pozor na schod!"
+          sentence: "Du ______ die Hausaufgaben machen.",
+          answer: "musst",
+          hint: "Čo musíš urobiť? (ty)",
+          explanation: "Testuje sa časovanie modálneho slovesa 'müssen' v 2. osobe jednotného čísla (du). Správny tvar je 'musst'."
         }
       ]
     },
     {
       type: "listen",
-      instruction: "Počúvaj pokyny a rady. Opakuj každý imperatív nahlas.",
+      instruction: "Zapíšte si, čo počujete.",
       questions: [
-        { de: "Komm bitte pünktlich!", sk: "Prosím príď načas!" },
-        { de: "Sprich langsamer, ich verstehe nicht.", sk: "Hovor pomalšie, nerozumiem." },
-        { de: "Iss mehr Gemüse!", sk: "Jedz viac zeleniny!" },
-        { de: "Vergiss deinen Schlüssel nicht!", sk: "Nezabúdaj na kľúč!" },
-        { de: "Gehen Sie bitte nach rechts.", sk: "Prosím choďte doprava." },
-        { de: "Seien Sie nicht so nervös!", sk: "Nebuďte tak nervózni!" },
-        { de: "Ruf mich morgen an!", sk: "Zavolaj mi zajtra!" },
-        { de: "Pass auf dich auf!", sk: "Dávaj na seba pozor!" }
+        {
+          de: "das Gebäude",
+          sk: "budova"
+        },
+        {
+          de: "die Regel",
+          sk: "pravidlo"
+        },
+        {
+          de: "das Schild",
+          sk: "značka, tabuľa"
+        },
+        {
+          de: "der Rauch",
+          sk: "dym"
+        },
+        {
+          de: "abschließen",
+          sk: "zamknúť"
+        },
+        {
+          de: "betreten",
+          sk: "vstúpiť"
+        },
+        {
+          de: "verbieten",
+          sk: "zakázať"
+        },
+        {
+          de: "erlauben",
+          sk: "povoliť"
+        },
+        {
+          de: "verboten",
+          sk: "zakázaný"
+        },
+        {
+          de: "hier darf man nicht rauchen",
+          sk: "tu sa nesmie fajčiť"
+        }
       ]
     },
     {
-      type: "match",
-      instruction: "Spoj sloveso s jeho imperatívom v du-forme.",
-      pairs: [
-        ["gehen", "Geh!"],
-        ["kommen", "Komm!"],
-        ["sprechen (e→i)", "Sprich!"],
-        ["essen (e→i)", "Iss!"],
-        ["lesen (e→ie)", "Lies!"],
-        ["geben (e→i)", "Gib!"],
-        ["sein (nepravidelné)", "Sei!"],
-        ["vergessen (e→i)", "Vergiss!"]
-      ]
-    },
-    {
-      type: "dialogue",
-      instruction: "Jana pomáha Stefanovi v prvý deň práce a neskôr ho predstaví šéfovi.",
-      lines: [
-        { speaker: "A", de: "Stefan, willkommen im Team! Komm, ich zeige dir das Büro.", sk: "Stefan, vitaj v tíme! Poď, ukážem ti kanceláriu." },
-        { speaker: "B", de: "Danke, Jana! Ich bin ein bisschen nervös.", sk: "Ďakujem, Jana! Som trochu nervózny." },
-        { speaker: "A", de: "Sei nicht nervös! Das ist ganz normal am ersten Tag.", sk: "Nebuď nervózny! To je úplne normálne na prvý deň." },
-        { speaker: "B", de: "Okay. Was soll ich zuerst machen?", sk: "Dobre. Čo by som mal urobiť najprv?" },
-        { speaker: "A", de: "Lies zuerst diese Unterlagen. Und vergiss nicht, dich beim Chef zu melden.", sk: "Najprv si prečítaj tieto podklady. A nezabudni sa prihlásiť u šéfa." },
-        { speaker: "B", de: "Wann soll ich beim Chef klingeln?", sk: "Kedy by som mal zazvonil u šéfa?" },
-        { speaker: "A", de: "Geh um 10 Uhr zu ihm. Pass auf — sprich langsam und deutlich.", sk: "Choď k nemu o 10 hodine. Pozor — hovor pomaly a zreteľne." },
-        { speaker: "B", de: "Soll ich Siezen oder Duzen?", sk: "Mám ho tykať alebo vykať?" },
-        { speaker: "A", de: "Sag immer 'Sie' zum Chef. Also: Guten Tag Herr Meier, nicht Hallo Thomas!", sk: "Šéfovi vždy hovor 'Sie'. Teda: Guten Tag Herr Meier, nie Hallo Thomas!" },
-        { speaker: "B", de: "(Beim Chef) Guten Tag, Herr Meier!", sk: "(U šéfa) Dobrý deň, pán Meier!" },
-        { speaker: "A", de: "(Chef sagt:) Guten Tag! Setzen Sie sich bitte. Sprechen Sie langsam — ich höre gut zu.", sk: "(Šéf hovorí:) Dobrý deň! Prosím sadnite si. Hovorte pomaly — dobre počúvam." },
-        { speaker: "B", de: "Danke! Ich werde mein Bestes geben.", sk: "Ďakujem! Dám všetko zo seba." }
-      ],
-      comprehensionQuestions: [
+      type: "mcq",
+      instruction: "Vyberte správnu možnosť.",
+      questions: [
         {
-          question: "Ako sa Jana snaží upokojiť Stefana?",
-          options: ["Dáva mu radu, aby šiel domov", "Hovorí mu 'Sei nicht nervös!'", "Hovorí mu, aby nič nerobil", "Zavolá šéfa"],
-          answer: "Hovorí mu 'Sei nicht nervös!'"
+          question: "Was bedeutet 'müssen'?",
+          options: [
+            "smieť",
+            "musieť",
+            "chcieť",
+            "vedieť"
+          ],
+          answer: 1,
+          explanation: "'müssen' znamená 'musieť', vyjadruje povinnosť alebo nutnosť."
         },
         {
-          question: "Čo musí Stefan urobiť o 10 hodine?",
-          options: ["Prečítať dokumenty", "Ísť k šéfovi", "Zoznámiť sa s kolegami", "Spustiť počítač"],
-          answer: "Ísť k šéfovi"
+          question: "Was bedeutet 'dürfen'?",
+          options: [
+            "musieť",
+            "vedieť",
+            "smieť",
+            "chcieť"
+          ],
+          answer: 2,
+          explanation: "'dürfen' znamená 'smieť' alebo 'mať dovolené', vyjadruje povolenie."
         },
         {
-          question: "Akú formu má Stefan používať so šéfom?",
-          options: ["Du-formu (tykanie)", "Ihr-formu", "Sie-formu (vykanie)", "Man-formu"],
-          answer: "Sie-formu (vykanie)"
+          question: "Er ______ das Auto nicht parken.",
+          options: [
+            "muss",
+            "darf",
+            "kann",
+            "will"
+          ],
+          answer: 1,
+          explanation: "V kontexte zákazu parkovania je správne použiť 'darf nicht' (nesmie)."
+        },
+        {
+          question: "Wir ______ jetzt nach Hause gehen.",
+          options: [
+            "dürfen",
+            "können",
+            "müssen",
+            "wollen"
+          ],
+          answer: 2,
+          explanation: "Ak je potrebné ísť domov (napr. kvôli času), použijeme 'müssen' (musieť)."
+        },
+        {
+          question: "Was ist ein 'Zettel'?",
+          options: [
+            "kľúč",
+            "papierik",
+            "budova",
+            "strecha"
+          ],
+          answer: 1,
+          explanation: "'der Zettel' znamená papierik alebo lístoček."
+        },
+        {
+          question: "Welches Wort passt nicht?",
+          options: [
+            "die Tür",
+            "der Boden",
+            "der Rauch",
+            "das Dach"
+          ],
+          answer: 2,
+          explanation: "'der Rauch' (dym) nesúvisí s časťami budovy ako 'die Tür' (dvere), 'der Boden' (podlaha) a 'das Dach' (strecha)."
+        },
+        {
+          question: "Du ______ hier nicht rauchen. Das ist verboten.",
+          options: [
+            "musst",
+            "kannst",
+            "darfst",
+            "willst"
+          ],
+          answer: 2,
+          explanation: "V kontexte zákazu ('verboten') je správne použiť 'darfst nicht' (nesmieš)."
         }
       ]
     },
     {
       type: "minitext",
-      instruction: "Prečítaj recept s imperatívom Sie-formy a odpovedaj na otázky.",
-      text: "Wiener Apfelstrudel — einfaches Rezept:\nNehmen Sie 300g Mehl und eine Prise Salz. Mischen Sie alles zusammen. Fügen Sie 150ml lauwarmes Wasser hinzu. Kneten Sie den Teig 10 Minuten lang. Geben Sie ihn in eine Schüssel und decken Sie ihn ab. Warten Sie 30 Minuten. Dann schälen Sie die Äpfel. Schneiden Sie sie in dünne Scheiben. Rollen Sie den Teig dünn aus. Backen Sie den Strudel bei 180 Grad, 35 Minuten. Genießen Sie Ihren Apfelstrudel!",
-      textSk: "Viedenský jablkový závin — jednoduchý recept:\nVezmite 300g múky a štipku soli. Všetko premiešajte. Pridajte 150ml vlažnej vody. Miesite cesto 10 minút. Vložte ho do misy a zakryte ho. Počkajte 30 minút. Potom ošúpte jablká. Nakrájajte ich na tenké plátky. Vyvaľkajte cesto na tenko. Pečte závin pri 180 stupňoch 35 minút. Vychutnajte si váš jablkový závin!",
+      instruction: "Lies den Dialog und beantworte die Fragen.",
+      text: "Markus: Jana, sieh mal! Hier im neuen Gebäude hängen viele Schilder mit Regeln.\nJana: Oh, ja. Was steht da? „Hier darf man nicht rauchen.“ Das ist wichtig.\nMarkus: Und hier: „Man muss die Tür abschließen, wenn man geht.“ Das ist eine Pflicht.\nJana: Aha. Und das? „Wir dürfen das Dach nicht betreten.“ Das ist ein Verbot für uns.\nMarkus: Ja, das ist ein Verbot. Man muss vorsichtig sein.\nJana: Verstehe. Was müssen wir sonst noch wissen? Gibt es noch mehr Regeln?",
+      textSk: "Markus: Janka, pozri! V novej budove visí veľa tabúľ s pravidlami.\nJana: Ó, áno. Čo tam je napísané? „Tu sa nesmie fajčiť.“ To je dôležité.\nMarkus: A tu: „Človek musí zamknúť dvere, keď odchádza.“ To je povinnosť.\nJana: Aha. A toto? „My nesmieme vstúpiť na strechu.“ To je pre nás zákaz.\nMarkus: Áno, to je zákaz. Človek musí byť opatrný.\nJana: Rozumiem. Čo ešte musíme vedieť? Existuje viac pravidiel?",
       questions: [
         {
-          question: "Pri akej teplote sa pečie jablkový závin?",
-          options: ["160 stupňov", "180 stupňov", "200 stupňov", "220 stupňov"],
-          answer: "180 stupňov"
+          question: "Was ist im Gebäude verboten?",
+          options: [
+            "Rauchen",
+            "Die Tür öffnen",
+            "Das Dach betreten",
+            "Den Schlüssel benutzen"
+          ],
+          answer: 0,
+          explanation: "Im Text steht: „Hier darf man nicht rauchen.“"
         },
         {
-          question: "Ako dlho treba miesiť cesto?",
-          options: ["5 minút", "10 minút", "15 minút", "30 minút"],
-          answer: "10 minút"
+          question: "Was muss man tun, wenn man das Gebäude verlässt?",
+          options: [
+            "Die Tür abschließen",
+            "Auf das Dach gehen",
+            "Rauchen",
+            "Die Regeln lesen"
+          ],
+          answer: 0,
+          explanation: "Der Text sagt: „Man muss die Tür abschließen, wenn man geht.“"
         },
         {
-          question: "Aká forma imperatívu sa používa v recepte?",
-          options: ["du-forma (neformálna)", "ihr-forma (plurál)", "Sie-forma (formálna)", "man-forma"],
-          answer: "Sie-forma (formálna)"
-        }
-      ]
-    },
-    {
-      type: "freewrite",
-      instruction: "Napíš rady pre niekoho, kto je nový v tvojom meste. Použi imperatív!",
-      prompt: "Schreib eine Liste von Ratschlägen für jemanden, der neu in deiner Stadt ist. Benutze du-Form: Komm! Geh! Probier! Vergiss nicht! Pass auf! Sei...",
-      minWords: 40,
-      exampleAnswer: "Willkommen in meiner Stadt! Hier sind meine Ratschläge: Geh zuerst in die Altstadt — sie ist sehr schön. Probier das lokale Essen! Vergiss nicht, die öffentlichen Verkehrsmittel zu benutzen. Komm früh morgens — dann ist es nicht so voll. Sei neugierig und sprich mit den Einheimischen! Pass auf deine Wertsachen auf. Ruf mich an, wenn du Hilfe brauchst!"
-    },
-    {
-      type: "wordorder",
-      instruction: "Zoraď slová do správnej nemeckej vety.",
-      sentences: [
-        {
-          words: ["Wenn", "auch", "der", "Job", "schwer", "ist,", "liebt", "Jana", "Wien"],
-          correct: "Wenn auch der Job schwer ist, liebt Jana Wien",
-          hint: "Aj keď je práca ťažká, Jana miluje Viedeň.",
-          explanation: "'wenn auch' = koncesívna spojka (hoci/aj keď). Po vedľajšej vete nasleduje inverzia: 'liebt Jana' (sloveso pred podmenom)."
+          question: "Dürfen Jana und Markus auf das Dach gehen?",
+          options: [
+            "Ja, sie dürfen.",
+            "Nein, das ist verboten.",
+            "Nur wenn sie einen Schlüssel haben.",
+            "Das steht nicht im Text."
+          ],
+          answer: 1,
+          explanation: "Im Dialog steht: „Wir dürfen das Dach nicht betreten.“"
         },
         {
-          words: ["Selbst", "wenn", "es", "regnet,", "gehe", "ich", "spazieren"],
-          correct: "Selbst wenn es regnet, gehe ich spazieren",
-          hint: "Aj keby pršalo, idem sa prechádzať.",
-          explanation: "'selbst wenn' = silnejšia forma koncesívu. Po vedľajšej vete: inverzia v hlavnej vete (Verb-Subjekt)."
-        },
-        {
-          words: ["Wenn", "auch", "die", "Arbeit", "schwer", "ist,", "macht", "sie", "Spaß"],
-          correct: "Wenn auch die Arbeit schwer ist, macht sie Spaß",
-          hint: "Aj keď je práca ťažká, baví.",
-          explanation: "Rovnaký vzor: 'wenn auch' + vedľajšia veta (verb last) + čiarka + inverzia v hlavnej vete."
-        },
-        {
-          words: ["Selbst", "wenn", "ich", "müde", "bin,", "lerne", "ich", "Deutsch"],
-          correct: "Selbst wenn ich müde bin, lerne ich Deutsch",
-          hint: "Aj keď som unavený/á, učím sa nemčinu.",
-          explanation: "'selbst wenn ich müde bin' = vedľajšia veta. Inverzia: 'lerne ich' (nie 'ich lerne') v hlavnej vete."
-        },
-        {
-          words: ["Wenn", "auch", "das", "Wetter", "schlecht", "ist,", "fahre", "ich"],
-          correct: "Wenn auch das Wetter schlecht ist, fahre ich",
-          hint: "Aj keď je počasie zlé, idem.",
-          explanation: "Krátka hlavná veta po koncesívnej vedľajšej vete. Sloveso 'fahre' stojí na prvom mieste hlavnej vety (inverzia)."
+          question: "Was fragt Jana am Ende?",
+          options: [
+            "Wo ist der Ausgang?",
+            "Was müssen wir sonst noch wissen?",
+            "Wer hat den Schlüssel?",
+            "Ist das Rauchen erlaubt?"
+          ],
+          answer: 1,
+          explanation: "Jana fragt: „Was müssen wir sonst noch wissen?“"
         }
       ]
     },
     {
       type: "speaking",
-      instruction: "Počúvaj nemeckú vetu. Potom hovor nahlas a skontroluj sa.",
+      instruction: "Höre zu und sprich nach.",
       phrases: [
         {
-          de: "Wenn auch der Job schwer ist, liebt Jana Wien.",
-          sk: "Aj keď je práca ťažká, Jana miluje Viedeň.",
-          tip: "wenn auch: koncesív = hoci/aj keď"
+          de: "das Gebäude",
+          sk: "budova",
+          tip: "G=[g], ei=[aj]"
         },
         {
-          de: "Selbst wenn es regnet, gehe ich aus.",
-          sk: "Aj keby pršalo, idem von.",
-          tip: "selbst wenn: s-ELBST, silná forma"
+          de: "die Regel",
+          sk: "pravidlo",
+          tip: "R=[r], e=[e]"
         },
         {
-          de: "Wenn auch ich müde bin, mache ich weiter.",
-          sk: "Aj keď som unavený/á, pokračujem.",
-          tip: "Inverzia: po vedľajšej vete Verb-Subj."
+          de: "das Schild",
+          sk: "značka, tabuľa",
+          tip: "Sch=[š], i=[i]"
         },
         {
-          de: "Selbst wenn es kalt ist, schwimme ich.",
-          sk: "Aj keby bolo chladno, plávam.",
-          tip: "kalt: k-ALT, kurzes A"
+          de: "hier darf man nicht rauchen",
+          sk: "tu sa nesmie fajčiť",
+          tip: "au=[ao], ch=[ç]"
         },
         {
-          de: "Wenn auch das schwer ist, probiere ich es.",
-          sk: "Aj keď je to ťažké, skúsim to.",
-          tip: "probiere: p-ro-BIE-re, 4 Silben"
+          de: "man muss die Tür abschließen",
+          sk: "človek musí zamknúť dvere",
+          tip: "ü=[y], ß=[s]"
+        },
+        {
+          de: "wir dürfen das Dach nicht betreten",
+          sk: "my nesmieme vstúpiť na strechu",
+          tip: "ö=[ø], ei=[aj]"
+        },
+        {
+          de: "ist das hier verboten?",
+          sk: "je toto tu zakázané?",
+          tip: "v=[v], ö=[ø]"
+        },
+        {
+          de: "man muss den Schlüssel benutzen",
+          sk: "človek musí použiť kľúč",
+          tip: "ü=[y], eu=[oj]"
+        }
+      ]
+    },
+    {
+      type: "truefalse",
+      instruction: "Rozhodnite, či sú nasledujúce tvrdenia pravdivé (P) alebo nepravdivé (N).",
+      statements: [
+        {
+          statement: "Man muss die Tür abschließen, wenn man das Gebäude verlässt.",
+          isTrue: true,
+          explanation: "Pravidlo hovorí, že je potrebné zamknúť dvere pri odchode z budovy, čo vyjadruje povinnosť."
+        },
+        {
+          statement: "Hier darf man rauchen, weil es ein Verbot gibt.",
+          isTrue: false,
+          explanation: "Tvrdenie je v rozpore s bežnou praxou a slovami 'hier darf man nicht rauchen'. Zákaz znamená, že fajčenie nie je dovolené."
+        },
+        {
+          statement: "Wir müssen das Schild lesen, um die Regel zu verstehen.",
+          isTrue: true,
+          explanation: "Čítanie značky je často nevyhnutné na pochopenie pravidiel, čo vyjadruje potrebu."
+        },
+        {
+          statement: "Man darf den Schlüssel nicht benutzen, wenn man die Tür öffnet.",
+          isTrue: false,
+          explanation: "Kľúč sa používa na otváranie dverí, takže toto tvrdenie je nepravdivé. Použitie kľúča je povolené a často aj potrebné."
+        },
+        {
+          statement: "Sie dürfen den Boden nicht betreten, weil er nass ist.",
+          isTrue: true,
+          explanation: "Ak je podlaha mokrá, je bežné, že sa tam nesmie vstupovať, čo vyjadruje zákaz alebo obmedzenie."
+        }
+      ]
+    },
+    {
+      type: "dictation",
+      instruction: "Napíšte vety, ktoré počujete.",
+      sentences: [
+        {
+          de: "Das ist verboten.",
+          sk: "Toto je zakázané."
+        },
+        {
+          de: "Man muss hier warten.",
+          sk: "Človek musí tu čakať."
+        },
+        {
+          de: "Dürfen wir eintreten?",
+          sk: "Môžeme vstúpiť?"
+        },
+        {
+          de: "Wir müssen den Schlüssel benutzen.",
+          sk: "Musíme použiť kľúč."
+        },
+        {
+          de: "Sie dürfen das Gebäude nicht betreten.",
+          sk: "Oni nesmú vstúpiť do budovy."
+        }
+      ]
+    },
+    {
+      type: "categorysort",
+      instruction: "Roztrieďte slová do správnych kategórií.",
+      categories: [
+        {
+          name: "Povinnosť (müssen)",
+          color: "blue",
+          words: [
+            "abschließen",
+            "benutzen",
+            "lesen",
+            "warten"
+          ]
+        },
+        {
+          name: "Povolenie/Zákaz (dürfen)",
+          color: "rose",
+          words: [
+            "betreten",
+            "rauchen",
+            "eintreten",
+            "sprechen"
+          ]
+        },
+        {
+          name: "Veci v budove",
+          color: "green",
+          words: [
+            "Gebäude",
+            "Tür",
+            "Boden",
+            "Schlüssel",
+            "Schild"
+          ]
+        }
+      ],
+      explanation: "Slová sú rozdelené podľa toho, či vyjadrujú povinnosť (müssen), povolenie alebo zákaz (dürfen), alebo či ide o veci, ktoré sa nachádzajú v budove."
+    },
+    {
+      type: "translation",
+      instruction: "Preložte vety zo slovenčiny do nemčiny.",
+      sentences: [
+        {
+          sk: "Musím zamknúť dvere.",
+          answer: "Ich muss die Tür abschließen.",
+          hint: "muss, abschließen",
+          explanation: "Používame sloveso 'müssen' na vyjadrenie povinnosti v 1. osobe jednotného čísla (ich)."
+        },
+        {
+          sk: "Nesmieme fajčiť v budove.",
+          answer: "Wir dürfen im Gebäude nicht rauchen.",
+          hint: "dürfen, rauchen",
+          explanation: "Sloveso 'dürfen' v 1. osobe množného čísla (wir) vyjadruje zákaz."
+        },
+        {
+          sk: "Musíš si prečítať pravidlo.",
+          answer: "Du musst die Regel lesen.",
+          hint: "musst, Regel",
+          explanation: "Sloveso 'müssen' v 2. osobe jednotného čísla (du) sa časuje ako 'musst'."
+        },
+        {
+          sk: "Môžeš vstúpiť na strechu?",
+          answer: "Darf ich das Dach betreten?",
+          hint: "Darf, betreten",
+          explanation: "Použitie 'dürfen' v otázke v 1. osobe jednotného čísla (ich) na opýtanie sa na povolenie."
+        }
+      ]
+    },
+    {
+      type: "conjugation",
+      instruction: "Doplňte správne tvary slovesa 'müssen' v prítomnom čase.",
+      verbs: [
+        {
+          infinitive: "müssen",
+          translation: "musieť",
+          forms: [
+            {
+              pronoun: "ich",
+              correct: "muss"
+            },
+            {
+              pronoun: "du",
+              correct: "musst"
+            },
+            {
+              pronoun: "er/sie/es",
+              correct: "muss"
+            },
+            {
+              pronoun: "wir",
+              correct: "müssen"
+            },
+            {
+              pronoun: "ihr",
+              correct: "müsst"
+            },
+            {
+              pronoun: "sie/Sie",
+              correct: "müssen"
+            }
+          ],
+          note: "Sloveso 'müssen' má v 1. a 3. osobe jednotného čísla nepravidelný tvar 'muss' a v 2. osobe jednotného čísla 'musst'. V ostatných osobách má pravidelný tvar."
         }
       ]
     }
   ],
-  reviewWords: ["Komm!", "Geh!", "Sprich!", "Iss!", "Sei!", "Hör zu!", "Pass auf!", "Vergiss nicht!", "Ruf an!", "pünktlich", "Gehen Sie!", "Seien Sie!", "Sprechen Sie!"],
-  lessonNotes: "Imperatív du: kmeň bez -st. Zmeny e→i: sprechen→Sprich!, essen→Iss!, geben→Gib!, lesen→Lies!, vergessen→Vergiss! Nepravidelné: sein→Sei! Odlučiteľné: predpona na koniec: Ruf an! Pass auf! Hör zu! ihr: +t (Geht! Seid!). Sie: Infinitív + Sie (Gehen Sie! NIKDY Sprich Sie!). bitte = zdvorilosť."
+  reviewWords: []
 };

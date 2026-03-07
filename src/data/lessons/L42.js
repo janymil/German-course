@@ -2,541 +2,939 @@ export const lesson42 = {
   id: 42,
   week: 9,
   day: 2,
-  title: "Beim Arzt",
-  topic: "U lekára",
+  title: "Was gibt es hier?",
+  topic: "Použitie frázy *es gibt* + Akuzatív (V meste je...)",
   cefr: "A1",
-  xpReward: 30,
-  narrativeContext:
-    "Jana geht zum Arzt. 'Ich habe seit drei Tagen Halsschmerzen und Fieber.' Der Arzt untersucht sie und verschreibt Antibiotika. Jana geht danach in die Apotheke.",
-  communicativeGoal:
-    "Po tejto lekcii viem komunikovať u lekára — opísať symptómy, odpovedať na otázky a rozumieť pokynov.",
-  skillFocus: ["speaking", "listening", "vocabulary", "grammar"],
-
-  grammarNote: {
-    rule: "'seit + Datív' pre trvanie + modálne slovesá v lekárskych pokynoch",
-    explanation:
-      "Na vyjadrenie ako dlho niečo trvá sa v nemčine používa predložka 'seit' + datív. Napr. 'Ich habe seit drei Tagen Fieber.' (trvanie: tri dni). Pozor: 'drei Tage' → 'seit drei Tagen' (datívna prípona -n pri množnom čísle: Tage → Tagen, Stunden → Stunden, Wochen → Wochen). Modálne slovesá v lekárskych pokynoch: müssen (musieť), dürfen (smieť/nesmieť), können (môcť) + infinitív na konci vety.",
-    examples: [
-      { de: "Ich habe seit drei Tagen Fieber.", sk: "Mám teplotu tri dni." },
-      { de: "Sie müssen viel trinken.", sk: "Musíte veľa piť." },
-      { de: "Sie dürfen nicht arbeiten.", sk: "Nesmíte pracovať." },
-      { de: "Sie können Aspirin nehmen.", sk: "Môžete užiť Aspirin." },
-      { de: "Seit wann haben Sie Schmerzen?", sk: "Odkedy máte bolesti?" },
-    ],
-    slovakContrastNote:
-      "Slovenčina: 'Mám bolesti hrdla tri dni.' — jednoduché vyjadrenie trvania. Nemčina: 'seit drei Tagen' používa datív s predložkou. 'Tage' → 'seit drei Tagen' — datívna prípona -n. Toto je pre slovenských študentov náročné, keďže slovenčina trvanie vyjadruje akuzatívom.",
-  },
-
+  xpReward: 20,
+  narrativeContext: "Jana schreibt ihrer Mutter. Sie mag ihr Viertel sehr und erzählt, was es dort gibt.",
+  communicativeGoal: "Nach dieser Lektion kann ich sagen, was es in einem Ort gibt und was nicht.",
+  skillFocus: [
+    "vocabulary",
+    "grammar",
+    "speaking",
+    "writing"
+  ],
+  lessonNotes: "V tejto lekcii sa naučíme, ako opísať, čo sa nachádza na nejakom mieste, pomocou frázy *es gibt*. Zistíme, ako použiť *es gibt* s Akuzatívom a ako vyjadriť negáciu pomocou *kein/keine* v Akuzatíve. Budeš vedieť hovoriť o tom, čo je vo tvojom okolí.",
+  grammarNotes: [
+    {
+      rule: "es gibt + Akkusativ",
+      explanation: "<p>Fráza <strong>„es gibt“</strong> sa v nemčine používa na vyjadrenie existencie, prítomnosti alebo dostupnosti niečoho, podobne ako slovenské „je“ alebo „sú“ (v zmysle „existuje/existujú“). Je dôležité si zapamätať, že „es gibt“ je vždy v tretej osobe jednotného čísla a nemení sa, bez ohľadu na to, či sa odkazuje na jednu vec alebo viacero vecí. Najdôležitejšie pravidlo je, že podstatné meno, ktoré nasleduje po „es gibt“, musí byť vždy v <strong>akuzatíve</strong>. To znamená, že členy (der, die, das) sa menia na akuzatívne tvary (den, die, das) a neurčité členy (ein, eine, ein) na (einen, eine, ein). Pri negácii sa používa „keinen/keine/kein“ tiež v akuzatíve.</p>",
+      examples: [
+        {
+          de: "Es gibt einen Park in der Stadt.",
+          sk: "V meste je park.",
+          note: "Mužský rod, Akuzatív: einen Park"
+        },
+        {
+          de: "Es gibt eine Bäckerei hier.",
+          sk: "Je tu pekáreň.",
+          note: "Ženský rod, Akuzatív: eine Bäckerei"
+        },
+        {
+          de: "Es gibt ein Kino in der Nähe.",
+          sk: "Blízko je kino.",
+          note: "Stredný rod, Akuzatív: ein Kino"
+        },
+        {
+          de: "Es gibt viele Geschäfte im Zentrum.",
+          sk: "V centre je veľa obchodov.",
+          note: "Množné číslo, bez člena"
+        },
+        {
+          de: "Gibt es hier einen Supermarkt?",
+          sk: "Je tu nejaký supermarket?",
+          note: "Otázka, mužský rod, Akuzatív"
+        },
+        {
+          de: "Nein, es gibt keinen Supermarkt hier.",
+          sk: "Nie, nie je tu žiadny supermarket.",
+          note: "Negácia, mužský rod, Akuzatív: keinen"
+        },
+        {
+          de: "Gibt es eine Apotheke in der Nähe?",
+          sk: "Je blízko lekáreň?",
+          note: "Otázka, ženský rod, Akuzatív"
+        },
+        {
+          de: "Es gibt keine Apotheke hier.",
+          sk: "Nie je tu žiadna lekáreň.",
+          note: "Negácia, ženský rod, Akuzatív: keine"
+        }
+      ],
+      slovakContrastNote: "<p>V slovenčine používame na vyjadrenie existencie jednoducho sloveso „byť“ (je/sú) a podstatné meno zostáva v nominatíve. Napríklad povieme „V meste je park.“ (park je nominatív). V nemčine však musíme použiť „es gibt“ a podstatné meno, ktoré nasleduje, musí byť v akuzatíve. Toto je častý zdroj chýb pre slovenských študentov, preto si vždy pamätajte na akuzatív po „es gibt“.</p>"
+    },
+    {
+      rule: "Akkusativ der Artikel",
+      explanation: "<p>Pre správne použitie frázy „es gibt“ je nevyhnutné ovládať akuzatívne tvary určitých a neurčitých členov. V nemčine sa členy menia podľa pádu a rodu. V akuzatíve sa mení iba člen mužského rodu „der“ na „den“ a neurčitý člen „ein“ na „einen“. Ženský a stredný rod, ako aj množné číslo, si v akuzatíve zachovávajú rovnaké tvary ako v nominatíve.</p><table>  <thead>    <tr><th>Rod</th><th>Nominatív</th><th>Akkusativ</th></tr>  </thead>  <tbody>    <tr><td>Mužský</td><td>der / ein</td><td><strong>den / einen</strong></td></tr>    <tr><td>Ženský</td><td>die / eine</td><td>die / eine</td></tr>    <tr><td>Stredný</td><td>das / ein</td><td>das / ein</td></tr>    <tr><td>Množné</td><td>die / (keine)</td><td>die / (keine)</td></tr>  </tbody></table>",
+      examples: [
+        {
+          de: "der Mann → den Mann",
+          sk: "muž → muža"
+        },
+        {
+          de: "ein Mann → einen Mann",
+          sk: "muž → muža"
+        },
+        {
+          de: "die Frau → die Frau",
+          sk: "žena → ženu"
+        },
+        {
+          de: "eine Frau → eine Frau",
+          sk: "žena → ženu"
+        },
+        {
+          de: "das Kind → das Kind",
+          sk: "dieťa → dieťa"
+        },
+        {
+          de: "ein Kind → ein Kind",
+          sk: "dieťa → dieťa"
+        },
+        {
+          de: "die Kinder → die Kinder",
+          sk: "deti → deti"
+        }
+      ],
+      slovakContrastNote: "<p>Slovenčina nemá členy, a preto je pre slovenských študentov dôležité si zapamätať, že v nemčine sa členy menia podľa pádu. Zatiaľ čo v slovenčine sa mení koncovka podstatného mena, v nemčine sa mení predovšetkým člen. Toto je kľúčový rozdiel, ktorý si vyžaduje pozornosť.</p>"
+    }
+  ],
   vocab: [
     {
-      de: "der Arzt / die Ärztin",
-      sk: "lekár / lekárka",
-      example: "Ich gehe heute zum Arzt.",
-      exampleSk: "Dnes idem k lekárovi.",
-      gender: "M/F",
+      de: "das Krankenhaus",
+      sk: "nemocnica",
+      gender: "N",
       srsId: "L42_V01",
-      recycledFrom: [25, 36],
+      example: "Gibt es ein Krankenhaus in der Stadt?",
+      exampleSk: "Je v meste nemocnica?",
+      recycledFrom: []
     },
     {
-      de: "die Arztpraxis",
-      sk: "lekárska ordinácia",
-      example: "Die Arztpraxis öffnet um 8 Uhr.",
-      exampleSk: "Ordinácia sa otvára o 8 hodine.",
+      de: "die Disco",
+      sk: "diskotéka",
       gender: "F",
       srsId: "L42_V02",
-      recycledFrom: [],
-    },
-    {
-      de: "den Termin machen",
-      sk: "objednať sa",
-      example: "Ich möchte einen Termin machen.",
-      exampleSk: "Chcel/a by som sa objednať.",
-      gender: null,
-      srsId: "L42_V03",
-      recycledFrom: [19],
-    },
-    {
-      de: "die Krankenkasse",
-      sk: "zdravotná poisťovňa",
-      example: "Haben Sie eine Krankenkasse?",
-      exampleSk: "Máte zdravotnú poisťovňu?",
-      gender: "F",
-      srsId: "L42_V04",
-      recycledFrom: [],
-    },
-    {
-      de: "Ich bin krank.",
-      sk: "Som chorý/á.",
-      example: "Ich bin seit gestern krank.",
-      exampleSk: "Som chorý/á od včera.",
-      gender: null,
-      srsId: "L42_V05",
-      recycledFrom: [40, 41],
-    },
-    {
-      de: "Das tut weh.",
-      sk: "To bolí.",
-      example: "Hier tut es weh — das tut weh!",
-      exampleSk: "Tu to bolí — to bolí!",
-      gender: null,
-      srsId: "L42_V06",
-      recycledFrom: [41],
-    },
-    {
-      de: "untersuchen",
-      sk: "vyšetriť",
-      example: "Der Arzt untersucht Jana.",
-      exampleSk: "Lekár vyšetruje Janu.",
-      gender: null,
-      srsId: "L42_V07",
-      recycledFrom: [],
-    },
-    {
-      de: "verschreiben → verschreibt ⚠️",
-      sk: "predpísať (recept)",
-      example: "Der Arzt verschreibt Antibiotika.",
-      exampleSk: "Lekár predpíše antibiotiká.",
-      gender: null,
-      srsId: "L42_V08",
-      recycledFrom: [],
-    },
-    {
-      de: "das Rezept (med.)",
-      sk: "recept (lekársky)",
-      example: "Ich brauche ein Rezept für dieses Medikament.",
-      exampleSk: "Potrebujem lekársky predpis na tento liek.",
-      gender: "N",
-      srsId: "L42_V09",
-      recycledFrom: [32],
+      example: "Es gibt keine Disco in diesem Viertel.",
+      exampleSk: "V tejto štvrti nie je žiadna diskotéka.",
+      recycledFrom: []
     },
     {
       de: "die Apotheke",
       sk: "lekáreň",
-      example: "Ich kaufe die Tabletten in der Apotheke.",
-      exampleSk: "Kupujem tabletky v lekárni.",
       gender: "F",
-      srsId: "L42_V10",
-      recycledFrom: [23],
+      srsId: "L42_V03",
+      example: "Ich brauche Medikamente. Gibt es eine Apotheke in der Nähe?",
+      exampleSk: "Potrebujem lieky. Je nablízku lekáreň?",
+      recycledFrom: []
     },
     {
-      de: "das Antibiotikum",
-      sk: "antibiotikum",
-      example: "Sie müssen das Antibiotikum nehmen.",
-      exampleSk: "Musíte brať antibiotiká.",
+      de: "das Hotel",
+      sk: "hotel",
+      gender: "N",
+      srsId: "L42_V04",
+      example: "Es gibt ein gutes Hotel im Zentrum.",
+      exampleSk: "V centre je dobrý hotel.",
+      recycledFrom: []
+    },
+    {
+      de: "die Bibliothek",
+      sk: "knižnica",
+      gender: "F",
+      srsId: "L42_V05",
+      example: "Die Bibliothek ist sehr groß.",
+      exampleSk: "Knižnica je veľmi veľká.",
+      recycledFrom: []
+    },
+    {
+      de: "der Spielplatz",
+      sk: "ihrisko",
+      gender: "M",
+      srsId: "L42_V06",
+      example: "Für die Kinder gibt es einen Spielplatz.",
+      exampleSk: "Pre deti je tu ihrisko.",
+      recycledFrom: []
+    },
+    {
+      de: "der See",
+      sk: "jazero",
+      gender: "M",
+      srsId: "L42_V07",
+      example: "Wir sind zum See gefahren.",
+      exampleSk: "Išli sme k jazeru.",
+      recycledFrom: []
+    },
+    {
+      de: "der Fluss",
+      sk: "rieka",
+      gender: "M",
+      srsId: "L42_V08",
+      example: "Der Fluss ist sehr lang.",
+      exampleSk: "Rieka je veľmi dlhá.",
+      recycledFrom: []
+    },
+    {
+      de: "der Wald",
+      sk: "les",
+      gender: "M",
+      srsId: "L42_V09",
+      example: "Ich gehe gern in den Wald.",
+      exampleSk: "Rád chodím do lesa.",
+      recycledFrom: []
+    },
+    {
+      de: "das Schwimmbad",
+      sk: "plaváreň, kúpalisko",
+      gender: "N",
+      srsId: "L42_V10",
+      example: "Am Wochenende war ich im Schwimmbad.",
+      exampleSk: "Cez víkend som bol na kúpalisku.",
+      recycledFrom: []
+    },
+    {
+      de: "das Rathaus",
+      sk: "radnica",
       gender: "N",
       srsId: "L42_V11",
-      recycledFrom: [],
+      example: "Das Rathaus ist ein altes Gebäude.",
+      exampleSk: "Radnica je stará budova.",
+      recycledFrom: []
     },
     {
-      de: "die Tablette",
-      sk: "tableta",
-      example: "Nehmen Sie drei Tabletten täglich.",
-      exampleSk: "Berte tri tablety denne.",
+      de: "die Polizei",
+      sk: "polícia",
       gender: "F",
       srsId: "L42_V12",
-      recycledFrom: [],
+      example: "Wo ist die Polizei?",
+      exampleSk: "Kde je polícia?",
+      recycledFrom: []
     },
     {
-      de: "Nehmen Sie 3× täglich.",
-      sk: "Berte 3× denne.",
-      example: "Nehmen Sie zwei Tabletten dreimal täglich.",
-      exampleSk: "Berte dve tablety trikrát denne.",
-      gender: null,
+      de: "das Theater",
+      sk: "divadlo",
+      gender: "N",
       srsId: "L42_V13",
-      recycledFrom: [],
+      example: "Wir haben ein Stück im Theater gesehen.",
+      exampleSk: "Videli sme hru v divadle.",
+      recycledFrom: []
     },
     {
-      de: "täglich",
-      sk: "každý deň, denne",
-      example: "Nehmen Sie das Medikament täglich.",
-      exampleSk: "Berte liek každý deň.",
-      gender: null,
+      de: "der Garten",
+      sk: "záhrada",
+      gender: "M",
       srsId: "L42_V14",
-      recycledFrom: [],
+      example: "Unser Haus hat einen schönen Garten.",
+      exampleSk: "Náš dom má krásnu záhradu.",
+      recycledFrom: []
     },
     {
-      de: "die Erkältung",
-      sk: "prechladnutie",
-      example: "Ich habe eine Erkältung.",
-      exampleSk: "Mám prechladnutie.",
+      de: "die Ecke",
+      sk: "roh",
       gender: "F",
       srsId: "L42_V15",
-      recycledFrom: [],
+      example: "Der Laden ist um die Ecke.",
+      exampleSk: "Obchod je za rohom.",
+      recycledFrom: []
     },
     {
-      de: "sich ausruhen → ruht sich aus ⚠️",
-      sk: "odpočívať",
-      example: "Sie müssen sich ausruhen.",
-      exampleSk: "Musíte si oddýchnuť.",
-      gender: null,
+      de: "die Nähe",
+      sk: "blízkosť",
+      gender: "F",
       srsId: "L42_V16",
-      recycledFrom: [],
+      example: "Es gibt einen Arzt in der Nähe.",
+      exampleSk: "Nablízku je lekár.",
+      recycledFrom: []
     },
     {
-      de: "viel trinken",
-      sk: "veľa piť",
-      example: "Bei einer Erkältung müssen Sie viel trinken.",
-      exampleSk: "Pri prechladnutí musíte veľa piť.",
+      de: "geben",
+      sk: "dať",
       gender: null,
       srsId: "L42_V17",
-      recycledFrom: [],
+      example: "Kannst du mir bitte das Buch geben?",
+      exampleSk: "Môžeš mi, prosím, dať tú knihu?",
+      recycledFrom: []
     },
     {
-      de: "Gute Besserung!",
-      sk: "Rýchle uzdravenie!",
-      example: "Ich hoffe, Sie werden schnell gesund. Gute Besserung!",
-      exampleSk: "Dúfam, že sa rýchlo zotavíte. Rýchle uzdravenie!",
+      de: "brauchen",
+      sk: "potrebovať",
       gender: null,
       srsId: "L42_V18",
-      recycledFrom: [],
+      example: "Ich brauche einen Stift.",
+      exampleSk: "Potrebujem pero.",
+      recycledFrom: []
     },
+    {
+      de: "helfen",
+      sk: "pomôcť",
+      gender: null,
+      srsId: "L42_V19",
+      example: "Kannst du mir bitte helfen?",
+      exampleSk: "Môžeš mi, prosím, pomôcť?",
+      recycledFrom: []
+    },
+    {
+      de: "um die Ecke",
+      sk: "za rohom",
+      gender: null,
+      srsId: "L42_V20",
+      example: "Der Laden ist um die Ecke.",
+      exampleSk: "Obchod je za rohom.",
+      recycledFrom: []
+    },
+    {
+      de: "in der Nähe",
+      sk: "blízko, nablízku",
+      gender: null,
+      srsId: "L42_V21",
+      example: "Es gibt ein Hotel in der Nähe.",
+      exampleSk: "Nablízku je hotel.",
+      recycledFrom: []
+    },
+    {
+      de: "sehr gut",
+      sk: "veľmi dobre",
+      gender: null,
+      srsId: "L42_V22",
+      example: "Das Essen war sehr gut.",
+      exampleSk: "Jedlo bolo veľmi dobré.",
+      recycledFrom: []
+    },
+    {
+      de: "es gibt",
+      sk: "je, existuje (niečo)",
+      gender: null,
+      srsId: "L42_V23",
+      example: "In meiner Stadt gibt es viele Läden.",
+      exampleSk: "V mojom meste je veľa obchodov.",
+      recycledFrom: []
+    },
+    {
+      de: "kein",
+      sk: "žiaden (pre Akuzatív Maskulín/Neutrum)",
+      gender: null,
+      srsId: "L42_V24",
+      example: "Ich habe kein Auto.",
+      exampleSk: "Nemám žiadne auto.",
+      recycledFrom: []
+    },
+    {
+      de: "keine",
+      sk: "žiadna/žiadne (pre Akuzatív Feminin/Plurál)",
+      gender: null,
+      srsId: "L42_V25",
+      example: "Es gibt keine Disco in diesem Viertel.",
+      exampleSk: "V tejto štvrti nie je žiadna diskotéka.",
+      recycledFrom: []
+    }
   ],
-
   exercises: [
     {
       type: "flashcard",
-      instruction:
-        "Prezri si karty so slovnou zásobou z lekárskej ordinácie a lekárne. Opakuj každú frázu nahlas.",
-      items: [
-        "L42_V01",
-        "L42_V02",
-        "L42_V03",
-        "L42_V04",
-        "L42_V07",
-        "L42_V08",
-        "L42_V09",
-        "L42_V10",
-        "L42_V11",
-        "L42_V12",
-        "L42_V14",
-        "L42_V15",
-        "L42_V16",
-        "L42_V18",
-      ],
+      instruction: "Prezri si slovíčka tejto lekcie. Klikni na kartičku pre preklad."
+    },
+    {
+      type: "match",
+      instruction: "Priraď nemecké slová k ich slovenským prekladom.",
+      pairs: [
+        [
+          "das Krankenhaus",
+          "nemocnica"
+        ],
+        [
+          "die Disco",
+          "diskotéka"
+        ],
+        [
+          "die Apotheke",
+          "lekáreň"
+        ],
+        [
+          "das Hotel",
+          "hotel"
+        ],
+        [
+          "die Bibliothek",
+          "knižnica"
+        ],
+        [
+          "der Spielplatz",
+          "ihrisko"
+        ],
+        [
+          "der See",
+          "jazero"
+        ],
+        [
+          "der Fluss",
+          "rieka"
+        ],
+        [
+          "der Wald",
+          "les"
+        ],
+        [
+          "das Schwimmbad",
+          "plaváreň, kúpalisko"
+        ]
+      ]
+    },
+    {
+      type: "wordorder",
+      instruction: "Usporiadaj slová tak, aby si vytvoril správne nemecké vety. Dávaj pozor na „es gibt“ a Akuzatív.",
+      sentences: [
+        {
+          words: [
+            "einen",
+            "gibt",
+            "Es",
+            "Spielplatz",
+            "hier"
+          ],
+          correct: "Es gibt einen Spielplatz hier",
+          hint: "Je tu ihrisko.",
+          explanation: "Fráza 'es gibt' sa vždy spája s Akuzatívom. 'Spielplatz' je mužského rodu (der Spielplatz), preto v Akuzatíve mení neurčitý člen na 'einen'."
+        },
+        {
+          words: [
+            "keine",
+            "gibt",
+            "Es",
+            "Disco",
+            "in",
+            "der",
+            "Stadt"
+          ],
+          correct: "Es gibt keine Disco in der Stadt",
+          hint: "V meste nie je žiadna diskotéka.",
+          explanation: "Pre negáciu s 'es gibt' používame 'kein/keine'. 'Disco' je ženského rodu (die Disco), preto v Akuzatíve zostáva 'keine'."
+        },
+        {
+          words: [
+            "ein",
+            "Theater",
+            "es",
+            "Gibt",
+            "hier"
+          ],
+          correct: "Gibt es hier ein Theater",
+          hint: "Je tu divadlo?",
+          explanation: "V otázke s 'es gibt' ide sloveso 'geben' na prvé miesto. 'Theater' je stredného rodu (das Theater), preto v Akuzatíve zostáva neurčitý člen 'ein'."
+        },
+        {
+          words: [
+            "viele",
+            "gibt",
+            "In",
+            "der",
+            "Nähe",
+            "Hotels",
+            "es"
+          ],
+          correct: "In der Nähe gibt es viele Hotels",
+          hint: "Nablízku je veľa hotelov.",
+          explanation: "Ak začíname vetu s príslovkovým určením miesta ('In der Nähe'), sloveso 'gibt' ide na druhé miesto a 'es' nasleduje hneď po ňom. 'Hotels' je plurál, preto používame 'viele'."
+        },
+        {
+          words: [
+            "Krankenhaus",
+            "es",
+            "gibt",
+            "kein",
+            "hier",
+            "Ich",
+            "brauche",
+            "Hilfe",
+            "aber"
+          ],
+          correct: "Ich brauche Hilfe, aber es gibt kein Krankenhaus hier",
+          hint: "Potrebujem pomoc, ale tu nie je žiadna nemocnica.",
+          explanation: "Spojenie dvoch viet pomocou 'aber'. V druhej vete 'es gibt' vyžaduje Akuzatív. 'Krankenhaus' je stredného rodu (das Krankenhaus), preto negácia je 'kein'."
+        }
+      ]
+    },
+    {
+      type: "fill",
+      instruction: "Doplň správne slovo alebo člen do medzery. Dávaj pozor na „es gibt“ a Akuzatív.",
+      questions: [
+        {
+          sentence: "Es ___ einen großen Wald hier.",
+          answer: "gibt",
+          hint: "Je tu veľký les.",
+          explanation: "Fráza 'es gibt' (je/existuje) sa používa na vyjadrenie existencie niečoho. Sloveso 'geben' sa pre 'es' časuje ako 'gibt'."
+        },
+        {
+          sentence: "In der Stadt gibt es ___ Kino.",
+          answer: "ein",
+          hint: "V meste je kino.",
+          explanation: "'Kino' je stredného rodu (das Kino). V Akuzatíve pre stredný rod je neurčitý člen 'ein'."
+        },
+        {
+          sentence: "Gibt es hier ___ Apotheke?",
+          answer: "eine",
+          hint: "Je tu lekáreň?",
+          explanation: "'Apotheke' je ženského rodu (die Apotheke). V Akuzatíve pre ženský rod je neurčitý člen 'eine'."
+        },
+        {
+          sentence: "Es gibt ___ Hotels in diesem Dorf.",
+          answer: "keine",
+          hint: "V tejto dedine nie sú žiadne hotely.",
+          explanation: "'Hotels' je plurál. Pre negáciu plurálu v Akuzatíve používame 'keine'."
+        },
+        {
+          sentence: "Ich ___ gestern ins Kino gegangen.",
+          answer: "bin",
+          hint: "Včera som išiel do kina.",
+          explanation: "Pre slovesá pohybu ako 'gehen' sa Perfekt tvorí s pomocným slovesom 'sein'. 'Ich' sa časuje ako 'bin'."
+        },
+        {
+          sentence: "Wir ___ ein neues Auto gekauft.",
+          answer: "haben",
+          hint: "Kúpili sme si nové auto.",
+          explanation: "Pre väčšinu slovies sa Perfekt tvorí s pomocným slovesom 'haben'. 'Wir' sa časuje ako 'haben'."
+        },
+        {
+          sentence: "Wo ___ du gestern Abend?",
+          answer: "warst",
+          hint: "Kde si bol včera večer?",
+          explanation: "Pre minulosť slovesa 'sein' (byť) používame Präteritum 'war/warst/war...'. Pre 'du' je to 'warst'."
+        },
+        {
+          sentence: "Ich ___ leider nicht kommen.",
+          answer: "kann",
+          hint: "Bohužiaľ nemôžem prísť.",
+          explanation: "Modalné sloveso 'können' (môcť) sa časuje pre 'ich' ako 'kann'. Infinitív 'kommen' ide na koniec vety."
+        }
+      ]
+    },
+    {
+      type: "listen",
+      instruction: "Vypočuj si slovo alebo frázu a priraď k nej správny slovenský preklad.",
+      questions: [
+        {
+          de: "das Krankenhaus",
+          sk: "nemocnica"
+        },
+        {
+          de: "die Disco",
+          sk: "diskotéka"
+        },
+        {
+          de: "die Apotheke",
+          sk: "lekáreň"
+        },
+        {
+          de: "der Spielplatz",
+          sk: "ihrisko"
+        },
+        {
+          de: "der Fluss",
+          sk: "rieka"
+        },
+        {
+          de: "das Rathaus",
+          sk: "radnica"
+        },
+        {
+          de: "um die Ecke",
+          sk: "za rohom"
+        },
+        {
+          de: "in der Nähe",
+          sk: "blízko, nablízku"
+        },
+        {
+          de: "es gibt",
+          sk: "je, existuje (niečo)"
+        },
+        {
+          de: "sehr gut",
+          sk: "veľmi dobre"
+        }
+      ]
     },
     {
       type: "mcq",
       instruction: "Vyber správnu odpoveď.",
       questions: [
         {
-          question: "Jana hovorí lekárovi: 'Ich habe seit ___ Tagen Halsschmerzen.'",
-          options: ["drei", "drei", "dreie", "drin"],
-          answer: "drei",
-          explanation:
-            "'seit drei Tagen' — 'drei' sa nemení. Datív plurálu: Tage → Tagen (prípona -n). Číslovka ostáva 'drei'.",
-        },
-        {
-          question: "Čo znamená 'Gute Besserung!'?",
+          question: "Vyber správny člen pre vetu: 'Es gibt ___ Supermarkt hier.'",
           options: [
-            "Dobrý deň!",
-            "Rýchle uzdravenie!",
-            "Veľa šťastia!",
-            "Dobrú noc!",
+            "ein",
+            "eine",
+            "einen",
+            "kein"
           ],
-          answer: "Rýchle uzdravenie!",
-          explanation:
-            "'Gute Besserung!' je štandardný pozdrav chorým ľuďom — želáme im uzdravenie.",
+          answer: 2,
+          explanation: "'Supermarkt' je mužského rodu (der Supermarkt). V Akuzatíve sa člen 'der' mení na 'den', a neurčitý člen 'ein' na 'einen'."
         },
         {
-          question:
-            "Lekár hovorí: 'Sie ___ nicht arbeiten.' (nesmie) Ktoré modálne sloveso chýba?",
-          options: ["müssen", "können", "dürfen", "wollen"],
-          answer: "dürfen",
-          explanation:
-            "'dürfen' vyjadruje povolenie/zákaz. 'Sie dürfen nicht arbeiten.' = Nesmíte pracovať.",
+          question: "Ktorá veta je správna?",
+          options: [
+            "Es gibt eine Bibliothek.",
+            "Es gibt ein Bibliothek.",
+            "Es gibt einen Bibliothek.",
+            "Es gibt keine Bibliothekens."
+          ],
+          answer: 0,
+          explanation: "'Bibliothek' je ženského rodu (die Bibliothek). V Akuzatíve je neurčitý člen 'eine'. Posledná možnosť má nesprávny plurál a člen."
         },
         {
-          question: "Kde Jana kúpi Antibiotika?",
-          options: ["v nemocnici", "v supermarkete", "v lekárni", "u lekára"],
-          answer: "v lekárni",
-          explanation: "'die Apotheke' = lekáreň. Lieky sa kupujú v lekárni.",
+          question: "Doplň správne slovo: 'In dieser Stadt ___ es kein Theater.'",
+          options: [
+            "ist",
+            "hat",
+            "gibt",
+            "sein"
+          ],
+          answer: 2,
+          explanation: "Na vyjadrenie existencie niečoho sa v nemčine používa fráza 'es gibt' (je/existuje)."
         },
         {
-          question: "Čo je 'das Rezept' v lekárskom kontexte?",
-          options: ["recept na jedlo", "diagnóza", "lekársky predpis", "poistenie"],
-          answer: "lekársky predpis",
-          explanation:
-            "'das Rezept' má dva významy: 1) recept na jedlo (L32), 2) lekársky predpis — záleží od kontextu!",
-        },
-      ],
-    },
-    {
-      type: "fill",
-      instruction: "Doplň správne slovo alebo frázu.",
-      questions: [
-        {
-          sentence: "Ich habe ___ drei Tagen Fieber.",
-          answer: "seit",
-          hint: "odkedy — predložka + datív pre trvanie",
-          explanation: "'seit' + datív = od (trvanie). Ich habe seit drei Tagen Fieber.",
+          question: "Ako povieš 'nemocnica' po nemecky?",
+          options: [
+            "die Apotheke",
+            "das Rathaus",
+            "das Krankenhaus",
+            "die Polizei"
+          ],
+          answer: 2,
+          explanation: "Slovenské slovo 'nemocnica' sa prekladá ako 'das Krankenhaus'."
         },
         {
-          sentence: "Der Arzt ___ Jana und sagt: 'Sie haben eine Erkältung.'",
-          answer: "untersucht",
-          hint: "vyšetriť — prítomný čas, 3. osoba sg.",
-          explanation: "'untersuchen' → Er/Sie untersucht. Pravidelné sloveso.",
+          question: "Čo znamená fráza 'um die Ecke'?",
+          options: [
+            "v blízkosti",
+            "za rohom",
+            "na rohu",
+            "ďaleko"
+          ],
+          answer: 1,
+          explanation: "Fráza 'um die Ecke' znamená 'za rohom'."
         },
         {
-          sentence: "Sie müssen sich ___. Kein Sport diese Woche!",
-          answer: "ausruhen",
-          hint: "trennbares Verb: sich ausruhen (oddychovať)",
-          explanation:
-            "'sich ausruhen' — odlučovateľné reflexívne sloveso. Po müssen: infinitív na koniec.",
+          question: "Vyber správnu formu Perfektu: 'Wir ___ gestern Pizza gegessen.'",
+          options: [
+            "sind",
+            "haben",
+            "waren",
+            "hatten"
+          ],
+          answer: 1,
+          explanation: "Pre sloveso 'essen' (jesť) sa Perfekt tvorí s pomocným slovesom 'haben'. 'Wir' sa časuje ako 'haben'."
         },
         {
-          sentence: "Nehmen Sie die Tabletten zweimal ___.",
-          answer: "täglich",
-          hint: "každý deň",
-          explanation: "'täglich' = každý deň, denne. Frekvenčné príslovka.",
+          question: "Ktorá veta je správne v Präteritum? 'Ich ___ müde.'",
+          options: [
+            "bin",
+            "war",
+            "habe",
+            "hatte"
+          ],
+          answer: 1,
+          explanation: "Pre minulosť slovesa 'sein' (byť) v Präteritum sa pre 'ich' používa forma 'war'."
         },
         {
-          sentence: "Ich gehe in die ___, um das Rezept einzulösen.",
-          answer: "Apotheke",
-          hint: "lekáreň",
-          explanation: "'die Apotheke' = lekáreň. Lieky a recepty v lekárni.",
-        },
-      ],
-    },
-    {
-      type: "listen",
-      instruction:
-        "Počúvaj vety z lekárskej ordinácie. Zopakuj ich nahlas a preložte ich mentálne do slovenčiny.",
-      questions: [
-        { de: "Ich habe seit drei Tagen Halsschmerzen.", sk: "Mám bolesti hrdla tri dni." },
-        { de: "Sie müssen viel trinken.", sk: "Musíte veľa piť." },
-        { de: "Sie dürfen nicht arbeiten.", sk: "Nesmíte pracovať." },
-        { de: "Nehmen Sie dreimal täglich eine Tablette.", sk: "Berte trikrát denne jednu tabletu." },
-        { de: "Der Arzt verschreibt Antibiotika.", sk: "Lekár predpíše antibiotiká." },
-        { de: "Gute Besserung!", sk: "Rýchle uzdravenie!" },
-        {
-          de: "Sie müssen sich ausruhen.",
-          sk: "Musíte si oddýchnuť.",
-        },
-        {
-          de: "Ich kaufe das Medikament in der Apotheke.",
-          sk: "Kúpim liek v lekárni.",
-        },
-      ],
-    },
-    {
-      type: "match",
-      instruction: "Spoj výrazy z ľavého stĺpca s ich prekladom v pravom stĺpci.",
-      pairs: [
-        ["die Arztpraxis", "lekárska ordinácia"],
-        ["die Krankenkasse", "zdravotná poisťovňa"],
-        ["das Rezept", "lekársky predpis"],
-        ["die Apotheke", "lekáreň"],
-        ["das Antibiotikum", "antibiotikum"],
-        ["die Tablette", "tableta"],
-        ["die Erkältung", "prechladnutie"],
-        ["Gute Besserung!", "Rýchle uzdravenie!"],
-        ["täglich", "každý deň"],
-        ["untersuchen", "vyšetriť"],
-      ],
-    },
-    {
-      type: "dialogue",
-      instruction:
-        "Prečítaj si Janinu návštevu u lekára. Všímaj si, ako Jana opisuje symptómy a lekár dáva pokyny.",
-      lines: [
-        {
-          speaker: "Ärztin",
-          de: "Guten Morgen. Was kann ich für Sie tun?",
-          sk: "Dobré ráno. Čím vám môžem pomôcť?",
-        },
-        {
-          speaker: "Jana",
-          de: "Guten Morgen. Ich habe seit drei Tagen Halsschmerzen und Fieber.",
-          sk: "Dobré ráno. Mám tri dni bolesti hrdla a teplotu.",
-        },
-        {
-          speaker: "Ärztin",
-          de: "Wie hoch ist Ihr Fieber?",
-          sk: "Aká vysoká je vaša teplota?",
-        },
-        {
-          speaker: "Jana",
-          de: "Ungefähr 38,5 Grad.",
-          sk: "Asi 38,5 stupňa.",
-        },
-        {
-          speaker: "Ärztin",
-          de: "Haben Sie auch Husten oder Schnupfen?",
-          sk: "Máte aj kašeľ alebo nádchu?",
-        },
-        {
-          speaker: "Jana",
-          de: "Ja, ich habe Husten. Und mir tut der Kopf weh.",
-          sk: "Áno, mám kašeľ. A bolí ma hlava.",
-        },
-        {
-          speaker: "Ärztin",
-          de: "Ich untersuche Sie jetzt. Bitte öffnen Sie den Mund.",
-          sk: "Teraz vás vyšetrím. Prosím, otvorte ústa.",
-        },
-        {
-          speaker: "Jana",
-          de: "Natürlich.",
-          sk: "Samozrejme.",
-        },
-        {
-          speaker: "Ärztin",
-          de: "Sie haben eine Infektion. Ich verschreibe Ihnen Antibiotika.",
-          sk: "Máte infekciu. Predpíšem vám antibiotiká.",
-        },
-        {
-          speaker: "Jana",
-          de: "Wie oft muss ich die Tabletten nehmen?",
-          sk: "Ako často musím brať tabletky?",
-        },
-        {
-          speaker: "Ärztin",
-          de: "Dreimal täglich. Sie müssen sich ausruhen und viel trinken. Sie dürfen nicht arbeiten.",
-          sk: "Trikrát denne. Musíte si oddýchnuť a veľa piť. Nesmíte pracovať.",
-        },
-        {
-          speaker: "Jana",
-          de: "Vielen Dank, Frau Doktor.",
-          sk: "Ďakujem veľmi pekne, pani doktorka.",
-        },
-      ],
-      comprehensionQuestions: [
-        {
-          question: "Seit wie vielen Tagen hat Jana Halsschmerzen?",
-          answer: "Jana hat seit drei Tagen Halsschmerzen.",
-          explanation:
-            "Jana sagt: 'Ich habe seit drei Tagen Halsschmerzen und Fieber.'",
-        },
-        {
-          question: "Was verschreibt die Ärztin?",
-          answer: "Die Ärztin verschreibt Antibiotika.",
-          explanation: "'Sie haben eine Infektion. Ich verschreibe Ihnen Antibiotika.'",
-        },
-        {
-          question: "Was darf Jana nicht tun?",
-          answer: "Jana darf nicht arbeiten.",
-          explanation: "'Sie dürfen nicht arbeiten.'",
-        },
-      ],
+          question: "Doplň správne modalné sloveso: '___ du mir bitte helfen?'",
+          options: [
+            "Willst",
+            "Musst",
+            "Kannst",
+            "Sollst"
+          ],
+          answer: 2,
+          explanation: "Na vyjadrenie schopnosti alebo možnosti pomôcť sa používa modalné sloveso 'können'. Pre 'du' je to 'kannst'."
+        }
+      ]
     },
     {
       type: "minitext",
-      instruction:
-        "Jana číta pokyny na tabletke z lekárne. Prečítaj si text a odpovedz na otázky.",
-      text:
-        "AMOXICILLIN 500 mg — Packungsbeilage\nNehmen Sie 3 Tabletten täglich: morgens, mittags und abends. Nehmen Sie die Tabletten nach dem Essen. Trinken Sie viel Wasser. Die Behandlung dauert 7 Tage. Sie dürfen keinen Alkohol trinken. Bei Problemen rufen Sie Ihren Arzt an. Kühl lagern.",
-      textSk:
-        "AMOXICILÍN 500 mg — Príbalový leták\nBerte 3 tablety denne: ráno, napoludnie a večer. Berte tablety po jedle. Pite veľa vody. Liečba trvá 7 dní. Nesmíte piť alkohol. Pri problémoch zavolajte svojmu lekárovi. Skladujte v chlade.",
+      instruction: "Lies den Dialog und beantworte die Fragen.",
+      text: "Jana: Liebe Mama, ich mag meine neue Wohnung sehr.\nJana: Es gibt eine Bäckerei um die Ecke und auch eine Apotheke.\nJana: In der Nähe gibt es einen großen Park mit einem Spielplatz. Für Kinder ist das super.\nJana: Und es gibt keine Disco hier – sehr gut! Ich brauche Ruhe.\nMama: Hallo Jana! Das klingt schön. Gibt es auch ein Krankenhaus in der Nähe?\nJana: Ja, Mama, es gibt ein Krankenhaus, aber nicht direkt um die Ecke. Es gibt aber kein Hotel.\nJana: Aber es gibt auch eine Bibliothek und ein kleines Theater. Und ein Schwimmbad gibt es auch! Das finde ich toll!",
+      textSk: "Jana: Milá mama, veľmi sa mi páči môj nový byt.\nJana: Za rohom je pekáreň a tiež lekáreň.\nJana: Nablízku je veľký park s ihriskom. Pre deti je to super.\nJana: A nie je tu žiadna diskotéka – veľmi dobre! Potrebujem pokoj.\nMama: Ahoj Jana! To znie pekne. Je nablízku aj nemocnica?\nJana: Áno, mama, je tu nemocnica, ale nie priamo za rohom. Nie je tu však žiadny hotel.\nJana: Ale je tu aj knižnica a malé divadlo. A je tu aj plaváreň! To sa mi páči!",
       questions: [
         {
-          question: "Wie oft täglich soll man die Tabletten nehmen?",
-          answer: "Man soll dreimal täglich eine Tablette nehmen (morgens, mittags, abends).",
-          explanation: "'Nehmen Sie 3 Tabletten täglich: morgens, mittags und abends.'",
+          question: "Was gibt es um die Ecke?",
+          options: [
+            "Eine Bäckerei und eine Disco.",
+            "Eine Bäckerei und eine Apotheke.",
+            "Ein Krankenhaus und ein Hotel.",
+            "Eine Bibliothek und ein Theater."
+          ],
+          answer: 1,
+          explanation: "Jana sagt: \"Es gibt eine Bäckerei um die Ecke und auch eine Apotheke.\""
         },
         {
-          question: "Wie lange dauert die Behandlung?",
-          answer: "Die Behandlung dauert 7 Tage.",
-          explanation: "'Die Behandlung dauert 7 Tage.'",
+          question: "Was mag Jana an ihrer Umgebung?",
+          options: [
+            "Es gibt keine Bäckerei.",
+            "Es gibt keine Disco.",
+            "Es gibt ein Hotel.",
+            "Es gibt kein Theater."
+          ],
+          answer: 1,
+          explanation: "Jana sagt: \"Und es gibt keine Disco hier – sehr gut! Ich brauche Ruhe.\""
         },
         {
-          question: "Was darf man während der Behandlung nicht trinken?",
-          answer: "Man darf keinen Alkohol trinken.",
-          explanation: "'Sie dürfen keinen Alkohol trinken.'",
-        },
-      ],
-    },
-    {
-      type: "freewrite",
-      instruction:
-        "Napíš krátky text po nemecky. Použi modálne slovesá (müssen, dürfen, können) a predložku 'seit'.",
-      prompt:
-        "Beschreibe das letzte Mal, als du krank warst. Was hattest du? Was hast du gemacht?",
-      minWords: 30,
-      exampleAnswer:
-        "Das letzte Mal war ich vor einem Monat krank. Ich hatte Fieber und Halsschmerzen. Ich war seit zwei Tagen krank. Ich musste zu Hause bleiben und durfte nicht arbeiten. Ich habe viel Tee getrunken und Tabletten genommen. Nach einer Woche war ich wieder gesund.",
-    },
-    {
-      type: "wordorder",
-      instruction: "ZoraÄ slovÃ¡ do sprÃ¡vnej nemeckej vety.",
-      sentences: [
-        {
-          words: ["Jana", "wÃ¤re", "glÃ¼cklich,", "wenn", "sie", "mehr", "Zeit", "hÃ¤tte."],
-          correct: "Jana wÃ¤re glÃ¼cklich, wenn sie mehr Zeit hÃ¤tte.",
-          hint: "Jana by bola Å¡Å¥astnÃ¡, keby mala viac Äasu.",
-          explanation: "'wÃ¤re' a 'hÃ¤tte' sÃº KonjunktÃ­v II od 'sein' a 'haben'. Veta s 'wenn' â€” sloveso na konci.",
+          question: "Was fragt Janas Mutter?",
+          options: [
+            "Ob es einen Park gibt.",
+            "Ob es eine Apotheke gibt.",
+            "Ob es ein Krankenhaus gibt.",
+            "Ob es ein Schwimmbad gibt."
+          ],
+          answer: 2,
+          explanation: "Mamas Frage ist: \"Gibt es auch ein Krankenhaus in der Nähe?\""
         },
         {
-          words: ["Ich", "wÃ¤re", "sehr", "froh."],
-          correct: "Ich wÃ¤re sehr froh.",
-          hint: "Bol/a by som veÄ¾mi rÃ¡d/rada.",
-          explanation: "'wÃ¤re' = KonjunktÃ­v II od 'sein' pre ich/er/sie/es.",
-        },
-        {
-          words: ["Er", "hÃ¤tte", "gern", "ein", "Haus."],
-          correct: "Er hÃ¤tte gern ein Haus.",
-          hint: "RÃ¡d by mal dom.",
-          explanation: "'hÃ¤tte gern' = KonjunktÃ­v II od 'haben' â€” vyjadruje Å¾elanie.",
-        },
-        {
-          words: ["Wir", "wÃ¤ren", "jetzt", "in", "Ã–sterreich."],
-          correct: "Wir wÃ¤ren jetzt in Ã–sterreich.",
-          hint: "Teraz by sme boli v RakÃºsku.",
-          explanation: "'wÃ¤ren' = KonjunktÃ­v II od 'sein' pre wir.",
-        },
-        {
-          words: ["HÃ¤ttest", "du", "Zeit", "fÃ¼r", "mich?"],
-          correct: "HÃ¤ttest du Zeit fÃ¼r mich?",
-          hint: "Mal/a by si Äas pre mÅˆa?",
-          explanation: "OtÃ¡zka v KonjunktÃ­v II: 'HÃ¤ttest' na zaÄiatku, subjekt 'du' za nÃ­m.",
-        },
-      ],
+          question: "Was gibt es in Janas Nähe für Kinder?",
+          options: [
+            "Eine Bibliothek.",
+            "Ein Spielplatz.",
+            "Ein Theater.",
+            "Ein Hotel."
+          ],
+          answer: 1,
+          explanation: "Jana sagt: \"In der Nähe gibt es einen großen Park mit einem Spielplatz. Für Kinder ist das super.\""
+        }
+      ]
     },
     {
       type: "speaking",
-      instruction: "PoÄÃºvaj nemeckÃº vetu. Potom hovor nahlas a skontroluj sa.",
+      instruction: "Höre zu und sprich nach.",
       phrases: [
         {
-          de: "Jana wÃ¤re glÃ¼cklich, wenn sie mehr Zeit hÃ¤tte.",
-          sk: "Jana by bola Å¡Å¥astnÃ¡, keby mala viac Äasu.",
-          tip: "wÃ¤re=[vÉ›ËrÉ™], hÃ¤tte=[hÉ›tÉ™]",
+          de: "geben",
+          sk: "dať",
+          tip: "[g] na začiatku, dlhé [e:]"
         },
         {
-          de: "Ich wÃ¤re sehr froh.",
-          sk: "Bol/a by som veÄ¾mi rÃ¡d/rada.",
-          tip: "wÃ¤re krÃ¡tko a jasne, nie ware",
+          de: "brauchen",
+          sk: "potrebovať",
+          tip: "[au] ako \"au\", [ch] ako \"ach\""
         },
         {
-          de: "Er hÃ¤tte gern ein Haus.",
-          sk: "RÃ¡d by mal dom.",
-          tip: "hÃ¤tte=[hÉ›tÉ™], Ã¤ ako slovenskÃ© 'e'",
+          de: "Es gibt",
+          sk: "Je, existuje",
+          tip: "[s] v \"es\" ako [z], [g] na začiatku \"gibt\""
         },
         {
-          de: "HÃ¤ttest du Zeit fÃ¼r mich?",
-          sk: "Mal/a by si Äas pre mÅˆa?",
-          tip: "HÃ¤ttest=[hÉ›test], tt zdvojenÃ©",
+          de: "einen Spielplatz",
+          sk: "ihrisko (v akuzatíve)",
+          tip: "[ei] ako \"aj\", [sp] na začiatku ako [šp]"
         },
         {
-          de: "Wenn ich Geld hÃ¤tte, wÃ¼rde ich reisen.",
-          sk: "Keby som mal/a peniaze, cestoval/a by som.",
-          tip: "KombinÃ¡cia hÃ¤tte + wÃ¼rde reisen",
+          de: "eine Apotheke",
+          sk: "lekáreň (v akuzatíve)",
+          tip: "[ei] ako \"aj\", [th] v \"Apotheke\" ako [t]"
         },
-      ],
+        {
+          de: "kein Krankenhaus",
+          sk: "žiadna nemocnica",
+          tip: "[ei] ako \"aj\", [h] v \"Krankenhaus\" je počuteľné"
+        },
+        {
+          de: "Es gibt einen Wald in der Nähe.",
+          sk: "Nablízku je les.",
+          tip: "[W] ako [v], [d] na konci ako [t], [nɛːə] (dlhé 'e')"
+        },
+        {
+          de: "Wir brauchen kein Hotel.",
+          sk: "Nepotrebujeme žiadny hotel.",
+          tip: "[W] ako [v], [au] ako \"au\", [ei] ako \"aj\""
+        }
+      ]
     },
+    {
+      type: "truefalse",
+      instruction: "Prečítajte si vety a rozhodnite, či sú pravdivé (Wahr) alebo nepravdivé (Falsch).",
+      statements: [
+        {
+          statement: "In vielen Städten gibt es ein Krankenhaus.",
+          isTrue: true,
+          explanation: "Áno, vo väčšine miest nájdete nemocnicu. Fráza 'es gibt' sa používa s akuzatívom, 'ein Krankenhaus' je akuzatív neutra."
+        },
+        {
+          statement: "Es gibt keinen Wald in Deutschland.",
+          isTrue: false,
+          explanation: "Nie, to nie je pravda. V Nemecku je veľa lesov. 'Keinen Wald' je správny akuzatív mužského rodu pre negáciu."
+        },
+        {
+          statement: "Gibt es eine Bibliothek in jedem Dorf?",
+          isTrue: false,
+          explanation: "Nie, nie v každej dedine je knižnica. 'Eine Bibliothek' je akuzatív ženského rodu."
+        },
+        {
+          statement: "In der Nähe gibt es einen Spielplatz für Kinder.",
+          isTrue: true,
+          explanation: "Áno, je bežné, že blízko sú detské ihriská. 'Einen Spielplatz' je akuzatív mužského rodu."
+        },
+        {
+          statement: "Es gibt keine Apotheke um die Ecke, wenn du Medikamente brauchst.",
+          isTrue: false,
+          explanation: "Nie, to by nebolo praktické. Ak potrebuješ lieky, zvyčajne je lekáreň niekde nablízku. 'Keine Apotheke' je akuzatív ženského rodu pre negáciu."
+        }
+      ]
+    },
+    {
+      type: "dictation",
+      instruction: "Počúvajte a napíšte, čo počujete. Potom si skontrolujte odpoveď.",
+      sentences: [
+        {
+          de: "Es gibt ein Hotel.",
+          sk: "Je tu hotel."
+        },
+        {
+          de: "Es gibt eine Apotheke.",
+          sk: "Je tu lekáreň."
+        },
+        {
+          de: "Es gibt keinen Wald hier.",
+          sk: "Nie je tu žiadny les."
+        },
+        {
+          de: "Gibt es einen Spielplatz?",
+          sk: "Je tu ihrisko?"
+        },
+        {
+          de: "Es gibt keine Bibliothek in der Nähe.",
+          sk: "V blízkosti nie je žiadna knižnica."
+        }
+      ]
+    },
+    {
+      type: "categorysort",
+      instruction: "Roztrieďte slová do kategórií podľa ich rodu (člena).",
+      categories: [
+        {
+          name: "der (Maskulín)",
+          color: "blue",
+          words: [
+            "der Spielplatz",
+            "der See",
+            "der Wald",
+            "der Garten"
+          ]
+        },
+        {
+          name: "die (Feminin)",
+          color: "rose",
+          words: [
+            "die Disco",
+            "die Apotheke",
+            "die Bibliothek",
+            "die Polizei"
+          ]
+        },
+        {
+          name: "das (Neutrum)",
+          color: "green",
+          words: [
+            "das Krankenhaus",
+            "das Hotel",
+            "das Schwimmbad",
+            "das Theater"
+          ]
+        }
+      ],
+      explanation: "V nemčine majú podstatné mená rod (mužský, ženský, stredný), ktorý je určený členom (der, die, das). Pre správne použitie frázy 'es gibt' je dôležité poznať rod, pretože v akuzatíve sa mení člen 'der' na 'den' (alebo 'ein' na 'einen', 'kein' na 'keinen'). Členy 'die' a 'das' zostávajú v akuzatíve nezmenené."
+    },
+    {
+      type: "translation",
+      instruction: "Preložte nasledujúce vety zo slovenčiny do nemčiny. Použite frázu „es gibt“.",
+      sentences: [
+        {
+          sk: "V meste je nemocnica.",
+          answer: "In der Stadt gibt es ein Krankenhaus.",
+          hint: "Krankenhaus, Stadt",
+          explanation: "Nemocnica (das Krankenhaus) je stredného rodu, preto v akuzatíve používame 'ein'. 'In der Stadt' je lokácia."
+        },
+        {
+          sk: "Je tu blízko lekáreň?",
+          answer: "Gibt es hier in der Nähe eine Apotheke?",
+          hint: "Apotheke, Nähe",
+          explanation: "Lekáreň (die Apotheke) je ženského rodu, preto v akuzatíve používame 'eine'. Otázka sa tvorí zmenou slovosledu."
+        },
+        {
+          sk: "V lese nie je žiadna diskotéka.",
+          answer: "Im Wald gibt es keine Disco.",
+          hint: "Wald, Disco, keine",
+          explanation: "Diskotéka (die Disco) je ženského rodu, preto pre negáciu v akuzatíve používame 'keine'. 'Im Wald' je skratka pre 'in dem Wald'."
+        },
+        {
+          sk: "Potrebujem pomoc, ale nie je tu žiadna polícia.",
+          answer: "Ich brauche Hilfe, aber es gibt hier keine Polizei.",
+          hint: "brauchen, Hilfe, Polizei",
+          explanation: "Polícia (die Polizei) je ženského rodu, preto pre negáciu v akuzatíve používame 'keine'. Sloveso 'brauchen' vyžaduje akuzatív."
+        }
+      ]
+    },
+    {
+      type: "conjugation",
+      instruction: "Doplňte správne tvary slovies v prítomnom čase (Präsens).",
+      verbs: [
+        {
+          infinitive: "geben",
+          translation: "dať",
+          forms: [
+            {
+              pronoun: "ich",
+              correct: "gebe"
+            },
+            {
+              pronoun: "du",
+              correct: "gibst"
+            },
+            {
+              pronoun: "er/sie/es",
+              correct: "gibt"
+            },
+            {
+              pronoun: "wir",
+              correct: "geben"
+            },
+            {
+              pronoun: "ihr",
+              correct: "gebt"
+            },
+            {
+              pronoun: "sie/Sie",
+              correct: "geben"
+            }
+          ],
+          note: "Sloveso 'geben' je nepravidelné (silné sloveso). Pri 'du' a 'er/sie/es' dochádza k zmene kmeňovej samohlásky 'e' na 'i'."
+        },
+        {
+          infinitive: "brauchen",
+          translation: "potrebovať",
+          forms: [
+            {
+              pronoun: "ich",
+              correct: "brauche"
+            },
+            {
+              pronoun: "du",
+              correct: "brauchst"
+            },
+            {
+              pronoun: "er/sie/es",
+              correct: "braucht"
+            },
+            {
+              pronoun: "wir",
+              correct: "brauchen"
+            },
+            {
+              pronoun: "ihr",
+              correct: "braucht"
+            },
+            {
+              pronoun: "sie/Sie",
+              correct: "brauchen"
+            }
+          ],
+          note: "Sloveso 'brauchen' je pravidelné (slabé sloveso), takže sa časuje podľa štandardných pravidiel pre pravidelné slovesá v prítomnom čase."
+        }
+      ]
+    }
   ],
-
-  reviewWords: [
-    "L42_V01",
-    "L42_V04",
-    "L42_V07",
-    "L42_V08",
-    "L42_V10",
-    "L42_V11",
-    "L42_V12",
-    "L42_V15",
-    "L42_V16",
-    "L42_V18",
-  ],
-
-  lessonNotes:
-    "Kľúčová gramatika: 'seit + Datív' pre trvanie — 'seit drei Tagen' (nie 'seit drei Tage'!). Datívna prípona -n: Tage → Tagen. Modálne slovesá u lekára: müssen (musíte piť), dürfen (nesmíte pracovať), können (môžete vziať). Pozor: 'das Rezept' má dva významy — recept na jedlo (L32) aj lekársky predpis! 'sich ausruhen' je odlučovacé reflexívne sloveso.",
+  reviewWords: []
 };

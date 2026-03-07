@@ -1,468 +1,879 @@
-﻿export const lesson71 = {
+export const lesson71 = {
   id: 71,
   week: 15,
   day: 1,
-  title: "Goethe A1: Hören (Listening Strategies)",
-  topic: "Stratégie počúvania na skúške Goethe A1",
+  title: "Einkaufen auf der Mariahilfer Straße",
+  topic: "Nakupovanie oblečenia a vyjadrenie prekvapenia nad cenou.",
   cefr: "A1",
-  xpReward: 30,
-  narrativeContext:
-    "Jana's Goethe A1 exam is in 4 weeks. She downloads practice recordings from goethe.de and starts serious preparation. 'Ich muss jetzt wirklich üben!' This lesson prepares her for the Hören (listening) section of the exam.",
-  communicativeGoal:
-    "Po tejto lekcii poznám formát časti 'Hören' skúšky Goethe A1, viem identifikovať kľúčové informácie v počutom texte.",
-  skillFocus: ["listening", "vocabulary", "exam strategies"],
-  grammarNote: {
-    rule: "Stratégie počúvania na skúške + slovosled v krátkych hovorených vetách",
-    explanation:
-      "Na skúške Goethe A1 Hören počúvaš krátke rozhovory a hlásenia. Kľúčové stratégie: (1) Skenovanie kľúčových slov — čísla, mená, časy, miesta. (2) Formát Richtig/Falsch: prečítaj si tvrdenie, potom over podľa audio. (3) Multiple-choice: 3 možnosti, vyber podľa toho, čo si počul/a. Technická slovná zásoba: 'Hören Sie das Gespräch.' / 'Markieren Sie die Antwort.' / 'Das hören Sie einmal/zweimal.' / 'Lesen Sie die Aufgabe.' Slovosled: 'Ich möchte einen Termin.' vs 'Einen Termin möchte ich machen.' — obe správne, ale pri inversii (keď je na začiatku príslovka alebo objekt) sa sloveso posúva na druhé miesto (V2 pravidlo).",
-    examples: [
-      { de: "Hören Sie das Gespräch.", sk: "Počúvajte rozhovor." },
-      { de: "Markieren Sie die richtige Antwort.", sk: "Označte správnu odpoveď." },
-      { de: "Das hören Sie zweimal.", sk: "Toto si vypočujete dvakrát." },
-      { de: "Lesen Sie die Aufgabe zuerst.", sk: "Najprv si prečítajte úlohu." },
-    ],
-    slovakContrastNote:
-      "Slovenské školské skúšky používajú rovnaký formát 'označte správnu odpoveď'. Formát počúvania je teda povedomý — ale nemecká rýchlosť a výslovnosť samohlások/prehlások (Umlaute: ä, ö, ü) je výzva. Dôležité: počúvaj kľúčové slová, nie každé slovo!",
-  },
+  xpReward: 20,
+  narrativeContext: "Es ist April. Jana hat eine wichtige Präsentation. Sie möchte eine neue Bluse kaufen.",
+  communicativeGoal: "Nach dieser Lektion kann ich Kleidung beschreiben und über Preise sprechen.",
+  skillFocus: [
+    "vocabulary",
+    "speaking",
+    "listening"
+  ],
+  lessonNotes: "V tejto lekcii sa naučíme slovnú zásobu týkajúcu sa oblečenia a nakupovania. Zameriame sa na frázy, ktoré môžeme použiť v obchode, a na vyjadrenie prekvapenia nad cenami. Budeme precvičovať dialógy v obchode.",
+  grammarNotes: [
+    {
+      rule: "Adjektivdeklination nach unbestimmtem Artikel und ohne Artikel",
+      explanation: "<p>V nemčine sa prídavné mená skloňujú (menia koncovky) v závislosti od rodu, čísla a pádu podstatného mena, ku ktorému patria. V tejto lekcii sa zameriame na dva prípady:</p><ul><li><strong>Po neurčitom členku (ein, eine):</strong> Tu sa koncovka prídavného mena riadi podľa rodu a pádu podstatného mena. V nominatíve a akuzatíve jednotného čísla má prídavné meno často koncovku <em>-er</em> (mužský rod), <em>-e</em> (ženský rod) alebo <em>-es</em> (stredný rod).</li><li><strong>Bez člena (holé prídavné meno):</strong> Keď stojí prídavné meno priamo pred podstatným menom bez člena (napr. pri všeobecnom vyjadrení alebo v zoznamoch), koncovky sú iné. V nominatíve jednotného čísla sú to často <em>-er</em> (mužský rod), <em>-e</em> (ženský rod) a <em>-es</em> (stredný rod). V iných pádoch a číslach sa koncovky menia podľa pádu a rodu.</li></ul><p>Správne skloňovanie je kľúčové pre gramatickú správnosť vety.</p>",
+      examples: [
+        {
+          de: "Das ist ein schöner Pullover.",
+          sk: "Toto je pekný sveter."
+        },
+        {
+          de: "Ich kaufe eine teure Hose.",
+          sk: "Kúpim si drahé nohavice."
+        },
+        {
+          de: "Er hat ein neues Hemd.",
+          sk: "On má novú košeľu."
+        },
+        {
+          de: "Schöner Pullover!",
+          sk: "Pekný sveter!"
+        },
+        {
+          de: "Teure Hose!",
+          sk: "Drahé nohavice!"
+        },
+        {
+          de: "Neues Hemd!",
+          sk: "Nová košeľa!"
+        },
+        {
+          de: "Ich suche einen roten Schal.",
+          sk: "Hľadám červený šál."
+        },
+        {
+          de: "Sie trägt rote Schuhe.",
+          sk: "Ona nosí červené topánky."
+        }
+      ],
+      slovakContrastNote: "V slovenčine sa prídavné mená skloňujú podľa rodu, čísla a pádu, ale nemáme členy (určité ani neurčité), ktoré by ovplyvňovali koncovku prídavného mena tak ako v nemčine. Preto si treba dávať pozor na pridávanie správnych koncoviek po nemeckých členoch 'ein/eine' a tiež v prípadoch, keď člen chýba."
+    },
+    {
+      rule: "Vyjadrenie prekvapenia a ceny",
+      explanation: "<p>V nemčine existuje viacero spôsobov, ako vyjadriť prekvapenie nad cenou alebo vzhľadom oblečenia. Často sa používajú zvolacie vety s príslovkami alebo zvolacími výrazmi.</p><ul><li><strong>Cena:</strong> Na vyjadrenie prekvapenia nad vysokou cenou môžeme použiť výrazy ako 'So teuer!', 'Das ist ja unglaublich teuer!' alebo jednoducho zdôrazniť cenu otázkou 'Wirklich so viel?'.</li><li><strong>Vzhľad/Kvalita:</strong> Prekvapenie nad vzhľadom alebo kvalitou môžeme vyjadriť pomocou 'Wow!', 'Toll!', 'Schick!', 'Das gefällt mir sehr gut!' alebo 'Das sieht toll aus!'.</li></ul><p>Je dôležité používať tieto výrazy prirodzene v konverzácii, aby ste zneli plynulo.</p>",
+      examples: [
+        {
+          de: "Wow, diese Jacke ist schön!",
+          sk: "Wow, táto bunda je pekná!"
+        },
+        {
+          de: "So teuer! Ist das wirklich wahr?",
+          sk: "Také drahé! Je to naozaj pravda?"
+        },
+        {
+          de: "Diese Schuhe sind toll!",
+          sk: "Tieto topánky sú skvelé!"
+        },
+        {
+          de: "Unglaublich, wie günstig!",
+          sk: "Neuveriteľné, aké lacné!"
+        },
+        {
+          de: "Das Kleid ist sehr schick!",
+          sk: "Tieto šaty sú veľmi elegantné!"
+        },
+        {
+          de: "Wirklich nur 5 Euro?",
+          sk: "Naozaj len 5 eur?"
+        }
+      ],
+      slovakContrastNote: "Slovenčina má podobné zvolacie výrazy na vyjadrenie prekvapenia ('Ach!', 'Jaj!', 'No teda!', 'Neuveriteľné!'), ale nemecké výrazy ako 'Wow', 'toll', 'schick' sú často používané aj v slovenčine ako prevzaté slová. Pri vyjadrovaní ceny sa v slovenčine tiež pýtame 'Naozaj toľko?' alebo konštatujeme 'Také drahé!', čo je podobné nemeckým konštrukciám."
+    }
+  ],
   vocab: [
     {
-      de: "die Prüfung",
-      sk: "skúška",
-      example: "Die Prüfung ist in vier Wochen.",
-      exampleSk: "Skúška je o štyri týždne.",
+      de: "die Bluse",
+      sk: "blúzka",
       gender: "F",
       srsId: "L71_V01",
-      recycledFrom: [9, 66],
+      example: "Ich suche eine schöne Bluse.",
+      exampleSk: "Hľadám peknú blúzku.",
+      recycledFrom: []
     },
     {
-      de: "das Hören",
-      sk: "počúvanie",
-      example: "Das Hören ist der erste Teil der Prüfung.",
-      exampleSk: "Počúvanie je prvá časť skúšky.",
-      gender: "N",
+      de: "die Hose",
+      sk: "nohavice",
+      gender: "F",
       srsId: "L71_V02",
-      recycledFrom: [],
+      example: "Die Hose passt mir gut.",
+      exampleSk: "Nohavice mi dobre sedia.",
+      recycledFrom: []
     },
     {
-      de: "das Gespräch",
-      sk: "rozhovor",
-      example: "Hören Sie das Gespräch und markieren Sie.",
-      exampleSk: "Počúvajte rozhovor a označte.",
-      gender: "N",
-      srsId: "L71_V03",
-      recycledFrom: [2, 9],
-    },
-    {
-      de: "Hören Sie...",
-      sk: "Počúvajte...",
-      example: "Hören Sie das Gespräch zweimal.",
-      exampleSk: "Počúvajte rozhovor dvakrát.",
-      gender: null,
-      srsId: "L71_V04",
-      recycledFrom: [],
-    },
-    {
-      de: "Markieren Sie",
-      sk: "Označte",
-      example: "Markieren Sie die richtige Antwort.",
-      exampleSk: "Označte správnu odpoveď.",
-      gender: null,
-      srsId: "L71_V05",
-      recycledFrom: [],
-    },
-    {
-      de: "Richtig oder Falsch?",
-      sk: "Pravda alebo nepravda?",
-      example: "Ist das richtig oder falsch?",
-      exampleSk: "Je to pravda alebo nepravda?",
-      gender: null,
-      srsId: "L71_V06",
-      recycledFrom: [],
-    },
-    {
-      de: "richtig",
-      sk: "správne / pravda",
-      example: "Das ist richtig.",
-      exampleSk: "To je správne.",
-      gender: null,
-      srsId: "L71_V07",
-      recycledFrom: [2, 16],
-    },
-    {
-      de: "falsch",
-      sk: "nesprávne / nepravda",
-      example: "Das ist falsch.",
-      exampleSk: "To je nesprávne.",
-      gender: null,
-      srsId: "L71_V08",
-      recycledFrom: [2, 3],
-    },
-    {
-      de: "der Hinweis",
-      sk: "nápoveda / stopa",
-      example: "Hören Sie auf die Hinweise im Text.",
-      exampleSk: "Počúvajte nápovedy v texte.",
+      de: "der Rock",
+      sk: "sukňa",
       gender: "M",
-      srsId: "L71_V09",
-      recycledFrom: [],
+      srsId: "L71_V03",
+      example: "Sie trägt einen kurzen Rock.",
+      exampleSk: "Ona nosí krátku sukňu.",
+      recycledFrom: []
     },
     {
-      de: "das Schlüsselwort",
-      sk: "kľúčové slovo",
-      example: "Finde das Schlüsselwort im Gespräch.",
-      exampleSk: "Nájdi kľúčové slovo v rozhovore.",
+      de: "das Kleid",
+      sk: "šaty",
       gender: "N",
-      srsId: "L71_V10",
-      recycledFrom: [],
+      srsId: "L71_V04",
+      example: "Das Kleid ist sehr elegant.",
+      exampleSk: "Šaty sú veľmi elegantné.",
+      recycledFrom: []
     },
     {
-      de: "die Ansage",
-      sk: "hlásenie / oznam",
-      example: "Die Ansage erklärt die Öffnungszeiten.",
-      exampleSk: "Hlásenie vysvetľuje otváracie hodiny.",
+      de: "der Mantel",
+      sk: "kabát",
+      gender: "M",
+      srsId: "L71_V05",
+      example: "Im Winter brauche ich einen warmen Mantel.",
+      exampleSk: "V zime potrebujem teplý kabát.",
+      recycledFrom: []
+    },
+    {
+      de: "die Jacke",
+      sk: "bunda",
+      gender: "F",
+      srsId: "L71_V06",
+      example: "Das ist eine neue Jacke.",
+      exampleSk: "Toto je nová bunda.",
+      recycledFrom: []
+    },
+    {
+      de: "die Schuhe",
+      sk: "topánky",
+      gender: "Pl",
+      srsId: "L71_V07",
+      example: "Diese Schuhe sind bequem.",
+      exampleSk: "Tieto topánky sú pohodlné.",
+      recycledFrom: []
+    },
+    {
+      de: "der Preis",
+      sk: "cena",
+      gender: "M",
+      srsId: "L71_V08",
+      example: "Wie hoch ist der Preis?",
+      exampleSk: "Aká je cena?",
+      recycledFrom: []
+    },
+    {
+      de: "das Geld",
+      sk: "peniaze",
+      gender: "N",
+      srsId: "L71_V09",
+      example: "Ich habe nicht genug Geld.",
+      exampleSk: "Nemám dosť peňazí.",
+      recycledFrom: []
+    },
+    {
+      de: "die Boutique",
+      sk: "boutique",
+      gender: "F",
+      srsId: "L71_V10",
+      example: "Wir gehen in eine kleine Boutique.",
+      exampleSk: "Ideme do malej boutique.",
+      recycledFrom: []
+    },
+    {
+      de: "die Präsentation",
+      sk: "prezentácia",
       gender: "F",
       srsId: "L71_V11",
-      recycledFrom: [],
+      example: "Ich habe eine wichtige Präsentation.",
+      exampleSk: "Mám dôležitú prezentáciu.",
+      recycledFrom: []
     },
     {
-      de: "der Anrufbeantworter",
-      sk: "záznamník",
-      example: "Auf dem Anrufbeantworter ist eine Nachricht.",
-      exampleSk: "Na záznamníku je správa.",
+      de: "der Kunde",
+      sk: "zákazník",
       gender: "M",
       srsId: "L71_V12",
-      recycledFrom: [],
+      example: "Der Kunde ist sehr zufrieden.",
+      exampleSk: "Zákazník je veľmi spokojný.",
+      recycledFrom: []
     },
     {
-      de: "aufmerksam",
-      sk: "pozorný / pozorne",
-      example: "Hören Sie aufmerksam zu.",
-      exampleSk: "Počúvajte pozorne.",
+      de: "suchen",
+      sk: "hľadať",
       gender: null,
       srsId: "L71_V13",
-      recycledFrom: [],
+      example: "Ich suche eine neue Bluse.",
+      exampleSk: "Hľadám novú blúzku.",
+      recycledFrom: []
     },
     {
-      de: "das Thema",
-      sk: "téma",
-      example: "Was ist das Thema des Gesprächs?",
-      exampleSk: "Aká je téma rozhovoru?",
-      gender: "N",
+      de: "anprobieren",
+      sk: "vyskúšať si (oblečenie)",
+      gender: null,
       srsId: "L71_V14",
-      recycledFrom: [37],
+      example: "Kann ich die Bluse anprobieren?",
+      exampleSk: "Môžem si blúzku vyskúšať?",
+      recycledFrom: []
     },
     {
-      de: "Ich verstehe nicht alles.",
-      sk: "Nerozumiem všetkému.",
-      example: "Ich verstehe nicht alles, aber ich verstehe die wichtigsten Wörter.",
-      exampleSk: "Nerozumiem všetkému, ale rozumiem najdôležitejším slovám.",
+      de: "kaufen",
+      sk: "kúpiť",
       gender: null,
       srsId: "L71_V15",
-      recycledFrom: [],
+      example: "Ich möchte diese Hose kaufen.",
+      exampleSk: "Chcem si kúpiť tieto nohavice.",
+      recycledFrom: []
     },
+    {
+      de: "passen",
+      sk: "sedieť (oblečenie)",
+      gender: null,
+      srsId: "L71_V16",
+      example: "Die Bluse passt mir gut.",
+      exampleSk: "Blúzka mi dobre sedí.",
+      recycledFrom: []
+    },
+    {
+      de: "teuer",
+      sk: "drahý",
+      gender: null,
+      srsId: "L71_V17",
+      example: "Das ist zu teuer!",
+      exampleSk: "To je príliš drahé!",
+      recycledFrom: []
+    },
+    {
+      de: "günstiger",
+      sk: "lacnejší",
+      gender: null,
+      srsId: "L71_V18",
+      example: "Haben Sie etwas Günstigeres?",
+      exampleSk: "Máte niečo lacnejšie?",
+      recycledFrom: []
+    },
+    {
+      de: "schön",
+      sk: "pekný",
+      gender: null,
+      srsId: "L71_V19",
+      example: "Die Bluse ist sehr schön.",
+      exampleSk: "Blúzka je veľmi pekná.",
+      recycledFrom: []
+    },
+    {
+      de: "neu",
+      sk: "nový",
+      gender: null,
+      srsId: "L71_V20",
+      example: "Ich brauche eine neue Hose.",
+      exampleSk: "Potrebujem nové nohavice.",
+      recycledFrom: []
+    },
+    {
+      de: "wichtig",
+      sk: "dôležitý",
+      gender: null,
+      srsId: "L71_V21",
+      example: "Das ist eine wichtige Präsentation.",
+      exampleSk: "Toto je dôležitá prezentácia.",
+      recycledFrom: []
+    },
+    {
+      de: "Ich suche eine Bluse für eine Präsentation.",
+      sk: "Hľadám blúzku na prezentáciu.",
+      gender: null,
+      srsId: "L71_V22",
+      example: "Ich suche eine Bluse für eine Präsentation.",
+      exampleSk: "Hľadám blúzku na prezentáciu.",
+      recycledFrom: []
+    },
+    {
+      de: "Das ist zu teuer!",
+      sk: "To je príliš drahé!",
+      gender: null,
+      srsId: "L71_V23",
+      example: "Das ist zu teuer!",
+      exampleSk: "To je príliš drahé!",
+      recycledFrom: []
+    },
+    {
+      de: "Haben Sie etwas Günstigeres?",
+      sk: "Máte niečo lacnejšie?",
+      gender: null,
+      srsId: "L71_V24",
+      example: "Haben Sie etwas Günstigeres?",
+      exampleSk: "Máte niečo lacnejšie?",
+      recycledFrom: []
+    },
+    {
+      de: "Das passt mir nicht.",
+      sk: "Toto mi nesedí.",
+      gender: null,
+      srsId: "L71_V25",
+      example: "Entschuldigung, das passt mir nicht.",
+      exampleSk: "Prepáčte, toto mi nesedí.",
+      recycledFrom: []
+    }
   ],
   exercises: [
     {
       type: "flashcard",
-      instruction: "Precvič si slovnú zásobu pre skúšku Hören. Pozri nemecké slovo, skús si povedať slovenský preklad.",
-      items: [
-        "L71_V01",
-        "L71_V02",
-        "L71_V03",
-        "L71_V04",
-        "L71_V05",
-        "L71_V06",
-        "L71_V07",
-        "L71_V08",
-        "L71_V09",
-        "L71_V10",
-        "L71_V11",
-        "L71_V12",
-        "L71_V13",
-        "L71_V14",
-        "L71_V15",
-      ],
-    },
-    {
-      type: "mcq",
-      instruction: "Vyber správnu odpoveď. Otázky sa týkajú formátu skúšky Goethe A1 Hören.",
-      questions: [
-        {
-          question: "Čo znamená 'Markieren Sie die Antwort'?",
-          options: ["Počúvajte odpoveď.", "Označte odpoveď.", "Napíšte odpoveď.", "Opakujte odpoveď."],
-          answer: "Označte odpoveď.",
-          explanation: "'Markieren' znamená 'označiť' — ide o pokyn na skúške, aby si označil/a správnu odpoveď.",
-        },
-        {
-          question: "Čo je 'der Anrufbeantworter'?",
-          options: ["Telefónne číslo", "Záznamník", "Hovorový rozhovor", "Správa na papieri"],
-          answer: "Záznamník",
-          explanation: "'Der Anrufbeantworter' je záznamník — zariadenie, ktoré zaznamenáva telefonické správy. Časté v Goethe A1 Hören úlohách!",
-        },
-        {
-          question: "Čo znamená 'Das hören Sie zweimal'?",
-          options: [
-            "Toto si prečítate dvakrát.",
-            "Toto si vypočujete dvakrát.",
-            "Toto napíšete dvakrát.",
-            "Toto zopakujete dvakrát.",
-          ],
-          answer: "Toto si vypočujete dvakrát.",
-          explanation: "'hören' = počúvať, 'zweimal' = dvakrát. Pokyn na skúške hovorí, koľkokrát si audio vypočuješ.",
-        },
-        {
-          question: "Aká je najlepšia stratégia pri Richtig/Falsch úlohách?",
-          options: [
-            "Odpovedaj podľa intuície.",
-            "Najprv prečítaj tvrdenie, potom over podľa audio.",
-            "Počúvaj audio a potom čítaj.",
-            "Píš všetky slová, ktoré počuješ.",
-          ],
-          answer: "Najprv prečítaj tvrdenie, potom over podľa audio.",
-          explanation: "Správna stratégia: prečítaj tvrdenie PRED počúvaním, aby si vedel/a, na čo sa sústrediť. Potom over pri počúvaní.",
-        },
-        {
-          question: "Čo je 'das Schlüsselwort'?",
-          options: ["Kľúč od dverí", "Kľúčové slovo", "Tajné heslo", "Záverečná veta"],
-          answer: "Kľúčové slovo",
-          explanation: "'Schlüssel' = kľúč, 'Wort' = slovo → 'Schlüsselwort' je kľúčové slovo. V počúvaní hľadáš kľúčové slová: mená, čísla, miesta.",
-        },
-        {
-          question: "Kde nájde Jana cvičné nahrávky pre Goethe A1?",
-          options: ["Na youtube.com", "Na goethe.de", "Na wikipedia.de", "Na bahn.de"],
-          answer: "Na goethe.de",
-          explanation: "Oficálne materiály Goethe A1 skúšky sú dostupné na webstránke Goethe Inštitútu: goethe.de.",
-        },
-      ],
-    },
-    {
-      type: "fill",
-      instruction: "Doplň správne slovo do medzery. Použij slovníček z tejto lekcie.",
-      questions: [
-        {
-          sentence: "___ Sie das Gespräch aufmerksam.",
-          answer: "Hören",
-          hint: "Pokyn: Počúvaj...",
-          explanation: "'Hören Sie' je formálny pokyn (imperativ) — 'Počúvajte'. Na skúške sa táto forma používa vždy.",
-        },
-        {
-          sentence: "___ Sie die richtige Antwort.",
-          answer: "Markieren",
-          hint: "Pokyn: Označ...",
-          explanation: "'Markieren Sie' = 'Označte' — bežný pokyn pri úlohách multiple-choice.",
-        },
-        {
-          sentence: "Auf dem ___ ist eine Nachricht von Dr. Braun.",
-          answer: "Anrufbeantworter",
-          hint: "zariadenie, ktoré nahrá správy z telefonátov",
-          explanation: "'Der Anrufbeantworter' = záznamník. Veľmi časté v Goethe A1 Hören úlohách.",
-        },
-        {
-          sentence: "Ich verstehe ___ alles, aber ich verstehe das Thema.",
-          answer: "nicht",
-          hint: "Nerozumiem...",
-          explanation: "'Ich verstehe nicht alles' = Nerozumiem všetkému. 'nicht' = nie/ne- pri zápore slovesa.",
-        },
-        {
-          sentence: "Das ist ___ — ich habe die falsche Antwort geschrieben.",
-          answer: "falsch",
-          hint: "opak slova 'richtig'",
-          explanation: "'falsch' = nesprávne/chybné. 'richtig' = správne. Oba pojmy sú základné na skúške.",
-        },
-      ],
-    },
-    {
-      type: "listen",
-      instruction: "Počúvaj vety a opakuj nahlas. Sústred sa na výslovnosť nemeckých prehlások (ä, ö, ü).",
-      questions: [
-        { de: "Hören Sie das Gespräch zweimal.", sk: "Počúvajte rozhovor dvakrát." },
-        { de: "Markieren Sie die richtige Antwort.", sk: "Označte správnu odpoveď." },
-        { de: "Lesen Sie die Aufgabe zuerst.", sk: "Najprv si prečítajte úlohu." },
-        { de: "Ich verstehe nicht alles.", sk: "Nerozumiem všetkému." },
-        { de: "Das Schlüsselwort ist wichtig.", sk: "Kľúčové slovo je dôležité." },
-        { de: "Hören Sie aufmerksam zu.", sk: "Počúvajte pozorne." },
-      ],
+      instruction: "Prezri si slovíčka tejto lekcie. Klikni na kartičku pre preklad."
     },
     {
       type: "match",
-      instruction: "Spoj nemecký výraz s jeho slovenským prekladom.",
+      instruction: "Spojte nemecké slová s ich slovenskými ekvivalentmi.",
       pairs: [
-        ["die Prüfung", "skúška"],
-        ["das Gespräch", "rozhovor"],
-        ["richtig", "správne"],
-        ["falsch", "nesprávne"],
-        ["der Anrufbeantworter", "záznamník"],
-        ["das Schlüsselwort", "kľúčové slovo"],
-        ["aufmerksam", "pozorný / pozorne"],
-        ["die Ansage", "hlásenie / oznam"],
-      ],
-    },
-    {
-      type: "dialogue",
-      instruction:
-        "Prečítaj rozhovor medzi Janou a jej kamarátkou Petrou. Rozprávajú sa telefonicky o príprave na skúšku.",
-      lines: [
-        { speaker: "A", de: "Hallo Petra! Wie bereitest du dich auf die Goethe-Prüfung vor?", sk: "Ahoj Petra! Ako sa pripravuješ na Goethe skúšku?" },
-        { speaker: "B", de: "Ich höre jeden Tag Podcasts auf Deutsch. Du auch?", sk: "Každý deň počúvam podcasty po nemecky. A ty?" },
-        { speaker: "A", de: "Ich auch! Ich schaue auch deutsche Serien mit Untertiteln.", sk: "Ja tiež! Pozerám aj nemecké seriály s titulkami." },
-        { speaker: "B", de: "Das ist eine gute Idee. Ich schaue 'Dark' auf Netflix.", sk: "To je dobrý nápad. Pozerám 'Dark' na Netflixe." },
-        { speaker: "A", de: "Was ist das schwierigste beim Hören?", sk: "Čo je najťažšie pri počúvaní?" },
-        { speaker: "B", de: "Die Umlaute! Ä, Ö und Ü klingen für mich alle gleich.", sk: "Prehlásky! Ä, Ö a Ü mi všetky znejú rovnako." },
-        { speaker: "A", de: "Ja, ich verstehe das Problem. Ich übe jeden Morgen eine Stunde.", sk: "Áno, rozumiem tomu problému. Cvičím každé ráno hodinu." },
-        { speaker: "B", de: "Ich höre auch die Ansagen am Wiener Hauptbahnhof.", sk: "Počúvam aj hlásenia na viedenskom hlavnom nádraží." },
-        { speaker: "A", de: "Das ist super! Die Anrufbeantworter-Aufgaben sind schwierig.", sk: "To je super! Úlohy so záznamníkom sú ťažké." },
-        { speaker: "B", de: "Ja, aber ich höre aufmerksam auf die Schlüsselwörter.", sk: "Áno, ale pozorne počúvam kľúčové slová." },
-        { speaker: "A", de: "Richtig! Namen, Zeiten und Zahlen — das sind die Schlüsselwörter.", sk: "Presne! Mená, časy a čísla — to sú kľúčové slová." },
-        { speaker: "B", de: "Viel Erfolg bei der Prüfung, Jana!", sk: "Veľa úspechu na skúške, Jana!" },
-      ],
-      comprehensionQuestions: [
-        {
-          question: "Čo robí Petra každý deň pri príprave na skúšku?",
-          options: ["Číta nemecké knihy", "Počúva podcasty po nemecky", "Píše nemecké eseje", "Hovorí s rodákom"],
-          answer: "Počúva podcasty po nemecky",
-        },
-        {
-          question: "Čo považuje Petra za najťažšie pri nemeckom počúvaní?",
-          options: ["Rýchlosť hovoru", "Prehlásky (ä, ö, ü)", "Gramatika", "Slovná zásoba"],
-          answer: "Prehlásky (ä, ö, ü)",
-        },
-        {
-          question: "Kde počúva Petra reálne nemecké hlásenia?",
-          options: [
-            "Na letisku vo Viedni",
-            "Na viedenskom hlavnom nádraží",
-            "V nemeckom rádiu",
-            "Na goethe.de",
-          ],
-          answer: "Na viedenskom hlavnom nádraží",
-        },
-      ],
-    },
-    {
-      type: "minitext",
-      instruction:
-        "Prečítaj si simulovanú stránku s pokynmi k časti Hören skúšky Goethe A1. Potom odpovedz na otázky.",
-      text:
-        "Goethe-Zertifikat A1: Hören\n\nDieser Prüfungsteil hat vier Aufgaben. Sie hören kurze Gespräche und Ansagen. Hören Sie die Texte einmal oder zweimal — das steht in der Aufgabe. Es gibt drei Aufgabentypen: Richtig/Falsch, Multiple Choice und Zuordnung. Lesen Sie die Aufgaben immer zuerst, bevor Sie hören! So wissen Sie, worauf Sie achten müssen. Hören Sie aufmerksam auf Schlüsselwörter: Namen, Zahlen, Zeiten und Orte. Die Prüfung dauert etwa 20 Minuten. Viel Erfolg!",
-      textSk:
-        "Goethe certifikát A1: Počúvanie\n\nTáto časť skúšky má štyri úlohy. Počúvaš krátke rozhovory a hlásenia. Texty si vypočuješ raz alebo dvakrát — je to uvedené v úlohe. Existujú tri typy úloh: Pravda/Nepravda, Multiple Choice a Priradenie. Vždy si prečítaj úlohy PRED počúvaním! Tak budeš vedieť, na čo si dávať pozor. Pozorne počúvaj kľúčové slová: mená, čísla, časy a miesta. Skúška trvá približne 20 minút. Veľa úspechu!",
-      questions: [
-        {
-          question: "Koľko úloh má časť Hören skúšky Goethe A1?",
-          options: ["Dve", "Tri", "Štyri", "Päť"],
-          answer: "Štyri",
-        },
-        {
-          question: "Koľkokrát si kandidát vypočuje audio?",
-          options: [
-            "Vždy raz",
-            "Vždy dvakrát",
-            "Raz alebo dvakrát — je to uvedené v úlohe",
-            "Trikrát",
-          ],
-          answer: "Raz alebo dvakrát — je to uvedené v úlohe",
-        },
-        {
-          question: "Čo sa odporúča robiť PRED počúvaním?",
-          options: [
-            "Písať poznámky",
-            "Prečítať si úlohy",
-            "Pozrieť sa na hodiny",
-            "Zopakovať slovnú zásobu",
-          ],
-          answer: "Prečítať si úlohy",
-        },
-      ],
-    },
-    {
-      type: "freewrite",
-      instruction:
-        "Napíš krátky text po nemecky. Môžeš použiť slovník, ak potrebuješ.",
-      prompt:
-        "Wie bereitest du dich auf Prüfungen vor? Was hilft dir beim Deutschhören? (Ako sa pripravuješ na skúšky? Čo ti pomáha pri nemeckom počúvaní?)",
-      minWords: 35,
-      exampleAnswer:
-        "Ich bereite mich auf Prüfungen vor, indem ich jeden Tag übe. Beim Deutschhören höre ich Podcasts und schaue deutsche Serien. Ich schreibe Schlüsselwörter auf — Namen, Zahlen und Zeiten. Manchmal verstehe ich nicht alles, aber das ist normal. Übung macht den Meister!",
+        [
+          "die Bluse",
+          "blúzka"
+        ],
+        [
+          "die Hose",
+          "nohavice"
+        ],
+        [
+          "der Rock",
+          "sukňa"
+        ],
+        [
+          "das Kleid",
+          "šaty"
+        ],
+        [
+          "der Mantel",
+          "kabát"
+        ],
+        [
+          "die Jacke",
+          "bunda"
+        ],
+        [
+          "die Schuhe",
+          "topánky"
+        ],
+        [
+          "der Preis",
+          "cena"
+        ],
+        [
+          "kaufen",
+          "kúpiť"
+        ],
+        [
+          "anprobieren",
+          "vyskúšať si"
+        ]
+      ]
     },
     {
       type: "wordorder",
-      instruction: "Zoraď slová do správnej nemeckej vety.",
+      instruction: "Usporiadajte slová do správneho nemeckého poradia.",
       sentences: [
         {
-          words: ["Meine", "Chefin", "stellt", "mir", "neue", "Aufgaben", "zur", "Verfügung"],
-          correct: "Meine Chefin stellt mir neue Aufgaben zur Verfügung",
-          hint: "Moja šéfka mi dáva k dispozícii nové úlohy.",
-          explanation: "'zur Verfügung stellen' je Nomen-Verb-Verbindung — pevný výraz pre 'poskytnúť'.",
+          words: [
+            "Ich",
+            "suche",
+            "eine",
+            "Bluse",
+            "für",
+            "eine",
+            "Präsentation"
+          ],
+          correct: "Ich suche eine Bluse für eine Präsentation",
+          hint: "Hľadám blúzku na prezentáciu.",
+          explanation: "V oznamovacej vete je sloveso na druhej pozícii. Ostatné časti vety nasledujú."
         },
         {
-          words: ["Wir", "nehmen", "die", "Kosten", "in", "Kauf"],
-          correct: "Wir nehmen die Kosten in Kauf",
-          hint: "Zmierujeme sa s nákladmi.",
-          explanation: "'in Kauf nehmen' = Nomen-Verb-Verbindung pre 'akceptovať niečo nepríjemné'.",
+          words: [
+            "Das",
+            "ist",
+            "zu",
+            "teuer"
+          ],
+          correct: "Das ist zu teuer",
+          hint: "To je príliš drahé!",
+          explanation: "V jednoduchej oznamovacej vete je sloveso na druhej pozícii. 'Zu' je príslovka, ktorá zosilňuje prídavné meno 'teuer'."
         },
         {
-          words: ["Jana", "nimmt", "Kontakt", "mit", "ihrer", "Chefin", "auf"],
-          correct: "Jana nimmt Kontakt mit ihrer Chefin auf",
-          hint: "Jana nadväzuje kontakt so svojou šéfkou.",
-          explanation: "'Kontakt aufnehmen' — oddeľovateľná predpona 'auf' ide na koniec Hauptsatz.",
+          words: [
+            "Haben",
+            "Sie",
+            "etwas",
+            "Günstigeres"
+          ],
+          correct: "Haben Sie etwas Günstigeres",
+          hint: "Máte niečo lacnejšie?",
+          explanation: "V otázke s otázkovým slovom (tu nie je, je to otázka áno/nie) je sloveso na prvej pozícii a podmet na druhej."
         },
         {
-          words: ["Das", "Angebot", "kommt", "für", "mich", "nicht", "in", "Frage"],
-          correct: "Das Angebot kommt für mich nicht in Frage",
-          hint: "Táto ponuka pre mňa neprichádza do úvahy.",
-          explanation: "'in Frage kommen' = Nomen-Verb-Verbindung pre 'byť relevantný/možný'.",
+          words: [
+            "Das",
+            "passt",
+            "mir",
+            "nicht"
+          ],
+          correct: "Das passt mir nicht",
+          hint: "Toto mi nesedí.",
+          explanation: "V oznamovacej vete je sloveso na druhej pozícii. 'Nicht' neguje sloveso 'passt'."
         },
         {
-          words: ["Er", "gibt", "mir", "Bescheid", "wenn", "er", "fertig", "ist"],
-          correct: "Er gibt mir Bescheid wenn er fertig ist",
-          hint: "Dá mi vedieť, keď bude hotový.",
-          explanation: "'Bescheid geben' = Nomen-Verb-Verbindung pre 'informovať niekoho'.",
+          words: [
+            "Ich",
+            "möchte",
+            "diese",
+            "Hose",
+            "kaufen"
+          ],
+          correct: "Ich möchte diese Hose kaufen",
+          hint: "Chcel by som si kúpiť tieto nohavice.",
+          explanation: "Pri modálnom slovese ('möchte') je modálne sloveso na druhej pozícii a hlavné sloveso ('kaufen') na konci v infinitíve."
+        }
+      ]
+    },
+    {
+      type: "fill",
+      instruction: "Doplňte chýbajúce slová do viet.",
+      questions: [
+        {
+          sentence: "Ich suche eine ____ für die Party.",
+          answer: "Bluse",
+          hint: "Čo hľadám na párty? (oblečenie)",
+          explanation: "V kontexte hľadania oblečenia na párty je 'Bluse' (blúzka) vhodný odev."
         },
-      ],
+        {
+          sentence: "Diese ____ sind sehr bequem.",
+          answer: "Schuhe",
+          hint: "Čo je pohodlné? (množné číslo)",
+          explanation: "Slovo 'bequem' (pohodlné) sa často používa na opis oblečenia alebo obuvi. 'Schuhe' (topánky) sú v množnom čísle."
+        },
+        {
+          sentence: "Der ____ für den Mantel ist sehr hoch.",
+          answer: "Preis",
+          hint: "Čo môže byť vysoké pri kabáte?",
+          explanation: "'Preis' (cena) je relevantný pri nákupe oblečenia a môže byť 'hoch' (vysoká)."
+        },
+        {
+          sentence: "Kann ich diese ____ anprobieren?",
+          answer: "Hose",
+          hint: "Čo si môžem vyskúšať? (oblečenie)",
+          explanation: "'Anprobieren' (vyskúšať si) sa používa pri oblečení. 'Hose' (nohavice) sú bežným kusom oblečenia."
+        },
+        {
+          sentence: "Das ____ gefällt mir nicht.",
+          answer: "Kleid",
+          hint: "Čo sa mi nepáči? (oblečenie)",
+          explanation: "'Gefallen' (páčiť sa) je sloveso, ktoré vyžaduje datív. 'Kleid' (šaty) sú kus oblečenia."
+        },
+        {
+          sentence: "Wie viel ____ kostet das?",
+          answer: "Geld",
+          hint: "Čo sa pýtame, keď chceme vedieť cenu? (L04)",
+          explanation: "Toto je otázka na cenu. V lekcii L04 sme sa naučili, že 'Geld' (peniaze) súvisí s cenou a 'haben' sa používa s peniazmi (ich habe Geld)."
+        },
+        {
+          sentence: "Ich ____ eine neue Jacke.",
+          answer: "brauche",
+          hint: "Čo potrebujem? (L17)",
+          explanation: "V lekcii L17 sme sa naučili používať sloveso 'brauchen' (potrebovať) s akuzatívom. 'Eine neue Jacke' je v akuzatíve."
+        }
+      ]
+    },
+    {
+      type: "listen",
+      instruction: "Počúvajte a napíšte, čo počujete.",
+      questions: [
+        {
+          de: "die Bluse",
+          sk: "blúzka"
+        },
+        {
+          de: "die Hose",
+          sk: "nohavice"
+        },
+        {
+          de: "der Rock",
+          sk: "sukňa"
+        },
+        {
+          de: "das Kleid",
+          sk: "šaty"
+        },
+        {
+          de: "der Mantel",
+          sk: "kabát"
+        },
+        {
+          de: "die Jacke",
+          sk: "bunda"
+        },
+        {
+          de: "die Schuhe",
+          sk: "topánky"
+        },
+        {
+          de: "der Preis",
+          sk: "cena"
+        },
+        {
+          de: "kaufen",
+          sk: "kúpiť"
+        },
+        {
+          de: "teuer",
+          sk: "drahý"
+        },
+        {
+          de: "Das ist zu teuer!",
+          sk: "To je príliš drahé!"
+        }
+      ]
+    },
+    {
+      type: "mcq",
+      instruction: "Vyberte správnu možnosť.",
+      questions: [
+        {
+          question: "Čo znamená 'die Hose'?",
+          options: [
+            "blúzka",
+            "nohavice",
+            "sukňa",
+            "šaty"
+          ],
+          answer: 1,
+          explanation: "'Die Hose' znamená v slovenčine 'nohavice'."
+        },
+        {
+          question: "Čo znamená 'anprobieren'?",
+          options: [
+            "kúpiť",
+            "predať",
+            "vyskúšať si (oblečenie)",
+            "zaplatiť"
+          ],
+          answer: 2,
+          explanation: "'Anprobieren' je sloveso, ktoré znamená 'vyskúšať si' oblečenie pred kúpou."
+        },
+        {
+          question: "Čo znamená 'Das passt mir nicht.'?",
+          options: [
+            "Toto mi sedí.",
+            "Toto mi nesedí.",
+            "Toto je príliš drahé.",
+            "Toto je lacné."
+          ],
+          answer: 1,
+          explanation: "Fráza 'Das passt mir nicht.' sa používa, keď oblečenie alebo obuv nesedí správne."
+        },
+        {
+          question: "Ktoré slovo znamená 'cena'?",
+          options: [
+            "das Geld",
+            "der Preis",
+            "die Boutique",
+            "der Kunde"
+          ],
+          answer: 1,
+          explanation: "'Der Preis' je nemecké slovo pre 'cenu'."
+        },
+        {
+          question: "Veta 'Ich ____ eine Bluse.' potrebuje sloveso. Ktoré sa hodí?",
+          options: [
+            "habe",
+            "suche",
+            "kaufe",
+            "brauche"
+          ],
+          answer: 1,
+          explanation: "V kontexte hľadania oblečenia je najvhodnejšie sloveso 'suche' (hľadám)."
+        },
+        {
+          question: "Čo znamená 'Das ist zu teuer!'?",
+          options: [
+            "To je príliš lacné!",
+            "To je príliš drahé!",
+            "To je pekné!",
+            "To je nové!"
+          ],
+          answer: 1,
+          explanation: "'Zu teuer' znamená 'príliš drahý/drahé'."
+        },
+        {
+          question: "Čo znamená 'Ich habe ____ Euro.'? (L13)",
+          options: [
+            "fünfzehn",
+            "fünfzig",
+            "fünf",
+            "fünfhundert"
+          ],
+          answer: 2,
+          explanation: "V lekcii L13 sme sa naučili čísla. 'Fünf' znamená päť."
+        },
+        {
+          question: "Ktorý článok sa používa pred 'Rock' (mužský rod) v nominatíve?",
+          options: [
+            "die",
+            "das",
+            "der",
+            "ein"
+          ],
+          answer: 2,
+          explanation: "Podstatné meno 'der Rock' je mužského rodu, preto sa v nominatíve používa člen 'der'."
+        }
+      ]
+    },
+    {
+      type: "minitext",
+      instruction: "Lies den Dialog und beantworte die Fragen.",
+      text: "Jana: Guten Tag! Ich brauche eine neue Bluse für eine wichtige Präsentation am Montag.\nVerkäuferin: Guten Tag! Suchen Sie etwas Bestimmtes?\nJana: Ja, eine schicke Bluse. Vielleicht in Weiß oder Blau.\nVerkäuferin: Schauen Sie mal diese hier. Die ist sehr modern und passt gut zu einem Hosenanzug.\nJana: Oh, die ist wirklich schön! Aber der Preis... Das ist zu teuer! Ich habe nicht so viel Geld dabei.\nVerkäuferin: Verstehe. Haben Sie etwas Günstigeres im Sinn?\nJana: Ja, vielleicht etwas Einfacheres. Haben Sie vielleicht eine andere?\nVerkäuferin: Natürlich. Hier ist eine andere Bluse. Der Preis ist auch viel besser.",
+      textSk: "Jana: Dobrý deň! Potrebujem novú blúzku na dôležitú prezentáciu v pondelok.\nPredavačka: Dobrý deň! Hľadáte niečo konkrétne?\nJana: Áno, elegantnú blúzku. Možno v bielej alebo modrej farbe.\nPredavačka: Pozrite sa na túto. Je veľmi moderná a hodí sa k nohavicovému kostýmu.\nJana: Ó, tá je naozaj pekná! Ale tá cena... To je príliš drahé! Nemám pri sebe toľko peňazí.\nPredavačka: Rozumiem. Máte na mysli niečo lacnejšie?\nJana: Áno, možno niečo jednoduchšie. Máte možno inú?\nPredavačka: Samozrejme. Tu je iná blúzka. Cena je tiež oveľa lepšia.",
+      questions: [
+        {
+          question: "Warum braucht Jana eine neue Bluse?",
+          options: [
+            "Sie hat eine Präsentation am Montag.",
+            "Sie möchte eine neue Jacke kaufen.",
+            "Sie hat keine Hose mehr.",
+            "Sie geht in eine Boutique."
+          ],
+          answer: 0,
+          explanation: "Jana sagt: \"Ich brauche eine neue Bluse für eine wichtige Präsentation am Montag.\""
+        },
+        {
+          question: "Was sagt Jana über die erste Bluse, die sie sieht?",
+          options: [
+            "Sie ist zu klein.",
+            "Sie gefällt ihr nicht.",
+            "Sie ist zu teuer.",
+            "Sie passt nicht gut."
+          ],
+          answer: 2,
+          explanation: "Jana sagt: \"Oh, die ist wirklich schön! Aber der Preis... Das ist zu teuer!\""
+        },
+        {
+          question: "Was fragt Jana die Verkäuferin, als die erste Bluse zu teuer ist?",
+          options: [
+            "Ob sie die Bluse auch in Rot hat.",
+            "Ob sie etwas Günstigeres hat.",
+            "Ob sie die Bluse anprobieren kann.",
+            "Wo die Umkleidekabine ist."
+          ],
+          answer: 1,
+          explanation: "Jana fragt: \"Haben Sie etwas Günstigeres im Sinn?\""
+        },
+        {
+          question: "Was sucht Jana ursprünglich?",
+          options: [
+            "Eine Hose",
+            "Ein Kleid",
+            "Schuhe",
+            "Eine Bluse"
+          ],
+          answer: 3,
+          explanation: "Jana sagt am Anfang des Dialogs: \"Ich brauche eine neue Bluse...\""
+        }
+      ]
     },
     {
       type: "speaking",
-      instruction: "Počúvaj nemeckú vetu. Potom hovor nahlas a skontroluj sa.",
+      instruction: "Höre zu und sprich nach.",
       phrases: [
         {
-          de: "Ich stelle Ihnen das Projekt zur Verfügung.",
-          sk: "Dávam Vám projekt k dispozícii.",
-          tip: "'Verfügung': V+R, -ung na konci = -ung",
+          de: "die Bluse",
+          sk: "blúzka",
+          tip: "Bluse: [ø] wie in schön"
         },
         {
-          de: "Wir nehmen die Verzögerung in Kauf.",
-          sk: "Zmierujeme sa s oneskorením.",
-          tip: "Verzögerung: V=F, ö=ö, -ung",
+          de: "die Hose",
+          sk: "nohavice",
+          tip: "Hose: [o:] wie in Sonne"
         },
         {
-          de: "Können Sie mir bitte Bescheid geben?",
-          sk: "Môžete mi, prosím, dať vedieť?",
-          tip: "Bescheid: B+Š+ajt, krátke e",
+          de: "anprobieren",
+          sk: "vyskúšať si (oblečenie)",
+          tip: "anprobieren: [a] wie in Vater"
         },
         {
-          de: "Jana nimmt Kontakt mit der Chefin auf.",
-          sk: "Jana nadväzuje kontakt so šéfkou.",
-          tip: "'auf' = oddeľuje sa — stojí na konci vety",
+          de: "Das Kleid passt.",
+          sk: "Šaty sedia.",
+          tip: "passt: [a] wie in Vater"
         },
         {
-          de: "Das kommt für uns nicht in Frage.",
-          sk: "To pre nás neprichádza do úvahy.",
-          tip: "Frage: FR ako jedno splývajúce FR",
+          de: "Das ist zu teuer!",
+          sk: "To je príliš drahé!",
+          tip: "teuer: [ø] wie in schön, [aʊ] wie in Haus"
         },
-      ],
+        {
+          de: "Ich suche neue Schuhe.",
+          sk: "Hľadám nové topánky.",
+          tip: "suche: [u:] wie in gut"
+        },
+        {
+          de: "Haben Sie etwas Günstigeres?",
+          sk: "Máte niečo lacnejšie?",
+          tip: "Günstigeres: [y] wie in Tür, [st] wie in Straße"
+        }
+      ]
     },
+    {
+      type: "truefalse",
+      instruction: "Rozhodnite, či sú nasledujúce tvrdenia pravdivé (P) alebo nepravdivé (N).",
+      statements: [
+        {
+          statement: "Sie sucht eine Bluse für eine Präsentation.",
+          isTrue: true,
+          explanation: "Veta znamená 'Ona hľadá blúzku na prezentáciu.', čo je pravda podľa zadaného slovníka."
+        },
+        {
+          statement: "Der Preis von der Jacke ist sehr günstig.",
+          isTrue: false,
+          explanation: "Veta znamená 'Cena bundy je veľmi lacná.', ale v kontexte lekcie sa často vyjadruje prekvapenie nad vysokou cenou, preto je toto tvrdenie nepravdepodobné."
+        },
+        {
+          statement: "Das Kleid passt mir gut.",
+          isTrue: true,
+          explanation: "Veta znamená 'Šaty mi dobre sedia.', čo je bežná situácia pri skúšaní oblečenia."
+        },
+        {
+          statement: "Ich kaufe den Mantel, weil er zu teuer ist.",
+          isTrue: false,
+          explanation: "Veta znamená 'Kúpim si kabát, pretože je príliš drahý.', čo je logicky nesprávne. Nikto si nekúpi vec preto, že je príliš drahá."
+        },
+        {
+          statement: "Haben Sie etwas Teureres?",
+          isTrue: false,
+          explanation: "Veta znamená 'Máte niečo drahšie?', ale zvyčajne sa pýtame na niečo lacnejšie, ak je to príliš drahé. Veta 'Haben Sie etwas Günstigeres?' je častejšia."
+        }
+      ]
+    },
+    {
+      type: "dictation",
+      instruction: "Napíšte vety, ktoré počujete.",
+      sentences: [
+        {
+          de: "Ich suche Schuhe.",
+          sk: "Hľadám topánky."
+        },
+        {
+          de: "Der Rock ist schön.",
+          sk: "Sukňa je pekná."
+        },
+        {
+          de: "Das Kleid passt nicht.",
+          sk: "Šaty nesedia."
+        },
+        {
+          de: "Die Jacke ist neu und teuer.",
+          sk: "Bunda je nová a drahá."
+        },
+        {
+          de: "Das ist zu viel Geld!",
+          sk: "To je príliš veľa peňazí!"
+        }
+      ]
+    },
+    {
+      type: "categorysort",
+      instruction: "Roztrieďte slová do správnych kategórií.",
+      categories: [
+        {
+          name: "Oblečenie (das Kleidungsstück)",
+          color: "blue",
+          words: [
+            "die Bluse",
+            "die Hose",
+            "der Rock",
+            "das Kleid",
+            "der Mantel",
+            "die Jacke"
+          ]
+        },
+        {
+          name: "Obuv (das Schuhwerk)",
+          color: "rose",
+          words: [
+            "die Schuhe"
+          ]
+        },
+        {
+          name: "Peniaze a cena (das Geld und der Preis)",
+          color: "green",
+          words: [
+            "der Preis",
+            "das Geld",
+            "teuer",
+            "günstiger"
+          ]
+        }
+      ],
+      explanation: "Slová sú rozdelené do kategórií podľa toho, či ide o oblečenie, obuv alebo pojmy súvisiace s peniazmi a cenou."
+    },
+    {
+      type: "translation",
+      instruction: "Preložte nasledujúce slovenské vety do nemčiny.",
+      sentences: [
+        {
+          sk: "Hľadám nohavice.",
+          answer: "Ich suche eine Hose.",
+          hint: "suchen, Hose",
+          explanation: "Použili sme neurčitý člen 'eine' pred podstatným menom ženského rodu 'Hose' a sloveso 'suchen' v prvej osobe jednotného čísla 'ich suche'."
+        },
+        {
+          sk: "Táto bunda mi sedí.",
+          answer: "Diese Jacke passt mir.",
+          hint: "passen, Jacke",
+          explanation: "Použili sme sloveso 'passen' (sedieť) a zájmeno 'mir' (mi). 'Diese' je ukazovacie zájmeno."
+        },
+        {
+          sk: "To je príliš drahé!",
+          answer: "Das ist zu teuer!",
+          hint: "zu, teuer",
+          explanation: "Použili sme príslovku 'zu' (príliš) na zosilnenie prídavného mena 'teuer' (drahý)."
+        },
+        {
+          sk: "Máte niečo lacnejšie?",
+          answer: "Haben Sie etwas Günstigeres?",
+          hint: "etwas, günstiger",
+          explanation: "Použili sme tvar 'günstigeres' ako komparatív prídavného mena 'günstig' (lacný) s neurčitým zájmenom 'etwas' (niečo)."
+        }
+      ]
+    },
+    {
+      type: "conjugation",
+      instruction: "Doplňte správne tvary slovesa 'kaufen' v prítomnom čase.",
+      verbs: [
+        {
+          infinitive: "kaufen",
+          translation: "kúpiť",
+          forms: [
+            {
+              pronoun: "ich",
+              correct: "kaufe"
+            },
+            {
+              pronoun: "du",
+              correct: "kaufst"
+            },
+            {
+              pronoun: "er/sie/es",
+              correct: "kauft"
+            },
+            {
+              pronoun: "wir",
+              correct: "kaufen"
+            },
+            {
+              pronoun: "ihr",
+              correct: "kauft"
+            },
+            {
+              pronoun: "sie/Sie",
+              correct: "kaufen"
+            }
+          ],
+          note: "Sloveso 'kaufen' je pravidelné sloveso v nemčine. V prítomnom čase sa časuje podľa štandardných pravidiel pre pravidelné slovesá."
+        }
+      ]
+    }
   ],
-  reviewWords: [
-    "die Prüfung",
-    "das Gespräch",
-    "richtig",
-    "falsch",
-    "der Anrufbeantworter",
-    "das Schlüsselwort",
-    "aufmerksam",
-    "Hören Sie",
-    "Markieren Sie",
-  ],
-  lessonNotes:
-    "Výborne! Teraz poznáš formát časti Hören skúšky Goethe A1. Pamätaj: vždy si najprv prečítaj úlohu, potom počúvaj. Hľadaj kľúčové slová — nepotrebuješ rozumieť každému slovu! Ďalšia lekcia: stratégie čítania (Lesen).",
+  reviewWords: []
 };

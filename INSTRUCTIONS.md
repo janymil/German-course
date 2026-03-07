@@ -77,9 +77,11 @@ Every entry in `lesson.vocab[]` **MUST** have ALL of these fields. No exceptions
 ### Mandatory content rules for vocab entries:
 - `example` sentence must only use grammar structures appropriate for the lesson's CEFR level
   - L01–L10 (A1 early): Präsens only. No Perfekt, no Präteritum, no Konjunktiv.
+  - L01–L10 **exception:** `möchten` and `können` allowed as **fixed phrases** from L03+ (e.g. "Ich möchte...", "Können Sie..."). Full modal grammar is introduced at L11+.
   - L11–L40 (A1 mid): Präsens + modal verbs + imperative only.
   - L41–L60 (A1 late): Präsens + Perfekt allowed.
   - L61–L80 (A1 exam): All A1 grammar allowed.
+- `example` vocabulary: use ANY natural A1 words — do NOT restrict to only words from this lesson. Students learn from context and exposure. The grammar STRUCTURE constraint applies, but individual vocabulary words can come from anywhere.
 - `example` must be natural German. Test: would a native speaker say this?
 - `gender` must be factually correct. Do not guess — verify.
 - `srsId` must be unique across ALL 80 lessons. Format: L{id}_V{01..99}.
@@ -148,10 +150,15 @@ If this field is empty or missing, the Grammar Guide view will show a blank card
 | 6 | `mcq` | Mixed grammar + vocab review | MCQExercise |
 | 7 | `minitext` | Reading comprehension (Lesen) | MiniTextExercise |
 | 8 | `speaking` | Speaking practice (Sprechen) | SpeakingExercise |
-| 9 | `writing` | AI writing correction (optional) | WritingChecker |
+| 9 | `conjugation` | Verb form practice | ConjugationExercise |
+| 10 | `truefalse` | Grammar rule comprehension | TrueFalseExercise |
+| 11 | `dictation` | Listening + writing | DictationExercise |
+| 12 | `categorysort` | Classification / gender / semantic grouping | CategorySortExercise |
+| 13 | `translation` | SK→DE active production | TranslationExercise |
+| 14 | `writing` | AI writing correction (optional) | WritingChecker |
 | — | `dialogue` | Interactive dialogue (L50+) | DialogueExercise |
 
-**CRITICAL:** Exercises 1–8 are REQUIRED in every lesson. `writing` is optional. `dialogue` replaces or supplements `speaking` from L50+.
+**CRITICAL:** Exercises 1–13 are REQUIRED in every lesson. `writing` is optional. `dialogue` replaces or supplements `speaking` from L50+.
 
 The `wordorder` exercise MUST target the **specific grammar rule** (grammarNote.rule) of that lesson — it is NOT a generic vocabulary exercise.
 
@@ -295,6 +302,90 @@ SpeakingExercise.jsx uses self-assessment: student listens via TTS, then marks t
 }
 ```
 
+### conjugation exercise schema:
+```js
+{
+  type: 'conjugation',
+  instruction: string,
+  verbs: [
+    {
+      infinitive: string,   // REQUIRED. German infinitive (e.g. 'sein', 'heißen').
+      translation: string,  // REQUIRED. Slovak translation of the verb.
+      forms: [
+        { pronoun: string, correct: string }  // 3 forms: ich/du/er,sie,es
+      ],
+      note: string,          // REQUIRED. Short grammar note (e.g. 'nepravidelné sloveso').
+    }
+  ]  // 2 verbs per lesson. Must target verbs taught in THIS lesson.
+}
+```
+**CRITICAL: Target verbs from the CURRENT lesson's grammar. L01 → sein/heißen. L03 → kommen/sprechen. L05 → arbeiten/machen.**
+
+### truefalse exercise schema:
+```js
+{
+  type: 'truefalse',
+  instruction: string,
+  statements: [
+    {
+      statement: string,    // REQUIRED. A German statement about grammar or vocabulary.
+      isTrue: boolean,      // REQUIRED. true or false.
+      explanation: string,  // REQUIRED. Slovak explanation of WHY it's true/false.
+    }
+  ]  // 5 statements per lesson. Mix of true AND false. Test grammar rules, not just vocab.
+}
+```
+
+### dictation exercise schema:
+```js
+{
+  type: 'dictation',
+  instruction: string,
+  sentences: [
+    {
+      de: string,           // REQUIRED. The German sentence (spoken via TTS).
+      sk: string,           // REQUIRED. Slovak translation (shown after answer).
+      hint: string,         // Optional. Hint shown if student struggles.
+    }
+  ]  // 5 sentences per lesson. Uses lesson vocabulary. TTS speaks at 0.7x rate.
+}
+```
+**DictationExercise.jsx uses `normalizeGerman()` from `src/utils/text.js` for comparison (ä→ae, ö→oe, ü→ue, ß→ss allowed).**
+
+### categorysort exercise schema:
+```js
+{
+  type: 'categorysort',
+  instruction: string,
+  categories: [
+    {
+      name: string,         // REQUIRED. Category label (e.g. 'Begrüßung', 'der-Berufe').
+      color: string,        // REQUIRED. One of: 'blue','rose','green','amber','purple','gray'.
+      words: string[],      // REQUIRED. German words belonging to this category.
+    }
+  ],  // 2–4 categories per exercise. Must be pedagogically meaningful.
+  explanation: string,      // REQUIRED. Slovak explanation shown after completion.
+}
+```
+**Categories must be pedagogically relevant: greetings/farewells, der/die nouns, irregular/regular, countries/languages, etc. NOT arbitrary groupings.**
+
+### translation exercise schema:
+```js
+{
+  type: 'translation',
+  instruction: string,
+  sentences: [
+    {
+      sk: string,           // REQUIRED. Slovak sentence to translate.
+      answer: string,       // REQUIRED. Correct German translation.
+      hint: string,         // REQUIRED. Vocabulary hint (German).
+      explanation: string,  // REQUIRED. Grammar explanation (Slovak).
+    }
+  ]  // 4 sentences per lesson. Uses THIS lesson's grammar structures.
+}
+```
+**TranslationExercise.jsx uses `normalizeGerman()` for comparison. TTS speaks correct answer after checking.**
+
 ### writing exercise schema (optional, AI-powered):
 ```js
 {
@@ -379,6 +470,45 @@ This is the definitive map of which component reads which fields. **Before editi
 - Self-assessment: student clicks "Zvládol som" (true) or "Treba zopakovať" (false)
 - Score: percentage of phrases marked as zvládol
 - **No speech recognition API required — purely self-assessed**
+
+### ConjugationExercise.jsx
+- Reads from: `exercise.verbs[]`
+- Fields accessed: `verb.infinitive`, `verb.translation`, `verb.forms[]` (pronoun + correct), `verb.note`
+- Student fills in conjugation form for each pronoun
+- TTS: speaks correct form after check
+- Score: percentage of correctly filled forms
+
+### TrueFalseExercise.jsx
+- Reads from: `exercise.statements[]`
+- Fields accessed: `stmt.statement`, `stmt.isTrue`, `stmt.explanation`
+- Student clicks Pravda (true) or Nepravda (false)
+- `stmt.explanation` IS rendered — shown after each answer
+- Score: percentage of correct answers
+
+### DictationExercise.jsx
+- Reads from: `exercise.sentences[]`
+- Fields accessed: `s.de`, `s.sk`, `s.hint`
+- TTS: auto-plays `s.de` at 0.7x rate on new sentence
+- Two speed buttons: normal (0.7x) and slow (0.45x)
+- Uses `normalizeGerman()` from `src/utils/text.js` for answer comparison
+- Score: percentage of correctly written sentences
+
+### CategorySortExercise.jsx
+- Reads from: `exercise.categories[]`, `exercise.explanation`
+- Fields accessed: `cat.name`, `cat.color`, `cat.words[]`
+- Student drags/clicks words into correct category column
+- Color map: blue, rose, green, amber, purple, gray
+- `exercise.explanation` IS rendered — shown after completion
+- Score: percentage of correctly sorted words
+
+### TranslationExercise.jsx
+- Reads from: `exercise.sentences[]`
+- Fields accessed: `s.sk`, `s.answer`, `s.hint`, `s.explanation`
+- Student sees Slovak sentence, types German translation
+- Uses `normalizeGerman()` for comparison
+- TTS: speaks `s.answer` on correct answer
+- `s.explanation` IS rendered — shown after each answer
+- Score: percentage of correct translations
 
 ### LessonView.jsx (view — orchestrates exercises)
 - Reads from: `lesson.id`, `lesson.title`, `lesson.topic`, `lesson.week`, `lesson.cefr`, `lesson.xpReward`, `lesson.grammarNote`, `lesson.vocab`, `lesson.exercises[]`
@@ -479,6 +609,70 @@ WEEKLY_PLAN entry schema:
 }
 ```
 
+### Weekend recap structure (Day 6 + Day 7):
+
+Each week has 2 structured recap days after the 5 lesson days. These are NOT rest — they are curriculum activities.
+
+**Day 6 (Saturday) — Active Review:**
+1. **WeeklyTest** (`src/views/WeeklyTest.jsx`): 20-question Goethe-style test from the week's 5 lessons
+   - Hörverstehen: 5 questions (TTS → select Slovak translation)
+   - Leseverstehen: 8 questions (MCQ from lesson exercises)
+   - Wortschatz: 7 questions (German → select Slovak from 4 options)
+   - Questions generated dynamically by `buildQuestionPool(lessons)`
+   - All distractors from same week's vocabulary pool
+2. **VocabTrainer** (`src/views/VocabTrainer.jsx`): SM-2 spaced repetition review of all week's vocabulary
+
+**Day 7 (Sunday) — Passive Contact:**
+1. **PassivePhase** (`src/views/PassivePhase.jsx`): Listening + dictation from `src/data/phrases.js`
+2. **GrammarGuide** (`src/views/GrammarGuide.jsx`): Re-read grammar notes from all 5 lessons this week
+
+**UI:** `WeeklyPlan.jsx` renders Day 6 and Day 7 cards with navigation buttons to these sub-apps.
+
+**Quality rules:**
+- WeeklyTest must pull from ALL 5 lessons (balanced, at least 1 question per lesson)
+- Distractors must be plausible (same word category, same week's vocab)
+- PassivePhase content (`phrases.js`) must align with the curriculum week's topics
+- Saturday test should only be accessible after all 5 weekday lessons are completed
+
+---
+
+## RULE 7B — COMPREHENSIVE 30-LESSON RECAP SYSTEM
+
+Every 30 lessons (and at the finale lesson L80), the agent auto-generates a **large comprehensive recap lesson** saved as `L{NN}R.js`. This is a major consolidation milestone — not a regular Saturday recap.
+
+### Recap milestones:
+| File | Covers | Lessons | xpReward |
+|---|---|---|---|
+| `L30R.js` | L01–L30 | 30 lessons | 60 XP |
+| `L60R.js` | L31–L60 | 30 lessons | 60 XP |
+| `L80R.js` | L61–L80 | 20 lessons (finale) | 60 XP |
+
+> `L10R.js` and `L20R.js` exist from an older 10-lesson mini-recap system. They are kept for backward compatibility but replaced by the comprehensive format going forward.
+
+### How the recap is triggered (in `agent1-lesson-generator.cjs`):
+```js
+if (lessonNum % 30 === 0 || lessonNum === 80) {
+  // triggers generateRecapLesson(lessonNum)
+}
+```
+- `--recap-only` flag: accepts `30`, `60`, `80` as valid arguments only
+
+### After auto-generation, manually add to `curriculum.js`:
+```js
+import { lesson60R } from './lessons/L60R.js';  // add at top
+// In LESSONS array after lesson60:
+lesson60R,  // Comprehensive recap: L31–L60
+```
+
+### Recap lesson requirements:
+- `id`: `lessonNum + 0.5` (e.g., 60.5)
+- `day: 6` (always Saturday)
+- `vocab: []` — no new vocabulary; flashcard reads from all prior lessons in the block
+- `grammarNotes: []` — no new grammar
+- `xpReward: 60` — higher than normal lessons
+- **Minimum 17 exercises**: flashcard + match×2 + wordorder×2 + fill×2 + listen + mcq×2 + minitext + speaking + truefalse + dictation + categorysort + translation + conjugation
+- Every exercise must use ONLY vocabulary and grammar from the covered lessons — no new words
+
 ---
 
 ## RULE 8 — USETTS HOOK
@@ -505,7 +699,7 @@ speak(text, lang='de-DE', rate=0.85)
 | `lesson.id` values | Never change or renumber — progress is keyed by lesson ID |
 | `srsId` values once assigned | Never change — VocabSeen is keyed by `vocab.de` string but srsIds used for cross-referencing |
 | `vocab.de` strings once in production | Never change spelling — vocabSeen is keyed by the DE string |
-| Exercise type strings | 'flashcard','mcq','fill','listen','match','dialogue' — exact lowercase strings |
+| Exercise type strings | 'flashcard','mcq','fill','listen','match','dialogue','wordorder','speaking','minitext','conjugation','truefalse','dictation','categorysort','translation','writing' — exact lowercase strings |
 | View IDs in Sidebar | 'dashboard','weekly','passive','vocab','grammar','guide','lesson' — changing breaks navigation |
 
 ---
@@ -673,15 +867,24 @@ After writing all 8 exercises for a lesson, review them as a set:
 **This rule exists because AI-generated exercises tend to be shallow: too few questions, reused patterns, no real-world phrases, and vague comprehension questions. An experienced teacher would write exercises that challenge the student with VARIETY, DEPTH, and REAL-WORLD LANGUAGE.**
 
 ### Minimum exercise counts (per lesson):
-| Exercise type | Minimum items | Ideal range |
-|---|---|---|
-| `match` pairs | 8 | 8–10 |
-| `wordorder` sentences | 5 | 5–6 |
-| `fill` questions | 6 | 6–8 |
-| `listen` questions | 8 | 8–10 |
-| `mcq` questions | 6 | 6–8 |
-| `minitext` questions | 4 | 4–5 |
-| `speaking` phrases | 6 | 6–8 |
+| Exercise type | Minimum items | Target | Notes |
+|---|---|---|---|
+| `match` pairs | 8 | **10** | Cover all key new vocab + 2-3 recycled from prior lessons |
+| `wordorder` sentences | 5 | **6** | All must target THIS lesson's grammar rule |
+| `fill` questions | 5 | **6–8** | Mix grammar + vocab + 1-2 recycled |
+| `listen` questions | 8 | **10** | Include tricky pronunciation + 2-3 recycled |
+| `mcq` questions | 5 | **6–8** | 2-3 grammar + 2-3 vocab + 1-2 usage |
+| `minitext` questions | 4 | **5** | Comprehension, not memory |
+| `speaking` phrases | 5 | **6–8** | Progressive: word → phrase → sentence |
+| `conjugation` verbs | 2 | **2–3** | Verbs from THIS lesson, 3+ forms each |
+| `truefalse` statements | 5 | **6** | Mix true/false, grammar rules |
+| `dictation` sentences | 5 | **6** | Progressive length: 3–8 words |
+| `categorysort` categories | 2 | **3** | Pedagogically meaningful grouping |
+| `translation` sentences | 4 | **5** | SK→DE, THIS lesson's grammar |
+
+**AI BIAS WARNING:** AI agents consistently choose the LOWEST number in any range. **Always aim for the Target column, not the Minimum.** The minimum is a hard floor only.
+
+**Recycling rule:** When exercises include recycled vocabulary from previous lessons, this ADDS to the total — it does NOT replace new-vocabulary items. If the minimum is 8 match pairs and you recycle 2 from earlier lessons, produce 10 pairs total (8 new + 2 recycled).
 
 ### Use REAL PHRASES, not isolated words:
 - **Fill exercise**: Use complete, natural phrases from real-life situations — not bare grammar drills. "Ich möchte ___ Kaffee, bitte" is better than "Ich ___ Jana."
@@ -704,6 +907,65 @@ After writing all 8 exercises for a lesson, review them as a set:
 - All options being completely unrelated to the text — BAD (e.g., "Berlin, Tokyo, Mars, Atlantis" for a question about Vienna)
 - Same question structure repeated across exercises — BAD (e.g., "Was macht Jana?" in both MCQ and minitext)
 - Placeholder or template-quality content — UNACCEPTABLE
+
+---
+
+## RULE 18 — GRAMMAR NOTE FORMATTING AND STRUCTURE
+
+**This rule exists because grammar explanations were rendered as dense, unformatted plaintext paragraphs — mixing multiple topics together, making them nearly unreadable for learners.**
+
+### Structural rules:
+1. **Use `grammarNotes` (array)** instead of `grammarNote` (singular object). Each distinct grammar topic gets its OWN entry in the array.
+   - BAD: One `grammarNote` covering "heißen + sein + German alphabet" — three unrelated topics jumbled together
+   - GOOD: `grammarNotes` array with 3 separate objects: one for `sein`, one for `heißen`, one for the alphabet
+2. **Maximum 1 concept per grammar note**. If a lesson covers verb conjugation AND a preposition AND a question form, that's 3 separate `grammarNotes` entries.
+3. **The component shows "Teória (1/3)", "Teória (2/3)" etc.** — students see clear progression through grammar blocks.
+
+### HTML formatting rules (explanation field):
+The `explanation` field supports HTML and is rendered via `dangerouslySetInnerHTML`. **USE formatting liberally:**
+
+| Element | Use for | Example |
+|---|---|---|
+| `<p>` | Paragraph breaks | Separate ideas into paragraphs |
+| `<strong>` / `<b>` | Key terms, German words | `<strong>sprechen</strong>` |
+| `<em>` / `<i>` | Linguistic terms, emphasis | `<em>silné sloveso</em>` |
+| `<table>` | Conjugation tables, declensions, comparisons | Always use for verb forms! |
+| `<ul>` / `<ol>` | Lists of rules, step-by-step | Use for enumerated rules |
+| `<h4>` | Sub-sections within one grammar note | `<h4>Výnimky:</h4>` |
+| `<div class="tip-box">` | Learning tips, mnemonics | 💡 Tip boxes |
+| `<div class="warn-box">` | Common mistakes, exceptions | ⚠️ Warning boxes |
+
+### Mandatory formatting patterns:
+- **Every verb conjugation MUST use a `<table>`** with columns: Osoba / Tvar / Príklad
+- **Every comparison (SK vs DE) MUST use a `<table>`** with columns: Slovensky / Nemecky / Doslova
+- **Every "pozor" (warning) MUST use `<div class="warn-box">`** 
+- **Every tip MUST use `<div class="tip-box">`**
+- **Plain text blocks longer than 3 sentences MUST be broken into `<p>` elements**
+
+### Example of well-formatted explanation:
+```html
+<p>Sloveso <strong>„sprechen"</strong> patrí medzi <em>silné slovesá</em> — mení kmeňovú samohlásku:</p>
+<table><thead><tr><th>Osoba</th><th>Tvar</th><th>Príklad</th></tr></thead><tbody>
+<tr><td>ich</td><td>sprech<strong>e</strong></td><td>Ich spreche Slowakisch.</td></tr>
+<tr><td>du</td><td>spr<strong>i</strong>chst</td><td>Du sprichst Deutsch.</td></tr>
+</tbody></table>
+<div class="warn-box">⚠️ <strong>Pozor:</strong> Zmena e→i platí len pre du a er/sie/es!</div>
+```
+
+### Updated grammarNotes schema:
+```js
+grammarNotes: [    // REQUIRED. Array of 1–4 grammar note objects.
+  {
+    rule: string,              // REQUIRED. Short title of ONE grammar concept.
+    explanation: string,       // REQUIRED. HTML-formatted explanation (see formatting rules above).
+    examples: [                // REQUIRED. 3–5 examples per note.
+      { de: string, sk: string, note?: string }
+    ],
+    slovakContrastNote: string, // REQUIRED. How this rule differs from Slovak.
+  }
+]
+```
+**The old `grammarNote` (singular) format is still supported by components but SHOULD NOT be used for new/updated lessons.**
 
 ---
 
@@ -800,9 +1062,11 @@ C:\Users\USER\Documents\GERMAN\
 - [ ] MCQ `answer` is a 0-based INTEGER index
 - [ ] All `explanation` fields in MCQ, Fill, WordOrder are non-empty strings
 - [ ] `grammarNote.explanation` is a full paragraph
+- [ ] **Grammar uses `grammarNotes` (array)** — one topic per entry, HTML-formatted (RULE 18)
+- [ ] **Grammar explanation uses `<table>` for conjugations**, `<div class="tip-box">` for tips, `<div class="warn-box">` for warnings (RULE 18)
 - [ ] No Perfekt/Präteritum in L01–L10 example sentences
 - [ ] All German text uses straight single quotes, not smart quotes
-- [ ] Lesson has all 8 required exercise types: flashcard, match, wordorder, fill, listen, mcq, minitext, speaking
+- [ ] Lesson has all 13 required exercise types: flashcard, match, wordorder, fill, listen, mcq, minitext, speaking, conjugation, truefalse, dictation, categorysort, translation
 - [ ] `wordorder.sentences[]` targets THIS lesson's grammarNote.rule (not random vocab)
 - [ ] `minitext.text` is max 80 words, A1 grammar level, uses lesson vocabulary
 - [ ] `minitext.questions[].answer` is a 0-based integer index

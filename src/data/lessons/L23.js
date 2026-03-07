@@ -1,453 +1,864 @@
-﻿export const lesson23 = {
+export const lesson23 = {
   id: 23,
   week: 5,
   day: 3,
-  title: "Wegbeschreibung — Wo ist...?",
-  topic: "Popis cesty — Kde je...?",
+  title: "Wie oft? Oft, manchmal, nie!",
+  topic: "Vyjadrovanie frekvencie (oft, immer, nie) a nepravidelné slovesá s prehláskou (lesen, treffen, fahren).",
   cefr: "A1",
-  xpReward: 25,
-  narrativeContext:
-    "Jana putuje sama po Viedni. Hľadá staré námestie, poštu, banku. Pýta sa na cestu a dostáva rôzne odpovede — niektoré jednoduché, niektoré komplikované! Učí sa pomenovať miesta v meste a opísať ich polohu.",
-  communicativeGoal:
-    "Po tejto lekcii viem opísať a pochopiť cestu v meste, poznám základné miesta vo Viedni a použijem správne predložky smeru a polohy.",
-  skillFocus: ["vocabulary", "grammar", "listening", "speaking"],
-
-  grammarNote: {
-    rule: "Predložky miesta + datív (náhľad): gegenüber, neben, zwischen",
-    explanation:
-      "Predložky polohy gegenüber von, neben a zwischen vyžadujú datívny pád. Základná zmena: der (M) → dem, das (N) → dem, die (F) → der. Príklady: ‚neben dem Supermarkt' (M), ‚zwischen dem Café und der Bank' (M a F). Datív bude podrobne vysvetlený v L25 — zatiaľ sa uč tieto výrazy ako celky.",
-    examples: [
-      { de: "Die Bank ist gegenüber der Post.", sk: "Banka je oproti pošte." },
-      { de: "Das Café ist neben dem Supermarkt.", sk: "Kaviareň je vedľa supermarketu." },
-      { de: "Die Apotheke ist zwischen dem Café und der Bank.", sk: "Lekáreň je medzi kaviarňou a bankou." },
-      { de: "Das Museum ist im Zentrum.", sk: "Múzeum je v centre." },
-      { de: "Die Kirche ist um die Ecke.", sk: "Kostol je za rohom." }
-    ],
-    slovakContrastNote:
-      "Slovenčina používa ‚v + lokál' pri vyjadrení miesta (v meste, v centre). Nemčina používa ‚in der Stadt', ‚im Zentrum' (in + datív). Ženský rod v datíve vyzerá ako mužský rod v nominatíve (‚der'): ‚neben der Bank' — tu ‚der' = datív ženského rodu, nie nominatív mužského! Toto je typický zdroj zmätenia — datív bude detailne v L25."
-  },
-
+  xpReward: 20,
+  narrativeContext: "Jana ist in Wien. Sie ist oft im Prater und macht Sport. Heute trifft sie Petra.",
+  communicativeGoal: "Nach dieser Lektion kann ich sagen, wie oft ich etwas mache, und ich kann die Verben 'lesen', 'treffen' und 'fahren' richtig konjugieren.",
+  skillFocus: [
+    "vocabulary",
+    "grammar",
+    "speaking",
+    "listening"
+  ],
+  lessonNotes: "V tejto lekcii sa naučíš, ako vyjadriť, ako často niečo robíš, pomocou slovíčok ako 'oft', 'manchmal' a 'nie'. Pozrieme sa aj na špeciálne slovesá ako 'lesen', 'treffen' a 'fahren', ktoré menia svoj kmeň. Jana a Petra ti ukážu, ako to funguje v bežnej konverzácii v Pratri.",
+  grammarNotes: [
+    {
+      rule: "Adverbien der Häufigkeit (oft, immer, nie)",
+      explanation: "<p>Na vyjadrenie frekvencie, teda ako často sa niečo deje, používame v nemčine príslovky frekvencie (Adverbien der Häufigkeit). Medzi najčastejšie patria <strong>immer</strong> (vždy), <strong>oft</strong> (často), <strong>manchmal</strong> (niekedy), <strong>selten</strong> (zriedka) a <strong>nie</strong> (nikdy). Tieto príslovky sa zvyčajne umiestňujú vo vete za sloveso, ak je sloveso jediné, alebo za modálne sloveso a pred hlavné sloveso, ak je vo vete modálne sloveso. Ak je vo vete predmet, príslovka frekvencie často stojí pred ním, ale za slovesom.</p>",
+      examples: [
+        {
+          de: "Ich spiele oft Tennis.",
+          sk: "Často hrám tenis."
+        },
+        {
+          de: "Er liest immer Bücher.",
+          sk: "On vždy číta knihy."
+        },
+        {
+          de: "Wir fahren nie Ski.",
+          sk: "Nikdy nelyžujeme."
+        },
+        {
+          de: "Sie geht manchmal ins Kino.",
+          sk: "Ona niekedy chodí do kina."
+        },
+        {
+          de: "Fährst du oft Rad?",
+          sk: "Jazdíš často na bicykli?"
+        },
+        {
+          de: "Ich muss oft lernen.",
+          sk: "Musím sa často učiť."
+        }
+      ],
+      slovakContrastNote: "<p>V slovenčine je umiestnenie prísloviek frekvencie pomerne flexibilné a môžu stáť na začiatku vety, pred slovesom alebo za ním. V nemčine je ich pozícia viac štandardizovaná, najčastejšie za slovesom alebo za modálnym slovesom a pred hlavným slovesom.</p>"
+    },
+    {
+      rule: "Nepravidelné slovesá s prehláskou (a → ä, e → i/ie)",
+      explanation: "<p>V nemčine existujú nepravidelné (silné) slovesá, ktoré menia samohlásku v kmeni slovesa v 2. a 3. osobe jednotného čísla (du, er/sie/es) v prítomnom čase (Präsens). Tento jav sa nazýva prehláska (Umlaut) alebo zmena kmeňovej samohlásky (Vokalwechsel). Najčastejšie zmeny sú z <strong>a</strong> na <strong>ä</strong> (napr. <em>fahren</em>), z <strong>e</strong> na <strong>i</strong> (napr. <em>treffen</em>) alebo z <strong>e</strong> na <strong>ie</strong> (napr. <em>lesen</em>). Pri ostatných osobách (ich, wir, ihr, sie/Sie) zostáva kmeňová samohláska nezmenená. Je dôležité si tieto slovesá zapamätať, pretože sú veľmi časté.</p><div class=\"tip-box\"><p><strong>Príklady zmien:</strong></p><ul><li><strong>a → ä:</strong> <em>fahren</em> (ja jazdím) → <em>du fährst</em> (ty jazdíš), <em>er fährt</em> (on jazdí)</li><li><strong>e → i:</strong> <em>treffen</em> (stretnúť) → <em>du triffst</em> (ty stretávaš), <em>er trifft</em> (on stretáva)</li><li><strong>e → ie:</em> <em>lesen</em> (čítať) → <em>du liest</em> (ty čítaš), <em>er liest</em> (on číta)</li></ul></div><p>Pozrite si tabuľky časovania pre slovesá <em>fahren</em>, <em>treffen</em> a <em>lesen</em>:</p><table><thead><tr><th>Osoba</th><th>fahren (jazdiť)</th><th>treffen (stretnúť)</th><th>lesen (čítať)</th></tr></thead><tbody><tr><td>ich</td><td>fahre</td><td>treffe</td><td>lese</td></tr><tr><td>du</td><td><strong>fährst</strong></td><td><strong>triffst</strong></td><td><strong>liest</strong></td></tr><tr><td>er/sie/es</td><td><strong>fährt</strong></td><td><strong>trifft</strong></td><td><strong>liest</strong></td></tr><tr><td>wir</td><td>fahren</td><td>treffen</td><td>lesen</td></tr><tr><td>ihr</td><td>fahrt</td><td>trefft</td><td>lest</td></tr><tr><td>sie/Sie</td><td>fahren</td><td>treffen</td><td>lesen</td></tr></tbody></table>",
+      examples: [
+        {
+          de: "Ich fahre oft Rad.",
+          sk: "Často jazdím na bicykli."
+        },
+        {
+          de: "Fährst du gern Auto?",
+          sk: "Jazdíš rád autom?"
+        },
+        {
+          de: "Er fährt schnell.",
+          sk: "On jazdí rýchlo."
+        },
+        {
+          de: "Wir treffen uns am Samstag.",
+          sk: "Stretávame sa v sobotu."
+        },
+        {
+          de: "Triffst du deine Freunde?",
+          sk: "Stretávaš svojich priateľov?"
+        },
+        {
+          de: "Sie liest gern Bücher.",
+          sk: "Ona rada číta knihy."
+        },
+        {
+          de: "Lest ihr die Zeitung?",
+          sk: "Čítate noviny?"
+        }
+      ],
+      slovakContrastNote: "<p>V slovenčine sa pri časovaní slovies kmeňová samohláska nemení v závislosti od osoby. Zmeny nastávajú len v koncovkách. Toto je kľúčový rozdiel, na ktorý si treba dávať pozor pri učení sa nemeckých nepravidelných slovies.</p>"
+    }
+  ],
   vocab: [
-    {
-      de: "das Stadtzentrum / die Innenstadt",
-      sk: "centrum mesta",
-      example: "Das Stadtzentrum ist sehr schön.",
-      exampleSk: "Centrum mesta je veľmi krásne.",
-      gender: "N",
-      srsId: "L23_V01",
-      recycledFrom: []
-    },
-    {
-      de: "der Marktplatz",
-      sk: "trhovisko / námestie",
-      example: "Der Marktplatz ist in der Nähe.",
-      exampleSk: "Trhovisko je blízko.",
-      gender: "M",
-      srsId: "L23_V02",
-      recycledFrom: []
-    },
-    {
-      de: "die Post",
-      sk: "pošta",
-      example: "Die Post öffnet um 8 Uhr.",
-      exampleSk: "Pošta otvára o 8:00.",
-      gender: "F",
-      srsId: "L23_V03",
-      recycledFrom: []
-    },
-    {
-      de: "die Bank",
-      sk: "banka",
-      example: "Die Bank ist gegenüber der Post.",
-      exampleSk: "Banka je oproti pošte.",
-      gender: "F",
-      srsId: "L23_V04",
-      recycledFrom: []
-    },
-    {
-      de: "das Krankenhaus",
-      sk: "nemocnica",
-      example: "Das Krankenhaus ist weit.",
-      exampleSk: "Nemocnica je ďaleko.",
-      gender: "N",
-      srsId: "L23_V05",
-      recycledFrom: []
-    },
-    {
-      de: "die Apotheke",
-      sk: "lekáreň",
-      example: "Die Apotheke ist um die Ecke.",
-      exampleSk: "Lekáreň je za rohom.",
-      gender: "F",
-      srsId: "L23_V06",
-      recycledFrom: []
-    },
-    {
-      de: "der Supermarkt",
-      sk: "supermarket",
-      example: "Der Supermarkt ist neben der Post.",
-      exampleSk: "Supermarket je vedľa pošty.",
-      gender: "M",
-      srsId: "L23_V07",
-      recycledFrom: [6]
-    },
-    {
-      de: "das Museum",
-      sk: "múzeum",
-      example: "Das Museum ist im Zentrum.",
-      exampleSk: "Múzeum je v centre.",
-      gender: "N",
-      srsId: "L23_V08",
-      recycledFrom: []
-    },
-    {
-      de: "die Kirche",
-      sk: "kostol",
-      example: "Die Kirche ist sehr alt.",
-      exampleSk: "Kostol je veľmi starý.",
-      gender: "F",
-      srsId: "L23_V09",
-      recycledFrom: []
-    },
-    {
-      de: "gegenüber (+Dativ)",
-      sk: "oproti",
-      example: "Die Bank ist gegenüber dem Hotel.",
-      exampleSk: "Banka je oproti hotelu.",
-      gender: null,
-      srsId: "L23_V10",
-      recycledFrom: []
-    },
-    {
-      de: "neben (+Dativ)",
-      sk: "vedľa",
-      example: "Das Café ist neben der Bank.",
-      exampleSk: "Kaviareň je vedľa banky.",
-      gender: null,
-      srsId: "L23_V11",
-      recycledFrom: []
-    },
-    {
-      de: "zwischen (+Dativ)",
-      sk: "medzi",
-      example: "Die Apotheke ist zwischen dem Café und der Bank.",
-      exampleSk: "Lekáreň je medzi kaviarňou a bankou.",
-      gender: null,
-      srsId: "L23_V12",
-      recycledFrom: []
-    },
-    {
-      de: "die Minute",
-      sk: "minúta",
-      example: "Fünf Minuten zu Fuß.",
-      exampleSk: "Päť minút pešo.",
-      gender: "F",
-      srsId: "L23_V13",
-      recycledFrom: []
-    },
-    {
-      de: "zu Fuß",
-      sk: "pešo",
-      example: "Ich gehe zu Fuß.",
-      exampleSk: "Chodím pešo.",
-      gender: null,
-      srsId: "L23_V14",
-      recycledFrom: []
-    },
-    {
-      de: "geradeaus gehen",
-      sk: "ísť rovno",
-      example: "Gehen Sie 200 Meter geradeaus.",
-      exampleSk: "Choďte 200 metrov rovno.",
-      gender: null,
-      srsId: "L23_V15",
-      recycledFrom: []
-    },
-    {
-      de: "das Hotel",
-      sk: "hotel",
-      example: "Das Hotel ist am Marktplatz.",
-      exampleSk: "Hotel je na námestí.",
-      gender: "N",
-      srsId: "L23_V16",
-      recycledFrom: []
-    },
     {
       de: "der Park",
       sk: "park",
-      example: "Der Park ist neben dem Museum.",
-      exampleSk: "Park je vedľa múzea.",
       gender: "M",
-      srsId: "L23_V17",
+      srsId: "L23_V01",
+      example: "Im Park kann man gut laufen.",
+      exampleSk: "V parku sa dá dobre behať.",
       recycledFrom: []
     },
     {
-      de: "die Haltestelle",
-      sk: "zastávka",
-      example: "Die Haltestelle ist 3 Minuten entfernt.",
-      exampleSk: "Zastávka je 3 minúty odtiaľto.",
+      de: "die Woche",
+      sk: "týždeň",
       gender: "F",
+      srsId: "L23_V02",
+      example: "Eine Woche hat sieben Tage.",
+      exampleSk: "Týždeň má sedem dní.",
+      recycledFrom: []
+    },
+    {
+      de: "der Tag",
+      sk: "deň",
+      gender: "M",
+      srsId: "L23_V03",
+      example: "Jeden Tag lerne ich Deutsch.",
+      exampleSk: "Každý deň sa učím nemčinu.",
+      recycledFrom: []
+    },
+    {
+      de: "der Sportplatz",
+      sk: "športovisko",
+      gender: "M",
+      srsId: "L23_V04",
+      example: "Der Sportplatz ist groß.",
+      exampleSk: "Športovisko je veľké.",
+      recycledFrom: []
+    },
+    {
+      de: "die Bewegung",
+      sk: "pohyb",
+      gender: "F",
+      srsId: "L23_V05",
+      example: "Bewegung ist wichtig für die Gesundheit.",
+      exampleSk: "Pohyb je dôležitý pre zdravie.",
+      recycledFrom: []
+    },
+    {
+      de: "die Gesundheit",
+      sk: "zdravie",
+      gender: "F",
+      srsId: "L23_V06",
+      example: "Deine Gesundheit ist wichtig.",
+      exampleSk: "Tvoje zdravie je dôležité.",
+      recycledFrom: []
+    },
+    {
+      de: "die Zeit",
+      sk: "čas",
+      gender: "F",
+      srsId: "L23_V07",
+      example: "Ich habe heute keine Zeit.",
+      exampleSk: "Dnes nemám čas.",
+      recycledFrom: []
+    },
+    {
+      de: "die Familie",
+      sk: "rodina",
+      gender: "F",
+      srsId: "L23_V08",
+      example: "Meine Familie wohnt in Bratislava.",
+      exampleSk: "Moja rodina býva v Bratislave.",
+      recycledFrom: []
+    },
+    {
+      de: "laufen",
+      sk: "bežať, chodiť",
+      gender: null,
+      srsId: "L23_V09",
+      example: "Er läuft sehr schnell.",
+      exampleSk: "On beží veľmi rýchlo.",
+      recycledFrom: []
+    },
+    {
+      de: "sprechen",
+      sk: "hovoriť",
+      gender: null,
+      srsId: "L23_V10",
+      example: "Sprichst du Deutsch?",
+      exampleSk: "Hovoríš po nemecky?",
+      recycledFrom: []
+    },
+    {
+      de: "sehen",
+      sk: "vidieť",
+      gender: null,
+      srsId: "L23_V11",
+      example: "Siehst du den Park?",
+      exampleSk: "Vidíš ten park?",
+      recycledFrom: []
+    },
+    {
+      de: "essen",
+      sk: "jesť",
+      gender: null,
+      srsId: "L23_V12",
+      example: "Was isst du heute?",
+      exampleSk: "Čo dnes ješ?",
+      recycledFrom: []
+    },
+    {
+      de: "schlafen",
+      sk: "spať",
+      gender: null,
+      srsId: "L23_V13",
+      example: "Er schläft lange.",
+      exampleSk: "On spí dlho.",
+      recycledFrom: []
+    },
+    {
+      de: "geben",
+      sk: "dať",
+      gender: null,
+      srsId: "L23_V14",
+      example: "Gibst du mir bitte einen Stift?",
+      exampleSk: "Dáš mi, prosím, ceruzku?",
+      recycledFrom: []
+    },
+    {
+      de: "selten",
+      sk: "zriedka",
+      gender: null,
+      srsId: "L23_V15",
+      example: "Ich esse selten Pizza.",
+      exampleSk: "Zriedka jem pizzu.",
+      recycledFrom: []
+    },
+    {
+      de: "immer",
+      sk: "vždy",
+      gender: null,
+      srsId: "L23_V16",
+      example: "Er ist immer nett.",
+      exampleSk: "On je vždy milý.",
+      recycledFrom: []
+    },
+    {
+      de: "gesund",
+      sk: "zdravý",
+      gender: null,
+      srsId: "L23_V17",
+      example: "Das Essen ist gesund.",
+      exampleSk: "Jedlo je zdravé.",
+      recycledFrom: []
+    },
+    {
+      de: "wichtig",
+      sk: "dôležitý",
+      gender: null,
       srsId: "L23_V18",
+      example: "Das ist sehr wichtig.",
+      exampleSk: "To je veľmi dôležité.",
+      recycledFrom: []
+    },
+    {
+      de: "früh",
+      sk: "skoro",
+      gender: null,
+      srsId: "L23_V19",
+      example: "Ich komme früh.",
+      exampleSk: "Prídem skoro.",
+      recycledFrom: []
+    },
+    {
+      de: "spät",
+      sk: "neskoro",
+      gender: null,
+      srsId: "L23_V20",
+      example: "Du kommst spät.",
+      exampleSk: "Prídeš neskoro.",
+      recycledFrom: []
+    },
+    {
+      de: "zu Hause",
+      sk: "doma",
+      gender: null,
+      srsId: "L23_V21",
+      example: "Ich bin jetzt zu Hause.",
+      exampleSk: "Som teraz doma.",
+      recycledFrom: []
+    },
+    {
+      de: "jeden Tag",
+      sk: "každý deň",
+      gender: null,
+      srsId: "L23_V22",
+      example: "Ich lerne jeden Tag.",
+      exampleSk: "Učím sa každý deň.",
+      recycledFrom: []
+    },
+    {
+      de: "Wie oft?",
+      sk: "Ako často?",
+      gender: null,
+      srsId: "L23_V23",
+      example: "Wie oft läufst du?",
+      exampleSk: "Ako často beháš?",
       recycledFrom: []
     }
   ],
-
   exercises: [
     {
       type: "flashcard",
-      instruction: "Prezri si slovíčka — miesta v meste a predložky polohy.",
-      items: [
-        "das Stadtzentrum = centrum mesta",
-        "der Marktplatz = trhovisko / námestie",
-        "die Post = pošta",
-        "die Bank = banka",
-        "das Krankenhaus = nemocnica",
-        "die Apotheke = lekáreň",
-        "der Supermarkt = supermarket",
-        "das Museum = múzeum",
-        "die Kirche = kostol",
-        "gegenüber (+Dativ) = oproti",
-        "neben (+Dativ) = vedľa",
-        "zwischen (+Dativ) = medzi",
-        "die Minute = minúta",
-        "zu Fuß = pešo",
-        "das Hotel = hotel",
-        "der Park = park",
-        "die Haltestelle = zastávka"
+      instruction: "Prezri si slovíčka tejto lekcie. Klikni na kartičku pre preklad."
+    },
+    {
+      type: "match",
+      instruction: "Priraďte nemecké slová k ich slovenským prekladom.",
+      pairs: [
+        [
+          "der Park",
+          "park"
+        ],
+        [
+          "die Woche",
+          "týždeň"
+        ],
+        [
+          "laufen",
+          "bežať, chodiť"
+        ],
+        [
+          "immer",
+          "vždy"
+        ],
+        [
+          "selten",
+          "zriedka"
+        ],
+        [
+          "gesund",
+          "zdravý"
+        ],
+        [
+          "die Zeit",
+          "čas"
+        ],
+        [
+          "sprechen",
+          "hovoriť"
+        ],
+        [
+          "jeden Tag",
+          "každý deň"
+        ],
+        [
+          "zu Hause",
+          "doma"
+        ]
       ]
     },
     {
-      type: "mcq",
-      instruction: "Vyber správnu odpoveď.",
-      questions: [
+      type: "wordorder",
+      instruction: "Usporiadajte slová tak, aby ste vytvorili správne nemecké vety.",
+      sentences: [
         {
-          question: "Jana hovorí: ‚Die Apotheke ist ___ der Post.' (oproti pošte) Čo patrí do medzery?",
-          options: ["neben", "zwischen", "gegenüber", "hinter"],
-          answer: "gegenüber",
-          explanation: "‚Gegenüber' = oproti. ‚Die Apotheke ist gegenüber der Post.' — predložky miesta gegenüber, neben, zwischen sú nasledované datívom."
-        },
-        {
-          question: "Čo znamená ‚zu Fuß gehen'?",
-          options: ["Cestovať autobusom", "Ísť pešo", "Ísť bicyklom", "Cestovať metrom"],
-          answer: "Ísť pešo",
-          explanation: "‚Zu Fuß gehen' = ísť pešo. ‚Fuß' = noha/chodidlo. ‚Ich gehe zu Fuß.' = Chodím pešo."
-        },
-        {
-          question: "Kde je múzeum? ‚Das Museum ist ___ Zentrum.'",
-          options: ["in die", "im", "beim", "nach dem"],
-          answer: "im",
-          explanation: "‚Im Zentrum' = v centre. ‚Im' je sťahovanie ‚in + dem'. ‚Das Museum ist im Zentrum.'"
-        },
-        {
-          question: "Jana hovorí: ‚Das Café ist ___ dem Supermarkt und ___ Bank.' (medzi) Čo patrí na prvé miesto?",
-          options: ["gegenüber", "neben", "zwischen", "hinter"],
-          answer: "zwischen",
-          explanation: "‚Zwischen' = medzi. Pri použití ‚zwischen' nasleduje datív: ‚zwischen dem Supermarkt und der Bank'."
-        },
-        {
-          question: "Ako sa povie ‚Kostol je vedľa parku'?",
-          options: [
-            "Die Kirche ist gegenüber dem Park.",
-            "Die Kirche ist neben dem Park.",
-            "Die Kirche ist zwischen dem Park.",
-            "Die Kirche ist hinter dem Park."
+          words: [
+            "oft",
+            "du",
+            "Park",
+            "im",
+            "läufst"
           ],
-          answer: "Die Kirche ist neben dem Park.",
-          explanation: "‚Neben' = vedľa. ‚Neben dem Park' — ‚der Park' → ‚dem Park' (datív, mužský rod)."
+          correct: "Läufst du oft im Park",
+          hint: "Beháš často v parku?",
+          explanation: "Sloveso „laufen“ (bežať) je nepravidelné a v 2. osobe jednotného čísla (du) sa mení na „läufst“. Príslovka frekvencie „oft“ (často) stojí zvyčajne za slovesom alebo podmetom."
+        },
+        {
+          words: [
+            "liest",
+            "Sie",
+            "immer",
+            "ein",
+            "Buch"
+          ],
+          correct: "Sie liest immer ein Buch",
+          hint: "Ona vždy číta knihu.",
+          explanation: "Sloveso „lesen“ (čítať) je nepravidelné a v 3. osobe jednotného čísla (sie) sa mení na „liest“. Príslovka frekvencie „immer“ (vždy) stojí zvyčajne za slovesom alebo podmetom."
+        },
+        {
+          words: [
+            "nie",
+            "isst",
+            "er",
+            "Fleisch"
+          ],
+          correct: "Er isst nie Fleisch",
+          hint: "On nikdy neje mäso.",
+          explanation: "Sloveso „essen“ (jesť) je nepravidelné a v 3. osobe jednotného čísla (er) sa mení na „isst“. Príslovka frekvencie „nie“ (nikdy) stojí zvyčajne za slovesom alebo podmetom."
+        },
+        {
+          words: [
+            "jeden",
+            "Tag",
+            "wir",
+            "Sport",
+            "machen"
+          ],
+          correct: "Wir machen jeden Tag Sport",
+          hint: "Každý deň športujeme.",
+          explanation: "Výraz „jeden Tag“ (každý deň) je príslovkové určenie frekvencie. Sloveso „machen“ je pravidelné. Veta má štandardný slovosled: podmet, sloveso, príslovkové určenie, predmet."
+        },
+        {
+          words: [
+            "siehst",
+            "du",
+            "oft",
+            "Freunde",
+            "deine"
+          ],
+          correct: "Siehst du oft deine Freunde",
+          hint: "Vidíš často svojich priateľov?",
+          explanation: "Sloveso „sehen“ (vidieť) je nepravidelné a v 2. osobe jednotného čísla (du) sa mení na „siehst“. Príslovka frekvencie „oft“ (často) stojí zvyčajne za slovesom alebo podmetom. „Deine Freunde“ je predmet v akuzatíve."
         }
       ]
     },
     {
       type: "fill",
-      instruction: "Doplň správne slovo alebo tvar do medzery ___.",
+      instruction: "Doplňte správne slovo do medzery.",
       questions: [
         {
-          sentence: "Die Bank ist ___ der Post. (oproti)",
-          answer: "gegenüber",
-          hint: "Predložka pre polohu oproti niečomu",
-          explanation: "‚Gegenüber' = oproti. Nasleduje datív: ‚gegenüber der Post' (die Post → der Post, datív ženského rodu)."
+          sentence: "Wie oft ___ du Sport?",
+          answer: "machst",
+          hint: "Ako často športuješ?",
+          explanation: "Sloveso „machen“ (robiť) je pravidelné. Pre 2. osobu jednotného čísla „du“ má koncovku „-st“, teda „machst“."
         },
         {
-          sentence: "Das Museum ist ___ dem Park. (vedľa)",
-          answer: "neben",
-          hint: "Predložka pre polohu vedľa niečoho",
-          explanation: "‚Neben' = vedľa. ‚Neben dem Park' — park je mužského rodu, datív: der Park → dem Park."
+          sentence: "Er ___ selten Fleisch.",
+          answer: "isst",
+          hint: "On zriedka je mäso.",
+          explanation: "Sloveso „essen“ (jesť) je nepravidelné a v 3. osobe jednotného čísla (er/sie/es) mení samohlásku „e“ na „i“, teda „isst“."
         },
         {
-          sentence: "Die Haltestelle ist fünf Minuten ___ Fuß entfernt.",
-          answer: "zu",
-          hint: "Výraz pre pešiu vzdialenosť",
-          explanation: "‚Zu Fuß' = pešo. ‚Fünf Minuten zu Fuß entfernt' = päť minút pešo odtiaľto."
+          sentence: "Ich ___ immer früh auf.",
+          answer: "stehe",
+          hint: "Vždy vstávam skoro.",
+          explanation: "Sloveso „stehen“ (stáť/vstávať) je pravidelné. Pre 1. osobu jednotného čísla „ich“ má koncovku „-e“, teda „stehe“. „Immer“ je príslovka frekvencie."
         },
         {
-          sentence: "Das Rathaus ist ___ Stadtzentrum.",
-          answer: "im",
-          hint: "in + dem (sťahovanie) = ???",
-          explanation: "‚Im' = in + dem. ‚Im Stadtzentrum' = v centre mesta."
+          sentence: "___ du Deutsch?",
+          answer: "Sprichst",
+          hint: "Hovoríš po nemecky?",
+          explanation: "Sloveso „sprechen“ (hovoriť) je nepravidelné a v 2. osobe jednotného čísla (du) mení samohlásku „e“ na „i“, teda „sprichst“."
         },
         {
-          sentence: "Die Apotheke ist ___ der Kirche und dem Supermarkt. (medzi)",
-          answer: "zwischen",
-          hint: "Predložka pre polohu ‚medzi' dvoma miestami",
-          explanation: "‚Zwischen' = medzi. Nasleduje datív oboch substantív: ‚zwischen der Kirche und dem Supermarkt'."
+          sentence: "Wir ___ oft unsere Freunde.",
+          answer: "sehen",
+          hint: "Často vidíme našich priateľov.",
+          explanation: "Sloveso „sehen“ (vidieť) je nepravidelné, ale v 1. osobe množného čísla (wir) má štandardnú infinitívnu formu „sehen“."
+        },
+        {
+          sentence: "Ich ___ gut schwimmen.",
+          answer: "kann",
+          hint: "Vieme dobre plávať.",
+          explanation: "Modálne sloveso „können“ (vedieť/môcť) sa pre 1. osobu jednotného čísla (ich) časuje ako „kann“. Infinitív „schwimmen“ ide na koniec vety (Satzklammer)."
+        },
+        {
+          sentence: "Hast du ___ Computer?",
+          answer: "einen",
+          hint: "Máš počítač?",
+          explanation: "Podstatné meno „Computer“ je mužského rodu (der Computer). V akuzatíve pre neurčitý člen sa „ein“ mení na „einen“."
         }
       ]
     },
     {
       type: "listen",
-      instruction: "Počúvaj vety o polohe miest a nájdi ich slovenský preklad.",
+      instruction: "Vypočujte si nemecké slovo alebo vetu a vyberte správny slovenský preklad.",
       questions: [
-        { de: "Die Bank ist gegenüber der Post.", sk: "Banka je oproti pošte." },
-        { de: "Das Café ist neben dem Supermarkt.", sk: "Kaviareň je vedľa supermarketu." },
-        { de: "Die Apotheke ist zwischen dem Café und der Bank.", sk: "Lekáreň je medzi kaviarňou a bankou." },
-        { de: "Das Museum ist im Stadtzentrum.", sk: "Múzeum je v centre mesta." },
-        { de: "Die Haltestelle ist drei Minuten zu Fuß entfernt.", sk: "Zastávka je tri minúty pešo odtiaľto." },
-        { de: "Das Krankenhaus ist weit vom Zentrum.", sk: "Nemocnica je ďaleko od centra." },
-        { de: "Die Kirche ist am Marktplatz.", sk: "Kostol je na námestí." }
+        {
+          de: "der Park",
+          sk: "park"
+        },
+        {
+          de: "die Woche",
+          sk: "týždeň"
+        },
+        {
+          de: "immer",
+          sk: "vždy"
+        },
+        {
+          de: "selten",
+          sk: "zriedka"
+        },
+        {
+          de: "laufen",
+          sk: "bežať, chodiť"
+        },
+        {
+          de: "gesund",
+          sk: "zdravý"
+        },
+        {
+          de: "jeden Tag",
+          sk: "každý deň"
+        },
+        {
+          de: "Wie oft siehst du deine Familie?",
+          sk: "Ako často vidíš svoju rodinu?"
+        }
       ]
     },
     {
-      type: "match",
-      instruction: "Spoj nemecké výrazy s ich slovenským prekladom.",
-      pairs: [
-        ["die Post", "pošta"],
-        ["das Krankenhaus", "nemocnica"],
-        ["die Apotheke", "lekáreň"],
-        ["gegenüber", "oproti"],
-        ["neben", "vedľa"],
-        ["zwischen", "medzi"],
-        ["zu Fuß", "pešo"],
-        ["die Haltestelle", "zastávka"]
-      ]
-    },
-    {
-      type: "dialogue",
-      instruction: "Prečítaj si dialóg, kde Jana hľadá najbližšiu lekáreň (Apotheke). Pocestný jej dáva detailný popis cesty cez námestie.",
-      lines: [
-        { speaker: "A", de: "Entschuldigung! Gibt es hier eine Apotheke in der Nähe?", sk: "Prepáčte! Je tu niekde blízko lekáreň?" },
-        { speaker: "B", de: "Ja, natürlich! Sie ist ganz in der Nähe.", sk: "Áno, samozrejme! Je úplne blízko." },
-        { speaker: "A", de: "Wie komme ich dorthin?", sk: "Ako sa tam dostanem?" },
-        { speaker: "B", de: "Gehen Sie diesen Weg geradeaus, bis zum Marktplatz.", sk: "Choďte touto cestou priamo, až na námestie." },
-        { speaker: "A", de: "Bis zum Marktplatz — okay.", sk: "Až na námestie — dobre." },
-        { speaker: "B", de: "Am Marktplatz sehen Sie eine große Kirche. Die Apotheke ist gegenüber der Kirche.", sk: "Na námestí uvidíte veľký kostol. Lekáreň je oproti kostolu." },
-        { speaker: "A", de: "Gegenüber der Kirche. Und neben der Apotheke — was ist das?", sk: "Oproti kostolu. A vedľa lekárne — čo je to?" },
-        { speaker: "B", de: "Neben der Apotheke ist eine Bank. Zwischen der Bank und der Apotheke ist ein kleines Café.", sk: "Vedľa lekárne je banka. Medzi bankou a lekárňou je malá kaviareň." },
-        { speaker: "A", de: "Perfekt! Und wie weit ist das zu Fuß?", sk: "Perfektné! A ako ďaleko je to pešo?" },
-        { speaker: "B", de: "Nur fünf Minuten zu Fuß. Das ist ganz leicht zu finden!", sk: "Len päť minút pešo. To sa nájde celkom ľahko!" }
-      ],
-      comprehensionQuestions: [
+      type: "mcq",
+      instruction: "Vyberte správnu odpoveď.",
+      questions: [
         {
-          question: "Kde sa nachádza lekáreň v porovnaní s kostolom?",
-          answer: "Lekáreň je oproti kostolu (gegenüber der Kirche).",
-          options: ["Vedľa kostola", "Oproti kostolu", "Za kostolom", "Pred kostolom"]
+          question: "Vyberte správnu formu slovesa „schlafen“ pre „du“:",
+          options: [
+            "schläfst",
+            "schlafst",
+            "schläft",
+            "schlaft"
+          ],
+          answer: 0,
+          explanation: "Sloveso „schlafen“ (spať) je nepravidelné. V 2. osobe jednotného čísla (du) mení samohlásku „a“ na „ä“ a má koncovku „-st“, teda „schläfst“."
         },
         {
-          question: "Čo je medzi bankou a lekárňou?",
-          answer: "Medzi bankou a lekárňou je malá kaviareň.",
-          options: ["Supermarket", "Park", "Malá kaviareň", "Pošta"]
+          question: "Ktoré slovo znamená „vždy“?",
+          options: [
+            "oft",
+            "nie",
+            "immer",
+            "selten"
+          ],
+          answer: 2,
+          explanation: "„Immer“ znamená „vždy“. „Oft“ je „často“, „nie“ je „nikdy“ a „selten“ je „zriedka“."
         },
         {
-          question: "Ako ďaleko je lekáreň pešo?",
-          answer: "Lekáreň je päť minút pešo odtiaľto.",
-          options: ["Dve minúty", "Päť minút", "Desať minút", "Jedna minúta"]
+          question: "Doplňte správne sloveso: „Er ___ einen Apfel.“",
+          options: [
+            "isst",
+            "esst",
+            "eßt",
+            "est"
+          ],
+          answer: 0,
+          explanation: "Sloveso „essen“ (jesť) je nepravidelné. V 3. osobe jednotného čísla (er/sie/es) mení samohlásku „e“ na „i“ a má koncovku „-t“, teda „isst“."
+        },
+        {
+          question: "Čo znamená „jeden Tag“?",
+          options: [
+            "každý týždeň",
+            "každý deň",
+            "niekedy",
+            "zriedka"
+          ],
+          answer: 1,
+          explanation: "„Jeden Tag“ znamená „každý deň“."
+        },
+        {
+          question: "Vyberte správnu vetu s modálnym slovesom „können“:",
+          options: [
+            "Ich kann gut Deutsch sprechen.",
+            "Ich spreche gut Deutsch kann.",
+            "Ich kann sprechen gut Deutsch.",
+            "Kann ich gut Deutsch sprechen."
+          ],
+          answer: 0,
+          explanation: "Modálne slovesá ako „können“ stoja na druhom mieste vo vete a plnovýznamové sloveso (infinitív) ide na koniec vety (Satzklammer). Správna štruktúra je „Podmet + modálne sloveso + ... + infinitív“."
+        },
+        {
+          question: "Ktorá veta je gramaticky správna?",
+          options: [
+            "Ich habe ein Auto.",
+            "Ich habe einen Auto.",
+            "Ich habe eine Auto.",
+            "Ich habe Auto."
+          ],
+          answer: 0,
+          explanation: "Podstatné meno „Auto“ je stredného rodu (das Auto). V akuzatíve pre neurčitý člen zostáva „ein“. „Ich habe ein Auto“ je správne."
+        },
+        {
+          question: "Ktoré slovo je opakom „spät“ (neskoro)?",
+          options: [
+            "oft",
+            "immer",
+            "früh",
+            "gesund"
+          ],
+          answer: 2,
+          explanation: "Opakom slova „spät“ (neskoro) je „früh“ (skoro). „Oft“ (často), „immer“ (vždy) a „gesund“ (zdravý) sú iné typy slov."
         }
       ]
     },
     {
       type: "minitext",
-      instruction: "Prečítaj si krátky turistický popis Janinej novej štvrte vo Viedni. Odpovedz na otázky.",
-      text:
-        "Janas Wohnung ist im siebten Bezirk von Wien. Das Viertel ist wunderschön! Gegenüber ihrer Wohnung ist ein großer Park. Neben dem Park gibt es eine alte Kirche. Die Apotheke ist zwischen der Post und dem Supermarkt — sehr praktisch! Das Stadtzentrum ist nur zehn Minuten zu Fuß entfernt. Jana findet ihr Viertel perfekt.",
-      textSk:
-        "Janin byt je v siedmom okrese Viedne. Štvrť je nádherná! Oproti jej bytu je veľký park. Vedľa parku je starý kostol. Lekáreň je medzi poštou a supermarketom — veľmi praktické! Centrum mesta je len desať minút pešo odtiaľto. Jana považuje svoju štvrť za dokonalú.",
+      instruction: "Lies den Dialog und beantworte die Fragen.",
+      text: "Jana: Hallo Petra! Was machst du hier im Prater?\nPetra: Hallo Jana! Ich mache einen Spaziergang. Ich bin oft hier.\nJana: Schön! Ich fahre oft Fahrrad, aber ich laufe nie. Bewegung ist wichtig für die Gesundheit.\nPetra: Ja, das stimmt. Ich treffe oft Freunde am Wochenende. Wir sprechen viel und essen manchmal Eis.\nJana: Und liest du auch Bücher?\nPetra: Manchmal. Ich lese selten zu Hause. Und du? Was macht deine Familie?\nJana: Meine Familie fährt am Wochenende oft in den Park. Wir sehen uns immer.",
+      textSk: "Jana: Ahoj Petra! Čo tu robíš v Pratri?\nPetra: Ahoj Jana! Idem sa prejsť. Som tu často.\nJana: Pekné! Často bicyklujem, ale nikdy nebehám. Pohyb je dôležitý pre zdravie.\nPetra: Áno, to je pravda. Často sa stretávam s priateľmi cez víkend. Veľa sa rozprávame a niekedy jeme zmrzlinu.\nJana: A čítaš aj knihy?\nPetra: Niekedy. Zriedka čítam doma. A ty? Čo robí tvoja rodina?\nJana: Moja rodina chodí cez víkend často do parku. Vždy sa vidíme.",
       questions: [
         {
-          question: "Čo je oproti Janinho bytu?",
-          answer: "Oproti jej bytu je veľký park.",
-          options: ["Kostol", "Supermarket", "Veľký park", "Pošta"]
+          question: "Was macht Jana oft?",
+          options: [
+            "Sie läuft.",
+            "Sie liest Bücher.",
+            "Sie fährt Fahrrad.",
+            "Sie trifft Freunde."
+          ],
+          answer: 2,
+          explanation: "Jana sagt: \"Ich fahre oft Fahrrad.\""
         },
         {
-          question: "Kde sa nachádza lekáreň?",
-          answer: "Lekáreň je medzi poštou a supermarketom.",
-          options: ["Vedľa parku", "Medzi poštou a supermarketom", "Oproti kostolu", "V parku"]
+          question: "Was macht Petra selten?",
+          options: [
+            "Sie trifft Freunde.",
+            "Sie liest zu Hause.",
+            "Sie macht einen Spaziergang.",
+            "Sie isst Eis."
+          ],
+          answer: 1,
+          explanation: "Petra sagt: \"Ich lese selten zu Hause.\""
         },
         {
-          question: "Ako ďaleko je centrum mesta od Janinej štvrte?",
-          answer: "Centrum mesta je len desať minút pešo odtiaľto.",
-          options: ["Päť minút autom", "Desať minút pešo", "Dvadsať minút metrom", "Pätnásť minút pešo"]
-        }
-      ]
-    },
-    {
-      type: "wordorder",
-      instruction: "Zoraď slová do správnej nemeckej vety.",
-      sentences: [
-        {
-          words: ["Jana", "stellt", "die", "Tasche", "auf", "den", "Tisch"],
-          correct: "Jana stellt die Tasche auf den Tisch",
-          hint: "Jana položí tašku na stôl.",
-          explanation: "Wohin? (smer) → auf + Akkusatív: der Tisch → auf den Tisch."
+          question: "Was macht Janas Familie am Wochenende?",
+          options: [
+            "Sie isst Eis.",
+            "Sie fährt in den Park.",
+            "Sie liest Bücher.",
+            "Sie trifft Freunde."
+          ],
+          answer: 1,
+          explanation: "Jana sagt: \"Meine Familie fährt am Wochenende oft in den Park.\""
         },
         {
-          words: ["Die", "Tasche", "liegt", "auf", "dem", "Tisch"],
-          correct: "Die Tasche liegt auf dem Tisch",
-          hint: "Taška leží na stole.",
-          explanation: "Wo? (miesto) → auf + Datív: der Tisch → auf dem Tisch."
-        },
-        {
-          words: ["Ich", "hänge", "das", "Bild", "an", "die", "Wand"],
-          correct: "Ich hänge das Bild an die Wand",
-          hint: "Vešiam obraz na stenu.",
-          explanation: "Wohin? → an + Akkusatív: die Wand zostáva die Wand (F, Akk=Nom)."
-        },
-        {
-          words: ["Das", "Bild", "hängt", "an", "der", "Wand"],
-          correct: "Das Bild hängt an der Wand",
-          hint: "Obraz visí na stene.",
-          explanation: "Wo? → an + Datív: die Wand → an der Wand."
-        },
-        {
-          words: ["Jana", "geht", "in", "das", "Café", "um", "die", "Ecke"],
-          correct: "Jana geht in das Café um die Ecke",
-          hint: "Jana ide do kaviarne za rohom.",
-          explanation: "Wohin? → in + Akkusatív: das Café zostáva das Café (Neutrum)."
+          question: "Was ist laut Jana wichtig für die Gesundheit?",
+          options: [
+            "Freunde treffen.",
+            "Fahrrad fahren.",
+            "Bewegung.",
+            "Bücher lesen."
+          ],
+          answer: 2,
+          explanation: "Jana sagt: \"Bewegung ist wichtig für die Gesundheit.\""
         }
       ]
     },
     {
       type: "speaking",
-      instruction: "Počúvaj nemeckú vetu. Potom hovor nahlas a skontroluj sa.",
+      instruction: "Höre zu und sprich nach.",
       phrases: [
         {
-          de: "Ich stelle die Tasche auf den Tisch.",
-          sk: "Kladiem tašku na stôl.",
-          tip: "Wohin?→Akk: den Tisch"
+          de: "Immer",
+          sk: "Vždy",
+          tip: "I=[ɪ], mm ako v 'mama'"
         },
         {
-          de: "Die Tasche ist auf dem Tisch.",
-          sk: "Taška je na stole.",
-          tip: "Wo?→Dativ: dem Tisch"
+          de: "Gesund und wichtig",
+          sk: "Zdravé a dôležité",
+          tip: "G=[g], S=[z], U=[ʊ], W=[v], ch=[ç]"
         },
         {
-          de: "Ich hänge meinen Mantel an den Haken.",
-          sk: "Vešiam kabát na háčik.",
-          tip: "Wohin?→Akk: den Haken"
+          de: "Jeden Tag",
+          sk: "Každý deň",
+          tip: "J=[j], T=[t], G=[k]"
         },
         {
-          de: "Das Buch liegt in der Tasche.",
-          sk: "Kniha leží v taške.",
-          tip: "Wo?→Dativ: in der Tasche"
+          de: "Ich laufe oft im Park.",
+          sk: "Často behám v parku.",
+          tip: "ch=[ç], au=[aʊ], P=[p]"
         },
         {
-          de: "Jana geht in die Küche.",
-          sk: "Jana ide do kuchyne.",
-          tip: "Wohin?→Akk: in die Küche"
+          de: "Er liest immer früh.",
+          sk: "On číta vždy skoro.",
+          tip: "ie=[iː], r=[ɐ], ü=[y]"
+        },
+        {
+          de: "Sie fährt selten Auto.",
+          sk: "Ona zriedka šoféruje auto.",
+          tip: "F=[f], ä=[ɛ], r=[ɐ], au=[aʊ]"
+        },
+        {
+          de: "Wie oft sprichst du Deutsch?",
+          sk: "Ako často hovoríš po nemecky?",
+          tip: "W=[v], sp=[ʃp], ch=[ç]"
+        },
+        {
+          de: "Wir essen nie zu Hause.",
+          sk: "Nikdy nejeme doma.",
+          tip: "Wir=[viːɐ̯], ss=[s], H=[h]"
+        }
+      ]
+    },
+    {
+      type: "truefalse",
+      instruction: "Prečítajte si nasledujúce tvrdenia a rozhodnite, či sú pravdivé (Wahr) alebo nepravdivé (Falsch).",
+      statements: [
+        {
+          statement: "Sloveso 'lesen' má v 2. osobe jednotného čísla (du) tvar 'liest'.",
+          isTrue: true,
+          explanation: "Áno, sloveso 'lesen' je nepravidelné a mení 'e' na 'ie' v 2. a 3. osobe jednotného čísla."
+        },
+        {
+          statement: "Príslovka 'selten' znamená 'vždy'.",
+          isTrue: false,
+          explanation: "Nie, 'selten' znamená 'zriedka'. 'Vždy' je 'immer'."
+        },
+        {
+          statement: "Vo vete 'Er fährt jeden Tag Sportplatz.' je 'jeden Tag' príslovka frekvencie.",
+          isTrue: true,
+          explanation: "Áno, 'jeden Tag' (každý deň) je výraz vyjadrujúci frekvenciu."
+        },
+        {
+          statement: "Sloveso 'sprechen' sa časuje v 3. osobe jednotného čísla (er/sie/es) ako 'spricht'.",
+          isTrue: true,
+          explanation: "Áno, sloveso 'sprechen' je nepravidelné a mení 'e' na 'i' v 2. a 3. osobe jednotného čísla."
+        },
+        {
+          statement: "Ak chcem povedať, že niečo robím 'často', použijem 'nie'.",
+          isTrue: false,
+          explanation: "Nie, 'nie' znamená 'nikdy'. Pre 'často' sa používa 'oft'."
+        }
+      ]
+    },
+    {
+      type: "dictation",
+      instruction: "Počúvajte a zapíšte, čo počujete. Potom skontrolujte svoj zápis.",
+      sentences: [
+        {
+          de: "Ich laufe oft.",
+          sk: "Často behám."
+        },
+        {
+          de: "Du isst gesund.",
+          sk: "Ty ješ zdravo."
+        },
+        {
+          de: "Er fährt jeden Tag.",
+          sk: "On jazdí každý deň."
+        },
+        {
+          de: "Wir sehen die Familie selten.",
+          sk: "Rodinu vidíme zriedka."
+        },
+        {
+          de: "Sie sprechen immer Deutsch im Park.",
+          sk: "V parku vždy hovoria po nemecky."
+        }
+      ]
+    },
+    {
+      type: "categorysort",
+      instruction: "Roztrieďte slová do správnych kategórií.",
+      categories: [
+        {
+          name: "Nepravidelné slovesá s prehláskou",
+          color: "blue",
+          words: [
+            "lesen",
+            "sprechen",
+            "sehen",
+            "essen",
+            "fahren",
+            "laufen"
+          ]
+        },
+        {
+          name: "Príslovky frekvencie",
+          color: "green",
+          words: [
+            "oft",
+            "immer",
+            "selten",
+            "jeden Tag"
+          ]
+        }
+      ],
+      explanation: "V prvej kategórii sú nepravidelné slovesá, ktoré menia samohlásku v kmeni (napr. 'e' na 'i'/'ie' alebo 'a' na 'ä') v 2. a 3. osobe jednotného čísla. Druhá kategória obsahuje príslovky a výrazy, ktoré vyjadrujú, ako často sa niečo deje."
+    },
+    {
+      type: "translation",
+      instruction: "Preložte nasledujúce vety zo slovenčiny do nemčiny.",
+      sentences: [
+        {
+          sk: "Často čítam knihy.",
+          answer: "Ich lese oft Bücher.",
+          hint: "lesen, oft",
+          explanation: "Používame nepravidelné sloveso 'lesen' a príslovku frekvencie 'oft'. Všimnite si, že 'lesen' má v 'ich' forme 'e', nie 'ie'."
+        },
+        {
+          sk: "On vidí svoju rodinu zriedka.",
+          answer: "Er sieht seine Familie selten.",
+          hint: "sehen, selten",
+          explanation: "Sloveso 'sehen' je nepravidelné a v 3. osobe jednotného čísla (er) sa mení na 'sieht'. 'Selten' znamená 'zriedka'."
+        },
+        {
+          sk: "Vždy jeme zdravo.",
+          answer: "Wir essen immer gesund.",
+          hint: "essen, immer",
+          explanation: "Používame sloveso 'essen' a príslovku frekvencie 'immer'. V 'wir' forme sa 'essen' nemení."
+        },
+        {
+          sk: "Beháš každý deň v parku?",
+          answer: "Läufst du jeden Tag im Park?",
+          hint: "laufen, jeden Tag",
+          explanation: "Sloveso 'laufen' je nepravidelné a v 2. osobe jednotného čísla (du) sa mení na 'läufst' (a → ä). 'Jeden Tag' znamená 'každý deň'."
+        }
+      ]
+    },
+    {
+      type: "conjugation",
+      instruction: "Vyčasujte nasledujúce nepravidelné slovesá v prítomnom čase (Präsens).",
+      verbs: [
+        {
+          infinitive: "sprechen",
+          translation: "hovoriť",
+          forms: [
+            {
+              pronoun: "ich",
+              correct: "spreche"
+            },
+            {
+              pronoun: "du",
+              correct: "sprichst"
+            },
+            {
+              pronoun: "er/sie/es",
+              correct: "spricht"
+            },
+            {
+              pronoun: "wir",
+              correct: "sprechen"
+            },
+            {
+              pronoun: "ihr",
+              correct: "sprecht"
+            },
+            {
+              pronoun: "sie/Sie",
+              correct: "sprechen"
+            }
+          ],
+          note: "Sloveso 'sprechen' je nepravidelné a mení samohlásku 'e' na 'i' v 2. a 3. osobe jednotného čísla."
+        },
+        {
+          infinitive: "fahren",
+          translation: "jazdiť",
+          forms: [
+            {
+              pronoun: "ich",
+              correct: "fahre"
+            },
+            {
+              pronoun: "du",
+              correct: "fährst"
+            },
+            {
+              pronoun: "er/sie/es",
+              correct: "fährt"
+            },
+            {
+              pronoun: "wir",
+              correct: "fahren"
+            },
+            {
+              pronoun: "ihr",
+              correct: "fahrt"
+            },
+            {
+              pronoun: "sie/Sie",
+              correct: "fahren"
+            }
+          ],
+          note: "Sloveso 'fahren' je nepravidelné a mení samohlásku 'a' na 'ä' v 2. a 3. osobe jednotného čísla."
         }
       ]
     }
   ],
-
-  reviewWords: ["L22_V04", "L22_V05", "L22_V07", "L22_V11", "L18_V11", "L18_V12"],
-  lessonNotes:
-    "Predložky gegenüber, neben, zwischen sa viažu s datívom — toto je náhľad pred L25. Pre teraz sa uč tieto spojenia ako celky: ‚neben dem Park', ‚gegenüber der Kirche'. Dôležité: ‚der' v datíve ženského rodu vyzerá rovnako ako ‚der' v nominatíve mužského rodu — kontext je kľúčový!"
+  reviewWords: []
 };

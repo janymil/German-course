@@ -42,8 +42,17 @@ export function FlashcardExercise({ exercise, lesson, onComplete, savedState, on
   };
 
   const flip = () => {
-    setFlipped((f) => !f);
-    if (!flipped) speak(card.de);
+    setFlipped((f) => {
+      // If we are currently NOT flipped (showing German) and we click to flip, 
+      // we reveal Slovak. We shouldn't speak German again here.
+      // If we are flipped (showing Slovak) and click to flip back, 
+      // we reveal German. We can speak it then.
+      const currentlyFlipped = f;
+      if (currentlyFlipped) {
+        speak(card.de);
+      }
+      return !f;
+    });
   };
 
   const next = () => {
@@ -95,9 +104,9 @@ export function FlashcardExercise({ exercise, lesson, onComplete, savedState, on
 
         {!flipped ? (
           <>
-                <p className="text-4xl font-bold text-center">
-                  <GenderWord word={card.de} gender={card.gender} className="text-white" />
-                </p>
+            <p className="text-4xl font-bold text-center text-white">
+              <GenderWord word={card.de} gender={card.gender} />
+            </p>
             <button
               onClick={speakWord}
               className={`mt-4 p-2.5 rounded-full border transition-all ${speaking ? 'bg-indigo-700 border-indigo-500' : 'bg-gray-700 border-gray-600 hover:bg-gray-600'}`}

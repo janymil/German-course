@@ -1,0 +1,147 @@
+[
+  {
+    "time": 1772684368037,
+    "model": "gemini-2.5-pro",
+    "tokens": 3958
+  },
+  {
+    "time": 1772684398663,
+    "model": "gemini-2.5-pro",
+    "tokens": 2714
+  },
+  {
+    "time": 1772684429756,
+    "model": "gemini-2.5-pro",
+    "tokens": 2568
+  },
+  {
+    "time": 1772684446318,
+    "model": "gemini-2.5-pro",
+    "tokens": 1606
+  },
+  {
+    "time": 1772684475265,
+    "model": "gemini-2.5-pro",
+    "tokens": 1593
+  },
+  {
+    "time": 1772684492733,
+    "model": "gemini-2.5-pro",
+    "tokens": 1578
+  },
+  {
+    "time": 1772684516803,
+    "model": "gemini-2.5-pro",
+    "tokens": 1607
+  },
+  {
+    "time": 1772684551846,
+    "model": "gemini-2.5-pro",
+    "tokens": 5401
+  },
+  {
+    "time": 1772684586682,
+    "model": "gemini-2.5-pro",
+    "tokens": 1264
+  },
+  {
+    "time": 1772684597947,
+    "model": "gemini-2.5-pro",
+    "tokens": 4349
+  },
+  {
+    "time": 1772684605714,
+    "model": "gemini-2.5-pro",
+    "tokens": 1757
+  },
+  {
+    "time": 1772684624152,
+    "model": "gemini-2.5-pro",
+    "tokens": 2251
+  },
+  {
+    "time": 1772684642063,
+    "model": "gemini-2.5-pro",
+    "tokens": 4634
+  },
+  {
+    "time": 1772684648011,
+    "model": "gemini-2.5-pro",
+    "tokens": 2697
+  },
+  {
+    "time": 1772684651802,
+    "model": "gemini-2.5-pro",
+    "tokens": 1062
+  },
+  {
+    "time": 1772684674855,
+    "model": "gemini-2.5-pro",
+    "tokens": 1719
+  },
+  {
+    "time": 1772684695030,
+    "model": "gemini-2.5-pro",
+    "tokens": 1763
+  },
+  {
+    "time": 1772684709982,
+    "model": "gemini-2.5-pro",
+    "tokens": 1670
+  },
+  {
+    "time": 1772684715631,
+    "model": "gemini-2.5-pro",
+    "tokens": 13273
+  },
+  {
+    "time": 1772684733639,
+    "model": "gemini-2.5-pro",
+    "tokens": 1731
+  },
+  {
+    "time": 1772684770613,
+    "model": "gemini-2.5-pro",
+    "tokens": 5699
+  },
+  {
+    "time": 1772684778169,
+    "model": "gemini-2.5-pro",
+    "tokens": 11832
+  },
+  {
+    "time": 1772684787641,
+    "model": "gemini-2.5-pro",
+    "tokens": 1821
+  },
+  {
+    "time": 1772684819415,
+    "model": "gemini-2.5-pro",
+    "tokens": 4869
+  },
+  {
+    "time": 1772684829994,
+    "model": "gemini-2.5-pro",
+    "tokens": 1039
+  },
+  {
+    "time": 1772684841961,
+    "model": "gemini-2.5-pro",
+    "tokens": 11439
+  },
+  {
+    "time": 1772684888282,
+    "model": "gemini-2.5-pro",
+    "tokens": 12102
+  },
+  {
+    "time": 1772684948002,
+    "model": "gemini-2.5-pro",
+    "tokens": 11062
+  },
+  {
+    "time": 1772685007576,
+    "model": "gemini-2.5-pro",
+    "tokens": 11062
+  }
+]

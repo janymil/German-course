@@ -118,7 +118,7 @@ export async function handleGenerateStory(req, res) {
             const prompt1Payload = `Zoznam 'knownWords', pre ktoré NESMIEŠ generovať targetWords: ${Array.from(knownWords).slice(0, 300).join(', ')}... (ukážka).\n\nTEXT PÔVODU:\n${rawText}`;
 
             const res1 = await ai.models.generateContent({
-                model: 'gemini-2.5-flash',
+                model: 'gemini-2.5-flash-lite',
                 contents: prompt1Payload,
                 config: {
                     systemInstruction: SYSTEM_PROMPT_PHASE_1,
@@ -143,7 +143,7 @@ export async function handleGenerateStory(req, res) {
                 console.log(`[AI Agent]  -> Spracovávam blok slov: ${chunk.join(', ')}`);
 
                 const res2 = await ai.models.generateContent({
-                    model: 'gemini-2.5-flash',
+                    model: 'gemini-2.5-flash-lite',
                     contents: `Vygeneruj slovník pre tieto slová z textu: ${chunk.join(', ')}`,
                     config: {
                         systemInstruction: SYSTEM_PROMPT_PHASE_2,

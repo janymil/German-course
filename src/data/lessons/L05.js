@@ -9,18 +9,41 @@ export const lesson05 = {
   narrativeContext: 'Jana sa rozpráva so svojimi novými známymi o tom, čo robia a čím sa živia.',
   communicativeGoal: 'Po tejto lekcii viem povedať, aké je moje povolanie a opýtať sa na to ostatných.',
   skillFocus: ['vocabulary', 'grammar', 'reading', 'speaking'],
-  grammarNote: {
-    rule: 'Povolania a koncovka -in',
-    explanation: 'V nemčine sa ženské povolania tvoria veľmi jednoducho – pridaním koncovky \'-in\' k mužskému tvaru (napr. \'der Lehrer\' sa mení na \'die Lehrerin\'). Pri niektorých krátkych slovách s a, o, u sa môže meniť aj samohláska, tzv. prehláska (napr. \'der Arzt\' sa mení na \'die Ärztin\'). Ak hovoríme, že niekto pracuje v nejakom povolaní, používame sloveso \'arbeiten\' (pracovať) spolu s predložkou \'als\', pričom sa vynecháva akýkoľvek člen, napr. \'Ich arbeite als Lehrer.\' (Pracujem ako učiteľ). Takisto priamo so slovesom \'sein\' sa člen pri povolaniach zvyčajne nepoužíva (\'Ich bin Arzt.\').',
-    examples: [
-      { de: 'Er ist Lehrer.', sk: 'On je učiteľ.', note: 'Mužský rod bez člena.' },
-      { de: 'Sie ist Lehrerin.', sk: 'Ona je učiteľka.', note: 'Ženský rod s koncovkou -in.' },
-      { de: 'Maria ist Ärztin.', sk: 'Mária je lekárka.', note: 'Ženská forma môže mať niekedy prehlásku.' },
-      { de: 'Ich arbeite als Informatiker.', sk: 'Pracujem ako informatik.', note: 'Prepájanie práce a povolania pomocou \'als\'.' },
-      { de: 'Was machst du von Beruf?', sk: 'Aké je tvoje povolanie?', note: 'Bežná otázka.' }
-    ],
-    slovakContrastNote: 'V slovenčine sa pýtame \'Čo robíš?\' alebo \'Aké máš povolanie?\'. V nemčine na to existuje pevná fráza \'Was machst du von Beruf?\' (dosť doslovne: Čo robíš od povolania?). Pri uvádzaní práce sa často preferuje spojenie \'arbeiten als\' (pracovať ako), miesto jednoduchého \'Som učiteľ\', hoci aj \'Ich bin Lehrer.\' je gramaticky správne.'
-  },
+  grammarNotes: [
+    {
+      rule: 'Povolania sú súčasťou identity (A prečo nepoužívame člen)',
+      explanation: `<p>V angličtine poviete „I am A doctor". V nedokonalej nemčine to ľudia doslovne prekladajú „Ich bin ein Arzt". <strong>Zastavte!</strong> Pre Nemcov je povolanie súčasťou toho, kým vo vnútri ste. Nie je to nejaký vonkajší, náhodný objekt. Ste tým, čo robíte.</p>
+<p>Preto poviete úplne úderne, čisto a hrdo, bez akéhokoľvek „ein": <strong>„Ich bin Arzt."</strong> (Som lekár).</p>
+<h4>Ženy to majú v nemčine ľahké</h4>
+<p>Ženské povolania sa tvoria geniálne jednoducho — ako keby ste mali pečiatku <strong>„-in"</strong>. Capnete ju na mužský tvar a hotovo:</p>
+<table><thead><tr><th>Mužský rod (der)</th><th>Ženský rod (die)</th></tr></thead><tbody>
+<tr><td>der <strong>Lehrer</strong></td><td>die <strong>Lehrerin</strong></td></tr>
+<tr><td>der <strong>Student</strong></td><td>die <strong>Studentin</strong></td></tr>
+<tr><td>der <strong>Informatiker</strong></td><td>die <strong>Informatikerin</strong></td></tr>
+</tbody></table>
+<div class="tip-box">💡 <strong>Hack od Profesora:</strong> Pozor na niektoré tradičné povolania utkané v histórii, kde musíte urobiť malú fonetickú úpravu - prehlásku. „Arzt" (lekár) sa zmení na „Ärztin", „Koch" (kuchár) na „Köchin". Sú to výnimky, ale je ich len pár.</div>`,
+      examples: [
+        { de: 'Ich bin Arzt.', sk: 'Som lekár.', note: 'Pozor: žiadne vkladanie člena "ein"!' },
+        { de: 'Sie ist Lehrerin.', sk: 'Ona je učiteľka.' }
+      ],
+      slovakContrastNote: 'Obe krajiny tvoria prácu veľmi identicky, v slovenčine pridávame "ka" (študent - študentka), v nemčine "-in" (Student - Studentin). A v obidvoch jazykoch nepoužívame pri predstavovaní neurčitý člen.'
+    },
+    {
+      rule: 'Otázka na telo: Was machst du von Beruf?',
+      explanation: `<p>Môžete sa opýtať „Gde robíš?" (Wo arbeitest du?), ale ak chcete skutočne vedieť, čím sa človek živí, položíte otázku na jeho identitu.</p>
+<ul>
+<li><strong>Was machst du von Beruf?</strong> = Aké je tvoje povolanie? (Doslova: Čo robíš od povolania?)</li>
+</ul>
+<p>Odpovedať môžete dvoma spôsobmi. Prvý sme už zvládli („Ich bin Arzt"). Druhý používa predložku <strong>„als"</strong>, ktorá tu znamená výlučne „v roli, vo funkcii":</p>
+<p><strong>Ich arbeite als Informatiker.</strong></p>
+<div class="warn-box">⚠️ <strong>Trestný bod u Profesora:</strong> Predložka „als" má v nemčine aj iné významy (napr. pri porovnávaní „ako"). Ale pri povolaniach sa prilepí na sloveso arbeiten a funguje ako spona k profesii.</div>`,
+      examples: [
+        { de: 'Was machst du von Beruf?', sk: 'Aké máš povolanie?', note: 'Takto sa pýtajú "natives".' },
+        { de: 'Ich arbeite als Informatiker.', sk: 'Pracujem ako informatik (v roli informatika).' },
+      ],
+      slovakContrastNote: 'Dokonalá zhoda. Pracujem „ako" učiteľ. Ich arbeite „als" Lehrer.'
+    },
+  ],
   vocab: [
     {
       de: 'arbeiten',
@@ -95,12 +118,48 @@ export const lesson05 = {
       recycledFrom: []
     },
     {
+      de: 'die Studentin',
+      sk: 'študentka',
+      gender: 'F',
+      srsId: 'L05_V08b',
+      example: 'Jana ist Studentin.',
+      exampleSk: 'Jana je študentka.',
+      recycledFrom: []
+    },
+    {
       de: 'der Informatiker',
       sk: 'informatik',
       gender: 'M',
       srsId: 'L05_V09',
       example: 'Er ist Informatiker.',
       exampleSk: 'On je informatik.',
+      recycledFrom: []
+    },
+    {
+      de: 'die Informatikerin',
+      sk: 'informatička',
+      gender: 'F',
+      srsId: 'L05_V09b',
+      example: 'Sie arbeitet als Informatikerin.',
+      exampleSk: 'Pracuje ako informatička.',
+      recycledFrom: []
+    },
+    {
+      de: 'der Koch',
+      sk: 'kuchár',
+      gender: 'M',
+      srsId: 'L05_V10b',
+      example: 'Der Koch arbeitet im Restaurant.',
+      exampleSk: 'Kuchár pracuje v reštaurácii.',
+      recycledFrom: []
+    },
+    {
+      de: 'die Köchin',
+      sk: 'kuchárka',
+      gender: 'F',
+      srsId: 'L05_V10c',
+      example: 'Die Köchin kocht sehr gut.',
+      exampleSk: 'Kuchárka varí veľmi dobre.',
       recycledFrom: []
     },
     {
@@ -156,6 +215,33 @@ export const lesson05 = {
       example: 'Die Arbeit ist gut.',
       exampleSk: 'Tá práca je dobrá.',
       recycledFrom: []
+    },
+    {
+      de: 'der Verkäufer',
+      sk: 'predavač',
+      gender: 'M',
+      srsId: 'L05_V16',
+      example: 'Der Verkäufer arbeitet im Geschäft.',
+      exampleSk: 'Predavač pracuje v obchode.',
+      recycledFrom: []
+    },
+    {
+      de: 'die Verkäuferin',
+      sk: 'predavačka',
+      gender: 'F',
+      srsId: 'L05_V17',
+      example: 'Die Verkäuferin ist sehr nett.',
+      exampleSk: 'Predavačka je veľmi milá.',
+      recycledFrom: []
+    },
+    {
+      de: 'Was machst du von Beruf?',
+      sk: 'Aké máš povolanie?',
+      gender: null,
+      srsId: 'L05_V18',
+      example: 'Was machst du von Beruf? — Ich bin Ärztin.',
+      exampleSk: 'Aké máš povolanie? — Som lekárka.',
+      recycledFrom: []
     }
   ],
   exercises: [
@@ -170,11 +256,13 @@ export const lesson05 = {
         ['arbeiten', 'pracovať'],
         ['der Beruf', 'povolanie'],
         ['der Arzt', 'lekár'],
-        ['studieren', 'študovať'],
-        ['machen', 'robiť'],
-        ['viel', 'veľa'],
-        ['die Arbeit', 'práca'],
-        ['wenig', 'málo']
+        ['die Ärztin', 'lekárka'],
+        ['der Koch', 'kuchár'],
+        ['die Köchin', 'kuchárka'],
+        ['der Verkäufer', 'predavač'],
+        ['die Verkäuferin', 'predavačka'],
+        ['als', 'ako (povolanie)'],
+        ['die Arbeit', 'práca']
       ]
     },
     {
@@ -252,9 +340,11 @@ export const lesson05 = {
         { de: 'die Ärztin', sk: 'lekárka' },
         { de: 'der Student', sk: 'študent' },
         { de: 'die Arbeit', sk: 'práca' },
-        { de: 'wenig', sk: 'málo' },
+        { de: 'der Koch', sk: 'kuchár' },
+        { de: 'die Köchin', sk: 'kuchárka' },
         { de: 'die Lehrerin', sk: 'učiteľka' },
-        { de: 'gern', sk: 'rád' }
+        { de: 'der Verkäufer', sk: 'predavač' },
+        { de: 'die Informatikerin', sk: 'informatička' }
       ]
     },
     {
@@ -294,36 +384,36 @@ export const lesson05 = {
     {
       type: 'minitext',
       instruction: 'Prečítaj si pokračovanie príbehu Jany a odpovedz na otázky.',
-      text: 'Heute sprechen Jana und Lukas über Berufe. Lukas fragt: "Was machst du von Beruf, Jana?" Jana antwortet: "Ich studiere noch. Ich bin Studentin." Lukas sagt: "Ich arbeite als Informatiker." Eine Frau kommt. Das ist Maria. Maria sagt: "Hallo! Ich bin Ärztin. Ich arbeite viel." Jana fragt: "Arbeitest du gern?" Maria antwortet: "Ja, sehr gern! Und du, Jana? Was studierst du?"',
-      textSk: 'Dnes hovoria Jana a Lukas o povolaniach. Lukas sa pýta: "Čím sa živíš, Jana?" Jana odpovedá: "Ešte študujem. Som študentka." Lukas hovorí: "Pracujem ako informatik." Prichádza žena. To je Mária. Mária hovorí: "Ahoj! Som lekárka. Pracujem veľa." Jana sa pýta: "Pracuješ rada?" Mária odpovedá: "Áno, veľmi rada! A ty, Jana? Čo študuješ?"',
+      text: 'In der Pause sprechen die Kursteilnehmer über ihre Berufe. Lukas arbeitet als Informatiker bei einer Firma in Wien. Maria ist Ärztin und arbeitet im Krankenhaus. Jana studiert noch — sie ist Studentin. Im Kurs sind auch ein Lehrer, eine Verkäuferin und ein Koch. Alle haben verschiedene Berufe, aber sie lernen zusammen Deutsch. Jana findet das sehr interessant.',
+      textSk: 'Počas prestávky hovoria účastníci kurzu o svojich povolaniach. Lukas pracuje ako informatik vo firme vo Viedni. Maria je lekárka a pracuje v nemocnici. Jana ešte študuje — je študentka. V kurze sú aj učiteľ, predavačka a kuchár. Všetci majú rôzne povolania, ale spolu sa učia nemčinu. Jana to považuje za veľmi zaujímavé.',
       questions: [
         {
           question: 'Was ist Lukas von Beruf?',
           questionSk: 'Aké je Lukasovo povolanie?',
           options: ['Arzt', 'Student', 'Informatiker', 'Lehrer'],
           answer: 2,
-          explanation: 'Lukas hovorí: "Ich arbeite als Informatiker."'
+          explanation: 'Text hovorí: „Lukas arbeitet als Informatiker bei einer Firma in Wien."'
         },
         {
           question: 'Was macht Jana?',
           questionSk: 'Čo robí Jana?',
           options: ['Sie ist Lehrerin.', 'Sie arbeitet als Ärztin.', 'Sie ist Informatikerin.', 'Sie studiert.'],
           answer: 3,
-          explanation: 'Jana hovorí: "Ich studiere noch. Ich bin Studentin."'
+          explanation: 'Text hovorí: „Jana studiert noch — sie ist Studentin."'
         },
         {
           question: 'Wer ist Ärztin?',
           questionSk: 'Kto je lekárka?',
           options: ['Jana', 'Anna', 'Maria', 'Lukas'],
           answer: 2,
-          explanation: 'Maria hovorí: "Ich bin Ärztin."'
+          explanation: 'Text hovorí: „Maria ist Ärztin und arbeitet im Krankenhaus."'
         },
         {
-          question: 'Arbeitet Maria gern?',
-          questionSk: 'Pracuje Maria rada?',
-          options: ['Nein, sie arbeitet nicht.', 'Ja, sehr gern!', 'Nein, sie studiert.', 'Ja, aber nicht viel.'],
-          answer: 1,
-          explanation: 'Maria odpovedá: "Ja, sehr gern!"'
+          question: 'Wo arbeitet Maria?',
+          questionSk: 'Kde pracuje Maria?',
+          options: ['bei einer Firma', 'im Deutschkurs', 'im Krankenhaus', 'an der Universität'],
+          answer: 2,
+          explanation: 'Text hovorí: „Maria ist Ärztin und arbeitet im Krankenhaus."'
         }
       ]
     },
@@ -345,6 +435,113 @@ export const lesson05 = {
         { sk: 'Aké máš povolanie? (tykanie)', hint: 'Was...' },
         { sk: 'Pracujem ako informatik.', hint: 'Ich...' },
         { sk: 'Ona je lekárka. Veľa pracuje.', hint: 'Sie ist...' }
+      ]
+    },
+    {
+      type: 'categorysort',
+      instruction: 'Roztrieď povolania podľa rodu: mužský (der) alebo ženský (die).',
+      categories: [
+        { name: 'Mužský rod (der)', color: 'blue', words: ['Lehrer', 'Arzt', 'Student', 'Informatiker', 'Koch', 'Verkäufer'] },
+        { name: 'Ženský rod (die)', color: 'rose', words: ['Lehrerin', 'Ärztin', 'Studentin', 'Informatikerin', 'Köchin', 'Verkäuferin'] }
+      ],
+      explanation: 'Ženské povolania sa tvoria pridaním prípony „-in" k mužskému tvaru. Pozor na prehlásky: Arzt → Ärztin, Koch → Köchin.'
+    },
+    {
+      type: 'truefalse',
+      instruction: 'Rozhodni, či je tvrdenie správne (Richtig) alebo nesprávne (Falsch).',
+      statements: [
+        {
+          statement: '„Ich bin ein Arzt" ist korrektes Deutsch.',
+          isTrue: false,
+          explanation: 'Nesprávne! Pri povolaniach sa člen vynecháva: „Ich bin Arzt" (nie „ein Arzt").'
+        },
+        {
+          statement: 'Die weibliche Form von „Koch" ist „Köchin" (mit Umlaut).',
+          isTrue: true,
+          explanation: 'Správne! Koch → Köchin. O sa mení na Ö (prehláska) + prípona -in.'
+        },
+        {
+          statement: '„Als" bedeutet „ako" (bei Berufen).',
+          isTrue: true,
+          explanation: 'Správne! „Ich arbeite als Lehrer" = pracujem ako učiteľ.'
+        },
+        {
+          statement: '„Was machst du von Beruf?" fragt nach der Adresse.',
+          isTrue: false,
+          explanation: 'Nesprávne! Táto fráza sa pýta na povolanie, nie na adresu.'
+        },
+        {
+          statement: '„Die Lehrerin" hat die Endung „-in" für feminin.',
+          isTrue: true,
+          explanation: 'Správne! Lehrer → Lehrerin. Prípona „-in" tvorí ženský tvar.'
+        }
+      ]
+    },
+    {
+      type: 'dictation',
+      instruction: 'Počúvaj a zapíš nemeckú vetu.',
+      sentences: [
+        { de: 'Was machst du von Beruf?', sk: 'Aké máš povolanie?', hint: '5 slov' },
+        { de: 'Ich arbeite als Lehrer.', sk: 'Pracujem ako učiteľ.' },
+        { de: 'Sie ist Ärztin.', sk: 'Ona je lekárka.', hint: '3 slová' },
+        { de: 'Er studiert viel.', sk: 'On veľa študuje.' },
+        { de: 'Ich arbeite gern.', sk: 'Rád pracujem.' }
+      ]
+    },
+    {
+      type: 'translation',
+      instruction: 'Prelož vety zo slovenčiny do nemčiny.',
+      sentences: [
+        {
+          sk: 'Aké máš povolanie?',
+          answer: 'Was machst du von Beruf',
+          hint: 'Was machst...',
+          explanation: 'Zaužívaná fráza: „Was machst du von Beruf?"'
+        },
+        {
+          sk: 'Pracujem ako informatik.',
+          answer: 'Ich arbeite als Informatiker',
+          hint: 'Ich arbeite...',
+          explanation: '„Als" = ako (pri povolaniach). Bez člena!'
+        },
+        {
+          sk: 'Ona je učiteľka.',
+          answer: 'Sie ist Lehrerin',
+          hint: 'Sie ist...',
+          explanation: 'Ženský tvar: Lehrer → Lehrerin. Bez člena pri povolaniach!'
+        },
+        {
+          sk: 'On veľa pracuje.',
+          answer: 'Er arbeitet viel',
+          hint: 'Er arbeitet...',
+          explanation: '3. osoba: arbeiten → er arbeitet. „Viel" = veľa.'
+        }
+      ]
+    },
+    {
+      type: 'conjugation',
+      instruction: 'Vyplň správne tvary slovies arbeiten a machen.',
+      verbs: [
+        {
+          infinitive: 'arbeiten',
+          translation: 'pracovať',
+          forms: [
+            { pronoun: 'ich', correct: 'arbeite' },
+            { pronoun: 'du', correct: 'arbeitest' },
+            { pronoun: 'er/sie/es', correct: 'arbeitet' },
+          ],
+          note: 'Sloveso „arbeiten" má kmeň na -t, preto sa pridáva -e- pred koncovkou: du arbeitest, er arbeitet.'
+        },
+        {
+          infinitive: 'machen',
+          translation: 'robiť',
+          forms: [
+            { pronoun: 'ich', correct: 'mache' },
+            { pronoun: 'du', correct: 'machst' },
+            { pronoun: 'er/sie/es', correct: 'macht' },
+          ],
+          note: 'Sloveso „machen" sa časuje pravidelne: kmeň + koncovka (-e, -st, -t).'
+        }
       ]
     }
   ],

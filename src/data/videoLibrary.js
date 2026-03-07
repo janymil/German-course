@@ -65,4 +65,41 @@ export const VIDEO_LIBRARY = [
       },
     ],
   },
+  {
+    category: 'Vlogy a prechádzky',
+    categoryDescription: 'Autentické videá s prirodzenou nemeckou výslovnosťou pre oboznamovanie sa s každodennou rečou.',
+    level: 'A1–B1',
+    color: 'emerald',
+    videos: [
+      {
+        id: 'uzNrP5ZyH0A',
+        title: 'Learn German the Natural Way - Walk & Talk Through the City',
+        description: 'Prechádzka mestom: pomalá príjemná nemčina plná nových slovíčok do každodenného života.',
+        duration: '15m',
+        hasSrt: true,
+      },
+      {
+        id: 'qGBJYuCoamg',
+        title: 'Bananenbrot backen - Interaktiver Kochkurs',
+        description: 'Rozšírte si slovnú zásobu okolo kuchyne a pečenia pomocou tohto interaktívneho videa s rodenou hovoriacou.',
+        duration: '11m',
+        hasSrt: true,
+      },
+    ],
+  },
+  {
+    category: 'Easy German',
+    categoryDescription: 'Autentické rozhovory z nemeckých ulíc prispôsobené pre učiacich sa.',
+    level: 'A1–A2',
+    color: 'teal',
+    videos: [
+      {
+        id: 'D91icSuPYQ4',
+        title: 'Supermarket in Slow German (Super Easy German 288)',
+        description: 'Pomalá a jasná nemčina v reálnom prostredí supermarketu. Osvojte si slovnú zásobu.',
+        duration: '11m',
+        hasSrt: true,
+      },
+    ],
+  },
 ];

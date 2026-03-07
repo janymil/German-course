@@ -1,240 +1,578 @@
-﻿export const lesson21 = {
+export const lesson21 = {
   id: 21,
   week: 5,
   day: 1,
-  title: "Wochentage und Tagesablauf",
-  topic: "Dni v týždni a denný harmonogram",
+  title: "Was machst du gern?",
+  topic: "Voľnočasové aktivity a koníčky",
   cefr: "A1",
-  xpReward: 25,
-  narrativeContext:
-    "Jana hat ihre erste richtige Arbeitswoche begonnen. Ihr Chef fragt: 'Was machst du am Montag? Und am Donnerstag?' Jana lernt die Wochentage und wie man typische Tagesabläufe beschreibt.",
-  communicativeGoal:
-    "Po tejto lekcii viem pomenovať dni v týždni, povedať čo robím v konkrétne dni a opísať denný harmonogram.",
-  skillFocus: ["vocabulary", "listening", "speaking", "reading"],
-
-  grammarNote: {
-    rule: "Dni v týždni s predložkou ‚am' + časové príslovky + sekvenčné príslovky",
-    explanation:
-      "Pred dňami v týždni používame predložku ‚am': am Montag, am Freitag. Cez víkend hovoríme ‚am Wochenende'. Časové príslovky: heute (dnes), gestern (včera), morgen (zajtra), übermorgen (pozajtra). Sekvenčné príslovky na opis poradia: zuerst (najprv), dann (potom), danach (potom/po tom), zuletzt (nakoniec).",
-    examples: [
-      { de: "Am Montag habe ich eine Besprechung.", sk: "V pondelok mám poradu." },
-      { de: "Heute ist Mittwoch.", sk: "Dnes je streda." },
-      { de: "Morgen fahre ich ins Büro.", sk: "Zajtra cestujem do kancelárie." },
-      { de: "Zuerst frühstücke ich, dann fahre ich zur Arbeit.", sk: "Najprv raňajkujem, potom idem do práce." },
-      { de: "Am Wochenende schlafe ich lang.", sk: "Cez víkend dlho spím." }
-    ],
-    slovakContrastNote:
-      "Slovenčina používa predložku ‚v' pred dňami v týždni: ‚v pondelok', ‚v piatok'. Nemčina používa ‚am': ‚am Montag', ‚am Freitag'. Pozor: ‚morgen' ako príslovka = zajtra, ale ‚der Morgen' (podstatné meno) = ráno! ‚Morgen gehe ich ins Büro.' (zajtra) vs. ‚Am Morgen trinke ich Kaffee.' (ráno)"
-  },
-
+  xpReward: 20,
+  narrativeContext: "Heute ist Freitag. Jana und ihre Freunde sind nach der Arbeit in einem Café. Sie sprechen über ihre Hobbys.",
+  communicativeGoal: "Nach dieser Lektion kann ich über meine Hobbys sprechen und sagen, was ich gern mache.",
+  skillFocus: [
+    "vocabulary",
+    "grammar",
+    "speaking"
+  ],
+  lessonNotes: "V tejto lekcii sa naučíme hovoriť o voľnočasových aktivitách a koníčkoch. Zistíme, čo robia Jana a jej priatelia radi vo svojom voľnom čase. Naučíme sa používať slovo 'gern' na vyjadrenie preferencií a povieme, čo robíme radi my.",
+  grammarNotes: [
+    {
+      rule: "Modalverben im Präsens",
+      explanation: "\n      <p>Modálne slovesá (Modalverben) sú špeciálny typ slovies, ktoré vyjadrujú schopnosť, nutnosť, želanie, povolenie, možnosť alebo povinnosť. V nemčine sa používajú veľmi často, najmä pri vyjadrovaní voľnočasových aktivít a plánov. Najdôležitejšie modálne slovesá sú: <strong>können</strong> (vedieť, môcť), <strong>müssen</strong> (musieť), <strong>möchten</strong> (chcieť, prial by som si – zdvorilá forma od <em>wollen</em>), <strong>wollen</strong> (chcieť), <strong>dürfen</strong> (smieť, mať povolenie) a <strong>sollen</strong> (mať, mal by som – povinnosť/odporúčanie).</p>\n      <p>Ich časovanie je nepravidelné, najmä v prvej a tretej osobe jednotného čísla (ich a er/sie/es), kde majú rovnaký tvar a často dochádza k zmene kmeňovej samohlásky. Všimnite si, že v týchto osobách nemajú koncovku <strong>-t</strong>. Pri použití modálneho slovesa vety sa hlavné sloveso, ktoré vyjadruje činnosť, presúva na koniec vety v neurčitku (infinitíve).</p>\n      <p>Tu je prehľad časovania niektorých dôležitých modálnych slovies:</p>\n      <table>\n        <thead>\n          <tr>\n            <th>Osoba</th>\n            <th>können (môcť, vedieť)</th>\n            <th>müssen (musieť)</th>\n            <th>möchten (chcel by som)</th>\n          </tr>\n        </thead>\n        <tbody>\n          <tr>\n            <td>ich</td>\n            <td>kann</td>\n            <td>muss</td>\n            <td>möchte</td>\n          </tr>\n          <tr>\n            <td>du</td>\n            <td>kannst</td>\n            <td>musst</td>\n            <td>möchtest</td>\n          </tr>\n          <tr>\n            <td>er/sie/es</td>\n            <td>kann</td>\n            <td>muss</td>\n            <td>möchte</td>\n          </tr>\n          <tr>\n            <td>wir</td>\n            <td>können</td>\n            <td>müssen</td>\n            <td>möchten</td>\n          </tr>\n          <tr>\n            <td>ihr</td>\n            <td>könnt</td>\n            <td>müsst</td>\n            <td>möchtet</td>\n          </tr>\n          <tr>\n            <td>Sie/sie</td>\n            <td>können</td>\n            <td>müssen</td>\n            <td>möchten</td>\n          </tr>\n        </tbody>\n      </table>\n    ",
+      examples: [
+        {
+          de: "Ich kann gut schwimmen.",
+          sk: "Vieme dobre plávať."
+        },
+        {
+          de: "Du musst heute lernen.",
+          sk: "Dnes sa musíš učiť."
+        },
+        {
+          de: "Er möchte Pizza essen.",
+          sk: "On by si chcel dať pizzu."
+        },
+        {
+          de: "Wir wollen am Wochenende ins Kino gehen.",
+          sk: "Cez víkend chceme ísť do kina."
+        },
+        {
+          de: "Dürfen wir hier parken?",
+          sk: "Smieme tu parkovať?"
+        },
+        {
+          de: "Ihr sollt die Hausaufgaben machen.",
+          sk: "Máte si urobiť domáce úlohy."
+        },
+        {
+          de: "Sie kann sehr gut Deutsch sprechen.",
+          sk: "Ona vie veľmi dobre hovoriť po nemecky."
+        }
+      ],
+      slovakContrastNote: "\n      V slovenčine tiež používame modálne slovesá ako \"môcť\", \"musieť\", \"chcieť\", \"smieť\", \"mať (urobiť niečo)\", ktoré sa spájajú s neurčitkom iného slovesa (napr. \"Ja môžem plávať\"). Hlavný rozdiel je v časovaní: nemecké modálne slovesá sú nepravidelné v 1. a 3. osobe jednotného čísla (ich/er/sie/es), kde majú rovnaký tvar a často menia kmeňovú samohlásku, zatiaľ čo v slovenčine sú tieto formy zvyčajne odlišné (ja môžem, on môže). Taktiež si treba zvyknúť na pevnú nemeckú vetnú štruktúru, kde hlavné sloveso v neurčitku stojí vždy na konci vety.\n    "
+    },
+    {
+      rule: "Satzstellung mit Modalverben",
+      explanation: "\n      <p>Vätná štruktúra s modálnymi slovesami je v nemčine veľmi dôležitá a pevne daná. Modálne sloveso (časované) vždy stojí na druhom mieste vo vete (po podmete alebo inom členovi vety, ak je podmet za slovesom), zatiaľ čo hlavné sloveso (v neurčitku) sa presúva na úplný koniec vety. Táto štruktúra platí pre oznamovacie vety aj pre doplňovacie otázky (W-Fragen).</p>\n      <p>Základná štruktúra je nasledovná:</p>\n      <ul>\n        <li><strong>Podmet + Modálne sloveso (časované) + ... + Hlavné sloveso (neurčitok)</strong></li>\n      </ul>\n      <p>Je kľúčové si zapamätať, že hlavné sloveso v neurčitku je vždy na konci vety a nikdy sa nemení. Modálne sloveso sa časuje podľa podmetu.</p>\n    ",
+      examples: [
+        {
+          de: "Ich kann heute nicht kommen.",
+          sk: "Dnes nemôžem prísť."
+        },
+        {
+          de: "Was möchtest du am Wochenende machen?",
+          sk: "Čo by si chcel cez víkend robiť?"
+        },
+        {
+          de: "Wir müssen jetzt nach Hause gehen.",
+          sk: "Teraz musíme ísť domov."
+        },
+        {
+          de: "Meine Schwester will nicht Fußball spielen.",
+          sk: "Moja sestra nechce hrať futbal."
+        },
+        {
+          de: "Kannst du mir bitte helfen?",
+          sk: "Môžeš mi, prosím, pomôcť?"
+        },
+        {
+          de: "Er darf heute Abend lange fernsehen.",
+          sk: "Dnes večer smie dlho pozerať televíziu."
+        }
+      ],
+      slovakContrastNote: "\n      Zatiaľ čo v slovenčine je vetná štruktúra s modálnymi slovesami flexibilnejšia (napr. \"Chcem ísť do kina\" alebo \"Chcem do kina ísť\"), nemčina má veľmi prísne pravidlo: časované modálne sloveso je na druhom mieste a hlavné sloveso v neurčitku je vždy na konci vety. Toto je častý zdroj chýb pre slovenských študentov, preto je dôležité si túto štruktúru osvojiť.\n    "
+    },
+    {
+      rule: "Der Imperativ (Rozkazovací spôsob)",
+      explanation: "\n      <p>Rozkazovací spôsob (Imperativ) sa používa na vyjadrenie príkazov, výziev, pokynov, rád alebo želaní. V nemčine existujú tri formy rozkazovacieho spôsobu, v závislosti od toho, koho oslovujeme: \"ty\" (du), \"vy\" (ihr - skupina ľudí, ktorým tykáme) a \"Vy\" (Sie - zdvorilostná forma).</p>\n      <ul>\n        <li><strong>Forma pre \"du\" (ty):</strong> Vytvorí sa odtrhnutím koncovky <strong>-st</strong> z tvaru slovesa pre \"du\" a vynechaním zámena \"du\". Pri slabých slovesách sa často pridáva koncovka <strong>-e</strong> (napr. <em>Mach<strong>e</strong>!</em>), ale v hovorovej reči sa často vynecháva (<em>Mach!</em>). Pri silných slovesách, ktoré menia samohlásku v \"du\" forme (napr. <em>lesen -> du liest</em>), sa táto zmena zachová, ale koncovka <strong>-e</strong> sa nepridáva (<em>Lies!</em>).</li>\n        <li><strong>Forma pre \"ihr\" (vy - tykanie):</strong> Je rovnaká ako časovaný tvar slovesa pre \"ihr\" a zámeno \"ihr\" sa vynecháva.</li>\n        <li><strong>Forma pre \"Sie\" (Vy - vykanie):</strong> Vytvorí sa prehodením poradia: najprv sloveso v neurčitku, potom zámeno \"Sie\".</li>\n      </ul>\n      <div class=\"tip-box\">\n        <p><strong>Nepravidelné slovesá:</strong></p>\n        <ul>\n          <li><strong>sein (byť):</strong> Sei! (du), Seid! (ihr), Seien Sie! (Sie)</li>\n          <li><strong>haben (mať):</strong> Hab! (du), Habt! (ihr), Haben Sie! (Sie)</li>\n          <li><strong>werden (stať sa):</strong> Werde! (du), Werdet! (ihr), Werden Sie! (Sie)</li>\n        </ul>\n      </div>\n    ",
+      examples: [
+        {
+          de: "Mach die Tür zu!",
+          sk: "Zavri dvere!"
+        },
+        {
+          de: "Macht die Tür zu!",
+          sk: "Zavrite dvere! (viacerým, ktorým tykáme)"
+        },
+        {
+          de: "Machen Sie die Tür zu!",
+          sk: "Zavrite dvere! (vykanie)"
+        },
+        {
+          de: "Sei pünktlich!",
+          sk: "Buď presný!"
+        },
+        {
+          de: "Seid pünktlich!",
+          sk: "Buďte presní! (viacerým, ktorým tykáme)"
+        },
+        {
+          de: "Seien Sie pünktlich!",
+          sk: "Buďte presní! (vykanie)"
+        },
+        {
+          de: "Hilf mir!",
+          sk: "Pomôž mi!"
+        },
+        {
+          de: "Lies das Buch!",
+          sk: "Prečítaj si tú knihu!"
+        },
+        {
+          de: "Geht nach Hause!",
+          sk: "Choďte domov! (viacerým, ktorým tykáme)"
+        }
+      ],
+      slovakContrastNote: "\n      Slovenčina má tiež rozkazovací spôsob, ale jeho tvorba je odlišná. V slovenčine máme zvyčajne jednu formu pre jednotné číslo (\"Rob!\") a jednu pre množné číslo (\"Robte!\"), pričom forma pre \"vykanie\" je rovnaká ako pre množné číslo tykania. Nemčina jasne rozlišuje medzi \"du\", \"ihr\" a \"Sie\" formami, a to aj v rozkazovacom spôsobe. Najväčší rozdiel je vo forme pre \"Sie\", kde sa sloveso v neurčitku dáva na prvé miesto a za ním nasleduje zámeno \"Sie\" (napr. \"Kommen Sie!\"), čo v slovenčine nemá priamu paralelu.\n    "
+    }
+  ],
   vocab: [
     {
-      de: "Montag",
-      sk: "pondelok",
-      example: "Am Montag habe ich eine Besprechung.",
-      exampleSk: "V pondelok mám poradu.",
-      gender: "M",
+      de: "das Hobby",
+      sk: "hobby",
+      gender: "N",
       srsId: "L21_V01",
+      example: "Mein Hobby ist Kochen.",
+      exampleSk: "Moje hobby je varenie.",
       recycledFrom: []
     },
     {
-      de: "Dienstag",
-      sk: "utorok",
-      example: "Dienstag ist mein Lieblingstag.",
-      exampleSk: "Utorok je môj obľúbený deň.",
-      gender: "M",
+      de: "die Freizeit",
+      sk: "voľný čas",
+      gender: "F",
       srsId: "L21_V02",
+      example: "Was machst du in deiner Freizeit?",
+      exampleSk: "Čo robíš vo svojom voľnom čase?",
       recycledFrom: []
     },
     {
-      de: "Mittwoch",
-      sk: "streda",
-      example: "Mittwoch ist die Wochenmitte.",
-      exampleSk: "Streda je uprostred týždňa.",
-      gender: "M",
+      de: "das Fahrrad",
+      sk: "bicykel",
+      gender: "N",
       srsId: "L21_V03",
+      example: "Ich fahre gern Fahrrad.",
+      exampleSk: "Rád/rada bicyklujem.",
       recycledFrom: []
     },
     {
-      de: "Donnerstag",
-      sk: "štvrtok",
-      example: "Am Donnerstag arbeite ich von zu Hause.",
-      exampleSk: "V štvrtok pracujem z domu.",
-      gender: "M",
+      de: "die Gitarre",
+      sk: "gitara",
+      gender: "F",
       srsId: "L21_V04",
+      example: "Petra spielt gern Gitarre.",
+      exampleSk: "Petra rada hrá na gitare.",
       recycledFrom: []
     },
     {
-      de: "Freitag",
-      sk: "piatok",
-      example: "Freitagabend gehe ich aus.",
-      exampleSk: "V piatok večer idem von.",
-      gender: "M",
+      de: "das Buch",
+      sk: "kniha",
+      gender: "N",
       srsId: "L21_V05",
+      example: "Ich lese gern Bücher.",
+      exampleSk: "Rád/rada čítam knihy.",
       recycledFrom: []
     },
     {
-      de: "Samstag ⚠️ (= Sonnabend in Norddeutschland)",
-      sk: "sobota",
-      example: "Am Samstag schlafe ich lang.",
-      exampleSk: "V sobotu dlho spím.",
+      de: "der Sport",
+      sk: "šport",
       gender: "M",
       srsId: "L21_V06",
+      example: "Ich mache gern Sport.",
+      exampleSk: "Rád/rada športujem.",
       recycledFrom: []
     },
     {
-      de: "Sonntag",
-      sk: "nedeľa",
-      example: "Sonntag ist ein Ruhetag.",
-      exampleSk: "Nedeľa je deň odpočinku.",
+      de: "der Film",
+      sk: "film",
       gender: "M",
       srsId: "L21_V07",
+      example: "Wir sehen gern Filme.",
+      exampleSk: "Radi pozeráme filmy.",
       recycledFrom: []
     },
     {
-      de: "das Wochenende",
-      sk: "víkend",
-      example: "Am Wochenende fahre ich nach Bratislava.",
-      exampleSk: "Cez víkend cestujem do Bratislavy.",
-      gender: "N",
+      de: "die Musik",
+      sk: "hudba",
+      gender: "F",
       srsId: "L21_V08",
+      example: "Hörst du gern Musik?",
+      exampleSk: "Počúvaš rád/rada hudbu?",
       recycledFrom: []
     },
     {
-      de: "heute",
-      sk: "dnes",
-      example: "Heute ist Montag.",
-      exampleSk: "Dnes je pondelok.",
-      gender: null,
-      srsId: "L21_V09",
-      recycledFrom: []
-    },
-    {
-      de: "gestern",
-      sk: "včera",
-      example: "Gestern war Sonntag.",
-      exampleSk: "Včera bola nedeľa.",
-      gender: null,
-      srsId: "L21_V10",
-      recycledFrom: []
-    },
-    {
-      de: "morgen ⚠️",
-      sk: "zajtra",
-      example: "Morgen fliege ich nach Wien.",
-      exampleSk: "Zajtra letím do Viedne.",
-      gender: null,
-      srsId: "L21_V11",
-      recycledFrom: []
-    },
-    {
-      de: "übermorgen",
-      sk: "pozajtra",
-      example: "Übermorgen kommt mein Bruder.",
-      exampleSk: "Pozajtra prichádza môj brat.",
-      gender: null,
-      srsId: "L21_V12",
-      recycledFrom: []
-    },
-    {
-      de: "der Alltag",
-      sk: "každodenný život",
-      example: "Der Alltag in Wien macht Spaß.",
-      exampleSk: "Každodenný život vo Viedni je zábavný.",
+      de: "der Freund",
+      sk: "priateľ",
       gender: "M",
+      srsId: "L21_V09",
+      example: "Ich treffe gern Freunde.",
+      exampleSk: "Rád/rada sa stretávam s priateľmi.",
+      recycledFrom: []
+    },
+    {
+      de: "die Freundin",
+      sk: "priateľka",
+      gender: "F",
+      srsId: "L21_V10",
+      example: "Meine Freundin heißt Anna.",
+      exampleSk: "Moja priateľka sa volá Anna.",
+      recycledFrom: []
+    },
+    {
+      de: "der Spaziergang",
+      sk: "prechádzka",
+      gender: "M",
+      srsId: "L21_V11",
+      example: "Wir machen gern einen Spaziergang.",
+      exampleSk: "Radi ideme na prechádzku.",
+      recycledFrom: []
+    },
+    {
+      de: "der Garten",
+      sk: "záhrada",
+      gender: "M",
+      srsId: "L21_V12",
+      example: "Ich arbeite gern im Garten.",
+      exampleSk: "Rád/rada pracujem v záhrade.",
+      recycledFrom: []
+    },
+    {
+      de: "die Reise",
+      sk: "cesta, výlet",
+      gender: "F",
       srsId: "L21_V13",
+      example: "Wir machen gern Reisen.",
+      exampleSk: "Radi cestujeme.",
       recycledFrom: []
     },
     {
-      de: "zuerst",
-      sk: "najprv / po prvé",
-      example: "Zuerst frühstücke ich.",
-      exampleSk: "Najprv raňajkujem.",
-      gender: null,
+      de: "der Kurs",
+      sk: "kurz",
+      gender: "M",
       srsId: "L21_V14",
+      example: "Ich besuche einen Deutschkurs.",
+      exampleSk: "Navštevujem kurz nemčiny.",
       recycledFrom: []
     },
     {
-      de: "dann",
-      sk: "potom",
-      example: "Dann fahre ich ins Büro.",
-      exampleSk: "Potom cestujem do kancelárie.",
+      de: "fahren",
+      sk: "jazdiť, ísť (vozidlom)",
       gender: null,
       srsId: "L21_V15",
+      example: "Ich fahre gern Fahrrad.",
+      exampleSk: "Rád/rada bicyklujem.",
       recycledFrom: []
     },
     {
-      de: "danach",
-      sk: "potom / po tom",
-      example: "Danach esse ich zu Mittag.",
-      exampleSk: "Potom obedujem.",
+      de: "spielen",
+      sk: "hrať (sa)",
       gender: null,
       srsId: "L21_V16",
+      example: "Spielt ihr gern Gitarre?",
+      exampleSk: "Hráte radi na gitare?",
       recycledFrom: []
     },
     {
-      de: "zuletzt / am Ende",
-      sk: "nakoniec",
-      example: "Zuletzt gehe ich ins Bett.",
-      exampleSk: "Nakoniec idem spať.",
+      de: "kochen",
+      sk: "variť",
       gender: null,
       srsId: "L21_V17",
+      example: "Carlos kocht gern.",
+      exampleSk: "Carlos rád varí.",
       recycledFrom: []
     },
     {
-      de: "das Frühstück",
-      sk: "raňajky",
-      example: "Das Frühstück um 7 Uhr.",
-      exampleSk: "Raňajky o 7:00.",
-      gender: "N",
+      de: "lesen",
+      sk: "čítať",
+      gender: null,
       srsId: "L21_V18",
+      example: "Ich lese jeden Abend ein Buch.",
+      exampleSk: "Každý večer čítam knihu.",
       recycledFrom: []
     },
     {
-      de: "das Mittagessen",
-      sk: "obed",
-      example: "Das Mittagessen um 12 Uhr.",
-      exampleSk: "Obed o 12:00.",
-      gender: "N",
+      de: "hören",
+      sk: "počuť, počúvať",
+      gender: null,
       srsId: "L21_V19",
+      example: "Hört ihr gern Musik?",
+      exampleSk: "Počúvate radi hudbu?",
       recycledFrom: []
     },
     {
-      de: "das Abendessen",
-      sk: "večera",
-      example: "Das Abendessen um 19 Uhr.",
-      exampleSk: "Večera o 19:00.",
-      gender: "N",
+      de: "gern",
+      sk: "rád/rada",
+      gender: null,
       srsId: "L21_V20",
+      example: "Ich tanze gern.",
+      exampleSk: "Rád/rada tancujem.",
+      recycledFrom: []
+    },
+    {
+      de: "oft",
+      sk: "často",
+      gender: null,
+      srsId: "L21_V21",
+      example: "Ich gehe oft ins Kino.",
+      exampleSk: "Často chodím do kina.",
+      recycledFrom: []
+    },
+    {
+      de: "manchmal",
+      sk: "niekedy",
+      gender: null,
+      srsId: "L21_V22",
+      example: "Manchmal lese ich ein Buch.",
+      exampleSk: "Niekedy čítam knihu.",
+      recycledFrom: []
+    },
+    {
+      de: "Was machst du gern?",
+      sk: "Čo rád/rada robíš?",
+      gender: null,
+      srsId: "L21_V23",
+      example: "Anna fragt: \"Was machst du gern?\"",
+      exampleSk: "Anna sa pýta: \"Čo rád/rada robíš?\"",
+      recycledFrom: []
+    },
+    {
+      de: "Ich gehe gern spazieren.",
+      sk: "Rád/rada chodím na prechádzky.",
+      gender: null,
+      srsId: "L21_V24",
+      example: "Jana und Petra gehen gern spazieren.",
+      exampleSk: "Jana a Petra rady chodia na prechádzky.",
+      recycledFrom: []
+    },
+    {
+      de: "Ich mache gern Sport.",
+      sk: "Rád/rada športujem.",
+      gender: null,
+      srsId: "L21_V25",
+      example: "Ich mache gern Sport am Wochenende.",
+      exampleSk: "Rád/rada športujem cez víkend.",
       recycledFrom: []
     }
   ],
-
   exercises: [
     {
       type: "flashcard",
-      instruction: "Prezri si slovíčka. Prelistuj kartičky a zapamätaj si nemecké výrazy.",
-      items: [
-        "Montag = pondelok",
-        "Dienstag = utorok",
-        "Mittwoch = streda",
-        "Donnerstag = štvrtok",
-        "Freitag = piatok",
-        "Samstag = sobota",
-        "Sonntag = nedeľa",
-        "das Wochenende = víkend",
-        "heute = dnes",
-        "gestern = včera",
-        "morgen = zajtra",
-        "übermorgen = pozajtra",
-        "der Alltag = každodenný život",
-        "zuerst = najprv",
-        "dann = potom",
-        "danach = potom / po tom",
-        "zuletzt = nakoniec",
-        "das Frühstück = raňajky",
-        "das Mittagessen = obed",
-        "das Abendessen = večera"
+      instruction: "Prezri si slovíčka tejto lekcie. Klikni na kartičku pre preklad."
+    },
+    {
+      type: "match",
+      instruction: "Priraď nemecké slová k ich slovenským prekladom.",
+      pairs: [
+        [
+          "das Hobby",
+          "hobby"
+        ],
+        [
+          "die Freizeit",
+          "voľný čas"
+        ],
+        [
+          "das Fahrrad",
+          "bicykel"
+        ],
+        [
+          "die Gitarre",
+          "gitara"
+        ],
+        [
+          "das Buch",
+          "kniha"
+        ],
+        [
+          "der Sport",
+          "šport"
+        ],
+        [
+          "der Film",
+          "film"
+        ],
+        [
+          "die Musik",
+          "hudba"
+        ],
+        [
+          "der Spaziergang",
+          "prechádzka"
+        ],
+        [
+          "die Reise",
+          "cesta, výlet"
+        ]
+      ]
+    },
+    {
+      type: "wordorder",
+      instruction: "Usporiadaj slová tak, aby vytvorili správnu nemeckú vetu.",
+      sentences: [
+        {
+          words: [
+            "Ich",
+            "gern",
+            "spiele",
+            "Gitarre"
+          ],
+          correct: "Ich spiele gern Gitarre",
+          hint: "Rád/rada hrám na gitare.",
+          explanation: "Sloveso 'spielen' je na druhom mieste. 'Gern' stojí za slovesom alebo predmetom, ak nie je súčasťou modálneho slovesa."
+        },
+        {
+          words: [
+            "Du",
+            "musst",
+            "lernen",
+            "Deutsch"
+          ],
+          correct: "Du musst Deutsch lernen",
+          hint: "Musíš sa učiť nemčinu.",
+          explanation: "Modálne sloveso 'müssen' je na druhom mieste, plnovýznamové sloveso 'lernen' stojí na konci vety v infinitive. (Pozri: Satzstellung mit Modalverben)"
+        },
+        {
+          words: [
+            "Lies",
+            "das",
+            "Buch"
+          ],
+          correct: "Lies das Buch",
+          hint: "Prečítaj tú knihu!",
+          explanation: "Toto je rozkazovací spôsob pre 'du' formu slovesa 'lesen', ktoré má zmenu kmeňovej samohlásky (e -> ie). (Pozri: Der Imperativ)"
+        },
+        {
+          words: [
+            "Sie",
+            "bitte",
+            "fahren",
+            "Fahrrad"
+          ],
+          correct: "Fahren Sie bitte Fahrrad",
+          hint: "Jazdite, prosím, na bicykli!",
+          explanation: "Toto je rozkazovací spôsob pre 'Sie' formu. Sloveso je na prvom mieste, za ním zámeno 'Sie'. 'Bitte' sa často používa na zjemnenie rozkazu. (Pozri: Der Imperativ)"
+        },
+        {
+          words: [
+            "möchten",
+            "Wir",
+            "eine",
+            "machen",
+            "Reise"
+          ],
+          correct: "Wir möchten eine Reise machen",
+          hint: "Chceli by sme ísť na výlet.",
+          explanation: "Modálne sloveso 'möchten' je na druhom mieste, plnovýznamové sloveso 'machen' stojí na konci vety v infinitive. (Pozri: Satzstellung mit Modalverben)"
+        },
+        {
+          words: [
+            "kannst",
+            "gut",
+            "Du",
+            "kochen"
+          ],
+          correct: "Du kannst gut kochen",
+          hint: "Vieš dobre variť.",
+          explanation: "Modálne sloveso 'können' je na druhom mieste, plnovýznamové sloveso 'kochen' stojí na konci vety v infinitive. (Pozri: Satzstellung mit Modalverben)"
+        }
+      ]
+    },
+    {
+      type: "fill",
+      instruction: "Doplň správne slovo do vety.",
+      questions: [
+        {
+          sentence: "Ich ___ gern Sport.",
+          answer: "mache",
+          hint: "robiť",
+          explanation: "Fráza 'Sport machen' znamená 'športovať'. Pre zámeno 'ich' sa sloveso 'machen' časuje ako 'mache'."
+        },
+        {
+          sentence: "Was ___ du in deiner Freizeit?",
+          answer: "machst",
+          hint: "robiť",
+          explanation: "Pre zámeno 'du' sa sloveso 'machen' časuje ako 'machst'. Pýtame sa, čo robíš vo voľnom čase."
+        },
+        {
+          sentence: "Wir ___ Musik.",
+          answer: "hören",
+          hint: "počúvať",
+          explanation: "Pre zámeno 'wir' sa sloveso 'hören' časuje ako 'hören'."
+        },
+        {
+          sentence: "___ du ein Fahrrad?",
+          answer: "Hast",
+          hint: "mať",
+          explanation: "Sloveso 'haben' (mať) sa pre 'du' časuje ako 'hast'. V otázke je sloveso na prvom mieste. (L04)"
+        },
+        {
+          sentence: "Das ist ___ Hobby.",
+          answer: "mein",
+          hint: "môj",
+          explanation: "'Hobby' je stredného rodu (das Hobby), preto používame privlastňovacie zámeno 'mein' v nominatíve. (L08)"
+        },
+        {
+          sentence: "Ich ___ Deutsch.",
+          answer: "spreche",
+          hint: "hovoriť",
+          explanation: "Sloveso 'sprechen' (hovoriť) sa pre 'ich' časuje ako 'spreche'. (L03)"
+        },
+        {
+          sentence: "Er ___ einen Film sehen.",
+          answer: "möchte",
+          hint: "chcieť, priať si",
+          explanation: "Modálne sloveso 'möchten' (chcel by som) sa pre 'er' časuje ako 'möchte'. Plnovýznamové sloveso 'sehen' je na konci v infinitive."
+        },
+        {
+          sentence: "___ du bitte das Buch!",
+          answer: "Lies",
+          hint: "čítať",
+          explanation: "Rozkazovací spôsob pre 'du' formu slovesa 'lesen' je 'Lies'. Ide o nepravidelné sloveso so zmenou samohlásky. (Pozri: Der Imperativ)"
+        }
+      ]
+    },
+    {
+      type: "listen",
+      instruction: "Počúvaj a priraď nemecké slovo alebo frázu k slovenskému prekladu.",
+      questions: [
+        {
+          de: "das Hobby",
+          sk: "hobby"
+        },
+        {
+          de: "die Freizeit",
+          sk: "voľný čas"
+        },
+        {
+          de: "das Fahrrad",
+          sk: "bicykel"
+        },
+        {
+          de: "spielen",
+          sk: "hrať (sa)"
+        },
+        {
+          de: "lesen",
+          sk: "čítať"
+        },
+        {
+          de: "kochen",
+          sk: "variť"
+        },
+        {
+          de: "gern",
+          sk: "rád/rada"
+        },
+        {
+          de: "Ich mache gern Sport.",
+          sk: "Rád/rada športujem."
+        },
+        {
+          de: "Was machst du gern?",
+          sk: "Čo rád/rada robíš?"
+        },
+        {
+          de: "Ich gehe gern spazieren.",
+          sk: "Rád/rada chodím na prechádzky."
+        }
       ]
     },
     {
@@ -242,235 +580,381 @@
       instruction: "Vyber správnu odpoveď.",
       questions: [
         {
-          question: "Ako sa povie ‚v pondelok' po nemecky?",
-          options: ["in Montag", "am Montag", "bei Montag", "zu Montag"],
-          answer: "am Montag",
-          explanation: "Pred dňami v týždni používame predložku ‚am': am Montag, am Dienstag... Slovenčina používa ‚v' — to je hlavný rozdiel!"
+          question: "Ich ___ gut Deutsch sprechen.",
+          options: [
+            "kann",
+            "kannst",
+            "können",
+            "könnt"
+          ],
+          answer: 0,
+          explanation: "Pre zámeno 'ich' sa modálne sloveso 'können' (vedieť, môcť) časuje ako 'kann'. (Pozri: Modalverben im Präsens)"
         },
         {
-          question: "Jana hovorí: ‚___ gehe ich ins Büro.' Chce povedať ZAJTRA idem do kancelárie. Čo patrí do medzery?",
-          options: ["Am Morgen", "Morgen", "Gestern", "Übermorgen"],
-          answer: "Morgen",
-          explanation: "‚Morgen' ako príslovka = zajtra. Pozor: ‚Am Morgen' = ráno (der Morgen = ráno, podstatné meno)."
+          question: "Was ist dein Lieblings___?",
+          options: [
+            "Buch",
+            "Hobby",
+            "Film",
+            "Sport"
+          ],
+          answer: 1,
+          explanation: "Pýtame sa na obľúbenú záľubu, teda 'Hobby'. Ostatné možnosti sú tiež voľnočasové aktivity, ale 'Hobby' je najvhodnejšie slovo pre 'záľubu'."
         },
         {
-          question: "Ktorý sekvenčný výraz použijeme ako PRVÝ v poradí?",
-          options: ["danach", "zuletzt", "zuerst", "dann"],
-          answer: "zuerst",
-          explanation: "Správne poradie: zuerst (najprv) → dann (potom) → danach (po tom) → zuletzt (nakoniec)."
+          question: "___ du bitte das Fenster auf!",
+          options: [
+            "Mach",
+            "Macht",
+            "Machen",
+            "Mache"
+          ],
+          answer: 0,
+          explanation: "Rozkazovací spôsob pre 'du' formu slovesa 'machen' (robiť, otvoriť) je 'Mach'. (Pozri: Der Imperativ)"
         },
         {
-          question: "‚Včera bola nedeľa.' Ako to preložíme?",
-          options: ["Heute war Sonntag.", "Morgen war Sonntag.", "Gestern war Sonntag.", "Übermorgen war Sonntag."],
-          answer: "Gestern war Sonntag.",
-          explanation: "‚Gestern' = včera. ‚War' je minulý čas od ‚sein' (byť): ich bin → ich war."
+          question: "Ich lese ___ Bücher, aber nicht jeden Tag.",
+          options: [
+            "oft",
+            "gern",
+            "manchmal",
+            "immer"
+          ],
+          answer: 2,
+          explanation: "'Niekedy' (manchmal) sa hodí k 'ale nie každý deň'. 'Oft' (často) a 'immer' (vždy) by boli v rozpore s druhou časťou vety."
         },
         {
-          question: "Jana opisuje víkend: ‚___ schlafe ich lange.' Čo patrí na začiatok?",
-          options: ["Am Wochenende", "Im Wochenende", "Beim Wochenende", "Zu Wochenende"],
-          answer: "Am Wochenende",
-          explanation: "Víkend: ‚am Wochenende' — rovnako ako dni v týždni používame predložku ‚am'."
+          question: "Ich brauche ___ Stift.",
+          options: [
+            "ein",
+            "eine",
+            "einen",
+            "kein"
+          ],
+          answer: 2,
+          explanation: "'Stift' je maskulínum (der Stift). V akuzatíve pre neurčitý člen je 'einen'. (L17/L18)"
         },
         {
-          question: "Ktorý deň NENASLEDUJE bezprostredne po Donnerstag?",
-          options: ["Freitag", "Samstag", "Mittwoch", "Sonntag"],
-          answer: "Mittwoch",
-          explanation: "Poradie: Montag → Dienstag → Mittwoch → Donnerstag → Freitag → Samstag → Sonntag. Mittwoch je pred Donnerstag, nie po ňom."
-        }
-      ]
-    },
-    {
-      type: "fill",
-      instruction: "Doplň správne slovo do medzery ___.",
-      questions: [
-        {
-          sentence: "___ frühstücke ich, dann fahre ich ins Büro.",
-          answer: "Zuerst",
-          hint: "Prvý krok v poradí",
-          explanation: "‚Zuerst' = najprv. Začíname opisovať poradie činností."
+          question: "Slovenská fráza 'Čo rád/rada robíš?' preložená do nemčiny je:",
+          options: [
+            "Was machst du gern?",
+            "Was tust du gern?",
+            "Was magst du gern?",
+            "Was bist du gern?"
+          ],
+          answer: 0,
+          explanation: "Správna fráza pre 'Čo rád/rada robíš?' je 'Was machst du gern?'. Sloveso 'machen' sa používa pre aktivity."
         },
         {
-          sentence: "Am ___ habe ich eine Besprechung mit dem Chef.",
-          answer: "Montag",
-          hint: "Prvý deň pracovného týždňa",
-          explanation: "Pondelok = Montag. Pred dňami v týždni stojí ‚am'."
+          question: "Wir ___ in Bratislava.",
+          options: [
+            "wohne",
+            "wohnst",
+            "wohnt",
+            "wohnen"
+          ],
+          answer: 3,
+          explanation: "Pre zámeno 'wir' (my) sa sloveso 'wohnen' (bývať) časuje ako 'wohnen'. (L06)"
         },
         {
-          sentence: "___ war Sonntag, also war ich zu Hause.",
-          answer: "Gestern",
-          hint: "Deň pred dneškom",
-          explanation: "‚Gestern' = včera. Hovoríme o dni pred dnešným dňom."
-        },
-        {
-          sentence: "Das Abendessen ist ___, nach dem Mittagessen.",
-          answer: "danach",
-          hint: "Po obede nasleduje...",
-          explanation: "‚Danach' = potom / po tom. Používame ho na vyjadrenie, že niečo nasleduje po predchádzajúcej veci."
-        },
-        {
-          sentence: "Am ___ fahre ich nach Bratislava, weil ich meine Familie besuche.",
-          answer: "Wochenende",
-          hint: "Sobota a nedeľa spolu",
-          explanation: "‚Am Wochenende' = cez víkend. Zahŕňa Samstag aj Sonntag."
-        }
-      ]
-    },
-    {
-      type: "listen",
-      instruction: "Počúvaj nemecké vety a nájdi ich slovenský preklad.",
-      questions: [
-        { de: "Am Montag habe ich eine Besprechung.", sk: "V pondelok mám poradu." },
-        { de: "Heute ist Mittwoch.", sk: "Dnes je streda." },
-        { de: "Morgen fliege ich nach Wien.", sk: "Zajtra letím do Viedne." },
-        { de: "Zuerst frühstücke ich, dann fahre ich zur Arbeit.", sk: "Najprv raňajkujem, potom idem do práce." },
-        { de: "Am Wochenende schlafe ich lange.", sk: "Cez víkend dlho spím." },
-        { de: "Das Abendessen ist um 19 Uhr.", sk: "Večera je o 19:00." },
-        { de: "Gestern war Sonntag.", sk: "Včera bola nedeľa." },
-        { de: "Zuletzt gehe ich ins Bett.", sk: "Nakoniec idem spať." }
-      ]
-    },
-    {
-      type: "match",
-      instruction: "Spoj nemecké výrazy s ich slovenským prekladom.",
-      pairs: [
-        ["Montag", "pondelok"],
-        ["Donnerstag", "štvrtok"],
-        ["das Wochenende", "víkend"],
-        ["zuerst", "najprv"],
-        ["danach", "potom / po tom"],
-        ["das Mittagessen", "obed"],
-        ["übermorgen", "pozajtra"],
-        ["der Alltag", "každodenný život"]
-      ]
-    },
-    {
-      type: "dialogue",
-      instruction: "Prečítaj si dialóg medzi Janou a jej kolegom Thomasom. Diskutujú o plánoch na týždeň v pondelok ráno.",
-      lines: [
-        { speaker: "A", de: "Guten Morgen, Jana! Na, wie war das Wochenende?", sk: "Dobré ráno, Jana! No, aký bol víkend?" },
-        { speaker: "B", de: "Guten Morgen, Thomas! Das Wochenende war super — ich war in Bratislava bei meiner Familie.", sk: "Dobré ráno, Thomas! Víkend bol super — bola som v Bratislave u svojej rodiny." },
-        { speaker: "A", de: "Schön! Was machst du heute, am Montag?", sk: "Pekné! Čo robíš dnes, v pondelok?" },
-        { speaker: "B", de: "Heute habe ich zuerst eine Besprechung um 9 Uhr, dann arbeite ich am Bericht.", sk: "Dnes mám najprv poradu o 9:00, potom pracujem na správe." },
-        { speaker: "A", de: "Und am Mittwoch? Arbeitest du dann von zu Hause?", sk: "A v stredu? Pracuješ potom z domu?" },
-        { speaker: "B", de: "Ja, am Mittwoch arbeite ich von zu Hause. Zuerst mache ich E-Mails, danach habe ich ein Online-Meeting.", sk: "Áno, v stredu pracujem z domu. Najprv vybavím emaily, potom mám online stretnutie." },
-        { speaker: "A", de: "Was machst du am Donnerstag?", sk: "Čo robíš vo štvrtok?" },
-        { speaker: "B", de: "Am Donnerstag fahre ich zum Kunden nach Graz. Das ist weit!", sk: "V štvrtok cestujem k zákazníkovi do Grazu. To je ďaleko!" },
-        { speaker: "A", de: "Und am Freitagabend? Gehst du aus?", sk: "A v piatok večer? Ideš von?" },
-        { speaker: "B", de: "Ja! Zuerst esse ich mit Kollegen zu Abend, danach gehen wir ins Kino. Und am Wochenende — Bratislava!", sk: "Áno! Najprv večeriam s kolegmi, potom ideme do kina. A cez víkend — Bratislava!" }
-      ],
-      comprehensionQuestions: [
-        {
-          question: "Kde bola Jana cez víkend?",
-          answer: "Jana bola v Bratislave u svojej rodiny.",
-          options: ["V Grazi", "V Bratislave u rodiny", "Doma vo Viedni", "V kine"]
-        },
-        {
-          question: "Čo robí Jana v stredu ako prvé?",
-          answer: "Najprv vybavuje emaily.",
-          options: ["Má poradu", "Vybavuje emaily", "Ide do Grazu", "Pracuje na správe"]
-        },
-        {
-          question: "Kam Jana cestuje vo štvrtok?",
-          answer: "Jana cestuje k zákazníkovi do Grazu.",
-          options: ["Do Bratislavy", "Domov", "K zákazníkovi do Grazu", "Do kina"]
+          question: "Ich spiele gern ___.",
+          options: [
+            "das Buch",
+            "die Gitarre",
+            "der Sport",
+            "der Film"
+          ],
+          answer: 1,
+          explanation: "Na gitaru sa hrá ('Gitarre spielen'). Ostatné možnosti sa nehodia k slovesu 'spielen' v kontexte hrania na nástroji alebo hry."
         }
       ]
     },
     {
       type: "minitext",
-      instruction: "Prečítaj si Janin blogový príspevok a odpovedz na otázky.",
-      text:
-        "Meine erste Arbeitswoche in Wien ist fantastisch! Am Montag habe ich eine große Besprechung. Am Dienstag arbeite ich am Computer. Am Mittwoch esse ich mit Kollegen zu Mittag — sehr lecker! Am Donnerstag und Freitag bin ich sehr beschäftigt. Am Wochenende fahre ich nach Bratislava. Zuerst schlafe ich lange, dann besuche ich meine Familie. Der Alltag in Wien macht wirklich Spaß!",
-      textSk:
-        "Môj prvý pracovný týždeň vo Viedni je fantastický! V pondelok mám veľkú poradu. V utorok pracujem na počítači. V stredu obedujem s kolegmi — veľmi chutné! Vo štvrtok a piatok som veľmi zaneprázdnená. Cez víkend cestujem do Bratislavy. Najprv dlho spím, potom navštívim rodinu. Každodenný život vo Viedni je naozaj zábavný!",
+      instruction: "Lies den Dialog und beantworte die Fragen.",
+      text: "Anna: Hallo zusammen! Schön, dass wir uns nach dem Deutschkurs treffen.\nJana: Ja, super! Endlich Freitagabend!\nAnna: Sagt mal, was macht ihr gern in eurer Freizeit? Habt ihr Hobbys?\nJana: Ich fahre gern Fahrrad. Das ist mein Sport. Manchmal lese ich auch ein Buch.\nPetra: Ich spiele gern Gitarre. Ich höre auch viel Musik.\nCarlos: Ich koche sehr gern – natürlich! Das ist mein großes Hobby.\nAnna: Das sind schöne Hobbys! Wisst ihr, ich gehe gern spazieren.\nJana: Ich auch! Besonders am Wochenende.\nPetra: Ich auch! Spaziergänge sind toll.\nCarlos: Ich auch! Das ist ja super! Wir alle gehen gern spazieren!\nAnna: Ja, das ist unser gemeinsames Hobby! Gehen wir morgen zusammen spazieren?\nJana: Gerne!",
+      textSk: "Anna: Ahojte všetci! Pekné, že sa stretávame po kurze nemčiny.\nJana: Áno, super! Konečne piatkový večer!\nAnna: Povedzte, čo robíte radi vo svojom voľnom čase? Máte nejaké koníčky?\nJana: Rada bicyklujem. To je môj šport. Niekedy si tiež prečítam knihu.\nPetra: Rada hrám na gitare. Tiež počúvam veľa hudby.\nCarlos: Veľmi rád varím – samozrejme! To je môj veľký koníček.\nAnna: To sú pekné koníčky! Viete, ja rada chodím na prechádzky.\nJana: Ja tiež! Obzvlášť cez víkend.\nPetra: Ja tiež! Prechádzky sú super.\nCarlos: Ja tiež! To je super! Všetci radi chodíme na prechádzky!\nAnna: Áno, to je náš spoločný koníček! Pôjdeme zajtra spolu na prechádzku?\nJana: Rada!",
       questions: [
         {
-          question: "Čo robí Jana v stredu?",
-          answer: "V stredu obedujem s kolegmi.",
-          options: ["Má poradu", "Pracuje na počítači", "Obedujem s kolegmi", "Cestuje do Bratislavy"]
+          question: "Was macht Jana gern?",
+          options: [
+            "Sie spielt Gitarre.",
+            "Sie fährt gern Fahrrad.",
+            "Sie kocht gern.",
+            "Sie hört Musik."
+          ],
+          answer: 1,
+          explanation: "Jana sagt: \"Ich fahre gern Fahrrad.\""
         },
         {
-          question: "Čo robí Jana AKO PRVÉ cez víkend?",
-          answer: "Najprv dlho spí.",
-          options: ["Navštívi rodinu", "Ide do práce", "Dlho spí", "Varí večeru"]
+          question: "Welches Hobby hat Carlos?",
+          options: [
+            "Er liest Bücher.",
+            "Er spielt Gitarre.",
+            "Er kocht sehr gern.",
+            "Er fährt Fahrrad."
+          ],
+          answer: 2,
+          explanation: "Carlos sagt: \"Ich koche sehr gern – natürlich!\""
         },
         {
-          question: "Ako Jana hodnotí každodenný život vo Viedni?",
-          answer: "Hovorí, že každodenný život vo Viedni je naozaj zábavný.",
-          options: ["Je nudný", "Je ťažký", "Je zábavný", "Je drahý"]
-        }
-      ]
-    },
-    {
-      type: "wordorder",
-      instruction: "Zoraď slová do správnej nemeckej vety.",
-      sentences: [
-        {
-          words: ["Ich", "fahre", "mit", "der", "U-Bahn", "zur", "Arbeit"],
-          correct: "Ich fahre mit der U-Bahn zur Arbeit",
-          hint: "Cestujem do práce U-Bahou.",
-          explanation: "'Mit' vyžaduje datív: die U-Bahn → mit der U-Bahn."
+          question: "Welches gemeinsame Hobby entdecken Jana, Petra, Carlos und Anna?",
+          options: [
+            "Sie kochen gern.",
+            "Sie spielen gern Gitarre.",
+            "Sie fahren gern Fahrrad.",
+            "Sie gehen gern spazieren."
+          ],
+          answer: 3,
+          explanation: "Anna sagt: \"Ich gehe gern spazieren.\" und Carlos sagt: \"Wir alle gehen gern spazieren!\""
         },
         {
-          words: ["Jana", "kommt", "aus", "der", "Slowakei"],
-          correct: "Jana kommt aus der Slowakei",
-          hint: "Jana pochádza zo Slovenska.",
-          explanation: "'Aus' vyžaduje datív: die Slowakei → aus der Slowakei."
-        },
-        {
-          words: ["Wir", "gehen", "nach", "der", "Arbeit", "einkaufen"],
-          correct: "Wir gehen nach der Arbeit einkaufen",
-          hint: "Ideme nakupovať po práci.",
-          explanation: "'Nach' s časovým významom vyžaduje datív: die Arbeit → nach der Arbeit."
-        },
-        {
-          words: ["Ich", "lerne", "seit", "einem", "Jahr", "Deutsch"],
-          correct: "Ich lerne seit einem Jahr Deutsch",
-          hint: "Učím sa nemčinu jeden rok.",
-          explanation: "'Seit' vyžaduje datív: ein Jahr → seit einem Jahr."
-        },
-        {
-          words: ["Das", "Café", "ist", "bei", "dem", "Bahnhof"],
-          correct: "Das Café ist bei dem Bahnhof",
-          hint: "Kaviareň je pri stanici.",
-          explanation: "'Bei' vyžaduje datív: der Bahnhof → bei dem Bahnhof (=beim Bahnhof)."
+          question: "Wann treffen sich die Freunde?",
+          options: [
+            "Am Morgen.",
+            "Am Wochenende.",
+            "Nach dem Deutschkurs am Freitagabend.",
+            "Am Montag."
+          ],
+          answer: 2,
+          explanation: "Anna sagt: \"Schön, dass wir uns nach dem Deutschkurs treffen.\" und Jana sagt: \"Endlich Freitagabend!\""
         }
       ]
     },
     {
       type: "speaking",
-      instruction: "Počúvaj nemeckú vetu. Potom hovor nahlas a skontroluj sa.",
+      instruction: "Höre zu und sprich nach.",
       phrases: [
         {
-          de: "Ich fahre mit der U-Bahn nach Erdberg.",
-          sk: "Cestujem U-Bahou do Erdbergu.",
-          tip: "mit=[datív], nach=[datív]"
+          de: "das Hobby",
+          sk: "hobby",
+          tip: "H je dychové [h]. O je krátke."
         },
         {
-          de: "Ich gehe mit meiner Kollegin einkaufen.",
-          sk: "Idem nakupovať s kolegkyňou.",
-          tip: "mit+der Kollegin=datív ž. rodu"
+          de: "die Freizeit",
+          sk: "voľný čas",
+          tip: "Z je [ts] ako v 'cesta'. ei ako [aj]."
         },
         {
-          de: "Nach der Arbeit gehe ich in den Supermarkt.",
-          sk: "Po práci idem do supermarketu.",
-          tip: "nach+der Arbeit=datív"
+          de: "gern lesen",
+          sk: "rád/rada čítať",
+          tip: "G je tvrdé [g]. S v 'lesen' je znelé [z]."
         },
         {
-          de: "Von der Haltestelle sind es fünf Minuten.",
-          sk: "Od zastávky je to päť minút.",
-          tip: "von+der Haltestelle=datív ž. r."
+          de: "Musik hören",
+          sk: "počúvať hudbu",
+          tip: "U je dlhé. S v 'Musik' je [z]. ö je [ø]."
         },
         {
-          de: "Ich wohne seit drei Wochen in Wien.",
-          sk: "Bývam vo Viedni tri týždne.",
-          tip: "seit+drei Wochen=datív"
+          de: "Was machst du gern?",
+          sk: "Čo rád/rada robíš?",
+          tip: "W je [v]. ch po 'a' je tvrdé [x]."
+        },
+        {
+          de: "Ich spiele gern Gitarre.",
+          sk: "Rád/rada hrám na gitare.",
+          tip: "Ich: ch je mäkké [ç]. Sp: [ʃp]."
+        },
+        {
+          de: "Ich fahre gern Fahrrad.",
+          sk: "Rád/rada jazdím na bicykli.",
+          tip: "A v 'fahre' a 'Fahrrad' je dlhé [a:]. R je jemné."
+        }
+      ]
+    },
+    {
+      type: "truefalse",
+      instruction: "Prečítajte si nasledujúce tvrdenia o nemeckej gramatike a rozhodnite, či sú pravdivé (Wahr) alebo nepravdivé (Falsch).",
+      statements: [
+        {
+          statement: "Pri modálnych slovesách stojí časované modálne sloveso na druhom mieste vo vete a druhé sloveso (infinitív) ide na koniec vety.",
+          isTrue: true,
+          explanation: "Áno, toto je základné pravidlo pre vetnú štruktúru s modálnymi slovesami v nemčine. Napríklad: 'Ich muss heute lernen.'"
+        },
+        {
+          statement: "Forma rozkazovacieho spôsobu pre 'du' (ty) sa tvorí tak, že od slovesa v prítomnom čase pre 'du' odstránime zámeno 'du' a koncovku '-st' (ak tam je).",
+          isTrue: true,
+          explanation: "Správne. Napríklad: 'Du spielst Gitarre.' → 'Spiel Gitarre!'. Pri silných slovesách so zmenou samohlásky (napr. 'lesen' → 'liest') sa mení aj v rozkazovacom spôsobe: 'Lies das Buch!'"
+        },
+        {
+          statement: "Vo vete 'Ich möchte gern Sport machen.' je slovo 'gern' modálne sloveso.",
+          isTrue: false,
+          explanation: "Nie, to nie je pravda. 'Möchte' je modálne sloveso (forma od 'mögen'), zatiaľ čo 'gern' je príslovka, ktorá vyjadruje, že niečo robíme radi. 'Gern' nie je sloveso."
+        },
+        {
+          statement: "Vo vete 'Wir müssen oft Fahrrad fahren.' ide sloveso 'fahren' na druhé miesto vo vete.",
+          isTrue: false,
+          explanation: "Nepravda. Na druhom mieste je časované modálne sloveso 'müssen'. Sloveso 'fahren' ide na koniec vety v infinitive."
+        },
+        {
+          statement: "Ak chceme niekomu formálne povedať, aby išiel na prechádzku, povieme: 'Gehen Sie spazieren!'",
+          isTrue: true,
+          explanation: "Áno, toto je správna forma rozkazovacieho spôsobu pre formálne oslovenie 'Sie'. Sloveso je v infinitive a zámeno 'Sie' zostáva."
+        }
+      ]
+    },
+    {
+      type: "dictation",
+      instruction: "Počúvajte nahrávky a zapíšte, čo počujete. Každá veta sa prehrá dvakrát.",
+      sentences: [
+        {
+          de: "Ich lese.",
+          sk: "Čítam."
+        },
+        {
+          de: "Hör Musik!",
+          sk: "Počúvaj hudbu!"
+        },
+        {
+          de: "Wir spielen gern.",
+          sk: "Radi sa hráme."
+        },
+        {
+          de: "Du musst kochen.",
+          sk: "Musíš variť."
+        },
+        {
+          de: "Möchtest du einen Film sehen?",
+          sk: "Chcel/a by si vidieť film?"
+        }
+      ]
+    },
+    {
+      type: "categorysort",
+      instruction: "Roztrieďte nasledujúce nemecké podstatné mená do kategórií podľa ich rodu (člena).",
+      categories: [
+        {
+          name: "Der (mužský rod)",
+          color: "blue",
+          words: [
+            "der Sport",
+            "der Film",
+            "der Freund",
+            "der Spaziergang",
+            "der Kurs"
+          ]
+        },
+        {
+          name: "Die (ženský rod)",
+          color: "rose",
+          words: [
+            "die Freizeit",
+            "die Gitarre",
+            "die Musik",
+            "die Freundin",
+            "die Reise"
+          ]
+        },
+        {
+          name: "Das (stredný rod)",
+          color: "green",
+          words: [
+            "das Hobby",
+            "das Fahrrad",
+            "das Buch"
+          ]
+        }
+      ],
+      explanation: "V nemčine majú podstatné mená tri rody: mužský (der), ženský (die) a stredný (das). Je dôležité učiť sa podstatné mená vždy aj s ich členom, pretože rod ovplyvňuje gramatiku vety."
+    },
+    {
+      type: "translation",
+      instruction: "Preložte nasledujúce vety zo slovenčiny do nemčiny. Použite slovnú zásobu a gramatiku z tejto lekcie.",
+      sentences: [
+        {
+          sk: "Rád/rada čítam knihy.",
+          answer: "Ich lese gern Bücher.",
+          hint: "gern, lesen",
+          explanation: "Na vyjadrenie obľuby používame príslovku 'gern' za slovesom. 'Bücher' je množné číslo od 'das Buch'."
+        },
+        {
+          sk: "Musíte ísť na bicykli. (formálne 'Vy')",
+          answer: "Sie müssen Fahrrad fahren.",
+          hint: "müssen, Fahrrad",
+          explanation: "Modálne sloveso 'müssen' sa časuje pre 'Sie' (formálne Vy), zatiaľ čo druhé sloveso 'fahren' ide na koniec vety v infinitive. 'Fahrrad fahren' je ustálené spojenie."
+        },
+        {
+          sk: "Chceš variť?",
+          answer: "Möchtest du kochen?",
+          hint: "möchten, kochen",
+          explanation: "Modálne sloveso 'möchten' (chcieť/prijať si) sa časuje pre 'du'. Sloveso 'kochen' je na konci vety v infinitive. Pri otázke ide časované sloveso na prvé miesto."
+        },
+        {
+          sk: "Hrajte na gitare! (viacerým osobám)",
+          answer: "Spielt Gitarre!",
+          hint: "spielen, Gitarre",
+          explanation: "Toto je rozkazovací spôsob pre 'ihr' (vy, množné číslo). Odstránime zámeno 'ihr' a sloveso 'spielen' zostáva v tvare pre 'ihr' (spielen → spielt)."
+        }
+      ]
+    },
+    {
+      type: "conjugation",
+      instruction: "Vyčasujte nasledujúce slovesá v prítomnom čase (Präsens).",
+      verbs: [
+        {
+          infinitive: "lesen",
+          translation: "čítať",
+          forms: [
+            {
+              pronoun: "ich",
+              correct: "lese"
+            },
+            {
+              pronoun: "du",
+              correct: "liest"
+            },
+            {
+              pronoun: "er/sie/es",
+              correct: "liest"
+            },
+            {
+              pronoun: "wir",
+              correct: "lesen"
+            },
+            {
+              pronoun: "ihr",
+              correct: "lest"
+            },
+            {
+              pronoun: "sie/Sie",
+              correct: "lesen"
+            }
+          ],
+          note: "Sloveso 'lesen' je silné sloveso. V druhej a tretej osobe jednotného čísla ('du', 'er/sie/es') dochádza k zmene kmeňovej samohlásky 'e' na 'ie'."
+        },
+        {
+          infinitive: "können",
+          translation: "môcť, vedieť",
+          forms: [
+            {
+              pronoun: "ich",
+              correct: "kann"
+            },
+            {
+              pronoun: "du",
+              correct: "kannst"
+            },
+            {
+              pronoun: "er/sie/es",
+              correct: "kann"
+            },
+            {
+              pronoun: "wir",
+              correct: "können"
+            },
+            {
+              pronoun: "ihr",
+              correct: "könnt"
+            },
+            {
+              pronoun: "sie/Sie",
+              correct: "können"
+            }
+          ],
+          note: "Modálne sloveso 'können' je nepravidelné. V jednotnom čísle mení kmeňovú samohlásku 'ö' na 'a' a prvá a tretia osoba jednotného čísla ('ich', 'er/sie/es') nemajú koncovku."
         }
       ]
     }
   ],
-
-  reviewWords: ["L19_V01", "L19_V09", "L20_V03", "L20_V08"],
-  lessonNotes:
-    "Pozor na dvojitý význam slova ‚morgen': ako príslovka = zajtra, ako podstatné meno ‚der Morgen' = ráno. Sekvenčné príslovky (zuerst, dann, danach, zuletzt) sú kľúčové na opis denného harmonogramu — precvič ich poradím!"
+  reviewWords: []
 };

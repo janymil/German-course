@@ -1,240 +1,533 @@
-﻿export const lesson27 = {
+export const lesson27 = {
   id: 27,
   week: 6,
   day: 2,
-  title: "Einkaufen — Im Supermarkt",
-  topic: "Nakupovanie — v supermarkete",
+  title: "Wann hast du Zeit? Wir müssen planen!",
+  topic: "Dohodnutie stretnutia (hast du Zeit?). Sloveso wissen.",
   cefr: "A1",
-  xpReward: 30,
-  narrativeContext:
-    "Janas Familie ist in Wien! Für das Abendessen zu Hause muss Jana einkaufen. Sie fährt mit ihrer Mutter in den Supermarkt. 'Wie viel kostet ein Kilo Tomaten?' Jana erkennt, dass schönes Kochen und schönes Deutsch zusammenpassen!",
-  communicativeGoal:
-    "Po tejto lekcii viem nakupovať potraviny v supermarkete, pýtať sa na ceny, množstvá a používام akuzatív pri nákupoch.",
-  skillFocus: ["vocabulary", "grammar", "speaking", "listening"],
-
-  grammarNote: {
-    rule: "Akuzatív pri nákupe + množstevné výrazy",
-    explanation:
-      "Pri nakupovaní používame akuzatív: ‚Ich kaufe einen Apfel' (M → einen), ‚Ich möchte eine Flasche Wasser' (F → eine), ‚Ich brauche ein Brot' (N → ein). Množstevné výrazy: ein Kilo, eine Flasche, ein Liter, eine Dose, ein Glas, ein Stück, ein Paket. Kľúč: po množstevných výrazoch zostáva podstatné meno v nominatíve! ‚Ein Kilo Tomaten' — nie genitivu ako v slovenčine!",
-    examples: [
-      { de: "Ich kaufe einen Apfel. (M, Akk.)", sk: "Kupujem jablko." },
-      { de: "Ich möchte eine Flasche Wasser. (F, Akk.)", sk: "Chcel by som fľašu vody." },
-      { de: "Ich brauche ein Kilo Tomaten.", sk: "Potrebujem kilogram paradajok." },
-      { de: "Eine Dose Tomaten, bitte.", sk: "Plechovku paradajok, prosím." },
-      { de: "Wie viel kostet ein Stück Käse?", sk: "Koľko stojí kúsok syra?" }
-    ],
-    slovakContrastNote:
-      "Slovenčina používa genitív po množstevných výrazoch: ‚kilogram paradajok' (paradajky → paradajok, genitív množného čísla). Nemčina je tu oveľa jednoduchšia — substantívum zostáva v nominatíve: ‚ein Kilo Tomaten' (nie ‚Tomatenen' alebo niečo podobné). Toto je jeden z príkladov, kde je nemčina jednoduchšia ako slovenčina!"
-  },
-
+  xpReward: 20,
+  narrativeContext: "Jana und Petra wollen sich treffen. Aber Petra hat heute keine Zeit. Sie müssen einen neuen Termin finden.",
+  communicativeGoal: "Nach dieser Lektion kann ich fragen, wann jemand Zeit hat und das Verb „wissen“ benutzen.",
+  skillFocus: [
+    "vocabulary",
+    "grammar",
+    "speaking",
+    "writing",
+    "reading",
+    "listening"
+  ],
+  lessonNotes: "V tejto lekcii sa naučíme, ako sa pýtať na čas a dohodnúť si stretnutie, keď sa plány zmenia. Zameriame sa na užitočné frázy ako 'Hast du Zeit?' a precvičíme si sloveso 'wissen' v prítomnom čase. Budeme čítať krátku konverzáciu a písať vlastné odpovede.",
+  grammarNotes: [
+    {
+      rule: "Termine vereinbaren: Zeit und Verfügbarkeit erfragen",
+      explanation: "<p>Na dohodnutie stretnutia alebo opýtanie sa na dostupnosť v nemčine používame niekoľko užitočných fráz. Základnou otázkou je <strong>„Hast du Zeit?“</strong> (Máš čas?). Ak chceme byť konkrétnejší, pridáme časový údaj, napríklad <strong>„Hast du am Samstag Zeit?“</strong> (Máš v sobotu čas?).</p><p>Ďalším dôležitým slovesom je <strong>„passen“</strong>, ktoré znamená „vyhovovať“ alebo „hodiť sa“. Toto sloveso sa vždy spája s <strong>datívom</strong> (komu/čomu), napríklad <strong>„Passt es <em>dir</em>?“</strong> (Vyhovuje ti to?). Ak nám niečo vyhovuje, povieme <strong>„Ja, das passt mir gut.“</strong> (Áno, to mi dobre vyhovuje.). Ak nie, môžeme povedať <strong>„Nein, da habe ich leider keine Zeit.“</strong> (Nie, vtedy bohužiaľ nemám čas.).</p><p>Na navrhovanie stretnutí môžeme použiť aj modálne sloveso <strong>„können“</strong> (môcť), napríklad <strong>„Können wir uns am Dienstag treffen?“</strong> (Môžeme sa stretnúť v utorok?).</p>",
+      examples: [
+        {
+          de: "Hast du Zeit?",
+          sk: "Máš čas?"
+        },
+        {
+          de: "Hast du am Samstag Zeit?",
+          sk: "Máš v sobotu čas?"
+        },
+        {
+          de: "Wann hast du Zeit?",
+          sk: "Kedy máš čas?"
+        },
+        {
+          de: "Passt es dir am Montag?",
+          sk: "Vyhovuje ti to v pondelok?"
+        },
+        {
+          de: "Ja, das passt mir gut.",
+          sk: "Áno, to mi dobre vyhovuje."
+        },
+        {
+          de: "Nein, da habe ich leider keine Zeit.",
+          sk: "Nie, vtedy bohužiaľ nemám čas."
+        },
+        {
+          de: "Können wir uns am Dienstag treffen?",
+          sk: "Môžeme sa stretnúť v utorok?"
+        },
+        {
+          de: "Wann treffen wir uns?",
+          sk: "Kedy sa stretneme?"
+        }
+      ],
+      slovakContrastNote: "V slovenčine je výraz „mať čas“ priamy preklad „Zeit haben“. Fráza „Passt es dir?“ sa prekladá ako „Vyhovuje ti to?“, pričom v nemčine je dôležité pamätať na použitie <strong>datívu</strong> (<em>mir, dir, ihm, ihr, uns, euch, ihnen</em>) so slovesom „passen“, zatiaľ čo v slovenčine používame datív automaticky (vyhovuje <em>tebe</em>)."
+    },
+    {
+      rule: "Das Verb \"wissen\" (vedieť)",
+      explanation: "<p>Sloveso <strong>„wissen“</strong> znamená „vedieť“ a používa sa, keď hovoríme o znalosti faktov, informácií, dát alebo o tom, že niečo vieme. Je to nepravidelné sloveso a jeho konjugácia je špecifická, najmä v prvej a tretej osobe jednotného čísla (ich weiß, er/sie/es weiß).</p><p>Rozdiel medzi „wissen“ a „kennen“ (poznať) je dôležitý: „wissen“ sa týka informácií, zatiaľ čo „kennen“ sa týka poznania osôb, miest alebo vecí. Pre úroveň A1 sa zameriavame primárne na „wissen“.</p><h3>Konjugácia slovesa „wissen“ (Präsens):</h3><table><thead><tr><th>Osoba</th><th>Sloveso</th><th>Preklad</th></tr></thead><tbody><tr><td>ich</td><td>weiß</td><td>ja viem</td></tr><tr><td>du</td><td>weißt</td><td>ty vieš</td></tr><tr><td>er/sie/es</td><td>weiß</td><td>on/ona/ono vie</td></tr><tr><td>wir</td><td>wissen</td><td>my vieme</td></tr><tr><td>ihr</td><td>wisst</td><td>vy viete</td></tr><tr><td>sie/Sie</td><td>wissen</td><td>oni/Vy viete</td></tr></tbody></table>",
+      examples: [
+        {
+          de: "Ich weiß es nicht.",
+          sk: "Neviem to."
+        },
+        {
+          de: "Weißt du, wann wir uns treffen?",
+          sk: "Vieš, kedy sa stretneme?"
+        },
+        {
+          de: "Er weiß viel über Deutschland.",
+          sk: "Vie veľa o Nemecku."
+        },
+        {
+          de: "Wir wissen, dass du kommst.",
+          sk: "Vieme, že prídeš."
+        },
+        {
+          de: "Wisst ihr die Antwort?",
+          sk: "Viete odpoveď?"
+        },
+        {
+          de: "Sie wissen die Uhrzeit.",
+          sk: "Vedia čas."
+        }
+      ],
+      slovakContrastNote: "V slovenčine máme len jedno sloveso „vedieť“, ktoré pokrýva oba významy nemeckých slovies „wissen“ a „kennen“. V nemčine je kľúčové rozlišovať: <strong>„wissen“</strong> sa používa pre fakty a informácie (napr. „viem, že...“, „viem odpoveď“), zatiaľ čo <strong>„kennen“</strong> (ktoré sa naučíme neskôr) sa používa pre poznanie osôb, miest alebo vecí (napr. „poznám Petra“, „poznám Bratislavu“)."
+    }
+  ],
   vocab: [
     {
-      de: "das Obst",
-      sk: "ovocie",
-      example: "Das Obst ist frisch.",
-      exampleSk: "Ovocie je čerstvé.",
-      gender: "N",
-      srsId: "L27_V01",
-      recycledFrom: []
-    },
-    {
-      de: "das Gemüse",
-      sk: "zelenina",
-      example: "Ich kaufe viel Gemüse.",
-      exampleSk: "Kupujem veľa zeleniny.",
-      gender: "N",
-      srsId: "L27_V02",
-      recycledFrom: [17]
-    },
-    {
-      de: "der Apfel",
-      sk: "jablko",
-      example: "Drei Äpfel, bitte.",
-      exampleSk: "Tri jablká, prosím.",
+      de: "der Tag",
+      sk: "deň",
       gender: "M",
+      srsId: "L27_V01",
+      example: "Der Tag ist schön.",
+      exampleSk: "Deň je krásny.",
+      recycledFrom: []
+    },
+    {
+      de: "der Nachmittag",
+      sk: "popoludnie",
+      gender: "M",
+      srsId: "L27_V02",
+      example: "Ich arbeite jeden Nachmittag.",
+      exampleSk: "Pracujem každé popoludnie.",
+      recycledFrom: []
+    },
+    {
+      de: "die Woche",
+      sk: "týždeň",
+      gender: "F",
       srsId: "L27_V03",
+      example: "Die Woche hat sieben Tage.",
+      exampleSk: "Týždeň má sedem dní.",
       recycledFrom: []
     },
     {
-      de: "die Tomate",
-      sk: "paradajka",
-      example: "Ein Kilo Tomaten, bitte.",
-      exampleSk: "Kilo paradajok, prosím.",
-      gender: "F",
+      de: "der Montag",
+      sk: "pondelok",
+      gender: "M",
       srsId: "L27_V04",
+      example: "Montag muss ich früh aufstehen.",
+      exampleSk: "V pondelok musím skoro vstať.",
       recycledFrom: []
     },
     {
-      de: "die Karotte",
-      sk: "mrkva",
-      example: "Karotten sind gesund.",
-      exampleSk: "Mrkva je zdravá.",
-      gender: "F",
+      de: "der Dienstag",
+      sk: "utorok",
+      gender: "M",
       srsId: "L27_V05",
+      example: "Dienstag habe ich einen Kurs.",
+      exampleSk: "V utorok mám kurz.",
       recycledFrom: []
     },
     {
-      de: "die Milch",
-      sk: "mlieko",
-      example: "Eine Flasche Milch.",
-      exampleSk: "Fľaša mlieka.",
-      gender: "F",
+      de: "der Mittwoch",
+      sk: "streda",
+      gender: "M",
       srsId: "L27_V06",
+      example: "Mittwoch ist die Mitte der Woche.",
+      exampleSk: "Streda je stred týždňa.",
       recycledFrom: []
     },
     {
-      de: "das Mehl",
-      sk: "múka",
-      example: "Ein Kilo Mehl.",
-      exampleSk: "Kilogram múky.",
-      gender: "N",
+      de: "der Donnerstag",
+      sk: "štvrtok",
+      gender: "M",
       srsId: "L27_V07",
+      example: "Donnerstag gehe ich einkaufen.",
+      exampleSk: "Vo štvrtok idem nakupovať.",
       recycledFrom: []
     },
     {
-      de: "der Zucker",
-      sk: "cukor",
-      example: "Ein Paket Zucker.",
-      exampleSk: "Balenie cukru.",
+      de: "der Freitag",
+      sk: "piatok",
       gender: "M",
       srsId: "L27_V08",
+      example: "Freitag ist der letzte Arbeitstag.",
+      exampleSk: "Piatok je posledný pracovný deň.",
       recycledFrom: []
     },
     {
-      de: "die Flasche",
-      sk: "fľaša",
-      example: "Eine Flasche Wasser.",
-      exampleSk: "Fľaša vody.",
-      gender: "F",
+      de: "der Samstag",
+      sk: "sobota",
+      gender: "M",
       srsId: "L27_V09",
+      example: "Samstag habe ich frei.",
+      exampleSk: "V sobotu mám voľno.",
       recycledFrom: []
     },
     {
-      de: "die Dose",
-      sk: "plechovka",
-      example: "Eine Dose Tomaten.",
-      exampleSk: "Plechovka paradajok.",
-      gender: "F",
+      de: "der Sonntag",
+      sk: "nedeľa",
+      gender: "M",
       srsId: "L27_V10",
+      example: "Sonntag ruhe ich mich aus.",
+      exampleSk: "V nedeľu si oddýchnem.",
       recycledFrom: []
     },
     {
-      de: "das Glas",
-      sk: "pohár / sklica",
-      example: "Ein Glas Marmelade.",
-      exampleSk: "Pohár marmelády.",
-      gender: "N",
+      de: "der Termin",
+      sk: "stretnutie (termín)",
+      gender: "M",
       srsId: "L27_V11",
+      example: "Ich habe einen Termin beim Arzt.",
+      exampleSk: "Mám stretnutie u lekára.",
       recycledFrom: []
     },
     {
-      de: "das Stück",
-      sk: "kúsok",
-      example: "Ein Stück Käse, bitte.",
-      exampleSk: "Kúsok syra, prosím.",
-      gender: "N",
+      de: "die Nachricht",
+      sk: "správa",
+      gender: "F",
       srsId: "L27_V12",
+      example: "Ich schreibe eine Nachricht an dich.",
+      exampleSk: "Píšem ti správu.",
       recycledFrom: []
     },
     {
-      de: "das Paket",
-      sk: "balenie / balík",
-      example: "Ein Paket Nudeln.",
-      exampleSk: "Balenie cestovín.",
+      de: "das Handy",
+      sk: "mobil",
       gender: "N",
       srsId: "L27_V13",
+      example: "Mein Handy ist immer dabei.",
+      exampleSk: "Môj mobil je vždy so mnou.",
       recycledFrom: []
     },
     {
-      de: "ein Liter",
-      sk: "liter",
-      example: "Ein Liter Milch.",
-      exampleSk: "Liter mlieka.",
-      gender: "M",
+      de: "die Arbeit",
+      sk: "práca",
+      gender: "F",
       srsId: "L27_V14",
+      example: "Meine Arbeit ist hier in Wien.",
+      exampleSk: "Moja práca je tu vo Viedni.",
       recycledFrom: []
     },
     {
-      de: "ein Kilo",
-      sk: "kilogram",
-      example: "Ein Kilo Kartoffeln.",
-      exampleSk: "Kilogram zemiakov.",
-      gender: "N",
+      de: "der Kalender",
+      sk: "kalendár",
+      gender: "M",
       srsId: "L27_V15",
+      example: "Ich sehe in meinen Kalender.",
+      exampleSk: "Pozriem sa do svojho kalendára.",
       recycledFrom: []
     },
     {
-      de: "die Kartoffel",
-      sk: "zemiak",
-      example: "Drei Kilo Kartoffeln.",
-      exampleSk: "Tri kilogramy zemiakov.",
-      gender: "F",
+      de: "wissen",
+      sk: "vedieť",
+      gender: null,
       srsId: "L27_V16",
+      example: "Ich weiß das nicht.",
+      exampleSk: "To neviem.",
       recycledFrom: []
     },
     {
-      de: "die Butter",
-      sk: "maslo",
-      example: "Eine Packung Butter.",
-      exampleSk: "Balíček masla.",
-      gender: "F",
+      de: "schreiben",
+      sk: "písať",
+      gender: null,
       srsId: "L27_V17",
-      recycledFrom: [8]
+      example: "Kannst du mir schreiben?",
+      exampleSk: "Môžeš mi napísať?",
+      recycledFrom: []
     },
     {
-      de: "frisch",
-      sk: "čerstvý",
-      example: "Das Brot ist frisch.",
-      exampleSk: "Chlieb je čerstvý.",
+      de: "lesen",
+      sk: "čítať",
       gender: null,
       srsId: "L27_V18",
+      example: "Ich lese gern Bücher.",
+      exampleSk: "Rád čítam knihy.",
       recycledFrom: []
     },
     {
-      de: "die Kasse",
-      sk: "pokladňa",
-      example: "An der Kasse bezahlen.",
-      exampleSk: "Pri pokladni platiť.",
-      gender: "F",
+      de: "planen",
+      sk: "plánovať",
+      gender: null,
       srsId: "L27_V19",
+      example: "Wir planen einen Ausflug.",
+      exampleSk: "Plánujeme výlet.",
       recycledFrom: []
     },
     {
-      de: "die Quittung",
-      sk: "doklad / účtenka",
-      example: "Kann ich eine Quittung bekommen?",
-      exampleSk: "Môžem dostať doklad?",
-      gender: "F",
+      de: "verschieben",
+      sk: "preložiť, posunúť",
+      gender: null,
       srsId: "L27_V20",
+      example: "Wir müssen den Termin verschieben.",
+      exampleSk: "Musíme stretnutie preložiť.",
+      recycledFrom: []
+    },
+    {
+      de: "vielleicht",
+      sk: "možno",
+      gender: null,
+      srsId: "L27_V21",
+      example: "Vielleicht können wir uns morgen sehen.",
+      exampleSk: "Možno sa môžeme zajtra vidieť.",
+      recycledFrom: []
+    },
+    {
+      de: "wo",
+      sk: "kde",
+      gender: null,
+      srsId: "L27_V22",
+      example: "Wo wohnst du?",
+      exampleSk: "Kde bývaš?",
+      recycledFrom: []
+    },
+    {
+      de: "morgen",
+      sk: "zajtra",
+      gender: null,
+      srsId: "L27_V23",
+      example: "Morgen ist ein neuer Tag.",
+      exampleSk: "Zajtra je nový deň.",
+      recycledFrom: []
+    },
+    {
+      de: "heute",
+      sk: "dnes",
+      gender: null,
+      srsId: "L27_V24",
+      example: "Heute ist ein guter Tag.",
+      exampleSk: "Dnes je dobrý deň.",
+      recycledFrom: []
+    },
+    {
+      de: "leider",
+      sk: "bohužiaľ",
+      gender: null,
+      srsId: "L27_V25",
+      example: "Leider kann ich heute nicht.",
+      exampleSk: "Bohužiaľ dnes nemôžem.",
       recycledFrom: []
     }
   ],
-
   exercises: [
     {
       type: "flashcard",
-      instruction: "Prezri si potraviny a množstevné výrazy. Všimni si, že po množstevných výrazoch zostáva nemecké substantívum v nominatíve!",
-      items: [
-        "das Obst = ovocie",
-        "das Gemüse = zelenina",
-        "der Apfel = jablko",
-        "die Tomate = paradajka",
-        "die Karotte = mrkva",
-        "die Milch = mlieko",
-        "das Mehl = múka",
-        "der Zucker = cukor",
-        "die Flasche = fľaša",
-        "die Dose = plechovka",
-        "das Glas = pohár",
-        "das Stück = kúsok",
-        "das Paket = balenie",
-        "ein Liter = liter",
-        "ein Kilo = kilogram",
-        "die Kartoffel = zemiak",
-        "die Butter = maslo",
-        "frisch = čerstvý",
-        "die Kasse = pokladňa",
-        "die Quittung = doklad / účtenka"
+      instruction: "Prezri si slovíčka tejto lekcie. Klikni na kartičku pre preklad."
+    },
+    {
+      type: "match",
+      instruction: "Priraď nemecké slová k ich slovenským prekladom.",
+      pairs: [
+        [
+          "der Tag",
+          "deň"
+        ],
+        [
+          "der Nachmittag",
+          "popoludnie"
+        ],
+        [
+          "die Woche",
+          "týždeň"
+        ],
+        [
+          "der Termin",
+          "stretnutie (termín)"
+        ],
+        [
+          "wissen",
+          "vedieť"
+        ],
+        [
+          "schreiben",
+          "písať"
+        ],
+        [
+          "verschieben",
+          "preložiť, posunúť"
+        ],
+        [
+          "vielleicht",
+          "možno"
+        ],
+        [
+          "leider",
+          "bohužiaľ"
+        ],
+        [
+          "der Kalender",
+          "kalendár"
+        ]
+      ]
+    },
+    {
+      type: "wordorder",
+      instruction: "Usporiadaj slová tak, aby vytvorili správnu nemeckú vetu.",
+      sentences: [
+        {
+          words: [
+            "du",
+            "Zeit",
+            "hast",
+            "heute",
+            "Nachmittag"
+          ],
+          correct: "Hast du heute Nachmittag Zeit",
+          hint: "Máš dnes popoludní čas?",
+          explanation: "Vo vetách s otázkou bez opytovacieho zámena (W-Frage) stojí sloveso na prvom mieste. 'Hast du Zeit?' je základná fráza na opýtanie sa na dostupnosť."
+        },
+        {
+          words: [
+            "Ich",
+            "weiß",
+            "den",
+            "Termin",
+            "nicht"
+          ],
+          correct: "Ich weiß den Termin nicht",
+          hint: "Neviem ten termín.",
+          explanation: "Sloveso 'wissen' (vedieť) je nepravidelné a v prvej osobe jednotného čísla ('ich') sa konjuguje ako 'weiß'. Negácia 'nicht' stojí zvyčajne na konci vety alebo pred negovaným členom."
+        },
+        {
+          words: [
+            "Wir",
+            "müssen",
+            "den",
+            "Termin",
+            "verschieben"
+          ],
+          correct: "Wir müssen den Termin verschieben",
+          hint: "Musíme preložiť stretnutie.",
+          explanation: "Modálne sloveso 'müssen' stojí na druhom mieste vo vete a plnovýznamové sloveso 'verschieben' (preložiť) ide na koniec vety v infinitive. 'Den Termin' je v Akuzatíve, pretože je priamym predmetom."
+        },
+        {
+          words: [
+            "Kannst",
+            "du",
+            "mir",
+            "eine",
+            "Nachricht",
+            "schreiben"
+          ],
+          correct: "Kannst du mir eine Nachricht schreiben",
+          hint: "Môžeš mi napísať správu?",
+          explanation: "Modálne sloveso 'können' (môcť) je na začiatku otázky. 'Mir' je v datíve (komu?) a 'eine Nachricht' je v akuzatíve (čo?). Plnovýznamové sloveso 'schreiben' je na konci v infinitive."
+        },
+        {
+          words: [
+            "Ich",
+            "habe",
+            "am",
+            "Montag",
+            "leider",
+            "keine",
+            "Zeit"
+          ],
+          correct: "Ich habe am Montag leider keine Zeit",
+          hint: "V pondelok, bohužiaľ, nemám čas.",
+          explanation: "Sloveso 'haben' je na druhom mieste. Predložka 'am' sa používa s dňami v týždni. 'Leider' (bohužiaľ) je príslovka. 'Keine Zeit' je negácia podstatného mena 'Zeit' pomocou záporného člena 'kein/keine'."
+        }
+      ]
+    },
+    {
+      type: "fill",
+      instruction: "Doplň správne slovo do medzery.",
+      questions: [
+        {
+          sentence: "Ich ___ nicht, wann der Termin ist.",
+          answer: "weiß",
+          hint: "Neviem, kedy je stretnutie.",
+          explanation: "Sloveso 'wissen' (vedieť) je nepravidelné. Pre 'ich' je správna forma 'weiß'."
+        },
+        {
+          sentence: "Hast du am ___ Zeit?",
+          answer: "Dienstag",
+          hint: "Máš v utorok čas?",
+          explanation: "Názvy dní v týždni sa píšu s veľkým začiatočným písmenom. 'Dienstag' je utorok."
+        },
+        {
+          sentence: "Wir ___ den Termin auf Freitag verschieben.",
+          answer: "müssen",
+          hint: "Musíme preložiť stretnutie na piatok.",
+          explanation: "Modálne sloveso 'müssen' (musieť) sa pre 'wir' konjuguje ako 'müssen'."
+        },
+        {
+          sentence: "Er ___ gern Bücher.",
+          answer: "liest",
+          hint: "Rád číta knihy.",
+          explanation: "Sloveso 'lesen' (čítať) patrí medzi slovesá so zmenou kmeňovej samohlásky. Pre 'er/sie/es' sa 'e' mení na 'ie', takže je to 'liest'."
+        },
+        {
+          sentence: "Am ___ gehe ich ins Kino.",
+          answer: "Samstag",
+          hint: "V sobotu idem do kina.",
+          explanation: "Názvy dní v týždni sa píšu s veľkým začiatočným písmenom. 'Samstag' je sobota."
+        },
+        {
+          sentence: "Wir treffen uns ___ 18 Uhr.",
+          answer: "um",
+          hint: "Stretneme sa o 18. hodine.",
+          explanation: "Pre presný čas (napr. '18 Uhr') sa v nemčine používa predložka 'um'."
+        },
+        {
+          sentence: "Ich ___ leider keine Zeit.",
+          answer: "habe",
+          hint: "Bohužiaľ, nemám čas.",
+          explanation: "Sloveso 'haben' (mať) sa pre 'ich' konjuguje ako 'habe'."
+        }
+      ]
+    },
+    {
+      type: "listen",
+      instruction: "Vypočuj si slovo a priraď ho k slovenskému prekladu.",
+      questions: [
+        {
+          de: "der Tag",
+          sk: "deň"
+        },
+        {
+          de: "die Woche",
+          sk: "týždeň"
+        },
+        {
+          de: "wissen",
+          sk: "vedieť"
+        },
+        {
+          de: "lesen",
+          sk: "čítať"
+        },
+        {
+          de: "morgen",
+          sk: "zajtra"
+        },
+        {
+          de: "heute",
+          sk: "dnes"
+        },
+        {
+          de: "der Montag",
+          sk: "pondelok"
+        },
+        {
+          de: "der Nachmittag",
+          sk: "popoludnie"
+        },
+        {
+          de: "der Termin",
+          sk: "stretnutie (termín)"
+        },
+        {
+          de: "der Kalender",
+          sk: "kalendár"
+        }
       ]
     },
     {
@@ -242,241 +535,375 @@
       instruction: "Vyber správnu odpoveď.",
       questions: [
         {
-          question: "Jana kupuje jablko. Čo hovorí? ‚Ich kaufe ___ Apfel.'",
-          options: ["ein", "einen", "eine", "dem"],
-          answer: "einen",
-          explanation: "Akuzatív, mužský rod: ein → einen. ‚Ich kaufe einen Apfel.' Pozor: mužský rod v akuzatíve sa mení (ein → einen), ženský a stredný rod nie."
-        },
-        {
-          question: "Jana chce liter mlieka (das Milch → die Milch, F). Čo povie?",
+          question: "Ako konjuguješ sloveso \"wissen\" pre \"du\"?",
           options: [
-            "Ein Liter Milch, bitte.",
-            "Ein Liter von Milch, bitte.",
-            "Ein Liter der Milch, bitte.",
-            "Ein Liter Milchen, bitte."
+            "weißt",
+            "wisst",
+            "weiß",
+            "wissen"
           ],
-          answer: "Ein Liter Milch, bitte.",
-          explanation: "Po množstevných výrazoch zostáva substantívum v nominatíve bez člena! ‚Ein Liter Milch' — nie ‚von Milch' ani ‚der Milch'."
+          answer: 0,
+          explanation: "Sloveso 'wissen' je nepravidelné. Pre 'du' je správna konjugácia 'weißt'."
         },
         {
-          question: "Čo je ‚die Kasse' v supermarkete?",
-          options: ["Košík", "Pokladňa", "Regál", "Parkovisko"],
-          answer: "Pokladňa",
-          explanation: "‚Die Kasse' = pokladňa. ‚An der Kasse bezahlen' = platiť pri pokladni."
-        },
-        {
-          question: "Jana chce kúpiť plechovku paradajok. Čo povie?",
+          question: "Čo znamená \"verschieben\"?",
           options: [
-            "Ich möchte eine Dose Tomaten.",
-            "Ich möchte ein Dose Tomaten.",
-            "Ich möchte einen Dose Tomaten.",
-            "Ich möchte einem Dose Tomaten."
+            "písať",
+            "plánovať",
+            "preložiť, posunúť",
+            "čítať"
           ],
-          answer: "Ich möchte eine Dose Tomaten.",
-          explanation: "‚Die Dose' (F) → akuzatív: eine Dose. Po ‚eine Dose' nasleduje nominatív: ‚Tomaten'."
+          answer: 2,
+          explanation: "Sloveso 'verschieben' znamená 'preložiť' alebo 'posunúť' (napr. termín)."
         },
         {
-          question: "Ako sa povie ‚Chlieb je čerstvý'?",
-          options: ["Das Brot ist frisch.", "Das Brot ist gesund.", "Das Brot ist billig.", "Das Brot ist alt."],
-          answer: "Das Brot ist frisch.",
-          explanation: "‚Frisch' = čerstvý. ‚Das Brot ist frisch.' Je to prídavné meno použité predikačne (po slovese sein), teda bez skloňovania."
-        }
-      ]
-    },
-    {
-      type: "fill",
-      instruction: "Doplň správny tvar alebo slovo do medzery ___.",
-      questions: [
-        {
-          sentence: "Ich brauche ___ Kilo Kartoffeln.",
-          answer: "ein",
-          hint: "Kilo je stredného rodu, akuzatív",
-          explanation: "‚Ein Kilo' — stredný rod: ein (nominatív aj akuzatív rovnaké pre stredný rod)."
+          question: "Ako sa opýtaš, či má niekto v stredu čas?",
+          options: [
+            "Hast du am Mittwoch Zeit?",
+            "Hast du Zeit am Mittwoch?",
+            "Du hast am Mittwoch Zeit?",
+            "Am Mittwoch hast du Zeit?"
+          ],
+          answer: 0,
+          explanation: "Štandardná fráza na opýtanie sa na dostupnosť je 'Hast du Zeit?' s predložkou 'am' pre dni v týždni, napr. 'am Mittwoch'."
         },
         {
-          sentence: "Ich kaufe ___ Flasche Wasser für meine Mutter.",
-          answer: "eine",
-          hint: "die Flasche → akuzatív F → ???",
-          explanation: "Ženský rod (die) v akuzatíve: eine. ‚Eine Flasche Wasser.'"
+          question: "Ktoré slovo znamená \"mobil\"?",
+          options: [
+            "die Nachricht",
+            "das Handy",
+            "die Arbeit",
+            "der Kalender"
+          ],
+          answer: 1,
+          explanation: "Slovo 'das Handy' v nemčine znamená 'mobil' alebo 'mobilný telefón'."
         },
         {
-          sentence: "Kann ich eine ___ bekommen? Ich bezahle mit Karte.",
-          answer: "Quittung",
-          hint: "Doklad / účtenka",
-          explanation: "‚Die Quittung' = doklad/účtenka. Pýtame sa na ňu pri pokladni."
+          question: "Doplň správny člen: Ich brauche ___ neuen Stift.",
+          options: [
+            "ein",
+            "einen",
+            "der",
+            "den"
+          ],
+          answer: 1,
+          explanation: "Slovo 'der Stift' (pero) je maskulínum. V akuzatíve (potrebujem čo?) sa neurčitý člen pre maskulínum mení z 'ein' na 'einen'."
         },
         {
-          sentence: "Das Obst ist sehr ___. Es kommt direkt vom Bauernmarkt.",
-          answer: "frisch",
-          hint: "čerstvý",
-          explanation: "‚Frisch' = čerstvý. ‚Das Obst ist frisch.' — prídavné meno v predikačnej pozícii (bez skloňovania)."
+          question: "Vyber správnu formu slovesa: Was machst du am Wochenende? Ich ___ gern Bücher.",
+          options: [
+            "lese",
+            "liest",
+            "lest",
+            "lesen"
+          ],
+          answer: 0,
+          explanation: "Sloveso 'lesen' (čítať) má síce zmenu kmeňovej samohlásky pre 'du' a 'er/sie/es' (liest), ale pre 'ich' zostáva 'lese'."
         },
         {
-          sentence: "Wir bezahlen an der ___.",
-          answer: "Kasse",
-          hint: "Kde sa platí v supermarkete?",
-          explanation: "‚Die Kasse' = pokladňa. ‚An der Kasse bezahlen' = platiť pri pokladni."
-        }
-      ]
-    },
-    {
-      type: "listen",
-      instruction: "Počúvaj nákupné výrazy a nájdi ich slovenský preklad.",
-      questions: [
-        { de: "Ich möchte ein Kilo Tomaten, bitte.", sk: "Chcela by som kilogram paradajok, prosím." },
-        { de: "Wie viel kostet eine Flasche Milch?", sk: "Koľko stojí fľaša mlieka?" },
-        { de: "Das Obst ist heute sehr frisch.", sk: "Dnes je ovocie veľmi čerstvé." },
-        { de: "Ich brauche ein Paket Nudeln und ein Kilo Mehl.", sk: "Potrebujem balenie cestovín a kilogram múky." },
-        { de: "Kann ich eine Quittung bekommen?", sk: "Môžem dostať účtenku?" },
-        { de: "An der Kasse gibt es eine Schlange.", sk: "Pri pokladni je front." },
-        { de: "Drei Äpfel und zwei Karotten, bitte.", sk: "Tri jablká a dve mrkvičky, prosím." },
-        { de: "Ein Stück Käse kostet zwei Euro.", sk: "Kúsok syra stojí dve eurá." }
-      ]
-    },
-    {
-      type: "match",
-      instruction: "Spoj nemecké nákupné výrazy s ich slovenským prekladom.",
-      pairs: [
-        ["die Flasche", "fľaša"],
-        ["die Dose", "plechovka"],
-        ["das Stück", "kúsok"],
-        ["das Paket", "balenie"],
-        ["die Kartoffel", "zemiak"],
-        ["frisch", "čerstvý"],
-        ["die Kasse", "pokladňa"],
-        ["die Quittung", "doklad / účtenka"]
-      ]
-    },
-    {
-      type: "dialogue",
-      instruction: "Prečítaj si dialóg medzi Janou a jej mamou v supermarkete. Kontrolujú nákupný zoznam a platia.",
-      lines: [
-        { speaker: "A", de: "Also, was brauchen wir noch? Ich habe die Liste.", sk: "Takže, čo ešte potrebujeme? Mám zoznam." },
-        { speaker: "B", de: "Wir brauchen Tomaten, Kartoffeln und Karotten für das Abendessen.", sk: "Potrebujeme paradajky, zemiaky a mrkvu na večeru." },
-        { speaker: "A", de: "Wie viel Tomaten? Ein Kilo?", sk: "Koľko paradajok? Kilogram?" },
-        { speaker: "B", de: "Ja, ein Kilo Tomaten und zwei Kilo Kartoffeln.", sk: "Áno, kilogram paradajok a dva kilogramy zemiakov." },
-        { speaker: "A", de: "Gut. Und was ist mit Milch? Wir haben keine mehr.", sk: "Dobre. A čo s mliekom? Nemáme už žiadne." },
-        { speaker: "B", de: "Eine Flasche Milch, bitte. Und ich möchte auch ein Stück Käse.", sk: "Fľašu mlieka, prosím. A chcela by som aj kúsok syra." },
-        { speaker: "A", de: "Wie viel kostet das Obst hier? Es sieht sehr frisch aus!", sk: "Koľko tu stojí ovocie? Vyzerá veľmi čerstvo!" },
-        { speaker: "B", de: "Drei Äpfel kosten 1,50 Euro. Sehr günstig!", sk: "Tri jablká stoja 1,50 eura. Veľmi lacno!" },
-        { speaker: "A", de: "Toll! Dann nehmen wir noch ein Paket Nudeln.", sk: "Skvelé! Potom berieme ešte balenie cestovín." },
-        { speaker: "B", de: "Jetzt gehen wir zur Kasse. Ich bezahle mit Karte!", sk: "Teraz ideme k pokladni. Platím kartou!" },
-        { speaker: "A", de: "Kann ich eine Quittung haben?", sk: "Môžem dostať účtenku?" },
-        { speaker: "B", de: "Natürlich! Heute Abend kochen wir zusammen — das wird toll!", sk: "Samozrejme! Dnes večer varíme spolu — to bude skvelé!" }
-      ],
-      comprehensionQuestions: [
-        {
-          question: "Koľko paradajok Jana kupuje?",
-          answer: "Jana kupuje kilogram paradajok.",
-          options: ["Pol kila", "Jeden kilogram", "Dva kilogramy", "Tri paradajky"]
-        },
-        {
-          question: "Koľko stoja tri jablká?",
-          answer: "Tri jablká stoja 1,50 eura.",
-          options: ["1 euro", "1,50 eura", "2 eurá", "3 eurá"]
-        },
-        {
-          question: "Ako Jana platí pri pokladni?",
-          answer: "Jana platí kartou.",
-          options: ["Hotovosťou", "Kartou", "Bankovým prevodom", "Telefonicky"]
+          question: "Čo znamená \"leider\"?",
+          options: [
+            "možno",
+            "zajtra",
+            "bohužiaľ",
+            "dnes"
+          ],
+          answer: 2,
+          explanation: "Slovo 'leider' je príslovka a znamená 'bohužiaľ'."
         }
       ]
     },
     {
       type: "minitext",
-      instruction: "Prečítaj si Janin nákupný zoznam s komentárom. Odpovedaj na otázky.",
-      text:
-        "Janas Einkaufsliste für das Familienessen: ein Kilo Tomaten, zwei Kilo Kartoffeln, eine Flasche Milch, ein Paket Nudeln, ein Stück Käse und drei Äpfel. Im Supermarkt ist alles frisch und nicht so teuer. Jana bezahlt 12 Euro an der Kasse. Sie bekommt eine Quittung. Das Abendessen heute wird fantastisch!",
-      textSk:
-        "Janin nákupný zoznam na rodinné jedlo: kilogram paradajok, dva kilogramy zemiakov, fľaša mlieka, balenie cestovín, kúsok syra a tri jablká. V supermarkete je všetko čerstvé a nie také drahé. Jana zaplatí 12 eur pri pokladni. Dostane účtenku. Dnešná večera bude fantastická!",
+      instruction: "Lies den Dialog und beantworte die Fragen.",
+      text: "Petra: Hallo Jana! Ich muss dir eine Nachricht schreiben. Leider habe ich heute Nachmittag keine Zeit für unseren Termin. Ich habe viel Arbeit. Wir müssen den Termin verschieben.\nJana: Hallo Petra! Das ist schade. Kein Problem. Weißt du, wann du diese Woche Zeit hast? Ich muss es planen.\nPetra: Ich weiß nicht genau. Ich muss meinen Kalender lesen. Vielleicht habe ich am Samstag oder Sonntag Zeit. Am Montag habe ich einen Termin.\nJana: Okay, ich verstehe. Kannst du mir morgen eine Nachricht schreiben? Dann weiß ich es. Aber ich weiß schon, wo wir hingehen können, wenn du Zeit hast!",
+      textSk: "Petra: Ahoj Jana! Musím ti napísať správu. Bohužiaľ, dnes popoludní nemám čas na naše stretnutie. Mám veľa práce. Musíme stretnutie preložiť.\nJana: Ahoj Petra! To je škoda. Žiadny problém. Vieš, kedy máš tento týždeň čas? Musím to naplánovať.\nPetra: Neviem presne. Musím si prečítať môj kalendár. Možno mám v sobotu alebo nedeľu čas. V pondelok mám stretnutie.\nJana: Dobre, rozumiem. Môžeš mi zajtra napísať správu? Potom to budem vedieť. Ale už viem, kam môžeme ísť, keď budeš mať čas!",
       questions: [
         {
-          question: "Koľko kusov ovocia Jana kupuje?",
-          answer: "Jana kupuje tri jablká.",
-          options: ["Dve jablká", "Tri jablká", "Päť jabĺk", "Žiadne ovocie"]
+          question: "Warum hat Petra heute Nachmittag keine Zeit?",
+          options: [
+            "Sie hat viel Arbeit.",
+            "Sie möchte nicht kommen.",
+            "Sie hat einen Arzttermin.",
+            "Sie muss ihren Kalender lesen."
+          ],
+          answer: 0,
+          explanation: "Petra sagt: \"Leider habe ich heute Nachmittag keine Zeit für unseren Termin. Ich habe viel Arbeit.\""
         },
         {
-          question: "Koľko Jana zaplatila celkovo?",
-          answer: "Jana zaplatila 12 eur.",
-          options: ["10 eur", "12 eur", "15 eur", "20 eur"]
+          question: "Was möchte Jana von Petra wissen?",
+          options: [
+            "Wann sie diese Woche Zeit hat.",
+            "Wo sie wohnen möchte.",
+            "Was sie am Montag macht.",
+            "Ob sie ihren Kalender hat."
+          ],
+          answer: 0,
+          explanation: "Jana fragt: \"Weißt du, wann du diese Woche Zeit hast?\""
         },
         {
-          question: "Čo Jana dostala na pokladni?",
-          answer: "Jana dostala účtenku.",
-          options: ["Darček", "Zľavový lístok", "Účtenku", "Nákupnú tašku"]
-        }
-      ]
-    },
-    {
-      type: "wordorder",
-      instruction: "Zoraď slová do správnej nemeckej vety.",
-      sentences: [
-        {
-          words: ["Jana", "freut", "sich", "auf", "das", "Wochenende"],
-          correct: "Jana freut sich auf das Wochenende",
-          hint: "Jana sa teší na víkend.",
-          explanation: "Reflexívum: sich freuen → er/sie freut sich. Reflexívne zámeno stojí za slovesom."
+          question: "Wann hat Petra vielleicht Zeit?",
+          options: [
+            "Am Montag.",
+            "Am Dienstag.",
+            "Am Samstag oder Sonntag.",
+            "Heute Nachmittag."
+          ],
+          answer: 2,
+          explanation: "Petra sagt: \"Vielleicht habe ich am Samstag oder Sonntag Zeit.\""
         },
         {
-          words: ["Ich", "wasche", "mich", "jeden", "Morgen"],
-          correct: "Ich wasche mich jeden Morgen",
-          hint: "Každé ráno sa umývam.",
-          explanation: "Reflexívum: sich waschen → ich wasche mich. 1. os. sg. → mich."
-        },
-        {
-          words: ["Wir", "setzen", "uns", "an", "den", "Tisch"],
-          correct: "Wir setzen uns an den Tisch",
-          hint: "Sadáme si za stôl.",
-          explanation: "Reflexívum: sich setzen → wir setzen uns. 1. os. pl. → uns."
-        },
-        {
-          words: ["Er", "zieht", "sich", "schnell", "an"],
-          correct: "Er zieht sich schnell an",
-          hint: "Rýchlo sa oblečie.",
-          explanation: "Reflexív + odlučiteľné sloveso: sich anziehen → er zieht sich an. Predpona 'an' ide na koniec."
-        },
-        {
-          words: ["Freust", "du", "dich", "auf", "die", "Party"],
-          correct: "Freust du dich auf die Party",
-          hint: "Tešíš sa na večierok?",
-          explanation: "Otázka: sloveso na prvom mieste. sich freuen → du freust dich."
+          question: "Was weiß Jana schon?",
+          options: [
+            "Wann Petra Zeit hat.",
+            "Wo sie hingehen können.",
+            "Was Petra am Montag macht.",
+            "Ob Petra ihren Kalender lesen kann."
+          ],
+          answer: 1,
+          explanation: "Jana sagt: \"Aber ich weiß schon, wo wir hingehen können, wenn du Zeit hast!\""
         }
       ]
     },
     {
       type: "speaking",
-      instruction: "Počúvaj nemeckú vetu. Potom hovor nahlas a skontroluj sa.",
+      instruction: "Höre zu und sprich nach.",
       phrases: [
         {
-          de: "Ich freue mich auf das Wochenende.",
-          sk: "Teším sa na víkend.",
-          tip: "freue mich: 1. os. sg. reflexív"
+          de: "Die Woche",
+          sk: "Týždeň",
+          tip: "CH=[ç] ako v \"ich\". O dlhé."
         },
         {
-          de: "Jana wäscht sich die Haare jeden Tag.",
-          sk: "Jana si každý deň umýva vlasy.",
-          tip: "wäscht sich: 3. os. sg."
+          de: "Am Montag",
+          sk: "V pondelok",
+          tip: "O=[o] krátke. G na konci ako [k]."
         },
         {
-          de: "Ich ziehe mich um und gehe aus.",
-          sk: "Preoblečiem sa a idem von.",
-          tip: "sich umziehen: odluč. + reflexív"
+          de: "Ich weiß.",
+          sk: "Viem.",
+          tip: "CH=[ç] ako v \"ich\". EI=[aj]. S=[s] na konci."
         },
         {
-          de: "Wir treffen uns um acht Uhr.",
-          sk: "Stretneme sa o ôsmej.",
-          tip: "treffen uns: 1. os. pl."
+          de: "Weißt du das?",
+          sk: "Vieš to?",
+          tip: "S=[s] v \"weißt\", [z] v \"das\"."
         },
         {
-          de: "Ich setze mich ans Fenster.",
-          sk: "Sadám si k oknu.",
-          tip: "setzen + sich → mich"
+          de: "Hast du Zeit?",
+          sk: "Máš čas?",
+          tip: "Z=[c]. EI=[aj]. T na konci mäkké."
+        },
+        {
+          de: "Ich habe am Mittwoch Zeit.",
+          sk: "Mám v stredu čas.",
+          tip: "CH=[ch] v \"Mittwoch\". I krátke."
+        },
+        {
+          de: "Wann hast du einen Termin?",
+          sk: "Kedy máš stretnutie?",
+          tip: "W=[v]. A krátke. R znie jemne."
+        },
+        {
+          de: "Leider habe ich morgen keine Zeit.",
+          sk: "Bohužiaľ, zajtra nemám čas.",
+          tip: "EI=[aj]. R znie jemne. H dýchané."
+        }
+      ]
+    },
+    {
+      type: "truefalse",
+      instruction: "Prečítaj si vety a rozhodni, či sú pravdivé (Wahr) alebo nepravdivé (Falsch).",
+      statements: [
+        {
+          statement: "Fráza „Hast du Zeit?“ sa používa na opýtanie sa na dostupnosť.",
+          isTrue: true,
+          explanation: "Áno, „Hast du Zeit?“ (Máš čas?) je základná otázka na zistenie, či má niekto voľno na stretnutie."
+        },
+        {
+          statement: "Sloveso „wissen“ (vedieť) sa časuje úplne pravidelne.",
+          isTrue: false,
+          explanation: "Nie, sloveso „wissen“ je nepravidelné sloveso a má špecifické časovanie (napr. ich weiß, du weißt)."
+        },
+        {
+          statement: "Ak chceš navrhnúť stretnutie v utorok, môžeš povedať „Am Dienstag?“",
+          isTrue: true,
+          explanation: "Presne tak, „Am Dienstag?“ je krátky a efektívny spôsob, ako navrhnúť konkrétny deň pre stretnutie."
+        },
+        {
+          statement: "„Ich weiß nicht“ znamená „Nerozumiem“.",
+          isTrue: false,
+          explanation: "Nie, „Ich weiß nicht“ znamená „Neviem“. Pre „Nerozumiem“ by sme použili „Ich verstehe nicht“."
+        },
+        {
+          statement: "„Wir können uns am Freitag treffen“ znamená „Môžeme sa stretnúť v piatok“.",
+          isTrue: true,
+          explanation: "Áno, toto je správny preklad. Používa sa tu modálne sloveso „können“ (môcť) a predložka „am“ pre dni v týždni."
+        }
+      ]
+    },
+    {
+      type: "dictation",
+      instruction: "Počúvaj a napíš, čo počuješ. Potom skontroluj pravopis.",
+      sentences: [
+        {
+          de: "Ich weiß.",
+          sk: "Ja viem."
+        },
+        {
+          de: "Hast du Zeit?",
+          sk: "Máš čas?"
+        },
+        {
+          de: "Ich muss arbeiten.",
+          sk: "Musím pracovať."
+        },
+        {
+          de: "Wir planen einen Termin.",
+          sk: "Plánujeme stretnutie."
+        },
+        {
+          de: "Kannst du die Nachricht lesen?",
+          sk: "Vieš prečítať tú správu?"
+        }
+      ]
+    },
+    {
+      type: "categorysort",
+      instruction: "Roztrieď slová do správnych kategórií.",
+      categories: [
+        {
+          name: "Dni v týždni",
+          color: "blue",
+          words: [
+            "der Montag",
+            "der Dienstag",
+            "der Freitag",
+            "der Sonntag"
+          ]
+        },
+        {
+          name: "Slovesá",
+          color: "rose",
+          words: [
+            "wissen",
+            "schreiben",
+            "lesen",
+            "planen",
+            "verschieben"
+          ]
+        },
+        {
+          name: "Ostatné podstatné mená",
+          color: "green",
+          words: [
+            "der Termin",
+            "die Nachricht",
+            "das Handy",
+            "die Arbeit"
+          ]
+        }
+      ],
+      explanation: "Táto úloha ti pomohla precvičiť si dni v týždni, dôležité slovesá a ďalšie podstatné mená z lekcie. Je dôležité poznať ich správne rody a významy."
+    },
+    {
+      type: "translation",
+      instruction: "Prelož nasledujúce vety zo slovenčiny do nemčiny.",
+      sentences: [
+        {
+          sk: "Máš čas v stredu?",
+          answer: "Hast du am Mittwoch Zeit?",
+          hint: "am Mittwoch",
+          explanation: "Na otázku o čase v konkrétny deň používame „Hast du am [deň] Zeit?“. „Am“ je skratka z „an dem“ a používa sa s dňami v týždni."
+        },
+        {
+          sk: "Neviem, kde je kalendár.",
+          answer: "Ich weiß nicht, wo der Kalender ist.",
+          hint: "weiß nicht, wo",
+          explanation: "Sloveso „wissen“ je nepravidelné (ich weiß). Používame „wo“ pre „kde“ a nezabúdame na správny rod podstatného mena „der Kalender“."
+        },
+        {
+          sk: "Musím preložiť stretnutie.",
+          answer: "Ich muss den Termin verschieben.",
+          hint: "muss, verschieben",
+          explanation: "Modálne sloveso „müssen“ (musieť) posúva plnovýznamové sloveso (verschieben) na koniec vety v infinitive. „Der Termin“ je v akuzatíve „den Termin“."
+        },
+        {
+          sk: "Chcel by som ti napísať správu.",
+          answer: "Ich möchte dir eine Nachricht schreiben.",
+          hint: "möchte, schreiben",
+          explanation: "„Chcel by som“ je „Ich möchte“. Dativ „dir“ (tebe) a akuzatív „eine Nachricht“ (správu). Sloveso „schreiben“ ide na koniec v infinitive."
+        }
+      ]
+    },
+    {
+      type: "conjugation",
+      instruction: "Doplň správne tvary slovies v prítomnom čase (Präsens).",
+      verbs: [
+        {
+          infinitive: "wissen",
+          translation: "vedieť",
+          forms: [
+            {
+              pronoun: "ich",
+              correct: "weiß"
+            },
+            {
+              pronoun: "du",
+              correct: "weißt"
+            },
+            {
+              pronoun: "er/sie/es",
+              correct: "weiß"
+            },
+            {
+              pronoun: "wir",
+              correct: "wissen"
+            },
+            {
+              pronoun: "ihr",
+              correct: "wisst"
+            },
+            {
+              pronoun: "sie/Sie",
+              correct: "wissen"
+            }
+          ],
+          note: "Sloveso „wissen“ je nepravidelné. Všimni si zmenu samohlásky a špecifické tvary pre „ich“, „du“ a „er/sie/es“."
+        },
+        {
+          infinitive: "planen",
+          translation: "plánovať",
+          forms: [
+            {
+              pronoun: "ich",
+              correct: "plane"
+            },
+            {
+              pronoun: "du",
+              correct: "planst"
+            },
+            {
+              pronoun: "er/sie/es",
+              correct: "plant"
+            },
+            {
+              pronoun: "wir",
+              correct: "planen"
+            },
+            {
+              pronoun: "ihr",
+              correct: "plant"
+            },
+            {
+              pronoun: "sie/Sie",
+              correct: "planen"
+            }
+          ],
+          note: "Sloveso „planen“ je pravidelné. Končí na -en, takže sa časuje podľa štandardných pravidiel pre pravidelné slovesá v prítomnom čase."
         }
       ]
     }
   ],
-
-  reviewWords: ["L08_V07", "L08_V08", "L08_V09", "L10_V08", "L17_V11"],
-  lessonNotes:
-    "Kľúčový gramatický bod: po množstevných výrazoch (ein Kilo, eine Flasche, ein Stück...) zostáva podstatné meno v nominatíve — na rozdiel od slovenčiny, ktorá vyžaduje genitív! Akuzatív pri nákupe: M → einen, F → eine, N → ein. Praktické vety: ‚Wie viel kostet...?', ‚Ich möchte...', ‚Kann ich eine Quittung bekommen?'"
+  reviewWords: []
 };

@@ -1,579 +1,916 @@
-﻿export const lesson54 = {
+export const lesson54 = {
   id: 54,
   week: 11,
   day: 4,
-  title: "Brief und E-Mail schreiben",
-  topic: "Písanie listov a e-mailov – formálny vs. neformálny register",
+  title: "Meine Träume und Pläne",
+  topic: "Rozprávanie o snoch, cieľoch a plánoch do budúcnosti.",
   cefr: "A1",
-  xpReward: 30,
-  narrativeContext:
-    "Jana dostala od svojej prenajímateľky formálny e-mail o zvýšení nájmu. Musí odpovedať formálne, ale zároveň napísať priateľovi neformálnu správu. Lukas jej pomáha pochopiť rozdiel: 'Sehr geehrte Frau Huber' nie je to isté ako 'Hallo Lisa!'. Jana si píše frázovník a cvičí sa v oboch registroch. Nakoniec posiela prenajímateľke zdvorilostnú formálnu odpoveď – sama!",
-  communicativeGoal:
-    "Po tejto lekcii viem napísať krátky formálny aj neformálny list/e-mail po nemecky s vhodným oslovením a záverom.",
-  skillFocus: ["writing", "reading", "vocabulary"],
-  grammarNote: {
-    rule: "Formálny vs. neformálny register v písaní",
-    explanation:
-      "Formálny list/e-mail: Oslovenie: 'Sehr geehrte Frau [Name],' alebo 'Sehr geehrter Herr [Name],' (čl. so správnym rodom!). Záver: 'Mit freundlichen Grüßen,' / 'Hochachtungsvoll,'. Konštrukcie: 'Ich schreibe Ihnen wegen...' / 'Ich möchte Sie bitten,...' / 'Im Anhang finden Sie...'. Neformálny: Oslovenie: 'Liebe Jana,' / 'Hallo Lukas,'. Záver: 'Viele Grüße,' / 'Liebe Grüße,' / 'Bis bald,'. V nemeckom liste sa za oslovením píše čiarka a ďalší riadok začína malým písmenom.",
-    examples: [
-      { de: "Sehr geehrte Frau Huber, ich schreibe Ihnen wegen der Heizung.", sk: "Vážená pani Huber, píšem Vám v súvislosti s kúrením." },
-      { de: "Ich möchte Sie bitten, die Reparatur zu veranlassen.", sk: "Chcel/a by som Vás požiadať, aby ste zaistili opravu." },
-      { de: "Mit freundlichen Grüßen, Jana Nováková", sk: "S pozdravom, Jana Nováková" },
-      { de: "Liebe Mia, wie geht's dir?", sk: "Milá Mia, ako sa máš?" },
-      { de: "Viele Grüße aus Wien!", sk: "Pozdravy z Viedne!" },
-    ],
-    slovakContrastNote:
-      "Slovenské 'S pozdravom' = nemecké 'Mit freundlichen Grüßen'. 'Vážená pani' = 'Sehr geehrte Frau'. Register-štruktúra formálnych listov je takmer rovnaká. 'Dovoľte mi oznámiť...' ≈ 'Ich möchte Sie informieren, dass...'. Skratka 'MfG' (Mit freundlichen Grüßen) sa používa v neformálnych biznis e-mailoch.",
-  },
+  xpReward: 20,
+  narrativeContext: "Jana und Luisa trinken Tee am Abend. Sie sprechen über ihre Wünsche und was sie in der Zukunft machen möchten.",
+  communicativeGoal: "Nach dieser Lektion kann ich über meine Wünsche und Pläne für die Zukunft sprechen.",
+  skillFocus: [
+    "vocabulary",
+    "grammar",
+    "speaking"
+  ],
+  lessonNotes: "Naučíme sa slovnú zásobu týkajúcu sa snov a životných cieľov. Zameriame sa na rozdiely medzi 'möchten' a 'wollen' pri vyjadrovaní želaní a zámerov. Precvičíme si, ako hovoriť o budúcich plánoch na úrovni A1.",
+  grammarNotes: [
+    {
+      rule: "Perfekt",
+      explanation: "<p>Perfekt je minulý čas, ktorý sa v nemčine používa oveľa častejšie ako v slovenčine, najmä v hovorovej reči. Vyjadruje dokončenú činnosť v minulosti. V nemčine sa tvorí pomocou dvoch pomocných slovies: <strong>haben</strong> (mať) alebo <strong>sein</strong> (byť) v prítomnom čase a hlavného slovesa v tvare <strong>préterita (Partizip II)</strong>. </p><p><strong>Kedy použiť haben a kedy sein?</strong></p><ul><li><strong>haben</strong> sa používa s väčšinou slovies, ktoré nevyjadrujú pohyb alebo zmenu stavu.</li><li><strong>sein</strong> sa používa so slovesami vyjadrujúcimi pohyb (napr. gehen, fahren, fliegen) alebo zmenu stavu (napr. aufwachen, sterben, bleiben).</li></ul><p><strong>Tvorenie Partizip II:</strong></p><ul><li>Pravidelné slovesá: kmeň slovesa + <strong>-t</strong> (napr. machen -> gemacht, lernen -> gelernt).</li><li>Nepravidelné slovesá: majú špecifický tvar, ktorý sa treba naučiť (napr. sehen -> gesehen, sprechen -> gesprochen).</li></ul><div class='tip-box'><strong>Tip:</strong> V slovenčine často používame na vyjadrenie minulosti jednoduchý minulý čas (ja som robil/a). V nemčine je Perfekt v hovorovej reči preferovaný.</div>",
+      examples: [
+        {
+          de: "Ich habe gestern einen Film gesehen.",
+          sk: "Včera som videl film."
+        },
+        {
+          de: "Wir sind nach Berlin gefahren.",
+          sk: "Išli sme do Berlína."
+        },
+        {
+          de: "Hast du das Buch gelesen?",
+          sk: "Čítal si tú knihu?"
+        },
+        {
+          de: "Er hat lange geschlafen.",
+          sk: "Dlho spal."
+        },
+        {
+          de: "Sie ist gestern angekommen.",
+          sk: "Včera prišla."
+        },
+        {
+          de: "Wann hast du Geburtstag gehabt?",
+          sk: "Kedy si mal narodeniny?"
+        },
+        {
+          de: "Wir haben zusammen gearbeitet.",
+          sk: "Pracovali sme spolu."
+        },
+        {
+          de: "Das Kind ist müde geworden.",
+          sk: "Dieťa sa unavilo."
+        }
+      ],
+      slovakContrastNote: "V slovenčine používame na vyjadrenie minulosti najčastejšie minulý čas (ja som robil/a, ty si robil/a...). V nemčine sa v hovorovej reči preferuje Perfekt, aj keď sa deje v minulosti. Rozdiel je aj v používaní pomocných slovies: v slovenčine máme len 'byť' (som, si, je...), v nemčine je to 'haben' alebo 'sein' podľa typu slovesa. Taktiež umiestnenie príčastia (Partizip II) je na konci vety, zatiaľ čo v slovenčine je sloveso na druhom mieste."
+    },
+    {
+      rule: "Präteritum von 'sein' und 'haben'",
+      explanation: "<p>Hoci sa v hovorovej nemčine na vyjadrenie minulosti používa najmä Perfekt, slovesá <strong>sein</strong> (byť) a <strong>haben</strong> (mať) majú v minulom čase špecifickú formu nazývanú Präteritum, ktorá sa používa pomerne často, dokonca aj v hovorovej reči.</p><p>Tieto tvary sa líšia od Perfekta a je dôležité ich poznať:</p><ul><li><strong>sein:</strong> ich war, du warst, er/sie/es war, wir waren, ihr wart, sie/Sie waren</li><li><strong>haben:</strong> ich hatte, du hattest, er/sie/es hatte, wir hatten, ihr hattet, sie/Sie hatten</li></ul><p>Tieto tvary sa často používajú na opis stavu alebo situácie v minulosti, alebo v písomnom prejave.</p><div class='warn-box'><strong>Pozor:</strong> Nepleťte si tieto tvary s Perfektom. Napríklad 'Ich war' znamená 'Bol som', zatiaľ čo 'Ich habe gewesen' sa v tomto kontexte nepoužíva.</div>",
+      examples: [
+        {
+          de: "Ich war gestern zu Hause.",
+          sk: "Včera som bol doma."
+        },
+        {
+          de: "Wir waren müde.",
+          sk: "Boli sme unavení."
+        },
+        {
+          de: "Er hatte keine Zeit.",
+          sk: "Nemal čas."
+        },
+        {
+          de: "Hattest du Hunger?",
+          sk: "Mal si hlad?"
+        },
+        {
+          de: "Sie war krank.",
+          sk: "Bola chorá."
+        },
+        {
+          de: "Es war kalt draußen.",
+          sk: "Vonku bola zima."
+        },
+        {
+          de: "Wir hatten viel Spaß.",
+          sk: "Mali sme veľa zábavy."
+        },
+        {
+          de: "Wann war das?",
+          sk: "Kedy to bolo?"
+        }
+      ],
+      slovakContrastNote: "V slovenčine máme pre slovesá 'byť' a 'mať' v minulom čase tvary ako 'bol som', 'bola si', 'mali sme', 'mal si'. V nemčine sa pre tieto dve slovesá v minulom čase používa Präteritum (war, warst, waren...; hatte, hattest, hatten...), ktoré sa líši od Perfekta. Hoci v slovenčine používame na vyjadrenie minulosti najmä minulý čas, v nemčine je pre 'sein' a 'haben' Präteritum bežnejší ako ich Perfektum (ktoré sa tvorí ako 'ich bin gewesen', 'ich habe gehabt' a používa sa menej často)."
+    }
+  ],
   vocab: [
     {
-      de: "Sehr geehrte/r ...",
-      sk: "Vážená/ý ... (formálne oslovenie)",
-      example: "Sehr geehrte Frau Huber,",
-      exampleSk: "Vážená pani Huber,",
-      gender: null,
+      de: "der Traum",
+      sk: "sen",
+      gender: "M",
       srsId: "L54_V01",
-      recycledFrom: [],
+      example: "Mein Traum ist es, in Wien zu leben.",
+      exampleSk: "Môj sen je žiť vo Viedni.",
+      recycledFrom: []
     },
     {
-      de: "Mit freundlichen Grüßen",
-      sk: "S pozdravom (formálne)",
-      example: "Mit freundlichen Grüßen, Jana Nováková",
-      exampleSk: "S pozdravom, Jana Nováková",
-      gender: null,
+      de: "die Zukunft",
+      sk: "budúcnosť",
+      gender: "F",
       srsId: "L54_V02",
-      recycledFrom: [],
+      example: "Ich denke über die Zukunft nach.",
+      exampleSk: "Premýšľam o budúcnosti.",
+      recycledFrom: []
     },
     {
-      de: "Liebe/r ...",
-      sk: "Milá/ý ... (neformálne oslovenie)",
-      example: "Liebe Mia, ich schreibe dir aus Wien!",
-      exampleSk: "Milá Mia, píšem ti z Viedne!",
-      gender: null,
+      de: "das Leben",
+      sk: "život",
+      gender: "N",
       srsId: "L54_V03",
-      recycledFrom: [],
+      example: "Ich möchte ein gutes Leben haben.",
+      exampleSk: "Chcem mať dobrý život.",
+      recycledFrom: []
     },
     {
-      de: "Viele Grüße",
-      sk: "S pozdravom (neformálne) / Pozdravujem",
-      example: "Viele Grüße aus Wien!",
-      exampleSk: "Pozdravy z Viedne!",
-      gender: null,
+      de: "die Idee",
+      sk: "nápad",
+      gender: "F",
       srsId: "L54_V04",
-      recycledFrom: [],
+      example: "Ich habe eine neue Idee.",
+      exampleSk: "Mám nový nápad.",
+      recycledFrom: []
     },
     {
-      de: "Ich schreibe wegen...",
-      sk: "Píšem v súvislosti s...",
-      example: "Ich schreibe Ihnen wegen der defekten Heizung.",
-      exampleSk: "Píšem Vám v súvislosti s pokazeným kúrením.",
-      gender: null,
+      de: "die Firma",
+      sk: "firma",
+      gender: "F",
       srsId: "L54_V05",
-      recycledFrom: [],
+      example: "Sie möchte eine eigene Firma gründen.",
+      exampleSk: "Chce založiť vlastnú firmu.",
+      recycledFrom: []
     },
     {
-      de: "Ich möchte Sie bitten, ...",
-      sk: "Chcel/a by som Vás požiadať, aby...",
-      example: "Ich möchte Sie bitten, das Problem zu lösen.",
-      exampleSk: "Chcela by som Vás požiadať, aby ste vyriešili problém.",
-      gender: null,
+      de: "die Agentur",
+      sk: "agentúra",
+      gender: "F",
       srsId: "L54_V06",
-      recycledFrom: [],
+      example: "Vielleicht eine eigene Designagentur.",
+      exampleSk: "Možno vlastná dizajnérska agentúra.",
+      recycledFrom: []
     },
     {
-      de: "der Anhang",
-      sk: "príloha (e-mail – v texte)",
-      example: "Im Anhang finden Sie das ausgefüllte Formular.",
-      exampleSk: "V prílohe nájdete vyplnený formulár.",
-      gender: "M",
+      de: "das Design",
+      sk: "dizajn",
+      gender: "N",
       srsId: "L54_V07",
-      recycledFrom: [],
+      example: "Ich interessiere mich für Design.",
+      exampleSk: "Zaujíma ma dizajn.",
+      recycledFrom: []
     },
     {
-      de: "die Anlage",
-      sk: "príloha (formálny list – na konci)",
-      example: "Anlage: Meldebescheinigung",
-      exampleSk: "Príloha: Potvrdenie o prihlásení",
-      gender: "F",
+      de: "das Jahr",
+      sk: "rok",
+      gender: "N",
       srsId: "L54_V08",
-      recycledFrom: [],
+      example: "Nächstes Jahr möchte ich nach Berlin fahren.",
+      exampleSk: "Budúci rok chcem ísť do Berlína.",
+      recycledFrom: []
     },
     {
-      de: "Hochachtungsvoll",
-      sk: "S úctou (veľmi formálne, napr. právne dokumenty)",
-      example: "Hochachtungsvoll, Dr. Stefan Berger",
-      exampleSk: "S úctou, Dr. Stefan Berger",
-      gender: null,
-      srsId: "L54_V09",
-      recycledFrom: [],
-    },
-    {
-      de: "Bitte um Rückmeldung",
-      sk: "Prosím o odpoveď / spätnú väzbu",
-      example: "Ich bitte um baldige Rückmeldung.",
-      exampleSk: "Prosím o čoskoro odpoveď.",
-      gender: null,
-      srsId: "L54_V10",
-      recycledFrom: [],
-    },
-    {
-      de: "die Antwort",
-      sk: "odpoveď",
-      example: "Ich warte auf Ihre Antwort.",
-      exampleSk: "Čakám na Vašu odpoveď.",
-      gender: "F",
-      srsId: "L54_V11",
-      recycledFrom: [28, 33],
-    },
-    {
-      de: "beantworten",
-      sk: "odpovedať na (+ Akk)",
-      example: "Bitte beantworten Sie meine E-Mail.",
-      exampleSk: "Prosím, odpovedajte na môj e-mail.",
-      gender: null,
-      srsId: "L54_V12",
-      recycledFrom: [],
-    },
-    {
-      de: "der Betreff",
-      sk: "predmet (e-mailu)",
-      example: "Betreff: Defekte Heizung – Wohnung 4",
-      exampleSk: "Predmet: Pokazené kúrenie – byt 4",
+      de: "der Wunsch",
+      sk: "prianie, želanie",
       gender: "M",
-      srsId: "L54_V13",
-      recycledFrom: [],
+      srsId: "L54_V09",
+      example: "Mein größter Wunsch ist es, glücklich zu sein.",
+      exampleSk: "Moje najväčšie želanie je byť šťastný.",
+      recycledFrom: []
     },
     {
-      de: "weiterleiten (→ leitet weiter) ⚠️",
-      sk: "preposlať (e-mail)",
-      example: "Ich leite diese E-Mail an meinen Kollegen weiter.",
-      exampleSk: "Prepošlem tento e-mail svojmu kolegovi.",
+      de: "das Ziel",
+      sk: "cieľ",
+      gender: "N",
+      srsId: "L54_V10",
+      example: "Mein Ziel ist es, Deutsch zu lernen.",
+      exampleSk: "Môj cieľ je naučiť sa po nemecky.",
+      recycledFrom: []
+    },
+    {
+      de: "der Plan",
+      sk: "plán",
+      gender: "M",
+      srsId: "L54_V11",
+      example: "Was sind deine Pläne für die Zukunft?",
+      exampleSk: "Aké sú tvoje plány do budúcnosti?",
+      recycledFrom: []
+    },
+    {
+      de: "die Stadt",
+      sk: "mesto",
+      gender: "F",
+      srsId: "L54_V12",
+      example: "Wien ist eine schöne Stadt.",
+      exampleSk: "Viedeň je pekné mesto.",
+      recycledFrom: []
+    },
+    {
+      de: "lernen",
+      sk: "učiť sa",
+      gender: null,
+      srsId: "L54_V13",
+      example: "Ich möchte Deutsch perfekt lernen.",
+      exampleSk: "Chcem sa perfektne naučiť po nemecky.",
+      recycledFrom: []
+    },
+    {
+      de: "bleiben",
+      sk: "zostať",
       gender: null,
       srsId: "L54_V14",
-      recycledFrom: [],
+      example: "Ich möchte in Wien bleiben.",
+      exampleSk: "Chcem zostať vo Viedni.",
+      recycledFrom: []
     },
     {
-      de: "der Empfänger",
-      sk: "príjemca",
-      example: "Der Empfänger ist Frau Huber.",
-      exampleSk: "Príjemca je pani Huber.",
-      gender: "M",
+      de: "wollen",
+      sk: "chcieť (mať vôľu)",
+      gender: null,
       srsId: "L54_V15",
-      recycledFrom: [],
+      example: "Ich will nächstes Jahr nach Berlin.",
+      exampleSk: "Budúci rok chcem (ísť) do Berlína.",
+      recycledFrom: []
     },
     {
-      de: "der Absender",
-      sk: "odosielateľ",
-      example: "Der Absender der E-Mail ist Jana Nováková.",
-      exampleSk: "Odosielaťelom e-mailu je Jana Nováková.",
-      gender: "M",
+      de: "möchten",
+      sk: "chcieť (prianie)",
+      gender: null,
       srsId: "L54_V16",
-      recycledFrom: [],
+      example: "Ich möchte eine eigene Designagentur.",
+      exampleSk: "Chcel by som vlastnú dizajnérsku agentúru.",
+      recycledFrom: []
     },
     {
-      de: "formell / informell",
-      sk: "formálny / neformálny",
-      example: "Dieser Brief ist sehr formell.",
-      exampleSk: "Tento list je veľmi formálny.",
+      de: "gründen",
+      sk: "založiť",
       gender: null,
       srsId: "L54_V17",
-      recycledFrom: [],
+      example: "Sie hat eine Firma gegründet.",
+      exampleSk: "Založila firmu.",
+      recycledFrom: []
     },
     {
-      de: "höflich",
-      sk: "zdvorilý",
-      example: "Es ist wichtig, höflich zu schreiben.",
-      exampleSk: "Je dôležité písať zdvorilo.",
+      de: "denken",
+      sk: "myslieť",
       gender: null,
       srsId: "L54_V18",
-      recycledFrom: [],
+      example: "Ich denke viel über meine Zukunft nach.",
+      exampleSk: "Veľa premýšľam o svojej budúcnosti.",
+      recycledFrom: []
     },
+    {
+      de: "leben",
+      sk: "žiť",
+      gender: null,
+      srsId: "L54_V19",
+      example: "Er lebt seit zwei Jahren in Deutschland.",
+      exampleSk: "Žije dva roky v Nemecku.",
+      recycledFrom: []
+    },
+    {
+      de: "perfekt",
+      sk: "perfektne, dokonalý",
+      gender: null,
+      srsId: "L54_V20",
+      example: "Ich lerne Deutsch, um perfekt zu sprechen.",
+      exampleSk: "Učím sa po nemecky, aby som hovoril perfektne.",
+      recycledFrom: []
+    },
+    {
+      de: "vielleicht",
+      sk: "možno",
+      gender: null,
+      srsId: "L54_V21",
+      example: "Vielleicht besuche ich dich nächste Woche.",
+      exampleSk: "Možno ťa navštívim budúci týždeň.",
+      recycledFrom: []
+    },
+    {
+      de: "nächstes Jahr",
+      sk: "budúci rok",
+      gender: null,
+      srsId: "L54_V22",
+      example: "Nächstes Jahr will ich nach Spanien reisen.",
+      exampleSk: "Budúci rok chcem cestovať do Španielska.",
+      recycledFrom: []
+    },
+    {
+      de: "Was sind deine Pläne?",
+      sk: "Aké sú tvoje plány?",
+      gender: null,
+      srsId: "L54_V23",
+      example: "Was sind deine Pläne für das Wochenende?",
+      exampleSk: "Aké sú tvoje plány na víkend?",
+      recycledFrom: []
+    },
+    {
+      de: "Ich möchte...",
+      sk: "Chcel/a by som...",
+      gender: null,
+      srsId: "L54_V24",
+      example: "Ich möchte eine Tasse Kaffee.",
+      exampleSk: "Dal/a by som si šálku kávy.",
+      recycledFrom: []
+    },
+    {
+      de: "Ich will...",
+      sk: "Chcem...",
+      gender: null,
+      srsId: "L54_V25",
+      example: "Ich will jetzt nach Hause gehen.",
+      exampleSk: "Chcem teraz ísť domov.",
+      recycledFrom: []
+    }
   ],
   exercises: [
     {
       type: "flashcard",
-      instruction: "Nauč sa kľúčové frázy pre formálne a neformálne e-maily a listy.",
-      items: [
-        "Sehr geehrte Frau ... = Vážená pani ... (formálne)",
-        "Sehr geehrter Herr ... = Vážený pán ... (formálne)",
-        "Mit freundlichen Grüßen = S pozdravom (formálne)",
-        "Hochachtungsvoll = S úctou (veľmi formálne)",
-        "Liebe/r ... = Milá/ý ... (neformálne)",
-        "Viele Grüße = Pozdravy (neformálne)",
-        "Liebe Grüße = Srdečné pozdravy",
-        "Ich schreibe wegen... = Píšem v súvislosti s...",
-        "Ich möchte Sie bitten,... = Chcel/a by som Vás požiadať,...",
-        "Im Anhang finden Sie... = V prílohe nájdete...",
-        "der Betreff = predmet (e-mailu)",
-        "der Empfänger = príjemca",
-        "der Absender = odosielateľ",
-        "beantworten = odpovedať na",
-        "weiterleiten = preposlať",
-        "höflich = zdvorilý",
-      ],
-    },
-    {
-      type: "mcq",
-      instruction: "Vyber správnu frázu pre daný formálny alebo neformálny kontext.",
-      questions: [
-        {
-          question: "Ako začneš formálny e-mail pre prenajímateľku (žena, Frau Huber)?",
-          options: [
-            "Hallo Frau Huber,",
-            "Sehr geehrte Frau Huber,",
-            "Liebe Huber,",
-            "Hey,",
-          ],
-          answer: "Sehr geehrte Frau Huber,",
-          explanation:
-            "'Sehr geehrte Frau [meno],' je štandardné formálne oslovenie pre ženu v nemeckom liste/e-maile. Pre muža: 'Sehr geehrter Herr [meno],'. Čiarka za oslovením je povinná!",
-        },
-        {
-          question: "Ako zakončíš formálny obchodný e-mail?",
-          options: [
-            "Tschüss!",
-            "Ciao!",
-            "Mit freundlichen Grüßen,",
-            "Bis bald!",
-          ],
-          answer: "Mit freundlichen Grüßen,",
-          explanation:
-            "'Mit freundlichen Grüßen,' (skratka: MfG) je štandardný formálny záver e-mailu alebo listu. Pre veľmi formálne dokumenty: 'Hochachtungsvoll,'.",
-        },
-        {
-          question: "Jana píše kamarátke Mii. Aké oslovenie použije?",
-          options: [
-            "Sehr geehrte Mia,",
-            "Hochgeachte Mia,",
-            "Liebe Mia,",
-            "Sehr geehrte Frau Mia,",
-          ],
-          answer: "Liebe Mia,",
-          explanation:
-            "'Liebe [meno],' je neformálne priateľské oslovenie. 'Liebe' je pre ženy, 'Lieber' pre mužov: 'Lieber Lukas,'.",
-        },
-        {
-          question: "Čo znamená 'Betreff' v e-maili?",
-          options: ["Príloha", "Záver", "Predmet e-mailu", "Odosielateľ"],
-          answer: "Predmet e-mailu",
-          explanation:
-            "'Der Betreff' = predmet e-mailu. V e-mailových programoch je to políčko 'Betreff:' alebo 'Re:'. Dôležité: vždy vyplniť, aby príjemca vedel, o čom píšeš.",
-        },
-        {
-          question: "Aký je slovenský ekvivalent 'Ich möchte Sie bitten, ...'?",
-          options: [
-            "Rád/a by som vedel/a...",
-            "Chcel/a by som Vás požiadať,...",
-            "Dovoľte mi informovať Vás...",
-            "Píšem Vám v súvislosti s...",
-          ],
-          answer: "Chcel/a by som Vás požiadať,...",
-          explanation:
-            "'Ich möchte Sie bitten, ...' = 'Chcel/a by som Vás požiadať,...'. Toto je veľmi zdvorilá žiadosť. 'Sie' s veľkým S = formálne Vy.",
-        },
-        {
-          question: "Čo je rozdiel medzi 'der Anhang' a 'die Anlage'?",
-          options: [
-            "Sú to synonymá, obe znamenajú príloha",
-            "Anhang sa používa v e-mailoch, Anlage v papierových listoch",
-            "Anlage je odosielateľ, Anhang je príjemca",
-            "Anhang je predmet, Anlage je záver",
-          ],
-          answer: "Anhang sa používa v e-mailoch, Anlage v papierových listoch",
-          explanation:
-            "'Im Anhang finden Sie...' = príloha e-mailu. 'Anlage:' sa uvádza na konci formálneho papierového listu a vymenúva priložené dokumenty. V praxi sa oba používajú.",
-        },
-        {
-          question: "Ako sa po nemecky formálne povie 'odpovedať na e-mail'?",
-          options: ["antworten den E-Mail", "beantworten die E-Mail", "die E-Mail beantworten", "weiterleiten die E-Mail"],
-          answer: "die E-Mail beantworten",
-          explanation:
-            "'Beantworten' (odpovedať na) viaže akuzatív: 'die E-Mail beantworten'. Pozor: 'antworten' viaže datív 'auf + Akk': 'auf die E-Mail antworten'. Oba tvary sú správne.",
-        },
-      ],
-    },
-    {
-      type: "fill",
-      instruction: "Doplň chýbajúce slovo do formálneho e-mailu. Použi ___ pre prázdne políčko.",
-      questions: [
-        {
-          sentence: "___ geehrte Frau Schreiber, (formálne oslovenie)",
-          answer: "Sehr",
-          hint: "Formálne oslovenie začína 'Sehr ...'",
-          explanation:
-            "'Sehr geehrte Frau [meno],' je štandardné formálne oslovenie. 'Sehr' = veľmi, ale tu funguje ako formálna zdvorilosť.",
-        },
-        {
-          sentence: "Ich schreibe Ihnen ___ der defekten Heizung.",
-          answer: "wegen",
-          hint: "'wegen' = v súvislosti s / kvôli",
-          explanation:
-            "'Wegen' (kvôli, v súvislosti s) viaže genitív. 'Ich schreibe Ihnen wegen der defekten Heizung.' – štandardná formálna formulácia.",
-        },
-        {
-          sentence: "Im ___ finden Sie die Kopie des Vertrags.",
-          answer: "Anhang",
-          hint: "príloha e-mailu = der ...",
-          explanation:
-            "'Im Anhang finden Sie...' = V prílohe nájdete... Vždy v datíve: 'im' = in + dem → dative.",
-        },
-        {
-          sentence: "Mit ___ Grüßen, Jana Nováková",
-          answer: "freundlichen",
-          hint: "ﬆandardný formálny záver: Mit freundlichen ..."
-          ,
-          explanation:
-            "'Mit freundlichen Grüßen' je štandardný formálny záver (adjektívum v datíve plurálu). Skratka: MfG.",
-        },
-        {
-          sentence: "Ich möchte ___ bitten, das Problem zu reparieren.",
-          answer: "Sie",
-          hint: "formálne Vy = S_ (veľké S)",
-          explanation:
-            "'Ich möchte Sie bitten,...' – 'Sie' s veľkým S = formálne Vy. V e-maile sa vždy píše s veľkým S.",
-        },
-        {
-          sentence: "___ Lukas, wie geht's dir? (neformálne oslovenie, mužský rod)",
-          answer: "Lieber",
-          hint: "Neformálne oslovenie pre muža = Lieber ...",
-          explanation:
-            "'Lieber [mužské meno],' = neformálne oslovenie pre muža. Pre ženu: 'Liebe [ženské meno],'.",
-        },
-        {
-          sentence: "Der ___ der E-Mail ist meine Vermieterin Frau Huber.",
-          answer: "Empfänger",
-          hint: "príjemca = der E...",
-          explanation:
-            "'Der Empfänger' = príjemca. 'Der Absender' = odosielateľ. Jana posiela e-mail, preto je ona Absender a Frau Huber je Empfänger.",
-        },
-      ],
-    },
-    {
-      type: "listen",
-      instruction: "Nacvič si výslovnosť formálnych a neformálnych fráz. Prečítaj si ich nahlas.",
-      questions: [
-        { de: "Sehr geehrte Frau Huber,", sk: "Vážená pani Huber," },
-        { de: "Mit freundlichen Grüßen,", sk: "S pozdravom," },
-        { de: "Liebe Mia,", sk: "Milá Mia," },
-        { de: "Viele Grüße aus Wien!", sk: "Pozdravy z Viedne!" },
-        { de: "Ich schreibe Ihnen wegen der Heizung.", sk: "Píšem Vám v súvislosti s kúrením." },
-        { de: "Ich möchte Sie bitten, das Problem zu lösen.", sk: "Chcela by som Vás požiadať, aby ste vyriešili problém." },
-        { de: "Im Anhang finden Sie das Foto.", sk: "V prílohe nájdete fotografiu." },
-        { de: "Bitte beantworten Sie meine E-Mail.", sk: "Prosím, odpovedajte na môj e-mail." },
-      ],
+      instruction: "Prezri si slovíčka tejto lekcie. Klikni na kartičku pre preklad."
     },
     {
       type: "match",
-      instruction: "Spoj formálne a neformálne ekvivalenty alebo termíny s prekladmi.",
+      instruction: "Spojte nemecké slová s ich slovenskými ekvivalentmi.",
       pairs: [
-        ["Sehr geehrte Frau ...", "formálne oslovenie ženy"],
-        ["Liebe ...", "neformálne oslovenie"],
-        ["Mit freundlichen Grüßen", "formálny záver"],
-        ["Viele Grüße", "neformálny záver"],
-        ["der Betreff", "predmet e-mailu"],
-        ["der Anhang", "príloha e-mailu"],
-        ["der Empfänger", "príjemca"],
-        ["der Absender", "odosielateľ"],
-      ],
-    },
-    {
-      type: "dialogue",
-      instruction:
-        "Jana dostala formálny e-mail od prenajímateľky (Vermieterin). Jana a Lukas diskutujú, ako naň odpovedať.",
-      lines: [
-        {
-          speaker: "A",
-          de: "Lukas, ich habe eine E-Mail von meiner Vermieterin bekommen. Ich verstehe nicht alles.",
-          sk: "Lukas, dostala som e-mail od prenajímateľky. Nerozumiem všetkému.",
-        },
-        {
-          speaker: "B",
-          de: "Zeig mal! Oh, sie schreibt 'Sehr geehrte Frau Nováková'. Das ist sehr formell.",
-          sk: "Ukaž! Ó, píše 'Sehr geehrte Frau Nováková'. To je veľmi formálne.",
-        },
-        {
-          speaker: "A",
-          de: "Ja. Und sie schreibt wegen der Miete. Sie möchte, dass ich ihr die Kontonummer gebe.",
-          sk: "Áno. A píše o nájme. Chce, aby som jej dala číslo účtu.",
-        },
-        {
-          speaker: "B",
-          de: "Okay. Du musst auch formell antworten. Schreib 'Sehr geehrte Frau [Name],'",
-          sk: "Ok. Musíš tiež odpovedať formálne. Napíš 'Sehr geehrte Frau [meno],'",
-        },
-        {
-          speaker: "A",
-          de: "Und wie beginne ich? Ich schreibe... was?",
-          sk: "A ako začnem? Napíšem... čo?",
-        },
-        {
-          speaker: "B",
-          de: "'Ich schreibe Ihnen in Bezug auf Ihre E-Mail vom...' und dann das Datum.",
-          sk: "'Píšem Vám v súvislosti s Vaším e-mailom z...' a potom dátum.",
-        },
-        {
-          speaker: "A",
-          de: "Gut. Und die Kontonummer – soll ich sie direkt schreiben oder im Anhang?",
-          sk: "Dobre. A číslo účtu – mám ho napísať priamo alebo v prílohe?",
-        },
-        {
-          speaker: "B",
-          de: "Schreib 'Im Anhang finden Sie meine Kontodaten.' Das klingt professionell.",
-          sk: "Napíš 'V prílohe nájdete moje bankové údaje.' To znie profesionálne.",
-        },
-        {
-          speaker: "A",
-          de: "Super. Und wie beende ich die E-Mail?",
-          sk: "Skvelé. A ako zakončím e-mail?",
-        },
-        {
-          speaker: "B",
-          de: "'Mit freundlichen Grüßen' – das ist immer richtig für formelle Mails.",
-          sk: "'Mit freundlichen Grüßen' – to je vždy správne pre formálne e-maily.",
-        },
-      ],
-      comprehensionQuestions: [
-        {
-          question: "Warum hat die Vermieterin Jana eine E-Mail geschrieben?",
-          options: [
-            "Wegen einer defekten Heizung",
-            "Sie braucht Janas Kontonummer",
-            "Sie möchte die Wohnung verkaufen",
-            "Sie will die Miete senken",
-          ],
-          answer: "Sie braucht Janas Kontonummer",
-        },
-        {
-          question: "Wie soll Jana die E-Mail beginnen?",
-          options: [
-            "Hallo Frau [Name],",
-            "Liebe Frau [Name],",
-            "Sehr geehrte Frau [Name],",
-            "Guten Tag,",
-          ],
-          answer: "Sehr geehrte Frau [Name],",
-        },
-        {
-          question: "Wie soll Jana die Kontodaten übermitteln?",
-          options: [
-            "Am Telefon",
-            "Direkt im Text der E-Mail",
-            "Im Anhang der E-Mail",
-            "Per Brief"],
-          answer: "Im Anhang der E-Mail",
-        },
-      ],
-    },
-    {
-      type: "minitext",
-      instruction:
-        "Prečítaj si formálny e-mail, ktorý Jana napísala prenajímateľke ohľadom pokazeného kúrenia. Odpovedz na otázky.",
-      text:
-        "Von: jana.novakova@email.com\nAn: vermieterin.huber@wien.at\nBetreff: Defekte Heizung – Wohnung Nr. 4\n\nSehr geehrte Frau Huber,\n\nmit dieser E-Mail möchte ich Sie über ein Problem in meiner Wohnung informieren. Die Heizung in meinem Zimmer funktioniert seit gestern Abend nicht mehr.\n\nIch möchte Sie bitten, einen Techniker zu schicken, um das Problem zu beheben. Im Anhang finden Sie ein Foto der defekten Heizung.\n\nIch wäre sehr dankbar für eine baldige Antwort.\n\nMit freundlichen Grüßen,\nJana Nováková",
-      textSk:
-        "Od: jana.novakova@email.com\nKomu: vermieterin.huber@wien.at\nPredmet: Pokazené kúrenie – byt č. 4\n\nVážená pani Huber,\n\ntýmto e-mailom by som Vás chcela informovať o probléme vo svojom byte. Kúrenie v mojej izbe nefunguje od včerajšieho večera.\n\nChcela by som Vás požiadať, aby ste poslali technika, ktorý problém odstraní. V prílohe nájdete fotografiu pokazeného kúrenia.\n\nBola by som veľmi vďačná za čoskoro odpoveď.\n\nS pozdravom,\nJana Nováková",
-      questions: [
-        {
-          question: "Was ist der Betreff dieser E-Mail?",
-          options: [
-            "Neue Miete",
-            "Defekte Heizung – Wohnung Nr. 4",
-            "Meldezettel",
-            "Kündigung",
-          ],
-          answer: "Defekte Heizung – Wohnung Nr. 4",
-        },
-        {
-          question: "Was findet Frau Huber im Anhang?",
-          options: ["Eine Rechnung", "Den Mietvertrag", "Ein Foto der defekten Heizung", "Die Kontonummer"],
-          answer: "Ein Foto der defekten Heizung",
-        },
-        {
-          question: "Mit welchen Worten endet die E-Mail?",
-          options: ["Viele Grüße", "Hochachtungsvoll", "Liebe Grüße", "Mit freundlichen Grüßen"],
-          answer: "Mit freundlichen Grüßen",
-        },
-      ],
-    },
-    {
-      type: "freewrite",
-      instruction:
-        "Napíš krátky formálny e-mail svojmu šéfovi/šéfke. Použi správne oslovenie, formálne konštrukcie a záver.",
-      prompt:
-        "Schreib eine kurze formelle E-Mail an deinen Chef oder deine Chefin. Du kannst nicht zur Arbeit kommen weil du krank bist.",
-      minWords: 40,
-      exampleAnswer:
-        "Betreff: Krankmeldung\n\nSehr geehrte Frau Müller,\n\nmit dieser E-Mail möchte ich Sie informieren, dass ich heute leider nicht zur Arbeit kommen kann. Ich bin krank und habe Fieber.\n\nIch werde heute zum Arzt gehen und Ihnen danach Bescheid geben. Im Anhang finden Sie meine Krankmeldung.\n\nIch bitte um Ihr Verständnis.\n\nMit freundlichen Grüßen,\nJana Nováková",
+        [
+          "der Traum",
+          "sen"
+        ],
+        [
+          "die Zukunft",
+          "budúcnosť"
+        ],
+        [
+          "das Leben",
+          "život"
+        ],
+        [
+          "die Idee",
+          "nápad"
+        ],
+        [
+          "die Firma",
+          "firma"
+        ],
+        [
+          "das Ziel",
+          "cieľ"
+        ],
+        [
+          "der Plan",
+          "plán"
+        ],
+        [
+          "lernen",
+          "učiť sa"
+        ],
+        [
+          "wollen",
+          "chcieť (mať vôľu)"
+        ],
+        [
+          "möchten",
+          "chcieť (prianie)"
+        ],
+        [
+          "gründen",
+          "založiť"
+        ],
+        [
+          "nächstes Jahr",
+          "budúci rok"
+        ]
+      ]
     },
     {
       type: "wordorder",
-      instruction: "Zoraď slová do správnej nemeckej vety.",
+      instruction: "Usporiadajte slová do správneho nemeckého poradia.",
       sentences: [
         {
-          words: ["Ich", "weiß", "nicht", "ob", "sie", "in", "Wien", "bleibt"],
-          correct: "Ich weiß nicht ob sie in Wien bleibt",
-          hint: "Neviem, či zostane vo Viedni.",
-          explanation: "Nepriama otázka s 'ob': sloveso 'bleibt' ide na koniec vedľajšej vety — odlišné od priamej otázky (Bleibt sie in Wien?).",
+          words: [
+            "Ich",
+            "nächstes",
+            "Jahr",
+            "eine",
+            "Firma",
+            "gründen",
+            "will"
+          ],
+          correct: "Ich will nächstes Jahr eine Firma gründen",
+          hint: "Budúci rok chcem založiť firmu.",
+          explanation: "V nemčine je sloveso vo vete zvyčajne na druhom mieste. V tomto prípade sa sloveso 'will' nachádza na druhom mieste a sloveso 'gründen' na konci vety, pretože 'will' je modálne sloveso."
         },
         {
-          words: ["Jana", "fragt", "wann", "die", "Prüfung", "ist"],
-          correct: "Jana fragt wann die Prüfung ist",
-          hint: "Jana sa pýta, kedy je skúška.",
-          explanation: "Nepriama otázka s 'wann': sloveso 'ist' ide na koniec vedľajšej vety. 'Wann' nahrádza otáznik.",
+          words: [
+            "Was",
+            "du",
+            "in",
+            "der",
+            "Zukunft",
+            "machen",
+            "möchtest"
+          ],
+          correct: "Was möchtest du in der Zukunft machen",
+          hint: "Čo by si chcel robiť v budúcnosti?",
+          explanation: "V otázkach s opytovacím slovom (Was) je opytovacie slovo na prvom mieste, sloveso na druhom mieste a podmet na treťom mieste. Modálne sloveso 'möchtest' je na druhom mieste a hlavné sloveso 'machen' na konci vety."
         },
         {
-          words: ["Ich", "weiß", "nicht", "wo", "er", "wohnt"],
-          correct: "Ich weiß nicht wo er wohnt",
-          hint: "Neviem, kde býva.",
-          explanation: "'wo' uvádza nepriamu otázku miesta. Sloveso 'wohnt' ide na koniec — Verbletztstellung.",
+          words: [
+            "Mein",
+            "Traum",
+            "ist",
+            "in",
+            "einer",
+            "großen",
+            "Stadt",
+            "leben"
+          ],
+          correct: "Mein Traum ist es, in einer großen Stadt zu leben",
+          hint: "Môj sen je žiť vo veľkom meste.",
+          explanation: "Pri vyjadrení sna alebo cieľa sa často používa konštrukcia 'es, ... zu + infinitív'. Sloveso 'ist' je na druhom mieste."
         },
         {
-          words: ["Sie", "fragt", "ob", "der", "Zug", "pünktlich", "kommt"],
-          correct: "Sie fragt ob der Zug pünktlich kommt",
-          hint: "Pýta sa, či vlak príde načas.",
-          explanation: "'ob' uvádza nepriamu zisťovaciu otázku (áno/nie). Sloveso 'kommt' ide na koniec. Porovnaj: Kommt der Zug pünktlich?",
+          words: [
+            "Wir",
+            "haben",
+            "viele",
+            "Ideen",
+            "für",
+            "unsere",
+            "Firma"
+          ],
+          correct: "Wir haben viele Ideen für unsere Firma",
+          hint: "Máme veľa nápadov pre našu firmu.",
+          explanation: "V oznamovacej vete je sloveso 'haben' na druhom mieste."
         },
         {
-          words: ["Ich", "möchte", "wissen", "wie", "viel", "das", "kostet"],
-          correct: "Ich möchte wissen wie viel das kostet",
-          hint: "Chcel/a by som vedieť, koľko to stojí.",
-          explanation: "'wie viel' (dve slová) uvádza nepriamu otázku množstva. Sloveso 'kostet' ide na koniec vedľajšej vety.",
+          words: [
+            "Vielleicht",
+            "werde",
+            "ich",
+            "auch",
+            "ein",
+            "Design",
+            "studieren"
+          ],
+          correct: "Vielleicht werde ich auch ein Design studieren",
+          hint: "Možno budem študovať aj dizajn.",
+          explanation: "V tomto prípade 'werden' funguje ako pomocné sloveso pre budúci čas, ale v A1 sa často používa aj na vyjadrenie priania alebo plánu. Sloveso 'studieren' je na konci vety."
+        }
+      ]
+    },
+    {
+      type: "fill",
+      instruction: "Doplňte správne sloveso alebo slovo.",
+      questions: [
+        {
+          sentence: "Ich ___ nächstes Jahr in Deutschland leben.",
+          answer: "möchte",
+          hint: "Chcel/a by som...",
+          explanation: "Sloveso 'möchten' sa používa na vyjadrenie priania alebo želania. V tomto prípade vyjadruje túžbu žiť v Nemecku."
         },
-      ],
+        {
+          sentence: "Was ist dein größter ___ im Leben?",
+          answer: "Traum",
+          hint: "sen",
+          explanation: "Slovo 'Traum' znamená sen. Otázka sa pýta na najväčší sen v živote."
+        },
+        {
+          sentence: "Wir haben einen guten ___ für die Zukunft.",
+          answer: "Plan",
+          hint: "plán",
+          explanation: "Slovo 'Plan' znamená plán. Veta hovorí o dobrom pláne pre budúcnosť."
+        },
+        {
+          sentence: "Sie ___ eine eigene Agentur gründen.",
+          answer: "will",
+          hint: "chce (mať vôľu)",
+          explanation: "Sloveso 'wollen' sa používa na vyjadrenie silnej vôle alebo rozhodnutia. Tu vyjadruje jej odhodlanie založiť agentúru."
+        },
+        {
+          sentence: "Hast du schon eine ___ für das Projekt?",
+          answer: "Idee",
+          hint: "nápad",
+          explanation: "Slovo 'Idee' znamená nápad. Otázka sa pýta, či má na projekt nejaký nápad."
+        },
+        {
+          sentence: "Er ___ in Berlin.",
+          answer: "wohnt",
+          hint: "býva (z lekcie L06)",
+          explanation: "Toto je príklad zo starej lekcie (L06). Sloveso 'wohnen' (bývať) sa v tretej osobe jednotného čísla (er) časuje ako 'wohnt'."
+        },
+        {
+          sentence: "Ich ___ Deutsch lernen.",
+          answer: "möchte",
+          hint: "chcel/a by som (z lekcie L54)",
+          explanation: "Sloveso 'möchten' sa používa na vyjadrenie priania. V tomto prípade vyjadruje túžbu učiť sa po nemecky."
+        },
+        {
+          sentence: "Das ___ mir sehr gut.",
+          answer: "gefällt",
+          hint: "páči sa mi (z lekcie L43)",
+          explanation: "Toto je príklad zo starej lekcie (L43). Sloveso 'gefallen' (páčiť sa) vyžaduje datív. V tretej osobe jednotného čísla (es) sa časuje ako 'gefällt'."
+        }
+      ]
+    },
+    {
+      type: "listen",
+      instruction: "Počúvajte a spárujte nemecké slová s ich slovenskými významami.",
+      questions: [
+        {
+          de: "der Traum",
+          sk: "sen"
+        },
+        {
+          de: "die Zukunft",
+          sk: "budúcnosť"
+        },
+        {
+          de: "das Leben",
+          sk: "život"
+        },
+        {
+          de: "die Idee",
+          sk: "nápad"
+        },
+        {
+          de: "die Firma",
+          sk: "firma"
+        },
+        {
+          de: "das Ziel",
+          sk: "cieľ"
+        },
+        {
+          de: "der Plan",
+          sk: "plán"
+        },
+        {
+          de: "lernen",
+          sk: "učiť sa"
+        },
+        {
+          de: "möchten",
+          sk: "chcieť (prianie)"
+        },
+        {
+          de: "gründen",
+          sk: "založiť"
+        },
+        {
+          de: "nächstes Jahr",
+          sk: "budúci rok"
+        }
+      ]
+    },
+    {
+      type: "mcq",
+      instruction: "Vyberte správnu možnosť.",
+      questions: [
+        {
+          question: "Čo znamená slovo 'der Traum'?",
+          options: [
+            "Sen",
+            "Plán",
+            "Cieľ",
+            "Nápad"
+          ],
+          answer: 0,
+          explanation: "'Der Traum' je nemecké slovo pre 'sen'."
+        },
+        {
+          question: "Ktoré sloveso vyjadruje silnú vôľu alebo rozhodnutie?",
+          options: [
+            "möchten",
+            "können",
+            "wollen",
+            "sollen"
+          ],
+          answer: 2,
+          explanation: "'Wollen' sa používa na vyjadrenie silnej vôle alebo túžby, zatiaľ čo 'möchten' je jemnejšie prianie."
+        },
+        {
+          question: "Ako sa povie 'budúci rok' po nemecky?",
+          options: [
+            "letztes Jahr",
+            "dieses Jahr",
+            "nächstes Jahr",
+            "jeden Tag"
+          ],
+          answer: 2,
+          explanation: "'Nächstes Jahr' znamená 'budúci rok'."
+        },
+        {
+          question: "Doplňte vetu: 'Ich ___ eine Firma gründen.'",
+          options: [
+            "habe",
+            "bin",
+            "will",
+            "mache"
+          ],
+          answer: 2,
+          explanation: "Sloveso 'will' (chcieť) je správne, pretože vyjadruje zámer alebo vôľu založiť firmu. Sloveso 'gründen' je v infinitíve na konci vety, čo je typické pre modálne slovesá."
+        },
+        {
+          question: "Čo znamená 'die Zukunft'?",
+          options: [
+            "Minulosť",
+            "Prítomnosť",
+            "Budúcnosť",
+            "Život"
+          ],
+          answer: 2,
+          explanation: "'Die Zukunft' je nemecké slovo pre 'budúcnosť'."
+        },
+        {
+          question: "Doplňte vetu: 'Mein ___ ist es, die Welt zu sehen.'",
+          options: [
+            "Plan",
+            "Ziel",
+            "Idee",
+            "Traum"
+          ],
+          answer: 3,
+          explanation: "'Traum' (sen) je najvhodnejšie slovo na vyjadrenie veľkého životného priania vidieť svet."
+        },
+        {
+          question: "Ako sa povie 'chcel/a by som' po nemecky?",
+          options: [
+            "Ich will",
+            "Ich kann",
+            "Ich möchte",
+            "Ich habe"
+          ],
+          answer: 2,
+          explanation: "'Ich möchte' je zdvorilý spôsob, ako vyjadriť prianie alebo túžbu."
+        },
+        {
+          question: "V ktorej lekcii sme sa učili o minulom čase 'sein' a 'haben'?",
+          options: [
+            "L36",
+            "L39",
+            "L40",
+            "L53"
+          ],
+          answer: 2,
+          explanation: "Lekcia L40 sa zaoberala Präteritom (minulým časom) slovies 'sein' (bol/bola) a 'haben' (mal/mala)."
+        }
+      ]
+    },
+    {
+      type: "minitext",
+      instruction: "Lies den Dialog und beantworte die Fragen.",
+      text: "Luisa: Jana, was denkst du über die Zukunft? Hast du Träume?\nJana: Ja, ich habe viele Ideen. Ich möchte Deutsch perfekt lernen. Das ist mein größter Wunsch. Ich will vielleicht in Wien bleiben und eine eigene Designagentur gründen.\nLuisa: Das ist eine tolle Idee! Ich will nächstes Jahr nach Berlin. Ich habe dort schon eine Wohnung gefunden.\nJana: Wow! Berlin ist eine schöne Stadt. Was willst du dort machen?\nLuisa: Ich will dort auch arbeiten. Vielleicht in einer Agentur, wie du.\nJana: Das wäre super! Wir können uns dann besuchen.",
+      textSk: "Luisa: Jana, čo si myslíš o budúcnosti? Máš sny?\nJana: Áno, mám veľa nápadov. Chcela by som perfektne ovládať nemčinu. To je moje najväčšie želanie. Možno chcem zostať vo Viedni a založiť vlastnú dizajnérsku agentúru.\nLuisa: To je skvelý nápad! Budúci rok chcem ísť do Berlína. Už som tam našla byt.\nJana: Wow! Berlín je pekné mesto. Čo tam chceš robiť?\nLuisa: Chcem tam aj pracovať. Možno v agentúre, ako ty.\nJana: To by bolo super! Potom sa môžeme navštíviť.",
+      questions: [
+        {
+          question: "Was ist Janas größter Wunsch?",
+          options: [
+            "In Berlin eine Wohnung finden.",
+            "Deutsch perfekt lernen.",
+            "Eine eigene Firma in Berlin gründen.",
+            "Luisa in Berlin besuchen."
+          ],
+          answer: 1,
+          explanation: "Jana sagt: 'Ich möchte Deutsch perfekt lernen. Das ist mein größter Wunsch.'"
+        },
+        {
+          question: "Was will Jana vielleicht machen?",
+          options: [
+            "Nach Berlin ziehen.",
+            "Eine neue Wohnung suchen.",
+            "Eine eigene Designagentur gründen.",
+            "In Wien studieren."
+          ],
+          answer: 2,
+          explanation: "Jana sagt: 'Ich will vielleicht eine eigene Designagentur gründen.'"
+        },
+        {
+          question: "Wohin will Luisa nächstes Jahr?",
+          options: [
+            "Nach Wien.",
+            "In eine eigene Agentur.",
+            "In eine neue Stadt.",
+            "Nach Berlin."
+          ],
+          answer: 3,
+          explanation: "Luisa sagt: 'Ich will nächstes Jahr nach Berlin.'"
+        },
+        {
+          question: "Hat Luisa schon eine Wohnung in Berlin?",
+          options: [
+            "Nein, sie sucht noch.",
+            "Ja, sie hat schon eine Wohnung gefunden.",
+            "Nein, sie will erst eine Agentur gründen.",
+            "Ja, aber sie gefällt ihr nicht."
+          ],
+          answer: 1,
+          explanation: "Luisa sagt: 'Ich habe dort schon eine Wohnung gefunden.'"
+        }
+      ]
     },
     {
       type: "speaking",
-      instruction: "Počúvaj nemeckú vetu. Potom hovor nahlas a skontroluj sa.",
+      instruction: "Höre zu und sprich nach.",
       phrases: [
         {
-          de: "Ich weiß nicht, ob sie in Wien bleibt.",
-          sk: "Neviem, či zostane vo Viedni.",
-          tip: "ob-veta: bleibt na konci, nie na začiatku",
+          de: "der Traum",
+          sk: "sen",
+          tip: "R = [r], Traum = [traʊm]"
         },
         {
-          de: "Jana fragt, wann die Prüfung ist.",
-          sk: "Jana sa pýta, kedy je skúška.",
-          tip: "wann-veta: ist na konci vety",
+          de: "die Zukunft",
+          sk: "budúcnosť",
+          tip: "Z = [ts], Zukunft = [ˈtsuːkʊnft]"
         },
         {
-          de: "Ich weiß nicht, wo er wohnt.",
-          sk: "Neviem, kde býva.",
-          tip: "wo=[voː] – dlhé o, wohnt na konci",
+          de: "Ich möchte lernen",
+          sk: "Chcel/a by som sa učiť",
+          tip: "ö = [ø], möchte = [ˈmœçtə]"
         },
         {
-          de: "Sie fragt, ob der Zug pünktlich kommt.",
-          sk: "Pýta sa, či vlak príde načas.",
-          tip: "pünktlich=[ˈpʏŋktlɪç] – ü=[y]",
+          de: "Ich will eine Firma gründen",
+          sk: "Chcem založiť firmu",
+          tip: "gründen = [ˈɡrʏndn̩]"
         },
         {
-          de: "Ich möchte wissen, wie viel das kostet.",
-          sk: "Chcel/a by som vedieť, koľko to stojí.",
-          tip: "wie viel = dve slová, kostet na konci",
+          de: "Mein Traum ist ein eigenes Design",
+          sk: "Môj sen je vlastný dizajn",
+          tip: "eigenes = [ˈaɪɡənəs]"
         },
-      ],
+        {
+          de: "Vielleicht gründe ich nächstes Jahr eine Agentur",
+          sk: "Možno budúci rok založím agentúru",
+          tip: "vielleicht = [ˈfɪllaɪçt]"
+        },
+        {
+          de: "Was ist dein Plan für die Zukunft?",
+          sk: "Aký je tvoj plán do budúcnosti?",
+          tip: "Plan = [plaːn], Zukunft = [ˈtsuːkʊnft]"
+        }
+      ]
     },
+    {
+      type: "truefalse",
+      instruction: "Rozhodni, či sú nasledujúce tvrdenia pravdivé (Wahr) alebo nepravdivé (Falsch).",
+      statements: [
+        {
+          statement: "Ich habe eine Firma gegründet.",
+          isTrue: true,
+          explanation: "Veta je v Perfekte a je gramaticky správna. Vyjadruje, že si v minulosti založil firmu."
+        },
+        {
+          statement: "Sie wollen in der Stadt leben.",
+          isTrue: true,
+          explanation: "Veta je v PrPRESENSE s modálnym slovesom 'wollen' a je gramaticky správna."
+        },
+        {
+          statement: "Wir haben ein Traum.",
+          isTrue: false,
+          explanation: "Člen pri slove 'Traum' (sen) má byť mužského rodu, teda 'einen Traum'. Správne: 'Wir haben einen Traum.'"
+        },
+        {
+          statement: "Er hat seine Idee in die Zukunft gedacht.",
+          isTrue: false,
+          explanation: "Sloveso 'denken' sa v tomto kontexte používa s predložkou 'an' a v Perfekte s 'haben'. Správne: 'Er hat an seine Idee in die Zukunft gedacht.'"
+        },
+        {
+          statement: "Nächstes Jahr werde ich lernen.",
+          isTrue: true,
+          explanation: "Veta je v budúcnosti (vyjadrená pomocou 'nächstes Jahr' a slovesa v PrPRESENSE) a je gramaticky správna."
+        }
+      ]
+    },
+    {
+      type: "dictation",
+      instruction: "Napíš vety, ktoré počuješ.",
+      sentences: [
+        {
+          de: "Das ist mein Traum.",
+          sk: "Toto je môj sen."
+        },
+        {
+          de: "Ich will lernen.",
+          sk: "Chcem sa učiť."
+        },
+        {
+          de: "Wir gründen eine Firma.",
+          sk: "Zakladáme firmu."
+        },
+        {
+          de: "Sie hat eine Idee gehabt.",
+          sk: "Mala nápad."
+        },
+        {
+          de: "Was sind deine Pläne für die Zukunft?",
+          sk: "Aké sú tvoje plány do budúcnosti?"
+        }
+      ]
+    },
+    {
+      type: "categorysort",
+      instruction: "Roztrieď slová do správnych kategórií.",
+      categories: [
+        {
+          name: "Ciele a plány (modrá)",
+          color: "blue",
+          words: [
+            "der Traum",
+            "das Ziel",
+            "der Plan",
+            "die Idee",
+            "die Zukunft"
+          ]
+        },
+        {
+          name: "Činnosti a život (zelená)",
+          color: "green",
+          words: [
+            "lernen",
+            "leben",
+            "gründen",
+            "bleiben",
+            "denken"
+          ]
+        },
+        {
+          name: "Miesto a čas (fialová)",
+          color: "purple",
+          words: [
+            "die Stadt",
+            "die Firma",
+            "die Agentur",
+            "das Jahr"
+          ]
+        }
+      ],
+      explanation: "Slová sú rozdelené do kategórií podľa ich významu: ciele a plány, činnosti a život, a miesta a čas."
+    },
+    {
+      type: "translation",
+      instruction: "Prelož vety zo slovenčiny do nemčiny.",
+      sentences: [
+        {
+          sk: "Chcel by som založiť firmu.",
+          answer: "Ich möchte eine Firma gründen.",
+          hint: "möchte, gründen",
+          explanation: "Použili sme sloveso 'möchten' (chcieť, priať si) a sloveso 'gründen' (založiť) v PrPRESENSE."
+        },
+        {
+          sk: "Možno zostanem v meste.",
+          answer: "Vielleicht bleibe ich in der Stadt.",
+          hint: "vielleicht, bleiben",
+          explanation: "Použili sme sloveso 'bleiben' (zostať) v PrPRESENSE. Slovosled sa mení, keď je na prvom mieste iný vetný člen ako podmet."
+        },
+        {
+          sk: "Aké boli tvoje plány?",
+          answer: "Was waren deine Pläne?",
+          hint: "waren, Pläne",
+          explanation: "Použili sme sloveso 'sein' v tvare Präterita ('waren') a podstatné meno 'Pläne' (plány)."
+        },
+        {
+          sk: "Už som sa učil.",
+          answer: "Ich habe gelernt.",
+          hint: "habe, gelernt",
+          explanation: "Použili sme Perfektum so slovesom 'haben' a príčastím 'gelernt' (naučený, učil sa)."
+        }
+      ]
+    },
+    {
+      type: "conjugation",
+      instruction: "Doplň správne tvary slovesa 'wollen' v PrPRESENSE.",
+      verbs: [
+        {
+          infinitive: "wollen",
+          translation: "chcieť (mať vôľu)",
+          forms: [
+            {
+              pronoun: "ich",
+              correct: "will"
+            },
+            {
+              pronoun: "du",
+              correct: "willst"
+            },
+            {
+              pronoun: "er/sie/es",
+              correct: "will"
+            },
+            {
+              pronoun: "wir",
+              correct: "wollen"
+            },
+            {
+              pronoun: "ihr",
+              correct: "wollt"
+            },
+            {
+              pronoun: "sie/Sie",
+              correct: "wollen"
+            }
+          ],
+          note: "'Wollen' je modálne sloveso a jeho tvary v PrPRESENSE sa musia naučiť naspamäť. Je to silné sloveso, ktoré mení kmeňovú samohlásku v 1. a 3. osobe jednotného čísla (ich will, er will)."
+        }
+      ]
+    }
   ],
-  reviewWords: ["L54_V01", "L54_V02", "L54_V03", "L54_V04", "L54_V05", "L54_V06", "L54_V11"],
-  lessonNotes:
-    "Formálny register je kľúčový v nemecky hovoracích krajinách. Nikdy nepoužívaj 'Hallo' pri písaní neznámym ľuďom alebo autoritám. 'Sie' s veľkým S = formálne Vy. 'du' s malým d = tykanie. Záver vždy nasleduje pred podpisom – nezabudni na čiarku! MfG je akceptovaná skratka v e-mailoch medzi kolegami, ale nie v úradných listoch.",
+  reviewWords: []
 };

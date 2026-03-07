@@ -16,6 +16,7 @@ import { lesson07 } from './lessons/L07.js';
 import { lesson08 } from './lessons/L08.js';
 import { lesson09 } from './lessons/L09.js';
 import { lesson10 } from './lessons/L10.js';
+import { lesson10R } from './lessons/L10R.js';
 
 // Unit 2: Vienna Arrival (L11–L20) — Weeks 3–4
 import { lesson11 } from './lessons/L11.js';
@@ -28,6 +29,7 @@ import { lesson17 } from './lessons/L17.js';
 import { lesson18 } from './lessons/L18.js';
 import { lesson19 } from './lessons/L19.js';
 import { lesson20 } from './lessons/L20.js';
+import { lesson20R } from './lessons/L20R.js';
 
 // Unit 3: Daily Routine (L21–L30) — Weeks 5–6
 import { lesson21 } from './lessons/L21.js';
@@ -40,6 +42,7 @@ import { lesson27 } from './lessons/L27.js';
 import { lesson28 } from './lessons/L28.js';
 import { lesson29 } from './lessons/L29.js';
 import { lesson30 } from './lessons/L30.js';
+import { lesson30R } from './lessons/L30R.js';
 
 // Unit 4: Shopping, Eating & Travelling (L31–L40) — Weeks 7–8
 import { lesson31 } from './lessons/L31.js';
@@ -76,6 +79,7 @@ import { lesson57 } from './lessons/L57.js';
 import { lesson58 } from './lessons/L58.js';
 import { lesson59 } from './lessons/L59.js';
 import { lesson60 } from './lessons/L60.js';
+import { lesson60R } from './lessons/L60R.js';
 
 // Unit 7: Grammar Consolidation & Advanced A1 (L61–L70) — Weeks 13–14
 import { lesson61 } from './lessons/L61.js';
@@ -100,24 +104,30 @@ import { lesson77 } from './lessons/L77.js';
 import { lesson78 } from './lessons/L78.js';
 import { lesson79 } from './lessons/L79.js';
 import { lesson80 } from './lessons/L80.js';
+import { lesson80R } from './lessons/L80R.js';
 
 export const LESSONS = [
   lesson01, lesson02, lesson03, lesson04, lesson05,
   lesson06, lesson07, lesson08, lesson09, lesson10,
+  lesson10R,  // Bi-weekly recap: L01–L10
   lesson11, lesson12, lesson13, lesson14, lesson15,
   lesson16, lesson17, lesson18, lesson19, lesson20,
+  lesson20R,  // Bi-weekly recap: L11–L20
   lesson21, lesson22, lesson23, lesson24, lesson25,
   lesson26, lesson27, lesson28, lesson29, lesson30,
+  lesson30R,  // Comprehensive recap: L01–L30 (Saturday)
   lesson31, lesson32, lesson33, lesson34, lesson35,
   lesson36, lesson37, lesson38, lesson39, lesson40,
   lesson41, lesson42, lesson43, lesson44, lesson45,
   lesson46, lesson47, lesson48, lesson49, lesson50,
   lesson51, lesson52, lesson53, lesson54, lesson55,
   lesson56, lesson57, lesson58, lesson59, lesson60,
+  lesson60R,  // Comprehensive recap: L31–L60
   lesson61, lesson62, lesson63, lesson64, lesson65,
   lesson66, lesson67, lesson68, lesson69, lesson70,
   lesson71, lesson72, lesson73, lesson74, lesson75,
   lesson76, lesson77, lesson78, lesson79, lesson80,
+  lesson80R,  // Comprehensive recap: L61–L80 (finale)
 ];
 
 // --- Weekly Plan (16 weeks × 5 lessons) ---
@@ -141,7 +151,7 @@ export const WEEKLY_PLAN = [
   {
     week: 3,
     title: "Príchod do Viedne",
-    theme: "kein/keine, es gibt, privlastňovacie zámená, modálne",
+    theme: "der/die/das, prídavné mená, veľké čísla, ein/eine, kein/keine, farby",
     lessons: [11, 12, 13, 14, 15],
     restDays: [6, 7],
     tips: "Zopakuj lekcie 1–10 v rýchlom prehľade (flashcard mód) pred každou novou lekciou."

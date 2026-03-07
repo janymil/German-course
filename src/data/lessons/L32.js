@@ -1,568 +1,945 @@
-﻿export const lesson32 = {
+export const lesson32 = {
   id: 32,
   week: 7,
   day: 2,
-  title: "Essen und Lebensmittel",
-  topic: "Jedlo a potraviny — varenie",
+  title: "Der Zug kommt an!",
+  topic: "Slovesá s odlučiteľnou predponou (1. časť: ankommen, einsteigen, aussteigen, abfahren)",
   cefr: "A1",
-  xpReward: 25,
-  narrativeContext:
-    "Jana kocht zum ersten Mal für Lukas. Sie macht ein typisch slowakisches Gericht — Bryndzové halušky. Lukas fragt: 'Was brauchst du? Was kochst du?' Jana muss alles auf Deutsch erklären — die Zutaten, die Schritte, die Geräte.",
-  communicativeGoal:
-    "Po tejto lekcii viem hovoriť o varení, opísať recept a nakúpiť potraviny, ktoré potrebujem.",
-  skillFocus: ["vocabulary", "speaking", "reading", "grammar"],
-
-  grammarNote: {
-    rule: "Recept a časový sled: zuerst… dann… danach… zuletzt + kochen/backen",
-    explanation:
-      "Na opísanie receptu používame tzv. sekvenčné príslovky: 'zuerst' (najprv), 'dann' (potom), 'danach' (potom / následne), 'zuletzt' (nakoniec). Sloveso 'kochen' (variť) je pravidelné. Pozor: 'backen' (piecť) má zmenu kmeňa: er/sie/es bäckt (a→ä).",
-    examples: [
-      { de: "Zuerst schäle ich die Kartoffeln.", sk: "Najprv ošúpem zemiaky." },
-      { de: "Dann schneide ich die Zwiebel.", sk: "Potom nakrájam cibuľu." },
-      { de: "Danach brate ich das Fleisch.", sk: "Potom opečiem mäso." },
-      { de: "Zuletzt koche ich die Nudeln.", sk: "Nakoniec uvarím cestoviny." },
-      { de: "Er bäckt einen Kuchen.", sk: "Pečie koláč." },
-      { de: "Ich koche heute Abend für Lukas.", sk: "Dnes večer varím pre Lukáša." },
-    ],
-    slovakContrastNote:
-      "Slovenčina a nemčina majú podobnú logiku zložených podstatných mien pri jedle: 'Apfelkuchen' = 'jablkový koláč', 'Kartoffelsuppe' = 'zemiaková polievka'. Nemecké zložené slová sa píšu dokopy — a vždy majú rod posledného slova.",
-  },
-
+  xpReward: 20,
+  narrativeContext: "Jana fährt nach Salzburg. Ihr Zug hat Verspätung. Sie muss anrufen.",
+  communicativeGoal: "Nach dieser Lektion kann ich über Ankunfts- und Abfahrtszeiten sprechen.",
+  skillFocus: [
+    "vocabulary",
+    "grammar",
+    "listening",
+    "reading",
+    "writing",
+    "speaking"
+  ],
+  lessonNotes: "V tejto lekcii sa naučíš prvé odlučiteľné slovesá. Zistíš, ako sa mení ich význam s predponou a ako sa používajú vo vete. Precvičíš si ich v kontexte cestovania vlakom.",
+  grammarNotes: [
+    {
+      rule: "Trennbare Verben im Präsens",
+      explanation: "<p>V nemčine existujú slovesá s odlučiteľnou predponou (<em>trennbare Verben</em>). Tieto predpony, ako napríklad <em>an-, auf-, aus-, ein-, mit-, nach-, vor-, zu-</em>, menia význam slovesa a sú vždy prízvučné. Keď sa takéto sloveso používa v prítomnom čase (Präsens), predpona sa oddelí od kmeňa slovesa a presunie sa na koniec vety. Kmeň slovesa sa časuje ako bežné sloveso a stojí na druhom mieste vo vete. Je kľúčové si zapamätať, ktoré predpony sú odlučiteľné, aby ste správne tvorili vety.</p>",
+      examples: [
+        {
+          de: "Der Zug kommt um 10 Uhr an.",
+          sk: "Vlak prichádza o 10. hodine."
+        },
+        {
+          de: "Wann kommst du an?",
+          sk: "Kedy prídeš?"
+        },
+        {
+          de: "Ich steige hier aus.",
+          sk: "Vystupujem tu."
+        },
+        {
+          de: "Steigen wir in den Bus ein?",
+          sk: "Nastúpime do autobusu?"
+        },
+        {
+          de: "Der Bus fährt ab.",
+          sk: "Autobus odchádza."
+        },
+        {
+          de: "Rufst du mich an?",
+          sk: "Zavoláš mi?"
+        }
+      ],
+      slovakContrastNote: "V slovenčine nemáme koncept odlučiteľných predpôn. Predpony sú vždy pevnou súčasťou slovesa a nikdy sa neoddeľujú ani nepresúvajú na koniec vety. Napríklad, \"prísť\" (ankommen) je jedno slovo, nie dve časti, ktoré sa rozdelia."
+    },
+    {
+      rule: "Trennbare Verben mit Modalverben",
+      explanation: "<p>Situácia sa mení, ak sa v nemeckej vete objaví modálne sloveso (napr. <em>können, müssen, möchten, wollen, sollen, dürfen</em>). V takomto prípade sa odlučiteľná predpona neoddelí od slovesa. Celé sloveso (teda predpona spolu s kmeňom) stojí na konci vety v neurčitku (infinitíve). Modálne sloveso sa časuje a zaujíma druhé miesto vo vete, ako je preň typické.</p>",
+      examples: [
+        {
+          de: "Ich muss um 10 Uhr ankommen.",
+          sk: "Musím prísť o 10. hodine."
+        },
+        {
+          de: "Kannst du hier einsteigen?",
+          sk: "Môžeš tu nastúpiť?"
+        },
+        {
+          de: "Wir möchten in den Bus einsteigen.",
+          sk: "Chceli by sme nastúpiť do autobusu."
+        },
+        {
+          de: "Der Zug soll pünktlich ankommen.",
+          sk: "Vlak má prísť načas."
+        },
+        {
+          de: "Ich kann leider nicht umsteigen.",
+          sk: "Bohužiaľ nemôžem prestúpiť."
+        },
+        {
+          de: "Möchten Sie aussteigen?",
+          sk: "Chcete vystúpiť?"
+        }
+      ],
+      slovakContrastNote: "Aj v slovenčine používame modálne slovesá s neurčitkom hlavného slovesa (napr. \"musím prísť\"). Rozdiel je v tom, že v slovenčine sa predpona nikdy neoddeľuje, takže pre slovenského študenta je kľúčové zapamätať si, že v nemčine zostáva predpona pri slovese, keď je prítomné modálne sloveso."
+    },
+    {
+      rule: "Imperativ von trennbaren Verben",
+      explanation: "<p>Pri tvorbe rozkazovacieho spôsobu (Imperativ) s odlučiteľnými slovesami platia podobné pravidlá ako v prítomnom čase. Predpona sa oddelí od slovesa a presunie sa na koniec vety. Kmeň slovesa sa časuje podľa osoby, ku ktorej sa rozkaz obracia. Pre formu \"du\" sa koncovka \"-st\" vynecháva (napr. <em>Komm an!</em>), pre formu \"ihr\" sa používa tvar slovesa s \"-t\" (napr. <em>Kommt an!</em>) a pre formu \"Sie\" sa používa neurčitok slovesa s \"Sie\" (napr. <em>Kommen Sie an!</em>).</p>",
+      examples: [
+        {
+          de: "Komm bitte pünktlich an!",
+          sk: "Príď prosím načas!"
+        },
+        {
+          de: "Steigen Sie hier ein!",
+          sk: "Nastúpte tu, prosím!"
+        },
+        {
+          de: "Steigt bitte schnell ein!",
+          sk: "Nastúpte prosím rýchlo!"
+        },
+        {
+          de: "Mach das Fenster auf!",
+          sk: "Otvor okno!"
+        },
+        {
+          de: "Rufen Sie mich morgen an!",
+          sk: "Zavolajte mi zajtra!"
+        },
+        {
+          de: "Geh bitte mit!",
+          sk: "Poď prosím so mnou!"
+        }
+      ],
+      slovakContrastNote: "Slovenský rozkazovací spôsob je oveľa jednoduchší, pretože predpony sa nikdy neoddeľujú. Pre slovenského študenta je dôležité si uvedomiť, že v nemčine sa predpona odlučiteľného slovesa v rozkaze presúva na koniec vety, rovnako ako v prítomnom čase."
+    }
+  ],
   vocab: [
     {
-      de: "kochen",
-      sk: "variť",
-      example: "Jana kocht heute Bryndzové halušky.",
-      exampleSk: "Jana dnes varí bryndzové halušky.",
-      gender: null,
-      srsId: "L32_V01",
-      recycledFrom: [],
-    },
-    {
-      de: "backen → bäckt",
-      sk: "piecť (⚠️ a→ä: er bäckt)",
-      example: "Sie bäckt jeden Sonntag einen Kuchen.",
-      exampleSk: "Každú nedeľu pečie koláč.",
-      gender: null,
-      srsId: "L32_V02",
-      recycledFrom: [],
-    },
-    {
-      de: "das Rezept",
-      sk: "recept",
-      example: "Hast du das Rezept für Halušky?",
-      exampleSk: "Máš recept na halušky?",
-      gender: "N",
-      srsId: "L32_V03",
-      recycledFrom: [],
-    },
-    {
-      de: "die Nudeln (Pl.)",
-      sk: "cestoviny",
-      example: "Ich koche Nudeln mit Tomatensoße.",
-      exampleSk: "Varím cestoviny s paradajkovou omáčkou.",
-      gender: "Pl",
-      srsId: "L32_V04",
-      recycledFrom: [],
-    },
-    {
-      de: "der Reis",
-      sk: "ryža",
-      example: "Reis koche ich zwanzig Minuten.",
-      exampleSk: "Ryžu varím dvadsať minút.",
+      de: "der Anruf",
+      sk: "telefonát",
       gender: "M",
-      srsId: "L32_V05",
-      recycledFrom: [],
+      srsId: "L32_V01",
+      example: "Ich mache einen Anruf.",
+      exampleSk: "Telefonujem.",
+      recycledFrom: []
     },
     {
-      de: "die Kartoffel / die Kartoffeln",
-      sk: "zemiak / zemiaky",
-      example: "Für Halušky brauche ich viele Kartoffeln.",
-      exampleSk: "Na halušky potrebujem veľa zemiakov.",
+      de: "die Verspätung",
+      sk: "meškanie",
       gender: "F",
+      srsId: "L32_V02",
+      example: "Der Zug hat eine Verspätung.",
+      exampleSk: "Vlak mešká.",
+      recycledFrom: []
+    },
+    {
+      de: "die Minute",
+      sk: "minúta",
+      gender: "F",
+      srsId: "L32_V03",
+      example: "Eine Minute ist kurz.",
+      exampleSk: "Jedna minúta je krátka.",
+      recycledFrom: []
+    },
+    {
+      de: "die Stunde",
+      sk: "hodina",
+      gender: "F",
+      srsId: "L32_V04",
+      example: "Eine Stunde ist lang.",
+      exampleSk: "Jedna hodina je dlhá.",
+      recycledFrom: []
+    },
+    {
+      de: "die Zeit",
+      sk: "čas",
+      gender: "F",
+      srsId: "L32_V05",
+      example: "Ich habe keine Zeit.",
+      exampleSk: "Nemám čas.",
+      recycledFrom: []
+    },
+    {
+      de: "das Problem",
+      sk: "problém",
+      gender: "N",
       srsId: "L32_V06",
-      recycledFrom: [27],
+      example: "Das ist kein Problem.",
+      exampleSk: "To nie je problém.",
+      recycledFrom: []
     },
     {
-      de: "das Hähnchen / das Hühnchen",
-      sk: "kura",
-      example: "Ich brate das Hähnchen in der Pfanne.",
-      exampleSk: "Kuru opekám na panvici.",
-      gender: "N",
+      de: "der Kontakt",
+      sk: "kontakt",
+      gender: "M",
       srsId: "L32_V07",
-      recycledFrom: [],
+      example: "Ich muss meinen Kontakt anrufen.",
+      exampleSk: "Musím zavolať svojmu kontaktu.",
+      recycledFrom: []
     },
     {
-      de: "das Rindfleisch",
-      sk: "hovädzie mäso",
-      example: "Das Rindfleisch muss lange kochen.",
-      exampleSk: "Hovädzie mäso musí dlho variť.",
-      gender: "N",
+      de: "die Durchsage",
+      sk: "hlásenie",
+      gender: "F",
       srsId: "L32_V08",
-      recycledFrom: [],
+      example: "Hören Sie die Durchsage!",
+      exampleSk: "Počúvajte hlásenie!",
+      recycledFrom: []
     },
     {
-      de: "der Schinken",
-      sk: "šunka",
-      example: "Ich kaufe Schinken für das Sandwich.",
-      exampleSk: "Kupujem šunku na sendvič.",
+      de: "der Fahrplan",
+      sk: "cestovný poriadok",
       gender: "M",
       srsId: "L32_V09",
-      recycledFrom: [],
+      example: "Der Fahrplan ist wichtig.",
+      exampleSk: "Cestovný poriadok je dôležitý.",
+      recycledFrom: []
     },
     {
-      de: "die Sahne",
-      sk: "smotana",
-      example: "Die Sahne macht die Soße cremig.",
-      exampleSk: "Smotana robí omáčku krémovú.",
-      gender: "F",
+      de: "ankommen",
+      sk: "prísť, doraziť",
+      gender: null,
       srsId: "L32_V10",
-      recycledFrom: [],
+      example: "Wann kommt der Zug an?",
+      exampleSk: "Kedy príde vlak?",
+      recycledFrom: []
     },
     {
-      de: "die Zwiebel",
-      sk: "cibuľa",
-      example: "Ich schneide die Zwiebel klein.",
-      exampleSk: "Nakrájam cibuľu nadrobno.",
-      gender: "F",
+      de: "einsteigen",
+      sk: "nastúpiť",
+      gender: null,
       srsId: "L32_V11",
-      recycledFrom: [],
+      example: "Bitte hier einsteigen!",
+      exampleSk: "Prosím, nastúpte tu!",
+      recycledFrom: []
     },
     {
-      de: "der Knoblauch",
-      sk: "cesnak",
-      example: "Der Knoblauch gibt viel Geschmack.",
-      exampleSk: "Cesnak dáva veľa chuti.",
-      gender: "M",
+      de: "aussteigen",
+      sk: "vystúpiť",
+      gender: null,
       srsId: "L32_V12",
-      recycledFrom: [],
+      example: "Wann steigst du aus?",
+      exampleSk: "Kedy vystúpiš?",
+      recycledFrom: []
     },
     {
-      de: "das Öl",
-      sk: "olej",
-      example: "Ich nehme Olivenöl für die Pfanne.",
-      exampleSk: "Na panvicu vezmem olivový olej.",
-      gender: "N",
+      de: "abfahren",
+      sk: "odísť (vozidlo)",
+      gender: null,
       srsId: "L32_V13",
-      recycledFrom: [17],
+      example: "Der Zug fährt bald ab.",
+      exampleSk: "Vlak čoskoro odchádza.",
+      recycledFrom: []
     },
     {
-      de: "braten",
-      sk: "opekať, smažiť",
-      example: "Ich brate die Zwiebel in Öl.",
-      exampleSk: "Opekám cibuľu na oleji.",
+      de: "warten",
+      sk: "čakať",
       gender: null,
       srsId: "L32_V14",
-      recycledFrom: [],
+      example: "Ich muss warten.",
+      exampleSk: "Musím čakať.",
+      recycledFrom: []
     },
     {
-      de: "schneiden",
-      sk: "krájať (⚠️ nepravidelné: schneidet)",
-      example: "Ich schneide das Gemüse.",
-      exampleSk: "Krájam zeleninu.",
+      de: "sagen",
+      sk: "povedať",
       gender: null,
       srsId: "L32_V15",
-      recycledFrom: [],
+      example: "Was sagst du?",
+      exampleSk: "Čo hovoríš?",
+      recycledFrom: []
     },
     {
-      de: "das Messer",
-      sk: "nôž",
-      example: "Das Messer ist sehr scharf.",
-      exampleSk: "Nôž je veľmi ostrý.",
-      gender: "N",
+      de: "anrufen",
+      sk: "zavolať (niekomu)",
+      gender: null,
       srsId: "L32_V16",
-      recycledFrom: [],
+      example: "Ich rufe dich später an.",
+      exampleSk: "Zavolám ti neskôr.",
+      recycledFrom: []
     },
     {
-      de: "der Topf",
-      sk: "hrniec",
-      example: "Das Wasser kocht im Topf.",
-      exampleSk: "Voda vrie v hrnci.",
-      gender: "M",
+      de: "informieren",
+      sk: "informovať",
+      gender: null,
       srsId: "L32_V17",
-      recycledFrom: [],
+      example: "Ich muss dich informieren.",
+      exampleSk: "Musím ťa informovať.",
+      recycledFrom: []
     },
     {
-      de: "die Pfanne",
-      sk: "panvica",
-      example: "Ich brate das Fleisch in der Pfanne.",
-      exampleSk: "Mäso opekám na panvici.",
-      gender: "F",
+      de: "später",
+      sk: "neskôr",
+      gender: null,
       srsId: "L32_V18",
-      recycledFrom: [],
+      example: "Ich komme später.",
+      exampleSk: "Prídem neskôr.",
+      recycledFrom: []
     },
+    {
+      de: "pünktlich",
+      sk: "presný, načas",
+      gender: null,
+      srsId: "L32_V19",
+      example: "Der Zug ist pünktlich.",
+      exampleSk: "Vlak je načas.",
+      recycledFrom: []
+    },
+    {
+      de: "leider",
+      sk: "žiaľ",
+      gender: null,
+      srsId: "L32_V20",
+      example: "Leider habe ich keine Zeit.",
+      exampleSk: "Žiaľ, nemám čas.",
+      recycledFrom: []
+    },
+    {
+      de: "gleich",
+      sk: "hneď, okamžite",
+      gender: null,
+      srsId: "L32_V21",
+      example: "Ich komme gleich.",
+      exampleSk: "Prídem hneď.",
+      recycledFrom: []
+    },
+    {
+      de: "wichtig",
+      sk: "dôležitý",
+      gender: null,
+      srsId: "L32_V22",
+      example: "Das ist sehr wichtig.",
+      exampleSk: "To je veľmi dôležité.",
+      recycledFrom: []
+    },
+    {
+      de: "Es tut mir leid.",
+      sk: "Je mi to ľúto.",
+      gender: null,
+      srsId: "L32_V23",
+      example: "Es tut mir leid, ich bin spät.",
+      exampleSk: "Je mi to ľúto, meškám.",
+      recycledFrom: []
+    },
+    {
+      de: "am Telefon",
+      sk: "pri telefóne",
+      gender: null,
+      srsId: "L32_V24",
+      example: "Ich bin am Telefon.",
+      exampleSk: "Som pri telefóne.",
+      recycledFrom: []
+    },
+    {
+      de: "um ... Uhr",
+      sk: "o ... hodine",
+      gender: null,
+      srsId: "L32_V25",
+      example: "Wir treffen uns um drei Uhr.",
+      exampleSk: "Stretneme sa o tretej hodine.",
+      recycledFrom: []
+    }
   ],
-
   exercises: [
     {
       type: "flashcard",
-      instruction: "Kartičky — varenie a potraviny. Snaž sa vizualizovať každé jedlo.",
-      items: [
-        "L32_V01",
-        "L32_V02",
-        "L32_V03",
-        "L32_V04",
-        "L32_V05",
-        "L32_V06",
-        "L32_V07",
-        "L32_V08",
-        "L32_V09",
-        "L32_V10",
-        "L32_V11",
-        "L32_V12",
-        "L32_V13",
-        "L32_V14",
-        "L32_V15",
-        "L32_V16",
-        "L32_V17",
-        "L32_V18",
-      ],
-    },
-    {
-      type: "mcq",
-      instruction: "Vyber správnu odpoveď.",
-      questions: [
-        {
-          question: "Welche Form ist richtig? 'Sie ___ jeden Sonntag einen Kuchen.'",
-          options: ["backt", "bäckt", "backen", "bäcken"],
-          answer: "bäckt",
-          explanation: "'backen' má zmenu kmeňa v 3. os. sg.: er/sie/es bäckt (a→ä).",
-        },
-        {
-          question: "Was ist 'die Pfanne'?",
-          options: ["hrniec", "nôž", "panvica", "rúra"],
-          answer: "panvica",
-          explanation: "'die Pfanne' = panvica. 'der Topf' = hrniec.",
-        },
-        {
-          question: "Was kommt ZUERST in einem Rezept? Wähle die logische Reihenfolge.",
-          options: [
-            "Zuletzt kochen, dann schneiden.",
-            "Zuerst schneiden, dann braten.",
-            "Danach backen, zuerst essen.",
-            "Dann trinken, zuerst kaufen.",
-          ],
-          answer: "Zuerst schneiden, dann braten.",
-          explanation: "Logická postupnosť: zuerst (najprv) → dann (potom) → danach → zuletzt.",
-        },
-        {
-          question: "'das Rindfleisch' bedeutet auf Slowakisch:",
-          options: ["kuracie mäso", "bravčové mäso", "hovädzie mäso", "jahňacie mäso"],
-          answer: "hovädzie mäso",
-          explanation: "'Rind' = hovädzí dobytok → 'das Rindfleisch' = hovädzie mäso.",
-        },
-        {
-          question: "Welches Wort ist ein Kochgerät (kuchynský nástroj)?",
-          options: ["die Zwiebel", "das Öl", "der Topf", "der Schinken"],
-          answer: "der Topf",
-          explanation: "'der Topf' = hrniec — je to kuchynský nástroj, nie ingrediencia.",
-        },
-      ],
-    },
-    {
-      type: "fill",
-      instruction: "Doplň správne slovo alebo slovesnú formu.",
-      questions: [
-        {
-          sentence: "___ schäle ich die Kartoffeln. (najprv)",
-          answer: "Zuerst",
-          hint: "Prvý krok = ...?",
-          explanation: "'Zuerst' = najprv — začína recept.",
-        },
-        {
-          sentence: "Jana ___ die Zwiebel mit dem Messer. (krája)",
-          answer: "schneidet",
-          hint: "sloveso schneiden, sie-forma",
-          explanation: "'schneiden' → 'sie schneidet' — er/sie/es + -t.",
-        },
-        {
-          sentence: "Ich brate das Fleisch in der ___. (panvica)",
-          answer: "Pfanne",
-          hint: "die ...?",
-          explanation: "'die Pfanne' = panvica — na opekanie.",
-        },
-        {
-          sentence: "___ koche ich die Nudeln. (nakoniec)",
-          answer: "Zuletzt",
-          hint: "Posledný krok = ...?",
-          explanation: "'Zuletzt' = nakoniec — posledný krok v recepte.",
-        },
-        {
-          sentence: "Er ___ jede Woche Brot. (pečie)",
-          answer: "bäckt",
-          hint: "backen → er/sie/es ... (zmena kmeňa!)",
-          explanation: "'backen' → 'er bäckt' — zmena kmeňa a→ä.",
-        },
-        {
-          sentence: "Das ___ macht die Soße cremig. (smotana)",
-          answer: "Sahne",
-          hint: "die ... (F)",
-          explanation: "'die Sahne' = smotana.",
-        },
-      ],
-    },
-    {
-      type: "listen",
-      instruction: "Počúvaj recept krok za krokom. Zopakuj každú vetu.",
-      questions: [
-        { de: "Zuerst schäle ich die Kartoffeln.", sk: "Najprv ošúpem zemiaky." },
-        { de: "Dann schneide ich die Zwiebel klein.", sk: "Potom nakrájam cibuľu nadrobno." },
-        { de: "Danach brate ich die Zwiebel in der Pfanne.", sk: "Potom opekám cibuľu na panvici." },
-        { de: "Ich koche das Rindfleisch im Topf.", sk: "Hovädzie mäso varím v hrnci." },
-        { de: "Was brauchst du für das Rezept?", sk: "Čo potrebuješ na recept?" },
-        { de: "Zuletzt gebe ich die Sahne dazu.", sk: "Nakoniec pridám smotanu." },
-        { de: "Das Gericht schmeckt sehr gut!", sk: "Jedlo chutí veľmi dobre!" },
-        { de: "Hast du das Rezept?", sk: "Máš recept?" },
-      ],
+      instruction: "Prezri si slovíčka tejto lekcie. Klikni na kartičku pre preklad."
     },
     {
       type: "match",
-      instruction: "Spoj ingredienciu alebo nástroj s jeho prekladom.",
+      instruction: "Priraďte nemecké slová k ich slovenským prekladom.",
       pairs: [
-        ["die Nudeln", "cestoviny"],
-        ["der Reis", "ryža"],
-        ["die Kartoffel", "zemiak"],
-        ["die Zwiebel", "cibuľa"],
-        ["der Knoblauch", "cesnak"],
-        ["das Messer", "nôž"],
-        ["der Topf", "hrniec"],
-        ["die Pfanne", "panvica"],
-        ["kochen", "variť"],
-        ["braten", "opekať"],
-      ],
-    },
-    {
-      type: "dialogue",
-      instruction: "Jana vysvetľuje Lukášovi recept. Prečítaj si dialóg.",
-      lines: [
-        {
-          speaker: "Lukas",
-          de: "Mmm, das riecht gut! Was kochst du?",
-          sk: "Mmm, to vonia dobre! Čo varíš?",
-        },
-        {
-          speaker: "Jana",
-          de: "Ich mache Bryndzové halušky — ein slowakisches Gericht.",
-          sk: "Robím bryndzové halušky — slovenské jedlo.",
-        },
-        {
-          speaker: "Lukas",
-          de: "Interessant! Was brauchst du dafür?",
-          sk: "Zaujímavé! Čo na to potrebuješ?",
-        },
-        {
-          speaker: "Jana",
-          de: "Kartoffeln, Mehl, Salz — und natürlich Bryndza.",
-          sk: "Zemiaky, múku, soľ — a samozrejme bryndzu.",
-        },
-        {
-          speaker: "Lukas",
-          de: "Und wie kochst du das? Zeig mir das Rezept!",
-          sk: "A ako to varíš? Ukáž mi recept!",
-        },
-        {
-          speaker: "Jana",
-          de: "Zuerst reibe ich die Kartoffeln. Dann mische ich sie mit Mehl.",
-          sk: "Najprv nastrúham zemiaky. Potom ich zmieším s múkou.",
-        },
-        {
-          speaker: "Lukas",
-          de: "Und dann?",
-          sk: "A potom?",
-        },
-        {
-          speaker: "Jana",
-          de: "Dann koche ich die Halušky im Topf mit heißem Wasser.",
-          sk: "Potom varím halušky v hrnci s horúcou vodou.",
-        },
-        {
-          speaker: "Lukas",
-          de: "Und der Schinken? Wann kommt der?",
-          sk: "A šunka? Kedy príde ona?",
-        },
-        {
-          speaker: "Jana",
-          de: "Zuletzt! Ich brate den Schinken in der Pfanne und gebe ihn oben drauf.",
-          sk: "Nakoniec! Opečiem šunku na panvici a položím ju navrch.",
-        },
-      ],
-      comprehensionQuestions: [
-        {
-          question: "Was macht Jana?",
-          options: [
-            "Sie bäckt einen Kuchen.",
-            "Sie kocht Bryndzové halušky.",
-            "Sie macht eine Suppe.",
-            "Sie kocht Nudeln.",
-          ],
-          answer: "Sie kocht Bryndzové halušky.",
-          explanation: "Jana sagt: 'Ich mache Bryndzové halušky — ein slowakisches Gericht.'",
-        },
-        {
-          question: "Was reibt Jana zuerst?",
-          options: ["die Zwiebel", "den Schinken", "den Knoblauch", "die Kartoffeln"],
-          answer: "die Kartoffeln",
-          explanation: "Jana sagt: 'Zuerst reibe ich die Kartoffeln.'",
-        },
-        {
-          question: "Was macht Jana zuletzt?",
-          options: [
-            "Sie kocht die Nudeln.",
-            "Sie schält die Kartoffeln.",
-            "Sie brät den Schinken in der Pfanne.",
-            "Sie schneidet das Gemüse.",
-          ],
-          answer: "Sie brät den Schinken in der Pfanne.",
-          explanation: "Jana sagt: 'Zuletzt! Ich brate den Schinken in der Pfanne.'",
-        },
-      ],
-    },
-    {
-      type: "minitext",
-      instruction: "Prečítaj si jednoduchý recept a odpovedz na otázky.",
-      text: `Rührei auf Wienerisch — ein einfaches Rezept
-
-Zutaten: 3 Eier, 2 Esslöffel Butter, Salz, Pfeffer, frischer Schnittlauch.
-
-Zuerst schlage ich die Eier in eine Schüssel. Dann gebe ich Salz und Pfeffer dazu.
-Danach schmelze ich die Butter in der Pfanne.
-Ich gieße die Eier in die Pfanne und rühre langsam.
-Zuletzt gebe ich den Schnittlauch drauf. Fertig!
-
-Guten Appetit!`,
-      textSk: `Miešané vajíčka po viedensky — jednoduchý recept
-
-Ingrediencie: 3 vajíčka, 2 polievkové lyžice masla, soľ, korenie, čerstvá pažítka.
-
-Najprv rozbijem vajíčka do misky. Potom pridám soľ a korenie.
-Následne roztopím maslo na panvici.
-Vajíčka nalejem do panvice a pomaly miešam.
-Nakoniec pridám pažítku. Hotovo!
-
-Dobrú chuť!`,
-      questions: [
-        {
-          question: "Wie viele Eier braucht man für das Rezept?",
-          options: ["2", "3", "4", "5"],
-          answer: "3",
-          explanation: "Der Text sagt: '3 Eier' — tri vajíčka.",
-        },
-        {
-          question: "Was macht man ZUERST?",
-          options: [
-            "Die Butter schmelzen.",
-            "Den Schnittlauch draufgeben.",
-            "Die Eier in eine Schüssel schlagen.",
-            "Salz und Pfeffer hinzufügen.",
-          ],
-          answer: "Die Eier in eine Schüssel schlagen.",
-          explanation: "'Zuerst schlage ich die Eier in eine Schüssel.' = prvý krok.",
-        },
-        {
-          question: "Was kommt ganz am Ende?",
-          options: ["der Pfeffer", "der Schnittlauch", "die Butter", "das Salz"],
-          answer: "der Schnittlauch",
-          explanation: "'Zuletzt gebe ich den Schnittlauch drauf.' = nakoniec pažítka.",
-        },
-      ],
-    },
-    {
-      type: "freewrite",
-      instruction: "Napíš o jednom jedle, ktoré rád/rada varíš alebo ješ.",
-      prompt:
-        "Was kochst du am liebsten? Beschreibe ein einfaches Gericht! Was sind die Zutaten? Wie kochst du es — zuerst, dann, zuletzt?",
-      minWords: 30,
-      exampleAnswer:
-        "Ich koche gern Spaghetti Bolognese. Zuerst schneide ich die Zwiebel und den Knoblauch. Dann brate ich das Rindfleisch in der Pfanne. Danach gebe ich Tomaten dazu und koche alles zusammen. Zuletzt koche ich die Nudeln im Topf. Das Gericht schmeckt sehr gut!",
+        [
+          "der Anruf",
+          "telefonát"
+        ],
+        [
+          "die Verspätung",
+          "meškanie"
+        ],
+        [
+          "ankommen",
+          "prísť, doraziť"
+        ],
+        [
+          "einsteigen",
+          "nastúpiť"
+        ],
+        [
+          "aussteigen",
+          "vystúpiť"
+        ],
+        [
+          "abfahren",
+          "odísť (vozidlo)"
+        ],
+        [
+          "warten",
+          "čakať"
+        ],
+        [
+          "pünktlich",
+          "presný, načas"
+        ],
+        [
+          "leider",
+          "žiaľ"
+        ],
+        [
+          "der Fahrplan",
+          "cestovný poriadok"
+        ]
+      ]
     },
     {
       type: "wordorder",
-      instruction: "Zoraď slová do správnej nemeckej vety.",
+      instruction: "Usporiadajte slová tak, aby ste vytvorili správne nemecké vety. Dávajte pozor na odlučiteľné predpony!",
       sentences: [
         {
-          words: ["Jana", "musste", "früh", "aufstehen."],
-          correct: "Jana musste früh aufstehen.",
-          hint: "Jana musela skoro vstávať.",
-          explanation: "Modalverb 'müssen' im Präteritum: musste. Infinitiv 'aufstehen' ans Satzende.",
+          words: [
+            "Der",
+            "kommt",
+            "Uhr",
+            "Zug",
+            "an",
+            "zehn",
+            "um"
+          ],
+          correct: "Der Zug kommt um zehn Uhr an",
+          hint: "Vlak prichádza o desiatej.",
+          explanation: "V prítomnom čase sa odlučiteľná predpona 'an-' presúva na koniec vety. Sloveso 'kommen' je na druhej pozícii."
         },
         {
-          words: ["Er", "konnte", "nicht", "schlafen."],
-          correct: "Er konnte nicht schlafen.",
-          hint: "Nemohol spať.",
-          explanation: "'können' → Präteritum: konnte. Infinitiv 'schlafen' ans Satzende.",
+          words: [
+            "Du",
+            "musst",
+            "einsteigen",
+            "jetzt"
+          ],
+          correct: "Du musst jetzt einsteigen",
+          hint: "Musíš teraz nastúpiť.",
+          explanation: "S modálnym slovesom 'müssen' sa odlučiteľná predpona neoddeľuje a celé sloveso 'einsteigen' ide na koniec vety v neurčitku."
         },
         {
-          words: ["Sie", "durfte", "nicht", "so", "spät", "kommen."],
-          correct: "Sie durfte nicht so spät kommen.",
-          hint: "Nesmel/a prísť tak neskoro.",
-          explanation: "'dürfen' → durfte. Infinitiv 'kommen' ans Ende.",
+          words: [
+            "Rufen",
+            "mich",
+            "Sie",
+            "bitte",
+            "später",
+            "an"
+          ],
+          correct: "Rufen Sie mich bitte später an",
+          hint: "Zavolajte mi prosím neskôr!",
+          explanation: "V rozkazovacom spôsobe (Imperativ) sa odlučiteľná predpona 'an-' presúva na koniec vety. Sloveso 'rufen' je na prvej pozícii."
         },
         {
-          words: ["Wir", "wollten", "ins", "Kino", "gehen."],
-          correct: "Wir wollten ins Kino gehen.",
-          hint: "Chceli sme ísť do kina.",
-          explanation: "'wollen' → wollten. Infinitiv 'gehen' ans Ende.",
+          words: [
+            "Wann",
+            "kommt",
+            "der",
+            "Bus",
+            "an"
+          ],
+          correct: "Wann kommt der Bus an",
+          hint: "Kedy prichádza autobus?",
+          explanation: "V otázke s opytovacím zámenom (W-Frage) je sloveso na druhej pozícii a odlučiteľná predpona 'an-' na konci vety."
         },
         {
-          words: ["Ich", "sollte", "um", "acht", "Uhr", "da", "sein."],
-          correct: "Ich sollte um acht Uhr da sein.",
-          hint: "Mal som tam byť o ôsmej.",
-          explanation: "'sollen' → sollte. Infinitiv 'sein' ans Ende.",
+          words: [
+            "Wir",
+            "steigen",
+            "hier",
+            "aus"
+          ],
+          correct: "Wir steigen hier aus",
+          hint: "Vystupujeme tu.",
+          explanation: "V prítomnom čase sa odlučiteľná predpona 'aus-' presúva na koniec vety. Sloveso 'steigen' je na druhej pozícii."
+        }
+      ]
+    },
+    {
+      type: "fill",
+      instruction: "Doplňte správne slovo alebo sloveso do medzery. Dávajte pozor na časovanie a odlučiteľné predpony.",
+      questions: [
+        {
+          sentence: "Der Zug ___ um 15 Uhr ___ .",
+          answer: "kommt, an",
+          hint: "Vlak prichádza o 15. hodine.",
+          explanation: "Sloveso 'ankommen' je odlučiteľné. V prítomnom čase sa 'kommt' časuje na druhej pozícii a predpona 'an' ide na koniec vety."
         },
-      ],
+        {
+          sentence: "___ du bitte sofort ___!",
+          answer: "Steig, ein",
+          hint: "Nastúp prosím hneď!",
+          explanation: "Rozkazovací spôsob pre 'du' je 'Steig'. Predpona 'ein' ide na koniec vety."
+        },
+        {
+          sentence: "Ich muss meine Freundin ___ .",
+          answer: "anrufen",
+          hint: "Musím zavolať mojej kamarátke.",
+          explanation: "S modálnym slovesom 'muss' sa odlučiteľné sloveso 'anrufen' píše celé na konci vety v neurčitku."
+        },
+        {
+          sentence: "Wir ___ leider auf den Bus ___ .",
+          answer: "warten",
+          hint: "Žiaľ, čakáme na autobus.",
+          explanation: "Sloveso 'warten' nie je odlučiteľné. Časuje sa 'warten' pre 'wir' na druhej pozícii. (Pozor, 'warten auf' je s predložkou, ale predpona sa neoddeľuje.)"
+        },
+        {
+          sentence: "Wie ___ es? Es ist 10 Uhr.",
+          answer: "spät ist",
+          hint: "Koľko je hodín? Je 10 hodín.",
+          explanation: "Otázka na čas sa tvorí 'Wie spät ist es?'."
+        },
+        {
+          sentence: "Ich ___ einen Kaffee trinken.",
+          answer: "möchte",
+          hint: "Chcel by som si dať kávu.",
+          explanation: "Na vyjadrenie želania sa používa modálne sloveso 'möchten'. Pre 'ich' je to 'möchte'."
+        },
+        {
+          sentence: "Er ___ sehr gut Deutsch sprechen.",
+          answer: "kann",
+          hint: "On vie veľmi dobre hovoriť po nemecky.",
+          explanation: "Modálne sloveso 'können' sa pre 'er' časuje ako 'kann'."
+        },
+        {
+          sentence: "Wir brauchen ___ neuen Fahrplan.",
+          answer: "einen",
+          hint: "Potrebujeme nový cestovný poriadok.",
+          explanation: "'Fahrplan' je mužského rodu (der Fahrplan). Po slovese 'brauchen' nasleduje Akuzatív, takže neurčitý člen je 'einen'."
+        }
+      ]
+    },
+    {
+      type: "listen",
+      instruction: "Vypočujte si slovo a vyberte jeho správny slovenský preklad.",
+      questions: [
+        {
+          de: "die Zeit",
+          sk: "čas"
+        },
+        {
+          de: "warten",
+          sk: "čakať"
+        },
+        {
+          de: "pünktlich",
+          sk: "presný, načas"
+        },
+        {
+          de: "anrufen",
+          sk: "zavolať (niekomu)"
+        },
+        {
+          de: "einsteigen",
+          sk: "nastúpiť"
+        },
+        {
+          de: "ankommen",
+          sk: "prísť, doraziť"
+        },
+        {
+          de: "die Verspätung",
+          sk: "meškanie"
+        },
+        {
+          de: "der Fahrplan",
+          sk: "cestovný poriadok"
+        },
+        {
+          de: "die Durchsage",
+          sk: "hlásenie"
+        }
+      ]
+    },
+    {
+      type: "mcq",
+      instruction: "Vyberte správnu odpoveď.",
+      questions: [
+        {
+          question: "Der Zug ___ um 17 Uhr ___.",
+          options: [
+            "kommt ... an",
+            "ankommt",
+            "an ... kommt",
+            "kommt an"
+          ],
+          answer: 0,
+          explanation: "V prítomnom čase sa odlučiteľná predpona 'an-' presúva na koniec vety. Sloveso 'kommen' je na druhej pozícii."
+        },
+        {
+          question: "Vyber správnu vetu:",
+          options: [
+            "Ich muss später anrufen dich.",
+            "Ich muss dich später anrufen.",
+            "Ich rufe dich später an muss.",
+            "Ich muss dich anrufen später."
+          ],
+          answer: 1,
+          explanation: "S modálnym slovesom 'muss' sa odlučiteľné sloveso 'anrufen' píše celé na konci vety v neurčitku."
+        },
+        {
+          question: "Čo znamená 'die Verspätung'?",
+          options: [
+            "odchod",
+            "príchod",
+            "meškanie",
+            "čas"
+          ],
+          answer: 2,
+          explanation: "'Die Verspätung' znamená 'meškanie'."
+        },
+        {
+          question: "Čo znamená 'pünktlich'?",
+          options: [
+            "neskoro",
+            "načas",
+            "rýchlo",
+            "pomaly"
+          ],
+          answer: 1,
+          explanation: "'Pünktlich' znamená 'presný, načas'."
+        },
+        {
+          question: "Ako správne povieš 'Nastúpte prosím!' (formálne)?",
+          options: [
+            "Steigen Sie bitte ein!",
+            "Einsteigen Sie bitte!",
+            "Sie steigen bitte ein!",
+            "Bitte einsteigen Sie!"
+          ],
+          answer: 0,
+          explanation: "V rozkazovacom spôsobe pre 'Sie' je sloveso na prvej pozícii a odlučiteľná predpona 'ein-' na konci vety."
+        },
+        {
+          question: "Vyber správnu formu slovesa 'fahren' pre 'du':",
+          options: [
+            "du fährst",
+            "du fahrst",
+            "du fahrt",
+            "du fahrtst"
+          ],
+          answer: 0,
+          explanation: "Sloveso 'fahren' má pre 'du' a 'er/sie/es' zmenu kmeňovej samohlásky z 'a' na 'ä'. Správna forma je 'du fährst'."
+        },
+        {
+          question: "Vyber správnu formu slovesa 'wissen' pre 'ich':",
+          options: [
+            "ich weiss",
+            "ich weiß",
+            "ich wisst",
+            "ich wissen"
+          ],
+          answer: 1,
+          explanation: "Sloveso 'wissen' je nepravidelné. Pre 'ich' je správna forma 'ich weiß'."
+        },
+        {
+          question: "Ktoré sloveso znamená 'zavolať (niekomu)'?",
+          options: [
+            "sagen",
+            "warten",
+            "anrufen",
+            "informieren"
+          ],
+          answer: 2,
+          explanation: "Sloveso 'anrufen' znamená 'zavolať (niekomu)'."
+        }
+      ]
+    },
+    {
+      type: "minitext",
+      instruction: "Lies den Dialog und beantworte die Fragen.",
+      text: "Jana: Hallo, Petra! Ich bin's, Jana.\nPetra: Hallo, Jana! Schön, dass du anrufst. Hast du Zeit?\nJana: Ja, klar. Ich habe eine wichtige Information für dich: Mein Zug hat leider Verspätung.\nPetra: Oh, schade! Der Fahrplan stimmt also nicht mehr. Wann kommst du an?\nJana: Laut Durchsage kommt der Zug jetzt um 14:30 Uhr in Salzburg an, nicht um 13:00 Uhr. Das sind eine Stunde und 30 Minuten später. Es tut mir leid.\nPetra: Kein Problem. Ich kann warten. Wann steigst du dann aus?\nJana: Ich steige dann um 14:30 Uhr aus. Der Zug sollte pünktlich abfahren, aber er fährt später ab.\nPetra: Okay, ich hole dich am Bahnhof ab. Bis später!\nJana: Super, danke!",
+      textSk: "Jana: Ahoj, Petra! To som ja, Jana.\nPetra: Ahoj, Jana! Super, že voláš. Máš čas?\nJana: Áno, jasné. Mám pre teba dôležitú informáciu: Môj vlak má bohužiaľ meškanie.\nPetra: Och, škoda! Cestovný poriadok teda už nesedí. Kedy teda prídeš?\nJana: Podľa hlásenia prichádza vlak teraz o 14:30 do Salzburgu, nie o 13:00. To je o hodinu a 30 minút neskôr. Je mi to ľúto.\nPetra: Žiadny problém. Môžem počkať. Kedy potom vystúpiš?\nJana: Vystúpim potom o 14:30. Vlak mal odísť načas, ale odchádza neskôr.\nPetra: Dobre, vyzdvihnem ťa na stanici. Ahoj!\nJana: Super, ďakujem!",
+      questions: [
+        {
+          question: "Warum ruft Jana Petra an?",
+          options: [
+            "Um zu sagen, dass ihr Zug Verspätung hat.",
+            "Um Petra zum Essen einzuladen.",
+            "Um nach dem Wetter in Salzburg zu fragen.",
+            "Um Petra zu bitten, sie früher abzuholen."
+          ],
+          answer: 0,
+          explanation: "Jana sagt: \"Mein Zug hat leider Verspätung.\""
+        },
+        {
+          question: "Wann kommt Janas Zug jetzt in Salzburg an?",
+          options: [
+            "Um 13:00 Uhr.",
+            "Um 14:00 Uhr.",
+            "Um 14:30 Uhr.",
+            "Um 15:00 Uhr."
+          ],
+          answer: 2,
+          explanation: "Jana sagt: \"Laut Durchsage kommt der Zug jetzt um 14:30 Uhr in Salzburg an, nicht um 13:00 Uhr.\""
+        },
+        {
+          question: "Was bietet Petra an?",
+          options: [
+            "Jana später anzurufen.",
+            "Zu Hause zu warten.",
+            "Jana am Bahnhof abzuholen.",
+            "Jana über den neuen Fahrplan zu informieren."
+          ],
+          answer: 2,
+          explanation: "Petra sagt: \"ich hole dich am Bahnhof ab.\""
+        },
+        {
+          question: "Wie viel später kommt der Zug an?",
+          options: [
+            "30 Minuten.",
+            "Eine Stunde.",
+            "Eine Stunde und 30 Minuten.",
+            "Zwei Stunden."
+          ],
+          answer: 2,
+          explanation: "Jana sagt: \"Das sind eine Stunde und 30 Minuten später.\""
+        }
+      ]
     },
     {
       type: "speaking",
-      instruction: "Počúvaj nemeckú vetu. Potom hovor nahlas a skontroluj sa.",
+      instruction: "Höre zu und sprich nach.",
       phrases: [
         {
-          de: "Ich musste gestern früh aufstehen.",
-          sk: "Musel/a som včera skoro vstávať.",
-          tip: "musste: [mus-te], krátka výslovnosť",
+          de: "Ankommen",
+          sk: "Prísť, doraziť",
+          tip: "'An-' je prízvučné. 'mm' je dlhé [m]."
         },
         {
-          de: "Konnte er das machen?",
-          sk: "Mohol to urobiť?",
-          tip: "konnte: [kon-te], mäkké -te",
+          de: "Einsteigen",
+          sk: "Nastúpiť",
+          tip: "'Ein-' je prízvučné. 'ei' ako [aɪ̯]. 'st' ako [ʃt]."
         },
         {
-          de: "Sie wollte nach Wien fahren.",
-          sk: "Chcela ísť do Viedne.",
-          tip: "wollte: [vol-te], w=v",
+          de: "Der Zug kommt an.",
+          sk: "Vlak prichádza.",
+          tip: "'Zug' [t͡suːk]. 'kommt an' – 'an' je na konci vety."
         },
         {
-          de: "Wir durften nicht rauchen.",
-          sk: "Nesmel sme fajčiť.",
-          tip: "durften: [durf-ten]",
+          de: "Ich steige ein.",
+          sk: "Nastupujem.",
+          tip: "'Ich' [ɪç]. 'ei' ako [aɪ̯]. 'ein' je na konci vety."
         },
         {
-          de: "Ich sollte um neun Uhr kommen.",
-          sk: "Mal som prísť o deviatej.",
-          tip: "sollte: [zol-te], s=z",
+          de: "Der Bus kommt pünktlich an.",
+          sk: "Autobus prichádza načas.",
+          tip: "'ü' ako [y]. 'ch' ako [ç]. 'an' je na konci vety."
         },
-      ],
+        {
+          de: "Leider hat der Zug Verspätung.",
+          sk: "Žiaľ, vlak mešká.",
+          tip: "'ei' ako [aɪ̯]. 'sp' ako [ʃp]. 'ä' ako [ɛ]."
+        },
+        {
+          de: "Ich rufe dich gleich an.",
+          sk: "Zavolám ti hneď.",
+          tip: "'Ich' [ɪç]. 'ch' ako [ç]. 'an' je na konci vety."
+        },
+        {
+          de: "Wann kommt der Zug an?",
+          sk: "Kedy prichádza vlak?",
+          tip: "'Wann' [van]. 'Zug' [t͡suːk]. 'an' je na konci vety."
+        }
+      ]
     },
+    {
+      type: "truefalse",
+      instruction: "Prečítaj si vety a rozhodni, či sú pravdivé (Wahr) alebo nepravdivé (Falsch). Oprav nepravdivé vety.",
+      statements: [
+        {
+          statement: "Sloveso \"ankommen\" je odlučiteľné sloveso.",
+          isTrue: true,
+          explanation: "Áno, predpona \"an-\" sa v prítomnom čase a rozkazovacom spôsobe oddeľuje."
+        },
+        {
+          statement: "Vo vete \"Ich steige in den Bus ein.\" predpona \"ein-\" zostáva pri slovese \"steigen\".",
+          isTrue: false,
+          explanation: "Nie, predpona \"ein-\" sa oddeľuje a ide na koniec vety: \"Ich steige in den Bus *ein*.\""
+        },
+        {
+          statement: "Ak vo vete použijeme modálne sloveso (napr. \"müssen\"), odlučiteľná predpona sa od slovesa oddelí.",
+          isTrue: false,
+          explanation: "Nie, s modálnymi slovesami zostáva odlučiteľná predpona spojená so slovesom na konci vety (napr. \"Ich muss *einsteigen*.\")."
+        },
+        {
+          statement: "Rozkaz \"Steig ein!\" (Nastúp!) je správny tvar pre odlučiteľné sloveso \"einsteigen\".",
+          isTrue: true,
+          explanation: "Áno, v rozkazovacom spôsobe sa predpona \"ein-\" oddelí a ide na koniec vety."
+        },
+        {
+          statement: "Vo vete \"Wir möchten pünktlich ankommen.\" zostáva sloveso \"ankommen\" pohromade.",
+          isTrue: true,
+          explanation: "Áno, pretože je vo vete modálne sloveso \"möchten\", odlučiteľná predpona sa neoddeľuje."
+        }
+      ]
+    },
+    {
+      type: "dictation",
+      instruction: "Počúvaj a napíš, čo počuješ. Potom skontroluj preklad.",
+      sentences: [
+        {
+          de: "Der Zug kommt an.",
+          sk: "Vlak prichádza."
+        },
+        {
+          de: "Wir müssen warten.",
+          sk: "Musíme čakať."
+        },
+        {
+          de: "Steig jetzt ein!",
+          sk: "Nastúp teraz!"
+        },
+        {
+          de: "Leider hat der Bus Verspätung.",
+          sk: "Žiaľ, autobus mešká."
+        },
+        {
+          de: "Sie möchten um sieben Uhr ankommen.",
+          sk: "Chcú prísť o siedmej hodine."
+        }
+      ]
+    },
+    {
+      type: "categorysort",
+      instruction: "Roztrieď slová do správnych kategórií.",
+      categories: [
+        {
+          name: "Podstatné mená (Nouns)",
+          color: "blue",
+          words: [
+            "der Anruf",
+            "die Verspätung",
+            "die Minute",
+            "das Problem",
+            "der Fahrplan"
+          ]
+        },
+        {
+          name: "Odlučiteľné slovesá (Trennbare Verben)",
+          color: "rose",
+          words: [
+            "ankommen",
+            "einsteigen",
+            "aussteigen",
+            "abfahren",
+            "anrufen"
+          ]
+        },
+        {
+          name: "Príslovky a prídavné mená (Adverbs & Adjectives)",
+          color: "green",
+          words: [
+            "später",
+            "pünktlich",
+            "leider",
+            "wichtig",
+            "gleich"
+          ]
+        }
+      ],
+      explanation: "Podstatné mená majú člen (der, die, das). Odlučiteľné slovesá majú predponu, ktorá sa v prítomnom čase a rozkazovacom spôsobe oddeľuje. Ostatné slová sú príslovky alebo prídavné mená, ktoré bližšie určujú dej alebo veci."
+    },
+    {
+      type: "translation",
+      instruction: "Prelož nasledujúce vety zo slovenčiny do nemčiny.",
+      sentences: [
+        {
+          sk: "Vlak prichádza o desiatej.",
+          answer: "Der Zug kommt um zehn Uhr an.",
+          hint: "Zug, ankommen",
+          explanation: "Sloveso \"ankommen\" je odlučiteľné. Predpona \"an-\" ide na koniec vety."
+        },
+        {
+          sk: "Musím nastúpiť.",
+          answer: "Ich muss einsteigen.",
+          hint: "müssen, einsteigen",
+          explanation: "S modálnym slovesom \"müssen\" zostáva odlučiteľné sloveso \"einsteigen\" pohromade na konci vety."
+        },
+        {
+          sk: "Zavolaj mi neskôr!",
+          answer: "Ruf mich später an!",
+          hint: "anrufen, später",
+          explanation: "Rozkazovací spôsob odlučiteľného slovesa \"anrufen\". Predpona \"an-\" ide na koniec vety."
+        },
+        {
+          sk: "Autobus odchádza načas.",
+          answer: "Der Bus fährt pünktlich ab.",
+          hint: "Bus, abfahren",
+          explanation: "Sloveso \"abfahren\" je odlučiteľné. Predpona \"ab-\" ide na koniec vety."
+        }
+      ]
+    },
+    {
+      type: "conjugation",
+      instruction: "Vyčasuj slovesá v prítomnom čase (Präsens). Dávaj pozor na odlučiteľné predpony!",
+      verbs: [
+        {
+          infinitive: "ankommen",
+          translation: "prísť, doraziť",
+          forms: [
+            {
+              pronoun: "ich",
+              correct: "komme an"
+            },
+            {
+              pronoun: "du",
+              correct: "kommst an"
+            },
+            {
+              pronoun: "er/sie/es",
+              correct: "kommt an"
+            },
+            {
+              pronoun: "wir",
+              correct: "kommen an"
+            },
+            {
+              pronoun: "ihr",
+              correct: "kommt an"
+            },
+            {
+              pronoun: "sie/Sie",
+              correct: "kommen an"
+            }
+          ],
+          note: "V prítomnom čase sa predpona \"an-\" oddeľuje a presúva na koniec vety."
+        },
+        {
+          infinitive: "einsteigen",
+          translation: "nastúpiť",
+          forms: [
+            {
+              pronoun: "ich",
+              correct: "steige ein"
+            },
+            {
+              pronoun: "du",
+              correct: "steigst ein"
+            },
+            {
+              pronoun: "er/sie/es",
+              correct: "steigt ein"
+            },
+            {
+              pronoun: "wir",
+              correct: "steigen ein"
+            },
+            {
+              pronoun: "ihr",
+              correct: "steigt ein"
+            },
+            {
+              pronoun: "sie/Sie",
+              correct: "steigen ein"
+            }
+          ],
+          note: "Podobne ako pri \"ankommen\", aj tu sa predpona \"ein-\" v prítomnom čase oddeľuje a ide na koniec vety."
+        }
+      ]
+    }
   ],
-
-  reviewWords: [
-    "kochen",
-    "backen",
-    "das Rezept",
-    "die Nudeln",
-    "der Reis",
-    "die Kartoffel",
-    "die Zwiebel",
-    "der Knoblauch",
-    "braten",
-    "schneiden",
-    "das Messer",
-    "der Topf",
-    "die Pfanne",
-    "zuerst",
-    "dann",
-    "danach",
-    "zuletzt",
-  ],
-  lessonNotes:
-    "Sekvenčné príslovky zuerst→dann→danach→zuletzt sú kľúčové na opisovanie receptov aj iných procesov. Nezabudni: 'backen' má zmenu kmeňa er/sie bäckt. Nemecké zložené podstatné mená pri jedle: rod vždy dostane posledná časť slova.",
+  reviewWords: []
 };

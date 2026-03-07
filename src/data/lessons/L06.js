@@ -1,475 +1,794 @@
-﻿export const lesson06 = {
+export const lesson06 = {
   id: 6,
   week: 2,
-  day: 2,
-  title: "Zahlen 21–100 und regelmäßige Verben",
-  topic: "Čísla 21–100 a pravidelné slovesá",
+  day: 1,
+  title: "Ein Formular ausfüllen",
+  topic: "Osobné údaje, rodinný stav a bydlisko",
   cefr: "A1",
-  xpReward: 25,
-  narrativeContext:
-    "Jana rokovuje o nájme so svojim budúcim prenajímateľom. Herr Gruber povie: 'Das sind 850 Euro warm.' Jana musí pochopiť veľké čísla, opýtať sa na cenu a dojednať podmienky. Prvý skutočný finančný rozhovor v nemčine!",
-  communicativeGoal:
-    "Po tejto lekcii viem počítať do 100, konjugovať pravidelné -en slovesá, opýtať sa na cenu a reagovať na cenovú ponuku.",
-  skillFocus: ["grammar", "vocabulary", "numbers"],
-
-  grammarNote: {
-    rule: "Pravidelné -en slovesá a čísla 21–100",
-    explanation:
-      "Pravidelné nemecké slovesá (slabé slovesá) nasledujú vzor: kmeň + prípona. Prípony: ich -e, du -st, er/sie/es -t, wir -en, ihr -t, sie/Sie -en. Špeciálny prípad: slovesá s kmeňom na -t alebo -d pridávajú -e- pred -st a -t (arbeiten → du arbeitest, er arbeitet). Čísla 21–99: jednotky sú PRED desiatkami, spojené 'und' (einundzwanzig = 1+20). Výnimka v pravopise: dreißig (30) — píše sa s ß, nie s z!",
-    examples: [
-      { de: "kaufen: ich kaufe, du kaufst, er kauft, wir kaufen, ihr kauft, sie kaufen", sk: "kúpiť — pravidelný vzor" },
-      { de: "arbeiten: ich arbeite, du arbeiTest, er arbeiTet", sk: "pracovať — extra -e- pred -st/-t!" },
-      { de: "einundzwanzig (21)", sk: "ein + und + zwanzig = jedna-a-dvadsať" },
-      { de: "dreißig (30)", sk: "⚠️ dreißig — nie dreizzig, nie dreisig!" },
-      { de: "fünfundachtzig (85)", sk: "fünf + und + achtzig = 85" }
-    ],
-    slovakContrastNote:
-      "Slovenčina má tiež pravidelné slovesá, ale koncovky sú iné. V nemčine je kľúčový vzor: -e/-st/-t/-en/-t/-en. Dôležitý rozdiel: pri slovesách na -t/-d (arbeiten, reden) sa vkladá -e- pre ľahšiu výslovnosť: arbeitest (nie arbeitst). Číselnú zvláštnosť jednotky-pred-desiatkami má aj slovenčina pri čítaní (trinásť = tri+náct), ale nie pri číslovkách nad 20."
-  },
-
+  xpReward: 20,
+  narrativeContext: "Jana ist in der Volkshochschule (VHS). Sie braucht eine Studentenkarte. Ein Mitarbeiter fragt: Wie heißen Sie? Wo wohnen Sie?",
+  communicativeGoal: "Nach dieser Lektion kann ich über meine persönlichen Daten sprechen, zum Beispiel wo ich wohne und was mein Familienstand ist.",
+  skillFocus: [
+    "vocabulary",
+    "grammar",
+    "reading",
+    "writing",
+    "speaking",
+    "listening"
+  ],
+  lessonNotes: "V tejto lekcii sa naučíš poskytovať základné osobné údaje. Precvičíš si slovnú zásobu týkajúcu sa bydliska a rodinného stavu, napríklad 'ledig' alebo 'verheiratet'. Pochopíš rozdiel medzi slovesami 'wohnen' (bývať na konkrétnej adrese) a 'leben' (žiť v meste alebo krajine).",
+  grammarNotes: [
+    {
+      rule: "Jazyková matematika: Časovanie slovies ako stavebnica",
+      explanation: `<p>Mnoho študentov sa bojí nemeckého časovania, no v skutočnosti je to ako Lego. Máte pevnú kocku (kmeň slova) a na ňu iba pripájate inofarebnú čiapočku (koncovku) podľa toho, KTO tú činnosť robí.</p>
+<p>Zoberme si sloveso <strong>wohnen</strong> (bývať). Odtrhnite mu chvost <strong>„-en"</strong>. Zostane vám holý kmeň <strong>„wohn-"</strong>. A teraz pripájame čiapočky:</p>
+<table class='grammar-table'><thead><tr><th>Kto? (Osoba)</th><th>Čiapočka (Koncovka)</th><th>Výsledok</th></tr></thead><tbody>
+<tr><td><strong>ich</strong> (ja)</td><td><strong>-e</strong></td><td>ich wohn<strong>e</strong></td></tr>
+<tr><td><strong>du</strong> (ty)</td><td><strong>-st</strong></td><td>du wohn<strong>st</strong></td></tr>
+<tr><td><strong>er / sie / es</strong> (on/ona/ono)</td><td><strong>-t</strong></td><td>er / sie wohn<strong>t</strong></td></tr>
+</tbody></table>
+<div class='tip-box'>💡 <strong>Tip Profesora:</strong> Žiť vs. Bývať. V nemčine striktne rozlišujeme: <em>wohnen</em> používajte pre konkrétnu adresu, byt či dom („Ich wohne in der Goethestraße"). <em>leben</em> použite pre širší kontext bytia, mesta či štátu („Ich lebe in Deutschland").</div>`,
+      examples: [
+        { de: "Ich wohne in Bratislava.", sk: "Bývam v Bratislave." },
+        { de: "Wo lebst du?", sk: "Kde žiješ?" },
+        { de: "Er wohnt in einem Haus.", sk: "On býva v dome." }
+      ],
+      slovakContrastNote: "Slovenčina vie skryť osobu do slovesa („Bývam v Berlíne“). Nemčina to netoleruje. Osoba MUSÍ byť vždy na scéne ako reflektorom nasvietená hviezda: „ICH wohne in Berlin.“"
+    },
+    {
+      rule: "Geografické predložky a VIP klub krajín",
+      explanation: `<p>Predložky <strong>in</strong> a <strong>aus</strong> sú vaše základné navigačné nástroje.</p>
+<ul>
+<li>Na otázku <strong>Wo?</strong> (Kde sa nachádzam?) použijete <strong>in</strong>.</li>
+<li>Na otázku <strong>Woher?</strong> (Odkiaľ prúdim/pochádzam?) použijete <strong>aus</strong>.</li>
+</ul>
+<h4> VIP Krajiny s členom zasahujú</h4>
+<p>Z predchádzajúcich lekcií už vieme, že Slovensko (die Slowakei) či Švajčiarsko (die Schweiz) sú VIP krajiny, ktoré majú svoj vlastný člen. Pri otázke „Odkiaľ? (aus)“ sa menili na <em>„aus der Slowakei“</em>. Hádajte čo? Pri otázke „Kde? (in)“ to robia presne rovnako!</p>
+<ul>
+<li>Ich komme <strong>aus der</strong> Slowakei. (Odkiaľ?)</li>
+<li>Ich lebe <strong>in der</strong> Slowakei. (Kde?)</li>
+</ul>`,
+      examples: [
+        { de: "Ich komme aus der Slowakei.", sk: "Pochádzam zo Slovenska." },
+        { de: "Ich lebe in Österreich.", sk: "Žijem v Rakúsku.", note: "Obyčajná krajina bez člena." },
+        { de: "Wohnst du in der Schweiz?", sk: "Bývaš vo Švajčiarsku?", note: "VIP krajina vyžaduje 'in der'." }
+      ],
+      slovakContrastNote: "Pre Slováka je inštinktívne povedať len „v Nemecku“ alebo „na Slovensku“ bez špeciálnych členov pred krajinami. V nemčine musíte svoj mozog trénovať: akonáhle hovoríte o Slovensku, Švajčiarsku alebo Turecku, ťaháte so sebou aj ich člen."
+    },
+    {
+      rule: "Rodinný stav v nemčine nemá pohlavie",
+      explanation: `<p>Keď vyplňujete formuláre (Formulare ausfüllen), narazíte na políčko <strong>Familienstand</strong> (rodinný stav). Tu prichádza pre Slovákov obrovská úľava.</p>
+<p>Nemčina pri týchto slovíčkach absolútne ignoruje, či ste muž alebo žena. Prídavné meno sa nemení. Je pevné ako skala.</p>
+<ul>
+<li>On je <strong>ledig</strong>. (Slobodný)</li>
+<li>Ona je <strong>ledig</strong>. (Slobodná)</li>
+<li>On je <strong>verheiratet</strong>. (Ženatý)</li>
+<li>Ona je <strong>verheiratet</strong>. (Vydatá)</li>
+</ul>
+<div class='warn-box'>⚠️ <strong>Trestný bod u Profesora:</strong> Nesnažte sa na koniec týchto slov nalepiť žiadne „-e“ len preto, že hovoríte o žene. Žiadne „Sie ist ledige“. Proste iba čisté: Sie ist ledig.</div>`,
+      examples: [
+        { de: "Bist du verheiratet?", sk: "Si ženatý/vydatá?" },
+        { de: "Nein, ich bin geschieden.", sk: "Nie, som rozvedený/rozvedená." },
+        { de: "Er ist noch ledig.", sk: "On je ešte slobodný." }
+      ],
+      slovakContrastNote: "V slovenčine musíte neustále prispôsobovať koncovky rodu (ženatý / vydatá / rozvedený / rozvedená). V nemčine sa naučíte jedno slovo a pálite ho na všetky strany bez zmeny."
+    }
+  ],
   vocab: [
     {
-      de: "einundzwanzig",
-      sk: "dvadsaťjeden",
-      example: "Einundzwanzig Euro — das ist günstig!",
-      exampleSk: "Dvadsaťjeden eur — to je lacné!",
-      gender: null,
+      de: "der Nachname",
+      sk: "priezvisko",
+      gender: "M",
       srsId: "L06_V01",
+      example: "Mein Nachname ist Kováčová.",
+      exampleSk: "Moje priezvisko je Kováčová.",
       recycledFrom: []
     },
     {
-      de: "dreißig",
-      sk: "tridsať (⚠️ s ß!)",
-      example: "Dreißig Euro pro Tag — das ist okay.",
-      exampleSk: "Tridsať eur na deň — to je v poriadku.",
-      gender: null,
+      de: "der Vorname",
+      sk: "krstné meno",
+      gender: "M",
       srsId: "L06_V02",
+      example: "Mein Vorname ist Jana.",
+      exampleSk: "Moje krstné meno je Jana.",
       recycledFrom: []
     },
     {
-      de: "vierzig",
-      sk: "štyridsa",
-      example: "Die Wohnung ist vierzig Quadratmeter groß.",
-      exampleSk: "Byt má štyridsa štvorcových metrov.",
-      gender: null,
+      de: "die Adresse",
+      sk: "adresa",
+      gender: "F",
       srsId: "L06_V03",
+      example: "Hier schreiben Sie bitte die Adresse.",
+      exampleSk: "Sem napíšte, prosím, adresu.",
       recycledFrom: []
     },
     {
-      de: "fünfzig",
-      sk: "päťdesiat",
-      example: "Fünfzig Prozent Rabatt!",
-      exampleSk: "Päťdesiat percent zľava!",
-      gender: null,
+      de: "die Straße",
+      sk: "ulica",
+      gender: "F",
       srsId: "L06_V04",
+      example: "Ich wohne in der Mariahilfer Straße.",
+      exampleSk: "Bývam na Mariahilfer Straße.",
       recycledFrom: []
     },
     {
-      de: "sechzig",
-      sk: "šesťdesiat",
-      example: "Sechzig Minuten hat eine Stunde.",
-      exampleSk: "Hodina má šesťdesiat minút.",
-      gender: null,
+      de: "die Hausnummer",
+      sk: "číslo domu",
+      gender: "F",
       srsId: "L06_V05",
+      example: "Die Hausnummer ist 12 (zwölf).",
+      exampleSk: "Číslo domu je 12 (dvanásť).",
       recycledFrom: []
     },
     {
-      de: "siebzig",
-      sk: "sedemdesiat",
-      example: "Siebzig Euro für den Supermarkt — das reicht.",
-      exampleSk: "Sedemdesiat eur na supermarket — to stačí.",
-      gender: null,
+      de: "die Postleitzahl",
+      sk: "poštové smerovacie číslo",
+      gender: "F",
       srsId: "L06_V06",
+      example: "Wie ist die Postleitzahl von Graz?",
+      exampleSk: "Aké je poštové smerovacie číslo Grazu?",
       recycledFrom: []
     },
     {
-      de: "achtzig",
-      sk: "osemdesiat",
-      example: "Der alte Mann ist achtzig Jahre alt.",
-      exampleSk: "Starý pán má osemdesiat rokov.",
-      gender: null,
+      de: "der Wohnort",
+      sk: "bydlisko",
+      gender: "M",
       srsId: "L06_V07",
+      example: "Mein Wohnort ist jetzt Wien.",
+      exampleSk: "Moje bydlisko je teraz Viedeň.",
       recycledFrom: []
     },
     {
-      de: "neunzig",
-      sk: "deväťdesiat",
-      example: "Neunzig Euro pro Woche für Lebensmittel.",
-      exampleSk: "Deväťdesiat eur týždenne na potraviny.",
-      gender: null,
+      de: "das Land",
+      sk: "krajina",
+      gender: "N",
       srsId: "L06_V08",
+      example: "Die Slowakei ist ein schönes Land.",
+      exampleSk: "Slovensko je krásna krajina.",
       recycledFrom: []
     },
     {
-      de: "hundert",
-      sk: "sto",
-      example: "Das kostet hundert Euro.",
-      exampleSk: "To stojí sto eur.",
-      gender: null,
+      de: "der Geburtsort",
+      sk: "miesto narodenia",
+      gender: "M",
       srsId: "L06_V09",
+      example: "Mein Geburtsort ist Bratislava.",
+      exampleSk: "Moje miesto narodenia je Bratislava.",
       recycledFrom: []
     },
     {
-      de: "kaufen",
-      sk: "kúpiť",
-      example: "Ich kaufe Lebensmittel im Supermarkt.",
-      exampleSk: "Kupujem potraviny v supermarkete.",
-      gender: null,
+      de: "der Familienstand",
+      sk: "rodinný stav",
+      gender: "M",
       srsId: "L06_V10",
+      example: "Was ist Ihr Familienstand?",
+      exampleSk: "Aký je váš rodinný stav?",
       recycledFrom: []
     },
     {
-      de: "kosten",
-      sk: "stáť (cena)",
-      example: "Wie viel kostet die Wohnung?",
-      exampleSk: "Koľko stojí byt?",
-      gender: null,
+      de: "das Formular",
+      sk: "formulár",
+      gender: "N",
       srsId: "L06_V11",
+      example: "Jana füllt das Formular aus.",
+      exampleSk: "Jana vypĺňa formulár.",
       recycledFrom: []
     },
     {
       de: "wohnen",
       sk: "bývať",
-      example: "Jana wohnt jetzt in Wien.",
-      exampleSk: "Jana teraz býva vo Viedni.",
       gender: null,
       srsId: "L06_V12",
-      recycledFrom: ["L04_V02"]
+      example: "Ich wohne in einer Wohnung in Wien.",
+      exampleSk: "Bývam v byte vo Viedni.",
+      recycledFrom: []
     },
     {
-      de: "lernen",
-      sk: "učiť sa",
-      example: "Jana lernt jeden Tag Deutsch.",
-      exampleSk: "Jana sa každý deň učí nemčinu.",
+      de: "leben",
+      sk: "žiť",
       gender: null,
       srsId: "L06_V13",
+      example: "Ich lebe seit einem Jahr in Österreich.",
+      exampleSk: "Žijem rok v Rakúsku.",
       recycledFrom: []
     },
     {
-      de: "arbeiten",
-      sk: "pracovať (⚠️ du arbeitest!)",
-      example: "Ich arbeite in Wien. Du arbeitest auch hier?",
-      exampleSk: "Pracujem vo Viedni. Ty tu tiež pracuješ?",
+      de: "ausfüllen",
+      sk: "vyplniť",
       gender: null,
       srsId: "L06_V14",
+      example: "Füllen Sie bitte das Formular aus.",
+      exampleSk: "Vyplňte, prosím, tento formulár.",
       recycledFrom: []
     },
     {
-      de: "das Geld",
-      sk: "peniaze",
-      example: "Hast du genug Geld für die Wohnung?",
-      exampleSk: "Máš dosť peňazí na byt?",
-      gender: "N",
+      de: "buchstabieren",
+      sk: "hláskovať",
+      gender: null,
       srsId: "L06_V15",
+      example: "Können Sie Ihren Nachnamen bitte buchstabieren?",
+      exampleSk: "Môžete, prosím, vyhláskovať vaše priezvisko?",
       recycledFrom: []
     },
     {
-      de: "der Euro",
-      sk: "euro",
-      example: "Die Miete ist 850 Euro.",
-      exampleSk: "Nájomné je 850 eur.",
-      gender: "M",
+      de: "ledig",
+      sk: "slobodný/á",
+      gender: null,
       srsId: "L06_V16",
+      example: "Im Formular schreibe ich: Familienstand ledig.",
+      exampleSk: "Do formulára píšem: rodinný stav slobodná.",
       recycledFrom: []
     },
     {
-      de: "der Cent",
-      sk: "cent",
-      example: "Das kostet 99 Cent.",
-      exampleSk: "To stojí 99 centov.",
-      gender: "M",
+      de: "verheiratet",
+      sk: "ženatý/vydatá",
+      gender: null,
       srsId: "L06_V17",
+      example: "Sind Sie verheiratet?",
+      exampleSk: "Ste vydatá? / Ste ženatý?",
       recycledFrom: []
     },
     {
-      de: "die Wohnung",
-      sk: "byt",
-      example: "Die Wohnung ist klein, aber modern.",
-      exampleSk: "Byt je malý, ale moderný.",
-      gender: "F",
+      de: "geschieden",
+      sk: "rozvedený/á",
+      gender: null,
       srsId: "L06_V18",
+      example: "Er ist nicht mehr verheiratet, er ist geschieden.",
+      exampleSk: "Už nie je ženatý, je rozvedený.",
       recycledFrom: []
     },
     {
-      de: "der Supermarkt",
-      sk: "supermarket",
-      example: "Der Supermarkt ist um die Ecke.",
-      exampleSk: "Supermarket je za rohom.",
-      gender: "M",
+      de: "Wo wohnen Sie?",
+      sk: "Kde bývate?",
+      gender: null,
       srsId: "L06_V19",
+      example: "„Wo wohnen Sie?“ – „Ich wohne in Berlin.“",
+      exampleSk: "„Kde bývate?“ – „Bývam v Berlíne.“",
       recycledFrom: []
     },
     {
-      de: "Wie viel kostet das?",
-      sk: "Koľko to stojí?",
-      example: "Wie viel kostet das pro Monat?",
-      exampleSk: "Koľko to stojí za mesiac?",
+      de: "Wie ist Ihre Adresse?",
+      sk: "Aká je Vaša adresa?",
       gender: null,
       srsId: "L06_V20",
+      example: "„Wie ist Ihre Adresse?“ – „Hauptstraße 15.“",
+      exampleSk: "„Aká je Vaša adresa?“ – „Hlavná ulica 15.“",
+      recycledFrom: []
+    },
+    {
+      de: "Das ist richtig.",
+      sk: "To je správne.",
+      gender: null,
+      srsId: "L06_V21",
+      example: "„Ist die Adresse so korrekt?“ – „Ja, das ist richtig.“",
+      exampleSk: "„Je táto adresa takto správna?“ – „Áno, to je správne.“",
       recycledFrom: []
     }
   ],
-
   exercises: [
     {
       type: "flashcard",
-      instruction:
-        "Precvičuj čísla 21–100 a nové slovesá. Flip kartu pre preklad. ⚠️ = upozornenie na výnimku.",
-      items: [
-        "einundzwanzig = dvadsaťjeden",
-        "dreißig = tridsať (⚠️ s ß!)",
-        "vierzig = štyridsa",
-        "fünfzig = päťdesiat",
-        "sechzig = šesťdesiat",
-        "siebzig = sedemdesiat",
-        "achtzig = osemdesiat",
-        "neunzig = deväťdesiat",
-        "hundert = sto",
-        "kaufen = kúpiť",
-        "kosten = stáť (cena)",
-        "wohnen = bývať",
-        "lernen = učiť sa",
-        "arbeiten = pracovať (⚠️ du arbeitest!)",
-        "das Geld = peniaze",
-        "der Euro = euro",
-        "der Cent = cent",
-        "die Wohnung = byt",
-        "der Supermarkt = supermarket",
-        "Wie viel kostet das? = Koľko to stojí?"
+      instruction: "Prezri si slovíčka tejto lekcie. Klikni na kartičku pre preklad."
+    },
+    {
+      type: "match",
+      instruction: "Spojte nemecké slová s ich slovenskými prekladmi.",
+      pairs: [
+        [
+          "der Nachname",
+          "priezvisko"
+        ],
+        [
+          "der Vorname",
+          "krstné meno"
+        ],
+        [
+          "die Adresse",
+          "adresa"
+        ],
+        [
+          "die Postleitzahl",
+          "poštové smerovacie číslo"
+        ],
+        [
+          "der Wohnort",
+          "bydlisko"
+        ],
+        [
+          "der Familienstand",
+          "rodinný stav"
+        ],
+        [
+          "das Formular",
+          "formulár"
+        ],
+        [
+          "ausfüllen",
+          "vyplniť"
+        ],
+        [
+          "ledig",
+          "slobodný/á"
+        ],
+        [
+          "verheiratet",
+          "ženatý/vydatá"
+        ]
       ]
     },
     {
-      type: "mcq",
-      instruction:
-        "Herr Gruber ponúka Jane byt za 850 eur. Pomôž jej porozumieť číslam a slovesám.",
-      questions: [
+      type: "wordorder",
+      instruction: "Zoraďte slová do správneho poradia a vytvorte logické vety.",
+      sentences: [
         {
-          question: "Herr Gruber povie: 'Das sind achthundertfünfzig Euro.' Koľko to je?",
-          options: [
-            "800 eur",
-            "850 eur",
-            "815 eur",
-            "580 eur"
+          words: [
+            "Sie",
+            "wohnen",
+            "Wo"
           ],
-          answer: 1,
-          explanation:
-            "achthundertfünfzig = acht (8) + hundert (100) + fünfzig (50) = 850. Čísla nad 100: základ + hundert + zvyšok. 800 = achthundert, 850 = achthundertfünfzig."
+          correct: "Wo wohnen Sie?",
+          hint: "Kde bývate?",
+          explanation: "V opytovacích vetách s 'W-Frage' (ako Wo, Wie, Was) je sloveso vždy na druhej pozícii."
         },
         {
-          question: "Jana sa pýta na cenu bytu. Ktorá otázka je správna?",
-          options: [
-            "Wie viel kostet die Wohnung?",
-            "Wie viel kauft die Wohnung?",
-            "Was kostet Sie die Wohnung?",
-            "Wann kostet die Wohnung?"
+          words: [
+            "ist",
+            "Ihre",
+            "Adresse",
+            "Wie"
           ],
-          answer: 0,
-          explanation:
-            "'Wie viel kostet die Wohnung?' = Koľko stojí byt? 'kosten' = stáť (o cene). V2-pravidlo: wie viel(1) + kostet(2) + die Wohnung(3)."
+          correct: "Wie ist Ihre Adresse?",
+          hint: "Aká je Vaša adresa?",
+          explanation: "Sloveso 'ist' je na druhej pozícii, hneď za opytovacím slovom 'Wie'."
         },
         {
-          question: "Herr Gruber sa pýta Jany: 'Wo arbeiten Sie?' Čo Jana odpovie?",
-          options: [
-            "Ich arbeite bei einer Marketingfirma.",
-            "Ich arbeitest bei einer Marketingfirma.",
-            "Ich arbeitet bei einer Marketingfirma.",
-            "Ich arbeiten bei einer Marketingfirma."
+          words: [
+            "in",
+            "lebt",
+            "München",
+            "Er"
           ],
-          answer: 0,
-          explanation:
-            "Pre 'ich' je správna prípona -e: ich arbeit-e. Vzor pravidelných slovies: ich -e, du -st, er -t, wir -en, ihr -t, sie -en."
+          correct: "Er lebt in München.",
+          hint: "On žije v Mníchove.",
+          explanation: "V jednoduchej oznamovacej vete je sloveso ('lebt') na druhej pozícii."
         },
         {
-          question: "Prečo sa povie 'du arbeiteSTt' a nie 'du arbeitst'?",
-          options: [
-            "Náhodná výnimka, treba si zapamätať",
-            "Pretože kmeň 'arbeit' končí na -t — vkladá sa -e- pre ľahšiu výslovnosť",
-            "Pretože 'du' vždy vyžaduje dlhšiu formu",
-            "Pretože 'arbeiten' je nepravidelné sloveso"
+          words: [
+            "bitte",
+            "Vornamen",
+            "Ihren",
+            "buchstabieren",
+            "Sie"
           ],
-          answer: 1,
-          explanation:
-            "Keď kmeň slovesa končí na -t alebo -d (arbeit-, red-, find-), vkladá sa -e- pred prípony -st a -t: du arbeit-E-st, er arbeit-E-t. Bez tohto -e- by bolo výslovnostne ťažké: *'arbeitst' je obtiažné vysloviť."
+          correct: "Bitte buchstabieren Sie Ihren Vornamen.",
+          hint: "Prosím, vyhláskujte Vaše krstné meno.",
+          explanation: "Vo formálnej žiadosti alebo príkaze môže veta začať slovom 'Bitte', za ktorým nasleduje sloveso a potom podmet ('Sie')."
         },
         {
-          question: "Koľko je 'fünfundsiebzig'?",
-          options: ["57", "75", "65", "67"],
-          answer: 1,
-          explanation:
-            "'fünfundsiebzig' = fünf (5) + und + siebzig (70) = 75. Pravidlo: jednotky (PRVÉ) + und + desiatky. Toto platí pre všetky čísla 21–99."
-        },
-        {
-          question: "Jana chce povedať, koľko sa učí. Ktorá veta je správna?",
-          options: [
-            "Jana lernst jeden Tag Deutsch.",
-            "Jana lernt jeden Tag Deutsch.",
-            "Jana lernen jeden Tag Deutsch.",
-            "Jana lerne jeden Tag Deutsch."
+          words: [
+            "das",
+            "wir",
+            "Jetzt",
+            "aus",
+            "Formular",
+            "füllen"
           ],
-          answer: 1,
-          explanation:
-            "Jana = er/sie → prípona -t: lern-t. 'Jana lernt jeden Tag Deutsch.' = Jana sa každý deň učí nemčinu. Jana = 3. osoba jedn. čísla, ženský rod → sie/er/es → -t."
+          correct: "Jetzt füllen wir das Formular aus.",
+          hint: "Teraz vyplníme ten formulár.",
+          explanation: "Ak veta začína časovým údajom ('Jetzt'), sloveso ('füllen') zostáva na druhej pozícii a podmet ('wir') sa presúva zaň. Predpona 'aus' ide na koniec vety."
         }
       ]
     },
     {
       type: "fill",
-      instruction:
-        "Doplň správnu formu pravidelného slovesa. Jana a Herr Gruber rokujú o byte.",
+      instruction: "Doplňte chýbajúce slovo do dialógu na úrade pri registrácii na kurz.",
       questions: [
         {
-          sentence: "Ich ___ in einer Marketingfirma. (pracovať)",
-          answer: "arbeite",
-          hint: "ich + arbeiten — 1. osoba jedn. čísla",
-          explanation:
-            "'ich arbeite' — pravidelný vzor: kmeň arbeit- + prípona -e. Pozor: nie 'ich arbeitet' alebo 'ich arbeitest'."
+          sentence: "Guten Tag. Ich möchte den Deutschkurs buchen. Hier ist mein ___.",
+          answer: "Formular",
+          hint: "Dobrý deň. Chcel by som si rezervovať kurz nemčiny. Tu je môj formulár.",
+          explanation: "Pri registrácii sa vypĺňa 'das Formular'."
         },
         {
-          sentence: "Wie viel ___ die Wohnung pro Monat? (stáť)",
-          answer: "kostet",
-          hint: "die Wohnung = er/sie/es — 3. osoba kmeň kost- + ?",
-          explanation:
-            "'kostet' — kmeň kost- + prípona -t (3. osoba jedn. č.). Pozor: kost- nekončí na -t ani -d, takže nie je potrebné extra -e-."
+          sentence: "Danke. Ah, Sie ___ in der Goethestraße. Ist das richtig?",
+          answer: "wohnen",
+          hint: "Ďakujem. Aha, bývate na Goethestraße. Je to správne?",
+          explanation: "Sloveso 'wohnen' (bývať) sa viaže k adrese. Pre osobu 'Sie' (vykanie) má tvar 'wohnen'."
         },
         {
-          sentence: "Wir ___ jeden Monat dreißig Euro für den Supermarkt. (kúpiť)",
-          answer: "kaufen",
-          hint: "wir — 1. osoba množného čísla",
-          explanation:
-            "'wir kaufen' — prípona -en. Forma 'wir' je vždy rovnaká ako infinitív: kaufen, lernen, arbeiten, wohnen."
+          sentence: "Ja, das ist ___.",
+          answer: "richtig",
+          hint: "Áno, to je správne.",
+          explanation: "Fráza 'Das ist richtig' znamená 'To je správne' a používa sa na potvrdenie informácie."
         },
         {
-          sentence: "Du ___ sehr fleißig! (učiť sa)",
-          answer: "lernst",
-          hint: "du — 2. osoba jedn. čísla, kmeň lern-",
-          explanation:
-            "'du lernst' — kmeň lern- + prípona -st. Kmeň nekončí na -t/-d, takže bez extra -e-."
+          sentence: "Okay. Und Ihr Familienstand? Sind Sie verheiratet? - Nein, ich bin ___.",
+          answer: "ledig",
+          hint: "Dobre. A Váš rodinný stav? Ste vydatá? - Nie, som slobodná.",
+          explanation: "Ak niekto nie je 'verheiratet' (ženatý/vydatá), je zvyčajne 'ledig' (slobodný/á)."
         },
         {
-          sentence: "Die Miete ___ achthundertfünfzig Euro. (stáť/byť)",
-          answer: "kostet",
-          hint: "die Miete = sie (ona) — 3. osoba jedn. čísla",
-          explanation:
-            "'Die Miete kostet 850 Euro.' = Nájomné stojí 850 eur. 'die Miete' = nájomné, ženský rod."
+          sentence: "Verstehe. Ihr Geburtsort ist Bratislava. Und in welchem ___ ist das?",
+          answer: "Land",
+          hint: "Rozumiem. Vaše miesto narodenia je Bratislava. A v akej krajine to je?",
+          explanation: "Bratislava je mesto v krajine (das Land) Slovensko."
         },
         {
-          sentence: "Ich ___ jetzt in Wien, nicht in Bratislava. (bývať)",
-          answer: "wohne",
-          hint: "ich + wohnen — 1. osoba jedn. čísla",
-          explanation:
-            "'ich wohne' — kmeň wohn- + -e. Jana officially sa sťahuje do Viedne!"
+          sentence: "Das ist in der Slowakei. Ich ___ aus der Slowakei.",
+          answer: "komme",
+          hint: "To je na Slovensku. Pochádzam zo Slovenska.",
+          explanation: "SPIRAL: Sloveso 'kommen aus' (pochádzať z) sa používa na označenie krajiny pôvodu (Lekcia 3)."
+        },
+        {
+          sentence: "Ihr Nachname ist 'Nováková'. Können Sie das bitte ___?",
+          answer: "buchstabieren",
+          hint: "Vaše priezvisko je 'Nováková'. Môžete to, prosím, vyhláskovať?",
+          explanation: "Keď niekto nerozumie menu, požiada o hláskovanie ('buchstabieren')."
         }
       ]
     },
     {
       type: "listen",
-      instruction:
-        "Počúvaj číslo alebo frázu a identifikuj správny ekvivalent.",
+      instruction: "Vypočujte si a napíšte slová súvisiace s osobnými údajmi.",
       questions: [
-        { de: "dreißig", sk: "tridsať" },
-        { de: "vierzig", sk: "štyridsa" },
-        { de: "sechzig", sk: "šesťdesiat" },
-        { de: "achtzig", sk: "osemdesiat" },
-        { de: "hundert", sk: "sto" },
-        { de: "Wie viel kostet das?", sk: "Koľko to stojí?" },
-        { de: "achthundertfünfzig Euro", sk: "osemsto päťdesiat eur" },
-        { de: "du arbeitest", sk: "ty pracuješ" }
+        {
+          de: "wohnen",
+          sk: "bývať"
+        },
+        {
+          de: "leben",
+          sk: "žiť"
+        },
+        {
+          de: "ledig",
+          sk: "slobodný/á"
+        },
+        {
+          de: "Straße",
+          sk: "ulica"
+        },
+        {
+          de: "Adresse",
+          sk: "adresa"
+        },
+        {
+          de: "Vorname",
+          sk: "krstné meno"
+        },
+        {
+          de: "Nachname",
+          sk: "priezvisko"
+        },
+        {
+          de: "verheiratet",
+          sk: "ženatý/vydatá"
+        },
+        {
+          de: "Postleitzahl",
+          sk: "PSČ"
+        },
+        {
+          de: "Geburtsort",
+          sk: "miesto narodenia"
+        }
       ]
     },
     {
-      type: "match",
-      instruction:
-        "Spoj nemecké číslo alebo slovo s jeho slovenským prekladom.",
-      pairs: [
-        ["dreißig", "tridsať"],
-        ["fünfzig", "päťdesiat"],
-        ["siebzig", "sedemdesiat"],
-        ["hundert", "sto"],
-        ["kaufen", "kúpiť"],
-        ["kosten", "stáť (cena)"],
-        ["die Wohnung", "byt"],
-        ["das Geld", "peniaze"]
+      type: "mcq",
+      instruction: "Vyberte správnu možnosť na doplnenie vety.",
+      questions: [
+        {
+          question: "Frau Meier, wo ___ Sie?",
+          options: [
+            "wohne",
+            "wohnst",
+            "wohnen",
+            "wohnt"
+          ],
+          answer: 2,
+          explanation: "Pri formálnom vykaní ('Sie') má sloveso 'wohnen' koncovku -en."
+        },
+        {
+          question: "Mein Kollege ist nicht mehr verheiratet. Er ist ___.",
+          options: [
+            "ledig",
+            "geschieden",
+            "ausfüllen",
+            "richtig"
+          ],
+          answer: 1,
+          explanation: "'Geschieden' (rozvedený) je správny termín pre niekoho, kto bol, ale už nie je ženatý/vydatá."
+        },
+        {
+          question: "Ich lebe ___ Österreich, aber meine Familie wohnt in der Slowakei.",
+          options: [
+            "aus",
+            "als",
+            "in",
+            "ist"
+          ],
+          answer: 2,
+          explanation: "Na vyjadrenie miesta, kde sa niečo nachádza (otázka 'Wo?'), používame predložku 'in'."
+        },
+        {
+          question: "___ ist Ihr Familienstand, Herr Schmidt?",
+          options: [
+            "Wie",
+            "Was",
+            "Wo",
+            "Wer"
+          ],
+          answer: 1,
+          explanation: "Na rodinný stav sa pýtame otázkou 'Was ist Ihr Familienstand?'. Otázka 'Wie' sa používa napr. pri adrese alebo mene."
+        },
+        {
+          question: "Sind Sie verheiratet? - Ja, das ___ richtig.",
+          options: [
+            "bin",
+            "sind",
+            "ist",
+            "habe"
+          ],
+          answer: 2,
+          explanation: "SPIRAL: Pre 'das' (to) používame 3. osobu jednotného čísla slovesa 'sein', čo je tvar 'ist' (Lekcia 1)."
+        },
+        {
+          question: "Was ist der ___ von Anna? - Sie ist ledig.",
+          options: [
+            "Geburtsort",
+            "Familienstand",
+            "Vorname",
+            "Wohnort"
+          ],
+          answer: 1,
+          explanation: "Odpoveď 'Sie ist ledig' (Je slobodná) odpovedá na otázku o rodinnom stave ('Familienstand')."
+        }
       ]
     },
     {
-      type: 'wordorder',
-      instruction: 'Zoraď slová do správnej nemeckej vety.',
+      type: "minitext",
+      instruction: "Lies den Dialog und beantworte die Fragen.",
+      text: "Herr Meier: Guten Tag. Bitte füllen Sie dieses Formular für den Studentenausweis aus.\nJana: Gerne. Oh, hier... „Familienstand“? Was bedeutet das?\nHerr Meier: Sind Sie verheiratet?\nJana: Nein, ich bin nicht verheiratet. Ich habe einen Freund.\nHerr Meier: Dann sind Sie „ledig“.\nJana: Ah, danke. Und hier: Wohnort und Land. Ich wohne in Wien, in der Mariahilfer Straße 12. Und ich lebe in Österreich. Ist das richtig?\nHerr Meier: Ja, das ist perfekt. Der Wohnort ist Wien, das Land ist Österreich.\nJana: Super, danke!",
+      textSk: "Pán Meier: Dobrý deň. Prosím, vyplňte tento formulár pre študentský preukaz.\nJana: Rada. Och, tu... „rodinný stav“? Čo to znamená?\nPán Meier: Ste vydatá?\nJana: Nie, nie som vydatá. Mám priateľa.\nPán Meier: Potom ste „slobodná“.\nJana: Aha, ďakujem. A tu: bydlisko a krajina. Bývam vo Viedni, na Mariahilfer Straße 12. A žijem v Rakúsku. Je to správne?\nPán Meier: Áno, to je perfektné. Bydlisko je Viedeň, krajina je Rakúsko.\nJana: Super, ďakujem!",
+      questions: [
+        {
+          question: "Warum ist Jana im Büro?",
+          options: [
+            "Sie sucht eine Wohnung.",
+            "Sie lernt Deutsch mit Herrn Meier.",
+            "Sie füllt ein Formular für einen Ausweis aus.",
+            "Sie fragt nach einer Adresse."
+          ],
+          answer: 2,
+          explanation: "Herr Meier sagt: „Bitte füllen Sie dieses Formular für den Studentenausweis aus.“"
+        },
+        {
+          question: "Was ist Janas Familienstand?",
+          options: [
+            "Sie ist verheiratet.",
+            "Sie ist ledig.",
+            "Sie ist geschieden.",
+            "Sie hat keinen Freund."
+          ],
+          answer: 1,
+          explanation: "Jana sagt, sie ist nicht verheiratet. Herr Meier erklärt: „Dann sind Sie ‚ledig‘.“"
+        },
+        {
+          question: "Was ist der Unterschied zwischen Janas Wohnort und dem Land, in dem sie lebt?",
+          options: [
+            "Sie wohnt in Österreich und lebt in Wien.",
+            "Sie wohnt in der Slowakei und lebt in Wien.",
+            "Sie wohnt und lebt in der Mariahilfer Straße.",
+            "Sie wohnt in Wien und lebt in Österreich."
+          ],
+          answer: 3,
+          explanation: "Jana sagt: „Ich wohne in Wien... Und ich lebe in Österreich.“"
+        }
+      ]
+    },
+    {
+      type: "speaking",
+      instruction: "Höre zu und sprich nach.",
+      phrases: [
+        {
+          de: "Wie ist Ihr Nachname, bitte?",
+          sk: "Aké je Vaše priezvisko, prosím?",
+          tip: "Dôraz na dlhé 'ie' v slove 'Wie'. ie = [i:]"
+        },
+        {
+          de: "Er ist verheiratet und lebt in München.",
+          sk: "On je ženatý a žije v Mníchove.",
+          tip: "Mäkké 'ch' v 'München' a 'ü' sa číta so zaokrúhlenými perami."
+        },
+        {
+          de: "Wohnst du in Berlin?",
+          sk: "Bývaš v Berlíne?",
+          tip: "W sa vyslovuje ako slovenské [v]. 'o' v 'wohnst' je dlhé."
+        },
+        {
+          de: "Sie wohnt in der Goethestraße Nummer 10.",
+          sk: "Ona býva na Goethestraße číslo 10.",
+          tip: "Hláska 'ß' (Eszett) sa vyslovuje ako ostré [s]."
+        },
+        {
+          de: "Jetzt füllen wir das Formular aus.",
+          sk: "Teraz vyplníme formulár.",
+          tip: "Pri odlučiteľnom slovese je prízvuk na predpone 'aus'."
+        },
+        {
+          de: "Die Postleitzahl ist falsch, sie ist nicht 1010.",
+          sk: "Poštové smerovacie číslo je nesprávne, nie je 1010.",
+          tip: "Nemecké 'z' je ostré, vyslovuje sa ako [ts]."
+        },
+        {
+          de: "Ich lebe in Österreich, aber meine Familie wohnt in der Slowakei.",
+          sk: "Žijem v Rakúsku, ale moja rodina býva na Slovensku.",
+          tip: "Mäkké 'ch' v 'ich' a 'Österreich'. ch = [ç]"
+        }
+      ]
+    },
+    {
+      type: "truefalse",
+      instruction: "Je veta gramaticky správna a logická? Označte 'pravda' (áno) alebo 'nepravda' (nie).",
+      statements: [
+        {
+          statement: "In Deutschland, 'verheiratet' ist für einen Mann und 'verheiratete' ist für eine Frau.",
+          isTrue: false,
+          explanation: "Toto nie je správne. V nemčine sa prídavné mená označujúce rodinný stav (ledig, verheiratet, geschieden) nemenia podľa rodu. Je to vždy rovnaký tvar."
+        },
+        {
+          statement: "Die Frage 'Woher wohnst du?' ist korrekt, um sich auf das aktuelle Wohnort zu fragen.",
+          isTrue: false,
+          explanation: "Správna otázka je 'Wo wohnst du?'. Otázka 'Woher kommst du?' sa pýta na pôvod (odkiaľ pochádzaš)."
+        },
+        {
+          statement: "Der Satz 'Ich lebe in Wien, aber ich wohne in Österreich' ist logisch nicht sinnvoll.",
+          isTrue: true,
+          explanation: "Presne tak. 'Leben' (žiť) je všeobecnejšie ako 'wohnen' (bývať). Logicky správne by bolo povedať: 'Ich wohne in Wien und ich lebe in Österreich.'"
+        },
+        {
+          statement: "Ein Formular 'ausfüllen' bedeutet, dass man Informationen in das Formular schreibt.",
+          isTrue: true,
+          explanation: "Áno, 'ausfüllen' je oddeliteľné sloveso, ktoré znamená 'vyplniť' (napríklad formulár)."
+        },
+        {
+          statement: "Wenn jemand fragt 'Wie ist Ihr Familienstand?', ist 'Mein Familienstand ist Huber' eine korrekte Antwort.",
+          isTrue: false,
+          explanation: "Toto nie je správna odpoveď. 'Familienstand' je rodinný stav (napr. ledig, verheiratet). 'Huber' je 'Nachname' (priezvisko)."
+        }
+      ]
+    },
+    {
+      type: "dictation",
+      instruction: "Počúvajte a napíšte vety po nemecky.",
       sentences: [
         {
-          words: ['Jana', 'wohnt', 'in', 'Wien', 'und', 'arbeitet', 'im', 'Büro.'],
-          correct: 'Jana wohnt in Wien und arbeitet im Büro.',
-          hint: 'Jana býva vo Viedni a pracuje v kancelárii.',
-          explanation: 'Pravidelné slovesá wohnen (wohnt) a arbeiten (arbeitet). "und" spája dve vety s normálnym slovosledom.'
+          de: "Wie ist Ihr Nachname, bitte?",
+          sk: "Aké je Vaše priezvisko, prosím?"
         },
         {
-          words: ['Die', 'Miete', 'kostet', 'achthundert', 'Euro.'],
-          correct: 'Die Miete kostet achthundert Euro.',
-          hint: 'Nájomné stojí osemsto eur.',
-          explanation: 'Die Miete = F rod, námetok. kostet = 3. osoba sg. od "kosten". Suma nasleduje bez skloňovania.'
+          de: "Er ist verheiratet und lebt in München.",
+          sk: "On je ženatý a žije v Mníchove."
         },
         {
-          words: ['Wir', 'kaufen', 'Brot', 'und', 'Milch.'],
-          correct: 'Wir kaufen Brot und Milch.',
-          hint: 'Kupujeme chlieb a mlieko.',
-          explanation: 'kaufen = pravidelné sloveso. 1. osoba mn. č.: wir kaufen — koncovka -en.'
+          de: "Sie wohnt in der Goethestraße Nummer 10.",
+          sk: "Ona býva na Goethestraße číslo 10."
         },
         {
-          words: ['Ihr', 'bezahlt', 'fünfzig', 'Euro.'],
-          correct: 'Ihr bezahlt fünfzig Euro.',
-          hint: 'Vy platíte päťdesiat eur.',
-          explanation: '2. osoba mn. č.: ihr + -t koncovka → bezahlt. Kmeň bezahl- + -t.'
+          de: "Ist deine Adresse noch die Hauptstraße 15?",
+          sk: "Je tvoja adresa stále Hauptstraße 15?"
         },
         {
-          words: ['Er', 'fragt:', '"Wie', 'viel', 'kostet', 'das?"'],
-          correct: 'Er fragt: "Wie viel kostet das?"',
-          hint: 'On sa pýta: "Koľko to stojí?"',
-          explanation: 'Vložená otázka citovaná priamo. fragt = 3. osoba od fragen.'
+          de: "Ich lebe in Österreich, aber meine Familie wohnt in der Slowakei.",
+          sk: "Žijem v Rakúsku, ale moja rodina býva na Slovensku."
         }
       ]
     },
     {
-      type: 'minitext',
-      instruction: 'Prečítaj si krátky text o Jane. Potom odpovedaj na otázky.',
-      text: 'Jana sucht eine Wohnung in Wien. Herr Gruber zeigt ihr eine Wohnung im 6. Bezirk. Die Wohnung kostet achthundertfünfzig Euro im Monat. Jana fragt: "Ist das zu viel?" Herr Gruber sagt: "Nein, das ist normal für Wien." Jana denkt: "Ich verdiene gut. Ich kann das bezahlen." Sie nimmt die Wohnung.',
-      textSk: 'Jana hľadá byt vo Viedni. Pán Gruber jej ukáže byt v 6. obvode. Byt stojí osemsto päťdesiat eur mesačne. Jana sa pýta: "Je to príliš veľa?" Pán Gruber povie: "Nie, to je normálne pre Viedeň." Jana premýšľa: "Dobre zarábam. Viem to zaplatiť." Byt si vezme.',
-      questions: [
+      type: "categorysort",
+      instruction: "Roztrieďte slová do správnych kategórií podľa ich významu.",
+      categories: [
         {
-          question: 'Wie viel kostet die Wohnung im Monat?',
-          questionSk: 'Koľko stojí byt mesačne?',
-          options: ['Siebenhundert Euro', 'Achthundertfünfzig Euro', 'Neunhundert Euro', 'Tausend Euro'],
-          answer: 1,
-          explanation: 'Im Text: "Die Wohnung kostet achthundertfünfzig Euro im Monat."'
+          name: "Osobné údaje",
+          color: "blue",
+          words: [
+            "der Vorname",
+            "der Nachname",
+            "die Adresse",
+            "der Wohnort",
+            "der Geburtsort",
+            "die Postleitzahl"
+          ]
         },
         {
-          question: 'In welchem Bezirk ist die Wohnung?',
-          questionSk: 'V ktorom obvode je byt?',
-          options: ['Im 4. Bezirk', 'Im 5. Bezirk', 'Im 6. Bezirk', 'Im 7. Bezirk'],
-          answer: 2,
-          explanation: 'Im Text: "eine Wohnung im 6. Bezirk"'
+          name: "Rodinný stav",
+          color: "green",
+          words: [
+            "ledig",
+            "verheiratet",
+            "geschieden"
+          ]
         },
         {
-          question: 'Was macht Jana am Ende?',
-          questionSk: 'Čo urobí Jana na záver?',
-          options: ['Sie geht weg', 'Sie ruft jemand anderen an', 'Sie nimmt die Wohnung', 'Sie bittet um einen Rabatt'],
-          answer: 2,
-          explanation: 'Im Text: "Sie nimmt die Wohnung."'
+          name: "Činnosti",
+          color: "orange",
+          words: [
+            "wohnen",
+            "leben",
+            "ausfüllen",
+            "buchstabieren"
+          ]
+        }
+      ],
+      explanation: "Toto cvičenie vám pomôže usporiadať si novú slovnú zásobu do logických skupín: údaje, ktoré píšete do formulárov, stavy, ktoré opisujú váš osobný život, a slovesá, ktoré s týmito údajmi súvisia."
+    },
+    {
+      type: "translation",
+      instruction: "Preložte vety do nemčiny.",
+      sentences: [
+        {
+          sk: "Bývate v Nemecku?",
+          answer: "Wohnen Sie in Deutschland?",
+          hint: "Wohnen, in",
+          explanation: "Pri formálnom vykaní (Sie) má sloveso 'wohnen' koncovku -en."
+        },
+        {
+          sk: "Môj rodinný stav je 'slobodný'.",
+          answer: "Mein Familienstand ist 'ledig'.",
+          hint: "der Familienstand, ledig",
+          explanation: "Na vyjadrenie stavu používame sloveso 'sein' (byť) a prídavné meno."
+        },
+        {
+          sk: "Prosím, vyhláskujte Vaše priezvisko.",
+          answer: "Bitte buchstabieren Sie Ihren Nachnamen.",
+          hint: "buchstabieren, der Nachname",
+          explanation: "Toto je typická veta na úrade. 'Ihren' je privlastňovacie zámeno pre 'Sie' v akuzatíve."
+        },
+        {
+          sk: "Oni sú rozvedení a nebývajú spolu.",
+          answer: "Sie sind geschieden und wohnen nicht zusammen.",
+          hint: "geschieden, zusammen",
+          explanation: "Pre 'oni' (3. osoba množného čísla) používame tvar 'sind' (od 'sein') a 'wohnen' (s koncovkou -en)."
         }
       ]
     },
     {
-      type: 'speaking',
-      instruction: 'Počúvaj nemeckú vetu. Potom hovor nahlas a skontroluj sa.',
-      phrases: [
-        { de: 'Wie viel kostet das?', sk: 'Koľko to stojí?', tip: 'viel: v=[f], ie=[í]' },
-        { de: 'Das ist zu teuer.', sk: 'To je príliš drahé.', tip: 'teuer: eu=[oj], er=[ə]' },
-        { de: 'Ich kaufe zwei Brötchen.', sk: 'Kúpim dve rožky.', tip: 'kaufe: au=[ao], f=[f]' },
-        { de: 'Sie wohnt im sechsten Bezirk.', sk: 'Býva v šiestom obvode.', tip: 'Bezirk: B=[b], z=[ts]' },
-        { de: 'dreiundzwanzig', sk: 'dvadsaťtri', tip: 'drei-und-zwan-zig — skladané v celku' }
+      type: "conjugation",
+      instruction: "Vyčasujte sloveso 'wohnen' v prítomnom čase.",
+      verbs: [
+        {
+          infinitive: "wohnen",
+          translation: "bývať",
+          forms: [
+            {
+              pronoun: "ich",
+              correct: "wohne"
+            },
+            {
+              pronoun: "du",
+              correct: "wohnst"
+            },
+            {
+              pronoun: "er/sie/es",
+              correct: "wohnt"
+            },
+            {
+              pronoun: "wir",
+              correct: "wohnen"
+            },
+            {
+              pronoun: "ihr",
+              correct: "wohnt"
+            },
+            {
+              pronoun: "sie/Sie",
+              correct: "wohnen"
+            }
+          ],
+          note: "'wohnen' je pravidelné sloveso. Kmeň slovesa je 'wohn-' a k nemu sa pridávajú štandardné koncovky prítomného času."
+        }
       ]
     }
   ],
-
-  reviewWords: ["L04_V02"],
-  lessonNotes:
-    "Kľúčové výnimky: dreißig (s ß, nie z), einundzwanzig (jedn. pred desiatkami). Slovesá na -t/-d kmeň: vkladať -e- pred -st a -t (arbeitest, arbeitet). Vzor pravidelných slovies: -e/-st/-t/-en/-t/-en. V tejto lekcii sa objavuje prvá recyklácia: 'wohnen' (L04_V02) → L06_V12."
+  reviewWords: []
 };

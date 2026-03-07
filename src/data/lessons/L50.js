@@ -2,511 +2,910 @@ export const lesson50 = {
   id: 50,
   week: 10,
   day: 5,
-  title: "Perfekt — haben + Partizip II",
-  topic: "Perfektum — minulý čas s haben + príčastím II",
+  title: "Möbel umstellen: Wo soll das Sofa stehen?",
+  topic: "Hodnotenie bývania a usporiadanie nábytku.",
   cefr: "A1",
-  xpReward: 40,
-  narrativeContext:
-    "Jana sa práve vrátila z Talianska! Rozpráva Lukasovi o svojej ceste. 'Ich habe Pasta gegessen! Ich habe viel Deutsch gesprochen. Wir haben ein schönes Museum besucht.' — Prvýkrát používa minulý čas!",
-  communicativeGoal:
-    "Po tejto lekcii viem rozprávať o minulosti pomocou Perfektu (haben + Partizip II) pre pravidelné slovesá a kľúčové nepravidelné.",
-  skillFocus: ["grammar", "speaking", "writing"],
-
-  grammarNote: {
-    rule: "Perfekt: haben (P2) + Partizip II (na konci vety) — Satzklammer!",
-    explanation:
-      "Perfekt je najčastejší hovorový minulý čas v nemčine. Tvorí sa: haben (skloňovaný na pozícii 2) + Partizip II (na KONCI vety — Satzklammer!).\n\nTvorenie Partizip II:\n• Pravidelné (slabé) slovesá: ge- + kmeň + -t: machen → gemacht, kaufen → gekauft, arbeiten → gearbeitet\n• Nepravidelné (silné) slovesá: ge- + (zmenený) kmeň + -en: essen → gegessen, fahren → gefahren, trinken → getrunken\n• Slovesá s neodlučovateľnou predponou (ver-, be-, er-, ge-, zer-): BEZ ge-: besuchen → besucht, vergessen → vergessen, erklären → erklärt\n\n⭐ Satzklammer platí aj pre Perfekt: haben na pozícii 2, Partizip II na KONIEC!\nIch habe Pasta gegessen. (nie: Ich habe gegessen Pasta.)",
-    examples: [
-      { de: "Ich habe Pasta gegessen.", sk: "Jedol/a som pastu." },
-      { de: "Wir haben ein Museum besucht.", sk: "Navštívili sme múzeum." },
-      { de: "Jana hat viel Deutsch gesprochen.", sk: "Jana veľa hovorila po nemecky." },
-      { de: "Sie hat das Hotel gebucht.", sk: "Rezervovala hotel." },
-      { de: "Ich habe gestern viel getrunken.", sk: "Včera som veľa pil/a." },
-    ],
-    slovakContrastNote:
-      "Slovenský minulý čas: 'jedol/jedla som' — jedno sloveso. Nemecký Perfekt: 'habe gegessen' — pomocné sloveso haben + Partizip II. Zložená konštrukcia je pre slovenčinu cudzia! Dôležité: Partizip II vždy na konci — Satzklammer. Perfekt ≠ Präteritum (písaný minulý čas, hlavne pre sein/haben/modálne v hovorovom registri).",
-  },
-
+  xpReward: 20,
+  narrativeContext: "Jana und Luisa sind Freundinnen. Sie wollen Janas Wohnung neu einrichten, aber sie haben verschiedene Ideen.",
+  communicativeGoal: "Nach dieser Lektion kann ich über die Position von Möbeln sprechen und sagen, wohin ich etwas stelle.",
+  skillFocus: [
+    "vocabulary",
+    "grammar",
+    "listening",
+    "speaking",
+    "reading"
+  ],
+  lessonNotes: "V tejto lekcii sa Jana a Luisa hádajú o tom, kam umiestniť nábytok. Naučíte sa používať slovesá ako 'stehen', 'stellen', 'liegen', 'legen', 'hängen' a obojsmerné predložky s Akuzatívom. Budete vedieť vyjadriť, kde sa niečo nachádza a kam to presunúť.",
+  grammarNotes: [
+    {
+      rule: "Perfekt mit \"haben\" und \"sein\"",
+      explanation: "<p>Perfekt je zložený minulý čas v nemčine, ktorý sa používa predovšetkým v hovorenom jazyku na vyjadrenie dokončených dejov v minulosti. Tvorí sa pomocou pomocného slovesa (<strong>haben</strong> alebo <strong>sein</strong>) a príčastia minulého (<strong>Partizip II</strong>) hlavného slovesa. Pomocné sloveso je vždy časované v prítomnom čase a stojí na druhom mieste vo vete, zatiaľ čo Partizip II stojí na konci vety.</p><p>Väčšina slovies tvorí Perfekt s pomocným slovesom <strong>haben</strong>. Patria sem prechodné slovesá (ktoré majú priamy predmet v akuzatíve), zvratné slovesá a slovesá vyjadrujúce stav bez zmeny miesta alebo stavu (napr. <em>schlafen, arbeiten, warten</em>).</p><p>Sloveso <strong>sein</strong> sa používa ako pomocné sloveso pre:</p><ul><li>slovesá vyjadrujúce pohyb z miesta na miesto (napr. <em>gehen, fahren, fliegen, kommen, laufen</em>)</li><li>slovesá vyjadrujúce zmenu stavu (napr. <em>werden, einschlafen, aufwachen, sterben</em>)</li><li>slovesá <strong>sein</strong>, <strong>bleiben</strong> a <strong>werden</strong>.</li></ul><div class=\"tip-box\">Nezabudnite, že Partizip II sa tvorí rôzne pre pravidelné (slabé) a nepravidelné (silné) slovesá. Pre pravidelné slovesá je to často <strong>ge- + kmeň slovesa + -t</strong> (napr. <em>machen → gemacht</em>). Pre nepravidelné slovesá je to často <strong>ge- + zmenený kmeň slovesa + -en</strong> (napr. <em>sprechen → gesprochen</em>).</div>",
+      examples: [
+        {
+          de: "Ich habe gestern viel gearbeitet.",
+          sk: "Včera som veľa pracoval/a.",
+          note: "Perfekt s \"haben\" pre sloveso \"arbeiten\" (pravidelné)."
+        },
+        {
+          de: "Wir haben einen Film gesehen.",
+          sk: "Videli sme film.",
+          note: "Perfekt s \"haben\" pre sloveso \"sehen\" (nepravidelné)."
+        },
+        {
+          de: "Sie hat das Buch gelesen.",
+          sk: "Prečítala knihu.",
+          note: "Perfekt s \"haben\" pre sloveso \"lesen\" (nepravidelné)."
+        },
+        {
+          de: "Ich bin nach Hause gegangen.",
+          sk: "Išiel/išla som domov.",
+          note: "Perfekt s \"sein\" pre sloveso \"gehen\" (pohyb)."
+        },
+        {
+          de: "Er ist schnell gefahren.",
+          sk: "Rýchlo išiel/šoféroval.",
+          note: "Perfekt s \"sein\" pre sloveso \"fahren\" (pohyb)."
+        },
+        {
+          de: "Sie sind in Berlin geblieben.",
+          sk: "Zostali v Berlíne.",
+          note: "Perfekt s \"sein\" pre sloveso \"bleiben\"."
+        },
+        {
+          de: "Was hast du am Wochenende gemacht?",
+          sk: "Čo si robil/a cez víkend?",
+          note: "Otázka v Perfekte."
+        },
+        {
+          de: "Bist du schon aufgestanden?",
+          sk: "Už si vstal/a?",
+          note: "Otázka v Perfekte."
+        }
+      ],
+      slovakContrastNote: "<p>V slovenčine máme jeden jednoduchý minulý čas (napr. \"pracoval som\", \"išiel som\"). Nemčina rozlišuje medzi Perfektom (pre hovorený jazyk) a Präteritom (pre písaný jazyk a rozprávanie príbehov). Pre slovenského študenta je dôležité si uvedomiť, že v bežnej konverzácii sa v nemčine takmer vždy používa Perfekt, zatiaľ čo v slovenčine by sme použili jednoduchý minulý čas. Taktiež si treba zvyknúť na to, že pomocné sloveso je na druhom mieste a Partizip II na konci vety, čo je iný slovosled ako v slovenčine.</p>"
+    },
+    {
+      rule: "Präteritum von \"sein\" und \"haben\"",
+      explanation: "<p>Hoci sa v hovorenej nemčine pre väčšinu slovies používa Perfekt, pre slovesá <strong>sein</strong> (byť) a <strong>haben</strong> (mať) sa veľmi často, dokonca aj v hovorenom jazyku, používa jednoduchý minulý čas – <strong>Präteritum</strong>. Je to dôležitá výnimka, ktorú si treba zapamätať, pretože počuť \"Ich war\" alebo \"Ich hatte\" je oveľa bežnejšie ako \"Ich bin gewesen\" alebo \"Ich habe gehabt\" v každodennej komunikácii.</p><p>Tu sú časovania týchto dvoch dôležitých slovies v Präterite:</p><table><thead><tr><th>Osoba</th><th>sein (byť)</th><th>haben (mať)</th></tr></thead><tbody><tr><td>ich</td><td>war</td><td>hatte</td></tr><tr><td>du</td><td>warst</td><td>hattest</td></tr><tr><td>er/sie/es</td><td>war</td><td>hatte</td></tr><tr><td>wir</td><td>waren</td><td>hatten</td></tr><tr><td>ihr</td><td>wart</td><td>hattet</td></tr><tr><td>sie/Sie</td><td>waren</td><td>hatten</td></tr></tbody></table><div class=\"warn-box\">Pamätajte, že aj keď sa Präteritum pre \"sein\" a \"haben\" používa v hovorenom jazyku, pre ostatné slovesá by ste mali v A1 úrovni preferovať Perfekt v bežnej konverzácii. Präteritum pre iné slovesá je typické pre písomné texty a rozprávanie príbehov.</div>",
+      examples: [
+        {
+          de: "Ich war gestern müde.",
+          sk: "Včera som bol/a unavený/á.",
+          note: "Präteritum von \"sein\"."
+        },
+        {
+          de: "Wir waren im Urlaub.",
+          sk: "Boli sme na dovolenke.",
+          note: "Präteritum von \"sein\"."
+        },
+        {
+          de: "Hattest du Zeit?",
+          sk: "Mal/a si čas?",
+          note: "Präteritum von \"haben\" v otázke."
+        },
+        {
+          de: "Er hatte keine Lust.",
+          sk: "Nemal chuť.",
+          note: "Präteritum von \"haben\"."
+        },
+        {
+          de: "Wo wart ihr letztes Wochenende?",
+          sk: "Kde ste boli minulý víkend?",
+          note: "Präteritum von \"sein\" v otázke."
+        },
+        {
+          de: "Sie hatten ein großes Haus.",
+          sk: "Mali veľký dom.",
+          note: "Präteritum von \"haben\"."
+        }
+      ],
+      slovakContrastNote: "<p>V slovenčine máme pre \"byť\" a \"mať\" v minulom čase tiež jednoduché formy (\"bol som\", \"mal som\"). Rozdiel je v tom, že v nemčine sa tieto formy (Präteritum) používajú aj v hovorenom jazyku, zatiaľ čo pre väčšinu ostatných slovies by sme v hovorenej reči použili Perfekt. Pre slovenského študenta je dôležité si uvedomiť, že \"Ich war\" a \"Ich hatte\" sú úplne prirodzené a bežné v každodennej komunikácii, rovnako ako ich slovenské ekvivalenty.</p>"
+    }
+  ],
   vocab: [
     {
-      de: "gemacht (machen → gemacht)",
-      sk: "urobil/a",
-      example: "Ich habe meine Hausaufgaben gemacht.",
-      exampleSk: "Urobil/a som si domácu úlohu.",
-      gender: null,
+      de: "der Sessel",
+      sk: "kreslo",
+      gender: "M",
       srsId: "L50_V01",
-      recycledFrom: [],
+      example: "Der Sessel ist bequem.",
+      exampleSk: "Kreslo je pohodlné.",
+      recycledFrom: []
     },
     {
-      de: "gekauft (kaufen → gekauft)",
-      sk: "kúpil/a",
-      example: "Ich habe ein Souvenir gekauft.",
-      exampleSk: "Kúpil/a som suvenír.",
-      gender: null,
+      de: "die Kommode",
+      sk: "komoda",
+      gender: "F",
       srsId: "L50_V02",
-      recycledFrom: [6],
+      example: "Die Kommode ist braun.",
+      exampleSk: "Komoda je hnedá.",
+      recycledFrom: []
     },
     {
-      de: "gespielt (spielen → gespielt)",
-      sk: "hral/a",
-      example: "Die Kinder haben Fußball gespielt.",
-      exampleSk: "Deti hrali futbal.",
-      gender: null,
+      de: "der Teppich",
+      sk: "koberec",
+      gender: "M",
       srsId: "L50_V03",
-      recycledFrom: [],
+      example: "Der Teppich ist weich.",
+      exampleSk: "Koberec je mäkký.",
+      recycledFrom: []
     },
     {
-      de: "gelernt (lernen → gelernt)",
-      sk: "učil/a sa",
-      example: "Ich habe heute viel Deutsch gelernt.",
-      exampleSk: "Dnes som sa veľa učil/a po nemecky.",
-      gender: null,
+      de: "die Pflanze",
+      sk: "rastlina",
+      gender: "F",
       srsId: "L50_V04",
-      recycledFrom: [6],
+      example: "Die Pflanze ist grün.",
+      exampleSk: "Rastlina je zelená.",
+      recycledFrom: []
     },
     {
-      de: "besucht (besuchen → besucht) ⚠️",
-      sk: "navštívil/a (BEZ ge-!)",
-      example: "Wir haben das Kolosseum besucht.",
-      exampleSk: "Navštívili sme Koloseum.",
-      gender: null,
+      de: "der Spiegel",
+      sk: "zrkadlo",
+      gender: "M",
       srsId: "L50_V05",
-      recycledFrom: [],
+      example: "Der Spiegel ist rund.",
+      exampleSk: "Zrkadlo je okrúhle.",
+      recycledFrom: []
     },
     {
-      de: "gegessen (essen → gegessen) ⚠️",
-      sk: "jedol/jedla",
-      example: "Ich habe Pasta gegessen.",
-      exampleSk: "Jedol/a som pastu.",
-      gender: null,
+      de: "die Gardine",
+      sk: "záclona",
+      gender: "F",
       srsId: "L50_V06",
-      recycledFrom: [10],
+      example: "Die Gardine ist weiß.",
+      exampleSk: "Záclona je biela.",
+      recycledFrom: []
     },
     {
-      de: "getrunken (trinken → getrunken) ⚠️",
-      sk: "pil/a",
-      example: "Wir haben guten Wein getrunken.",
-      exampleSk: "Pili sme dobré víno.",
-      gender: null,
+      de: "die Wand",
+      sk: "stena",
+      gender: "F",
       srsId: "L50_V07",
-      recycledFrom: [10],
+      example: "Die Wand ist leer.",
+      exampleSk: "Stena je prázdna.",
+      recycledFrom: []
     },
     {
-      de: "gefahren (fahren → gefahren) ⚠️",
-      sk: "jazdil/a, išiel/išla (vozidlom)",
-      example: "Ich bin nach Rom gefahren.",
-      exampleSk: "Jazdil/a som do Ríma.",
-      gender: null,
+      de: "die Ecke",
+      sk: "roh",
+      gender: "F",
       srsId: "L50_V08",
-      recycledFrom: [14],
+      example: "Die Ecke ist frei.",
+      exampleSk: "Roh je voľný.",
+      recycledFrom: []
     },
     {
-      de: "gesprochen (sprechen → gesprochen) ⚠️",
-      sk: "hovoril/a",
-      example: "Jana hat viel Deutsch gesprochen.",
-      exampleSk: "Jana veľa hovorila po nemecky.",
-      gender: null,
+      de: "der Boden",
+      sk: "podlaha",
+      gender: "M",
       srsId: "L50_V09",
-      recycledFrom: [11],
+      example: "Der Boden ist aus Holz.",
+      exampleSk: "Podlaha je z dreva.",
+      recycledFrom: []
     },
     {
-      de: "geschrieben (schreiben → geschrieben) ⚠️",
-      sk: "písal/a",
-      example: "Ich habe eine Postkarte geschrieben.",
-      exampleSk: "Napísal/a som pohľadnicu.",
-      gender: null,
+      de: "der Raum",
+      sk: "miestnosť",
+      gender: "M",
       srsId: "L50_V10",
-      recycledFrom: [1],
+      example: "Der Raum ist schön.",
+      exampleSk: "Miestnosť je pekná.",
+      recycledFrom: []
     },
     {
-      de: "gesehen (sehen → gesehen) ⚠️",
-      sk: "videl/a",
-      example: "Wir haben das Pantheon gesehen.",
-      exampleSk: "Videli sme Pantheon.",
+      de: "umräumen",
+      sk: "prerobiť (miestnosť, nábytok)",
       gender: null,
       srsId: "L50_V11",
-      recycledFrom: [10],
+      example: "Wir wollen den Raum umräumen.",
+      exampleSk: "Chceme prerobiť miestnosť.",
+      recycledFrom: []
     },
     {
-      de: "gestern",
-      sk: "včera",
-      example: "Ich habe gestern viel gegessen.",
-      exampleSk: "Včera som veľa jedol/a.",
+      de: "passen",
+      sk: "hodiť sa, pasovať",
       gender: null,
       srsId: "L50_V12",
-      recycledFrom: [21],
+      example: "Das passt gut hierher.",
+      exampleSk: "To sa sem dobre hodí.",
+      recycledFrom: []
     },
     {
-      de: "letzte Woche",
-      sk: "minulý týždeň",
-      example: "Letzte Woche habe ich Vienna verlassen.",
-      exampleSk: "Minulý týždeň som opustil/a Viedeň.",
+      de: "bleiben",
+      sk: "zostať",
       gender: null,
       srsId: "L50_V13",
-      recycledFrom: [],
+      example: "Lass es hier bleiben!",
+      exampleSk: "Nechaj to tu!",
+      recycledFrom: []
     },
     {
-      de: "letzten Monat",
-      sk: "minulý mesiac",
-      example: "Letzten Monat habe ich Urlaub gemacht.",
-      exampleSk: "Minulý mesiac som mal/a dovolenku.",
+      de: "sagen",
+      sk: "povedať",
       gender: null,
       srsId: "L50_V14",
-      recycledFrom: [],
+      example: "Was sagst du dazu?",
+      exampleSk: "Čo na to povieš?",
+      recycledFrom: []
     },
     {
-      de: "das Partizip II",
-      sk: "príčastie II (minulý tvar)",
-      example: "'gegessen' ist das Partizip II von 'essen'.",
-      exampleSk: "'gegessen' je Partizip II od 'essen'.",
-      gender: "N",
+      de: "meinen",
+      sk: "myslieť (si), mieniť",
+      gender: null,
       srsId: "L50_V15",
-      recycledFrom: [],
+      example: "Ich meine, das ist gut.",
+      exampleSk: "Myslím, že je to dobré.",
+      recycledFrom: []
     },
+    {
+      de: "dort",
+      sk: "tam",
+      gender: null,
+      srsId: "L50_V16",
+      example: "Dort ist es besser.",
+      exampleSk: "Tam je to lepšie.",
+      recycledFrom: []
+    },
+    {
+      de: "hierher",
+      sk: "sem (smer)",
+      gender: null,
+      srsId: "L50_V17",
+      example: "Bring es hierher!",
+      exampleSk: "Prines to sem!",
+      recycledFrom: []
+    },
+    {
+      de: "wohin?",
+      sk: "kam?",
+      gender: null,
+      srsId: "L50_V18",
+      example: "Wohin sollen wir es tun?",
+      exampleSk: "Kam to máme dať?",
+      recycledFrom: []
+    },
+    {
+      de: "darüber",
+      sk: "nad tým",
+      gender: null,
+      srsId: "L50_V19",
+      example: "Die Decke ist darüber.",
+      exampleSk: "Strop je nad tým.",
+      recycledFrom: []
+    },
+    {
+      de: "daneben",
+      sk: "vedľa toho",
+      gender: null,
+      srsId: "L50_V20",
+      example: "Der Sessel ist daneben.",
+      exampleSk: "Kreslo je vedľa toho.",
+      recycledFrom: []
+    },
+    {
+      de: "anders",
+      sk: "iný, inak",
+      gender: null,
+      srsId: "L50_V21",
+      example: "Das ist ganz anders.",
+      exampleSk: "To je úplne iné.",
+      recycledFrom: []
+    },
+    {
+      de: "doch",
+      sk: "ale áno, predsa len (protirečenie)",
+      gender: null,
+      srsId: "L50_V22",
+      example: "Doch, das ist gut!",
+      exampleSk: "Ale áno, to je dobré!",
+      recycledFrom: []
+    },
+    {
+      de: "einverstanden sein",
+      sk: "súhlasiť",
+      gender: null,
+      srsId: "L50_V23",
+      example: "Ich bin einverstanden.",
+      exampleSk: "Súhlasím.",
+      recycledFrom: []
+    },
+    {
+      de: "Das gefällt mir.",
+      sk: "To sa mi páči.",
+      gender: null,
+      srsId: "L50_V24",
+      example: "Das gefällt mir sehr.",
+      exampleSk: "To sa mi veľmi páči.",
+      recycledFrom: []
+    },
+    {
+      de: "Probieren wir es mal!",
+      sk: "Skúsme to!",
+      gender: null,
+      srsId: "L50_V25",
+      example: "Probieren wir es mal!",
+      exampleSk: "Skúsme to!",
+      recycledFrom: []
+    }
   ],
-
   exercises: [
     {
       type: "flashcard",
-      instruction:
-        "Prezri si Partizip-II formy. Pre každú kartu povedz celú vetu v Perfekte: 'Ich habe … [Partizip II].'",
-      items: [
-        "L50_V01",
-        "L50_V02",
-        "L50_V03",
-        "L50_V04",
-        "L50_V05",
-        "L50_V06",
-        "L50_V07",
-        "L50_V08",
-        "L50_V09",
-        "L50_V10",
-        "L50_V11",
-        "L50_V12",
-        "L50_V13",
-        "L50_V14",
-      ],
-    },
-    {
-      type: "mcq",
-      instruction: "Vyber správnu formu Partizip II alebo správnu štruktúru Perfektu.",
-      questions: [
-        {
-          question: "Partizip II od 'machen' je:",
-          options: ["gemachen", "gemacht", "macht", "gegemacht"],
-          answer: "gemacht",
-          explanation:
-            "Pravidelné sloveso: ge- + kmeň + -t. machen → kmeň: mach → gemacht.",
-        },
-        {
-          question: "Partizip II od 'besuchen' je:",
-          options: ["gebesucht", "besuchte", "besucht", "gebesuchen"],
-          answer: "besucht",
-          explanation:
-            "'besuchen' má neodlučovateľnú predponu 'be-' → BEZ ge-! besuchen → besucht (nie gebesucht!).",
-        },
-        {
-          question: "Správna veta v Perfekte: 'Jana jedla pizzu.'",
-          options: [
-            "Jana gegessen hat Pizza.",
-            "Jana hat Pizza gegessen.",
-            "Jana hat gegessen Pizza.",
-            "Jana habe Pizza gegessen.",
-          ],
-          answer: "Jana hat Pizza gegessen.",
-          explanation:
-            "Satzklammer: hat (P2) + … + gegessen (koniec). Jana hat Pizza gegessen. ✓",
-        },
-        {
-          question: "Partizip II od 'trinken' je:",
-          options: ["getrinkt", "getrunken", "trinkte", "getrinkten"],
-          answer: "getrunken",
-          explanation:
-            "'trinken' je silné (nepravidelné) sloveso: trinken → getrunken. Zmena kmeňa: i → u.",
-        },
-        {
-          question: "'Wir haben das Museum ___.' (besuchen)",
-          options: ["gebesucht", "besucht", "besuchtet", "besuchen"],
-          answer: "besucht",
-          explanation:
-            "'besuchen' má predponu be- → bez ge-. Partizip II: besucht. Wir haben das Museum besucht.",
-        },
-      ],
-    },
-    {
-      type: "fill",
-      instruction: "Doplň správny Partizip II.",
-      questions: [
-        {
-          sentence: "Ich habe gestern viel Pasta ___. (essen)",
-          answer: "gegessen",
-          hint: "essen → g__ + essen (silné sloveso s ge-)",
-          explanation: "'essen' → gegessen. Silné sloveso: ge- + menený kmeň + -en.",
-        },
-        {
-          sentence: "Jana hat eine Postkarte ___. (schreiben)",
-          answer: "geschrieben",
-          hint: "schreiben → ge + schrieben",
-          explanation:
-            "'schreiben' → geschrieben. Silné sloveso: ei → ie zmena v kmeni.",
-        },
-        {
-          sentence: "Wir haben das Kolosseum ___. (besuchen)",
-          answer: "besucht",
-          hint: "besuchen — predpona be-, bez ge-!",
-          explanation: "'besuchen' má 'be-' predponu → ŽIADNE ge-. besucht.",
-        },
-        {
-          sentence: "Du hast heute viel Deutsch ___. (sprechen)",
-          answer: "gesprochen",
-          hint: "sprechen → ge + spr__chen (o→o)",
-          explanation: "'sprechen' → gesprochen. Silné sloveso.",
-        },
-        {
-          sentence: "Ich habe ein Souvenir ___. (kaufen)",
-          answer: "gekauft",
-          hint: "kaufen — pravidelné sloveso",
-          explanation: "'kaufen' → pravidelné: ge + kauf + t = gekauft.",
-        },
-      ],
-    },
-    {
-      type: "listen",
-      instruction:
-        "Počúvaj vety v Perfekte. Zopakuj ich nahlas — všímaj si pozíciu haben a Partizip II.",
-      questions: [
-        { de: "Ich habe Pasta gegessen.", sk: "Jedol/a som pastu." },
-        { de: "Jana hat viel Deutsch gesprochen.", sk: "Jana veľa hovorila po nemecky." },
-        { de: "Wir haben das Museum besucht.", sk: "Navštívili sme múzeum." },
-        { de: "Ich habe eine Postkarte geschrieben.", sk: "Napísal/a som pohľadnicu." },
-        { de: "Haben Sie gut geschlafen?", sk: "Dobre ste spali?" },
-        { de: "Was hast du gestern gemacht?", sk: "Čo si včera robil/a?" },
-        { de: "Wir haben guten Wein getrunken.", sk: "Pili sme dobré víno." },
-        { de: "Jana hat das Kolosseum gesehen.", sk: "Jana videla Koloseum." },
-      ],
+      instruction: "Prezri si slovíčka tejto lekcie. Klikni na kartičku pre preklad."
     },
     {
       type: "match",
-      instruction: "Spoj infinitív slovesa s jeho Partizip II.",
+      instruction: "Priraďte nemecké slová k ich slovenským prekladom.",
       pairs: [
-        ["machen", "gemacht"],
-        ["kaufen", "gekauft"],
-        ["essen", "gegessen"],
-        ["trinken", "getrunken"],
-        ["sprechen", "gesprochen"],
-        ["schreiben", "geschrieben"],
-        ["sehen", "gesehen"],
-        ["besuchen", "besucht"],
-        ["lernen", "gelernt"],
-        ["fahren", "gefahren"],
-      ],
-    },
-    {
-      type: "dialogue",
-      instruction:
-        "Jana sa vrátila z Talianska a rozpráva Lukasovi. Celý dialóg je v Perfekte!",
-      lines: [
-        {
-          speaker: "Lukas",
-          de: "Jana! Du bist zurück! Wie war der Urlaub?",
-          sk: "Jana! Si späť! Aká bola dovolenka?",
-        },
-        {
-          speaker: "Jana",
-          de: "Fantastisch! Ich habe so viel erlebt!",
-          sk: "Fantastická! Zažila som toľko vecí!",
-        },
-        {
-          speaker: "Lukas",
-          de: "Was hast du alles gemacht?",
-          sk: "Čo všetko si robila?",
-        },
-        {
-          speaker: "Jana",
-          de: "Ich habe das Kolosseum und das Vatikanmuseum besucht. Sehr beeindruckend!",
-          sk: "Navštívila som Koloseum a Vatikánske múzeum. Veľmi úžasné!",
-        },
-        {
-          speaker: "Lukas",
-          de: "Und das Essen? Wie war die italienische Küche?",
-          sk: "A jedlo? Aká bola talianska kuchyňa?",
-        },
-        {
-          speaker: "Jana",
-          de: "Ich habe jeden Tag Pasta gegessen! Und ich habe very viel guten Wein getrunken.",
-          sk: "Každý deň som jedla pastu! A pila som veľa dobrého vína.",
-        },
-        {
-          speaker: "Lukas",
-          de: "Hast du auch Deutsch gesprochen?",
-          sk: "Hovorila si aj po nemecky?",
-        },
-        {
-          speaker: "Jana",
-          de: "Ja! Ich habe mit einem deutschen Touristen viel Deutsch gesprochen. Er hat mich gelobt!",
-          sk: "Áno! S jedným nemeckým turistom som veľa hovorila po nemecky. Pochválil ma!",
-        },
-        {
-          speaker: "Lukas",
-          de: "Klasse! Hast du auch Souvenirs gekauft?",
-          sk: "Skvelé! Kúpila si aj suveníry?",
-        },
-        {
-          speaker: "Jana",
-          de: "Natürlich! Ich habe Postkarten geschrieben und für dich ein kleines Geschenk gekauft!",
-          sk: "Samozrejme! Písala som pohľadnice a pre teba som kúpila malý darček!",
-        },
-        {
-          speaker: "Lukas",
-          de: "Für mich? Das war sehr nett! Was hast du gesehen?",
-          sk: "Pre mňa? To bolo veľmi milé! Čo si videla?",
-        },
-        {
-          speaker: "Jana",
-          de: "Ich habe den Trevi-Brunnen, die Spanische Treppe und das Pantheon gesehen. Ich habe auch eine Münze in den Brunnen geworfen!",
-          sk: "Videla som Fontánu di Trevi, Španielske schody a Pantheon. Hodila som aj mincu do fontány!",
-        },
-      ],
-      comprehensionQuestions: [
-        {
-          question: "Welche Sehenswürdigkeiten hat Jana besucht?",
-          answer:
-            "Jana hat das Kolosseum, das Vatikanmuseum, den Trevi-Brunnen, die Spanische Treppe und das Pantheon besucht/gesehen.",
-          explanation:
-            "Jana nennt: 'das Kolosseum, das Vatikanmuseum, den Trevi-Brunnen, die Spanische Treppe und das Pantheon'.",
-        },
-        {
-          question: "Mit wem hat Jana Deutsch gesprochen?",
-          answer: "Jana hat mit einem deutschen Touristen Deutsch gesprochen.",
-          explanation: "'Ich habe mit einem deutschen Touristen viel Deutsch gesprochen.'",
-        },
-        {
-          question: "Was hat Jana für Lukas gekauft?",
-          answer: "Jana hat für Lukas ein kleines Geschenk gekauft.",
-          explanation: "'für dich ein kleines Geschenk gekauft!'",
-        },
-      ],
-    },
-    {
-      type: "minitext",
-      instruction:
-        "Jana napisala blogový príspevok o Taliansku. Všetko je v Perfekte. Odpovedz na otázky.",
-      text:
-        "Mein Urlaub in Rom — ein Traumurlaub!\nHallo, ich bin zurück aus Rom! Ich habe zwei herrliche Wochen in Italien verbracht. Am ersten Tag habe ich das Hotel eingecheckt und bin in die Stadt gegangen. Ich habe das Kolosseum besucht — es war unglaublich! Am zweiten Tag habe ich sehr leckere Pizza und Gelato gegessen. Ich habe mit einem netten Kellner auf Itialienisch gesprochen — er hat mich verstanden! Ich habe auch viele Fotos gemacht und Postkarten nach Hause geschrieben. Am letzten Abend habe ich im Restaurant gut gegessen und Rotwein getrunken. Ich habe diesen Urlaub sehr genossen!",
-      textSk:
-        "Moja dovolenka v Ríme — vysnívaná dovolenka!\nAhoj, som späť z Ríma! Strávila som dve nádherné týždne v Taliansku. Prvý deň som sa ubytovala v hoteli a išla do mesta. Navštívila som Koloseum — bolo neuveriteľné! Druhý deň som jedla veľmi chutné pizza a Gelato. Hovorila som s milým čašníkom po taliansky — rozumel mi! Spravila som aj veľa fotografií a písala pohľadnice domov. Posledný večer som dobre jedla v reštaurácii a pila červené víno. Veľmi som si túto dovolenku užila!",
-      questions: [
-        {
-          question: "Was hat Jana am ersten Tag gemacht?",
-          answer: "Jana hat das Hotel eingecheckt, ist in die Stadt gegangen und hat das Kolosseum besucht.",
-          explanation:
-            "'Am ersten Tag habe ich das Hotel eingecheckt … Ich habe das Kolosseum besucht.'",
-        },
-        {
-          question: "Was hat Jana am zweiten Tag gegessen?",
-          answer: "Jana hat leckere Pizza und Gelato gegessen.",
-          explanation: "'Am zweiten Tag habe ich sehr leckere Pizza und Gelato gegessen.'",
-        },
-        {
-          question: "Was hat Jana am letzten Abend gemacht?",
-          answer: "Jana hat im Restaurant gut gegessen und Rotwein getrunken.",
-          explanation: "'Am letzten Abend habe ich im Restaurant gut gegessen und Rotwein getrunken.'",
-        },
-      ],
-    },
-    {
-      type: "freewrite",
-      instruction:
-        "Napíš odstavec v Perfekte o tom, čo si robil/a minulý víkend. Použi aspoň 6 rôznych Partizip-II foriem.",
-      prompt:
-        "Was hast du letztes Wochenende gemacht? Schreibe im Perfekt!",
-      minWords: 40,
-      exampleAnswer:
-        "Letztes Wochenende habe ich viel gemacht! Am Samstag habe ich lang geschlafen und dann Frühstück gegessen — Eier und Toast. Ich habe Musik gehört und ein Buch gelesen. Nachmittags habe ich Sport gemacht — ich bin 30 Minuten gelaufen. Abends habe ich Freunde besucht und wir haben zusammen Abendessen gemacht. Wir haben Rotwein getrunken und viel gelacht. Am Sonntag habe ich die Wohnung geputzt und meine Eltern angerufen. Es war ein entspanntes Wochenende!",
+        [
+          "der Sessel",
+          "kreslo"
+        ],
+        [
+          "die Kommode",
+          "komoda"
+        ],
+        [
+          "der Teppich",
+          "koberec"
+        ],
+        [
+          "die Pflanze",
+          "rastlina"
+        ],
+        [
+          "der Spiegel",
+          "zrkadlo"
+        ],
+        [
+          "die Gardine",
+          "záclona"
+        ],
+        [
+          "die Wand",
+          "stena"
+        ],
+        [
+          "der Boden",
+          "podlaha"
+        ],
+        [
+          "umräumen",
+          "prerobiť (miestnosť, nábytok)"
+        ],
+        [
+          "einverstanden sein",
+          "súhlasiť"
+        ]
+      ]
     },
     {
       type: "wordorder",
-      instruction: "ZoraÄ slovÃ¡ do sprÃ¡vnej nemeckej vety.",
+      instruction: "Usporiadajte slová tak, aby vytvorili gramaticky správnu nemeckú vetu.",
       sentences: [
         {
-          words: ["Die", "lernende", "Jana", "liest", "ein", "interessantes", "Buch."],
-          correct: "Die lernende Jana liest ein interessantes Buch.",
-          hint: "UÄiaca sa Jana ÄÃ­ta zaujÃ­mavÃº knihu.",
-          explanation: "Partizip I 'lernend' + adjektÃ­vna koncovka '-e' pred mennou frÃ¡zou.",
+          words: [
+            "den",
+            "Sessel",
+            "hierher",
+            "Stell"
+          ],
+          correct: "Stell den Sessel hierher",
+          hint: "Polož kreslo sem!",
+          explanation: "V rozkazovacom spôsobe (Imperativ) je sloveso na prvom mieste. 'Stell' je imperatív od slovesa 'stellen' (postaviť/položiť). 'Den Sessel' je predmet v Akuzatíve, 'hierher' určuje smer."
         },
         {
-          words: ["Das", "laufende", "Wasser", "ist", "kalt."],
-          correct: "Das laufende Wasser ist kalt.",
-          hint: "TeÄÃºca voda je studenÃ¡.",
-          explanation: "'laufend' = Partizip I od 'laufen'. Ako atribÃºt: 'laufende' (strednÃ½ rod, nominatÃ­v).",
+          words: [
+            "gut",
+            "passt",
+            "über",
+            "der",
+            "Spiegel",
+            "die",
+            "Kommode"
+          ],
+          correct: "Der Spiegel passt gut über die Kommode",
+          hint: "Zrkadlo sa dobre hodí nad komodu.",
+          explanation: "Sloveso 'passen' je na druhom mieste. 'Der Spiegel' je podmet v Nominatíve. 'Über die Kommode' je predložková väzba, kde 'über' s Akuzatívom vyjadruje pozíciu 'nad' (kam sa hodí)."
         },
         {
-          words: ["Der", "schlafende", "Mann", "liegt", "im", "Bett."],
-          correct: "Der schlafende Mann liegt im Bett.",
-          hint: "Spiaci muÅ¾ leÅ¾Ã­ v posteli.",
-          explanation: "'schlafend' â†’ 'schlafende' (muÅ¾skÃ½ rod, nominatÃ­v s urÄitÃ½m ÄlÃ¡nkom).",
+          words: [
+            "Wir",
+            "die",
+            "Pflanze",
+            "umräumen",
+            "müssen"
+          ],
+          correct: "Wir müssen die Pflanze umräumen",
+          hint: "Musíme presunúť rastlinu.",
+          explanation: "Modálne sloveso 'müssen' je na druhom mieste, plnovýznamové sloveso 'umräumen' stojí na konci v neurčitku (infinitív). 'Die Pflanze' je predmet v Akuzatíve."
         },
         {
-          words: ["Das", "weinende", "Kind", "sucht", "seine", "Mutter."],
-          correct: "Das weinende Kind sucht seine Mutter.",
-          hint: "PlaÄÃºce dieÅ¥a hÄ¾adÃ¡ svoju mamu.",
-          explanation: "Partizip I 'weinend' ako atribÃºt pred podstatnÃ½m menom 'Kind' (strednÃ½ rod).",
+          words: [
+            "war",
+            "der",
+            "Teppich",
+            "gestern",
+            "Wo"
+          ],
+          correct: "Wo war der Teppich gestern",
+          hint: "Kde bol včera koberec?",
+          explanation: "Otázka začína opytovacím zámenom 'Wo'. Sloveso 'war' (Präteritum od 'sein') je na druhom mieste. 'Der Teppich' je podmet v Nominatíve."
         },
         {
-          words: ["Die", "singenden", "Kinder", "sind", "glÃ¼cklich."],
-          correct: "Die singenden Kinder sind glÃ¼cklich.",
-          hint: "SpievajÃºce deti sÃº Å¡Å¥astnÃ©.",
-          explanation: "MnoÅ¾nÃ© ÄÃ­slo: 'singend' â†’ 'singenden' (pl. po urÄitom ÄlÃ¡nku 'die').",
+          words: [
+            "doch",
+            "anders",
+            "Ich",
+            "meine",
+            "das",
+            "soll",
+            "bleiben"
+          ],
+          correct: "Ich meine, das soll doch anders bleiben",
+          hint: "Myslím si, že to má predsa len zostať inak.",
+          explanation: "Vo vedľajšej vete po 'Ich meine' je modálne sloveso 'soll' na druhom mieste a plnovýznamové sloveso 'bleiben' na konci v neurčitku. 'Doch' tu vyjadruje mierny protiklad alebo dôraz."
+        }
+      ]
+    },
+    {
+      type: "fill",
+      instruction: "Doplňte chýbajúce slovo do vety. Dávajte pozor na správny tvar a pád.",
+      questions: [
+        {
+          sentence: "Das Bild hängt ___ der Wand.",
+          answer: "an",
+          hint: "Obraz visí na stene.",
+          explanation: "Predložka 'an' (na) s Dativom sa používa, keď je niečo v statickej polohe na vertikálnom povrchu (stene)."
         },
-      ],
+        {
+          sentence: "Ich habe den Sessel ___ die Ecke gestellt.",
+          answer: "in",
+          hint: "Kreslo som postavil do rohu.",
+          explanation: "Predložka 'in' (do) s Akuzatívom sa používa, keď sa niečo pohybuje do priestoru alebo rohu."
+        },
+        {
+          sentence: "Wir ___ gestern im Kino.",
+          answer: "waren",
+          hint: "Včera sme boli v kine.",
+          explanation: "Pre minulosť slovesa 'sein' sa často používa Präteritum 'waren' (boli sme)."
+        },
+        {
+          sentence: "Die Kommode ist zu groß. Sie ___ nicht hierher.",
+          answer: "passt",
+          hint: "Komoda je príliš veľká. Nepasuje sem.",
+          explanation: "Sloveso 'passen' (pasovať, hodiť sa) sa časuje podľa podmetu 'sie' (ona, komoda) v 3. osobe jednotného čísla."
+        },
+        {
+          sentence: "Wo ist Anna? Sie ___ ihren Schlüssel vergessen.",
+          answer: "hat",
+          hint: "Kde je Anna? Zabudla si svoj kľúč.",
+          explanation: "Perfekt sa tvorí pomocou pomocného slovesa 'haben' a príčastia minulého. Pre 'sie' (ona) je to 'hat'."
+        },
+        {
+          sentence: "Wir sind mit ___ Auto gefahren.",
+          answer: "dem",
+          hint: "Išli sme autom.",
+          explanation: "Predložka 'mit' (s) vždy vyžaduje Dativ. 'Das Auto' sa v Dative mení na 'dem Auto'."
+        },
+        {
+          sentence: "Er hat ___ Sessel in die Ecke gestellt.",
+          answer: "seinen",
+          hint: "On postavil svoje kreslo do rohu.",
+          explanation: "Sloveso 'stellen' vyžaduje Akuzatív. 'Sessel' je mužského rodu (der Sessel), a 'sein' (jeho) v Akuzatíve mužského rodu je 'seinen'."
+        }
+      ]
+    },
+    {
+      type: "listen",
+      instruction: "Vypočujte si slová a frázy a priraďte ich k slovenským prekladom.",
+      questions: [
+        {
+          de: "der Sessel",
+          sk: "kreslo"
+        },
+        {
+          de: "die Wand",
+          sk: "stena"
+        },
+        {
+          de: "der Raum",
+          sk: "miestnosť"
+        },
+        {
+          de: "dort",
+          sk: "tam"
+        },
+        {
+          de: "hierher",
+          sk: "sem (smer)"
+        },
+        {
+          de: "umräumen",
+          sk: "prerobiť (miestnosť, nábytok)"
+        },
+        {
+          de: "einverstanden sein",
+          sk: "súhlasiť"
+        },
+        {
+          de: "Das gefällt mir.",
+          sk: "To sa mi páči."
+        },
+        {
+          de: "Probieren wir es mal!",
+          sk: "Skúsme to!"
+        },
+        {
+          de: "Der Spiegel",
+          sk: "zrkadlo"
+        }
+      ]
+    },
+    {
+      type: "mcq",
+      instruction: "Vyberte správnu odpoveď.",
+      questions: [
+        {
+          question: "Vyberte správny rozkazovací spôsob (Imperativ): 'Položte rastlinu tam!' (formálne oslovenie 'Sie')",
+          options: [
+            "Stell die Pflanze dort!",
+            "Stellt die Pflanze dort!",
+            "Stellen Sie die Pflanze dort!",
+            "Stellen die Pflanze dort!"
+          ],
+          answer: 2,
+          explanation: "Pre formálne oslovenie 'Sie' sa Imperativ tvorí neurčitkom slovesa a pridaním 'Sie' za sloveso. 'Stellen Sie' je správna forma."
+        },
+        {
+          question: "Čo znamená 'daneben'?",
+          options: [
+            "nad tým",
+            "pod tým",
+            "vedľa toho",
+            "za tým"
+          ],
+          answer: 2,
+          explanation: "'Daneben' znamená 'vedľa toho' alebo 'popri tom'."
+        },
+        {
+          question: "Ktorá veta s modálnym slovesom je gramaticky správna?",
+          options: [
+            "Wir umräumen die Kommode müssen.",
+            "Wir müssen die Kommode umräumen.",
+            "Müssen wir umräumen die Kommode.",
+            "Wir müssen umräumen die Kommode."
+          ],
+          answer: 1,
+          explanation: "Pri modálnych slovesách je modálne sloveso na druhom mieste a plnovýznamové sloveso v neurčitku na konci vety."
+        },
+        {
+          question: "Aký je správny preklad vety 'To sa mi páči.'?",
+          options: [
+            "Ich mag das.",
+            "Das gefällt mir.",
+            "Das ist schön für mich.",
+            "Ich finde das gut."
+          ],
+          answer: 1,
+          explanation: "Fráza 'Das gefällt mir.' je štandardný spôsob, ako povedať 'To sa mi páči.' v nemčine."
+        },
+        {
+          question: "Vyberte správnu formu zámena: 'Páči sa jej ten koberec?'",
+          options: [
+            "Gefällt sie der Teppich?",
+            "Gefällt ihr der Teppich?",
+            "Gefällt er der Teppich?",
+            "Gefällt Ihnen der Teppich?"
+          ],
+          answer: 1,
+          explanation: "Sloveso 'gefallen' (páčiť sa) vyžaduje Dativ. Pre 'ona' (sie) je zámeno v Dative 'ihr'."
+        },
+        {
+          question: "Doplňte správnu formu Präterita: 'Gestern ___ ich keine Zeit.'",
+          options: [
+            "bin",
+            "hatte",
+            "war",
+            "habe"
+          ],
+          answer: 1,
+          explanation: "Sloveso 'haben' (mať) v Präterite pre 'ich' je 'hatte'. 'War' je Präteritum od 'sein'."
+        }
+      ]
+    },
+    {
+      type: "minitext",
+      instruction: "Lies den Dialog und beantworte die Fragen.",
+      text: "Jana: Wohin stellen wir das Sofa, Luisa? Ich meine, es passt gut hier an die Wand.\nLuisa: Nein, stell es doch lieber dort in die Ecke! Dort ist mehr Platz.\nJana: Okay, probieren wir es mal! Es steht jetzt in der Ecke. Was meinst du?\nLuisa: Ja, das gefällt mir. Und den Bücherschrank? Sollen wir ihn daneben stellen?\nJana: Nein, daneben passt er nicht. Stell ihn an die andere Wand.\nLuisa: Gut.\nHerr Gruber (klopft): Hallo! Habt ihr schon umgeräumt?\nLuisa: Herr Gruber! Ja, das Sofa steht jetzt in der Ecke.\nHerr Gruber: Ah, das ist eine gute Idee! Es sieht gut aus. Seid ihr einverstanden?\nJana: Ja, jetzt sind wir einverstanden.",
+      textSk: "Jana: Kam dáme pohovku, Luisa? Myslím, že sa dobre hodí sem k stene.\nLuisa: Nie, daj ju radšej tam do rohu! Tam je viac miesta.\nJana: Dobre, skúsme to! Teraz stojí v rohu. Čo si myslíš?\nLuisa: Áno, to sa mi páči. A knižnica? Máme ju dať vedľa?\nJana: Nie, vedľa sa nehodí. Daj ju k druhej stene.\nLuisa: Dobre.\nPán Gruber (klopká): Ahojte! Už ste prerobili?\nLuisa: Pán Gruber! Áno, pohovka stojí teraz v rohu.\nPán Gruber: Ach, to je dobrý nápad! Vyzerá to dobre. Súhlasíte?\nJana: Áno, teraz súhlasíme.",
+      questions: [
+        {
+          question: "Wohin möchte Jana das Sofa zuerst stellen?",
+          options: [
+            "An die Wand.",
+            "In die Ecke.",
+            "Daneben.",
+            "Auf den Teppich."
+          ],
+          answer: 0,
+          explanation: "Jana sagt: \"Ich meine, es passt gut hier an die Wand.\""
+        },
+        {
+          question: "Was schlägt Luisa für das Sofa vor?",
+          options: [
+            "Es an der Wand zu lassen.",
+            "Es in die Ecke zu stellen.",
+            "Es neben den Bücherschrank zu stellen.",
+            "Es aus dem Raum zu nehmen."
+          ],
+          answer: 1,
+          explanation: "Luisa sagt: \"Stell es doch lieber dort in die Ecke!\""
+        },
+        {
+          question: "Wo soll der Bücherschrank laut Jana nicht stehen?",
+          options: [
+            "An der anderen Wand.",
+            "In der Ecke.",
+            "Neben dem Sofa.",
+            "Vor dem Fenster."
+          ],
+          answer: 2,
+          explanation: "Luisa fragt: \"Sollen wir ihn daneben stellen?\" Jana antwortet: \"Nein, daneben passt er nicht.\""
+        },
+        {
+          question: "Wer gibt seine Meinung zur Möbelanordnung ab?",
+          options: [
+            "Petra",
+            "Carlos",
+            "Herr Gruber",
+            "Anna"
+          ],
+          answer: 2,
+          explanation: "Herr Gruber sagt: \"Ah, das ist eine gute Idee! Es sieht gut aus. Seid ihr einverstanden?\""
+        }
+      ]
     },
     {
       type: "speaking",
-      instruction: "PoÄÃºvaj nemeckÃº vetu. Potom hovor nahlas a skontroluj sa.",
+      instruction: "Höre zu und sprich nach.",
       phrases: [
         {
-          de: "Die lernende Jana liest ein interessantes Buch.",
-          sk: "UÄiaca sa Jana ÄÃ­ta zaujÃ­mavÃº knihu.",
-          tip: "lernende=[lernende], -nd- plynulo",
+          de: "der Sessel",
+          sk: "kreslo",
+          tip: "S=[z], e ako v slove \"Bett\"."
         },
         {
-          de: "Das laufende Wasser ist kalt.",
-          sk: "TeÄÃºca voda je studenÃ¡.",
-          tip: "laufende=[laufende], au=[au]",
+          de: "der Spiegel",
+          sk: "zrkadlo",
+          tip: "Sp=[ʃp], ie=[i:]."
         },
         {
-          de: "Der schlafende Mann liegt im Bett.",
-          sk: "Spiaci muÅ¾ leÅ¾Ã­ v posteli.",
-          tip: "schlafende=[Å¡la:fende], sch=[Å¡]",
+          de: "umräumen",
+          sk: "prerobiť (miestnosť, nábytok)",
+          tip: "um=[ʊm], äu=[ɔʏ]."
         },
         {
-          de: "Das weinende Kind sucht seine Mutter.",
-          sk: "PlaÄÃºce dieÅ¥a hÄ¾adÃ¡ svoju mamu.",
-          tip: "weinende=[vajnende], ei=[aj]",
+          de: "in der Ecke",
+          sk: "v rohu",
+          tip: "ck=[k], e ako v slove \"Bett\"."
         },
         {
-          de: "Die singenden Kinder sind glÃ¼cklich.",
-          sk: "SpievajÃºce deti sÃº Å¡Å¥astnÃ©.",
-          tip: "singenden=[zingenden], s=[z]",
+          de: "Das gefällt mir.",
+          sk: "To sa mi páči.",
+          tip: "ge=[gə], fä=[fɛ]."
         },
-      ],
+        {
+          de: "Wohin stellen wir die Kommode?",
+          sk: "Kam postavíme komodu?",
+          tip: "Wo=[vo], h=[h], Kommode=[kɔmo:də]."
+        },
+        {
+          de: "Probieren wir es mal anders!",
+          sk: "Skúsme to inak!",
+          tip: "ie=[i:], anders=[andɐs]."
+        }
+      ]
     },
+    {
+      type: "truefalse",
+      instruction: "Prečítajte si nasledujúce tvrdenia o nemeckej gramatike a slovnej zásobe. Rozhodnite, či sú pravdivé (Wahr) alebo nepravdivé (Falsch).",
+      statements: [
+        {
+          statement: "V hovorenej nemčine sa pre sloveso „sein“ (byť) často používa Perfekt „Ich bin gewesen“.",
+          isTrue: false,
+          explanation: "Nepravda. Hoci je Perfekt „Ich bin gewesen“ gramaticky správny, v hovorenej nemčine je pre sloveso „sein“ oveľa bežnejšie používať Präteritum, napr. „Ich war“."
+        },
+        {
+          statement: "Sloveso „haben“ (mať) má v Präterite tvar „hatte“ pre 1. a 3. osobu jednotného čísla.",
+          isTrue: true,
+          explanation: "Pravda. Tvar „hatte“ je správny pre „ich hatte“ a „er/sie/es hatte“ v Präterite."
+        },
+        {
+          statement: "Slovo „umräumen“ znamená zmeniť usporiadanie nábytku alebo miestnosti.",
+          isTrue: true,
+          explanation: "Pravda. „Umräumen“ presne znamená prerobiť, presunúť nábytok alebo zmeniť usporiadanie v miestnosti."
+        },
+        {
+          statement: "Otázka „Wohin?“ sa pýta na miesto, kde sa niečo nachádza, napríklad „Kde je kniha?“",
+          isTrue: false,
+          explanation: "Nepravda. „Wohin?“ sa pýta na smer pohybu (kam?), zatiaľ čo „Wo?“ sa pýta na statickú polohu (kde?)."
+        },
+        {
+          statement: "Výraz „Das gefällt mir.“ znamená „To sa mi páči.“",
+          isTrue: true,
+          explanation: "Pravda. Je to bežný nemecký výraz na vyjadrenie, že sa vám niečo páči."
+        }
+      ]
+    },
+    {
+      type: "dictation",
+      instruction: "Počúvajte a zapíšte si nemecké vety. Potom skontrolujte svoj zápis.",
+      sentences: [
+        {
+          de: "Wo warst du?",
+          sk: "Kde si bol?"
+        },
+        {
+          de: "Ich hatte einen Sessel.",
+          sk: "Mal som kreslo."
+        },
+        {
+          de: "Stell die Pflanze hierher!",
+          sk: "Postav rastlinu sem!"
+        },
+        {
+          de: "Wir haben das Zimmer umgeräumt.",
+          sk: "Prerobili sme izbu."
+        },
+        {
+          de: "Das Bild passt gut darüber, meine ich.",
+          sk: "Ten obraz sa tam hodí, myslím si."
+        }
+      ]
+    },
+    {
+      type: "categorysort",
+      instruction: "Roztrieďte slová do správnych kategórií. Niektoré slová môžu patriť do viacerých kategórií, ale vyberte tú najvhodnejšiu.",
+      categories: [
+        {
+          name: "Nábytok a vybavenie",
+          color: "blue",
+          words: [
+            "der Sessel",
+            "die Kommode",
+            "der Teppich",
+            "der Spiegel",
+            "die Gardine"
+          ]
+        },
+        {
+          name: "Miesto a smer",
+          color: "rose",
+          words: [
+            "die Wand",
+            "die Ecke",
+            "der Boden",
+            "der Raum",
+            "dort",
+            "hierher",
+            "wohin?"
+          ]
+        },
+        {
+          name: "Slovesá a výrazy",
+          color: "green",
+          words: [
+            "umräumen",
+            "passen",
+            "bleiben",
+            "sagen",
+            "meinen",
+            "einverstanden sein"
+          ]
+        }
+      ],
+      explanation: "Slová sú roztriedené do kategórií podľa ich významu: predmety v domácnosti, výrazy pre miesto a smer, a slovesá/frázy súvisiace s činnosťami a názormi."
+    },
+    {
+      type: "translation",
+      instruction: "Preložte nasledujúce vety zo slovenčiny do nemčiny. Použite slovnú zásobu a gramatiku z tejto lekcie.",
+      sentences: [
+        {
+          sk: "Kreslo bolo v rohu.",
+          answer: "Der Sessel war in der Ecke.",
+          hint: "Präteritum von 'sein', in der...",
+          explanation: "Používame Präteritum slovesa 'sein' ('war') pre minulosť. 'In der Ecke' je správny preklad 'v rohu'."
+        },
+        {
+          sk: "Kam si dal zrkadlo?",
+          answer: "Wohin hast du den Spiegel gestellt?",
+          hint: "Wohin, Perfekt von stellen",
+          explanation: "Otázka na smer 'kam?' je 'Wohin?'. Používame Perfekt slovesa 'stellen' (postaviť/položiť) s pomocným slovesom 'haben'."
+        },
+        {
+          sk: "Môžem dať koberec pod komodu?",
+          answer: "Kann ich den Teppich unter die Kommode legen?",
+          hint: "Modalverb 'können', unter die...",
+          explanation: "Používame modálne sloveso 'können' (môcť). 'Legen' (položiť) je vhodné pre koberec. 'Unter die Kommode' vyjadruje smer (kam?) pod komodu."
+        },
+        {
+          sk: "Povedal som, že sa mi to páči.",
+          answer: "Ich habe gesagt, dass es mir gefällt.",
+          hint: "Perfekt von sagen, dass...",
+          explanation: "Používame Perfekt slovesa 'sagen' ('Ich habe gesagt'). Vedľajšia veta s 'dass' má sloveso na konci. 'Es gefällt mir' je 'páči sa mi to'."
+        }
+      ]
+    },
+    {
+      type: "conjugation",
+      instruction: "Doplňte správne tvary slovies v Präterite (minulom čase).",
+      verbs: [
+        {
+          infinitive: "sein",
+          translation: "byť",
+          forms: [
+            {
+              pronoun: "ich",
+              correct: "war"
+            },
+            {
+              pronoun: "du",
+              correct: "warst"
+            },
+            {
+              pronoun: "er/sie/es",
+              correct: "war"
+            },
+            {
+              pronoun: "wir",
+              correct: "waren"
+            },
+            {
+              pronoun: "ihr",
+              correct: "wart"
+            },
+            {
+              pronoun: "sie/Sie",
+              correct: "waren"
+            }
+          ],
+          note: "Präteritum slovesa 'sein' je v hovorenej nemčine veľmi často používaný namiesto Perfektu. Je to nepravidelné sloveso."
+        },
+        {
+          infinitive: "haben",
+          translation: "mať",
+          forms: [
+            {
+              pronoun: "ich",
+              correct: "hatte"
+            },
+            {
+              pronoun: "du",
+              correct: "hattest"
+            },
+            {
+              pronoun: "er/sie/es",
+              correct: "hatte"
+            },
+            {
+              pronoun: "wir",
+              correct: "hatten"
+            },
+            {
+              pronoun: "ihr",
+              correct: "hattet"
+            },
+            {
+              pronoun: "sie/Sie",
+              correct: "hatten"
+            }
+          ],
+          note: "Podobne ako 'sein', aj Präteritum slovesa 'haben' sa často používa v hovorenej reči. Je to tiež nepravidelné sloveso."
+        }
+      ]
+    }
   ],
-
-  reviewWords: [
-    "L50_V01",
-    "L50_V04",
-    "L50_V05",
-    "L50_V06",
-    "L50_V07",
-    "L50_V08",
-    "L50_V09",
-    "L50_V10",
-    "L50_V11",
-    "L50_V12",
-    "L50_V13",
-  ],
-
-  lessonNotes:
-    "Kľúčová gramatika: Perfekt = haben (P2) + Partizip II (KONIEC — Satzklammer!). Pravidelné slovesá: ge- + kmeň + -t (gemacht, gekauft, gelernt). Silné/nepravidelné: ge- + menený kmeň + -en (gegessen, getrunken, gesprochen, gefahren, geschrieben, gesehen). POZOR: Slovesá s neodlučovateľnými predponami (be-, ver-, er-, zer-, ge-): BEZ ge-! besuchen → besucht, vergessen → vergessen. Perfekt je hovorový minulý čas — preferovaný v rozhovore. Präteritum (hovoril som = ich sprach) sa učí neskôr.",
+  reviewWords: []
 };

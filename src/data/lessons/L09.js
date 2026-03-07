@@ -1,448 +1,651 @@
 ﻿export const lesson09 = {
   id: 9,
   week: 2,
-  day: 5,
-  title: "Länder, Sprachen und Nationalitäten",
-  topic: "Krajiny, jazyky a národnosti — negácia",
-  cefr: "A1",
-  xpReward: 25,
-  narrativeContext:
-    "Jana sa zoznamuje so spolubývajúcimi z rôznych krajín. Thomas je z Nemecka, Laila z Turecka, Pavel z Česka, Sarah z USA. Rozprávajú sa, odkiaľ kto je a aké jazyky hovoria. Jana musí použiť 'Ich komme aus der Slowakei' — a naučí sa, prečo niektoré krajiny potrebujú člen.",
-  communicativeGoal:
-    "Po tejto lekcii viem povedať, z akej krajiny pochádzam, aké jazyky hovorím, a viem zaprieť tvrdenie pomocou 'nicht'. Poznám krajiny s členom (die Slowakei, die Schweiz, die USA).",
-  skillFocus: ["vocabulary", "grammar", "speaking"],
+  day: 4,
+  title: 'Zahlen 21–100 und der Genitiv-s bei Namen',
+  topic: 'Čísla 21–100 a genitív pri vlastných menách (Janinas Brief)',
+  cefr: 'A1',
+  xpReward: 20,
+  narrativeContext: 'Jana öffnet ihren Briefkasten. Da ist ein Brief von der VHS. Jana liest: Ihre Nummer ist 47. Dann ruft Jana Petra an: Wie ist deine Handynummer? Jana diktiert langsam.',
+  communicativeGoal: 'Nach dieser Lektion kann ich Zahlen bis 100 sagen und schreiben, Telefonnummern diktieren und verstehen, und den Genitiv-s bei Namen benutzen.',
+  skillFocus: ['vocabulary', 'grammar', 'listening', 'speaking'],
 
-  grammarNote: {
-    rule: "Krajiny s článkom, predložka 'aus' + Dativ, negácia 'nicht'",
-    explanation:
-      "Väčšina krajín v nemčine NEMÁ člen: aus Deutschland, aus Österreich, aus Tschechien. Ale niektoré krajiny MAJÚ člen (zvyčajne ženský): die Slowakei, die Schweiz, die Türkei, die USA (množné číslo). Po predložke 'aus' nasleduje Dativ: aus der Slowakei (nie 'aus die Slowakei'!). Jazyky sa v nemčine píšu s VEĽKÝM písmenom: Deutsch, Slowakisch, Englisch. Negácia: 'nicht' stojí zvyčajne za prísudkom alebo pred prídavným menom/príslovkou.",
-    examples: [
-      { de: "aus Deutschland / aus Österreich", sk: "z Nemecka / z Rakúska — bez členu" },
-      { de: "aus der Slowakei / aus der Schweiz / aus der Türkei", sk: "zo Slovenska / zo Švajčiarska / z Turecka — s členom!" },
-      { de: "aus den USA", sk: "z USA — Dativ množného čísla (den!)" },
-      { de: "Ich spreche Deutsch und Slowakisch.", sk: "Hovorím po nemecky a po slovensky — veľké písmeno!" },
-      { de: "Ich komme nicht aus Deutschland.", sk: "Nepochádzam z Nemecka — 'nicht' po slovese" }
-    ],
-    slovakContrastNote:
-      "V slovenčine: 'zo Slovenska' — bez členu. V nemčine: 'aus der Slowakei' — s členom v Datíve! To je výrazný rozdiel. Prehľad krajín s členom: die Slowakei, die Schweiz, die Türkei, die Ukraine, die USA (pl.), die Niederlande (pl.). Jazyky v nemčine: VŽDY veľké písmeno (Deutsch, Englisch, Slowakisch) — rozdiel od slovenčiny, kde sú malé (nemčina, angličtina, slovenčina)."
-  },
-
+  grammarNotes: [
+    {
+      rule: 'Obrátená matematika: Ako Nemci počítajú odzadu (21-99)',
+      explanation: `<p>Máme tu fenomén nemeckej obsesie s iným poradím, na ktorom stroskotá nejedna slovenská maturitná komisia. Od 21 do 99 Nemci <strong>diktujú čísla odzadu</strong>.</p>
+<p>Predstavte si číslo 47. 100% z nás si najprv vysloví 40 a potom 7. Nemec nie! Zoberie najmenší, najnepodstatnejší zlomok čísla na konci (7), povie k nemu "A" (und), a potom dohodí tú masu desiatok (40). A aby toho nebolo málo, všetko to s revom zrazí do jedného obrovského slova.</p>
+<p><strong>47 = sieben + und + vierzig = siebenundvierzig.</strong><br/> (Sedem-a-štyridsať)</p>
+<table><tr><th>Desiatka</th><th>Nemecky</th><th>Hack a pasce pre oči</th></tr>
+<tr><td>20</td><td>zwanzig</td><td>To už poznáme.</td></tr>
+<tr><td>30</td><td>drei<strong>ß</strong>ig</td><td>⚠️ Výkričník! Jediná desiatka s ostrým ß miesto z!</td></tr>
+<tr><td>40</td><td>vierzig</td><td></td></tr>
+<tr><td>80</td><td>achtzig</td><td></td></tr>
+</table>
+<div class="tip-box">💡 <strong>Tip Profesora (Diktovanie čísiel):</strong> Keď vám niekto diktuje takto komplikované čísla cez telefón do bloku, robíte si pri tom mozgový skrat. Nemecké kompromisné riešenie? Telefónne čísla sa proste diktujú pekne pomaly ako šnúra znakov, jedno po druhom: 0-1-5-3 (null-eins-fünf-drei). Uf!</div>`,
+      examples: [
+        { de: 'Meine Nummer ist siebenundvierzig.', sk: 'Moje číslo je štyridsaťsedem.', note: '47 čítame ako "sedem-a-štyridsať"' },
+        { de: 'Er ist dreißig Jahre alt.', sk: 'Má tridsať rokov.', note: 'pozor na dreißig s ostrým s!' },
+        { de: 'Das kostet fünfundachtzig Euro.', sk: 'To stojí osemdesiatpäť eur.', note: '85 = fünf + und + achtzig' },
+      ],
+      slovakContrastNote: 'Pri čísle 24 si v slovenčine pekne poviete dvadsať a potom štyri, ale česi vedia povedať "čtyřiadvacet", čo je bližšie k nemeckému princípu "vierundzwanzig". My musíme úplne preklopiť mozog.',
+    },
+    {
+      rule: 'Príslušnosť bez kudrliniek: Genitívne „-s“ a zákaz apostrofu',
+      explanation: `<p>Apoštolská hrôza. Poznáte "Jana's coffee" alebo "Peter's car" z angličtiny? Vytrhnite to so sebou. Ak sa na to Nemec pozerá, vidí takzvané "idiotské apostrofy" (Deppenapostroph).</p>
+<p>Ak v nemčine niečo patrí osobe s vlastným menom, prilepíte na meno jednoduché, čisté písmeno <strong>-s</strong>.</p>
+<table><tr><th>Základ</th><th>Keď sa z neho stane vlastník</th></tr>
+<tr><td>Jana</td><td><strong>Janinas</strong> Brief (Janin list)</td></tr>
+<tr><td>Peter</td><td><strong>Peters</strong> Auto (Petrovo auto)</td></tr>
+<tr><td>Maria</td><td><strong>Marias</strong> Handynummer (Mariine číslo)</td></tr>
+</table>
+<div class="warn-box">⚠️ <strong>Trestný bod:</strong> Ak niekedy na klávesnici v nemčine vyhľadáte apostrof pred písmenom "-s" na vyjadrenie príslušnosti mena, dostávate nepríjemný pohľad od akademika. Žiadne "Jana's Auto" neexistuje. Len <strong>Janas Auto</strong>.</div>`,
+      examples: [
+        { de: 'Das ist Janinas Brief.', sk: 'To je Janin list.' },
+        { de: 'Peters Auto ist rot.', sk: 'Petrovo auto je červené.' },
+      ],
+      slovakContrastNote: 'V slovenčine máme radi komplexné skloňovania. Pridávame "ov" (Petrov) alebo "in" (Janin). V nemčine len chytia meno, hodia naň S-ko a majú hotovo bez ohľadu na pohlavie majiteľa.',
+    },
+  ],
   vocab: [
     {
-      de: "Deutschland",
-      sk: "Nemecko",
-      example: "Ich komme aus Deutschland.",
-      exampleSk: "Pochádzam z Nemecka.",
+      de: 'einundzwanzig',
+      sk: 'dvadsaťjeden',
       gender: null,
-      srsId: "L09_V01",
-      recycledFrom: []
+      srsId: 'L09_V01',
+      example: 'Jana ist einundzwanzig Jahre alt.',
+      exampleSk: 'Jana má dvadsaťjeden rokov.',
+      recycledFrom: [],
     },
     {
-      de: "Österreich",
-      sk: "Rakúsko",
-      example: "Wien ist die Hauptstadt von Österreich.",
-      exampleSk: "Viedeň je hlavné mesto Rakúska.",
+      de: 'dreißig',
+      sk: 'tridsať',
       gender: null,
-      srsId: "L09_V02",
-      recycledFrom: []
+      srsId: 'L09_V02',
+      example: 'Der Kurs hat dreißig Studenten.',
+      exampleSk: 'Kurz má tridsať študentov.',
+      recycledFrom: [],
     },
     {
-      de: "die Slowakei",
-      sk: "Slovensko (⚠️ aus der Slowakei!)",
-      example: "Ich komme aus der Slowakei, aus Bratislava.",
-      exampleSk: "Som zo Slovenska, z Bratislavy.",
-      gender: "F",
-      srsId: "L09_V03",
-      recycledFrom: []
-    },
-    {
-      de: "die Schweiz",
-      sk: "Švajčiarsko (⚠️ aus der Schweiz!)",
-      example: "In der Schweiz spricht man Deutsch, Französisch und Italienisch.",
-      exampleSk: "Vo Švajčiarsku sa hovorí po nemecky, francúzsky a taliansky.",
-      gender: "F",
-      srsId: "L09_V04",
-      recycledFrom: []
-    },
-    {
-      de: "die Türkei",
-      sk: "Turecko (⚠️ aus der Türkei!)",
-      example: "Laila kommt aus der Türkei.",
-      exampleSk: "Laila pochádza z Turecka.",
-      gender: "F",
-      srsId: "L09_V05",
-      recycledFrom: []
-    },
-    {
-      de: "Tschechien",
-      sk: "Česko",
-      example: "Pavel kommt aus Tschechien.",
-      exampleSk: "Pavel pochádza z Česka.",
+      de: 'vierzig',
+      sk: 'štyridsať',
       gender: null,
-      srsId: "L09_V06",
-      recycledFrom: []
+      srsId: 'L09_V03',
+      example: 'Er ist vierzig Jahre alt.',
+      exampleSk: 'Má štyridsať rokov.',
+      recycledFrom: [],
     },
     {
-      de: "Polen",
-      sk: "Poľsko",
-      example: "Warschau ist die Hauptstadt von Polen.",
-      exampleSk: "Varšava je hlavné mesto Poľska.",
+      de: 'fünfzig',
+      sk: 'päťdesiat',
       gender: null,
-      srsId: "L09_V07",
-      recycledFrom: []
+      srsId: 'L09_V04',
+      example: 'Das kostet fünfzig Euro.',
+      exampleSk: 'To stojí päťdesiat eur.',
+      recycledFrom: [],
     },
     {
-      de: "England",
-      sk: "Anglicko",
-      example: "Ich komme aus England, aus London.",
-      exampleSk: "Pochádzam z Anglicka, z Londýna.",
+      de: 'sechzig',
+      sk: 'šesťdesiat',
       gender: null,
-      srsId: "L09_V08",
-      recycledFrom: []
+      srsId: 'L09_V05',
+      example: 'Meine Oma ist sechzig Jahre alt.',
+      exampleSk: 'Moja stará mama má šesťdesiat rokov.',
+      recycledFrom: [],
     },
     {
-      de: "die USA",
-      sk: "Spojené štáty (⚠️ aus den USA!)",
-      example: "Sarah kommt aus den USA, aus New York.",
-      exampleSk: "Sarah pochádza z USA, z New Yorku.",
-      gender: "F/Pl",
-      srsId: "L09_V09",
-      recycledFrom: []
-    },
-    {
-      de: "Deutsch",
-      sk: "nemčina (⚠️ veľké písmeno!)",
-      example: "Jana spricht Deutsch und Slowakisch.",
-      exampleSk: "Jana hovorí po nemecky a po slovensky.",
+      de: 'siebzig',
+      sk: 'sedemdesiat',
       gender: null,
-      srsId: "L09_V10",
-      recycledFrom: []
+      srsId: 'L09_V06',
+      example: 'Mein Opa ist siebzig Jahre alt.',
+      exampleSk: 'Môj starý otec má sedemdesiat rokov.',
+      recycledFrom: [],
     },
     {
-      de: "Slowakisch",
-      sk: "slovenčina (⚠️ veľké písmeno!)",
-      example: "Ich spreche Slowakisch — meine Muttersprache.",
-      exampleSk: "Hovorím po slovensky — môj materinský jazyk.",
+      de: 'achtzig',
+      sk: 'osemdesiat',
       gender: null,
-      srsId: "L09_V11",
-      recycledFrom: []
+      srsId: 'L09_V07',
+      example: 'Die Großmutter ist achtzig Jahre alt.',
+      exampleSk: 'Stará mama má osemdesiat rokov.',
+      recycledFrom: [],
     },
     {
-      de: "Englisch",
-      sk: "angličtina (⚠️ veľké písmeno!)",
-      example: "Sprechen Sie Englisch?",
-      exampleSk: "Hovoríte po anglicky?",
+      de: 'neunzig',
+      sk: 'deväťdesiat',
       gender: null,
-      srsId: "L09_V12",
-      recycledFrom: []
+      srsId: 'L09_V08',
+      example: 'Der Großvater ist neunzig Jahre alt.',
+      exampleSk: 'Starý otec má deväťdesiat rokov.',
+      recycledFrom: [],
     },
     {
-      de: "Tschechisch",
-      sk: "čeština (⚠️ veľké písmeno!)",
-      example: "Pavel spricht Tschechisch und ein bisschen Deutsch.",
-      exampleSk: "Pavel hovorí po česky a trochu po nemecky.",
+      de: 'hundert',
+      sk: 'sto',
       gender: null,
-      srsId: "L09_V13",
-      recycledFrom: []
+      srsId: 'L09_V09',
+      example: 'Der Kurs kostet hundert Euro.',
+      exampleSk: 'Kurz stojí sto eur.',
+      recycledFrom: [],
     },
     {
-      de: "sprechen",
-      sk: "hovoriť (⚠️ du sprichst, er spricht!)",
-      example: "Ich spreche Deutsch. Du sprichst gut! Er spricht schnell.",
-      exampleSk: "Hovorím po nemecky. Hovoríš dobre! Hovorí rýchlo.",
+      de: 'die Telefonnummer',
+      sk: 'telefónne číslo',
+      gender: 'F',
+      srsId: 'L09_V10',
+      example: 'Wie ist deine Telefonnummer?',
+      exampleSk: 'Aké je tvoje telefónne číslo?',
+      recycledFrom: [],
+    },
+    {
+      de: 'die Handynummer',
+      sk: 'číslo na mobil',
+      gender: 'F',
+      srsId: 'L09_V11',
+      example: 'Jana hat eine neue Handynummer.',
+      exampleSk: 'Jana má nové číslo na mobil.',
+      recycledFrom: [],
+    },
+    {
+      de: 'der Brief',
+      sk: 'list (poštový)',
+      gender: 'M',
+      srsId: 'L09_V12',
+      example: 'Da ist ein Brief von der VHS.',
+      exampleSk: 'Tu je list z VHS.',
+      recycledFrom: [],
+    },
+    {
+      de: 'der Briefkasten',
+      sk: 'poštová schránka',
+      gender: 'M',
+      srsId: 'L09_V13',
+      example: 'Jana öffnet den Briefkasten.',
+      exampleSk: 'Jana otvára poštovú schránku.',
+      recycledFrom: [],
+    },
+    {
+      de: 'anrufen',
+      sk: 'zavolať (telefonicky)',
       gender: null,
-      srsId: "L09_V14",
-      recycledFrom: []
+      srsId: 'L09_V14',
+      example: 'Jana ruft Petra an.',
+      exampleSk: 'Jana zavolá Petre.',
+      recycledFrom: [],
     },
     {
-      de: "die Sprache",
-      sk: "jazyk",
-      example: "Wie viele Sprachen sprichst du?",
-      exampleSk: "Koľko jazykov hovoríš?",
-      gender: "F",
-      srsId: "L09_V15",
-      recycledFrom: []
-    },
-    {
-      de: "das Land",
-      sk: "krajina",
-      example: "Aus welchem Land kommst du?",
-      exampleSk: "Z akej krajiny pochádzaš?",
-      gender: "N",
-      srsId: "L09_V16",
-      recycledFrom: []
-    },
-    {
-      de: "nicht",
-      sk: "nie / ne- (negácia)",
-      example: "Ich komme nicht aus Deutschland. Das ist nicht richtig.",
-      exampleSk: "Nepochádzam z Nemecka. To nie je správne.",
+      de: 'diktieren',
+      sk: 'diktovať',
       gender: null,
-      srsId: "L09_V17",
-      recycledFrom: []
+      srsId: 'L09_V15',
+      example: 'Jana diktiert die Nummer langsam.',
+      exampleSk: 'Jana diktuje číslo pomaly.',
+      recycledFrom: [],
     },
     {
-      de: "richtig",
-      sk: "správne / pravdivé",
-      example: "Das ist richtig! — Das ist nicht richtig.",
-      exampleSk: "To je správne! — To nie je správne.",
+      de: 'Meine Nummer ist...',
+      sk: 'Moje číslo je...',
       gender: null,
-      srsId: "L09_V18",
-      recycledFrom: []
-    }
+      srsId: 'L09_V16',
+      example: 'Meine Nummer ist null-eins-fünf-drei.',
+      exampleSk: 'Moje číslo je nula-jedna-päť-tri.',
+      recycledFrom: [],
+    },
+    {
+      de: 'Wie ist deine Nummer?',
+      sk: 'Aké je tvoje číslo?',
+      gender: null,
+      srsId: 'L09_V17',
+      example: 'Wie ist deine Handynummer?',
+      exampleSk: 'Aké je tvoje číslo na mobil?',
+      recycledFrom: [],
+    },
+    {
+      de: 'Janinas Brief',
+      sk: 'Janin list (genitív-s príklad)',
+      gender: null,
+      srsId: 'L09_V18',
+      example: 'Das ist Janinas Brief von der VHS.',
+      exampleSk: 'Toto je Janin list z VHS.',
+      recycledFrom: [],
+    },
+    {
+      de: 'Peters Auto',
+      sk: 'Petrovo auto (genitív-s príklad)',
+      gender: null,
+      srsId: 'L09_V19',
+      example: 'Peters Auto ist blau.',
+      exampleSk: 'Petrovo auto je modré.',
+      recycledFrom: [],
+    },
   ],
-
   exercises: [
+    // 1. FLASHCARD
     {
-      type: "flashcard",
-      instruction:
-        "Precvičuj krajiny, jazyky a kľúčové frázy. ⚠️ = dôležité upozornenie na výnimku.",
-      items: [
-        "Deutschland = Nemecko",
-        "Österreich = Rakúsko",
-        "die Slowakei = Slovensko (⚠️ aus der Slowakei!)",
-        "die Schweiz = Švajčiarsko (⚠️ aus der Schweiz!)",
-        "die Türkei = Turecko (⚠️ aus der Türkei!)",
-        "Tschechien = Česko",
-        "Polen = Poľsko",
-        "England = Anglicko",
-        "die USA = Spojené štáty (⚠️ aus den USA!)",
-        "Deutsch = nemčina (⚠️ veľké D!)",
-        "Slowakisch = slovenčina (⚠️ veľké S!)",
-        "Englisch = angličtina (⚠️ veľké E!)",
-        "Tschechisch = čeština",
-        "sprechen = hovoriť (⚠️ du sprichst, er spricht!)",
-        "die Sprache = jazyk",
-        "das Land = krajina",
-        "nicht = nie / ne-",
-        "richtig = správne"
-      ]
+      type: 'flashcard',
+      instruction: 'Prelistuj si slovíčka. Klikni na kartu, aby si videl preklad a príkladovú vetu.',
     },
+    // 2. MATCH
     {
-      type: "mcq",
-      instruction:
-        "Jana a jej spolubývajúci sa navzájom spoznávajú. Vyber správnu odpoveď.",
-      questions: [
-        {
-          question: "Jana hovorí o sebe: 'Ich komme aus ___.' Ktorá forma je správna?",
-          options: [
-            "die Slowakei",
-            "der Slowakei",
-            "das Slowakei",
-            "Slowakei"
-          ],
-          answer: 1,
-          explanation:
-            "'aus' + Dativ. Die Slowakei je ženský rod → Dativ = der. Teda: 'aus der Slowakei'. Toto je klasická chyba — pamätaj: krajiny s členom vyžadujú Dativ po 'aus'. aus die → aus DER (F), aus das → aus DEM (N), aus der → aus DER (zostáva)."
-        },
-        {
-          question: "Thomas povie: 'Ich spreche Deutsch.' Čo je NESPRÁVNE na tejto vete, ak ju povie Jana o Thomasovi?",
-          options: [
-            "Nič — veta je správna",
-            "Jana by mala povedať: 'Er spricht Deutsch.' (nie 'spricht' → 'spreche')",
-            "Jana by mala povedať: 'Er spreche Deutsch.'",
-            "Jana by mala povedať: 'Er sprecht Deutsch.'"
-          ],
-          answer: 1,
-          explanation:
-            "'sprechen' je silné (nepravidelné) sloveso: ich SPRECHe, du SPRICHst, er/sie/es SPRICHt, wir sprechen, ihr sprecht, sie sprechen. Pre 3. osobu (er Thomas) → 'er SPRICHT'. Vokalická zmena e → i je typická pre silné slovesá!"
-        },
-        {
-          question: "Sarah pochádza z USA. Ako sa povie 'z USA' po nemecky?",
-          options: [
-            "aus die USA",
-            "aus das USA",
-            "aus den USA",
-            "aus der USA"
-          ],
-          answer: 2,
-          explanation:
-            "'die USA' je množné číslo (pl.). Dativ množného čísla → DEN (plural). Teda: 'aus den USA'. Toto je výnimka — USA sa správajú ako množné číslo!"
-        },
-        {
-          question: "Laila hovorí: 'Sprechen Sie Tschechisch?' Jana odpovedá záporne. Ktorá odpoveď je správna?",
-          options: [
-            "Nein, ich spreche kein Tschechisch.",
-            "Nein, ich spreche nicht Tschechisch.",
-            "Nein, ich sprechen kein Tschechisch.",
-            "Nein, ich nicht spreche Tschechisch."
-          ],
-          answer: 0,
-          explanation:
-            "Pri negácii podstatného mena (jazyka, predmetu) sa používa 'kein/keine' (nie 'nicht'). 'Ich spreche kein Tschechisch' = Nehovorím po česky. 'nicht' sa používa na negáciu slovesa alebo prídavného mena: 'Das ist nicht richtig.'"
-        },
-        {
-          question: "Prečo sa v nemčine jazyky píšu s veľkým písmenom (Deutsch, Englisch)?",
-          options: [
-            "Iba v Rakúsku — v Nemecku sú malé písmená",
-            "Pretože sú to prídavné mená",
-            "Pretože sú to podstatné mená (substantivizované) — v nemčine sa všetky podstatné mená píšu s veľkým písmenom",
-            "Je to len tradícia, nemá gramatické odôvodnenie"
-          ],
-          answer: 2,
-          explanation:
-            "V nemčine platí pravidlo: VŠETKY podstatné mená sa píšu s veľkým začiatočným písmenom. Jazyky (Deutsch, Englisch) sú podstatné mená → veľké písmeno. V slovenčine jazyky sú prídavné mená ('nemecký jazyk') alebo podstatné mená s malým ('nemčina', 'angličtina')."
-        }
-      ]
-    },
-    {
-      type: "fill",
-      instruction:
-        "Doplň správny tvar. Jana a spolubývajúci sa rozprávajú.",
-      questions: [
-        {
-          sentence: "Ich komme aus ___ Slowakei, aus Bratislava.",
-          answer: "der",
-          hint: "die Slowakei v Datíve po 'aus'",
-          explanation:
-            "'aus' vyžaduje Dativ. Die Slowakei (F) → Dativ = der Slowakei. Teda 'aus der Slowakei'. Pamätaj: die → der (Dativ femininum)."
-        },
-        {
-          sentence: "Thomas ___ Deutsch und ein bisschen Spanisch. (hovoriť — er-forma)",
-          answer: "spricht",
-          hint: "sprechen je silné sloveso — e → i pri du a er",
-          explanation:
-            "sprechen: ich spreche, du sprichst, er/sie/es SPRICHT. Vokalická zmena e → i. 'Thomas spricht Deutsch.' = Thomas hovorí po nemecky."
-        },
-        {
-          sentence: "Laila kommt aus ___ Türkei.",
-          answer: "der",
-          hint: "die Türkei v Datíve",
-          explanation:
-            "'die Türkei' (F) → Dativ after 'aus' → 'aus der Türkei'. Rovnaké pravidlo ako Slowakei a Schweiz."
-        },
-        {
-          sentence: "Das ist ___ richtig — ich komme NICHT aus Deutschland, sondern aus der Slowakei!",
-          answer: "nicht",
-          hint: "negácia pred prídavným menom",
-          explanation:
-            "'nicht richtig' = nesprávne. 'nicht' neguje adjektívum/predikát. Dôraz na správenie: 'nicht aus Deutschland, sondern aus der Slowakei' = nie z Nemecka, ale zo Slovenska."
-        },
-        {
-          sentence: "Wie viele ___ sprichst du? — Ich spreche drei Sprachen.",
-          answer: "Sprachen",
-          hint: "jazyk — množné číslo od 'die Sprache'",
-          explanation:
-            "'die Sprache' → množné číslo = 'die Sprachen'. V otázke 'Wie viele Sprachen sprichst du?' = Koľko jazykov hovoríš?"
-        },
-        {
-          sentence: "Sarah kommt aus ___ USA.",
-          answer: "den",
-          hint: "die USA je množné číslo — Dativ pl. = den",
-          explanation:
-            "'die USA' je plurálové podstatné meno → Dativ plurálu = 'den'. Teda 'aus den USA'. Toto je jedinečná výnimka — pamätaj ako špeciálny prípad."
-        }
-      ]
-    },
-    {
-      type: "listen",
-      instruction:
-        "Počúvaj frázu a identifikuj správny slovenský preklad.",
-      questions: [
-        { de: "Ich komme aus der Slowakei.", sk: "Pochádzam zo Slovenska." },
-        { de: "Ich spreche Deutsch und Slowakisch.", sk: "Hovorím po nemecky a po slovensky." },
-        { de: "Er spricht gut Tschechisch.", sk: "Hovorí dobre po česky." },
-        { de: "Das ist nicht richtig.", sk: "To nie je správne." },
-        { de: "Aus welchem Land kommst du?", sk: "Z akej krajiny pochádzaš?" },
-        { de: "Sprechen Sie Englisch?", sk: "Hovoríte po anglicky?" },
-        { de: "die Schweiz", sk: "Švajčiarsko" },
-        { de: "die Türkei", sk: "Turecko" }
-      ]
-    },
-    {
-      type: "match",
-      instruction:
-        "Spoj krajinu s jej správnou nemeckou formou na vyjadrovanie pôvodu (frázou 'aus...').",
+      type: 'match',
+      instruction: 'Spoj čísla so slovami alebo nemecké výrazy so slovenským prekladom.',
       pairs: [
-        ["Nemecko", "aus Deutschland"],
-        ["Slovensko", "aus der Slowakei"],
-        ["Švajčiarsko", "aus der Schweiz"],
-        ["Turecko", "aus der Türkei"],
-        ["USA", "aus den USA"],
-        ["Česko", "aus Tschechien"],
-        ["Rakúsko", "aus Österreich"],
-        ["Anglicko", "aus England"]
-      ]
+        ['30', 'dreißig'],
+        ['47', 'siebenundvierzig'],
+        ['50', 'fünfzig'],
+        ['70', 'siebzig'],
+        ['85', 'fünfundachtzig'],
+        ['100', 'hundert'],
+        ['der Brief', 'list (poštový)'],
+        ['der Briefkasten', 'poštová schránka'],
+        ['anrufen', 'zavolať'],
+        ['diktieren', 'diktovať'],
+      ],
     },
+    // 3. WORDORDER
     {
       type: 'wordorder',
       instruction: 'Zoraď slová do správnej nemeckej vety.',
       sentences: [
         {
-          words: ['Jana', 'kommt', 'aus', 'der', 'Slowakei.'],
-          correct: 'Jana kommt aus der Slowakei.',
-          hint: 'Jana pochádza zo Slovenska.',
-          explanation: 'Krajiny s členom (die Slowakei) → "aus der Slowakei" (Dativ: die→der).'
+          words: ['Das', 'ist', 'Janinas', 'Brief'],
+          correct: 'Das ist Janinas Brief',
+          hint: 'To je Janin list.',
+          explanation: 'Genitív-s: Jana → Janinas. Meno sa stáva prívlastkom bez apostrofu. Genitívna forma stojí pred podstatným menom.',
         },
         {
-          words: ['Thomas', 'kommt', 'nicht', 'aus', 'Österreich.'],
-          correct: 'Thomas kommt nicht aus Österreich.',
-          hint: 'Thomas nepochádza z Rakúska.',
-          explanation: '"nicht" neguje sloveso — stojí na konci vety (alebo pred predložkovou frázou).'
+          words: ['Meine', 'Nummer', 'ist', 'siebenundvierzig'],
+          correct: 'Meine Nummer ist siebenundvierzig',
+          hint: 'Moje číslo je štyridsaťsedem.',
+          explanation: 'Číslo 47 = sieben (7) + und + vierzig (40) = siebenundvierzig. Jednotky sú vždy pred desiatkami a celé číslo sa píše ako jedno slovo.',
         },
         {
-          words: ['Laila', 'spricht', 'gut', 'Deutsch.'],
-          correct: 'Laila spricht gut Deutsch.',
-          hint: 'Laila dobre hovorí po nemecky.',
-          explanation: 'sprechen = silné sloveso: sprichst/spricht (e→i). "gut" je príslovka, stojí pred predmetom.'
+          words: ['Jana', 'ruft', 'Petra', 'an'],
+          correct: 'Jana ruft Petra an',
+          hint: 'Jana zavolá Petre.',
+          explanation: 'anrufen je odlučiteľné sloveso (trennbares Verb). Predpona "an" ide na koniec jednoduchej vety: Jana ruft Petra an.',
         },
         {
-          words: ['Aus', 'welchem', 'Land', 'kommen', 'Sie?'],
-          correct: 'Aus welchem Land kommen Sie?',
-          hint: 'Z akej krajiny pochádzate?',
-          explanation: '"Aus welchem" = z akého (Dativ). Predložková fráza na 1. mieste → sloveso (kommen) na 2. mieste.'
+          words: ['Peters', 'Auto', 'ist', 'blau'],
+          correct: 'Peters Auto ist blau',
+          hint: 'Petrovo auto je modré.',
+          explanation: 'Genitív-s: Peter → Peters. V nemčine sa nepíše apostrof. Peters Auto = Petrovo auto.',
         },
         {
-          words: ['Ich', 'spreche', 'Slowakisch', 'und', 'Deutsch.'],
-          correct: 'Ich spreche Slowakisch und Deutsch.',
-          hint: 'Hovorím po slovensky a po nemecky.',
-          explanation: 'Jazyky = vždy veľké písmeno v nemčine. "und" spája dve predmety.'
-        }
-      ]
+          words: ['Wie', 'ist', 'deine', 'Handynummer'],
+          correct: 'Wie ist deine Handynummer',
+          hint: 'Aké je tvoje číslo na mobil?',
+          explanation: 'Opytovacia veta s "Wie" — sloveso nasleduje hneď po opytovacom výraze (invertovaný slovosled).',
+        },
+        {
+          words: ['Jana', 'diktiert', 'die', 'Nummer', 'langsam'],
+          correct: 'Jana diktiert die Nummer langsam',
+          hint: 'Jana diktuje číslo pomaly.',
+          explanation: 'Príslovka (langsam – pomaly) stojí na konci vety za priamym predmetom (die Nummer).',
+        },
+      ],
     },
+    // 4. FILL
     {
-      type: 'minitext',
-      instruction: 'Prečítaj si krátky text o Jane. Potom odpovedaj na otázky.',
-      text: 'Jana hat neue Mitbewohner. Thomas kommt aus Deutschland. Laila kommt aus der Türkei. Pavel kommt aus Tschechien. Sarah kommt aus den USA. Jana sagt: "Ich komme aus der Slowakei." Thomas fragt: "Sprichst du Englisch?" Jana antwortet: "Ja, ich spreche Englisch und Deutsch." Alle sind froh — sie sprechen Deutsch zusammen.',
-      textSk: 'Jana má nových spolubývajúcich. Thomas pochádza z Nemecka. Laila pochádza z Turecka. Pavel pochádza z Čiech. Sarah pochádza z USA. Jana povie: "Pochádzam zo Slovenska." Thomas sa pýta: "Hovoríš po anglicky?" Jana odpovedá: "Áno, hovorím po anglicky a po nemecky." Všetci sú radi — hovoria spolu po nemecky.',
+      type: 'fill',
+      instruction: 'Doplň správne slovo do vety.',
       questions: [
         {
-          question: 'Woher kommt Laila?',
-          questionSk: 'Odkiaľ pochádza Laila?',
-          options: ['Aus Deutschland', 'Aus Tschechien', 'Aus der Türkei', 'Aus den USA'],
-          answer: 2,
-          explanation: 'Im Text: "Laila kommt aus der Türkei."'
+          sentence: 'Jana öffnet den ___.',
+          answer: 'Briefkasten',
+          hint: 'poštová schránka (M)',
+          explanation: 'der Briefkasten = poštová schránka. Jana otvára poštovú schránku.',
         },
         {
-          question: 'Welche Sprachen spricht Jana?',
-          questionSk: 'Akými jazykmi hovorí Jana?',
-          options: ['Nur Slowakisch', 'Slowakisch und Französisch', 'Englisch und Deutsch', 'Nur Deutsch'],
-          answer: 2,
-          explanation: 'Im Text: "ich spreche Englisch und Deutsch."'
+          sentence: 'Das ist ___ Brief von der VHS. (Jana)',
+          answer: 'Janinas',
+          hint: 'Jana + genitív-s',
+          explanation: 'Jana → Janinas (genitív-s, bez apostrofu). Janinas Brief = Janin list.',
         },
         {
-          question: 'Wie kommunizieren die Mitbewohner?',
-          questionSk: 'Ako komunikujú spolubývajúci?',
-          options: ['Sie sprechen Englisch', 'Sie sprechen Slowakisch', 'Sie sprechen Deutsch zusammen', 'Sie schreiben E-Mails'],
-          answer: 2,
-          explanation: 'Im Text: "sie sprechen Deutsch zusammen."'
-        }
-      ]
+          sentence: 'Ihre Nummer ist ___ . (47)',
+          answer: 'siebenundvierzig',
+          hint: 'štyridsaťsedem — 7 + und + 40',
+          explanation: '47 = sieben (7) + und + vierzig (40) = siebenundvierzig. Jednotky vždy pred desiatkami.',
+        },
+        {
+          sentence: 'Das ist ___ Auto. (Peter)',
+          answer: 'Peters',
+          hint: 'Peter + genitív-s',
+          explanation: 'Peter → Peters (genitív-s, bez apostrofu). Peters Auto = Petrovo auto.',
+        },
+        {
+          sentence: 'Jana ___ Petra an. (anrufen, Präsens)',
+          answer: 'ruft',
+          hint: 'zavolá — 3. osoba j.č. od anrufen',
+          explanation: 'anrufen: ich rufe an, du rufst an, er/sie ruft an. Predpona "an" ide na koniec vety.',
+        },
+        {
+          sentence: 'Der Kurs hat ___ Studenten. (30)',
+          answer: 'dreißig',
+          hint: 'tridsať — pozor na ß!',
+          explanation: '30 = dreißig. Pozor: píše sa s ß, nie "dreizzig" ani "dreisig". Toto je výnimka medzi desiatkami.',
+        },
+        {
+          sentence: 'Ich ___ eine Schwester. (haben — OPAKOVANIE)',
+          answer: 'habe',
+          hint: 'mám — haben, 1. osoba j.č.',
+          explanation: 'Opakovanie L07: haben — ich habe, du hast, er/sie/es hat, wir haben.',
+        },
+        {
+          sentence: 'Das ist ___ Buch. (ich — OPAKOVANIE)',
+          answer: 'mein',
+          hint: 'môj/moje — neutrálny rod (das Buch)',
+          explanation: 'Opakovanie L08: das Buch (neutrum, nominatív) → mein Buch. Nie "meine" — to je pre feminínum.',
+        },
+      ],
     },
+    // 5. LISTEN
+    {
+      type: 'listen',
+      instruction: 'Počúvaj a napíš, čo počuješ.',
+      questions: [
+        { de: 'dreißig', sk: 'tridsať' },
+        { de: 'vierzig', sk: 'štyridsať' },
+        { de: 'fünfzig', sk: 'päťdesiat' },
+        { de: 'sechzig', sk: 'šesťdesiat' },
+        { de: 'siebzig', sk: 'sedemdesiat' },
+        { de: 'achtzig', sk: 'osemdesiat' },
+        { de: 'neunzig', sk: 'deväťdesiat' },
+        { de: 'hundert', sk: 'sto' },
+        { de: 'siebenundvierzig', sk: 'štyridsaťsedem' },
+        { de: 'Janinas Brief', sk: 'Janin list' },
+      ],
+    },
+    // 6. MCQ
+    {
+      type: 'mcq',
+      instruction: 'Vyber správnu odpoveď.',
+      questions: [
+        {
+          question: 'Ako sa po nemecky píše číslo 30?',
+          options: ['dreizzig', 'dreißig', 'dreisig', 'dreizig'],
+          answer: 1,
+          explanation: 'dreißig — píše sa s ß, nie "dreizzig" ani "dreisig". Toto je jediná desiatka s ß a je to dôležitá výnimka na zapamätanie.',
+        },
+        {
+          question: 'Ako sa po nemecky vyjadří číslo 47?',
+          options: ['vierzigsieben', 'siebenundvierzig', 'vierzigseven', 'siebensvierzig'],
+          answer: 1,
+          explanation: '47 = sieben (7) + und + vierzig (40) = siebenundvierzig. Vždy jednotky + und + desiatky, písané ako jedno slovo.',
+        },
+        {
+          question: 'Ako vyjadríme "Janin list" po nemecky?',
+          options: ["Jana's Brief", 'Janas Brief', 'Janinas Brief', 'Jana Brief'],
+          answer: 2,
+          explanation: 'Jana → Janinas (genitív-s). V nemčine sa nepíše apostrof. Keďže Jana končí na -a, pridáme -s: Janinas. Pozor: nie "Janas" — základná forma je Jana, nie Jan.',
+        },
+        {
+          question: 'Ako sa v nemčine diktujú telefónne čísla?',
+          options: ['Ako jedno veľké číslo', 'Číslica po číslici', 'Vždy po dvojiciferných skupinách', 'Iba párne číslice'],
+          answer: 1,
+          explanation: 'Telefónne čísla sa diktujú číslica po číslici: 0153 = null-eins-fünf-drei. Toto je bežný hovorový štandard v nemčine.',
+        },
+        {
+          question: 'Ktoré číslo je "fünfundachtzig"?',
+          options: ['58', '75', '85', '95'],
+          answer: 2,
+          explanation: 'fünf (5) + und + achtzig (80) = 85. Jednotky pred desiatkami — vždy!',
+        },
+        {
+          question: 'Ktorá veta SPRÁVNE používa genitív-s pri vlastnom mene?',
+          options: ["Peter's Auto ist rot.", 'Peters Auto ist rot.', 'Peter Auto ist rot.', 'Von Peter ist das Auto rot.'],
+          answer: 1,
+          explanation: 'V nemčine sa genitív-s pri vlastných menách píše bez apostrofu: Peters Auto (nie Peter\'s Auto ako v angličtine).',
+        },
+        {
+          question: 'Opakovanie L08: Ako správne doplníte? "Das ist ___ Heft." (ich)',
+          options: ['mein', 'meine', 'meinen', 'meinem'],
+          answer: 0,
+          explanation: 'Opakovanie L08: das Heft je neutrum → mein (nie meine, to je pre feminínum). mein Heft = môj zošit.',
+        },
+      ],
+    },
+    // 7. MINITEXT
+    {
+      type: 'minitext',
+      instruction: 'Prečítaj si krátky príbeh a odpovedaj na otázky.',
+      text: 'Jana öffnet den Briefkasten. Da ist ein Brief — Janinas Brief von der VHS. Jana liest: Ihre Nummer ist 47. Jana ruft Petra an. "Hallo Petra! Das ist Janinas Brief. Meine Nummer ist siebenundvierzig." Petra fragt: "Wie ist deine Handynummer?" Jana diktiert: "Null — eins — fünf — drei." Petra schreibt die Nummer.',
+      textSk: 'Jana otvára poštovú schránku. Je tu list — Janinin list z VHS. Jana číta: Vaše číslo je 47. Jana zavolá Petre. „Ahoj Petra! To je Janinin list. Moje číslo je štyridsaťsedem." Petra sa pýta: „Aké je tvoje číslo na mobil?" Jana diktuje: „Nula — jedna — päť — tri." Petra číslo zapisuje.',
+      questions: [
+        {
+          question: 'Von wem ist der Brief?',
+          options: ['Von Petra', 'Von der VHS', 'Von Peters', 'Von der Schule'],
+          answer: 1,
+          explanation: 'Im Text steht: "Janinas Brief von der VHS" — der Brief kommt von der VHS.',
+        },
+        {
+          question: 'Was ist Janas Nummer bei der VHS?',
+          options: ['74', '37', '47', '100'],
+          answer: 2,
+          explanation: 'Im Text steht: "Meine Nummer ist siebenundvierzig" — das ist 47.',
+        },
+        {
+          question: 'Was macht Petra am Ende des Textes?',
+          options: ['Petra ruft Jana an.', 'Petra öffnet den Briefkasten.', 'Petra schreibt die Nummer.', 'Petra diktiert die Nummer.'],
+          answer: 2,
+          explanation: 'Im Text steht am Ende: "Petra schreibt die Nummer."',
+        },
+        {
+          question: 'Wie ist Janas Handynummer (die ersten vier Ziffern)?',
+          options: ['null-drei-fünf-eins', 'null-eins-fünf-drei', 'eins-null-drei-fünf', 'drei-fünf-null-eins'],
+          answer: 1,
+          explanation: 'Im Text steht: "Null — eins — fünf — drei" — also 0153.',
+        },
+        {
+          question: 'Was bedeutet "Janinas Brief" auf Slowakisch?',
+          options: ['Petrin list', 'Janin list', 'list od Jany', 'Janov list'],
+          answer: 1,
+          explanation: 'Janinas = Genitiv-s von Jana → Janinas Brief = Janin list. Jana ist weiblich, daher "Janin" auf Slowakisch.',
+        },
+      ],
+    },
+    // 8. SPEAKING
     {
       type: 'speaking',
-      instruction: 'Počúvaj nemeckú vetu. Potom hovor nahlas a skontroluj sa.',
+      instruction: 'Čítaj nahlas a precvičuj výslovnosť nemeckých čísiel a fráz.',
       phrases: [
-        { de: 'Ich komme aus der Slowakei.', sk: 'Pochádzam zo Slovenska.', tip: 'Slowakei: sl=[šl], ei=[ai]' },
-        { de: 'Sprechen Sie Deutsch?', sk: 'Hovoríte po nemecky?', tip: 'Sprechen: spr=[špr]' },
-        { de: 'Das ist nicht richtig.', sk: 'To nie je správne.', tip: 'nicht: ch=[x], t na konci' },
-        { de: 'Laila kommt aus der Türkei.', sk: 'Laila pochádza z Turecka.', tip: 'Türkei: ü=[ü], ei=[ai]' },
-        { de: 'Wir sprechen Deutsch zusammen.', sk: 'Hovoríme spolu po nemecky.', tip: 'zusammen: z=[ts], samen' }
-      ]
-    }
+        {
+          de: 'dreißig, vierzig, fünfzig',
+          sk: 'tridsať, štyridsať, päťdesiat',
+          tip: 'dreißig = DRAYsikh; ß znie ako ostré "s"',
+        },
+        {
+          de: 'sechzig, siebzig, achtzig, neunzig',
+          sk: 'šesťdesiat, sedemdesiat, osemdesiat, deväťdesiat',
+          tip: 'siebzig: nie "sieben" — skrátene: ZEEPtsikh',
+        },
+        {
+          de: 'Meine Handynummer ist null-eins-fünf-drei.',
+          sk: 'Moje číslo na mobil je nula-jedna-päť-tri.',
+          tip: 'fünf: zaokrúhlené pery pre ü — FUENF',
+        },
+        {
+          de: 'Das ist Janinas Brief.',
+          sk: 'To je Janin list.',
+          tip: 'Janinas: YAH-nee-nahs — dôraz na 1. slabiku',
+        },
+        {
+          de: 'Wie ist deine Handynummer?',
+          sk: 'Aké je tvoje číslo na mobil?',
+          tip: 'Handynummer: HAHN-dee-NOO-mər',
+        },
+        {
+          de: 'Meine Nummer ist siebenundvierzig.',
+          sk: 'Moje číslo je štyridsaťsedem.',
+          tip: 'siebenundvierzig: ZEEben-oont-FEERtsikh',
+        },
+        {
+          de: 'Jana ruft Petra an.',
+          sk: 'Jana zavolá Petre.',
+          tip: 'an = na konci, krátka prízvučná slabika: AN',
+        },
+      ],
+    },
+    // 9. TRUEFALSE
+    {
+      type: 'truefalse',
+      instruction: 'Je tvrdenie pravdivé (wahr) alebo nepravdivé (falsch)?',
+      statements: [
+        {
+          statement: '30 sa po nemecky píše "dreizzig".',
+          answer: false,
+          explanation: 'Nepravdivé. 30 = dreißig — píše sa s ß, nie double-z. Toto je jediná desiatka s ß!',
+        },
+        {
+          statement: 'V nemčine pri číslach 21–99 idú desiatky PRED jednotkami (napr. vierzigsieben = 47).',
+          answer: false,
+          explanation: 'Nepravdivé. V nemčine sú JEDNOTKY pred desiatkami: 47 = siebenundvierzig (sieben + und + vierzig). Poradie je opačné oproti slovenčine.',
+        },
+        {
+          statement: '"Peters Auto" je správny nemecký genitív-s (bez apostrofu).',
+          answer: true,
+          explanation: 'Pravdivé. V nemčine sa genitív-s pri vlastných menách píše bez apostrofu: Peters Auto (nie Peter\'s Auto).',
+        },
+        {
+          statement: '85 po nemecky je "fünfundachtzig".',
+          answer: true,
+          explanation: 'Pravdivé. fünf (5) + und + achtzig (80) = fünfundachtzig. Jednotky pred desiatkami.',
+        },
+        {
+          statement: 'Telefónne čísla sa v nemčine diktujú vždy ako jeden dlhý číslovka.',
+          answer: false,
+          explanation: 'Nepravdivé. Telefónne čísla sa diktujú číslica po číslici: 0153 = null-eins-fünf-drei.',
+        },
+        {
+          statement: '"Janinas" je správna genitívna forma od mena Jana.',
+          answer: true,
+          explanation: 'Pravdivé. Jana + s = Janinas. Genitív-s sa pridáva priamo k základnému tvaru mena bez apostrofu a bez zmeny mena.',
+        },
+      ],
+    },
+    // 10. DICTATION
+    {
+      type: 'dictation',
+      instruction: 'Počúvaj a napíš celú vetu alebo výraz.',
+      sentences: [
+        {
+          de: 'Das ist dreißig.',
+          sk: 'To je tridsať.',
+          hint: 'Pozor na ß v dreißig!',
+        },
+        {
+          de: 'Meine Nummer ist siebenundvierzig.',
+          sk: 'Moje číslo je štyridsaťsedem.',
+          hint: '47 = sieben + und + vierzig',
+        },
+        {
+          de: 'Das ist Janinas Brief.',
+          sk: 'To je Janin list.',
+          hint: 'Jana → Janinas (genitív-s, bez apostrofu)',
+        },
+        {
+          de: 'Jana ruft Petra an.',
+          sk: 'Jana zavolá Petre.',
+          hint: 'anrufen: ruft...an — odlučiteľné sloveso',
+        },
+        {
+          de: 'Peters Auto ist blau.',
+          sk: 'Petrovo auto je modré.',
+          hint: 'Peter → Peters (genitív-s)',
+        },
+        {
+          de: 'Meine Handynummer ist null-eins-fünf-drei.',
+          sk: 'Moje číslo na mobil je nula-jedna-päť-tri.',
+          hint: 'Telefónne čísla: číslica po číslici',
+        },
+      ],
+    },
+    // 11. CATEGORYSORT
+    {
+      type: 'categorysort',
+      instruction: 'Zaraď výrazy do správnej kategórie.',
+      categories: ['Desiatky (20–100)', 'Zložené čísla (21–99)', 'Genitív-s formy'],
+      items: [
+        { text: 'dreißig', category: 'Desiatky (20–100)' },
+        { text: 'fünfzig', category: 'Desiatky (20–100)' },
+        { text: 'siebzig', category: 'Desiatky (20–100)' },
+        { text: 'hundert', category: 'Desiatky (20–100)' },
+        { text: 'einundzwanzig', category: 'Zložené čísla (21–99)' },
+        { text: 'siebenundvierzig', category: 'Zložené čísla (21–99)' },
+        { text: 'fünfundachtzig', category: 'Zložené čísla (21–99)' },
+        { text: 'dreiunddreißig', category: 'Zložené čísla (21–99)' },
+        { text: 'Janinas', category: 'Genitív-s formy' },
+        { text: 'Peters', category: 'Genitív-s formy' },
+        { text: 'Petras', category: 'Genitív-s formy' },
+        { text: 'Marias', category: 'Genitív-s formy' },
+      ],
+    },
+    // 12. TRANSLATION
+    {
+      type: 'translation',
+      instruction: 'Prelož vety zo slovenčiny do nemčiny.',
+      sentences: [
+        {
+          sk: 'Moje číslo je päťdesiat.',
+          de: 'Meine Nummer ist fünfzig.',
+          hint: 'päťdesiat = fünfzig',
+        },
+        {
+          sk: 'To je Petrin zošit.',
+          de: 'Das ist Petras Heft.',
+          hint: 'Petra → Petras (genitív-s)',
+        },
+        {
+          sk: 'Jana diktuje číslo pomaly.',
+          de: 'Jana diktiert die Nummer langsam.',
+          hint: 'diktovať = diktieren',
+        },
+        {
+          sk: 'Aké je tvoje telefónne číslo?',
+          de: 'Wie ist deine Telefonnummer?',
+          hint: 'Wie ist...? = Aké je...?',
+        },
+        {
+          sk: 'Kurz stojí osemdesiatpäť eur.',
+          de: 'Der Kurs kostet fünfundachtzig Euro.',
+          hint: 'osemdesiatpäť = fünfundachtzig',
+        },
+      ],
+    },
+    // 13. CONJUGATION
+    {
+      type: 'conjugation',
+      instruction: 'Pozri si časovanie slovies v prítomnom čase.',
+      verbs: [
+        {
+          infinitive: 'anrufen',
+          note: 'Odlučiteľné sloveso (trennbares Verb). Predpona "an" ide na koniec jednoduchej vety. Vzor: Jana ruft Petra an. (nie: Jana anruft Petra)',
+          forms: [
+            { pronoun: 'ich', form: 'rufe ... an' },
+            { pronoun: 'du', form: 'rufst ... an' },
+            { pronoun: 'er/sie/es', form: 'ruft ... an' },
+            { pronoun: 'wir', form: 'rufen ... an' },
+            { pronoun: 'ihr', form: 'ruft ... an' },
+            { pronoun: 'sie/Sie', form: 'rufen ... an' },
+          ],
+        },
+        {
+          infinitive: 'diktieren',
+          note: 'Pravidelné sloveso zakončené na -ieren. Tieto slovesá sa časujú pravidelne a nikdy nemenia kmeň. Koncovky: -e, -st, -t, -en, -t, -en.',
+          forms: [
+            { pronoun: 'ich', form: 'diktiere' },
+            { pronoun: 'du', form: 'diktierst' },
+            { pronoun: 'er/sie/es', form: 'diktiert' },
+            { pronoun: 'wir', form: 'diktieren' },
+            { pronoun: 'ihr', form: 'diktiert' },
+            { pronoun: 'sie/Sie', form: 'diktieren' },
+          ],
+        },
+      ],
+    },
   ],
-
-  reviewWords: [],
-  lessonNotes:
-    "Kľúčový poznatok: krajiny s členom (die Slowakei, die Schweiz, die Türkei, die USA) vyžadujú Dativ po 'aus': aus DER Slowakei/Schweiz/Türkei, aus DEN USA. sprechen je silné sloveso — zmena e→i: du sprichst, er spricht. Jazyky = vždy veľké písmeno v nemčine. Negácia: 'nicht' pre prídavné mená a slovesá, 'kein/keine' pre podstatné mená."
+  reviewWords: ['L08_V09'],
+  lessonNotes: 'V tejto lekcii sme sa naučili čísla od 21 do 100. Kľúčovým vzorom je jednotky + und + desiatky, písané ako jedno slovo (einundzwanzig, siebenundvierzig). Dôležitá výnimka: 30 = dreißig (s ß!). Naučili sme sa tiež genitív-s pri vlastných menách — pridáme -s bez apostrofu: Jana → Janinas, Peter → Peters. Telefónne čísla diktujeme číslicu po číslici.',
 };

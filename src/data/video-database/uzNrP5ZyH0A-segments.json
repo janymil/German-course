@@ -1,0 +1,29 @@
+{
+  "segments": [
+    {
+      "startTimeMs": 2510,
+      "endTimeMs": 193740,
+      "topicDescription": "Udine Deutschlernen"
+    },
+    {
+      "startTimeMs": 194480,
+      "endTimeMs": 383070,
+      "topicDescription": "Sonntagsöffnungen, Gastgarten"
+    },
+    {
+      "startTimeMs": 383630,
+      "endTimeMs": 585210,
+      "topicDescription": "Pflanzen und Verkehrsmittel"
+    },
+    {
+      "startTimeMs": 585210,
+      "endTimeMs": 768770,
+      "topicDescription": "Restaurantbesuch, Kaffee, Tischdekoration"
+    },
+    {
+      "startTimeMs": 769370,
+      "endTimeMs": 937480,
+      "topicDescription": "Stadtleben, Einkaufen, Markt"
+    }
+  ]
+}

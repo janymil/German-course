@@ -1,0 +1,721 @@
+export const lesson23 = {
+  id: 23,
+  week: 5,
+  day: 3,
+  title: "Wie oft machst du das? – Immer, oft, nie!",
+  topic: "Vyjadrovanie frekvencie (oft, immer, nie) a nepravidelné slovesá s prehláskou (lesen, treffen, fahren).",
+  cefr: "A1",
+  xpReward: 25,
+  narrativeContext: "Jana und Petra sind im Prater. Sie sprechen über ihre Hobbys und wie oft sie Sport machen oder Freunde treffen.",
+  communicativeGoal: "Nach dieser Lektion kann ich sagen, wie oft ich etwas mache, und drei wichtige Verben mit Vokalwechsel richtig benutzen.",
+  skillFocus: [
+    "vocabulary",
+    "grammar",
+    "speaking",
+    "listening"
+  ],
+  lessonNotes: "V tejto lekcii sa naučíš, ako vyjadriť frekvenciu – ako často niečo robíš. Spoznáš slová ako 'oft' (často), 'immer' (vždy) a 'nie' (nikdy). Okrem toho sa pozrieme na špeciálne slovesá ako 'lesen' (čítať), 'treffen' (stretnúť) a 'fahren' (šoférovať/ísť), ktoré menia samohlásku v druhej a tretej osobe jednotného čísla. Je dôležité si ich zapamätať!",
+  grammarNotes: [
+    {
+      rule: "Frekvenčné príslovky: oft, immer, nie",
+      explanation: "<p>Frekvenčné príslovky nám hovoria, ako často sa niečo deje. Medzi najčastejšie patria <strong>immer</strong> (vždy), <strong>oft</strong> (často) a <strong>nie</strong> (nikdy). Tieto príslovky sa zvyčajne umiestňujú vo vete po časovanom slovese alebo po podmete a slovese. Ak je vo vete priamy predmet, často stoja pred ním. Ich správne umiestnenie je dôležité pre prirodzený zvuk vety v nemčine.</p>",
+      examples: [
+        {
+          de: "Ich lese oft Bücher.",
+          sk: "Často čítam knihy."
+        },
+        {
+          de: "Er fährt immer mit dem Bus.",
+          sk: "Vždy chodí autobusom."
+        },
+        {
+          de: "Sie trifft nie ihre Freunde am Wochenende.",
+          sk: "Cez víkend sa nikdy nestretáva so svojimi priateľmi."
+        },
+        {
+          de: "Wir gehen oft ins Kino.",
+          sk: "Často chodíme do kina."
+        },
+        {
+          de: "Du isst nie Pizza.",
+          sk: "Nikdy neješ pizzu."
+        },
+        {
+          de: "Ich trinke immer Kaffee am Morgen.",
+          sk: "Ráno vždy pijem kávu."
+        }
+      ],
+      slovakContrastNote: "V slovenčine je umiestnenie prísloviek frekvencie vo vete často flexibilnejšie. Môžu stáť na začiatku, v strede alebo na konci vety, pričom sa mení dôraz. V nemčine je ich pozícia vo vete vo všeobecnosti ustálenejšia, najmä po časovanom slovese alebo po podmete a slovese, čo je rozdiel, na ktorý si treba zvyknúť."
+    },
+    {
+      rule: "Nepravidelné slovesá s prehláskou (a → ä, e → i/ie)",
+      explanation: "<p>V nemčine existujú silné (nepravidelné) slovesá, ktoré menia svoju kmeňovú samohlásku v 2. a 3. osobe jednotného čísla (<strong>du</strong>, <strong>er/sie/es</strong>) v prítomnom čase. Táto zmena sa nazýva prehláska (Umlaut) alebo zmena samohlásky. Napríklad, samohláska \"a\" sa mení na \"ä\" (ako pri <em>fahren</em>), a \"e\" sa mení na \"i\" alebo \"ie\" (ako pri <em>treffen</em> a <em>lesen</em>). Ostatné osoby (ich, wir, ihr, sie/Sie) si zachovávajú pôvodnú kmeňovú samohlásku.</p><p>Tu je prehľad časovania týchto slovies:</p><table><thead><tr><th>Osoba</th><th>fahren (jazdiť)</th><th>treffen (stretnúť)</th><th>lesen (čítať)</th></tr></thead><tbody><tr><td>ich</td><td>fahre</td><td>treffe</td><td>lese</td></tr><tr><td>du</td><td>fährst</td><td>triffst</td><td>liest</td></tr><tr><td>er/sie/es</td><td>fährt</td><td>trifft</td><td>liest</td></tr><tr><td>wir</td><td>fahren</td><td>treffen</td><td>lesen</td></tr><tr><td>ihr</td><td>fahrt</td><td>trefft</td><td>lest</td></tr><tr><td>sie/Sie</td><td>fahren</td><td>treffen</td><td>lesen</td></tr></tbody></table>",
+      examples: [
+        {
+          de: "Ich fahre oft mit dem Fahrrad.",
+          sk: "Často jazdím na bicykli."
+        },
+        {
+          de: "Fährst du heute zur Arbeit?",
+          sk: "Ideš dnes do práce?"
+        },
+        {
+          de: "Er fährt sehr schnell.",
+          sk: "Jazdí veľmi rýchlo."
+        },
+        {
+          de: "Wir treffen uns um sieben Uhr.",
+          sk: "Stretávame sa o siedmej."
+        },
+        {
+          de: "Triffst du deine Freunde am Wochenende?",
+          sk: "Stretávaš sa cez víkend so svojimi priateľmi?"
+        },
+        {
+          de: "Sie liest gern Bücher.",
+          sk: "Rada číta knihy."
+        },
+        {
+          de: "Liest du die Zeitung?",
+          sk: "Čítaš noviny?"
+        },
+        {
+          de: "Was liest er?",
+          sk: "Čo číta?"
+        }
+      ],
+      slovakContrastNote: "V slovenčine nemáme podobný systém zmien kmeňových samohlások v závislosti od osoby. Slovesá sa časujú pridaním rôznych koncoviek, ale kmeň slovesa zostáva vo všeobecnosti nezmenený (napr. ja čítam, ty čítaš, on číta – kmeň \"čít-\" je stabilný). Toto je pre slovenských študentov nová gramatická vlastnosť, na ktorú si musia zvyknúť a zapamätať si ju pre každé nepravidelné sloveso."
+    }
+  ],
+  vocab: [
+    {
+      de: "der Tag",
+      sk: "deň",
+      gender: "M",
+      srsId: "L23_V01",
+      example: "Jeden Tag muss ich arbeiten.",
+      exampleSk: "Každý deň musím pracovať.",
+      recycledFrom: []
+    },
+    {
+      de: "die Woche",
+      sk: "týždeň",
+      gender: "F",
+      srsId: "L23_V02",
+      example: "Die Woche hat sieben Tage.",
+      exampleSk: "Týždeň má sedem dní.",
+      recycledFrom: []
+    },
+    {
+      de: "das Wochenende",
+      sk: "víkend",
+      gender: "N",
+      srsId: "L23_V03",
+      example: "Was machst du am Wochenende?",
+      exampleSk: "Čo robíš cez víkend?",
+      recycledFrom: []
+    },
+    {
+      de: "der Morgen",
+      sk: "ráno",
+      gender: "M",
+      srsId: "L23_V04",
+      example: "Am Morgen trinke ich Kaffee.",
+      exampleSk: "Ráno pijem kávu.",
+      recycledFrom: []
+    }
+  ],
+  exercises: [
+    {
+      type: "flashcard",
+      instruction: "Prezri si slovíčka tejto lekcie. Klikni na kartičku pre preklad."
+    },
+    {
+      type: "match",
+      instruction: "Priraďte nemecké slová k ich slovenským prekladom.",
+      pairs: [
+        [
+          "der Tag",
+          "deň"
+        ],
+        [
+          "die Woche",
+          "týždeň"
+        ],
+        [
+          "das Wochenende",
+          "víkend"
+        ],
+        [
+          "der Morgen",
+          "ráno"
+        ],
+        [
+          "immer",
+          "vždy"
+        ],
+        [
+          "oft",
+          "často"
+        ],
+        [
+          "nie",
+          "nikdy"
+        ],
+        [
+          "lesen",
+          "čítať"
+        ],
+        [
+          "treffen",
+          "stretnúť"
+        ],
+        [
+          "fahren",
+          "jazdiť/cestovať"
+        ]
+      ]
+    },
+    {
+      type: "wordorder",
+      instruction: "Usporiadajte slová do správnej vety.",
+      sentences: [
+        {
+          words: [
+            "Ich",
+            "oft",
+            "fahre",
+            "Fahrrad"
+          ],
+          correct: "Ich fahre oft Fahrrad",
+          hint: "Často bicyklujem.",
+          explanation: "Frekvenčné príslovky ako 'oft' zvyčajne stoja po slovese alebo po prvej časti slovesného rámca. Sloveso je vždy na druhom mieste vo vete."
+        },
+        {
+          words: [
+            "Du",
+            "immer",
+            "Bücher",
+            "liest"
+          ],
+          correct: "Du liest immer Bücher",
+          hint: "Vždy čítaš knihy.",
+          explanation: "Sloveso 'lesen' je nepravidelné. V 2. osobe jednotného čísla (du) sa mení 'e' na 'ie'. Frekvenčné príslovky ako 'immer' stoja po slovese."
+        },
+        {
+          words: [
+            "Er",
+            "seine",
+            "Freunde",
+            "trifft",
+            "am",
+            "Wochenende"
+          ],
+          correct: "Er trifft seine Freunde am Wochenende",
+          hint: "Cez víkend stretáva svojich priateľov.",
+          explanation: "Sloveso 'treffen' je nepravidelné. V 3. osobe jednotného čísla (er/sie/es) sa mení 'e' na 'i'. Sloveso je vždy na druhom mieste vo vete."
+        },
+        {
+          words: [
+            "Sie",
+            "nie",
+            "Auto",
+            "fährt"
+          ],
+          correct: "Sie fährt nie Auto",
+          hint: "Nikdy nejazdí autom.",
+          explanation: "Sloveso 'fahren' je nepravidelné. V 3. osobe jednotného čísla (er/sie/es) sa mení 'a' na 'ä'. Frekvenčné príslovky ako 'nie' stoja po slovese."
+        },
+        {
+          words: [
+            "Ich",
+            "kann",
+            "oft",
+            "Deutsch",
+            "sprechen"
+          ],
+          correct: "Ich kann oft Deutsch sprechen",
+          hint: "Často viem hovoriť po nemecky.",
+          explanation: "Pri modálnych slovesách je modálne sloveso na druhom mieste a plnovýznamové sloveso v infinitive na konci vety (Satzklammer). Frekvenčné príslovky stoja po modálnom slovese."
+        }
+      ]
+    },
+    {
+      type: "fill",
+      instruction: "Doplňte správne slovo do vety.",
+      questions: [
+        {
+          sentence: "Was ___ du am liebsten?",
+          answer: "liest",
+          hint: "Čo najradšej čítaš?",
+          explanation: "Sloveso 'lesen' je nepravidelné. V 2. osobe jednotného čísla (du) sa mení 'e' na 'ie'."
+        },
+        {
+          sentence: "Er ___ seine Familie immer am Sonntag.",
+          answer: "trifft",
+          hint: "Vždy stretáva svoju rodinu v nedeľu.",
+          explanation: "Sloveso 'treffen' je nepravidelné. V 3. osobe jednotného čísla (er/sie/es) sa mení 'e' na 'i'."
+        },
+        {
+          sentence: "Wir ___ oft mit dem Zug.",
+          answer: "fahren",
+          hint: "Často cestujeme vlakom.",
+          explanation: "Sloveso 'fahren' je nepravidelné, ale v 1. osobe množného čísla (wir) sa kmeňová samohláska nemení. 'Oft' je frekvenčné príslovka."
+        },
+        {
+          sentence: "Ich trinke ___ Kaffee. Ich trinke lieber Tee.",
+          answer: "nie",
+          hint: "Nikdy nepijem kávu. Radšej pijem čaj.",
+          explanation: "Slovo 'nie' znamená 'nikdy' a je vhodné v kontexte, kde niekto preferuje niečo iné (čaj namiesto kávy)."
+        },
+        {
+          sentence: "___ du gut schwimmen?",
+          answer: "Kannst",
+          hint: "Vieš dobre plávať?",
+          explanation: "Modálne sloveso 'können' sa v 2. osobe jednotného čísla (du) časuje ako 'kannst'. Vo vetách s otázkou bez opytovacieho zámena je sloveso na prvom mieste."
+        },
+        {
+          sentence: "Ich brauche ___ neuen Stift.",
+          answer: "einen",
+          hint: "Potrebujem nové pero.",
+          explanation: "Sloveso 'brauchen' si vyžaduje Akuzatív. 'Stift' je mužského rodu (der Stift), preto v Akuzatíve používame neurčitý člen 'einen'."
+        },
+        {
+          sentence: "Sie ist ___ Ärztin.",
+          answer: "eine",
+          hint: "Je lekárka.",
+          explanation: "Povolanie 'Ärztin' je ženského rodu, preto používame neurčitý člen 'eine'."
+        }
+      ]
+    },
+    {
+      type: "listen",
+      instruction: "Počúvajte a priraďte nemecké slovo k jeho slovenskému prekladu.",
+      questions: [
+        {
+          de: "Tag",
+          sk: "deň"
+        },
+        {
+          de: "Woche",
+          sk: "týždeň"
+        },
+        {
+          de: "Morgen",
+          sk: "ráno"
+        },
+        {
+          de: "immer",
+          sk: "vždy"
+        },
+        {
+          de: "oft",
+          sk: "často"
+        },
+        {
+          de: "nie",
+          sk: "nikdy"
+        },
+        {
+          de: "lesen",
+          sk: "čítať"
+        },
+        {
+          de: "treffen",
+          sk: "stretnúť"
+        },
+        {
+          de: "fahren",
+          sk: "jazdiť"
+        },
+        {
+          de: "Wochenende",
+          sk: "víkend"
+        }
+      ]
+    },
+    {
+      type: "mcq",
+      instruction: "Vyberte správnu odpoveď.",
+      questions: [
+        {
+          question: "Wie oft ___ du Fahrrad?",
+          options: [
+            "fährst",
+            "fährt",
+            "fahre",
+            "fährst du"
+          ],
+          answer: 0,
+          explanation: "Sloveso 'fahren' je nepravidelné. V 2. osobe jednotného čísla (du) sa 'a' mení na 'ä' a koncovka je '-st'. Správna forma je 'fährst'."
+        },
+        {
+          question: "Ktorá veta je správna?",
+          options: [
+            "Ich lese oft Bücher.",
+            "Oft ich lese Bücher.",
+            "Ich oft lese Bücher.",
+            "Lese ich oft Bücher."
+          ],
+          answer: 0,
+          explanation: "Vo vetách s frekvenčnými príslovkami ako 'oft' stojí príslovka zvyčajne po slovese, ak je sloveso na druhom mieste vo vete."
+        },
+        {
+          question: "Er ___ seine Freunde.",
+          options: [
+            "trefft",
+            "trifft",
+            "treffen",
+            "triffst"
+          ],
+          answer: 1,
+          explanation: "Sloveso 'treffen' je nepravidelné. V 3. osobe jednotného čísla (er/sie/es) sa 'e' mení na 'i' a koncovka je '-t'. Správna forma je 'trifft'."
+        },
+        {
+          question: "Ako povieš \"deň\" po nemecky?",
+          options: [
+            "die Woche",
+            "der Morgen",
+            "der Tag",
+            "das Wochenende"
+          ],
+          answer: 2,
+          explanation: "Slovo 'der Tag' znamená po slovensky 'deň'."
+        },
+        {
+          question: "Opak slova \"immer\" (vždy) je:",
+          options: [
+            "oft",
+            "manchmal",
+            "nie",
+            "selten"
+          ],
+          answer: 2,
+          explanation: "Slovo 'immer' znamená 'vždy', zatiaľ čo 'nie' znamená 'nikdy'. Sú to antonymá."
+        },
+        {
+          question: "Vyber správnu formu slovesa 'können': Wir ___ gut Deutsch sprechen.",
+          options: [
+            "kann",
+            "könnt",
+            "können",
+            "kannst"
+          ],
+          answer: 2,
+          explanation: "Modálne sloveso 'können' sa v 1. osobe množného čísla (wir) časuje ako 'können'."
+        },
+        {
+          question: "Ich habe ___ Hund.",
+          options: [
+            "ein",
+            "eine",
+            "einen",
+            "kein"
+          ],
+          answer: 2,
+          explanation: "Sloveso 'haben' si vyžaduje Akuzatív. 'Hund' je mužského rodu (der Hund), preto v Akuzatíve používame neurčitý člen 'einen'."
+        },
+        {
+          question: "___ du Spanisch?",
+          options: [
+            "Spreche",
+            "Sprichst",
+            "Sprecht",
+            "Spricht"
+          ],
+          answer: 1,
+          explanation: "Sloveso 'sprechen' je nepravidelné. V 2. osobe jednotného čísla (du) sa 'e' mení na 'i' a koncovka je '-st'. Správna forma je 'sprichst'."
+        }
+      ]
+    },
+    {
+      type: "minitext",
+      instruction: "Lies den Dialog und beantworte die Fragen.",
+      text: "Jana: Hallo Petra! Was machst du hier im Prater?\nPetra: Hallo Jana! Ich spaziere ein bisschen. Und du?\nJana: Ich fahre oft Fahrrad, besonders am Wochenende. Aber ich laufe nie, das mag ich nicht.\nPetra: Ach so! Ich treffe oft Freunde am Wochenende. In der Woche lese ich manchmal Bücher.\nJana: Ah, du liest also gerne. Und dein Freund Tom, trifft er auch oft Freunde?\nPetra: Ja, Tom trifft seine Freunde immer am Samstag. Und er fährt oft Fahrrad, auch am Morgen!\nJana: Wow, er ist aktiv! Ich fahre am Morgen selten Fahrrad.\nPetra: Ich auch!",
+      textSk: "Jana: Ahoj Petra! Čo robíš tu v Prátri?\nPetra: Ahoj Jana! Trochu sa prechádzam. A ty?\nJana: Ja často bicyklujem, obzvlášť cez víkend. Ale nikdy nebehám, to nemám rada.\nPetra: Aha tak! Ja sa často stretávam s priateľmi cez víkend. Cez týždeň čítam niekedy knihy.\nJana: Aha, takže rada čítaš. A tvoj priateľ Tom, stretáva sa aj on často s priateľmi?\nPetra: Áno, Tom sa stretáva so svojimi priateľmi vždy v sobotu. A často bicykluje, aj ráno!\nJana: Wau, je aktívny! Ja ráno bicyklujem zriedka.\nPetra: Ja tiež!",
+      questions: [
+        {
+          question: "Was macht Jana oft?",
+          options: [
+            "Sie läuft.",
+            "Sie fährt Fahrrad.",
+            "Sie trifft Freunde.",
+            "Sie liest Bücher."
+          ],
+          answer: 1,
+          explanation: "Jana sagt: \"Ich fahre oft Fahrrad...\""
+        },
+        {
+          question: "Was macht Petra manchmal in der Woche?",
+          options: [
+            "Sie fährt Fahrrad.",
+            "Sie spaziert.",
+            "Sie liest Bücher.",
+            "Sie trifft Freunde."
+          ],
+          answer: 2,
+          explanation: "Petra sagt: \"In der Woche lese ich manchmal Bücher.\""
+        },
+        {
+          question: "Wie oft trifft Tom seine Freunde?",
+          options: [
+            "Manchmal.",
+            "Selten.",
+            "Nie.",
+            "Immer."
+          ],
+          answer: 3,
+          explanation: "Petra sagt: \"Ja, Tom trifft seine Freunde immer am Samstag.\""
+        },
+        {
+          question: "Was macht Jana nie?",
+          options: [
+            "Sie fährt Fahrrad.",
+            "Sie läuft.",
+            "Sie liest Bücher.",
+            "Sie trifft Freunde."
+          ],
+          answer: 1,
+          explanation: "Jana sagt: \"Aber ich laufe nie, das mag ich nicht.\""
+        }
+      ]
+    },
+    {
+      type: "speaking",
+      instruction: "Höre zu und sprich nach.",
+      phrases: [
+        {
+          de: "der Tag",
+          sk: "deň",
+          tip: "'r' na konci ako krátke 'a'."
+        },
+        {
+          de: "die Woche",
+          sk: "týždeň",
+          tip: "'W' ako [v], 'ch' ako [x]."
+        },
+        {
+          de: "lesen",
+          sk: "čítať",
+          tip: "'s' medzi samohláskami ako [z]."
+        },
+        {
+          de: "Du fährst.",
+          sk: "Ty šoféruješ.",
+          tip: "'ä' ako dlhé 'e' [ɛː], 's' ako [z]."
+        },
+        {
+          de: "immer am Morgen",
+          sk: "vždy ráno",
+          tip: "'i' krátke, 'r' na konci ako 'a'."
+        },
+        {
+          de: "Ich lese oft am Wochenende.",
+          sk: "Často čítam cez víkend.",
+          tip: "'ch' po 'i' ako [ç], 's' ako [z]."
+        },
+        {
+          de: "Er fährt nie am Tag.",
+          sk: "Nikdy neriadi cez deň.",
+          tip: "'ä' ako [ɛː], 'ie' ako dlhé 'í'."
+        },
+        {
+          de: "Wir treffen uns immer am Morgen.",
+          sk: "Vždy sa stretávame ráno.",
+          tip: "'e' krátke, 'r' na konci ako 'a'."
+        }
+      ]
+    },
+    {
+      type: "truefalse",
+      instruction: "Prečítajte si nasledujúce tvrdenia a rozhodnite, či sú pravdivé (Wahr) alebo nepravdivé (Falsch).",
+      statements: [
+        {
+          statement: "Frekvenčné príslovky ako 'oft' alebo 'immer' sa zvyčajne umiestňujú za sloveso.",
+          isTrue: true,
+          explanation: "Áno, je to tak. Frekvenčné príslovky sa v nemeckej vete často umiestňujú za sloveso alebo za časť vety, na ktorú sa vzťahujú."
+        },
+        {
+          statement: "Sloveso 'lesen' (čítať) mení svoju kmeňovú samohlásku v 1. osobe jednotného čísla (ich) na 'ie'.",
+          isTrue: false,
+          explanation: "Nie, to nie je pravda. Sloveso 'lesen' mení samohlásku na 'ie' len v 2. a 3. osobe jednotného čísla (du liest, er/sie/es liest). V 1. osobe je 'ich lese'."
+        },
+        {
+          statement: "Sloveso 'fahren' (šoférovať/cestovať) mení svoju kmeňovú samohlásku v 2. a 3. osobe jednotného čísla z 'a' na 'ä'.",
+          isTrue: true,
+          explanation: "Áno, je to správne. Napríklad: 'du fährst', 'er/sie/es fährt'."
+        },
+        {
+          statement: "Príslovka 'nie' znamená 'vždy'.",
+          isTrue: false,
+          explanation: "Nie, 'nie' znamená 'nikdy'. 'Vždy' je 'immer'."
+        },
+        {
+          statement: "Sloveso 'treffen' (stretnúť) mení svoju kmeňovú samohlásku v 2. a 3. osobe jednotného čísla z 'e' na 'i'.",
+          isTrue: true,
+          explanation: "Áno, je to tak. Napríklad: 'du triffst', 'er/sie/es trifft'."
+        }
+      ]
+    },
+    {
+      type: "dictation",
+      instruction: "Počúvajte a napíšte, čo počujete. Potom skontrolujte svoj pravopis.",
+      sentences: [
+        {
+          de: "Ich lese oft.",
+          sk: "Ja často čítam."
+        },
+        {
+          de: "Du fährst immer Auto.",
+          sk: "Ty vždy jazdíš autom."
+        },
+        {
+          de: "Er trifft sie am Morgen.",
+          sk: "On ju stretne ráno."
+        },
+        {
+          de: "Wir lesen am Wochenende Bücher.",
+          sk: "Cez víkend čítame knihy."
+        },
+        {
+          de: "Sie fahren nie am Wochenende.",
+          sk: "Oni nikdy necestujú cez víkend."
+        }
+      ]
+    },
+    {
+      type: "categorysort",
+      instruction: "Roztrieďte slová do správnych kategórií podľa ich rodu (členu).",
+      categories: [
+        {
+          name: "Maskulína (der)",
+          color: "blue",
+          words: [
+            "der Tag",
+            "der Morgen",
+            "der Mann",
+            "der Tisch"
+          ]
+        },
+        {
+          name: "Feminína (die)",
+          color: "rose",
+          words: [
+            "die Woche",
+            "die Frau",
+            "die Tür"
+          ]
+        },
+        {
+          name: "Neutrálne (das)",
+          color: "green",
+          words: [
+            "das Wochenende",
+            "das Kind",
+            "das Buch"
+          ]
+        }
+      ],
+      explanation: "V nemčine majú podstatné mená tri rody: mužský (der), ženský (die) a stredný (das). Je dôležité učiť sa podstatné mená spolu s ich členom, pretože určuje gramatické pravidlá."
+    },
+    {
+      type: "translation",
+      instruction: "Preložte nasledujúce vety zo slovenčiny do nemčiny.",
+      sentences: [
+        {
+          sk: "Ja často čítam.",
+          answer: "Ich lese oft.",
+          hint: "lesen, oft",
+          explanation: "Sloveso 'lesen' je nepravidelné, ale v 1. osobe jednotného čísla (ich) sa jeho kmeňová samohláska nemení. Frekvenčné príslovky idú za sloveso."
+        },
+        {
+          sk: "Ty vždy jazdíš autom.",
+          answer: "Du fährst immer Auto.",
+          hint: "fahren, immer",
+          explanation: "Sloveso 'fahren' mení kmeňovú samohlásku 'a' na 'ä' v 2. osobe jednotného čísla (du fährst). 'Immer' znamená 'vždy'."
+        },
+        {
+          sk: "On ju nikdy nestretne.",
+          answer: "Er trifft sie nie.",
+          hint: "treffen, nie",
+          explanation: "Sloveso 'treffen' mení kmeňovú samohlásku 'e' na 'i' v 3. osobe jednotného čísla (er trifft). 'Nie' znamená 'nikdy'."
+        },
+        {
+          sk: "My čítame každý deň.",
+          answer: "Wir lesen jeden Tag.",
+          hint: "jeden Tag",
+          explanation: "Fráza 'každý deň' sa prekladá ako 'jeden Tag'. Sloveso 'lesen' je v 1. osobe množného čísla pravidelné."
+        }
+      ]
+    },
+    {
+      type: "conjugation",
+      instruction: "Vyčasujte nasledujúce nepravidelné slovesá v prítomnom čase (Präsens).",
+      verbs: [
+        {
+          infinitive: "lesen",
+          translation: "čítať",
+          forms: [
+            {
+              pronoun: "ich",
+              correct: "lese"
+            },
+            {
+              pronoun: "du",
+              correct: "liest"
+            },
+            {
+              pronoun: "er/sie/es",
+              correct: "liest"
+            },
+            {
+              pronoun: "wir",
+              correct: "lesen"
+            },
+            {
+              pronoun: "ihr",
+              correct: "lest"
+            },
+            {
+              pronoun: "sie/Sie",
+              correct: "lesen"
+            }
+          ],
+          note: "Sloveso 'lesen' je nepravidelné a mení kmeňovú samohlásku 'e' na 'ie' v 2. a 3. osobe jednotného čísla."
+        },
+        {
+          infinitive: "fahren",
+          translation: "šoférovať / cestovať",
+          forms: [
+            {
+              pronoun: "ich",
+              correct: "fahre"
+            },
+            {
+              pronoun: "du",
+              correct: "fährst"
+            },
+            {
+              pronoun: "er/sie/es",
+              correct: "fährt"
+            },
+            {
+              pronoun: "wir",
+              correct: "fahren"
+            },
+            {
+              pronoun: "ihr",
+              correct: "fahrt"
+            },
+            {
+              pronoun: "sie/Sie",
+              correct: "fahren"
+            }
+          ],
+          note: "Sloveso 'fahren' je nepravidelné a mení kmeňovú samohlásku 'a' na 'ä' v 2. a 3. osobe jednotného čísla."
+        }
+      ]
+    }
+  ],
+  reviewWords: []
+};

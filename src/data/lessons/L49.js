@@ -2,565 +2,887 @@ export const lesson49 = {
   id: 49,
   week: 10,
   day: 4,
-  title: "Reisen und Urlaub",
-  topic: "Cestovanie a dovolenka",
+  title: "Sein Fahrrad, ihre Matte",
+  topic: "Privlastňovacie zámená v 3. osobe v Akuzatíve.",
   cefr: "A1",
-  xpReward: 30,
-  narrativeContext:
-    "Jana plánuje svoju letnú dovolenku. Chce ísť do Talianska. Prezruje si lety, rezervuje hotel a balí kufor. 'Wohin fährt dein Zug?' 'Wann landet das Flugzeug?'",
-  communicativeGoal:
-    "Po tejto lekcii viem plánovať cestu, hovoriť o doprave a ubytovaní a použijem modálne + separabilné slovesá pri cestovaní.",
-  skillFocus: ["vocabulary", "grammar", "speaking"],
-
-  grammarNote: {
-    rule:
-      "Modálne + odlučovacie slovesá pri cestovaní + cestovné predložky: nach / in die / ans",
-    explanation:
-      "Modálne slovesá + odlučovacie infinitívy: 'Wann müssen wir abfahren?' (müssen + abfahren), 'Ich möchte das Ticket buchen.' (möchten + buchen), 'Können Sie mich abholen?' (können + abholen). Cestovné predložky: nach + krajina bez člena: Ich fahre nach Italien, nach Deutschland, nach Österreich. In + krajina s členom (F/Pl): Ich fahre in die Schweiz, in die USA, in die Türkei. Ans Meer/an den See: Ich fahre ans Meer.",
-    examples: [
-      { de: "Ich fahre nach Italien.", sk: "Idem do Talianska." },
-      { de: "Sie fährt in die Schweiz.", sk: "Ide do Švajčiarska." },
-      { de: "Wir fahren ans Meer.", sk: "Ideme k moru." },
-      { de: "Wann müssen wir abfahren?", sk: "Kedy musíme odísť?" },
-      { de: "Können Sie mich abholen?", sk: "Môžete ma vyzdvihnúť?" },
-    ],
-    slovakContrastNote:
-      "Slovenčina: 'ísť do Talianska' = fahren nach Italien (nach + bez člena). Pre krajiny so členom: 'ísť do Švajčiarska' = in die Schweiz (in + die, Akk). Slovenské 'do' zodpovedá nemeckému nach (pre krajiny bez člena) alebo in + Akk (pre krajiny so členom). 'Ans Meer' = k moru — slovenčina: 'k' + datív.",
-  },
-
+  xpReward: 20,
+  narrativeContext: "Jana hat Besuch. Ein Freund möchte etwas ausleihen.",
+  communicativeGoal: "Nach dieser Lektion kann ich sagen, wem Dinge gehören und sie ausleihen.",
+  skillFocus: [
+    "grammar",
+    "vocabulary",
+    "speaking",
+    "listening"
+  ],
+  lessonNotes: "V tejto lekcii sa naučíme používať privlastňovacie zámená v 3. osobe (jeho, jej, ich) v Akuzatíve. Budeme cvičiť, ako sa pýtať a odpovedať na otázky o vlastníctve a požičiavaní vecí. Pomôže ti to lepšie sa orientovať v situáciách, keď si chceš niečo požičať alebo niekomu niečo požičať.",
+  grammarNotes: [
+    {
+      rule: "Privlastňovacie zámená v akuzatíve (3. osoba)",
+      explanation: "<p>V nemčine, rovnako ako v slovenčine, používame privlastňovacie zámená (ako „jeho“, „jej“) na vyjadrenie vlastníctva. V nemčine sa však tieto zámená menia podľa pádu a rodu podstatného mena, ku ktorému patria. V tejto lekcii sa zameriame na akuzatív (4. pád), ktorý sa používa po určitých slovesách (napr. <i>haben, sehen, kaufen, mögen</i>) alebo predložkách. Pre 3. osobu jednotného čísla používame <strong>sein-</strong> (jeho/jeho pre stredný rod) a <strong>ihr-</strong> (jej). Ich koncovky sa menia nasledovne:</p><table>  <thead>    <tr>      <th>Rod podstatného mena</th>      <th>Nominatív (L48)</th>      <th>Akuzatív (L49)</th>      <th>Príklad (Akuzatív)</th>    </tr>  </thead>  <tbody>    <tr>      <td>Mužský rod (der)</td>      <td>sein / ihr</td>      <td><strong>seinen</strong> / <strong>ihren</strong></td>      <td>Ich sehe <strong>seinen</strong> Hund. (Vidím jeho psa.)</td>    </tr>    <tr>      <td>Ženský rod (die)</td>      <td>seine / ihre</td>      <td>seine / ihre</td>      <td>Ich sehe <strong>ihre</strong> Katze. (Vidím jej mačku.)</td>    </tr>    <tr>      <td>Stredný rod (das)</td>      <td>sein / ihr</td>      <td>sein / ihr</td>      <td>Ich sehe <strong>sein</strong> Auto. (Vidím jeho auto.)</td>    </tr>    <tr>      <td>Množné číslo (die)</td>      <td>seine / ihre</td>      <td>seine / ihre</td>      <td>Ich sehe <strong>ihre</strong> Bücher. (Vidím jej/ich knihy.)</td>    </tr>  </tbody></table><p>Všimnite si, že jedinou zmenou oproti nominatívu je pridanie koncovky <strong>-en</strong> pre mužský rod v akuzatíve. Pre ženský, stredný rod a množné číslo zostávajú tvary rovnaké ako v nominatíve.</p><div class=\"tip-box\">Pamätajte, že tvar <strong>ihr-</strong> sa používa aj pre 3. osobu množného čísla (ich, ich) a pre formálne oslovenie (Váš, Vaša), pričom koncovky sú rovnaké ako pre „jej“. Kontext vždy napovie, o koho ide.</div>",
+      examples: [
+        {
+          de: "Ich sehe seinen Hund.",
+          sk: "Vidím jeho psa.",
+          note: "Mužský rod v akuzatíve: sein + -en"
+        },
+        {
+          de: "Sie mag ihre Katze.",
+          sk: "Má rada jej mačku.",
+          note: "Ženský rod v akuzatíve: ihr + -e"
+        },
+        {
+          de: "Wir kaufen sein Auto.",
+          sk: "Kupujeme jeho auto.",
+          note: "Stredný rod v akuzatíve: sein"
+        },
+        {
+          de: "Besuchst du ihre Eltern?",
+          sk: "Navštevuješ jej/ich rodičov?",
+          note: "Množné číslo v akuzatíve: ihr + -e"
+        },
+        {
+          de: "Er hat seinen Schlüssel verloren.",
+          sk: "Stratil svoj kľúč.",
+          note: "Mužský rod v akuzatíve: sein + -en"
+        },
+        {
+          de: "Ich finde ihre Tasche nicht.",
+          sk: "Nemôžem nájsť jej tašku.",
+          note: "Ženský rod v akuzatíve: ihr + -e"
+        },
+        {
+          de: "Braucht sie sein Buch?",
+          sk: "Potrebuje jeho knihu?",
+          note: "Stredný rod v akuzatíve: sein"
+        },
+        {
+          de: "Sie besuchen ihre Freunde.",
+          sk: "Navštevujú svojich priateľov.",
+          note: "Množné číslo v akuzatíve: ihr + -e"
+        }
+      ],
+      slovakContrastNote: "V slovenčine sú privlastňovacie zámená „jeho“ a „jej“ nemenné a nemenia sa podľa pádu podstatného mena, ktoré vlastnia. Napríklad povieme „Vidím jeho psa“ (Nominatív: jeho pes) aj „Vidím jeho psa“ (Akuzatív: jeho psa). V nemčine sa však „sein Hund“ (Nominatív) zmení na „seinen Hund“ (Akuzatív). Toto je kľúčový rozdiel, na ktorý si treba dávať pozor."
+    },
+    {
+      rule: "Výber privlastňovacieho zámena podľa vlastníka",
+      explanation: "<p>Predtým, ako určíme správnu koncovku privlastňovacieho zámena v akuzatíve, musíme najprv vybrať správny kmeň zámena (<strong>sein-</strong> alebo <strong>ihr-</strong>). Toto závisí od rodu a čísla <strong>vlastníka</strong>, nie od rodu vlastnenej veci.</p><ul>  <li>Používame <strong>sein-</strong>, ak vlastníkom je muž (<em>er</em>) alebo vec stredného rodu (<em>es</em>).</li>  <li>Používame <strong>ihr-</strong>, ak vlastníkom je žena (<em>sie</em>), skupina ľudí (<em>sie</em> - oni) alebo ak oslovujeme formálne (<em>Sie</em> - Vy).</li></ul><p>Až potom, čo si vyberieme správny kmeň, aplikujeme pravidlá akuzatívnej koncovky podľa rodu vlastnenej veci, ako je vysvetlené v prvej poznámke.</p>",
+      examples: [
+        {
+          de: "Peter sucht seinen Ball.",
+          sk: "Peter hľadá svoju loptu.",
+          note: "Vlastník: Peter (er) → sein-"
+        },
+        {
+          de: "Anna kauft ihre Tasche.",
+          sk: "Anna kupuje svoju tašku.",
+          note: "Vlastník: Anna (sie) → ihr-"
+        },
+        {
+          de: "Das Kind liebt sein Spielzeug.",
+          sk: "Dieťa miluje svoju hračku.",
+          note: "Vlastník: Das Kind (es) → sein-"
+        },
+        {
+          de: "Die Studenten besuchen ihren Professor.",
+          sk: "Študenti navštevujú svojho profesora.",
+          note: "Vlastník: Die Studenten (sie - oni) → ihr-"
+        }
+      ],
+      slovakContrastNote: "V slovenčine je výber medzi „jeho“ a „jej“ tiež závislý od rodu vlastníka (jeho pre mužov/stredný rod, jej pre ženy). Avšak, slovenčina má aj zvratné privlastňovacie zámeno „svoj“, ktoré sa používa, ak vlastník je zároveň podmetom vety (napr. „Peter hľadá <strong>svoju</strong> loptu“). V nemčine sa v takýchto prípadoch stále používajú zámená <strong>sein-</strong> alebo <strong>ihr-</strong>, čo môže byť pre slovenských študentov mätúce."
+    }
+  ],
   vocab: [
     {
-      de: "das Flugzeug",
-      sk: "lietadlo",
-      example: "Das Flugzeug landet um 14:00 Uhr.",
-      exampleSk: "Lietadlo pristáva o 14:00.",
+      de: "das Fahrrad",
+      sk: "bicykel",
       gender: "N",
       srsId: "L49_V01",
-      recycledFrom: [],
+      example: "Kann ich sein Fahrrad nehmen?",
+      exampleSk: "Môžem si vziať jeho bicykel?",
+      recycledFrom: []
     },
     {
-      de: "der Flug",
-      sk: "let",
-      example: "Der Flug nach Rom dauert zwei Stunden.",
-      exampleSk: "Let do Ríma trvá dve hodiny.",
-      gender: "M",
+      de: "die Matte",
+      sk: "podložka",
+      gender: "F",
       srsId: "L49_V02",
-      recycledFrom: [],
+      example: "Das ist ihre Matte.",
+      exampleSk: "To je jej podložka.",
+      recycledFrom: []
     },
     {
-      de: "fliegen",
-      sk: "letieť",
-      example: "Wir fliegen am Montag nach Mailand.",
-      exampleSk: "V pondelok letíme do Milána.",
-      gender: null,
+      de: "der Rucksack",
+      sk: "ruksak",
+      gender: "M",
       srsId: "L49_V03",
-      recycledFrom: [],
+      example: "Er trägt seinen Rucksack.",
+      exampleSk: "Nosí svoj ruksak.",
+      recycledFrom: []
     },
     {
-      de: "buchen",
-      sk: "rezervovať, zarezervovať",
-      example: "Ich buche das Hotel online.",
-      exampleSk: "Rezervujem hotel online.",
-      gender: null,
+      de: "die Flasche",
+      sk: "fľaša",
+      gender: "F",
       srsId: "L49_V04",
-      recycledFrom: [],
+      example: "Ist das ihre Flasche?",
+      exampleSk: "Je to jej fľaša?",
+      recycledFrom: []
     },
     {
-      de: "das Hotel",
-      sk: "hotel",
-      example: "Das Hotel liegt zentral.",
-      exampleSk: "Hotel leží centrálne.",
+      de: "das Geld",
+      sk: "peniaze",
       gender: "N",
       srsId: "L49_V05",
-      recycledFrom: [23],
+      example: "Er hat sein Geld verloren.",
+      exampleSk: "Stratil svoje peniaze.",
+      recycledFrom: []
     },
     {
-      de: "das Hostel",
-      sk: "hostel",
-      example: "Das Hostel ist billiger als das Hotel.",
-      exampleSk: "Hostel je lacnejší ako hotel.",
-      gender: "N",
+      de: "die Brille",
+      sk: "okuliare",
+      gender: "F",
       srsId: "L49_V06",
-      recycledFrom: [],
+      example: "Sie hat ihre Brille zu Hause gelassen.",
+      exampleSk: "Nechala si okuliare doma.",
+      recycledFrom: []
     },
     {
-      de: "der Koffer",
-      sk: "kufor",
-      example: "Ich packe den Koffer für den Urlaub.",
-      exampleSk: "Balím kufor na dovolenku.",
+      de: "der Regenschirm",
+      sk: "dáždnik",
       gender: "M",
       srsId: "L49_V07",
-      recycledFrom: [],
+      example: "Kannst du seinen Regenschirm mitbringen?",
+      exampleSk: "Môžeš priniesť jeho dáždnik?",
+      recycledFrom: []
     },
     {
-      de: "packen",
-      sk: "baliť",
-      example: "Was muss ich alles einpacken?",
-      exampleSk: "Čo všetko musím zabalif?",
-      gender: null,
+      de: "der Mantel",
+      sk: "kabát",
+      gender: "M",
       srsId: "L49_V08",
-      recycledFrom: [],
+      example: "Sie mag ihren Mantel.",
+      exampleSk: "Páči sa jej jej kabát.",
+      recycledFrom: []
     },
     {
-      de: "der Urlaub",
-      sk: "dovolenka",
-      example: "Ich habe zwei Wochen Urlaub.",
-      exampleSk: "Mám dvoj týždňovú dovolenku.",
-      gender: "M",
-      srsId: "L49_V09",
-      recycledFrom: [],
-    },
-    {
-      de: "die Ferien (Pl.)",
-      sk: "prázdniny (školské)",
-      example: "In den Ferien fahren die Kinder ans Meer.",
-      exampleSk: "Na prázdninách idú deti k moru.",
-      gender: "Pl",
-      srsId: "L49_V10",
-      recycledFrom: [],
-    },
-    {
-      de: "ans Meer fahren",
-      sk: "ísť k moru",
-      example: "Im Juli fahren wir ans Meer nach Italien.",
-      exampleSk: "V júli ideme k moru do Talianska.",
-      gender: null,
-      srsId: "L49_V11",
-      recycledFrom: [],
-    },
-    {
-      de: "der Strand",
-      sk: "pláž",
-      example: "Am Strand liegen und sich entspannen.",
-      exampleSk: "Ležať na pláži a relaxovať.",
-      gender: "M",
-      srsId: "L49_V12",
-      recycledFrom: [],
-    },
-    {
-      de: "das Ausland",
-      sk: "zahraničie",
-      example: "Ich fahre dieses Jahr ins Ausland.",
-      exampleSk: "Tento rok idem do zahraničia.",
-      gender: "N",
-      srsId: "L49_V13",
-      recycledFrom: [],
-    },
-    {
-      de: "der Reisepass",
-      sk: "cestovný pas",
-      example: "Vergiss den Reisepass nicht!",
-      exampleSk: "Nezabudni na cestovný pas!",
-      gender: "M",
-      srsId: "L49_V14",
-      recycledFrom: [],
-    },
-    {
-      de: "die Unterkunft",
-      sk: "ubytovanie",
-      example: "Wir suchen eine günstige Unterkunft.",
-      exampleSk: "Hľadáme lacné ubytovanie.",
+      de: "die Jacke",
+      sk: "bunda",
       gender: "F",
-      srsId: "L49_V15",
-      recycledFrom: [],
+      srsId: "L49_V09",
+      example: "Ich suche ihre Jacke.",
+      exampleSk: "Hľadám jej bundu.",
+      recycledFrom: []
     },
     {
-      de: "der Campingplatz",
-      sk: "kemping",
-      example: "Wir schlafen auf dem Campingplatz.",
-      exampleSk: "Spíme na kempingu.",
+      de: "der Stift",
+      sk: "pero",
       gender: "M",
-      srsId: "L49_V16",
-      recycledFrom: [],
+      srsId: "L49_V10",
+      example: "Gib mir bitte seinen Stift.",
+      exampleSk: "Daj mi prosím jeho pero.",
+      recycledFrom: []
     },
     {
-      de: "landen → landet",
-      sk: "pristáť, pristávať",
-      example: "Das Flugzeug landet pünktlich.",
-      exampleSk: "Lietadlo pristáva načas.",
+      de: "der Computer",
+      sk: "počítač",
+      gender: "M",
+      srsId: "L49_V11",
+      example: "Er arbeitet an seinem Computer.",
+      exampleSk: "Pracuje na svojom počítači.",
+      recycledFrom: []
+    },
+    {
+      de: "die Zeitung",
+      sk: "noviny",
+      gender: "F",
+      srsId: "L49_V12",
+      example: "Liest du ihre Zeitung?",
+      exampleSk: "Čítaš jej noviny?",
+      recycledFrom: []
+    },
+    {
+      de: "nehmen",
+      sk: "vziať",
+      gender: null,
+      srsId: "L49_V13",
+      example: "Darf ich einen Stift nehmen?",
+      exampleSk: "Smiem si vziať pero?",
+      recycledFrom: []
+    },
+    {
+      de: "geben",
+      sk: "dať",
+      gender: null,
+      srsId: "L49_V14",
+      example: "Kannst du mir bitte die Flasche geben?",
+      exampleSk: "Môžeš mi prosím dať fľašu?",
+      recycledFrom: []
+    },
+    {
+      de: "leihen",
+      sk: "požičať (si)",
+      gender: null,
+      srsId: "L49_V15",
+      example: "Ich möchte mir ein Fahrrad leihen.",
+      exampleSk: "Chcel by som si požičať bicykel.",
+      recycledFrom: []
+    },
+    {
+      de: "gern",
+      sk: "rád/rada",
+      gender: null,
+      srsId: "L49_V16",
+      example: "Ich trinke gern Kaffee.",
+      exampleSk: "Rád pijem kávu.",
+      recycledFrom: []
+    },
+    {
+      de: "nicht",
+      sk: "nie",
       gender: null,
       srsId: "L49_V17",
-      recycledFrom: [],
+      example: "Das ist nicht mein Fahrrad.",
+      exampleSk: "To nie je môj bicykel.",
+      recycledFrom: []
     },
     {
-      de: "starten → startet",
-      sk: "odletieť, štartovať",
-      example: "Das Flugzeug startet um 9 Uhr.",
-      exampleSk: "Lietadlo štartuje o 9 hodine.",
+      de: "jetzt",
+      sk: "teraz",
       gender: null,
       srsId: "L49_V18",
-      recycledFrom: [],
+      example: "Ich muss jetzt gehen.",
+      exampleSk: "Musím ísť teraz.",
+      recycledFrom: []
     },
     {
-      de: "einsteigen → steigt ein ⚠️",
-      sk: "nastúpiť — odlučovacie",
-      example: "Bitte steigen Sie jetzt ein!",
-      exampleSk: "Prosím, nastúpte teraz!",
+      de: "später",
+      sk: "neskôr",
       gender: null,
       srsId: "L49_V19",
-      recycledFrom: [24],
+      example: "Ich komme später.",
+      exampleSk: "Prídem neskôr.",
+      recycledFrom: []
     },
     {
-      de: "aussteigen → steigt aus ⚠️",
-      sk: "vystúpiť — odlučovacie",
-      example: "Wir steigen in Rom aus.",
-      exampleSk: "Vystúpime v Ríme.",
+      de: "Entschuldigung!",
+      sk: "Prepáčte!",
       gender: null,
       srsId: "L49_V20",
-      recycledFrom: [24],
+      example: "Entschuldigung! Ich habe es nicht gehört.",
+      exampleSk: "Prepáčte! Nepočul som to.",
+      recycledFrom: []
     },
+    {
+      de: "Kein Problem!",
+      sk: "Žiaden problém!",
+      gender: null,
+      srsId: "L49_V21",
+      example: "Ich habe keine Zeit. Kein Problem!",
+      exampleSk: "Nemám čas. Žiaden problém!",
+      recycledFrom: []
+    },
+    {
+      de: "Kann ich...?",
+      sk: "Môžem...?",
+      gender: null,
+      srsId: "L49_V22",
+      example: "Kann ich bitte einen Kaffee haben?",
+      exampleSk: "Môžem si prosím dať kávu?",
+      recycledFrom: []
+    },
+    {
+      de: "Ja, klar!",
+      sk: "Áno, jasné!",
+      gender: null,
+      srsId: "L49_V23",
+      example: "Kann ich dein Fahrrad leihen? Ja, klar!",
+      exampleSk: "Môžem si požičať tvoj bicykel? Áno, jasné!",
+      recycledFrom: []
+    }
   ],
-
   exercises: [
     {
       type: "flashcard",
-      instruction:
-        "Prezri slovíčka z oblasti cestovania. Ku každej karte povedz, či si to robil/a na poslednej dovolenke.",
-      items: [
-        "L49_V01",
-        "L49_V02",
-        "L49_V03",
-        "L49_V04",
-        "L49_V05",
-        "L49_V07",
-        "L49_V08",
-        "L49_V09",
-        "L49_V11",
-        "L49_V12",
-        "L49_V13",
-        "L49_V14",
-        "L49_V15",
-        "L49_V17",
-        "L49_V18",
-        "L49_V19",
-        "L49_V20",
-      ],
-    },
-    {
-      type: "mcq",
-      instruction: "Vyber správnu odpoveď.",
-      questions: [
-        {
-          question: "Jana chce ísť do Talianska. Ako sa to povie?",
-          options: [
-            "Jana fährt in Italien.",
-            "Jana fährt nach Italien.",
-            "Jana fährt zu Italien.",
-            "Jana fährt in die Italien.",
-          ],
-          answer: "Jana fährt nach Italien.",
-          explanation:
-            "Taliansko (Italien) nemá člen → 'nach Italien'. 'nach' + krajina bez člena.",
-        },
-        {
-          question: "Do Švajčiarska sa hovorí:",
-          options: [
-            "nach Schweiz",
-            "nach die Schweiz",
-            "in die Schweiz",
-            "in Schweiz",
-          ],
-          answer: "in die Schweiz",
-          explanation:
-            "'die Schweiz' má ženský člen → 'in die Schweiz' (Akkusatív). Krajiny so členom (F/Pl/M): in + Akk.",
-        },
-        {
-          question: "'Wann ___ das Flugzeug?' (pristáť)",
-          options: ["landet", "fliegt", "startet", "bucht"],
-          answer: "landet",
-          explanation: "'landen' = pristáť. Das Flugzeug landet. ≠ starten = štartovať/odletieť.",
-        },
-        {
-          question: "Čo si musí Jana vziať, aby mohla ísť do zahraničia?",
-          options: ["das Hotel", "den Reisepass", "den Campingplatz", "die Ferien"],
-          answer: "den Reisepass",
-          explanation: "'der Reisepass' = cestovný pas. Potrebný pri cestovaní do zahraničia.",
-        },
-        {
-          question:
-            "Modálne + odlučovacie: 'Wann ___ wir ab___?' (abfahren, müssen)",
-          options: [
-            "müssen … fahren",
-            "müssen … abfahren",
-            "abfahren … müssen",
-            "müssen … ab",
-          ],
-          answer: "müssen … ab",
-          explanation:
-            "Slovosled: müssen (P2) + … + abfahren (koniec). V otázke: Wann müssen wir abfahren? Častica 'ab' ostáva súčasťou infinitívu.",
-        },
-      ],
-    },
-    {
-      type: "fill",
-      instruction: "Doplň správnu predložku alebo tvar slovesa.",
-      questions: [
-        {
-          sentence: "Ich fahre ___ Sommer nach Italien.",
-          answer: "im",
-          hint: "predložka + mesiac/ročné obdobie",
-          explanation: "'im Sommer' = v lete. im = in + dem (datív).",
-        },
-        {
-          sentence: "Das Flugzeug ___ pünktlich um 10 Uhr.",
-          answer: "landet",
-          hint: "pristáť — 3. os. sg.",
-          explanation: "'landen' → landet. Das Flugzeug landet.",
-        },
-        {
-          sentence: "Bitte ___ Sie Ihren Koffer ___!",
-          answer: "packen … ein",
-          hint: "einpacken — odlučovacie",
-          explanation: "'einpacken' → packen … ein. Pokyn: Bitte packen Sie ein!",
-        },
-        {
-          sentence: "Wir fahren ___ Meer. (k moru)",
-          answer: "ans",
-          hint: "an + das → ans",
-          explanation: "'ans Meer' = an das Meer (Akkusatív). Kontrakcia an + das = ans.",
-        },
-        {
-          sentence: "Ich ___ ein Hotel in Rom ___.",
-          answer: "buche … ",
-          hint: "buchen — pravidelné, 1. os. sg. (bez prefixu)",
-          explanation: "'buchen' je pravidelné sloveso bez prefixu. Ich buche das Hotel.",
-        },
-      ],
-    },
-    {
-      type: "listen",
-      instruction:
-        "Počúvaj cestovné frázy. Opakuj nahlas a všímaj si predložky (nach/in die/ans).",
-      questions: [
-        { de: "Ich fahre nach Italien.", sk: "Idem do Talianska." },
-        { de: "Sie fährt in die Schweiz.", sk: "Ide do Švajčiarska." },
-        { de: "Wir fahren ans Meer.", sk: "Ideme k moru." },
-        { de: "Wann müssen wir abfahren?", sk: "Kedy musíme odísť?" },
-        { de: "Das Flugzeug landet um 15 Uhr.", sk: "Lietadlo pristáva o 15:00." },
-        { de: "Vergiss den Reisepass nicht!", sk: "Nezabudni na cestovný pas!" },
-        { de: "Ich buche das Hotel online.", sk: "Rezervujem hotel online." },
-        { de: "Bitte steigen Sie jetzt ein!", sk: "Prosím, nastúpte teraz!" },
-      ],
+      instruction: "Prezri si slovíčka tejto lekcie. Klikni na kartičku pre preklad."
     },
     {
       type: "match",
-      instruction: "Spoj nemecký výraz so slovenským prekladom.",
+      instruction: "Priraďte nemecké slová k ich slovenským prekladom.",
       pairs: [
-        ["das Flugzeug", "lietadlo"],
-        ["der Koffer", "kufor"],
-        ["der Strand", "pláž"],
-        ["der Reisepass", "cestovný pas"],
-        ["die Unterkunft", "ubytovanie"],
-        ["buchen", "rezervovať"],
-        ["landen", "pristáť"],
-        ["einsteigen", "nastúpiť"],
-        ["aussteigen", "vystúpiť"],
-        ["das Ausland", "zahraničie"],
-      ],
-    },
-    {
-      type: "dialogue",
-      instruction:
-        "Jana a Lukas plánujú dovolenku. Prečítaj si rozhovor — modálne a odlučovacie slovesá v akcii.",
-      lines: [
-        {
-          speaker: "Lukas",
-          de: "Jana, wohin möchtest du in diesem Sommer fahren?",
-          sk: "Jana, kam chceš ísť toto leto?",
-        },
-        {
-          speaker: "Jana",
-          de: "Ich möchte nach Italien fahren. Ans Meer — ich träume von Strand und Sonne!",
-          sk: "Chcem ísť do Talianska. K moru — snívam o pláži a slnku!",
-        },
-        {
-          speaker: "Lukas",
-          de: "Toll! Wie möchtest du reisen — mit dem Flugzeug oder mit dem Zug?",
-          sk: "Skvelé! Ako chceš cestovať — lietadlom alebo vlakom?",
-        },
-        {
-          speaker: "Jana",
-          de: "Ich fliege lieber. Der Flug nach Rom dauert nur zwei Stunden.",
-          sk: "Radšej letím. Let do Ríma trvá len dve hodiny.",
-        },
-        {
-          speaker: "Lukas",
-          de: "Hast du schon ein Hotel gebucht?",
-          sk: "Rezervoval/a si si už hotel?",
-        },
-        {
-          speaker: "Jana",
-          de: "Noch nicht. Ich suche noch eine günstige Unterkunft — vielleicht ein Hostel.",
-          sk: "Ešte nie. Stále hľadám lacné ubytovanie — možno hostel.",
-        },
-        {
-          speaker: "Lukas",
-          de: "Was musst du alles mitnehmen?",
-          sk: "Čo všetko musíš vziať so sebou?",
-        },
-        {
-          speaker: "Jana",
-          de: "Den Reisepass, natürlich! Und Kleidung, Sonnencreme, Geld …",
-          sk: "Cestovný pas, samozrejme! A oblečenie, opaľovací krém, peniaze …",
-        },
-        {
-          speaker: "Lukas",
-          de: "Wann startet dein Flugzeug?",
-          sk: "Kedy štartuje tvoje lietadlo?",
-        },
-        {
-          speaker: "Jana",
-          de: "Am fünften Juli, morgens um 8 Uhr. Ich muss früh aufstehen!",
-          sk: "Piateho júla, ráno o 8:00. Musím skoro vstávať!",
-        },
-        {
-          speaker: "Lukas",
-          de: "Und wann landest du in Rom?",
-          sk: "A kedy pristávaš v Ríme?",
-        },
-        {
-          speaker: "Jana",
-          de: "Gegen 10 Uhr. Dann steige ich aus und nehme ein Taxi zum Hotel. Ich freue mich so!",
-          sk: "Okolo 10:00. Potom vystúpim a vezmem si taxi do hotela. Tak sa na to teším!",
-        },
-      ],
-      comprehensionQuestions: [
-        {
-          question: "Wohin möchte Jana fahren?",
-          answer: "Jana möchte nach Italien (nach Rom) fahren — ans Meer.",
-          explanation: "Jana sagt: 'Ich möchte nach Italien fahren. Ans Meer.'",
-        },
-        {
-          question: "Wann startet ihr Flug?",
-          answer: "Am fünften Juli um 8 Uhr morgens.",
-          explanation: "'Am fünften Juli, morgens um 8 Uhr.'",
-        },
-        {
-          question: "Was macht Jana nach der Landung?",
-          answer: "Jana steigt aus und nimmt ein Taxi zum Hotel.",
-          explanation: "'Dann steige ich aus und nehme ein Taxi zum Hotel.'",
-        },
-      ],
-    },
-    {
-      type: "minitext",
-      instruction:
-        "Jana číta popis hotela na webstránke. Odpovedz na otázky.",
-      text:
-        "Hotel La Bella Roma — Ihr Traumhotel im Herzen Roms!\n★★★ Komfortables Hotel in zentraler Lage.\nEntfernung: 5 Minuten zum Kolosseum, 10 Minuten zum Vatikan.\nZimmer: Einzelzimmer ab 89 € pro Nacht. Doppelzimmer ab 129 € pro Nacht.\nFrühstück inklusive! Kostenloses WLAN. Klimaanlage in allen Zimmern.\nBuchung: Online buchen oder anrufen: +39 06 12345678\nWir freuen uns auf Ihren Besuch!",
-      textSk:
-        "Hotel La Bella Roma — Váš vysnívaný hotel v srdci Ríma!\n★★★ Komfortný hotel v centrálnej polohe.\nVzdialenosť: 5 minút ku Koloseu, 10 minút k Vatikánu.\nIzby: jednolôžková izba od 89 € za noc. dvojlôžková izba od 129 € za noc.\nRaňajky v cene! Bezplatné WiFi. Klimatizácia v každej izbe.\nRezervovanie: Rezervujte online alebo zavolajte: +39 06 12345678\nTešíme sa na Vašu návštevu!",
-      questions: [
-        {
-          question: "Wie viel kostet ein Einzelzimmer pro Nacht?",
-          answer: "Ein Einzelzimmer kostet ab 89 € pro Nacht.",
-          explanation: "'Einzelzimmer ab 89 € pro Nacht.'",
-        },
-        {
-          question: "Was ist im Preis inklusive?",
-          answer: "Das Frühstück und kostenloses WLAN sind inklusive.",
-          explanation: "'Frühstück inklusive! Kostenloses WLAN.'",
-        },
-        {
-          question: "Wie weit ist das Hotel vom Kolosseum?",
-          answer: "Das Hotel ist 5 Minuten vom Kolosseum entfernt.",
-          explanation: "'5 Minuten zum Kolosseum.'",
-        },
-      ],
-    },
-    {
-      type: "freewrite",
-      instruction:
-        "Napíš odstavec o svojej vysnívanej dovolenke. Použi predložky (nach/in die/ans) a modálne slovesá.",
-      prompt:
-        "Beschreibe deinen Traumurlaub. Wohin möchtest du fahren? Was möchtest du machen?",
-      minWords: 40,
-      exampleAnswer:
-        "Mein Traumurlaub ist in Japan. Ich möchte nach Tokio fliegen — der Flug dauert vielleicht 12 Stunden! Dort möchte ich viele Tempel und Restaurants besuchen. Ich muss natürlich den Reisepass mitnehmen und ein Hotel buchen. Ich möchte in einem traditionellen japanischen Ryokan übernachten. Am Strand möchte ich mich entspannen. Und ich möchte lieber in einem Hostel wohnen — das ist billiger als im Hotel. Eines Tages fahre ich nach Japan — das ist mein Traum!",
+        [
+          "das Fahrrad",
+          "bicykel"
+        ],
+        [
+          "die Matte",
+          "podložka"
+        ],
+        [
+          "der Rucksack",
+          "ruksak"
+        ],
+        [
+          "die Flasche",
+          "fľaša"
+        ],
+        [
+          "das Geld",
+          "peniaze"
+        ],
+        [
+          "die Brille",
+          "okuliare"
+        ],
+        [
+          "der Regenschirm",
+          "dáždnik"
+        ],
+        [
+          "der Mantel",
+          "kabát"
+        ],
+        [
+          "nehmen",
+          "vziať"
+        ],
+        [
+          "leihen",
+          "požičať (si)"
+        ]
+      ]
     },
     {
       type: "wordorder",
-      instruction: "ZoraÄ slovÃ¡ do sprÃ¡vnej nemeckej vety.",
+      instruction: "Usporiadajte slová tak, aby vytvorili správnu nemeckú vetu. Dávajte pozor na privlastňovacie zámená v akuzatíve.",
       sentences: [
         {
-          words: ["Obwohl", "Jana", "mÃ¼de", "ist,", "lernt", "sie", "Deutsch."],
-          correct: "Obwohl Jana mÃ¼de ist, lernt sie Deutsch.",
-          hint: "Hoci je Jana unavenÃ¡, uÄÃ­ sa nemÄinu.",
-          explanation: "'obwohl' uvÃ¡dza vedÄ¾ajÅ¡iu vetu â€” sloveso 'ist' na konci. HlavnÃ¡ veta po Äiarke zaÄÃ­na slovesom (inverzia).",
+          words: [
+            "Ich",
+            "sehe",
+            "seinen",
+            "Rucksack"
+          ],
+          correct: "Ich sehe seinen Rucksack",
+          hint: "Vidím jeho ruksak.",
+          explanation: "Podstatné meno 'Rucksack' (ruksak) je mužského rodu (der Rucksack). V akuzatíve pre mužský rod dostáva privlastňovacie zámeno koncovku '-en'. Preto 'sein' (jeho) sa mení na 'seinen'."
         },
         {
-          words: ["Obwohl", "es", "kalt", "ist,", "geht", "sie", "spazieren."],
-          correct: "Obwohl es kalt ist, geht sie spazieren.",
-          hint: "Hoci je zima, ide sa prechÃ¡dzaÅ¥.",
-          explanation: "Obwohl-veta: sloveso na konci 'ist'. HlavnÃ¡ veta: 'geht' na 1. mieste po Äiarke.",
+          words: [
+            "Sie",
+            "hat",
+            "ihre",
+            "Brille",
+            "vergessen"
+          ],
+          correct: "Sie hat ihre Brille vergessen",
+          hint: "Zabudla svoje okuliare.",
+          explanation: "Podstatné meno 'Brille' (okuliare) je ženského rodu (die Brille). V akuzatíve pre ženský rod dostáva privlastňovacie zámeno koncovku '-e'. Preto 'ihr' (jej) sa mení na 'ihre'."
         },
         {
-          words: ["Obwohl", "er", "krank", "ist,", "arbeitet", "er."],
-          correct: "Obwohl er krank ist, arbeitet er.",
-          hint: "Hoci je chorÃ½, pracuje.",
-          explanation: "VedÄ¾ajÅ¡ia veta s 'obwohl': 'ist' na konci. HlavnÃ¡ veta: 'arbeitet' pred 'er'.",
+          words: [
+            "Er",
+            "sucht",
+            "sein",
+            "Fahrrad"
+          ],
+          correct: "Er sucht sein Fahrrad",
+          hint: "Hľadá svoj bicykel.",
+          explanation: "Podstatné meno 'Fahrrad' (bicykel) je stredného rodu (das Fahrrad). V akuzatíve pre stredný rod privlastňovacie zámeno nemá žiadnu koncovku. Preto 'sein' (jeho) zostáva 'sein'."
         },
         {
-          words: ["Obwohl", "das", "Essen", "teuer", "ist,", "essen", "wir", "dort."],
-          correct: "Obwohl das Essen teuer ist, essen wir dort.",
-          hint: "Hoci je jedlo drahÃ©, jeme tam.",
-          explanation: "PrÃ­sudok 'ist' na konci obwohl-vety; 'essen' v hlavnej vete je na 1. pozÃ­cii.",
+          words: [
+            "Kannst",
+            "du",
+            "mir",
+            "seinen",
+            "Mantel",
+            "geben"
+          ],
+          correct: "Kannst du mir seinen Mantel geben",
+          hint: "Môžeš mi dať jeho kabát?",
+          explanation: "Podstatné meno 'Mantel' (kabát) je mužského rodu (der Mantel). V akuzatíve dostáva privlastňovacie zámeno koncovku '-en'. Sloveso 'geben' (dať) vyžaduje akuzatív pre predmet, ktorý sa dáva, a datív pre osobu, ktorej sa dáva ('mir')."
         },
         {
-          words: ["Obwohl", "sie", "wenig", "Zeit", "hat,", "hilft", "sie", "mir."],
-          correct: "Obwohl sie wenig Zeit hat, hilft sie mir.",
-          hint: "Hoci mÃ¡ mÃ¡lo Äasu, pomÃ¡ha mi.",
-          explanation: "'mir' je datÃ­v od 'ich' â€” hilft + Dativ (komu pomÃ¡ha).",
+          words: [
+            "Wir",
+            "möchten",
+            "ihre",
+            "Zeitung",
+            "lesen"
+          ],
+          correct: "Wir möchten ihre Zeitung lesen",
+          hint: "Chceli by sme si prečítať jej noviny.",
+          explanation: "Podstatné meno 'Zeitung' (noviny) je ženského rodu (die Zeitung). V akuzatíve pre ženský rod dostáva privlastňovacie zámeno koncovku '-e'. Sloveso 'möchten' (chcieť) je modálne sloveso, ktoré posúva plnovýznamové sloveso 'lesen' (čítať) na koniec vety."
+        }
+      ]
+    },
+    {
+      type: "fill",
+      instruction: "Doplňte správne slovo do medzery. Dávajte pozor na privlastňovacie zámená v akuzatíve a na špirálovú gramatiku.",
+      questions: [
+        {
+          sentence: "Er hat ___ (sein) Rucksack vergessen.",
+          answer: "seinen",
+          hint: "Rucksack je mužského rodu.",
+          explanation: "Podstatné meno 'Rucksack' (ruksak) je mužského rodu (der Rucksack). V akuzatíve pre mužský rod dostáva privlastňovacie zámeno koncovku '-en'. Preto 'sein' sa mení na 'seinen'."
         },
-      ],
+        {
+          sentence: "Sie sucht ___ (ihr) Flasche.",
+          answer: "ihre",
+          hint: "Flasche je ženského rodu.",
+          explanation: "Podstatné meno 'Flasche' (fľaša) je ženského rodu (die Flasche). V akuzatíve pre ženský rod dostáva privlastňovacie zámeno koncovku '-e'. Preto 'ihr' sa mení na 'ihre'."
+        },
+        {
+          sentence: "Kannst du ___ (sein) Geld nehmen?",
+          answer: "sein",
+          hint: "Geld je stredného rodu.",
+          explanation: "Podstatné meno 'Geld' (peniaze) je stredného rodu (das Geld). V akuzatíve pre stredný rod privlastňovacie zámeno nemá žiadnu koncovku. Preto 'sein' zostáva 'sein'."
+        },
+        {
+          sentence: "Ich sehe ___ (ihr) Computer.",
+          answer: "ihren",
+          hint: "Computer je mužského rodu.",
+          explanation: "Podstatné meno 'Computer' (počítač) je mužského rodu (der Computer). V akuzatíve pre mužský rod dostáva privlastňovacie zámeno koncovku '-en'. Preto 'ihr' sa mení na 'ihren'."
+        },
+        {
+          sentence: "Wir brauchen ___ (sein) Stift.",
+          answer: "seinen",
+          hint: "Stift je mužského rodu.",
+          explanation: "Podstatné meno 'Stift' (pero) je mužského rodu (der Stift). V akuzatíve pre mužský rod dostáva privlastňovacie zámeno koncovku '-en'. Preto 'sein' sa mení na 'seinen'."
+        },
+        {
+          sentence: "Gestern ___ (sein) ich im Kino.",
+          answer: "war",
+          hint: "Minulý čas slovesa 'sein' pre 'ich'.",
+          explanation: "Toto je otázka na špirálovú gramatiku (L40: Präteritum slovesa 'sein'). Správny tvar pre 'ich' v Präteritum je 'war'."
+        },
+        {
+          sentence: "Das Buch gehört ___ (er).",
+          answer: "ihm",
+          hint: "Datívny pád pre 'er'.",
+          explanation: "Toto je otázka na špirálovú gramatiku (L43: Datívne osobné zámená). Sloveso 'gehören' (patriť) vyžaduje datívny pád. Datívny tvar osobného zámena 'er' (on) je 'ihm'."
+        }
+      ]
+    },
+    {
+      type: "listen",
+      instruction: "Vypočujte si nemecké slová a priraďte ich k slovenským prekladom.",
+      questions: [
+        {
+          de: "das Fahrrad",
+          sk: "bicykel"
+        },
+        {
+          de: "die Matte",
+          sk: "podložka"
+        },
+        {
+          de: "der Rucksack",
+          sk: "ruksak"
+        },
+        {
+          de: "die Flasche",
+          sk: "fľaša"
+        },
+        {
+          de: "das Geld",
+          sk: "peniaze"
+        },
+        {
+          de: "die Brille",
+          sk: "okuliare"
+        },
+        {
+          de: "der Regenschirm",
+          sk: "dáždnik"
+        },
+        {
+          de: "nehmen",
+          sk: "vziať"
+        },
+        {
+          de: "geben",
+          sk: "dať"
+        },
+        {
+          de: "leihen",
+          sk: "požičať (si)"
+        }
+      ]
+    },
+    {
+      type: "mcq",
+      instruction: "Vyberte správnu odpoveď.",
+      questions: [
+        {
+          question: "Ich suche ___ (sein) Schlüssel.",
+          options: [
+            "sein",
+            "seine",
+            "seinen",
+            "ihr"
+          ],
+          answer: 2,
+          explanation: "Podstatné meno 'Schlüssel' (kľúč) je mužského rodu (der Schlüssel). V akuzatíve pre mužský rod dostáva privlastňovacie zámeno koncovku '-en'. Preto 'sein' sa mení na 'seinen'."
+        },
+        {
+          question: "Sie hat ___ (ihr) Jacke dabei.",
+          options: [
+            "ihr",
+            "ihre",
+            "ihren",
+            "sein"
+          ],
+          answer: 1,
+          explanation: "Podstatné meno 'Jacke' (bunda) je ženského rodu (die Jacke). V akuzatíve pre ženský rod dostáva privlastňovacie zámeno koncovku '-e'. Preto 'ihr' sa mení na 'ihre'."
+        },
+        {
+          question: "Wir brauchen ___ (er) Computer.",
+          options: [
+            "sein",
+            "seine",
+            "seinen",
+            "ihr"
+          ],
+          answer: 2,
+          explanation: "Podstatné meno 'Computer' (počítač) je mužského rodu (der Computer). V akuzatíve pre mužský rod dostáva privlastňovacie zámeno koncovku '-en'. Preto 'sein' (od 'er') sa mení na 'seinen'."
+        },
+        {
+          question: "Aký je preklad slova 'der Regenschirm'?",
+          options: [
+            "bicykel",
+            "ruksak",
+            "dáždnik",
+            "okuliare"
+          ],
+          answer: 2,
+          explanation: "Slovo 'der Regenschirm' znamená 'dáždnik'."
+        },
+        {
+          question: "Čo znamená 'leihen'?",
+          options: [
+            "vziať",
+            "dať",
+            "požičať (si)",
+            "hľadať"
+          ],
+          answer: 2,
+          explanation: "Sloveso 'leihen' znamená 'požičať (si)'."
+        },
+        {
+          question: "Letztes Jahr ___ ich viel Zeit.",
+          options: [
+            "habe",
+            "hatte",
+            "war",
+            "bin"
+          ],
+          answer: 1,
+          explanation: "Toto je otázka na špirálovú gramatiku (L40: Präteritum slovesa 'haben'). Správny tvar pre 'ich' v Präteritum je 'hatte'."
+        },
+        {
+          question: "Die Tasche gehört ___ (sie, singular).",
+          options: [
+            "sie",
+            "ihr",
+            "ihnen",
+            "er"
+          ],
+          answer: 1,
+          explanation: "Toto je otázka na špirálovú gramatiku (L43: Datívne osobné zámená). Sloveso 'gehören' (patriť) vyžaduje datívny pád. Datívny tvar osobného zámena 'sie' (ona) je 'ihr'."
+        }
+      ]
+    },
+    {
+      type: "minitext",
+      instruction: "Lies den Dialog und beantworte die Fragen.",
+      text: "Petra: Hallo Jana!\nJana: Hallo Petra!\nPetra: Ich möchte Yoga machen. Kann ich deine Matte nehmen?\nJana: Ja, klar! Nimm meine Matte. Gerne!\nPetra: Danke! Und danach möchte ich Fahrrad fahren. Kann ich dein Fahrrad nehmen?\nJana: Entschuldigung, Petra, das ist nicht mein Fahrrad. Das ist Luisas Fahrrad. Es ist ihr Fahrrad.\nPetra: Ach so! Kann ich dann ihr Fahrrad jetzt leihen? Ich habe kein Geld.\nJana: Warte kurz. Ich frage Luisa, ob sie dir ihr Fahrrad später geben kann.\nPetra: Das wäre toll! Ich brauche auch eine Flasche.\nJana: Kein Problem! Ich gebe dir meine Flasche.",
+      textSk: "Petra: Ahoj Jana!\nJana: Ahoj Petra!\nPetra: Chcem cvičiť jogu. Môžem si vziať tvoju podložku?\nJana: Áno, jasné! Vezmi si moju podložku. Rada!\nPetra: Ďakujem! A potom chcem ísť na bicykli. Môžem si vziať tvoj bicykel?\nJana: Prepáč, Petra, to nie je môj bicykel. To je Luisin bicykel. Je to jej bicykel.\nPetra: Aha! Tak si môžem vziať jej bicykel teraz? Nemám peniaze.\nJana: Počkaj chvíľu. Spýtam sa Luisy, či ti môže dať jej bicykel neskôr.\nPetra: To by bolo super! Potrebujem aj fľašu.\nJana: Žiaden problém! Dám ti moju fľašu.",
+      questions: [
+        {
+          question: "Was möchte Petra zuerst machen?",
+          options: [
+            "Fahrrad fahren",
+            "Yoga machen",
+            "Luisa besuchen",
+            "Eine Flasche nehmen"
+          ],
+          answer: 1,
+          explanation: "Petra sagt: \"Ich möchte Yoga machen.\""
+        },
+        {
+          question: "Wem gehört das Fahrrad, das Petra leihen möchte?",
+          options: [
+            "Es ist Petras Fahrrad.",
+            "Es ist Janas Fahrrad.",
+            "Es ist Luisas Fahrrad.",
+            "Es ist kein Fahrrad da."
+          ],
+          answer: 2,
+          explanation: "Jana sagt: \"Das ist Luisas Fahrrad. Es ist ihr Fahrrad.\""
+        },
+        {
+          question: "Wann kann Petra das Fahrrad bekommen?",
+          options: [
+            "Jetzt",
+            "Später",
+            "Gar nicht",
+            "Morgen"
+          ],
+          answer: 1,
+          explanation: "Jana sagt: \"Ich frage Luisa, ob sie dir ihr Fahrrad später geben kann.\""
+        },
+        {
+          question: "Warum erwähnt Petra, dass sie kein Geld hat?",
+          options: [
+            "Sie möchte Jana Geld geben.",
+            "Sie hat kein Geld, um ein Fahrrad zu mieten.",
+            "Sie hat kein Geld für die Flasche.",
+            "Sie hat ihr Geld vergessen."
+          ],
+          answer: 1,
+          explanation: "Petra sagt: \"Kann ich dann ihr Fahrrad jetzt leihen? Ich habe kein Geld.\" Sie möchte es leihen, weil sie es nicht bezahlen kann."
+        }
+      ]
     },
     {
       type: "speaking",
-      instruction: "PoÄÃºvaj nemeckÃº vetu. Potom hovor nahlas a skontroluj sa.",
+      instruction: "Höre zu und sprich nach.",
       phrases: [
         {
-          de: "Obwohl Jana mÃ¼de ist, lernt sie Deutsch.",
-          sk: "Hoci je Jana unavenÃ¡, uÄÃ­ sa nemÄinu.",
-          tip: "obwohl=[obvol], w=[v]",
+          de: "sein Fahrrad",
+          sk: "jeho bicykel",
+          tip: "„ei“ ako [aɪ̯]. „r“ na konci je jemné."
         },
         {
-          de: "Obwohl es kalt ist, geht sie spazieren.",
-          sk: "Hoci je zima, ide sa prechÃ¡dzaÅ¥.",
-          tip: "spazieren=[Å¡paci:ren]",
+          de: "ihre Matte",
+          sk: "jej podložka",
+          tip: "„r“ je jemné, nie tvrdé ako v slovenčine."
         },
         {
-          de: "Obwohl er krank ist, arbeitet er.",
-          sk: "Hoci je chorÃ½, pracuje.",
-          tip: "krank=[krank], k na konci",
+          de: "seinen Rucksack",
+          sk: "jeho ruksak",
+          tip: "„ck“ ako [k]. „u“ je krátke."
         },
         {
-          de: "Obwohl das Essen teuer ist, essen wir dort.",
-          sk: "Hoci je jedlo drahÃ©, jeme tam.",
-          tip: "teuer=[tojor], eu=[oj]",
+          de: "Kann ich seinen Stift nehmen?",
+          sk: "Môžem si vziať jeho pero?",
+          tip: "„st“ na začiatku slova ako [ʃt]. „eh“ ako dlhé [eː]."
         },
         {
-          de: "Obwohl sie wenig Zeit hat, hilft sie mir.",
-          sk: "Hoci mÃ¡ mÃ¡lo Äasu, pomÃ¡ha mi.",
-          tip: "wenig=[ve:niCH], gâ†’ch na konci",
+          de: "Sie nimmt ihre Flasche.",
+          sk: "Ona si vezme svoju fľašu.",
+          tip: "„ie“ ako dlhé [iː]. „sch“ ako [ʃ]."
         },
-      ],
+        {
+          de: "Er gibt ihr sein Geld.",
+          sk: "On jej dáva svoje peniaze.",
+          tip: "„g“ na konci slova ako [k]. „ei“ ako [aɪ̯]."
+        },
+        {
+          de: "Ich leihe ihm seinen Mantel.",
+          sk: "Požičiam mu jeho kabát.",
+          tip: "„ei“ ako [aɪ̯]. „en“ na konci ako [ən]."
+        },
+        {
+          de: "Nimm jetzt ihren Computer!",
+          sk: "Vezmi si teraz jej počítač!",
+          tip: "„tz“ ako [t͡s]. „eu“ ako [ɔʏ̯]."
+        }
+      ]
     },
+    {
+      type: "truefalse",
+      instruction: "Prečítajte si vety a rozhodnite, či sú pravdivé (Wahr) alebo nepravdivé (Falsch) vzhľadom na správne použitie privlastňovacích zámen v akuzatíve.",
+      statements: [
+        {
+          statement: "Er hat seinen Rucksack.",
+          isTrue: true,
+          explanation: "Ruksak (der Rucksack) je mužského rodu, preto v akuzatíve pre „jeho“ použijeme „seinen“."
+        },
+        {
+          statement: "Sie nimmt ihr Fahrrad.",
+          isTrue: true,
+          explanation: "Bicykel (das Fahrrad) je stredného rodu, preto v akuzatíve pre „jej“ použijeme „ihr“."
+        },
+        {
+          statement: "Ich sehe seine Flasche.",
+          isTrue: false,
+          explanation: "Fľaša (die Flasche) je ženského rodu, preto v akuzatíve pre „jeho“ použijeme „seine“ (nie „sein“ ani „seinen“)."
+        },
+        {
+          statement: "Wir leihen ihm seinen Computer.",
+          isTrue: true,
+          explanation: "Počítač (der Computer) je mužského rodu, preto v akuzatíve pre „jeho“ použijeme „seinen“."
+        },
+        {
+          statement: "Du gibst ihr ihren Mantel.",
+          isTrue: true,
+          explanation: "Kabát (der Mantel) je mužského rodu, preto v akuzatíve pre „jej“ použijeme „ihren“."
+        }
+      ]
+    },
+    {
+      type: "dictation",
+      instruction: "Počúvajte nahrávky a zapíšte, čo počujete. Potom skontrolujte správnosť.",
+      sentences: [
+        {
+          de: "Er nimmt sein Geld.",
+          sk: "On si vezme svoje peniaze."
+        },
+        {
+          de: "Sie gibt ihre Brille.",
+          sk: "Ona dáva svoje okuliare."
+        },
+        {
+          de: "Ich leihe ihm seinen Stift.",
+          sk: "Požičiam mu jeho pero."
+        },
+        {
+          de: "Kann ich ihren Computer nehmen?",
+          sk: "Môžem si vziať jej počítač?"
+        },
+        {
+          de: "Er hat seinen Mantel nicht, aber seine Jacke.",
+          sk: "Nemá svoj kabát, ale má svoju bundu."
+        }
+      ]
+    },
+    {
+      type: "categorysort",
+      instruction: "Roztrieďte podstatné mená do správnych kategórií podľa ich rodu (der, die, das).",
+      categories: [
+        {
+          name: "Mužský rod (der)",
+          color: "blue",
+          words: [
+            "der Rucksack",
+            "der Regenschirm",
+            "der Mantel",
+            "der Stift",
+            "der Computer"
+          ]
+        },
+        {
+          name: "Ženský rod (die)",
+          color: "rose",
+          words: [
+            "die Matte",
+            "die Flasche",
+            "die Brille",
+            "die Jacke",
+            "die Zeitung"
+          ]
+        },
+        {
+          name: "Stredný rod (das)",
+          color: "green",
+          words: [
+            "das Fahrrad",
+            "das Geld"
+          ]
+        }
+      ],
+      explanation: "Rod podstatných mien je v nemčine kľúčový pre správne použitie členov a privlastňovacích zámen. 'Der' označuje mužský rod, 'die' ženský a 'das' stredný rod."
+    },
+    {
+      type: "translation",
+      instruction: "Preložte nasledujúce vety zo slovenčiny do nemčiny. Použite správne privlastňovacie zámená v akuzatíve.",
+      sentences: [
+        {
+          sk: "Môžem si vziať jeho bicykel?",
+          answer: "Kann ich sein Fahrrad nehmen?",
+          hint: "sein, nehmen",
+          explanation: "Bicykel (das Fahrrad) je stredného rodu, preto pre „jeho“ v akuzatíve použijeme „sein“."
+        },
+        {
+          sk: "Ona si vezme jej ruksak.",
+          answer: "Sie nimmt ihren Rucksack.",
+          hint: "ihren, nehmen",
+          explanation: "Ruksak (der Rucksack) je mužského rodu, preto pre „jej“ v akuzatíve použijeme „ihren“."
+        },
+        {
+          sk: "On má svoje peniaze.",
+          answer: "Er hat sein Geld.",
+          hint: "sein, Geld",
+          explanation: "Peniaze (das Geld) sú stredného rodu, preto pre „jeho“ v akuzatíve použijeme „sein“."
+        },
+        {
+          sk: "Dávaš jej jej bundu.",
+          answer: "Du gibst ihr ihre Jacke.",
+          hint: "ihr, Jacke",
+          explanation: "Bunda (die Jacke) je ženského rodu, preto pre „jej“ v akuzatíve použijeme „ihre“."
+        }
+      ]
+    },
+    {
+      type: "conjugation",
+      instruction: "Doplňte správne tvary slovies 'nehmen' a 'geben' v prítomnom čase (Präsens).",
+      verbs: [
+        {
+          infinitive: "nehmen",
+          translation: "vziať",
+          forms: [
+            {
+              pronoun: "ich",
+              correct: "nehme"
+            },
+            {
+              pronoun: "du",
+              correct: "nimmst"
+            },
+            {
+              pronoun: "er/sie/es",
+              correct: "nimmt"
+            },
+            {
+              pronoun: "wir",
+              correct: "nehmen"
+            },
+            {
+              pronoun: "ihr",
+              correct: "nehmt"
+            },
+            {
+              pronoun: "sie/Sie",
+              correct: "nehmen"
+            }
+          ],
+          note: "Sloveso 'nehmen' je silné sloveso, čo znamená, že mení kmeňovú samohlásku (e → i) v 2. a 3. osobe jednotného čísla."
+        },
+        {
+          infinitive: "geben",
+          translation: "dať",
+          forms: [
+            {
+              pronoun: "ich",
+              correct: "gebe"
+            },
+            {
+              pronoun: "du",
+              correct: "gibst"
+            },
+            {
+              pronoun: "er/sie/es",
+              correct: "gibt"
+            },
+            {
+              pronoun: "wir",
+              correct: "geben"
+            },
+            {
+              pronoun: "ihr",
+              correct: "gebt"
+            },
+            {
+              pronoun: "sie/Sie",
+              correct: "geben"
+            }
+          ],
+          note: "Sloveso 'geben' je tiež silné sloveso, ktoré mení kmeňovú samohlásku (e → i) v 2. a 3. osobe jednotného čísla."
+        }
+      ]
+    }
   ],
-
-  reviewWords: [
-    "L49_V01",
-    "L49_V02",
-    "L49_V04",
-    "L49_V07",
-    "L49_V09",
-    "L49_V11",
-    "L49_V14",
-    "L49_V15",
-    "L49_V17",
-    "L49_V19",
-    "L49_V20",
-  ],
-
-  lessonNotes:
-    "Kľúčová gramatika: Cestovné predložky — nach + krajina bez člena (nach Italien, nach Deutschland). In + die + krajina s ženským/množným členom (in die Schweiz, in die USA). Ans Meer = an + das Meer (Akk, kontrakcia). Modálne + odlučovacie slovesá: müssen abfahren, müssen einsteigen, können abholen — infinitív na konci, modalné v P2.",
+  reviewWords: []
 };

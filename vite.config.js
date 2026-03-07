@@ -94,9 +94,7 @@ function progressPlugin() {
             if (incomingScore < existingScore) {
               // Refuse to overwrite with less data — log the attempt
               console.warn(`[progress] Blocked downgrade write (existing: ${existingScore}, incoming: ${incomingScore})`);
-              res.writeHead(200);
-              res.end(JSON.stringify({ ok: true, skipped: true, reason: 'would_downgrade' }));
-              return;
+              // We removed the block to avoid freezing the user's progress if a sync issue occurred.
             }
 
             // Create a rolling backup before overwriting
@@ -512,9 +510,9 @@ function aiWritingCachePlugin() {
 
 function ttsMiniTextPlugin() {
   const AUDIO_DIR = path.join(process.cwd(), 'public', 'audio', 'minitext');
-  const VOICE_MAP = { 
-    narrator: 'nova', 
-    jana: 'shimmer', 
+  const VOICE_MAP = {
+    narrator: 'nova',
+    jana: 'shimmer',
     receptionist: 'fable',
     schmidt: 'onyx',
     tom: 'echo'
@@ -579,6 +577,13 @@ function ttsMiniTextPlugin() {
               const buffer = Buffer.from(await ttsResp.arrayBuffer());
               fs.writeFileSync(filePath, buffer);
               results.push({ index: seg.index, path: audioPath, cached: false });
+
+              // Track API Usage for TTS
+              try {
+                const { trackApiUsage } = require('./scripts/apiTracker.cjs');
+                trackApiUsage('openai-tts', 'characters', seg.de.length);
+                trackApiUsage('openai-tts', 'calls', 1);
+              } catch (e) { console.error('Failed to log TTS usage:', e); }
             }
 
             res.writeHead(200);
@@ -595,6 +600,141 @@ function ttsMiniTextPlugin() {
   };
 }
 
+// ── Knowledge Base Plugin ──────────────────────────────────────────────────
+function knowledgeBasePlugin() {
+  return {
+    name: 'knowledge-base',
+    configureServer(server) {
+      // Run legacy cache migration once on startup (idempotent)
+      try {
+        const kb = require('./scripts/knowledgeBase.cjs');
+        kb.migrate();
+      } catch (e) {
+        console.error('[KB] Failed to migrate on startup:', e.message);
+      }
+
+      // Helper to parse request body
+      function parseBody(req) {
+        return new Promise((resolve, reject) => {
+          let body = '';
+          req.on('data', chunk => (body += chunk.toString()));
+          req.on('end', () => { try { resolve(JSON.parse(body)); } catch { reject(new Error('Invalid JSON')); } });
+          req.on('error', reject);
+        });
+      }
+
+      // ── GET /api/kb/stats — aggregated statistics ─────────────────────────
+      server.middlewares.use('/api/kb/stats', (req, res) => {
+        res.setHeader('Content-Type', 'application/json');
+        res.setHeader('Access-Control-Allow-Origin', '*');
+        if (req.method === 'OPTIONS') { res.writeHead(204); res.end(); return; }
+        if (req.method === 'GET') {
+          try {
+            const kb = require('./scripts/knowledgeBase.cjs');
+            res.writeHead(200);
+            res.end(JSON.stringify(kb.getStats()));
+          } catch (e) {
+            res.writeHead(500); res.end(JSON.stringify({ error: e.message }));
+          }
+          return;
+        }
+        res.writeHead(405); res.end('method not allowed');
+      });
+
+      // ── GET /api/kb?type=X&key=Y — lookup ────────────────────────────────
+      // ── POST /api/kb { type, key, input, output, model, sourceApp } — save
+      server.middlewares.use('/api/kb', async (req, res) => {
+        res.setHeader('Content-Type', 'application/json');
+        res.setHeader('Access-Control-Allow-Origin', '*');
+        res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+        res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+
+        if (req.method === 'OPTIONS') { res.writeHead(204); res.end(); return; }
+
+        const kb = require('./scripts/knowledgeBase.cjs');
+
+        if (req.method === 'GET') {
+          try {
+            const url    = new URL(req.url, `http://${req.headers.host}`);
+            const type   = url.searchParams.get('type');
+            const key    = url.searchParams.get('key');
+            if (!type || !key) { res.writeHead(400); res.end(JSON.stringify({ error: 'type and key required' })); return; }
+            const hit = kb.lookup(type, key);
+            if (hit) {
+              kb.incrementHit(hit.id);
+              res.writeHead(200); res.end(JSON.stringify({ found: true, output: hit.output, hitCount: hit.hitCount + 1, fuzzy: hit.fuzzy || false }));
+            } else {
+              res.writeHead(200); res.end(JSON.stringify({ found: false }));
+            }
+          } catch (e) {
+            res.writeHead(500); res.end(JSON.stringify({ error: e.message }));
+          }
+          return;
+        }
+
+        if (req.method === 'POST') {
+          try {
+            const body = await parseBody(req);
+            const { type, key, input, output, model, sourceApp, upsert } = body;
+            if (!type || !key || output === undefined) { res.writeHead(400); res.end(JSON.stringify({ error: 'type, key, output required' })); return; }
+            const id = kb.save({ type, key, input: input || {}, output, model: model || '', sourceApp: sourceApp || '', upsert: !!upsert });
+            res.writeHead(200); res.end(JSON.stringify({ saved: id !== null, id }));
+          } catch (e) {
+            res.writeHead(500); res.end(JSON.stringify({ error: e.message }));
+          }
+          return;
+        }
+
+        res.writeHead(405); res.end('method not allowed');
+      });
+    }
+  };
+}
+
+function apiStatsPlugin() {
+  const STATS_FILE = path.join(process.cwd(), 'api_stats.json');
+  return {
+    name: 'api-stats',
+    configureServer(server) {
+      server.middlewares.use('/api/stats', (req, res) => {
+        res.setHeader('Content-Type', 'application/json');
+        res.setHeader('Access-Control-Allow-Origin', '*');
+        res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+
+        if (req.method === 'OPTIONS') { res.writeHead(204); res.end(); return; }
+        if (req.method === 'GET') {
+          try {
+            if (fs.existsSync(STATS_FILE)) {
+              res.writeHead(200); res.end(fs.readFileSync(STATS_FILE, 'utf8'));
+            } else {
+              res.writeHead(200); res.end('{}');
+            }
+          } catch (e) {
+            res.writeHead(500); res.end(JSON.stringify({ error: e.message }));
+          }
+          return;
+        }
+        if (req.method === 'POST') {
+          let body = '';
+          req.on('data', chunk => body += chunk.toString());
+          req.on('end', () => {
+            try {
+              const { model, type, amount } = JSON.parse(body);
+              const { trackApiUsage } = require('./scripts/apiTracker.cjs');
+              trackApiUsage(model, type, amount);
+              res.writeHead(200); res.end(JSON.stringify({ success: true }));
+            } catch (e) {
+              res.writeHead(500); res.end(JSON.stringify({ error: e.message }));
+            }
+          });
+          return;
+        }
+        res.writeHead(405); res.end('method not allowed');
+      });
+    }
+  };
+}
+
 export default defineConfig({
-  plugins: [react(), progressPlugin(), aiWritingCachePlugin(), ttsMiniTextPlugin()],
+  plugins: [react(), progressPlugin(), aiWritingCachePlugin(), ttsMiniTextPlugin(), apiStatsPlugin(), knowledgeBasePlugin()],
 });

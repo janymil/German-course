@@ -2,518 +2,926 @@ export const lesson45 = {
   id: 45,
   week: 9,
   day: 5,
-  title: "Komparativ — größer, besser",
-  topic: "Komparatív — väčší, lepší",
+  title: "Den Weg beschreiben: U-Bahn-Station",
+  topic: "Zložitejšie navigovanie: lokálne predložky (vor, an, neben + Datív)",
   cefr: "A1",
-  xpReward: 30,
-  narrativeContext:
-    "Jana vergleicht Wien mit Bratislava. 'Wien ist größer als Bratislava, aber Bratislava ist gemütlicher.' Sie debattiert mit Lukas, wer eine bessere Stadt hat!",
-  communicativeGoal:
-    "Po tejto lekcii viem porovnávať ľudí, miesta a veci pomocou komparatívu (väčší, lepší, krajší ako ...).",
-  skillFocus: ["grammar", "speaking", "vocabulary"],
-
-  grammarNote: {
-    rule: "Komparatív prídavných mien: -er + als / (genau)so … wie",
-    explanation:
-      "Komparatív sa tvorí príponou -er: schön → schöner, schnell → schneller. Jednoslabičné adjektíva often mutujú (Umlaut): alt → älter, jung → jünger, warm → wärmer, kalt → kälter, lang → länger, groß → größer. Nepravidelné formy: gut → besser, viel → mehr, hoch → höher, gern → lieber. Porovnanie s 'als' (ako/než): Wien ist größer als Bratislava. Rovnosť s '(genau)so … wie': Wien ist so schön wie Bratislava. V predikátovej pozícii (po 'sein') tvar komparatívu nemá ďalšiu príponu.",
-    examples: [
-      { de: "Wien ist größer als Bratislava.", sk: "Viedeň je väčšia ako Bratislava." },
-      { de: "Bratislava ist gemütlicher als Wien.", sk: "Bratislava je útulnejšia ako Viedeň." },
-      { de: "Das Bier hier ist besser!", sk: "Pivo tu je lepšie!" },
-      { de: "Wien ist so teuer wie London.", sk: "Viedeň je taká drahá ako Londýn." },
-      { de: "Ich trinke lieber Tee als Kaffee.", sk: "Radšej pijem čaj ako kávu." },
-    ],
-    slovakContrastNote:
-      "Slovenčina tvorí komparatív príponou '-ší/-ejší': väčší, krajší, rýchlejší. Nemčina používa '-er': größer, schöner, schneller. Nepravidelné formy: gut → besser (sk: dobrý → lepší), viel → mehr (sk: veľa → viac) — obe jazyky majú nepravidelné komparatívy! Porovnanie s 'ako' = als; rovnosť s 'tak ako' = so … wie.",
-  },
-
+  xpReward: 25,
+  narrativeContext: "Jana ist noch in der Stadt. Eine andere Person fragt sie: 'Wo ist die U-Bahn-Station?' Jana hilft mit einer Karte auf ihrem Handy.",
+  communicativeGoal: "Nach dieser Lektion kann ich den Weg zu einem Ort mit lokalen Präpositionen beschreiben.",
+  skillFocus: [
+    "vocabulary",
+    "grammar",
+    "listening",
+    "speaking",
+    "reading"
+  ],
+  lessonNotes: "V tejto lekcii sa naučíme, ako presnejšie opísať polohu miesta. Použijeme nové lokálne predložky ako *vor, an, neben, hinter, zwischen* s datívom. Jana ti ukáže, ako nájsť stanicu metra pomocou mapy na telefóne.",
+  grammarNotes: [
+    {
+      rule: "Wechselpräpositionen mit Dativ (Ort)",
+      explanation: "\n      <p>V nemčine existuje skupina predložiek, ktoré sa nazývajú <strong>Wechselpräpositionen</strong> (obojstranné predložky). Sú to: <em>an, auf, in, neben, hinter, über, unter, vor, zwischen</em>. Tieto predložky sú špecifické tým, že môžu stáť buď s <strong>datívom</strong>, alebo s <strong>akuzatívom</strong>, v závislosti od toho, či vyjadrujú <strong>miesto</strong> alebo <strong>smer</strong>.</p>\n      <p>V tejto lekcii sa zameriame na ich použitie s <strong>datívom</strong>. Ak sa pýtame na <strong>miesto</strong> (kde sa niečo nachádza?), používame otázku <strong>„Wo?“ (Kde?)</strong> a predložka stojí s <strong>datívom</strong>. Vyjadrujeme tak statickú polohu, teda že sa niečo niekde nachádza alebo deje bez pohybu.</p>\n      <p>Pre lepšie pochopenie si pozrite prehľad týchto predložiek a ich významov, pričom si všimnite, že v tejto lekcii sa sústredíme najmä na <strong><em>vor, an, neben</em></strong>:</p>\n      <table>\n        <thead>\n          <tr>\n            <th>Predložka</th>\n            <th>Význam</th>\n            <th>Príklad (Wo? + Dativ)</th>\n          </tr>\n        </thead>\n        <tbody>\n          <tr>\n            <td><strong>an</strong></td>\n            <td>pri, na (vertikálne, dotyk)</td>\n            <td><strong>An der</strong> Wand hängt ein Bild. (Na stene visí obraz.)</td>\n          </tr>\n          <tr>\n            <td><strong>auf</strong></td>\n            <td>na (horizontálne, povrch)</td>\n            <td>Das Buch liegt <strong>auf dem</strong> Tisch. (Kniha leží na stole.)</td>\n          </tr>\n          <tr>\n            <td><strong>in</strong></td>\n            <td>v, do</td>\n            <td>Ich bin <strong>in der</strong> Stadt. (Som v meste.)</td>\n          </tr>\n          <tr>\n            <td><strong>neben</strong></td>\n            <td>vedľa</td>\n            <td>Das Auto steht <strong>neben dem</strong> Haus. (Auto stojí vedľa domu.)</td>\n          </tr>\n          <tr>\n            <td><strong>hinter</strong></td>\n            <td>za</td>\n            <td>Der Garten ist <strong>hinter dem</strong> Haus. (Záhrada je za domom.)</td>\n          </tr>\n          <tr>\n            <td><strong>über</strong></td>\n            <td>nad</td>\n            <td>Die Lampe hängt <strong>über dem</strong> Tisch. (Lampa visí nad stolom.)</td>\n          </tr>\n          <tr>\n            <td><strong>unter</strong></td>\n            <td>pod</td>\n            <td>Die Katze schläft <strong>unter dem</strong> Bett. (Mačka spí pod posteľou.)</td>\n          </tr>\n          <tr>\n            <td><strong>vor</strong></td>\n            <td>pred</td>\n            <td>Das Fahrrad steht <strong>vor der</strong> Tür. (Bicykel stojí pred dverami.)</td>\n          </tr>\n          <tr>\n            <td><strong>zwischen</strong></td>\n            <td>medzi</td>\n            <td>Der Stuhl steht <strong>zwischen dem</strong> Tisch und dem Regal. (Stolička stojí medzi stolom a poličkou.)</td>\n          </tr>\n        </tbody>\n      </table>\n      <div class=\"tip-box\">\n        Pamätajte si: Ak sa pýtate <strong>„Wo?“ (Kde?)</strong>, vždy použite <strong>datív</strong>!\n      </div>\n    ",
+      examples: [
+        {
+          de: "Wo ist der Bahnhof?",
+          sk: "Kde je stanica?"
+        },
+        {
+          de: "Der Bahnhof ist <strong>vor dem</strong> Hotel.",
+          sk: "Stanica je pred hotelom."
+        },
+        {
+          de: "Wo ist die Bushaltestelle?",
+          sk: "Kde je autobusová zastávka?"
+        },
+        {
+          de: "Die Bushaltestelle ist <strong>an der</strong> Ecke.",
+          sk: "Autobusová zastávka je na rohu."
+        },
+        {
+          de: "Wo ist das Café?",
+          sk: "Kde je kaviareň?"
+        },
+        {
+          de: "Das Café ist <strong>neben dem</strong> Kino.",
+          sk: "Kaviareň je vedľa kina."
+        },
+        {
+          de: "Ich stehe <strong>vor dem</strong> Supermarkt.",
+          sk: "Stojím pred supermarketom."
+        },
+        {
+          de: "Das Bild hängt <strong>an der</strong> Wand.",
+          sk: "Obraz visí na stene."
+        },
+        {
+          de: "Wir sitzen <strong>neben dem</strong> Fenster.",
+          sk: "Sedíme vedľa okna."
+        },
+        {
+          de: "Die Bücher sind <strong>in den</strong> Regalen.",
+          sk: "Knihy sú v policiach."
+        }
+      ],
+      slovakContrastNote: "\n      V slovenčine používame na vyjadrenie miesta rôzne pády (lokál, inštrumentál, genitív) v závislosti od predložky (napr. \"na stole\" - lokál, \"pred domom\" - inštrumentál, \"u lekára\" - genitív). V nemčine je to s týmito obojstrannými predložkami jednoduchšie: ak odpovedáte na otázku \"Wo?\" (Kde?), vždy použijete <strong>datív</strong>. Najčastejšou chybou je prekladanie doslovne zo slovenčiny, preto si vždy pri otázke \"Kde?\" spomeňte na datív v nemčine.\n    "
+    },
+    {
+      rule: "Dativ – Členy (Der, Die, Das)",
+      explanation: "\n      <p>Keďže obojstranné predložky (Wechselpräpositionen) pri vyjadrení miesta vyžadujú <strong>datív</strong>, je dôležité si zopakovať, ako sa menia určité a neurčité členy v datíve. Rod podstatného mena určuje formu člena.</p>\n      <table>\n        <thead>\n          <tr>\n            <th>Rod</th>\n            <th>Určitý člen (der, die, das)</th>\n            <th>Neurčitý člen (ein, eine, ein)</th>\n            <th>Záporný člen (kein, keine, kein)</th>\n          </tr>\n        </thead>\n        <tbody>\n          <tr>\n            <td><strong>Mužský rod (m)</strong></td>\n            <td>d<strong>em</strong></td>\n            <td>ein<strong>em</strong></td>\n            <td>kein<strong>em</strong></td>\n          </tr>\n          <tr>\n            <td><strong>Ženský rod (f)</strong></td>\n            <td>d<strong>er</strong></td>\n            <td>ein<strong>er</strong></td>\n            <td>kein<strong>er</strong></td>\n          </tr>\n          <tr>\n            <td><strong>Stredný rod (n)</strong></td>\n            <td>d<strong>em</strong></td>\n            <td>ein<strong>em</strong></td>\n            <td>kein<strong>em</strong></td>\n          </tr>\n          <tr>\n            <td><strong>Množné číslo (Pl.)</strong></td>\n            <td>d<strong>en</strong> (+ -n na konci podstatného mena, ak už nemá)</td>\n            <td>— (nemá neurčitý člen)</td>\n            <td>kein<strong>en</strong> (+ -n na konci podstatného mena, ak už nemá)</td>\n          </tr>\n        </tbody>\n      </table>\n      <div class=\"warn-box\">\n        <strong>Pozor na množné číslo!</strong> V datíve množného čísla sa k podstatnému menu často pridáva koncovka <strong>-n</strong>, ak už ju nemá (napr. <em>die Kinder</em> -> <em>den Kinder<strong>n</strong></em>, <em>die Autos</em> -> <em>den Auto<strong>s</strong></em> (tu sa -n nepridáva, lebo už má -s), <em>die Frauen</em> -> <em>den Frauen</em> (tu sa -n nepridáva, lebo už má -n)).\n      </div>\n    ",
+      examples: [
+        {
+          de: "Ich helfe <strong>dem</strong> Mann.",
+          sk: "Pomáham mužovi."
+        },
+        {
+          de: "Er gibt <strong>der</strong> Frau ein Geschenk.",
+          sk: "Dáva žene darček."
+        },
+        {
+          de: "Wir spielen mit <strong>dem</strong> Kind.",
+          sk: "Hráme sa s dieťaťom."
+        },
+        {
+          de: "Sie spricht mit <strong>den</strong> Kindern.",
+          sk: "Rozpráva sa s deťmi."
+        },
+        {
+          de: "Ich wohne in <strong>einem</strong> Haus.",
+          sk: "Bývam v jednom dome."
+        },
+        {
+          de: "Sie fährt mit <strong>einem</strong> Auto.",
+          sk: "Jazdí autom."
+        },
+        {
+          de: "Er arbeitet bei <strong>einer</strong> Firma.",
+          sk: "Pracuje vo firme."
+        },
+        {
+          de: "Ich habe <strong>keinen</strong> Problemen.",
+          sk: "Nemám žiadne problémy."
+        }
+      ],
+      slovakContrastNote: "\n      Slovenčina nemá členy, takže pre slovenských študentov je to úplne nový gramatický jav. Je kľúčové si zapamätať, že člen sa mení nielen podľa rodu, ale aj podľa pádu. V datíve si dávajte obzvlášť pozor na koncovky <strong>-m</strong> pre mužský a stredný rod, <strong>-r</strong> pre ženský rod a <strong>-n</strong> pre množné číslo (plus prípadné -n na konci podstatného mena v množnom čísle).\n    "
+    }
+  ],
   vocab: [
     {
-      de: "größer (groß → größer)",
-      sk: "väčší",
-      example: "Wien ist größer als Bratislava.",
-      exampleSk: "Viedeň je väčšia ako Bratislava.",
-      gender: null,
+      de: "der Dom",
+      sk: "katedrála",
+      gender: "M",
       srsId: "L45_V01",
-      recycledFrom: [],
+      example: "Der Dom steht neben dem alten Gebäude.",
+      exampleSk: "Katedrála stojí vedľa starej budovy.",
+      recycledFrom: []
     },
     {
-      de: "kleiner (klein → kleiner)",
-      sk: "menší",
-      example: "Bratislava ist kleiner als Wien.",
-      exampleSk: "Bratislava je menšia ako Viedeň.",
-      gender: null,
+      de: "der Turm",
+      sk: "veža",
+      gender: "M",
       srsId: "L45_V02",
-      recycledFrom: [],
+      example: "Der Turm ist vor dem Dom.",
+      exampleSk: "Veža je pred katedrálou.",
+      recycledFrom: []
     },
     {
-      de: "besser (gut → besser) ⚠️",
-      sk: "lepší",
-      example: "Das Essen hier ist besser.",
-      exampleSk: "Jedlo tu je lepšie.",
-      gender: null,
+      de: "die Brücke",
+      sk: "most",
+      gender: "F",
       srsId: "L45_V03",
-      recycledFrom: [],
+      example: "Die Brücke ist zwischen zwei Gebäuden.",
+      exampleSk: "Most je medzi dvoma budovami.",
+      recycledFrom: []
     },
     {
-      de: "schlechter (schlecht → schlechter)",
-      sk: "horší",
-      example: "Das Wetter in Wien ist manchmal schlechter.",
-      exampleSk: "Počasie vo Viedni je niekedy horšie.",
-      gender: null,
+      de: "das Gebäude",
+      sk: "budova",
+      gender: "N",
       srsId: "L45_V04",
-      recycledFrom: [],
+      example: "Das Gebäude ist sehr hoch.",
+      exampleSk: "Budova je veľmi vysoká.",
+      recycledFrom: []
     },
     {
-      de: "mehr (viel → mehr) ⚠️",
-      sk: "viac",
-      example: "In Wien gibt es mehr Museen.",
-      exampleSk: "Vo Viedni je viac múzeí.",
-      gender: null,
+      de: "der Laden",
+      sk: "obchod",
+      gender: "M",
       srsId: "L45_V05",
-      recycledFrom: [],
+      example: "Der Laden ist hinter dem Kiosk.",
+      exampleSk: "Obchod je za kioskom.",
+      recycledFrom: []
     },
     {
-      de: "weniger (wenig → weniger)",
-      sk: "menej",
-      example: "Bratislava hat weniger Einwohner.",
-      exampleSk: "Bratislava má menej obyvateľov.",
-      gender: null,
+      de: "die Ampel",
+      sk: "semafor",
+      gender: "F",
       srsId: "L45_V06",
-      recycledFrom: [],
+      example: "Die Ampel ist rot.",
+      exampleSk: "Semafor je červený.",
+      recycledFrom: []
     },
     {
-      de: "teurer (teuer → teurer)",
-      sk: "drahší",
-      example: "Wien ist teurer als Bratislava.",
-      exampleSk: "Viedeň je drahšia ako Bratislava.",
-      gender: null,
+      de: "der Eingang",
+      sk: "vchod",
+      gender: "M",
       srsId: "L45_V07",
-      recycledFrom: [],
+      example: "Der Eingang ist an der rechten Seite.",
+      exampleSk: "Vchod je na pravej strane.",
+      recycledFrom: []
     },
     {
-      de: "billiger (billig → billiger)",
-      sk: "lacnejší",
-      example: "Das Essen in Bratislava ist billiger.",
-      exampleSk: "Jedlo v Bratislave je lacnejšie.",
-      gender: null,
+      de: "der Ausgang",
+      sk: "východ",
+      gender: "M",
       srsId: "L45_V08",
-      recycledFrom: [],
+      example: "Der Ausgang ist gegenüber dem Eingang.",
+      exampleSk: "Východ je oproti vchodu.",
+      recycledFrom: []
     },
     {
-      de: "schneller (schnell → schneller)",
-      sk: "rýchlejší",
-      example: "Die U-Bahn in Wien ist schneller als der Bus.",
-      exampleSk: "Metro vo Viedni je rýchlejšie ako autobus.",
-      gender: null,
+      de: "die Mitte",
+      sk: "stred",
+      gender: "F",
       srsId: "L45_V09",
-      recycledFrom: [],
+      example: "Das Denkmal steht in der Mitte der Stadt.",
+      exampleSk: "Pamätník stojí v strede mesta.",
+      recycledFrom: []
     },
     {
-      de: "langsamer (langsam → langsamer)",
-      sk: "pomalší",
-      example: "Das Leben in einer kleinen Stadt ist langsamer.",
-      exampleSk: "Život v malom meste je pomalší.",
-      gender: null,
+      de: "das Denkmal",
+      sk: "pamätník",
+      gender: "N",
       srsId: "L45_V10",
-      recycledFrom: [],
+      example: "Das Denkmal ist vor dem großen Gebäude.",
+      exampleSk: "Pamätník je pred veľkou budovou.",
+      recycledFrom: []
     },
     {
-      de: "als",
-      sk: "ako (v porovnaní, než)",
-      example: "Wien ist größer als Bratislava.",
-      exampleSk: "Viedeň je väčšia ako Bratislava.",
-      gender: null,
+      de: "der Parkplatz",
+      sk: "parkovisko",
+      gender: "M",
       srsId: "L45_V11",
-      recycledFrom: [],
+      example: "Der Parkplatz ist hinter dem Laden.",
+      exampleSk: "Parkovisko je za obchodom.",
+      recycledFrom: []
     },
     {
-      de: "(genau)so … wie",
-      sk: "(rovnako, tak) … ako",
-      example: "Bratislava ist so schön wie Wien.",
-      exampleSk: "Bratislava je taká krásna ako Viedeň.",
-      gender: null,
+      de: "der Kiosk",
+      sk: "stánok, kiosk",
+      gender: "M",
       srsId: "L45_V12",
-      recycledFrom: [],
+      example: "Der Kiosk ist neben dem Brunnen.",
+      exampleSk: "Kiosk je vedľa fontány.",
+      recycledFrom: []
     },
     {
-      de: "genauso",
-      sk: "rovnako, tak isto",
-      example: "Das ist genauso teuer wie in Wien.",
-      exampleSk: "To je rovnako drahé ako vo Viedni.",
-      gender: null,
+      de: "die Mauer",
+      sk: "múr",
+      gender: "F",
       srsId: "L45_V13",
-      recycledFrom: [],
+      example: "Die Mauer ist alt.",
+      exampleSk: "Múr je starý.",
+      recycledFrom: []
     },
     {
-      de: "der Unterschied",
-      sk: "rozdiel",
-      example: "Was ist der Unterschied zwischen Wien und Bratislava?",
-      exampleSk: "Aký je rozdiel medzi Viedňou a Bratislavou?",
+      de: "der Brunnen",
+      sk: "fontána",
       gender: "M",
       srsId: "L45_V14",
-      recycledFrom: [],
+      example: "Der Brunnen ist vor dem Denkmal.",
+      exampleSk: "Fontána je pred pamätníkom.",
+      recycledFrom: []
     },
     {
-      de: "gemütlich",
-      sk: "útulný, príjemný, cosy",
-      example: "Das Kaffeehaus ist sehr gemütlich.",
-      exampleSk: "Kaviareň je veľmi útulná.",
+      de: "stehen",
+      sk: "stáť, byť umiestnený",
       gender: null,
       srsId: "L45_V15",
-      recycledFrom: [],
+      example: "Das Gebäude steht an der Brücke.",
+      exampleSk: "Budova stojí pri moste.",
+      recycledFrom: []
     },
+    {
+      de: "liegen",
+      sk: "ležať, byť umiestnený",
+      gender: null,
+      srsId: "L45_V16",
+      example: "Der Parkplatz liegt hinter dem Gebäude.",
+      exampleSk: "Parkovisko leží za budovou.",
+      recycledFrom: []
+    },
+    {
+      de: "warten",
+      sk: "čakať",
+      gender: null,
+      srsId: "L45_V17",
+      example: "Ich warte an der Ampel.",
+      exampleSk: "Čakám pri semafore.",
+      recycledFrom: []
+    },
+    {
+      de: "auf der rechten Seite",
+      sk: "na pravej strane",
+      gender: null,
+      srsId: "L45_V18",
+      example: "Der Eingang ist auf der rechten Seite.",
+      exampleSk: "Vchod je na pravej strane.",
+      recycledFrom: []
+    },
+    {
+      de: "auf der linken Seite",
+      sk: "na ľavej strane",
+      gender: null,
+      srsId: "L45_V19",
+      example: "Der Ausgang ist auf der linken Seite.",
+      exampleSk: "Východ je na ľavej strane.",
+      recycledFrom: []
+    },
+    {
+      de: "auf der anderen Seite",
+      sk: "na druhej strane",
+      gender: null,
+      srsId: "L45_V20",
+      example: "Der Laden ist auf der anderen Seite der Brücke.",
+      exampleSk: "Obchod je na druhej strane mosta.",
+      recycledFrom: []
+    },
+    {
+      de: "auf der Karte",
+      sk: "na mape",
+      gender: null,
+      srsId: "L45_V21",
+      example: "Ich sehe den Dom auf der Karte.",
+      exampleSk: "Vidím katedrálu na mape.",
+      recycledFrom: []
+    },
+    {
+      de: "Wo ist...?",
+      sk: "Kde je...?",
+      gender: null,
+      srsId: "L45_V22",
+      example: "Wo ist der Dom?",
+      exampleSk: "Kde je katedrála?",
+      recycledFrom: []
+    },
+    {
+      de: "gegenüber",
+      sk: "oproti",
+      gender: null,
+      srsId: "L45_V23",
+      example: "Der Kiosk ist gegenüber dem Denkmal.",
+      exampleSk: "Kiosk je oproti pamätníku.",
+      recycledFrom: []
+    },
+    {
+      de: "einfach",
+      sk: "jednoduchý, ľahký",
+      gender: null,
+      srsId: "L45_V24",
+      example: "Das ist einfach.",
+      exampleSk: "To je jednoduché.",
+      recycledFrom: []
+    },
+    {
+      de: "schwierig",
+      sk: "ťažký, zložitý",
+      gender: null,
+      srsId: "L45_V25",
+      example: "Das ist schwierig.",
+      exampleSk: "To je ťažké.",
+      recycledFrom: []
+    }
   ],
-
   exercises: [
     {
       type: "flashcard",
-      instruction:
-        "Prezri si komparatívne formy. Ku každej karte povedz celú vetu s 'als' alebo 'so … wie'.",
-      items: [
-        "L45_V01",
-        "L45_V02",
-        "L45_V03",
-        "L45_V04",
-        "L45_V05",
-        "L45_V06",
-        "L45_V07",
-        "L45_V08",
-        "L45_V09",
-        "L45_V10",
-        "L45_V11",
-        "L45_V12",
-        "L45_V14",
-        "L45_V15",
-      ],
-    },
-    {
-      type: "mcq",
-      instruction: "Vyber správnu formu komparatívu.",
-      questions: [
-        {
-          question: "Komparatív od 'gut' je:",
-          options: ["guter", "güter", "besser", "mehr gut"],
-          answer: "besser",
-          explanation:
-            "'gut → besser' — nepravidelná forma! Treba sa naučiť naspamäť. Slovenský ekvivalent: dobrý → lepší.",
-        },
-        {
-          question: "'Wien ist ___ als Bratislava.' (groß)",
-          options: ["großer", "größer", "grösser", "groß"],
-          answer: "größer",
-          explanation:
-            "'groß → größer' — jednoslabičné adj. s Umlaut. ß → ss v komparatíve nie je nutné.",
-        },
-        {
-          question: "Rovnosť: 'Wien ist ___ Bratislava.' (rovnako krásne)",
-          options: [
-            "schöner als",
-            "genauso schön wie",
-            "so schön als",
-            "schön wie",
-          ],
-          answer: "genauso schön wie",
-          explanation:
-            "Rovnosť: '(genau)so + adjektívum + wie'. Nie 'als'! 'Wien ist genauso schön wie Bratislava.'",
-        },
-        {
-          question: "'Viel → ___' (komparatív)",
-          options: ["vieler", "mehr", "mehrer", "vieles"],
-          answer: "mehr",
-          explanation: "'viel → mehr' — nepravidelná forma. Slovak: veľa → viac.",
-        },
-        {
-          question: "'gemütlich' po slovensky znamená:",
-          options: ["moderný", "útulný, príjemný", "hlučný", "rýchly"],
-          answer: "útulný, príjemný",
-          explanation:
-            "'gemütlich' = útulný, príjemný, cosy. Typicky rakúsko-nemecké slovo pre pohodlnú atmosféru.",
-        },
-      ],
-    },
-    {
-      type: "fill",
-      instruction: "Doplň správnu komparatívnu formu adjektíva.",
-      questions: [
-        {
-          sentence: "Bratislava ist ___ als Wien. (klein)",
-          answer: "kleiner",
-          hint: "pravidelný komparatív: klein + -er",
-          explanation: "'klein → kleiner'. Pravidelná forma, bez Umlaut.",
-        },
-        {
-          sentence: "Das Essen in der Mensa ist ___ als im Restaurant. (billig)",
-          answer: "billiger",
-          hint: "pravidelný komparatív: billig + -er",
-          explanation: "'billig → billiger'. Pravidelná forma.",
-        },
-        {
-          sentence: "Im Winter ist es ___ als im Herbst. (kalt)",
-          answer: "kälter",
-          hint: "jednoslabičné + Umlaut!",
-          explanation: "'kalt → kälter' — jednoslabičné adjektívum, pridáva Umlaut.",
-        },
-        {
-          sentence: "Ich trinke ___ Tee als Kaffee. (gern)",
-          answer: "lieber",
-          hint: "nepravidelný komparatív od gern",
-          explanation: "'gern → lieber' — nepravidelná forma. Ich trinke lieber Tee = radšej pijem čaj.",
-        },
-        {
-          sentence: "Wien hat ___ Einwohner als Bratislava. (viel)",
-          answer: "mehr",
-          hint: "nepravidelný komparatív",
-          explanation: "'viel → mehr' — nepravidelná forma. Slovak: veľa → viac.",
-        },
-      ],
-    },
-    {
-      type: "listen",
-      instruction:
-        "Počúvaj vety s komparatívom. Zopakuj ich nahlas a nahraď 'als' za 'so … wie' tam, kde to ide.",
-      questions: [
-        { de: "Wien ist größer als Bratislava.", sk: "Viedeň je väčšia ako Bratislava." },
-        { de: "Das Bier in Wien ist besser!", sk: "Pivo vo Viedni je lepšie!" },
-        {
-          de: "Bratislava ist gemütlicher als Wien.",
-          sk: "Bratislava je útulnejšia ako Viedeň.",
-        },
-        {
-          de: "Das Leben hier ist teurer als in der Slowakei.",
-          sk: "Život tu je drahší ako na Slovensku.",
-        },
-        {
-          de: "Ich laufe schneller als mein Bruder.",
-          sk: "Behám rýchlejšie ako môj brat.",
-        },
-        {
-          de: "Bratislava ist so schön wie Wien.",
-          sk: "Bratislava je taká krásna ako Viedeň.",
-        },
-        { de: "Was ist der Unterschied zwischen beiden Städten?", sk: "Aký je rozdiel medzi oboma mestami?" },
-        { de: "Im Winter ist es kälter als im Herbst.", sk: "V zime je chladnejšie ako na jeseň." },
-      ],
+      instruction: "Prezri si slovíčka tejto lekcie. Klikni na kartičku pre preklad."
     },
     {
       type: "match",
-      instruction: "Spoj pozitív (základná forma) s jeho komparatívom.",
+      instruction: "Priraďte nemecké slová k ich slovenským prekladom.",
       pairs: [
-        ["groß", "größer"],
-        ["gut", "besser"],
-        ["viel", "mehr"],
-        ["gern", "lieber"],
-        ["hoch", "höher"],
-        ["alt", "älter"],
-        ["jung", "jünger"],
-        ["teuer", "teurer"],
-        ["schnell", "schneller"],
-        ["gemütlich", "gemütlicher"],
-      ],
-    },
-    {
-      type: "dialogue",
-      instruction:
-        "Jana a Lukas porovnávajú Viedeň a Bratislavu. Prečítaj si dialóg a nájdi všetky komparatívne formy.",
-      lines: [
-        {
-          speaker: "Lukas",
-          de: "Ich finde Wien schöner als Bratislava. Wien hat mehr Museen!",
-          sk: "Myslím si, že Viedeň je krajšia ako Bratislava. Viedeň má viac múzeí!",
-        },
-        {
-          speaker: "Jana",
-          de: "Ich bin anderer Meinung. Bratislava ist gemütlicher als Wien!",
-          sk: "Mám iný názor. Bratislava je útulnejšia ako Viedeň!",
-        },
-        {
-          speaker: "Lukas",
-          de: "Aber Wien ist größer — es gibt mehr Restaurants, mehr Kultur.",
-          sk: "Ale Viedeň je väčšia — je tu viac reštaurácií, viac kultúry.",
-        },
-        {
-          speaker: "Jana",
-          de: "Das stimmt. Aber Wien ist auch teurer als Bratislava!",
-          sk: "To je pravda. Ale Viedeň je aj drahšia ako Bratislava!",
-        },
-        {
-          speaker: "Lukas",
-          de: "Ja, das Leben ist hier teurer. Aber die Gehälter sind auch besser.",
-          sk: "Áno, život je tu drahší. Ale platy sú tiež lepšie.",
-        },
-        {
-          speaker: "Jana",
-          de: "In Bratislava ist das Essen billiger und genauso lecker wie hier.",
-          sk: "V Bratislave je jedlo lacnejšie a rovnako chutné ako tu.",
-        },
-        {
-          speaker: "Lukas",
-          de: "Vielleicht. Aber der öffentliche Verkehr ist in Wien besser.",
-          sk: "Možno. Ale verejná doprava je vo Viedni lepšia.",
-        },
-        {
-          speaker: "Jana",
-          de: "Das ist wahr. Die U-Bahn ist schneller als der Bus in Bratislava.",
-          sk: "To je pravda. Metro je rýchlejšie ako autobus v Bratislave.",
-        },
-        {
-          speaker: "Lukas",
-          de: "Welche Stadt ist deiner Meinung nach besser?",
-          sk: "Ktoré mesto je podľa teba lepšie?",
-        },
-        {
-          speaker: "Jana",
-          de: "Ich liebe beide! Wien ist größer, aber Bratislava ist meine Heimat.",
-          sk: "Milujem obe! Viedeň je väčšia, ale Bratislava je môj domov.",
-        },
-        {
-          speaker: "Lukas",
-          de: "Eine diplomatische Antwort!",
-          sk: "Diplomatická odpoveď!",
-        },
-        {
-          speaker: "Jana",
-          de: "Ja — Wien ist so gut wie Bratislava, aber auf andere Art!",
-          sk: "Áno — Viedeň je rovnako dobrá ako Bratislava, ale inak!",
-        },
-      ],
-      comprehensionQuestions: [
-        {
-          question: "Was findet Lukas besser in Wien als in Bratislava?",
-          answer: "Lukas findet Wien schöner — es gibt mehr Museen, mehr Kultur und bessere Gehälter.",
-          explanation:
-            "Lukas nennt: mehr Museen, mehr Restaurants, mehr Kultur, bessere Gehälter.",
-        },
-        {
-          question: "Was findet Jana besser in Bratislava?",
-          answer:
-            "Jana findet Bratislava gemütlicher und das Essen billiger (und genauso lecker).",
-          explanation:
-            "Jana sagt: 'Bratislava ist gemütlicher' und 'das Essen ist billiger und genauso lecker.'",
-        },
-        {
-          question: "Worüber sind sich Jana und Lukas einig?",
-          answer: "Sie sind sich einig, dass der öffentliche Verkehr in Wien besser ist.",
-          explanation: "Jana sagt: 'Das ist wahr. Die U-Bahn ist schneller als der Bus in Bratislava.'",
-        },
-      ],
-    },
-    {
-      type: "minitext",
-      instruction:
-        "Prečítaj si novinový článok porovnávajúci Viedeň s Bratislavou. Odpovedz na otázky.",
-      text:
-        "Wien oder Bratislava — ein Vergleich\nWien ist die Hauptstadt Österreichs und hat fast 2 Millionen Einwohner. Bratislava, die Hauptstadt der Slowakei, ist kleiner — sie hat nur etwa 475.000 Einwohner. Wien ist bekannt für seine Museen, Opern und Kaffeehäuser. Das öffentliche Verkehrsnetz in Wien ist größer und moderner als in Bratislava. Aber: Wien ist auch teurer. Ein Kaffee in Wien kostet mehr als in Bratislava. Viele Slowaken finden Bratislava gemütlicher, familiärer und grüner als Wien. Beide Städte sind anders — aber beide sind schön!",
-      textSk:
-        "Viedeň alebo Bratislava — porovnanie\nViedeň je hlavné mesto Rakúska a má takmer 2 milióny obyvateľov. Bratislava, hlavné mesto Slovenska, je menšia — má len asi 475 000 obyvateľov. Viedeň je známa svojimi múzeami, operami a kaviarňami. Sieť verejnej dopravy vo Viedni je väčšia a modernejšia ako v Bratislave. Ale: Viedeň je aj drahšia. Káva vo Viedni stojí viac ako v Bratislave. Mnohí Slováci považujú Bratislavu za útulnejšiu, rodinnejšiu a zelenšiu ako Viedeň. Obe mestá sú iné — ale obe sú krásne!",
-      questions: [
-        {
-          question: "Wie viele Einwohner hat Wien?",
-          answer: "Wien hat fast 2 Millionen Einwohner.",
-          explanation: "'Wien ist die Hauptstadt Österreichs und hat fast 2 Millionen Einwohner.'",
-        },
-        {
-          question: "Was ist in Wien größer und moderner als in Bratislava?",
-          answer: "Das öffentliche Verkehrsnetz (Verkehrssystem).",
-          explanation: "'Das öffentliche Verkehrsnetz in Wien ist größer und moderner als in Bratislava.'",
-        },
-        {
-          question: "Wie finden viele Slowaken Bratislava im Vergleich zu Wien?",
-          answer: "Gemütlicher, familiärer und grüner.",
-          explanation: "'Viele Slowaken finden Bratislava gemütlicher, familiärer und grüner als Wien.'",
-        },
-      ],
-    },
-    {
-      type: "freewrite",
-      instruction:
-        "Napíš odstavec, v ktorom porovnáš dve mestá, krajiny alebo ľudí. Použi aspoň 4 komparatívne formy a 'als' aj 'so … wie'.",
-      prompt:
-        "Vergleiche zwei Städte, Länder oder Menschen. Was ist größer, besser, schöner?",
-      minWords: 35,
-      exampleAnswer:
-        "Ich vergleiche München und Berlin. Berlin ist größer als München — es hat mehr Einwohner. München ist teurer, aber das Leben dort ist gemütlicher. Das Bier in München ist besser als in Berlin, finde ich! Berlin hat mehr Clubs und Bars. Aber das Wetter in München ist genauso kalt wie in Berlin im Winter. Beide Städte sind schön, aber unterschiedlich.",
+        [
+          "der Dom",
+          "katedrála"
+        ],
+        [
+          "der Turm",
+          "veža"
+        ],
+        [
+          "die Brücke",
+          "most"
+        ],
+        [
+          "das Gebäude",
+          "budova"
+        ],
+        [
+          "der Laden",
+          "obchod"
+        ],
+        [
+          "die Ampel",
+          "semafor"
+        ],
+        [
+          "der Eingang",
+          "vchod"
+        ],
+        [
+          "der Ausgang",
+          "východ"
+        ],
+        [
+          "der Brunnen",
+          "fontána"
+        ],
+        [
+          "stehen",
+          "stáť, byť umiestnený"
+        ]
+      ]
     },
     {
       type: "wordorder",
-      instruction: "ZoraÄ slovÃ¡ do sprÃ¡vnej nemeckej vety.",
+      instruction: "Usporiadajte slová do správnej vety. Dávajte pozor na datív!",
       sentences: [
         {
-          words: ["Es", "ist", "wichtig,", "Deutsch", "zu", "lernen."],
-          correct: "Es ist wichtig, Deutsch zu lernen.",
-          hint: "Je dÃ´leÅ¾itÃ© uÄiÅ¥ sa nemÄinu.",
-          explanation: "InfinitÃ­vna konÅ¡trukcia s 'zu': 'zu' + InfinitÃ­v na konci po Äiarke.",
+          words: [
+            "Der",
+            "steht",
+            "Dom",
+            "Rathaus",
+            "dem",
+            "vor"
+          ],
+          correct: "Der Dom steht vor dem Rathaus",
+          hint: "Katedrála stojí pred radnicou.",
+          explanation: "Predložka 'vor' (pred) pri vyjadrení miesta vyžaduje datív. 'Rathaus' (radnica) je stredného rodu (das Rathaus), preto sa člen mení na 'dem'."
         },
         {
-          words: ["Jana", "versucht,", "jeden", "Tag", "zu", "Ã¼ben."],
-          correct: "Jana versucht, jeden Tag zu Ã¼ben.",
-          hint: "Jana sa snaÅ¾Ã­ precviÄovaÅ¥ kaÅ¾dÃ½ deÅˆ.",
-          explanation: "Po 'versuchen' nasleduje 'zu' + InfinitÃ­v. ÄŒiarka oddeÄ¾uje infinitÃ­vnu skupinu.",
+          words: [
+            "ist",
+            "Der",
+            "Kiosk",
+            "Brunnen",
+            "neben",
+            "dem"
+          ],
+          correct: "Der Kiosk ist neben dem Brunnen",
+          hint: "Kiosk je vedľa fontány.",
+          explanation: "Predložka 'neben' (vedľa) pri vyjadrení miesta vyžaduje datív. 'Brunnen' (fontána) je mužského rodu (der Brunnen), preto sa člen mení na 'dem'."
         },
         {
-          words: ["Es", "ist", "schÃ¶n,", "Musik", "zu", "hÃ¶ren."],
-          correct: "Es ist schÃ¶n, Musik zu hÃ¶ren.",
-          hint: "Je krÃ¡sne poÄÃºvaÅ¥ hudbu.",
-          explanation: "'es ist + adjektÃ­v, ... zu + InfinitÃ­v' â€” beÅ¾nÃ¡ Å¡truktÃºra.",
+          words: [
+            "Die",
+            "Brücke",
+            "Donau",
+            "an",
+            "der",
+            "liegt"
+          ],
+          correct: "Die Brücke liegt an der Donau",
+          hint: "Most leží (je umiestnený) pri Dunaji.",
+          explanation: "Predložka 'an' (pri) pri vyjadrení miesta vyžaduje datív. 'Donau' (Dunaj) je ženského rodu (die Donau), preto sa člen mení na 'der'."
         },
         {
-          words: ["Er", "beginnt,", "die", "Aufgabe", "zu", "lÃ¶sen."],
-          correct: "Er beginnt, die Aufgabe zu lÃ¶sen.",
-          hint: "ZaÄÃ­na rieÅ¡iÅ¥ Ãºlohu.",
-          explanation: "'beginnen + zu + InfinitÃ­v' â€” InfinitÃ­v s 'zu' po modÃ¡lnych vÃ½razoch.",
+          words: [
+            "Der",
+            "Eingang",
+            "ist",
+            "dem",
+            "Gebäude",
+            "vor"
+          ],
+          correct: "Der Eingang ist vor dem Gebäude",
+          hint: "Vchod je pred budovou.",
+          explanation: "Predložka 'vor' (pred) pri vyjadrení miesta vyžaduje datív. 'Gebäude' (budova) je stredného rodu (das Gebäude), preto sa člen mení na 'dem'."
         },
         {
-          words: ["Es", "ist", "gesund,", "viel", "Wasser", "zu", "trinken."],
-          correct: "Es ist gesund, viel Wasser zu trinken.",
-          hint: "Je zdravÃ© piÅ¥ veÄ¾a vody.",
-          explanation: "CelÃ¡ infinitÃ­vna frÃ¡za 'viel Wasser zu trinken' stojÃ­ za Äiarkou.",
+          words: [
+            "Ampel",
+            "steht",
+            "neben",
+            "der",
+            "Ein",
+            "Auto"
+          ],
+          correct: "Ein Auto steht neben der Ampel",
+          hint: "Auto stojí vedľa semafora.",
+          explanation: "Predložka 'neben' (vedľa) pri vyjadrení miesta vyžaduje datív. 'Ampel' (semafor) je ženského rodu (die Ampel), preto sa člen mení na 'der'."
+        }
+      ]
+    },
+    {
+      type: "fill",
+      instruction: "Doplňte správne slovo alebo člen do vety.",
+      questions: [
+        {
+          sentence: "Wo ist der Parkplatz? Er ist ___ dem Dom.",
+          answer: "vor",
+          hint: "Kde je parkovisko? Je pred katedrálou.",
+          explanation: "Predložka 'vor' (pred) sa používa na vyjadrenie polohy a vyžaduje datív. 'Dom' je mužského rodu (der Dom), v datíve 'dem Dom'."
         },
-      ],
+        {
+          sentence: "Der Kiosk ist ___ ___ Brücke.",
+          answer: "an der",
+          hint: "Kiosk je pri moste.",
+          explanation: "Predložka 'an' (pri) sa používa na vyjadrenie polohy a vyžaduje datív. 'Brücke' je ženského rodu (die Brücke), v datíve 'der Brücke'."
+        },
+        {
+          sentence: "Das Denkmal steht ___ ___ Kirche.",
+          answer: "neben der",
+          hint: "Pamätník stojí vedľa kostola.",
+          explanation: "Predložka 'neben' (vedľa) sa používa na vyjadrenie polohy a vyžaduje datív. 'Kirche' je ženského rodu (die Kirche), v datíve 'der Kirche'."
+        },
+        {
+          sentence: "Ich ___ gestern im Kino.",
+          answer: "war",
+          hint: "Včera som bol v kine.",
+          explanation: "Sloveso 'sein' (byť) v minulom čase (Präteritum) pre 'ich' je 'war'."
+        },
+        {
+          sentence: "Entschuldigen Sie, können Sie ___ helfen?",
+          answer: "mir",
+          hint: "Prepáčte, môžete mi pomôcť?",
+          explanation: "Sloveso 'helfen' (pomáhať) vyžaduje datív. 'Mne' v datíve je 'mir'."
+        },
+        {
+          sentence: "Wir ___ letzte Woche nach Berlin gefahren.",
+          answer: "sind",
+          hint: "Minulý týždeň sme išli do Berlína.",
+          explanation: "Sloveso 'fahren' (ísť, cestovať) vyjadruje pohyb a tvorí perfekt s pomocným slovesom 'sein'. Pre 'wir' je to 'sind'."
+        },
+        {
+          sentence: "Der Eingang ist ___ ___ Ampel.",
+          answer: "vor der",
+          hint: "Vchod je pred semaforom.",
+          explanation: "Predložka 'vor' (pred) sa používa na vyjadrenie polohy a vyžaduje datív. 'Ampel' je ženského rodu (die Ampel), v datíve 'der Ampel'."
+        }
+      ]
+    },
+    {
+      type: "listen",
+      instruction: "Vypočujte si slovo a napíšte ho po nemecky.",
+      questions: [
+        {
+          de: "der Dom",
+          sk: "katedrála"
+        },
+        {
+          de: "der Turm",
+          sk: "veža"
+        },
+        {
+          de: "die Brücke",
+          sk: "most"
+        },
+        {
+          de: "der Laden",
+          sk: "obchod"
+        },
+        {
+          de: "die Ampel",
+          sk: "semafor"
+        },
+        {
+          de: "der Eingang",
+          sk: "vchod"
+        },
+        {
+          de: "der Ausgang",
+          sk: "východ"
+        },
+        {
+          de: "der Brunnen",
+          sk: "fontána"
+        },
+        {
+          de: "der Parkplatz",
+          sk: "parkovisko"
+        },
+        {
+          de: "das Gebäude",
+          sk: "budova"
+        }
+      ]
+    },
+    {
+      type: "mcq",
+      instruction: "Vyberte správnu odpoveď.",
+      questions: [
+        {
+          question: "Wo ist der Kiosk? Er ist ___ ___ Mauer.",
+          options: [
+            "neben die",
+            "neben der",
+            "neben dem",
+            "neben das"
+          ],
+          answer: 1,
+          explanation: "Predložka 'neben' (vedľa) pri vyjadrení miesta vyžaduje datív. 'Mauer' (múr) je ženského rodu (die Mauer), preto sa člen v datíve mení na 'der'."
+        },
+        {
+          question: "Ako povieme po nemecky 'semafor'?",
+          options: [
+            "der Turm",
+            "die Ampel",
+            "die Brücke",
+            "der Laden"
+          ],
+          answer: 1,
+          explanation: "Správny nemecký preklad slova 'semafor' je 'die Ampel'."
+        },
+        {
+          question: "Das Denkmal steht ___ Rathaus.",
+          options: [
+            "vor die",
+            "vor dem",
+            "vor den",
+            "vor der"
+          ],
+          answer: 1,
+          explanation: "Predložka 'vor' (pred) pri vyjadrení miesta vyžaduje datív. 'Rathaus' (radnica) je stredného rodu (das Rathaus), preto sa člen v datíve mení na 'dem'."
+        },
+        {
+          question: "Čo znamená 'auf der anderen Seite'?",
+          options: [
+            "na pravej strane",
+            "na ľavej strane",
+            "na druhej strane",
+            "v strede"
+          ],
+          answer: 2,
+          explanation: "Fráza 'auf der anderen Seite' znamená 'na druhej strane'."
+        },
+        {
+          question: "Gehen Sie ___ und dann biegen Sie links ab.",
+          options: [
+            "links",
+            "rechts",
+            "geradeaus",
+            "hinten"
+          ],
+          answer: 2,
+          explanation: "Fráza 'geradeaus gehen' znamená 'ísť rovno'. 'Links abbiegen' znamená 'zahnúť doľava'."
+        },
+        {
+          question: "Schmeckt dir der Kaffee? Ja, er gefällt ___ sehr gut!",
+          options: [
+            "mich",
+            "mir",
+            "ich",
+            "meinem"
+          ],
+          answer: 1,
+          explanation: "Sloveso 'gefallen' (páčiť sa) vyžaduje datív. 'Mne' v datíve je 'mir'. 'Mich' je akuzatív."
+        },
+        {
+          question: "Ktoré slovo znamená 'vchod'?",
+          options: [
+            "der Ausgang",
+            "der Laden",
+            "der Eingang",
+            "die Mitte"
+          ],
+          answer: 2,
+          explanation: "'Der Eingang' znamená 'vchod'. 'Der Ausgang' je 'východ'."
+        },
+        {
+          question: "Letztes Jahr ___ ich keine Zeit für Urlaub.",
+          options: [
+            "bin",
+            "war",
+            "habe",
+            "hatte"
+          ],
+          answer: 3,
+          explanation: "Sloveso 'haben' (mať) v minulom čase (Präteritum) pre 'ich' je 'hatte'. 'War' je Präteritum od 'sein'."
+        }
+      ]
+    },
+    {
+      type: "minitext",
+      instruction: "Lies den Dialog und beantworte die Fragen.",
+      text: "Person: Entschuldigen Sie, wo ist die nächste U-Bahn-Station?\nJana: Moment, ich schaue mal auf meiner Karte auf dem Handy. Ah, hier ist sie. Es ist schwierig zu finden.\nJana: Die U-Bahn-Station ist neben dem Laden, vor dem großen Hotel. Sie liegt auch hinter der Bäckerei.\nPerson: Hmm, gibt es dort vielleicht ein Denkmal oder einen Brunnen? Ich sehe viele Gebäude.\nJana: Ja, in der Mitte des Platzes steht ein großes Denkmal. Der Eingang ist gegenüber dem Denkmal, auf der rechten Seite. Der Ausgang ist auf der anderen Seite.\nPerson: Ah, ich verstehe. Vielen Dank für Ihre Hilfe!",
+      textSk: "Osoba: Ospravedlňte ma, kde je najbližšia stanica metra?\nJana: Moment, pozriem sa na mojej mape na mobile. Aha, tu je. Je to ťažké nájsť.\nJana: Stanica metra je vedľa obchodu, pred veľkým hotelom. Leží tiež za pekárňou.\nOsoba: Hmm, je tam možno nejaký pamätník alebo fontána? Vidím veľa budov.\nJana: Áno, v strede námestia stojí veľký pamätník. Vchod je oproti pamätníku, na pravej strane. Východ je na druhej strane.\nOsoba: Aha, rozumiem. Ďakujem veľmi pekne za vašu pomoc!",
+      questions: [
+        {
+          question: "Was macht Jana, aby der Person zu helfen?",
+          options: [
+            "Sie fragt eine andere Person.",
+            "Sie schaut auf ihre Handy-Karte.",
+            "Sie zeichnet eine Karte.",
+            "Sie gibt falsche Anweisungen."
+          ],
+          answer: 1,
+          explanation: "Jana sagt: \"ich schaue mal auf meiner Karte auf dem Handy.\""
+        },
+        {
+          question: "Wo ist die U-Bahn-Station in Bezug auf den Laden?",
+          options: [
+            "Hinter dem Laden.",
+            "Neben dem Laden.",
+            "Vor dem Laden.",
+            "Gegenüber dem Laden."
+          ],
+          answer: 1,
+          explanation: "Jana sagt: \"Die U-Bahn-Station ist neben dem Laden...\""
+        },
+        {
+          question: "Was ist gegenüber dem Denkmal?",
+          options: [
+            "Das große Hotel.",
+            "Die Bäckerei.",
+            "Der Eingang zur Station.",
+            "Der Laden."
+          ],
+          answer: 2,
+          explanation: "Jana sagt: \"Der Eingang ist gegenüber dem Denkmal...\""
+        }
+      ]
     },
     {
       type: "speaking",
-      instruction: "PoÄÃºvaj nemeckÃº vetu. Potom hovor nahlas a skontroluj sa.",
+      instruction: "Höre zu und sprich nach.",
       phrases: [
         {
-          de: "Es ist wichtig, Deutsch zu lernen.",
-          sk: "Je dÃ´leÅ¾itÃ© uÄiÅ¥ sa nemÄinu.",
-          tip: "zu+InfinitÃ­v: 'zu' bez prÃ­zvuku",
+          de: "der Turm",
+          sk: "veža",
+          tip: "'u' ako v 'kruh' [ʊ]."
         },
         {
-          de: "Jana versucht, jeden Tag zu Ã¼ben.",
-          sk: "Jana sa snaÅ¾Ã­ precviÄovaÅ¥ kaÅ¾dÃ½ deÅˆ.",
-          tip: "Ã¼ben=[yËben], Ã¼=[y] zaokr.",
+          de: "die Brücke",
+          sk: "most",
+          tip: "'ü' ako v 'ľúbiť' [ʏ]. 'ck' ako 'k'."
         },
         {
-          de: "Es ist schÃ¶n, Musik zu hÃ¶ren.",
-          sk: "Je krÃ¡sne poÄÃºvaÅ¥ hudbu.",
-          tip: "hÃ¶ren=[hÃ¸Ëren], Ã¶ dlhÃ©",
+          de: "stehen",
+          sk: "stáť, byť umiestnený",
+          tip: "'st' na začiatku ako 'št'. 'eh' dlhé [e:]"
         },
         {
-          de: "Er beginnt, die Aufgabe zu lÃ¶sen.",
-          sk: "ZaÄÃ­na rieÅ¡iÅ¥ Ãºlohu.",
-          tip: "beginnt=[beginnt], Doppel-n",
+          de: "vor dem Dom",
+          sk: "pred katedrálou",
+          tip: "'v' ako v 'voda'. 'o' dlhé [o:]"
         },
         {
-          de: "Es ist gesund, viel Wasser zu trinken.",
-          sk: "Je zdravÃ© piÅ¥ veÄ¾a vody.",
-          tip: "gesund=[gezunt], dâ†’t na konci",
+          de: "Wo ist der Eingang?",
+          sk: "Kde je vchod?",
+          tip: "'Wo' [vo:]. 'Ei' ako 'aj'."
         },
-      ],
+        {
+          de: "Der Kiosk ist neben dem Parkplatz.",
+          sk: "Kiosk je vedľa parkoviska.",
+          tip: "'Kiosk' [kiɔsk]. 'e' v 'neben' ako 'e' v 'pes'."
+        },
+        {
+          de: "Die Ampel ist gegenüber dem Gebäude.",
+          sk: "Semafor je oproti budove.",
+          tip: "'Ampel' [ampəl]. 'ü' ako v 'ľúbiť' [y]."
+        },
+        {
+          de: "Ich warte vor dem Laden.",
+          sk: "Čakám pred obchodom.",
+          tip: "'ch' ako v 'ich' [ç]. 'a' v 'warte' dlhé [a:]"
+        }
+      ]
     },
+    {
+      type: "truefalse",
+      instruction: "Prečítaj si vety a rozhodni, či sú pravdivé (Wahr) alebo nepravdivé (Falsch) vzhľadom na gramatiku a slovnú zásobu lekcie.",
+      statements: [
+        {
+          statement: "Der Dom steht vor dem Gebäude.",
+          isTrue: true,
+          explanation: "Správne. 'vor' je obojstranná predložka a pri vyjadrení miesta vyžaduje datív. 'das Gebäude' sa v datíve mení na 'dem Gebäude'."
+        },
+        {
+          statement: "Ich warte an die Ampel.",
+          isTrue: false,
+          explanation: "Nesprávne. 'an' je obojstranná predložka a pri vyjadrení miesta vyžaduje datív. 'die Ampel' sa v datíve mení na 'der Ampel'. Správne by bolo: 'Ich warte an der Ampel'."
+        },
+        {
+          statement: "Das Denkmal liegt neben dem Brunnen.",
+          isTrue: true,
+          explanation: "Správne. 'neben' je obojstranná predložka a pri vyjadrení miesta vyžaduje datív. 'der Brunnen' sa v datíve mení na 'dem Brunnen'."
+        },
+        {
+          statement: "Der Laden ist auf der andere Seite.",
+          isTrue: false,
+          explanation: "Nesprávne. 'auf' je obojstranná predložka a pri vyjadrení miesta vyžaduje datív. 'die Seite' sa v datíve mení na 'der Seite'. Správne by bolo: 'Der Laden ist auf der anderen Seite'."
+        },
+        {
+          statement: "Wir sind gegenüber dem Kiosk.",
+          isTrue: true,
+          explanation: "Správne. 'gegenüber' je predložka, ktorá vždy vyžaduje datív. 'der Kiosk' sa v datíve mení na 'dem Kiosk'."
+        }
+      ]
+    },
+    {
+      type: "dictation",
+      instruction: "Počúvaj vety a napíš, čo počuješ. Potom si skontroluj správnosť.",
+      sentences: [
+        {
+          de: "Der Turm.",
+          sk: "Veža."
+        },
+        {
+          de: "Wo ist der Eingang?",
+          sk: "Kde je vchod?"
+        },
+        {
+          de: "Ich stehe vor dem Kiosk.",
+          sk: "Stojím pred stánkom."
+        },
+        {
+          de: "Das Denkmal liegt neben dem Brunnen.",
+          sk: "Pamätník leží vedľa fontány."
+        },
+        {
+          de: "Wir warten an der Ampel auf der rechten Seite.",
+          sk: "Čakáme pri semafore na pravej strane."
+        }
+      ]
+    },
+    {
+      type: "categorysort",
+      instruction: "Roztrieď slová do kategórií podľa ich rodu (členu).",
+      categories: [
+        {
+          name: "Mužský rod (der)",
+          color: "blue",
+          words: [
+            "Dom",
+            "Turm",
+            "Laden",
+            "Eingang",
+            "Ausgang",
+            "Parkplatz",
+            "Kiosk",
+            "Brunnen"
+          ]
+        },
+        {
+          name: "Ženský rod (die)",
+          color: "rose",
+          words: [
+            "Brücke",
+            "Ampel",
+            "Mitte",
+            "Mauer"
+          ]
+        },
+        {
+          name: "Stredný rod (das)",
+          color: "green",
+          words: [
+            "Gebäude",
+            "Denkmal"
+          ]
+        }
+      ],
+      explanation: "V nemčine je rod podstatných mien dôležitý pre správne skloňovanie, najmä v datíve, kde sa určité členy menia: 'der' → 'dem', 'die' → 'der', 'das' → 'dem'."
+    },
+    {
+      type: "translation",
+      instruction: "Prelož nasledujúce vety zo slovenčiny do nemčiny. Použi správne predložky a pády.",
+      sentences: [
+        {
+          sk: "Katedrála stojí pred budovou.",
+          answer: "Der Dom steht vor dem Gebäude.",
+          hint: "vor + Dativ",
+          explanation: "Predložka 'vor' (pred) pri vyjadrení miesta vyžaduje datív. 'das Gebäude' sa v datíve mení na 'dem Gebäude'."
+        },
+        {
+          sk: "Čakáme pri semafore.",
+          answer: "Wir warten an der Ampel.",
+          hint: "an + Dativ",
+          explanation: "Predložka 'an' (pri) pri vyjadrení miesta vyžaduje datív. 'die Ampel' sa v datíve mení na 'der Ampel'."
+        },
+        {
+          sk: "Pamätník leží vedľa fontány.",
+          answer: "Das Denkmal liegt neben dem Brunnen.",
+          hint: "neben + Dativ",
+          explanation: "Predložka 'neben' (vedľa) pri vyjadrení miesta vyžaduje datív. 'der Brunnen' sa v datíve mení na 'dem Brunnen'."
+        },
+        {
+          sk: "Obchod je na druhej strane.",
+          answer: "Der Laden ist auf der anderen Seite.",
+          hint: "auf + Dativ",
+          explanation: "Fráza 'auf der anderen Seite' (na druhej strane) používa predložku 'auf' s datívom. 'die Seite' sa v datíve mení na 'der Seite'."
+        }
+      ]
+    },
+    {
+      type: "conjugation",
+      instruction: "Doplň správne tvary slovies 'stehen' a 'liegen' v prítomnom čase (Präsens).",
+      verbs: [
+        {
+          infinitive: "stehen",
+          translation: "stáť, byť umiestnený",
+          forms: [
+            {
+              pronoun: "ich",
+              correct: "stehe"
+            },
+            {
+              pronoun: "du",
+              correct: "stehst"
+            },
+            {
+              pronoun: "er/sie/es",
+              correct: "steht"
+            },
+            {
+              pronoun: "wir",
+              correct: "stehen"
+            },
+            {
+              pronoun: "ihr",
+              correct: "steht"
+            },
+            {
+              pronoun: "sie/Sie",
+              correct: "stehen"
+            }
+          ],
+          note: "Sloveso 'stehen' (stáť) sa používa, keď je niečo umiestnené vo vertikálnej polohe."
+        },
+        {
+          infinitive: "liegen",
+          translation: "ležať, byť umiestnený",
+          forms: [
+            {
+              pronoun: "ich",
+              correct: "liege"
+            },
+            {
+              pronoun: "du",
+              correct: "liegst"
+            },
+            {
+              pronoun: "er/sie/es",
+              correct: "liegt"
+            },
+            {
+              pronoun: "wir",
+              correct: "liegen"
+            },
+            {
+              pronoun: "ihr",
+              correct: "liegt"
+            },
+            {
+              pronoun: "sie/Sie",
+              correct: "liegen"
+            }
+          ],
+          note: "Sloveso 'liegen' (ležať) sa používa, keď je niečo umiestnené v horizontálnej polohe."
+        }
+      ]
+    }
   ],
-
-  reviewWords: [
-    "L45_V01",
-    "L45_V03",
-    "L45_V05",
-    "L45_V07",
-    "L45_V11",
-    "L45_V12",
-    "L45_V14",
-    "L45_V15",
-  ],
-
-  lessonNotes:
-    "Kľúčová gramatika: Komparatív = adjektívum + -er. Umlaut: alt→älter, jung→jünger, warm→wärmer, kalt→kälter, lang→länger, groß→größer. Nepravidelné: gut→besser, viel→mehr, hoch→höher, gern→lieber. Porovnanie: X ist [Komparativ] als Y. Rovnosť: X ist (genau)so [Positiv] wie Y. Predikátová pozícia (nach sein): bez ďalšej prípony. Atribútová pozícia (pred podstatným menom) s príponami príde v L55+.",
+  reviewWords: []
 };

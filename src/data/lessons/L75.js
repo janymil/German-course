@@ -1,469 +1,981 @@
-﻿export const lesson75 = {
+export const lesson75 = {
   id: 75,
   week: 15,
   day: 5,
-  title: "Haushaltsgeräte und Alltag",
-  topic: "Domáce spotrebiče a každodenné domáce práce",
+  title: "Wandern im Wienerwald",
+  topic: "Slovná zásoba k výletom v každom počasí, použitie príčinnej spojky 'denn'. Predložky 'an', 'in', 'auf' s akuzatívom.",
   cefr: "A1",
   xpReward: 20,
-  narrativeContext:
-    "Jana's washing machine breaks down — typical daily life! She calls her flatmate Mia: 'Die Waschmaschine ist kaputt!' They divide household chores for the week. Jana learns to describe household appliances and negotiate everyday routines.",
-  communicativeGoal:
-    "Po tejto lekcii viem pomenovať domáce spotrebiče a opísať každodenné domáce práce.",
-  skillFocus: ["vocabulary", "speaking", "listening"],
-  grammarNote: {
-    rule: "Akuzatív pri domácich prácach + separabilné slovesá + modálne slovesá",
-    explanation:
-      "Pri opisovaní domácich prác väčšinou používame akuzatív: 'Ich putze die Wohnung.' (A) / 'Ich mache den Abwasch.' (A) / 'Ich wasche die Wäsche.' (A). Praktické spojenie: 'beim + sloveso-podstatné meno': beim Kochen, beim Putzen, beim Einkaufen. Modál + domáce práce: 'Ich muss heute die Wohnung putzen.' Frekvencia: 'Ich putze zweimal pro Woche.' Separabilné slovesá: aufräumen (räumt auf), abwaschen (wäscht ab), staubsaugen (saugt Staub).",
-    examples: [
-      { de: "Ich putze die Wohnung.", sk: "Upratujem byt." },
-      { de: "Ich mache den Abwasch.", sk: "Umývam riad." },
-      { de: "Kannst du heute staubsaugen?", sk: "Môžeš dnes vysávať?" },
-      { de: "Ich bügle zweimal pro Woche.", sk: "Žehlím dvakrát týždenne." },
-    ],
-    slovakContrastNote:
-      "Slovensky 'umývam riad' (akkuzatív) = 'Ich mache den Abwasch'. 'Upratujem byt' = 'Ich putze die Wohnung.' Priame štrukturálne paralely! Zložené slovesá v nemčine (aufräumen, abwaschen) sa mierne líšia od slovenských jednoduchých slovies. Pamätaj: separabilné slovesá — predpona ide na koniec!",
-  },
+  narrativeContext: "Jana und ihre Kollegen planen einen Ausflug in den Wienerwald. Sie sprechen über das Wetter und packen ihre Sachen.",
+  communicativeGoal: "Nach dieser Lektion kann ich über Ausflüge sprechen, das Wetter beschreiben und Gründe mit 'denn' angeben.",
+  skillFocus: [
+    "vocabulary",
+    "grammar",
+    "speaking",
+    "reading"
+  ],
+  lessonNotes: "Naučíme sa slovnú zásobu týkajúcu sa výletov a počasia. Vysvetlíme si použitie spojky 'denn' na vyjadrenie dôvodu. Pozrieme sa aj na predložky 'an', 'in', 'auf' v kontexte cestovania.",
+  grammarNotes: [
+    {
+      rule: "Die kausale Konjunktion 'denn'",
+      explanation: "<p>Spojka <strong>'denn'</strong> sa v nemčine používa na vyjadrenie príčiny alebo dôvodu deja.</p><p>Je to zlučovacia spojka, čo znamená, že nespôsobuje zmenu slovosledu vo vete. Sloveso zostáva na svojej prirodzenej pozícii, teda na druhom mieste vo vedľajšej vete (po spojke).</p><p>Spojka 'denn' sa dá preložiť do slovenčiny ako 'pretože', 'lebo'. Je to veľmi užitočná spojka na vysvetlenie dôvodu.</p><p><strong>Príklad:</strong> 'Ich gehe nach Hause, <strong>denn</strong> ich bin müde.' (Idem domov, pretože som unavený.)</p>",
+      examples: [
+        {
+          de: "Ich bleibe zu Hause, denn es regnet.",
+          sk: "Zostávam doma, pretože prší."
+        },
+        {
+          de: "Wir essen jetzt, denn wir haben Hunger.",
+          sk: "Teraz jeme, lebo máme hlad."
+        },
+        {
+          de: "Er lernt Deutsch, denn er möchte in Deutschland studieren.",
+          sk: "Učí sa po nemecky, pretože by chcel študovať v Nemecku."
+        },
+        {
+          de: "Sie nimmt den Regenschirm, denn es könnte nass werden.",
+          sk: "Berie si dáždnik, pretože by mohlo zmoknúť."
+        },
+        {
+          de: "Das ist gut, denn wir haben Zeit.",
+          sk: "To je dobre, lebo máme čas."
+        },
+        {
+          de: "Ich kaufe das Buch, denn es ist interessant.",
+          sk: "Kúpim si tú knihu, pretože je zaujímavá."
+        }
+      ],
+      slovakContrastNote: "Slovenská spojka 'pretože' alebo 'lebo' sa tiež používa na vyjadrenie príčiny. Rozdiel je v tom, že nemecká spojka 'denn' nemení slovosled vo vete, zatiaľ čo slovenské 'pretože' a 'lebo' tiež nemenia slovosled. V tomto prípade je to podobné. Dôležité je zapamätať si, že 'denn' je zlučovacia spojka a sloveso zostáva na druhom mieste."
+    },
+    {
+      rule: "Präpositionen 'an', 'in', 'auf' mit Dativ (Freizeit)",
+      explanation: "<p>Predložky <strong>'an', 'in'</strong> a <strong>'auf'</strong> sa v nemčine často používajú na opisovanie miest, kde ľudia trávia voľný čas. V tomto kontexte sa zvyčajne spájajú s datívom, ak opisujeme statickú polohu (kde sa niečo nachádza alebo kde sa niečo deje).</p><p><strong>'an'</strong> sa používa s vodnými plochami (more, jazero, rieka) alebo pri aktivitách, ktoré sú 'pri' niečom (napr. pri stole, pri mori).</p><p><strong>'in'</strong> sa používa pre uzavreté priestory (dom, kino, mesto, krajina) alebo pre časové obdobia.</p><p><strong>'auf'</strong> sa používa pre otvorené priestranstvá (námestie, ostrov, hory) alebo pre povrchy.</p><p><strong>Dôležité:</strong> Ak tieto predložky vyjadrujú smer (kam?), používajú sa s akuzatívom. V tejto lekcii sa zameriavame na datív (kde?).</p>",
+      examples: [
+        {
+          de: "Wir sind am Meer.",
+          sk: "Sme pri mori."
+        },
+        {
+          de: "Ich bin im Kino.",
+          sk: "Som v kine."
+        },
+        {
+          de: "Sie ist auf dem Markt.",
+          sk: "Je na trhovisku."
+        },
+        {
+          de: "Er ist an der Universität.",
+          sk: "Je na univerzite."
+        },
+        {
+          de: "Wir sind in der Stadt.",
+          sk: "Sme v meste."
+        },
+        {
+          de: "Sie sind auf dem Land.",
+          sk: "Sú na vidieku."
+        },
+        {
+          de: "Ich bin am See.",
+          sk: "Som pri jazere."
+        },
+        {
+          de: "Er ist im Park.",
+          sk: "Je v parku."
+        }
+      ],
+      slovakContrastNote: "Slovenčina používa na vyjadrenie miesta rôzne predložky a pády. Napríklad 'pri mori' (predložka 'pri' + 6. pád), 'v kine' (predložka 'v' + 6. pád), 'na trhovisku' (predložka 'na' + 6. pád). Nemecké 'an', 'in', 'auf' s datívom zodpovedajú týmto slovenským spojeniam, ale je dôležité rozlišovať, kedy sa používa datív (kde?) a kedy akuzatív (kam?). V slovenčine je to často intuitívnejšie, v nemčine si treba pamätať konkrétne použitie predložiek s pádmi."
+    }
+  ],
   vocab: [
     {
-      de: "die Waschmaschine",
-      sk: "práčka",
-      example: "Die Waschmaschine ist kaputt.",
-      exampleSk: "Práčka je pokazená.",
-      gender: "F",
-      srsId: "L75_V01",
-      recycledFrom: [],
-    },
-    {
-      de: "der Kühlschrank",
-      sk: "chladnička",
-      example: "Der Kühlschrank ist leer. Ich muss einkaufen.",
-      exampleSk: "Chladnička je prázdna. Musím ísť nakúpiť.",
+      de: "der Ausflug",
+      sk: "výlet",
       gender: "M",
-      srsId: "L75_V02",
-      recycledFrom: [],
+      srsId: "L75_V01",
+      example: "Wir machen einen Ausflug in den Wienerwald.",
+      exampleSk: "Robíme výlet do Viedenského lesa.",
+      recycledFrom: []
     },
     {
-      de: "der Herd",
-      sk: "sporák",
-      example: "Ich koche auf dem Herd.",
-      exampleSk: "Varím na sporáku.",
+      de: "das Wetter",
+      sk: "počasie",
+      gender: "N",
+      srsId: "L75_V02",
+      example: "Das Wetter wird gut.",
+      exampleSk: "Počasie bude dobré.",
+      recycledFrom: [
+        "L74_V01"
+      ]
+    },
+    {
+      de: "der Wald",
+      sk: "les",
       gender: "M",
       srsId: "L75_V03",
-      recycledFrom: [32],
+      example: "Wir gehen in den Wald.",
+      exampleSk: "Ideme do lesa.",
+      recycledFrom: []
     },
     {
-      de: "der Geschirrspüler",
-      sk: "umývačka riadu",
-      example: "Der Geschirrspüler macht das Abwaschen einfacher.",
-      exampleSk: "Umývačka riadu robí umývanie ľahším.",
+      de: "der Regenschirm",
+      sk: "dáždnik",
       gender: "M",
       srsId: "L75_V04",
-      recycledFrom: [],
+      example: "Ich nehme einen Regenschirm mit.",
+      exampleSk: "Beriem si so sebou dáždnik.",
+      recycledFrom: []
     },
     {
-      de: "der Staubsauger",
-      sk: "vysávač",
-      example: "Wo ist der Staubsauger? Ich muss saugen.",
-      exampleSk: "Kde je vysávač? Musím vysávať.",
+      de: "der Kollege",
+      sk: "kolega",
       gender: "M",
       srsId: "L75_V05",
-      recycledFrom: [],
+      example: "Meine Kollegen planen einen Ausflug.",
+      exampleSk: "Moji kolegovia plánujú výlet.",
+      recycledFrom: []
     },
     {
-      de: "staubsaugen / saugen",
-      sk: "vysávať",
-      example: "Ich sauge jeden Samstag.",
-      exampleSk: "Vysávam každú sobotu.",
-      gender: null,
+      de: "die Kollegin",
+      sk: "kolegyňa",
+      gender: "F",
       srsId: "L75_V06",
-      recycledFrom: [],
+      example: "Meine Kollegin ist auch dabei.",
+      exampleSk: "Moja kolegyňa je tiež pri tom.",
+      recycledFrom: []
     },
     {
-      de: "putzen",
-      sk: "upratovať / čistiť",
-      example: "Ich putze die Wohnung einmal pro Woche.",
-      exampleSk: "Upratujem byt raz za týždeň.",
-      gender: null,
+      de: "die Vorhersage",
+      sk: "predpoveď",
+      gender: "F",
       srsId: "L75_V07",
-      recycledFrom: [32],
+      example: "Die Wettervorhersage ist gut.",
+      exampleSk: "Predpoveď počasia je dobrá.",
+      recycledFrom: []
     },
     {
-      de: "aufräumen (→ räumt auf)",
-      sk: "upratať / uložiť",
-      example: "Kannst du bitte dein Zimmer aufräumen?",
-      exampleSk: "Môžeš si prosím upratať svoju izbu?",
-      gender: null,
+      de: "der Grund",
+      sk: "dôvod",
+      gender: "M",
       srsId: "L75_V08",
-      recycledFrom: [],
+      example: "Was ist der Grund?",
+      exampleSk: "Aký je dôvod?",
+      recycledFrom: []
     },
     {
-      de: "die Wäsche",
-      sk: "bielizeň / prádlo",
-      example: "Ich muss heute die Wäsche waschen.",
-      exampleSk: "Dnes musím prať bielizeň.",
+      de: "die Sonne",
+      sk: "slnko",
       gender: "F",
       srsId: "L75_V09",
-      recycledFrom: [],
+      example: "Die Sonne scheint.",
+      exampleSk: "Slnko svieti.",
+      recycledFrom: [
+        "L74_V03"
+      ]
     },
     {
-      de: "Wäsche waschen",
-      sk: "prať bielizeň",
-      example: "Ich wasche die Wäsche zweimal pro Woche.",
-      exampleSk: "Periem bielizeň dvakrát týždenne.",
-      gender: null,
-      srsId: "L75_V10",
-      recycledFrom: [],
-    },
-    {
-      de: "bügeln",
-      sk: "žehliť",
-      example: "Ich bügle nicht gern. Das ist langweilig.",
-      exampleSk: "Nerád/a žehlím. Je to nudné.",
-      gender: null,
-      srsId: "L75_V11",
-      recycledFrom: [],
-    },
-    {
-      de: "der Abwasch",
-      sk: "umývanie riadu",
-      example: "Kannst du heute den Abwasch machen?",
-      exampleSk: "Môžeš dnes umyť riad?",
+      de: "der Regen",
+      sk: "dážď",
       gender: "M",
+      srsId: "L75_V10",
+      example: "Ich hoffe, es gibt keinen Regen.",
+      exampleSk: "Dúfam, že nebude dážď.",
+      recycledFrom: [
+        "L74_V02"
+      ]
+    },
+    {
+      de: "der Wind",
+      sk: "vietor",
+      gender: "M",
+      srsId: "L75_V11",
+      example: "Der Wind ist stark.",
+      exampleSk: "Vietor je silný.",
+      recycledFrom: [
+        "L74_V08"
+      ]
+    },
+    {
+      de: "die Temperatur",
+      sk: "teplota",
+      gender: "F",
       srsId: "L75_V12",
-      recycledFrom: [],
+      example: "Die Temperatur ist angenehm.",
+      exampleSk: "Teplota je príjemná.",
+      recycledFrom: []
     },
     {
-      de: "abwaschen (→ wäscht ab)",
-      sk: "umývať riad",
-      example: "Ich wasche nach dem Abendessen ab.",
-      exampleSk: "Umývam riad po večeri.",
-      gender: null,
+      de: "das Gepäck",
+      sk: "batožina",
+      gender: "N",
       srsId: "L75_V13",
-      recycledFrom: [],
+      example: "Wir packen das Gepäck.",
+      exampleSk: "Balíme batožinu.",
+      recycledFrom: []
     },
     {
-      de: "die Hausarbeit / Haushaltsarbeit",
-      sk: "domáce práce",
-      example: "Wer macht die Hausarbeit in deiner Familie?",
-      exampleSk: "Kto robí domáce práce vo vašej rodine?",
+      de: "die Wanderung",
+      sk: "turistika",
       gender: "F",
       srsId: "L75_V14",
-      recycledFrom: [],
+      example: "Wir machen eine Wanderung.",
+      exampleSk: "Ideme na túru.",
+      recycledFrom: []
     },
     {
-      de: "Wer macht was?",
-      sk: "Kto robí čo?",
-      example: "Wer macht was in eurem Haushalt?",
-      exampleSk: "Kto robí čo vo vašej domácnosti?",
-      gender: null,
+      de: "die Aussicht",
+      sk: "výhľad",
+      gender: "F",
       srsId: "L75_V15",
-      recycledFrom: [],
+      example: "Die Aussicht ist toll.",
+      exampleSk: "Výhľad je skvelý.",
+      recycledFrom: []
     },
+    {
+      de: "das Picknick",
+      sk: "piknik",
+      gender: "N",
+      srsId: "L75_V16",
+      example: "Wir machen ein Picknick im Wald.",
+      exampleSk: "Robíme piknik v lese.",
+      recycledFrom: []
+    },
+    {
+      de: "mitnehmen",
+      sk: "vziať so sebou",
+      gender: null,
+      srsId: "L75_V17",
+      example: "Ich nehme Wasser mit.",
+      exampleSk: "Beriem si so sebou vodu.",
+      recycledFrom: []
+    },
+    {
+      de: "planen",
+      sk: "plánovať",
+      gender: null,
+      srsId: "L75_V18",
+      example: "Wir planen den Ausflug.",
+      exampleSk: "Plánujeme výlet.",
+      recycledFrom: []
+    },
+    {
+      de: "wissen",
+      sk: "vedieť",
+      gender: null,
+      srsId: "L75_V19",
+      example: "Man weiß nie.",
+      exampleSk: "Človek nikdy nevie.",
+      recycledFrom: []
+    },
+    {
+      de: "buchen",
+      sk: "rezervovať",
+      gender: null,
+      srsId: "L75_V20",
+      example: "Wir buchen das Hotel.",
+      exampleSk: "Rezervujeme hotel.",
+      recycledFrom: []
+    },
+    {
+      de: "denn",
+      sk: "pretože",
+      gender: null,
+      srsId: "L75_V21",
+      example: "Wir fahren, denn das Wetter wird gut.",
+      exampleSk: "Ideme, pretože počasie bude dobré.",
+      recycledFrom: []
+    },
+    {
+      de: "im Freien",
+      sk: "vonku",
+      gender: null,
+      srsId: "L75_V22",
+      example: "Wir sind gern im Freien.",
+      exampleSk: "Radi sme vonku.",
+      recycledFrom: []
+    },
+    {
+      de: "bei jedem Wetter",
+      sk: "za každého počasia",
+      gender: null,
+      srsId: "L75_V23",
+      example: "Wir machen den Ausflug bei jedem Wetter.",
+      exampleSk: "Robíme výlet za každého počasia.",
+      recycledFrom: []
+    },
+    {
+      de: "man weiß nie",
+      sk: "človek nikdy nevie",
+      gender: null,
+      srsId: "L75_V24",
+      example: "Ich nehme einen Schirm, man weiß nie.",
+      exampleSk: "Beriem si dáždnik, človek nikdy nevie.",
+      recycledFrom: []
+    },
+    {
+      de: "an den See",
+      sk: "k jazeru",
+      gender: null,
+      srsId: "L75_V25",
+      example: "Wir fahren an den See.",
+      exampleSk: "Ideme k jazeru.",
+      recycledFrom: []
+    }
   ],
   exercises: [
     {
       type: "flashcard",
-      instruction: "Precvič si slovnú zásobu domácich spotrebičov a prác. Pozri nemecké slovo a povedz slovenský preklad.",
-      items: [
-        "L75_V01",
-        "L75_V02",
-        "L75_V03",
-        "L75_V04",
-        "L75_V05",
-        "L75_V06",
-        "L75_V07",
-        "L75_V08",
-        "L75_V09",
-        "L75_V10",
-        "L75_V11",
-        "L75_V12",
-        "L75_V13",
-        "L75_V14",
-        "L75_V15",
-      ],
-    },
-    {
-      type: "mcq",
-      instruction: "Vyber správnu odpoveď o domácich prácach a spotrebičoch.",
-      questions: [
-        {
-          question: "Čo je 'die Waschmaschine'?",
-          options: ["Umývačka riadu", "Práčka", "Sušička", "Vysávač"],
-          answer: "Práčka",
-          explanation: "'Die Waschmaschine' = práčka. 'Waschen' = prať. 'Wasch-maschine' = stroj na pranie. 'Kaputt' = pokazená — bežná situácia v každodennom živote!",
-        },
-        {
-          question: "Ako sa přeloží 'aufräumen' a čo je zvláštne na tomto slove?",
-          options: [
-            "Upratovať — pravidelné sloveso",
-            "Upratať/uložiť — separabilné sloveso (räumt auf)",
-            "Variť — nepravidelné sloveso",
-            "Žehliť — separabilné sloveso",
-          ],
-          answer: "Upratať/uložiť — separabilné sloveso (räumt auf)",
-          explanation: "'aufräumen' je separabilné sloveso: 'auf-' ide na koniec vety. 'Ich räume die Küche auf.' = Upracem kuchyňu. Predpona 'auf' sa oddeľuje!",
-        },
-        {
-          question: "Aký je rozdiel medzi 'putzen' a 'aufräumen'?",
-          options: [
-            "Nie je žiadny rozdiel.",
-            "putzen = čistiť/umývať povrchy; aufräumen = ukladať/triediť veci",
-            "putzen = variť; aufräumen = upratovať",
-            "putzen = prať; aufräumen = žehliť",
-          ],
-          answer: "putzen = čistiť/umývať povrchy; aufräumen = ukladať/triediť veci",
-          explanation: "'putzen' = čistiť (napr. kúpeľňu, okná). 'aufräumen' = ukladať veci na správne miesto, triediť. Obe sú 'upratovanie', ale rôzne aspekty.",
-        },
-        {
-          question: "Ako správne povedieš 'Musím vysávať'?",
-          options: [
-            "Ich muss saugen.",
-            "Ich muss staubsaugen.",
-            "Ich muss den Staubsauger.",
-            "Obe a) aj b) sú správne.",
-          ],
-          answer: "Obe a) aj b) sú správne.",
-          explanation: "'staubsaugen' aj 'saugen' sa môžu použiť pre vysávanie. 'Ich muss staubsaugen.' alebo 'Ich muss saugen.' — obe sú správne v bežnom hovorenom jazyku.",
-        },
-        {
-          question: "Ktorá veta je gramaticky správna?",
-          options: [
-            "Ich aufräume das Zimmer.",
-            "Ich räume das Zimmer auf.",
-            "Ich auf räume das Zimmer.",
-            "Das Zimmer aufräume ich.",
-          ],
-          answer: "Ich räume das Zimmer auf.",
-          explanation: "Separabilné sloveso 'aufräumen': 'ich räume... auf'. Predpona 'auf' ide na KONIEC vety. 'Ich räume das Zimmer auf.' = Upraciem izbu.",
-        },
-        {
-          question: "Čo znamená 'Wer macht was?'",
-          options: [
-            "Čo máme robiť?",
-            "Kto robí čo?",
-            "Ako to máme urobiť?",
-            "Kedy to robíme?",
-          ],
-          answer: "Kto robí čo?",
-          explanation: "'Wer' = kto, 'macht' = robí, 'was' = čo. Otázka na rozdelenie úloh v domácnosti. Typická veta pri dohadovaní sa kto čo uprace.",
-        },
-      ],
-    },
-    {
-      type: "fill",
-      instruction: "Doplň správne sloveso alebo slovo o domácich prácach.",
-      questions: [
-        {
-          sentence: "Ich ___ zweimal pro Woche die Wohnung.",
-          answer: "putze",
-          hint: "upratujem",
-          explanation: "'putzen' → 'ich putze' = upratujem. Pravidelné sloveso, časuje sa: ich putze, du putzt, er putzt.",
-        },
-        {
-          sentence: "Kannst du heute den ___ machen?",
-          answer: "Abwasch",
-          hint: "umývanie riadu",
-          explanation: "'den Abwasch machen' = umyť riad. 'Abwasch' je mužského rodu → akuzatív 'den Abwasch'.",
-        },
-        {
-          sentence: "Ich ___ mein Zimmer jeden Montag ___ .",
-          answer: "räume / auf",
-          hint: "separabilné sloveso: upratá/uloží",
-          explanation: "'aufräumen' → 'ich räume... auf'. Separabilné sloveso: predpona 'auf' ide na koniec. 'Ich räume mein Zimmer auf.' = Upracem svoju izbu.",
-        },
-        {
-          sentence: "Die ___ ist kaputt. Ich kann nicht waschen.",
-          answer: "Waschmaschine",
-          hint: "stroj na pranie",
-          explanation: "'die Waschmaschine' = práčka (ženský rod). 'Kaputt' = pokazená/rozbitá.",
-        },
-        {
-          sentence: "Ich ___ nicht gern. Das macht mir keinen Spaß.",
-          answer: "bügle",
-          hint: "žehlím",
-          explanation: "'bügeln' → 'ich bügle' = žehlím. Pravidelné sloveso. 'Das macht mir keinen Spaß.' = To ma nebaví.",
-        },
-      ],
-    },
-    {
-      type: "listen",
-      instruction: "Počúvaj vety o domácich prácach a opakuj ich nahlas.",
-      questions: [
-        { de: "Die Waschmaschine ist kaputt!", sk: "Práčka je pokazená!" },
-        { de: "Ich putze die Wohnung einmal pro Woche.", sk: "Upratujem byt raz za týždeň." },
-        { de: "Kannst du heute den Abwasch machen?", sk: "Môžeš dnes umyť riad?" },
-        { de: "Ich räume mein Zimmer auf.", sk: "Upracem svoju izbu." },
-        { de: "Wer macht was in unserem Haushalt?", sk: "Kto robí čo v našej domácnosti?" },
-        { de: "Ich bügle nicht gern.", sk: "Nerád/a žehlím." },
-      ],
+      instruction: "Prezri si slovíčka tejto lekcie. Klikni na kartičku pre preklad."
     },
     {
       type: "match",
-      instruction: "Spoj domáci spotrebič alebo prácu s jej slovenským prekladom.",
+      instruction: "Spojte nemecké slová s ich slovenskými prekladmi.",
       pairs: [
-        ["die Waschmaschine", "práčka"],
-        ["der Kühlschrank", "chladnička"],
-        ["der Geschirrspüler", "umývačka riadu"],
-        ["der Staubsauger", "vysávač"],
-        ["die Wäsche", "prádlo / bielizeň"],
-        ["bügeln", "žehliť"],
-        ["putzen", "upratovať / čistiť"],
-        ["aufräumen", "upratať / uložiť"],
-      ],
-    },
-    {
-      type: "dialogue",
-      instruction:
-        "Prečítaj rozhovor medzi Janou a jej spolubývajúcou Miou. Dohadujú sa na rozdelení domácich prác.",
-      lines: [
-        { speaker: "A", de: "Mia, die Waschmaschine ist kaputt!", sk: "Mia, práčka je pokazená!" },
-        { speaker: "B", de: "Was?! Das ist schrecklich. Ich muss heute Wäsche waschen.", sk: "Čo?! To je hrozné. Dnes musím prať." },
-        { speaker: "A", de: "Ich rufe den Techniker an. Aber wir müssen heute putzen.", sk: "Zavolám technika. Ale dnes musíme upratovať." },
-        { speaker: "B", de: "Okay, wer macht was? Ich sauge zweimal pro Woche.", sk: "Dobre, kto robí čo? Ja vysávam dvakrát týždenne." },
-        { speaker: "A", de: "Gut. Ich putze das Badezimmer und die Küche.", sk: "Dobre. Ja upracem kúpeľňu a kuchyňu." },
-        { speaker: "B", de: "Ich räume das Wohnzimmer auf. Kannst du heute den Abwasch machen?", sk: "Ja upracem obývačku. Môžeš dnes umyť riad?" },
-        { speaker: "A", de: "Ja, kein Problem. Ich wasche nach dem Abendessen ab.", sk: "Áno, žiadny problém. Umyjem riad po večeri." },
-        { speaker: "B", de: "Super! Und wer bügle?", sk: "Super! A kto žehlí?" },
-        { speaker: "A", de: "Oh nein, ich bügle nicht gern! Kannst du das machen?", sk: "Ó nie, nerада žehlím! Môžeš to urobiť?" },
-        { speaker: "B", de: "Okay, aber dann kochst du heute Abend!", sk: "Dobre, ale potom ty varíš dnes večer!" },
-      ],
-      comprehensionQuestions: [
-        {
-          question: "Čo je pokazené v byte Jany?",
-          options: ["Chladnička", "Umývačka riadu", "Práčka", "Sporák"],
-          answer: "Práčka",
-        },
-        {
-          question: "Kto vykonáva vysávanie?",
-          options: ["Jana", "Mia", "Obidve", "Techniker"],
-          answer: "Mia",
-        },
-        {
-          question: "Aký obchod urobí Jana po dohode s Miou?",
-          options: [
-            "Bude žehliť.",
-            "Umyje riad po večeri.",
-            "Bude vysávať.",
-            "Uprace kúpeľňu.",
-          ],
-          answer: "Umyje riad po večeri.",
-        },
-      ],
-    },
-    {
-      type: "minitext",
-      instruction: "Prečítaj si plán upratovania (Putzplan) pre zdielaný byt. Potom odpovedz na otázky.",
-      text:
-        "Putzplan — Wohnung Hauptstraße 5\n\nMontag: Jana — Badezimmer putzen\nMittwoch: Mia — Wohnzimmer aufräumen, staubsaugen\nDonnerstag: Jana — Küche putzen, Abwasch machen\nSamstag: Beide — Wäsche waschen, Kühlschrank aufräumen\nSonntag: Mia — Bügeln\n\nÜbernahme des Geschirrspülers: Jana (immer) — Mia (wenn kaputt: Techniker anrufen!)",
-      textSk:
-        "Plán upratovania — Byt Hauptstraße 5\n\nPondelok: Jana — vyčistiť kúpeľňu\nStreda: Mia — upratať obývačku, vysávať\nŠtvrtok: Jana — vyčistiť kuchyňu, umyť riad\nSobota: Obidve — prať bielizeň, upratať chladničku\nNedeľa: Mia — žehliť\n\nZodpovednosť za umývačku riadu: Jana (vždy) — Mia (keď pokazená: zavolaj technika!)",
-      questions: [
-        {
-          question: "Kto vysáva v byte?",
-          options: ["Jana", "Mia", "Obidve v sobotu", "Nikto"],
-          answer: "Mia",
-        },
-        {
-          question: "V ktorý deň perú bielizeň obidve spoločne?",
-          options: ["V pondelok", "V stredu", "V sobotu", "V nedeľu"],
-          answer: "V sobotu",
-        },
-        {
-          question: "Kto je zodpovedná za umývačku riadu?",
-          options: ["Mia", "Jana", "Technik", "Obidve"],
-          answer: "Jana",
-        },
-      ],
-    },
-    {
-      type: "freewrite",
-      instruction: "Napíš krátky text po nemecky o svojich domácich prácach.",
-      prompt:
-        "Beschreibe deine Haushaltsroutine. Was machst du täglich, wöchentlich? (Opíš svoju rutinu domácich prác. Čo robíš každý deň, každý týždeň?)",
-      minWords: 30,
-      exampleAnswer:
-        "In meiner Wohnung mache ich jeden Tag den Abwasch. Das ist nicht so schwierig. Einmal pro Woche putze ich das Badezimmer und sauge ich Staub. Am Samstag wasche ich die Wäsche. Ich bügle nicht gern — das macht Mia! Ich koche gern, das ist mein Lieblingsteil der Hausarbeit.",
+        [
+          "der Ausflug",
+          "výlet"
+        ],
+        [
+          "das Wetter",
+          "počasie"
+        ],
+        [
+          "der Wald",
+          "les"
+        ],
+        [
+          "der Regenschirm",
+          "dáždnik"
+        ],
+        [
+          "die Vorhersage",
+          "predpoveď"
+        ],
+        [
+          "die Sonne",
+          "slnko"
+        ],
+        [
+          "der Regen",
+          "dážď"
+        ],
+        [
+          "der Wind",
+          "vietor"
+        ],
+        [
+          "mitnehmen",
+          "vziať so sebou"
+        ],
+        [
+          "planen",
+          "plánovať"
+        ]
+      ]
     },
     {
       type: "wordorder",
-      instruction: "Zoraď slová do správnej nemeckej vety.",
+      instruction: "Usporiadajte slová do správneho nemeckého poradia.",
       sentences: [
         {
-          words: ["Wenn", "ich", "mehr", "Zeit", "hätte,", "würde", "ich", "öfter", "kochen"],
-          correct: "Wenn ich mehr Zeit hätte, würde ich öfter kochen",
-          hint: "Keby som mal/a viac času, varil/a by som častejšie.",
-          explanation: "Konjunktiv II Irrealis: 'hätte' = KII von 'haben'; Hauptsatz: 'würde' + Infinitiv am Ende.",
+          words: [
+            "wir",
+            "einen",
+            "Ausflug",
+            "planen",
+            "denn",
+            "das",
+            "Wetter",
+            "ist",
+            "schön"
+          ],
+          correct: "wir planen einen Ausflug denn das Wetter ist schön",
+          hint: "Plánujeme výlet, pretože počasie je pekné.",
+          explanation: "Spojka 'denn' spája dve hlavné vety a sloveso zostáva na druhom mieste v druhej vete."
         },
         {
-          words: ["Wenn", "Jana", "reich", "wäre,", "würde", "sie", "eine", "Reise", "machen"],
-          correct: "Wenn Jana reich wäre, würde sie eine Reise machen",
-          hint: "Keby Jana bola bohatá, šla by na cestu.",
-          explanation: "'wäre' = Konjunktiv II von 'sein' — používa sa pre nereálne podmienky.",
+          words: [
+            "Ich",
+            "nehme",
+            "den",
+            "Regenschirm",
+            "mit",
+            "denn",
+            "es",
+            "regnet"
+          ],
+          correct: "Ich nehme den Regenschirm mit denn es regnet",
+          hint: "Vezmem si dáždnik, pretože prší.",
+          explanation: "Spojka 'denn' spája dve hlavné vety. V druhej vete je sloveso 'regnet' na druhom mieste."
         },
         {
-          words: ["Wenn", "wir", "mehr", "Geld", "hätten,", "würden", "wir", "ein", "Auto", "kaufen"],
-          correct: "Wenn wir mehr Geld hätten, würden wir ein Auto kaufen",
-          hint: "Keby sme mali viac peňazí, kúpili by sme auto.",
-          explanation: "'hätten' = KII pl.; 'würden' = pl. forma pomocného slovesa pre Kondicionál.",
+          words: [
+            "Sie",
+            "geht",
+            "in",
+            "den",
+            "Wald",
+            "denn",
+            "sie",
+            "liebt",
+            "die",
+            "Natur"
+          ],
+          correct: "Sie geht in den Wald denn sie liebt die Natur",
+          hint: "Ide do lesa, pretože miluje prírodu.",
+          explanation: "Spojka 'denn' spája dve hlavné vety. Sloveso 'liebt' je na druhom mieste v druhej vete."
         },
         {
-          words: ["Wenn", "das", "Wetter", "besser", "wäre,", "würde", "ich", "im", "Park", "spazieren"],
-          correct: "Wenn das Wetter besser wäre, würde ich im Park spazieren",
-          hint: "Keby bolo počasie lepšie, chodil/a by som do parku.",
-          explanation: "Obe časti Irrealis-vety: Wenn-Satz (KII) + Hauptsatz (würde + Inf.).",
+          words: [
+            "Wir",
+            "machen",
+            "ein",
+            "Picknick",
+            "im",
+            "Freien",
+            "denn",
+            "die",
+            "Sonne",
+            "scheint"
+          ],
+          correct: "Wir machen ein Picknick im Freien denn die Sonne scheint",
+          hint: "Robíme piknik vonku, pretože svieti slnko.",
+          explanation: "Spojka 'denn' spája dve hlavné vety. V druhej vete je sloveso 'scheint' na druhom mieste."
         },
         {
-          words: ["Ich", "würde", "dir", "helfen,", "wenn", "ich", "könnte"],
-          correct: "Ich würde dir helfen, wenn ich könnte",
-          hint: "Pomohol/a by som ti, keby som mohol/mohla.",
-          explanation: "Wenn-Satz môže stáť aj za hlavnou vetou; 'könnte' = KII von 'können'.",
+          words: [
+            "Er",
+            "hat",
+            "keinen",
+            "Regenschirm",
+            "dabei",
+            "denn",
+            "er",
+            "denkt",
+            "es",
+            "regnet",
+            "nicht"
+          ],
+          correct: "Er hat keinen Regenschirm dabei denn er denkt es regnet nicht",
+          hint: "Nemá pri sebe dáždnik, pretože si myslí, že neprší.",
+          explanation: "Spojka 'denn' spája dve hlavné vety. V druhej vete je sloveso 'denkt' na druhom mieste."
+        }
+      ]
+    },
+    {
+      type: "fill",
+      instruction: "Doplňte chýbajúce slová.",
+      questions: [
+        {
+          sentence: "Wir planen einen Ausflug, ___ das Wetter schön ist.",
+          answer: "denn",
+          hint: "Spojka pre príčinu.",
+          explanation: "Spojka 'denn' sa používa na vyjadrenie príčiny a nespôsobuje zmenu slovosledu."
         },
-      ],
+        {
+          sentence: "Ich nehme meinen Regenschirm mit, ___ es könnte regnen.",
+          answer: "denn",
+          hint: "Spojka pre príčinu.",
+          explanation: "Spojka 'denn' spája dve hlavné vety a sloveso zostáva na druhom mieste v druhej vete."
+        },
+        {
+          sentence: "Sie geht gern ___ Wald.",
+          answer: "in den",
+          hint: "Predložka s akuzatívom pre pohyb.",
+          explanation: "Predložka 'in' s akuzatívom sa používa na vyjadrenie pohybu dovnútra alebo na miesto."
+        },
+        {
+          sentence: "Wir machen ein Picknick ___ Freien.",
+          answer: "im",
+          hint: "Skratka pre 'in dem'.",
+          explanation: "'Im Freien' znamená 'vonku' a je to ustálené spojenie."
+        },
+        {
+          sentence: "___ Wetter ist heute sehr schön.",
+          answer: "Das",
+          hint: "Člen pre 'das Wetter'.",
+          explanation: "'Das Wetter' je podstatné meno stredného rodu, preto sa používa člen 'das'."
+        },
+        {
+          sentence: "Er ___ die Vorhersage für morgen.",
+          answer: "kennt",
+          hint: "Vedieť, poznať (3. osoba sg.).",
+          explanation: "Sloveso 'kennen' (poznať) sa v 3. osobe jednotného čísla časuje ako 'kennt'."
+        },
+        {
+          sentence: "Ich habe ___ Regenschirm dabei.",
+          answer: "einen",
+          hint: "Neurčitý člen v akuzatíve.",
+          explanation: "Podstatné meno 'der Regenschirm' je mužského rodu. V akuzatíve s neurčitým členom je to 'einen'."
+        },
+        {
+          sentence: "Wir gehen ___ See, weil die Sonne scheint.",
+          answer: "an den",
+          hint: "Predložka s akuzatívom pre pohyb.",
+          explanation: "Predložka 'an' s akuzatívom sa používa na vyjadrenie pohybu k jazeru."
+        }
+      ]
+    },
+    {
+      type: "listen",
+      instruction: "Počúvajte a napíšte, čo počujete.",
+      questions: [
+        {
+          de: "der Ausflug",
+          sk: "výlet"
+        },
+        {
+          de: "das Wetter",
+          sk: "počasie"
+        },
+        {
+          de: "der Wald",
+          sk: "les"
+        },
+        {
+          de: "der Regenschirm",
+          sk: "dáždnik"
+        },
+        {
+          de: "die Vorhersage",
+          sk: "predpoveď"
+        },
+        {
+          de: "die Sonne",
+          sk: "slnko"
+        },
+        {
+          de: "der Regen",
+          sk: "dážď"
+        },
+        {
+          de: "der Wind",
+          sk: "vietor"
+        },
+        {
+          de: "mitnehmen",
+          sk: "vziať so sebou"
+        },
+        {
+          de: "bei jedem Wetter",
+          sk: "za každého počasia"
+        }
+      ]
+    },
+    {
+      type: "mcq",
+      instruction: "Vyberte správnu možnosť.",
+      questions: [
+        {
+          question: "Čo znamená 'denn'?",
+          options: [
+            "Pretože",
+            "Ale",
+            "A",
+            "Alebo"
+          ],
+          answer: 0,
+          explanation: "'Denn' je spojka, ktorá vyjadruje príčinu, podobne ako 'pretože'."
+        },
+        {
+          question: "Ako sa povie 'vziať so sebou' po nemecky?",
+          options: [
+            "mitgehen",
+            "mitbringen",
+            "mitnehmen",
+            "mitfahren"
+          ],
+          answer: 2,
+          explanation: "'Mitnehmen' znamená vziať niečo alebo niekoho so sebou."
+        },
+        {
+          question: "Doplňte: Wir machen einen Ausflug, ___ das Wetter ist schön.",
+          options: [
+            "aber",
+            "denn",
+            "sondern",
+            "oder"
+          ],
+          answer: 1,
+          explanation: "Spojka 'denn' sa používa na vyjadrenie dôvodu alebo príčiny."
+        },
+        {
+          question: "Čo znamená 'im Freien'?",
+          options: [
+            "Vo vnútri",
+            "Vonku",
+            "V lese",
+            "Na horách"
+          ],
+          answer: 1,
+          explanation: "'Im Freien' je ustálené spojenie, ktoré znamená 'vonku'."
+        },
+        {
+          question: "Doplňte: Ich brauche ___ Regenschirm.",
+          options: [
+            "ein",
+            "einen",
+            "eine",
+            "keinen"
+          ],
+          answer: 1,
+          explanation: "'Der Regenschirm' je mužského rodu a v akuzatíve sa používa neurčitý člen 'einen'."
+        },
+        {
+          question: "Doplňte: Wir gehen ___ Park.",
+          options: [
+            "in den",
+            "im",
+            "am",
+            "zum"
+          ],
+          answer: 0,
+          explanation: "Predložka 'in' s akuzatívom sa používa na vyjadrenie pohybu do parku."
+        },
+        {
+          question: "Čo znamená 'die Vorhersage'?",
+          options: [
+            "Predpoveď",
+            "Predaj",
+            "Predstavenie",
+            "Predajňa"
+          ],
+          answer: 0,
+          explanation: "'Die Vorhersage' znamená 'predpoveď' (napr. počasia)."
+        },
+        {
+          question: "Doplňte: Sie packt ihr Gepäck, ___ sie fährt bald weg.",
+          options: [
+            "und",
+            "aber",
+            "denn",
+            "dann"
+          ],
+          answer: 2,
+          explanation: "Spojka 'denn' uvádza dôvod, prečo si balí batožinu."
+        }
+      ]
+    },
+    {
+      type: "minitext",
+      instruction: "Lies den Dialog und beantworte die Fragen.",
+      text: "Tom: Jana, wir planen einen Ausflug in den Wienerwald. Das Wetter soll gut werden.\nJana: Das ist eine tolle Idee! Ich liebe den Wald. Wann wollen wir fahren?\nTom: Am Samstag. Die Vorhersage sagt Sonne und nur wenig Wind.\nJana: Super! Ich nehme einen warmen Pullover mit, denn die Temperatur kann sinken. Und vielleicht auch einen Regenschirm, man weiß nie.\nTom: Gute Idee. Ich packe das Picknick und die Wanderkarten.\nJana: Perfekt. Ich freue mich schon! Ich buche die Zugtickets.\nTom: Prima, dann machen wir das so!",
+      textSk: "Tom: Jana, plánujeme výlet do Viedenského lesa. Počasie by malo byť dobré.\nJana: To je skvelý nápad! Milujem les. Kedy chceme ísť?\nTom: V sobotu. Predpoveď hovorí o slnku a len slabom vetre.\nJana: Super! Vezmem si teplý sveter, pretože teplota môže klesnúť. A možno aj dáždnik, človek nikdy nevie.\nTom: Dobrý nápad. Zbalím piknik a turistické mapy.\nJana: Perfektné. Už sa teším! Rezervujem lístky na vlak.\nTom: Výborne, tak to urobíme!",
+      questions: [
+        {
+          question: "Wohin wollen Jana und Tom fahren?",
+          options: [
+            "Zum See",
+            "In den Wienerwald",
+            "In die Berge",
+            "In die Stadt"
+          ],
+          answer: 1,
+          explanation: "Tom sagt: \"wir planen einen Ausflug in den Wienerwald.\""
+        },
+        {
+          question: "Wie wird das Wetter laut Vorhersage?",
+          options: [
+            "Sonne und viel Regen",
+            "Nur Regen und Wind",
+            "Sonne und wenig Wind",
+            "Kalt und Schnee"
+          ],
+          answer: 2,
+          explanation: "Tom sagt: \"Die Vorhersage sagt Sonne und nur wenig Wind.\""
+        },
+        {
+          question: "Was nimmt Jana zusätzlich mit, obwohl das Wetter gut sein soll?",
+          options: [
+            "Eine Sonnenbrille und Badesachen",
+            "Ein Buch und Musik",
+            "Einen warmen Pullover und einen Regenschirm",
+            "Nur Wanderschuhe"
+          ],
+          answer: 2,
+          explanation: "Jana sagt: \"Ich nehme einen warmen Pullover mit, denn die Temperatur kann sinken. Und vielleicht auch einen Regenschirm, man weiß nie.\""
+        },
+        {
+          question: "Warum nimmt Jana einen Regenschirm mit?",
+          options: [
+            "Weil es sicher regnen wird.",
+            "Weil sie gerne bei Regen spazieren geht.",
+            "Weil sie vorsichtig ist und das Wetter nicht immer genau vorhersagbar ist.",
+            "Weil Tom einen Regenschirm vergessen hat."
+          ],
+          answer: 2,
+          explanation: "Jana sagt: \"Und vielleicht auch einen Regenschirm, man weiß nie.\""
+        }
+      ]
     },
     {
       type: "speaking",
-      instruction: "Počúvaj nemeckú vetu. Potom hovor nahlas a skontroluj sa.",
+      instruction: "Höre zu und sprich nach.",
       phrases: [
         {
-          de: "Wenn ich reich wäre, würde ich viel reisen.",
-          sk: "Keby som bol/a bohatý/á, veľa by som cestoval/a.",
-          tip: "wäre: VÉ-re — ä=é, krátke",
+          de: "der Ausflug",
+          sk: "výlet",
+          tip: "W=[v], s=[s]"
         },
         {
-          de: "Wenn Jana mehr Zeit hätte, würde sie öfter kochen.",
-          sk: "Keby Jana mala viac času, varila by častejšie.",
-          tip: "hätte: HE-te — ä=e, tt=t",
+          de: "das Wetter",
+          sk: "počasie",
+          tip: "tt=[t]"
         },
         {
-          de: "Wenn wir ein Auto hätten, würden wir nach Wien fahren.",
-          sk: "Keby sme mali auto, jazdili by sme do Viedne.",
-          tip: "würden: VÜR-den — ü=ü",
+          de: "der Wald",
+          sk: "les",
+          tip: "W=[v], l=[l]"
         },
         {
-          de: "Ich würde dir helfen, wenn ich könnte.",
-          sk: "Pomohol/a by som ti, keby som mohol/mohla.",
-          tip: "könnte: KÖN-te — ö=ö, tt=t",
+          de: "der Regenschirm",
+          sk: "dáždnik",
+          tip: "sch=[ʃ], r=[r]"
         },
         {
-          de: "Was würdest du tun, wenn du frei wärst?",
-          sk: "Čo by si robil/a, keby si bol/a slobodný/á?",
-          tip: "würdest: VÜR-dest — ü=ü, d+st",
+          de: "die Sonne",
+          sk: "slnko",
+          tip: "Sonne=[zɔnə]"
         },
-      ],
+        {
+          de: "der Regen",
+          sk: "dážď",
+          tip: "gen=[gən]"
+        },
+        {
+          de: "der Wind",
+          sk: "vietor",
+          tip: "W=[v]"
+        },
+        {
+          de: "Wir planen einen Ausflug.",
+          sk: "Plánujeme výlet.",
+          tip: "planen=[ˈplaːnən]"
+        },
+        {
+          de: "Das Wetter ist gut.",
+          sk: "Počasie je dobré.",
+          tip: "Wetter=[ˈvɛtɐ]"
+        },
+        {
+          de: "Wir fahren an den See.",
+          sk: "Ideme k jazeru.",
+          tip: "an den See=[an deːn zeː]"
+        },
+        {
+          de: "Ich nehme einen Regenschirm mit.",
+          sk: "Vezmem si dáždnik.",
+          tip: "mitnehmen=[ˈmɪtˌneːmən]"
+        },
+        {
+          de: "Wir machen ein Picknick im Wald.",
+          sk: "Robíme piknik v lese.",
+          tip: "Picknick=[ˈpɪknɪk], im Wald=[ɪm valt]"
+        },
+        {
+          de: "Ich liebe die Natur, denn sie ist schön.",
+          sk: "Milujem prírodu, pretože je krásna.",
+          tip: "denn=[dɛn], schön=[ʃøːn]"
+        },
+        {
+          de: "Wir gehen wandern, denn das Wetter ist super.",
+          sk: "Ideme na turistiku, pretože počasie je super.",
+          tip: "wandern=[ˈvandɐn]"
+        }
+      ]
     },
+    {
+      type: "truefalse",
+      instruction: "Rozhodnite, či sú nasledujúce tvrdenia pravdivé (richtig) alebo nepravdivé (falsch).",
+      statements: [
+        {
+          statement: "Man braucht keinen Regenschirm, wenn die Sonne scheint.",
+          isTrue: false,
+          explanation: "Človek si môže vziať dáždnik aj keď svieti slnko, pretože nikdy nevie, kedy sa počasie zmení."
+        },
+        {
+          statement: "Der Ausflug findet im Wald statt.",
+          isTrue: true,
+          explanation: "Toto je možné, les je bežné miesto na výlet."
+        },
+        {
+          statement: "Die Vorhersage sagt nur Regen voraus.",
+          isTrue: false,
+          explanation: "Predpoveď počasia môže predpovedať rôzne typy počasia, nielen dážď."
+        },
+        {
+          statement: "Wir planen eine Wanderung, denn wir haben keine Zeit.",
+          isTrue: false,
+          explanation: "Spojka 'denn' vyjadruje dôvod. Ak plánujeme turistiku, je to preto, že máme čas, nie preto, že ho nemáme."
+        },
+        {
+          statement: "Das Picknick ist bei jedem Wetter möglich.",
+          isTrue: false,
+          explanation: "Piknik nie je možný za každého počasia, napríklad pri silnom daždi alebo vetre."
+        }
+      ]
+    },
+    {
+      type: "dictation",
+      instruction: "Napíšte vety, ktoré počujete.",
+      sentences: [
+        {
+          de: "Das Wetter ist gut.",
+          sk: "Počasie je dobré."
+        },
+        {
+          de: "Wir planen einen Ausflug.",
+          sk: "Plánujeme výlet."
+        },
+        {
+          de: "Ich nehme einen Regenschirm mit.",
+          sk: "Vezmem si dáždnik so sebou."
+        },
+        {
+          de: "Wir fahren an den See, denn es ist warm.",
+          sk: "Ideme k jazeru, pretože je teplo."
+        },
+        {
+          de: "Der Kollege weiß die Vorhersage für morgen.",
+          sk: "Kolega vie predpoveď na zajtra."
+        }
+      ]
+    },
+    {
+      type: "categorysort",
+      instruction: "Roztrieďte slová do správnych kategórií.",
+      categories: [
+        {
+          name: "Počasie",
+          color: "blue",
+          words: [
+            "das Wetter",
+            "die Sonne",
+            "der Regen",
+            "der Wind",
+            "die Temperatur"
+          ]
+        },
+        {
+          name: "Aktivity / Miesta",
+          color: "rose",
+          words: [
+            "der Ausflug",
+            "der Wald",
+            "die Wanderung",
+            "das Picknick",
+            "an den See"
+          ]
+        },
+        {
+          name: "Veci na výlet",
+          color: "green",
+          words: [
+            "der Regenschirm",
+            "das Gepäck"
+          ]
+        }
+      ],
+      explanation: "Slová sú rozdelené do kategórií podľa ich významu: Počasie, Aktivity/Miesta a Veci na výlet."
+    },
+    {
+      type: "translation",
+      instruction: "Preložte vety zo slovenčiny do nemčiny.",
+      sentences: [
+        {
+          sk: "Plánujeme výlet do lesa.",
+          answer: "Wir planen einen Ausflug in den Wald.",
+          hint: "planen, der Ausflug, in den Wald",
+          explanation: "Použili sme sloveso 'planen' a podstatné meno 'der Ausflug'. Predložka 'in' s akuzatívom označuje smer (kam?)."
+        },
+        {
+          sk: "Vezmem si dáždnik, pretože prší.",
+          answer: "Ich nehme den Regenschirm mit, denn es regnet.",
+          hint: "mitnehmen, denn",
+          explanation: "Použili sme sloveso 'mitnehmen' a spojku 'denn', ktorá uvádza dôvod a nespôsobuje zmenu slovosledu."
+        },
+        {
+          sk: "Človek nikdy nevie, aké bude počasie.",
+          answer: "Man weiß nie, wie das Wetter wird.",
+          hint: "man weiß nie, das Wetter",
+          explanation: "Fráza 'man weiß nie' je bežný nemecký výraz. 'Das Wetter' je podstatné meno."
+        },
+        {
+          sk: "V lete ideme na piknik k jazeru.",
+          answer: "Im Sommer machen wir ein Picknick an den See.",
+          hint: "im Sommer, an den See",
+          explanation: "Použili sme predložku 'an' s akuzatívom na označenie miesta, kam smerujeme (k jazeru)."
+        }
+      ]
+    },
+    {
+      type: "conjugation",
+      instruction: "Doplňte správne tvary slovies.",
+      verbs: [
+        {
+          infinitive: "mitnehmen",
+          translation: "vziať so sebou",
+          forms: [
+            {
+              pronoun: "ich",
+              correct: "nehme mit"
+            },
+            {
+              pronoun: "du",
+              correct: "nimmst mit"
+            },
+            {
+              pronoun: "er/sie/es",
+              correct: "nimmt mit"
+            },
+            {
+              pronoun: "wir",
+              correct: "nehmen mit"
+            },
+            {
+              pronoun: "ihr",
+              correct: "nehmt mit"
+            },
+            {
+              pronoun: "sie/Sie",
+              correct: "nehmen mit"
+            }
+          ],
+          note: "Toto je nepravidelné sloveso s oddeliteľnou predponou ('mit'). V druhej a tretej osobe jednotného čísla sa mení samohláska v kmeni (a → i)."
+        },
+        {
+          infinitive: "wissen",
+          translation: "vedieť",
+          forms: [
+            {
+              pronoun: "ich",
+              correct: "weiß"
+            },
+            {
+              pronoun: "du",
+              correct: "weißt"
+            },
+            {
+              pronoun: "er/sie/es",
+              correct: "weiß"
+            },
+            {
+              pronoun: "wir",
+              correct: "wissen"
+            },
+            {
+              pronoun: "ihr",
+              correct: "wisst"
+            },
+            {
+              pronoun: "sie/Sie",
+              correct: "wissen"
+            }
+          ],
+          note: "Toto je nepravidelné sloveso. V prvej a tretej osobe jednotného čísla sa mení samohláska v kmeni (i → ei)."
+        }
+      ]
+    }
   ],
-  reviewWords: [
-    "die Waschmaschine",
-    "der Kühlschrank",
-    "der Staubsauger",
-    "putzen",
-    "aufräumen",
-    "den Abwasch machen",
-    "Wäsche waschen",
-    "bügeln",
-    "staubsaugen",
-  ],
-  lessonNotes:
-    "Výborne! Teraz vieš hovoriť o domácich prácach a spotrebičoch. Pamätaj na separabilné slovesá: aufräumen → ich räume...auf; abwaschen → ich wasche...ab. Ďalší týždeň: počasie, čísla a záverečná simulácia skúšky!",
+  reviewWords: []
 };

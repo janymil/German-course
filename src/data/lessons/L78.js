@@ -1,472 +1,873 @@
-﻿export const lesson78 = {
+export const lesson78 = {
   id: 78,
   week: 16,
   day: 3,
-  title: "Gesundheit und Ernährung: Tipps und Ratschläge",
-  topic: "Zdravie a výživa: rady a odporúčania",
+  title: "Alles Gute zum Geburtstag!",
+  topic: "Názvy nemeckých osláv, gratulácie a blahoželania k nim (narodeniny).",
   cefr: "A1",
-  xpReward: 25,
-  narrativeContext:
-    "Jana visits her doctor for a check-up before the Goethe exam — she wants to make sure the stress isn't affecting her health. Her doctor gives advice: 'Sie sollten weniger Stress haben.' Jana learns to give and receive health recommendations in German.",
-  communicativeGoal:
-    "Po tejto lekcii viem dávať a prijímať rady o zdravom živote a správnej výžive po nemecky.",
-  skillFocus: ["grammar", "vocabulary", "speaking"],
-  grammarNote: {
-    rule: "Modálne sloveso 'sollen' + Konjunktiv II 'sollten'",
-    explanation:
-      "NOVÉ MODÁLNE SLOVESO: sollen = mať (podľa niekoho) / malo by sa. Konjugácia: ich soll, du sollst, er/sie/es soll, wir sollen, ihr sollt, sie/Sie sollen. Použitia: (1) Reportovaná rada/príkaz: 'Der Arzt sagt, ich soll mehr schlafen.' (2) Predpis/pokyn: 'Sie sollen mehr Wasser trinken.' (3) Všeobecná rada s 'man': 'Man soll täglich 2 Liter trinken.' Konjunktív II pre zdvorilé odporúčanie: 'sollten' = mali by. 'Sie sollten weniger Stress haben.' = Mali by ste mať menej stresu. Škála: müssen (musíte) > sollen (máte/malo by podľa niekoho) > sollten (mali by ste — K. II) > können (môžete).",
-    examples: [
-      { de: "Der Arzt sagt, ich soll mehr schlafen.", sk: "Lekár hovorí, že mám viac spať." },
-      { de: "Man soll täglich mindestens 2 Liter Wasser trinken.", sk: "Denne by sa malo piť aspoň 2 litre vody." },
-      { de: "Sie sollten mehr Gemüse essen.", sk: "Mali by ste jesť viac zeleniny." },
-      { de: "Man sollte weniger Zucker essen.", sk: "Malo by sa jesť menej cukru." },
-    ],
-    slovakContrastNote:
-      "Slovensky 'mali by ste' = 'Sie sollten' (K. II). Slovensky 'máte/musíte' = 'Sie müssen'. Škála modálov od 'musíte' (must) po 'mali by ste' (you should) po 'môžete' (you may) existuje v oboch jazykoch s rovnakými jemnými rozdielmi. 'Sollen' (nie K. II) sa používa pre externú radu — niekto iný ti hovorí, čo máš robiť.",
-  },
+  xpReward: 20,
+  narrativeContext: "Jana ist auf einer Geburtstagsparty von ihrer Freundin Maria in Österreich. Es ist Janas erste Geburtstagsparty nach deutscher Tradition.",
+  communicativeGoal: "Nach dieser Lektion kann ich auf Deutsch zum Geburtstag gratulieren und typische Geburtstagsbräuche im DACH-Raum verstehen.",
+  skillFocus: [
+    "vocabulary",
+    "speaking",
+    "listening",
+    "cultural note"
+  ],
+  lessonNotes: "V tejto lekcii sa naučíš nemecké a rakúske zvyky pri oslavách narodenín. Dozvieš sa, ako správne zablahoželať a aké darčeky sú vhodné. Zameriame sa na slovnú zásobu a frázy potrebné na gratuláciu.",
+  grammarNotes: [
+    {
+      rule: "Názvy sviatkov a osláv",
+      explanation: "\n      <p>V nemčine existuje množstvo slovíčok na označenie rôznych sviatkov, osláv a iných spoločenských udalostí. Je dôležité naučiť sa ich správne používať, pretože často sa používajú s určitými predložkami alebo v špecifických kontextoch. Napríklad, narodeniny sa oslavujú slovom <strong>Geburtstag</strong>. Vianoce sú <strong>Weihnachten</strong> a Veľká noc je <strong>Ostern</strong>. Silvester je <strong>Silvester</strong>. Mnoho z týchto slov je zložených z dvoch častí, napríklad <em>Geburtstag</em> (Geburt + Tag = pôrod + deň). Vždy si dávajte pozor na rod podstatného mena, aj keď v prípade sviatkov to nie je vždy také dôležité ako pri bežných podstatných menách.</p>\n      <p>Pri gratulovaní k týmto udalostiam používame špecifické frázy. K narodeninám sa najčastejšie gratuluje pomocou frázy <strong>Herzlichen Glückwunsch zum Geburtstag!</strong> alebo jednoduchšie <strong>Alles Gute zum Geburtstag!</strong>. Pri iných sviatkoch, ako sú Vianoce, sa používa <strong>Frohe Weihnachten!</strong> a k Veľkej noci <strong>Frohe Ostern!</strong>. Silvester sa oslavuje s <strong>Guten Rutsch!</strong> (doslova \"dobrý sklz\", želanie šťastného vkročenia do nového roka).</p>\n    ",
+      examples: [
+        {
+          de: "Alles Gute zum Geburtstag!",
+          sk: "Všetko najlepšie k narodeninám!"
+        },
+        {
+          de: "Herzlichen Glückwunsch zum Geburtstag!",
+          sk: "Srdečné blahoželanie k narodeninám!"
+        },
+        {
+          de: "Frohe Weihnachten!",
+          sk: "Šťastné Vianoce!"
+        },
+        {
+          de: "Frohe Ostern!",
+          sk: "Šťastnú Veľkú noc!"
+        },
+        {
+          de: "Guten Rutsch!",
+          sk: "Šťastný Nový rok!"
+        },
+        {
+          de: "Wir feiern seinen Geburtstag.",
+          sk: "Oslavujeme jeho narodeniny."
+        },
+        {
+          de: "Ich wünsche dir alles Gute.",
+          sk: "Prajem ti všetko dobré."
+        },
+        {
+          de: "Viel Glück zum neuen Jahr!",
+          sk: "Veľa šťastia v novom roku!"
+        }
+      ],
+      slovakContrastNote: "V slovenčine používame pri gratuláciách často len podstatné mená (narodeniny, Vianoce), zatiaľ čo v nemčine sú bežnejšie celé frázy s prídavnými menami a predložkami (napr. 'Alles Gute zum Geburtstag'). Slovosled a použitie predložiek sa môže líšiť. Napríklad, 'k narodeninám' sa v nemčine povie 'zum Geburtstag' (predložka 'zu' + datív). Fráza 'Guten Rutsch!' je špecifická nemecká fráza, ktorá nemá priamy ekvivalent v slovenčine, kde skôr používame 'Šťastný Nový rok!'."
+    },
+    {
+      rule: "Použitie predložky 'zu' pri sviatkoch",
+      explanation: "\n      <p>Predložka <strong>zu</strong> sa v nemčine často používa v spojení s oslavami a sviatkami, najmä pri gratuláciách. Najtypickejším príkladom je gratulácia k narodeninám: <em>Herzlichen Glückwunsch <strong>zum</strong> Geburtstag</em>. Tu sa <em>zu</em> spája s členom <em>dem</em> (datív od <em>der Geburtstag</em>), čím vzniká skrátená forma <em>zum</em>. Podobne sa môže použiť aj pri iných príležitostiach, hoci menej často.</p>\n      <p>Je dôležité rozlišovať použitie predložky <em>zu</em> od iných predložiek, ako napríklad <em>an</em> alebo <em>in</em>, ktoré sa používajú v iných kontextoch týkajúcich sa času alebo udalostí. V tomto prípade <em>zu</em> vyjadruje smerovanie alebo cieľ gratulácie či priania.</p>\n    ",
+      examples: [
+        {
+          de: "Alles Gute zum Geburtstag!",
+          sk: "Všetko najlepšie k narodeninám!"
+        },
+        {
+          de: "Herzlichen Glückwunsch zum Geburtstag!",
+          sk: "Srdečné blahoželanie k narodeninám!"
+        },
+        {
+          de: "Ich wünsche dir alles Gute zum Geburtstag.",
+          sk: "Prajem ti všetko najlepšie k narodeninám."
+        },
+        {
+          de: "Viel Glück zum neuen Jahr!",
+          sk: "Veľa šťastia v novom roku!"
+        },
+        {
+          de: "Wir gratulieren dir zum Geburtstag.",
+          sk: "Gratulujeme ti k narodeninám."
+        },
+        {
+          de: "Alles Liebe zum Muttertag!",
+          sk: "Všetko láskyplné ku Dňu matiek!"
+        }
+      ],
+      slovakContrastNote: "V slovenčine používame pri gratuláciách k narodeninám predložku 'k' (k narodeninám). V nemčine je to predložka 'zu', ktorá sa spája s datívom. Vzniknutá forma 'zum' (zu + dem) je veľmi častá a je dôležité si ju zapamätať pre správne tvorenie gratulácií. V slovenčine nemáme takúto ustálenú predložkovú väzbu pri všetkých sviatkoch."
+    }
+  ],
   vocab: [
     {
-      de: "sollen → soll",
-      sk: "mať (podľa niekoho) / malo by sa",
-      example: "Ich soll mehr Wasser trinken — sagt der Arzt.",
-      exampleSk: "Mám piť viac vody — hovorí lekár.",
-      gender: null,
+      de: "der Geburtstag",
+      sk: "narodeniny",
+      gender: "M",
       srsId: "L78_V01",
-      recycledFrom: [],
+      example: "Alles Gute zum Geburtstag!",
+      exampleSk: "Všetko najlepšie k narodeninám!",
+      recycledFrom: []
     },
     {
-      de: "sollten (Konjunktív II)",
-      sk: "mali by",
-      example: "Sie sollten mehr schlafen.",
-      exampleSk: "Mali by ste viac spať.",
-      gender: null,
+      de: "die Blume",
+      sk: "kvet",
+      gender: "F",
       srsId: "L78_V02",
-      recycledFrom: [],
+      example: "Jana bringt Blumen mit.",
+      exampleSk: "Jana prináša kvety.",
+      recycledFrom: []
     },
     {
-      de: "Man soll...",
-      sk: "Mal by sa...",
-      example: "Man soll jeden Tag Sport machen.",
-      exampleSk: "Mal by sa každý deň cvičiť.",
-      gender: null,
+      de: "der Kuchen",
+      sk: "koláč",
+      gender: "M",
       srsId: "L78_V03",
-      recycledFrom: [],
+      example: "Der Kuchen schmeckt gut.",
+      exampleSk: "Koláč chutí dobre.",
+      recycledFrom: []
     },
     {
-      de: "Man sollte...",
-      sk: "Malo by sa...",
-      example: "Man sollte weniger Zucker essen.",
-      exampleSk: "Malo by sa jesť menej cukru.",
-      gender: null,
+      de: "die Kerze",
+      sk: "sviečka",
+      gender: "F",
       srsId: "L78_V04",
-      recycledFrom: [],
+      example: "Auf dem Kuchen sind Kerzen.",
+      exampleSk: "Na torte sú sviečky.",
+      recycledFrom: []
     },
     {
-      de: "gesund essen",
-      sk: "zdravo jesť",
-      example: "Ich versuche, gesund zu essen.",
-      exampleSk: "Snažím sa zdravo jesť.",
-      gender: null,
+      de: "der Freund / die Freundin",
+      sk: "priateľ / priateľka",
+      gender: "M",
       srsId: "L78_V05",
-      recycledFrom: [41, 44],
+      example: "Maria ist Janas Freundin.",
+      exampleSk: "Mária je Janina priateľka.",
+      recycledFrom: []
     },
     {
-      de: "das Gemüse",
-      sk: "zelenina",
-      example: "Iss mehr Gemüse — es ist gesund!",
-      exampleSk: "Jedz viac zeleniny — je zdravá!",
+      de: "das Lied",
+      sk: "pieseň",
       gender: "N",
       srsId: "L78_V06",
-      recycledFrom: [32],
+      example: "Wir singen ein Lied.",
+      exampleSk: "Spievame pieseň.",
+      recycledFrom: []
     },
     {
-      de: "das Obst",
-      sk: "ovocie",
-      example: "Man sollte täglich Obst essen.",
-      exampleSk: "Malo by sa každodenne jesť ovocie.",
-      gender: "N",
+      de: "die Tradition",
+      sk: "tradícia",
+      gender: "F",
       srsId: "L78_V07",
-      recycledFrom: [32],
+      example: "Das ist eine österreichische Tradition.",
+      exampleSk: "Toto je rakúska tradícia.",
+      recycledFrom: []
     },
     {
-      de: "das Fett",
-      sk: "tuk",
-      example: "Zu viel Fett ist nicht gut für das Herz.",
-      exampleSk: "Príliš veľa tuku nie je dobré pre srdce.",
-      gender: "N",
+      de: "die Party",
+      sk: "párty, oslava",
+      gender: "F",
       srsId: "L78_V08",
-      recycledFrom: [],
+      example: "Wir gehen zur Party.",
+      exampleSk: "Ideme na oslavu.",
+      recycledFrom: []
     },
     {
-      de: "der Zucker",
-      sk: "cukor",
-      example: "Man sollte weniger Zucker essen.",
-      exampleSk: "Malo by sa jesť menej cukru.",
-      gender: "M",
+      de: "die Einladung",
+      sk: "pozvánka",
+      gender: "F",
       srsId: "L78_V09",
-      recycledFrom: [55],
+      example: "Ich habe eine Einladung bekommen.",
+      exampleSk: "Dostal som pozvánku.",
+      recycledFrom: []
     },
     {
-      de: "weniger Zucker",
-      sk: "menej cukru",
-      example: "Trinke weniger Zucker in deinem Kaffee!",
-      exampleSk: "Dávaj menej cukru do svojej kávy!",
-      gender: null,
+      de: "der Gast / die Gästin",
+      sk: "hosť / hosťka",
+      gender: "M",
       srsId: "L78_V10",
-      recycledFrom: [45, 55],
+      example: "Viele Gäste sind da.",
+      exampleSk: "Je tu veľa hostí.",
+      recycledFrom: []
     },
     {
-      de: "mehr Wasser",
-      sk: "viac vody",
-      example: "Man soll täglich 2 Liter Wasser trinken.",
-      exampleSk: "Denne sa má piť 2 litre vody.",
-      gender: null,
+      de: "das Jahr",
+      sk: "rok",
+      gender: "N",
       srsId: "L78_V11",
-      recycledFrom: [45, 55],
+      example: "Maria wird 30 Jahre alt.",
+      exampleSk: "Mária má 30 rokov.",
+      recycledFrom: []
     },
     {
-      de: "der Tipp",
-      sk: "tip / rada",
-      example: "Hast du einen Tipp für gesunde Ernährung?",
-      exampleSk: "Máš tip na zdravú výživu?",
-      gender: "M",
+      de: "gratulieren",
+      sk: "gratulovať",
+      gender: null,
       srsId: "L78_V12",
-      recycledFrom: [],
+      example: "Ich gratuliere dir zum Geburtstag.",
+      exampleSk: "Gratulujem ti k narodeninám.",
+      recycledFrom: []
     },
     {
-      de: "der Rat / die Ratschläge",
-      sk: "rada / rady",
-      example: "Der Arzt gibt mir viele Ratschläge.",
-      exampleSk: "Lekár mi dáva veľa rád.",
-      gender: "M",
+      de: "einladen",
+      sk: "pozvať",
+      gender: null,
       srsId: "L78_V13",
-      recycledFrom: [],
+      example: "Maria lädt Jana ein.",
+      exampleSk: "Mária pozýva Janu.",
+      recycledFrom: []
     },
     {
-      de: "empfehlen → empfiehlt",
-      sk: "odporučiť",
-      example: "Der Arzt empfiehlt mehr Bewegung.",
-      exampleSk: "Lekár odporúča viac pohybu.",
+      de: "bringen",
+      sk: "priniesť",
       gender: null,
       srsId: "L78_V14",
-      recycledFrom: [69],
+      example: "Jana bringt Blumen.",
+      exampleSk: "Jana prináša kvety.",
+      recycledFrom: []
     },
     {
-      de: "die Ernährung",
-      sk: "výživa / stravovanie",
-      example: "Eine gute Ernährung ist wichtig für die Gesundheit.",
-      exampleSk: "Dobrá výživa je dôležitá pre zdravie.",
-      gender: "F",
+      de: "singen",
+      sk: "spievať",
+      gender: null,
       srsId: "L78_V15",
-      recycledFrom: [],
+      example: "Wir singen ein Geburtstagslied.",
+      exampleSk: "Spievame pieseň k narodeninám.",
+      recycledFrom: []
     },
+    {
+      de: "lernen",
+      sk: "učiť sa",
+      gender: null,
+      srsId: "L78_V16",
+      example: "Jana lernt deutsche Traditionen.",
+      exampleSk: "Jana sa učí nemecké tradície.",
+      recycledFrom: []
+    },
+    {
+      de: "feiern",
+      sk: "oslavovať",
+      gender: null,
+      srsId: "L78_V17",
+      example: "Wir feiern heute Marias Geburtstag.",
+      exampleSk: "Dnes oslavujeme Máriine narodeniny.",
+      recycledFrom: []
+    },
+    {
+      de: "Herzlichen Glückwunsch zum Geburtstag!",
+      sk: "Všetko najlepšie k narodeninám!",
+      gender: null,
+      srsId: "L78_V18",
+      example: "Herzlichen Glückwunsch zum Geburtstag, Maria!",
+      exampleSk: "Všetko najlepšie k narodeninám, Mária!",
+      recycledFrom: []
+    },
+    {
+      de: "Alles Gute!",
+      sk: "Všetko dobré!",
+      gender: null,
+      srsId: "L78_V19",
+      example: "Alles Gute für dich!",
+      exampleSk: "Všetko dobré pre teba!",
+      recycledFrom: []
+    },
+    {
+      de: "Wie schön!",
+      sk: "Aké krásne!",
+      gender: null,
+      srsId: "L78_V20",
+      example: "Wie schön, dass du da bist!",
+      exampleSk: "Aké krásne, že si tu!",
+      recycledFrom: []
+    },
+    {
+      de: "Ich gratuliere dir.",
+      sk: "Gratulujem ti.",
+      gender: null,
+      srsId: "L78_V21",
+      example: "Ich gratuliere dir zu deinem Geburtstag.",
+      exampleSk: "Gratulujem ti k tvojim narodeninám.",
+      recycledFrom: []
+    },
+    {
+      de: "Ich bringe Blumen mit.",
+      sk: "Prinášam kvety.",
+      gender: null,
+      srsId: "L78_V22",
+      example: "Ich bringe Blumen für die Gastgeberin mit.",
+      exampleSk: "Prinášam kvety pre hostiteľku.",
+      recycledFrom: []
+    },
+    {
+      de: "Wir singen ein Lied.",
+      sk: "Spievame pieseň.",
+      gender: null,
+      srsId: "L78_V23",
+      example: "Wir singen ein Lied für das Geburtstagskind.",
+      exampleSk: "Spievame pieseň pre oslávenca/oslávenkyňu.",
+      recycledFrom: []
+    },
+    {
+      de: "Das ist eine Tradition.",
+      sk: "Toto je tradícia.",
+      gender: null,
+      srsId: "L78_V24",
+      example: "Das ist eine alte Tradition.",
+      exampleSk: "Toto je stará tradícia.",
+      recycledFrom: []
+    }
   ],
   exercises: [
     {
       type: "flashcard",
-      instruction: "Precvič si slovnú zásobu o zdraví a výžive. Špeciálna pozornosť na 'sollen' a 'sollten'!",
-      items: [
-        "L78_V01",
-        "L78_V02",
-        "L78_V03",
-        "L78_V04",
-        "L78_V05",
-        "L78_V06",
-        "L78_V07",
-        "L78_V08",
-        "L78_V09",
-        "L78_V10",
-        "L78_V11",
-        "L78_V12",
-        "L78_V13",
-        "L78_V14",
-        "L78_V15",
-      ],
-    },
-    {
-      type: "mcq",
-      instruction: "Vyber správnu odpoveď o modálnych slovesách a zdravotných radách.",
-      questions: [
-        {
-          question: "Čo vyjadruje veta 'Der Arzt sagt, ich soll mehr schlafen'?",
-          options: [
-            "Je to môj vlastný plán.",
-            "Lekár mi dal radu/príkaz spať viac.",
-            "Musím spať — je to zákon.",
-            "Chcem spať viac.",
-          ],
-          answer: "Lekár mi dal radu/príkaz spať viac.",
-          explanation: "'sollen' vyjadruje externú radu alebo pokyn od niekoho iného. 'Ich soll...' = hovorí mi niekto iný, čo mám robiť. Tu lekár hovorí Janie, čo má robiť.",
-        },
-        {
-          question: "Vyber najzdvorilejšie odporúčanie pre priateľa:",
-          options: [
-            "Du musst mehr Gemüse essen.",
-            "Du sollst mehr Gemüse essen.",
-            "Du solltest mehr Gemüse essen.",
-            "Du darfst mehr Gemüse essen.",
-          ],
-          answer: "Du solltest mehr Gemüse essen.",
-          explanation: "'solltest' (K. II) = mali by si — zdvorilé odporúčanie. 'musst' = musíš (príkaz). 'sollst' = máš (externý príkaz). Pre zdvorilú radu kamarátovi: 'solltest' je najvhodnejšie.",
-        },
-        {
-          question: "Čo je správny preklad: 'Man soll täglich Sport machen'?",
-          options: [
-            "Niekto robí šport každý deň.",
-            "Všeobecne by sa malo každý deň cvičiť.",
-            "Musím každý deň cvičiť.",
-            "Chcem každý deň cvičiť.",
-          ],
-          answer: "Všeobecne by sa malo každý deň cvičiť.",
-          explanation: "'Man soll...' = všeobecné odporúčanie (malo by sa...). 'Man' = neosobné 'sa'. 'Man soll täglich Sport machen.' = Malo by sa každý deň cvičiť. Platí pre každého!",
-        },
-        {
-          question: "Ako sa konjuguje 'sollen' v 3. osobe jednotného čísla?",
-          options: [
-            "sollst",
-            "sollen",
-            "soll",
-            "sollt",
-          ],
-          answer: "soll",
-          explanation: "Konjugácia 'sollen': ich soll, du sollst, er/sie/es SOLL, wir sollen, ihr sollt, sie/Sie sollen. Rovnaký vzor ako 'müssen': ich muss, er muss (bez '-t' v 3. os.).",
-        },
-        {
-          question: "Čo je 'die Ernährung'?",
-          options: ["Liek", "Výživa / stravovanie", "Pohyb / cvičenie", "Zdravotné poistenie"],
-          answer: "Výživa / stravovanie",
-          explanation: "'die Ernährung' = výživa/stravovanie. Od 'ernähren' = živiť/stravovať. 'Gesunde Ernährung' = zdravá výživa. Dôležité slovo v oblasti zdravia.",
-        },
-        {
-          question: "Vyber správnu vetu s 'sollen':",
-          options: [
-            "Ich soll die Wohnung putze.",
-            "Ich soll die Wohnung putzen.",
-            "Ich putzen soll die Wohnung.",
-            "Soll ich die Wohnung putze.",
-          ],
-          answer: "Ich soll die Wohnung putzen.",
-          explanation: "Modálne sloveso + infinitív na konci: 'Ich soll [infinitív].' = Ich soll die Wohnung PUTZEN. Slovosled s modálnym slovesom: subjekt + modál + zvyšok + infinitív.",
-        },
-      ],
-    },
-    {
-      type: "fill",
-      instruction: "Doplň správny tvar modálneho slovesa 'sollen/sollten' alebo výraz.",
-      questions: [
-        {
-          sentence: "Der Arzt sagt: Sie ___ mehr Gemüse essen.",
-          answer: "sollen",
-          hint: "pokyn od lekára (formálne Sie)",
-          explanation: "'sollen' (prítomny čas) pre externý pokyn. 'Sie sollen' = vy máte (formálne). Lekár hovorí priamo pacientke: 'Sie sollen mehr Gemüse essen.'",
-        },
-        {
-          sentence: "Man ___ täglich mindestens 8 Stunden schlafen.",
-          answer: "sollte",
-          hint: "všeobecné zdvorilé odporúčanie",
-          explanation: "'man sollte' = malo by sa (zdvorilé odporúčanie). 'man soll' = tiež správne, ale o niečo kategorickejšie. Pre zdravotné tipy je 'sollte' prirodzenejšie.",
-        },
-        {
-          sentence: "Iss mehr ___ und weniger Fett!",
-          answer: "Gemüse",
-          hint: "zelenina",
-          explanation: "'das Gemüse' = zelenina. Bez článku v pokyne: 'Iss mehr Gemüse!' — taktiež 'mehr Obst' (viac ovocia), 'weniger Zucker' (menej cukru).",
-        },
-        {
-          sentence: "Der Arzt ___ mehr Bewegung.",
-          answer: "empfiehlt",
-          hint: "odporúčať (3. os. jedn. č., nepravidelné)",
-          explanation: "'empfehlen' je nepravidelné: ich empfehle, du empfiehlst, er/sie EMPFIEHLT (e→ie). 'Der Arzt empfiehlt Bewegung.' = Lekár odporúča pohyb.",
-        },
-        {
-          sentence: "Man ___ täglich 2 Liter Wasser trinken.",
-          answer: "soll",
-          hint: "všeobecné odporúčanie (prítomný čas)",
-          explanation: "'Man soll...' = Malo by sa / Všeobecne sa odporúča. 'Man soll täglich 2 Liter Wasser trinken.' = Všeobecne sa odporúča piť 2 litre vody denne.",
-        },
-      ],
-    },
-    {
-      type: "listen",
-      instruction: "Počúvaj zdravotné rady a opakuj ich nahlas. Tieto vety sa nauč naspamäť!",
-      questions: [
-        { de: "Man soll täglich viel Wasser trinken.", sk: "Denne by sa malo piť veľa vody." },
-        { de: "Sie sollten mehr Gemüse essen.", sk: "Mali by ste jesť viac zeleniny." },
-        { de: "Man sollte weniger Zucker essen.", sk: "Malo by sa jesť menej cukru." },
-        { de: "Der Arzt empfiehlt mehr Bewegung.", sk: "Lekár odporúča viac pohybu." },
-        { de: "Gesunde Ernährung ist sehr wichtig.", sk: "Zdravá výživa je veľmi dôležitá." },
-        { de: "Ich soll mehr schlafen — sagt der Arzt.", sk: "Mám viac spať — hovorí lekár." },
-      ],
+      instruction: "Prezri si slovíčka tejto lekcie. Klikni na kartičku pre preklad."
     },
     {
       type: "match",
-      instruction: "Spoj nemecké výrazy o zdraví so slovenským prekladom.",
+      instruction: "Spojte nemecké slová s ich slovenskými ekvivalentmi.",
       pairs: [
-        ["sollen → soll", "mať (podľa niekoho)"],
-        ["sollten", "mali by (zdvorilé)"],
-        ["die Ernährung", "výživa / stravovanie"],
-        ["das Gemüse", "zelenina"],
-        ["das Obst", "ovocie"],
-        ["der Zucker", "cukor"],
-        ["das Fett", "tuk"],
-        ["empfehlen", "odporučiť"],
-      ],
-    },
-    {
-      type: "dialogue",
-      instruction:
-        "Jana navštívi lekára pred skúškou. Lekár jej dáva zdravotné odporúčania.",
-      lines: [
-        { speaker: "A", de: "Guten Tag, Frau Novák. Wie fühlen Sie sich?", sk: "Dobrý deň, pani Nováková. Ako sa cítite?" },
-        { speaker: "B", de: "Hallo, Doktor. Ich bin sehr gestresst wegen der Prüfung.", sk: "Dobrý deň, pán doktor. Som veľmi vystresovaná kvôli skúške." },
-        { speaker: "A", de: "Das verstehe ich. Sie sollen mehr Pausen machen.", sk: "Tomu rozumiem. Máte robiť viac prestávok." },
-        { speaker: "B", de: "Ja, aber ich muss viel lernen.", sk: "Áno, ale musím sa veľa učiť." },
-        { speaker: "A", de: "Natürlich. Aber man sollte nicht mehr als 3 Stunden am Stück lernen.", sk: "Samozrejme. Ale nemalo by sa učiť viac ako 3 hodiny v kuse." },
-        { speaker: "B", de: "Was soll ich noch machen?", sk: "Čo mám ešte robiť?" },
-        { speaker: "A", de: "Sie sollten mehr Gemüse und Obst essen — das hilft dem Gehirn.", sk: "Mali by ste jesť viac zeleniny a ovocia — to pomáha mozgu." },
-        { speaker: "B", de: "Ich esse gern Gemüse. Aber ich trinke zu viel Kaffee.", sk: "Rada jem zeleninu. Ale pijem príliš veľa kávy." },
-        { speaker: "A", de: "Ja, das sehe ich. Sie sollen weniger Kaffee trinken — maximal zwei Tassen pro Tag.", sk: "Áno, to vidím. Máte piť menej kávy — maximálne dve šálky denne." },
-        { speaker: "B", de: "Und Bewegung? Ich habe wenig Zeit für Sport.", sk: "A pohyb? Mám málo času na šport." },
-        { speaker: "A", de: "Man soll täglich 30 Minuten spazieren gehen — das ist genug.", sk: "Denne by sa malo chodiť 30 minút na prechádzku — to stačí." },
-        { speaker: "B", de: "Das kann ich machen! Vielen Dank, Doktor.", sk: "To môžem robiť! Ďakujem vám, pán doktor." },
-      ],
-      comprehensionQuestions: [
-        {
-          question: "Prečo je Jana vystresovaná?",
-          options: ["Kvôli práci", "Kvôli skúške", "Kvôli chorobe", "Kvôli cestovania"],
-          answer: "Kvôli skúške",
-        },
-        {
-          question: "Čo lekár hovorí o kávе?",
-          options: [
-            "Jana má prestať piť kávu úplne.",
-            "Jana môže piť koľko chce.",
-            "Jana má piť maximálne dve šálky denne.",
-            "Káva je zdravá pre mozog.",
-          ],
-          answer: "Jana má piť maximálne dve šálky denne.",
-        },
-        {
-          question: "Koľko minút chôdze lekár odporúča denne?",
-          options: ["10 minút", "20 minút", "30 minút", "60 minút"],
-          answer: "30 minút",
-        },
-      ],
-    },
-    {
-      type: "minitext",
-      instruction: "Prečítaj si zdravotný stĺpček z nemeckého zdravotného časopisu. Potom odpovedz na otázky.",
-      text:
-        "Gesund leben — 5 einfache Tipps\n\n1. Trinken: Man soll täglich mindestens 1,5 Liter Wasser trinken. Kaffee und Alkohol sind kein Ersatz für Wasser!\n2. Essen: Man sollte viel Gemüse und Obst essen. Weniger Fett und Zucker ist besser für das Herz.\n3. Bewegung: Man soll täglich 30 Minuten aktiv sein — spazieren, schwimmen oder Rad fahren.\n4. Schlaf: Man sollte 7–8 Stunden pro Nacht schlafen. Guter Schlaf stärkt das Immunsystem.\n5. Stress: Man soll regelmäßige Pausen machen. Stress ist schlecht für die Gesundheit.",
-      textSk:
-        "Zdravý život — 5 jednoduchých tipov\n\n1. Pitie: Denne by sa malo piť aspoň 1,5 litra vody. Káva a alkohol nie sú náhradou za vodu!\n2. Jedenie: Malo by sa jesť veľa zeleniny a ovocia. Menej tuku a cukru je lepšie pre srdce.\n3. Pohyb: Denne by sa malo byť aktívny 30 minút — prechádzky, plávanie alebo jazda na bicykli.\n4. Spánok: Malo by sa spať 7–8 hodín za noc. Dobrý spánok posilňuje imunitu.\n5. Stres: Malo by sa robiť pravidelné prestávky. Stres je zlý pre zdravie.",
-      questions: [
-        {
-          question: "Koľko vody by sa malo denne vypiť (podľa článku)?",
-          options: ["0,5 litra", "1 liter", "1,5 litra", "2 litre"],
-          answer: "1,5 litra",
-        },
-        {
-          question: "Koľko hodín spánku sa odporúča za noc?",
-          options: ["5–6 hodín", "6–7 hodín", "7–8 hodín", "8–10 hodín"],
-          answer: "7–8 hodín",
-        },
-        {
-          question: "Koľko minút aktivity sa odporúča denne?",
-          options: ["10 minút", "20 minút", "30 minút", "60 minút"],
-          answer: "30 minút",
-        },
-      ],
-    },
-    {
-      type: "freewrite",
-      instruction: "Napíš rady pre zdravší život po nemecky. Použi modálne slovesá!",
-      prompt:
-        "Gib 5 Tipps für ein gesünderes Leben. Benutze: Man soll..., Man sollte..., Es ist wichtig, dass... (Daj 5 tipov pre zdravší život. Použi: Man soll..., Man sollte..., Es ist wichtig, dass...)",
-      minWords: 40,
-      exampleAnswer:
-        "Hier sind meine fünf Tipps für ein gesünderes Leben: Erstens, man soll täglich 2 Liter Wasser trinken. Zweitens, man sollte mehr Gemüse und weniger Zucker essen. Drittens, es ist wichtig, dass man täglich spazieren geht. Viertens, man sollte 8 Stunden pro Nacht schlafen. Fünftens, man soll regelmäßige Pausen machen — Stress ist ungesund! Ich versuche, diese Tipps zu befolgen.",
+        [
+          "der Geburtstag",
+          "narodeniny"
+        ],
+        [
+          "die Blume",
+          "kvet"
+        ],
+        [
+          "der Kuchen",
+          "koláč"
+        ],
+        [
+          "die Kerze",
+          "sviečka"
+        ],
+        [
+          "die Party",
+          "párty, oslava"
+        ],
+        [
+          "gratulieren",
+          "gratulovať"
+        ],
+        [
+          "einladen",
+          "pozvať"
+        ],
+        [
+          "feiern",
+          "oslavovať"
+        ],
+        [
+          "Herzlichen Glückwunsch zum Geburtstag!",
+          "Všetko najlepšie k narodeninám!"
+        ],
+        [
+          "Ich bringe Blumen mit.",
+          "Prinášam kvety."
+        ]
+      ]
     },
     {
       type: "wordorder",
-      instruction: "Zoraď slová do správnej nemeckej vety.",
+      instruction: "Usporiadajte slová do správneho nemeckého poradia.",
       sentences: [
         {
-          words: ["Ich", "schreibe", "Ihnen", "wegen", "meiner", "Bewerbung"],
-          correct: "Ich schreibe Ihnen wegen meiner Bewerbung",
-          hint: "Píšem Vám ohľadom mojej žiadosti.",
-          explanation: "Formeller Brief: 'schreiben' + Dativ ('Ihnen') — oslovenie veľkým písmenom.",
+          words: [
+            "zum",
+            "Geburtstag",
+            "Glückwunsch",
+            "Herzlichen"
+          ],
+          correct: "Herzlichen Glückwunsch zum Geburtstag",
+          hint: "Všetko najlepšie k narodeninám!",
+          explanation: "Toto je ustálené spojenie na gratuláciu k narodeninám."
         },
         {
-          words: ["Ich", "bitte", "Sie", "um", "eine", "baldige", "Antwort"],
-          correct: "Ich bitte Sie um eine baldige Antwort",
-          hint: "Prosím Vás o skorú odpoveď.",
-          explanation: "'bitten um + Akkusativ' — štandardná zdvorilostná formula formálneho listu.",
+          words: [
+            "Ich",
+            "dir",
+            "gratuliere"
+          ],
+          correct: "Ich gratuliere dir",
+          hint: "Gratulujem ti.",
+          explanation: "V nemčine je sloveso zvyčajne na druhej pozícii vo vete."
         },
         {
-          words: ["Jana", "schreibt", "einen", "formellen", "Brief", "an", "ihre", "Chefin"],
-          correct: "Jana schreibt einen formellen Brief an ihre Chefin",
-          hint: "Jana píše formálny list svojej šéfke.",
-          explanation: "'schreiben an + Akkusativ' = písať niekomu; 'formell' — adjektívum pred podstatným menom.",
+          words: [
+            "mit",
+            "Blumen",
+            "Ich",
+            "bringe"
+          ],
+          correct: "Ich bringe Blumen mit",
+          hint: "Prinášam kvety.",
+          explanation: "Oddeliteľné predpony idú na koniec vety v prítomnom čase."
         },
         {
-          words: ["Mit", "freundlichen", "Grüßen", "schließe", "ich", "meinen", "Brief"],
-          correct: "Mit freundlichen Grüßen schließe ich meinen Brief",
-          hint: "S priateľskými pozdravmi uzatváram svoj list.",
-          explanation: "'Mit freundlichen Grüßen' na začiatku → inverzia; štandardný záver formálneho listu.",
+          words: [
+            "Wir",
+            "ein",
+            "Lied",
+            "singen"
+          ],
+          correct: "Wir singen ein Lied",
+          hint: "Spievame pieseň.",
+          explanation: "Sloveso je na druhej pozícii a podstatné meno v akuzatíve nasleduje po ňom."
         },
         {
-          words: ["Ich", "freue", "mich", "auf", "Ihre", "Rückmeldung"],
-          correct: "Ich freue mich auf Ihre Rückmeldung",
-          hint: "Teším sa na Vašu spätnú väzbu.",
-          explanation: "'sich freuen auf + Akkusativ' — zdvorilostná záverová formula; 'Ihre' s veľkým I (vykanie).",
+          words: [
+            "eine",
+            "Das",
+            "Tradition",
+            "ist"
+          ],
+          correct: "Das ist eine Tradition",
+          hint: "Toto je tradícia.",
+          explanation: "Sloveso 'sein' je na druhej pozícii a neurčitý člen 'eine' pred podstatným menom."
+        }
+      ]
+    },
+    {
+      type: "fill",
+      instruction: "Doplňte chýbajúce slová do viet.",
+      questions: [
+        {
+          sentence: "Ich wünsche dir alles ____ zum Geburtstag!",
+          answer: "Gute",
+          hint: "Všetko dobré!",
+          explanation: "Používa sa ustálené spojenie 'Alles Gute'."
         },
-      ],
+        {
+          sentence: "Wir feiern heute eine ____.",
+          answer: "Party",
+          hint: "párty, oslava",
+          explanation: "Slovo 'Party' sa používa na označenie oslavy."
+        },
+        {
+          sentence: "Kannst du mir bitte die ____ bringen?",
+          answer: "Kerze",
+          hint: "sviečka",
+          explanation: "V kontexte narodeninovej torty sa často spomína sviečka."
+        },
+        {
+          sentence: "Ich habe eine ____ für dich.",
+          answer: "Einladung",
+          hint: "pozvánka",
+          explanation: "Pozvánka sa používa na pozvanie niekoho na udalosť."
+        },
+        {
+          sentence: "Der ____ ist sehr lecker.",
+          answer: "Kuchen",
+          hint: "koláč",
+          explanation: "Koláč je bežnou súčasťou osláv."
+        },
+        {
+          sentence: "Wie ____ du?",
+          answer: "heißt",
+          hint: "sa voláš?",
+          explanation: "Toto je otázka z lekcie L01 na pýtanie sa na meno."
+        },
+        {
+          sentence: "Ich ____ Deutsch.",
+          answer: "lerne",
+          hint: "učím sa",
+          explanation: "Toto je sloveso z lekcie L03, ktoré opisuje učenie sa jazyka."
+        },
+        {
+          sentence: "Hast du ____?",
+          answer: "Zeit",
+          hint: "čas?",
+          explanation: "Otázka na čas z lekcie L27."
+        }
+      ]
+    },
+    {
+      type: "listen",
+      instruction: "Počúvajte a priraďte nemecké slová k ich slovenským prekladom.",
+      questions: [
+        {
+          de: "der Geburtstag",
+          sk: "narodeniny"
+        },
+        {
+          de: "die Blume",
+          sk: "kvet"
+        },
+        {
+          de: "der Kuchen",
+          sk: "koláč"
+        },
+        {
+          de: "die Kerze",
+          sk: "sviečka"
+        },
+        {
+          de: "die Party",
+          sk: "párty, oslava"
+        },
+        {
+          de: "gratulieren",
+          sk: "gratulovať"
+        },
+        {
+          de: "einladen",
+          sk: "pozvať"
+        },
+        {
+          de: "singen",
+          sk: "spievať"
+        },
+        {
+          de: "feiern",
+          sk: "oslavovať"
+        },
+        {
+          de: "Herzlichen Glückwunsch!",
+          sk: "Gratulujem!"
+        }
+      ]
+    },
+    {
+      type: "mcq",
+      instruction: "Vyberte správnu možnosť.",
+      questions: [
+        {
+          question: "Čo znamená 'die Kerze'?",
+          options: [
+            "kvet",
+            "sviečka",
+            "koláč",
+            "darček"
+          ],
+          answer: 1,
+          explanation: "'Die Kerze' znamená sviečka."
+        },
+        {
+          question: "Ako sa povie 'gratulovať' po nemecky?",
+          options: [
+            "einladen",
+            "feiern",
+            "gratulieren",
+            "bringen"
+          ],
+          answer: 2,
+          explanation: "Sloveso 'gratulieren' znamená gratulovať."
+        },
+        {
+          question: "Čo znamená 'Herzlichen Glückwunsch zum Geburtstag!'?",
+          options: [
+            "Všetko najlepšie k narodeninám!",
+            "Všetko najlepšie!",
+            "Ďakujem!",
+            "Veľa šťastia!"
+          ],
+          answer: 0,
+          explanation: "Toto je štandardná nemecká gratulácia k narodeninám."
+        },
+        {
+          question: "Ktoré sloveso znamená 'pozvať'?",
+          options: [
+            "singen",
+            "bringen",
+            "feiern",
+            "einladen"
+          ],
+          answer: 3,
+          explanation: "'Einladen' je sloveso pre pozvať."
+        },
+        {
+          question: "Ktorý tvar slovesa 'sein' je správny vo vete '____ du heute Abend frei?'",
+          options: [
+            "bin",
+            "bist",
+            "ist",
+            "sind"
+          ],
+          answer: 1,
+          explanation: "Pre druhú osobu jednotného čísla ('du') sa používa tvar 'bist'."
+        },
+        {
+          question: "Čo znamená 'Ich bringe Blumen mit.'?",
+          options: [
+            "Prinášam kvety.",
+            "Chcem kvety.",
+            "Kúpim kvety.",
+            "Mám kvety."
+          ],
+          answer: 0,
+          explanation: "Sloveso 'mitbringen' znamená priniesť so sebou."
+        },
+        {
+          question: "Ako sa povie 'rok' po nemecky?",
+          options: [
+            "die Woche",
+            "der Tag",
+            "das Jahr",
+            "der Monat"
+          ],
+          answer: 2,
+          explanation: "'Das Jahr' znamená rok."
+        },
+        {
+          question: "Ktorý tvar slovesa 'haben' je správny vo vete 'Er ____ Geburtstag.'?",
+          options: [
+            "habe",
+            "hast",
+            "hat",
+            "haben"
+          ],
+          answer: 2,
+          explanation: "Pre tretiu osobu jednotného čísla ('er') sa používa tvar 'hat'."
+        }
+      ]
+    },
+    {
+      type: "minitext",
+      instruction: "Lies den Dialog und beantworte die Fragen.",
+      text: "Jana: Hallo Maria! Herzlichen Glückwunsch zum Geburtstag!\nMaria: Danke, Jana! Schön, dass du da bist. Bringst du etwas mit?\nJana: Ja, ich bringe Blumen mit. Das ist eine Tradition, oder?\nMaria: Ja, das ist nett. Wir feiern heute Abend. Es gibt Kuchen und wir singen ein Lied.\nJana: Toll! Ich lerne gerne neue Traditionen. Wie alt wirst du?\nMaria: Ich werde 20 Jahre alt. Wir haben eine kleine Party.\nJana: Wie schön! Alles Gute nochmal!",
+      textSk: "Jana: Ahoj Mária! Všetko najlepšie k narodeninám!\nMária: Ďakujem, Jana! Teší ma, že si tu. Prinášaš niečo?\nJana: Áno, prinášam kvety. To je tradícia, však?\nMária: Áno, to je milé. Dnes večer oslavujeme. Bude koláč a zaspievame si pieseň.\nJana: Super! Rád sa učím nové tradície. Koľko rokov budeš mať?\nMária: Budem mať 20 rokov. Máme malú oslavu.\nJana: Aké krásne! Ešte raz všetko dobré!",
+      questions: [
+        {
+          question: "Was sagt Jana zuerst zu Maria?",
+          options: [
+            "Herzlichen Glückwunsch zum Geburtstag!",
+            "Alles Gute!",
+            "Danke schön!",
+            "Wie schön!"
+          ],
+          answer: 0,
+          explanation: "Jana sagt: \"Herzlichen Glückwunsch zum Geburtstag!\""
+        },
+        {
+          question: "Was bringt Jana mit?",
+          options: [
+            "Blumen",
+            "einen Kuchen",
+            "ein Lied",
+            "eine Einladung"
+          ],
+          answer: 0,
+          explanation: "Jana sagt: \"Ja, ich bringe Blumen mit.\""
+        },
+        {
+          question: "Was machen die Gäste auf der Party?",
+          options: [
+            "Sie singen ein Lied.",
+            "Sie lernen eine Tradition.",
+            "Sie bringen Geschenke.",
+            "Sie feiern das ganze Jahr."
+          ],
+          answer: 0,
+          explanation: "Maria sagt: \"Es gibt Kuchen und wir singen ein Lied.\""
+        },
+        {
+          question: "Wie alt wird Maria?",
+          options: [
+            "20 Jahre",
+            "19 Jahre",
+            "geheim",
+            "ihr Geburtstag ist heute"
+          ],
+          answer: 0,
+          explanation: "Maria sagt: \"Ich werde 20 Jahre alt.\""
+        }
+      ]
     },
     {
       type: "speaking",
-      instruction: "Počúvaj nemeckú vetu. Potom hovor nahlas a skontroluj sa.",
+      instruction: "Počúvaj a opakuj.",
       phrases: [
         {
-          de: "Sehr geehrte Frau Müller, ich schreibe Ihnen...",
-          sk: "Vážená pani Müllerová, píšem Vám...",
-          tip: "geehrte: ge-ÉR-te — eh=é",
+          de: "der Geburtstag",
+          sk: "narodeniny",
+          tip: "Geburtstag: [gəˈbʊɐ̯t͡sˌtaːk]"
         },
         {
-          de: "Ich bitte Sie um eine baldige Antwort.",
-          sk: "Prosím Vás o skorú odpoveď.",
-          tip: "baldige: BAL-di-ge — al krátke",
+          de: "die Blume",
+          sk: "kvet",
+          tip: "Blume: [ˈbluːmə]"
         },
         {
-          de: "Mit freundlichen Grüßen, Jana Novák.",
-          sk: "S priateľskými pozdravmi, Jana Nováková.",
-          tip: "freundlichen: FROJNT-li-chen — eu=oj",
+          de: "der Kuchen",
+          sk: "koláč",
+          tip: "Kuchen: [ˈkuːxən], ch ako [x]"
         },
         {
-          de: "Ich freue mich auf Ihre Rückmeldung.",
-          sk: "Teším sa na Vašu spätnú väzbu.",
-          tip: "Rückmeldung: RÜK-mel-dung — ü=ü",
+          de: "die Kerze",
+          sk: "sviečka",
+          tip: "Kerze: [ˈkɛɐ̯t͡sə]"
         },
         {
-          de: "Entschuldigung, könnten Sie das bitte wiederholen?",
-          sk: "Ospravedlňujem sa, mohli by ste to zopakovať?",
-          tip: "könnten: KÖN-ten — ö=ö, nt",
+          de: "Herzlichen Glückwunsch!",
+          sk: "Srdečné blahoželanie!",
+          tip: "Glückwunsch: [ˈɡlʏkˌvʊnʃ]"
         },
-      ],
+        {
+          de: "Ich gratuliere dir.",
+          sk: "Gratulujem ti.",
+          tip: "gratuliere: [ɡratuˈliːrə]"
+        },
+        {
+          de: "Wir singen ein Lied.",
+          sk: "Spievame pieseň.",
+          tip: "singen: [ˈzɪŋən]"
+        },
+        {
+          de: "Alles Gute zum Geburtstag!",
+          sk: "Všetko dobré k narodeninám!",
+          tip: "Alles Gute: [ˈaləs ˈɡuːtə]"
+        }
+      ]
     },
+    {
+      type: "truefalse",
+      instruction: "Rozhodnite, či sú nasledujúce tvrdenia pravdivé alebo nepravdivé.",
+      statements: [
+        {
+          statement: "Na narodeninovú oslavu sa zvyčajne nosia kvety.",
+          isTrue: true,
+          explanation: "Je bežné priniesť kvety ako darček na narodeninovú oslavu."
+        },
+        {
+          statement: "Všetky nemecké sviatky sa nazývajú 'der Geburtstag'.",
+          isTrue: false,
+          explanation: "'Der Geburtstag' znamená narodeniny. Existujú aj iné názvy pre rôzne sviatky a oslavy."
+        },
+        {
+          statement: "Na narodeninovej oslave sa spieva pieseň.",
+          isTrue: true,
+          explanation: "Spev piesne, napríklad narodeninovej, je súčasťou osláv."
+        },
+        {
+          statement: "Pozvánka sa nazýva 'die Kerze'.",
+          isTrue: false,
+          explanation: "'Die Kerze' znamená sviečka. Pozvánka sa nazýva 'die Einladung'."
+        },
+        {
+          statement: "Gratulovať sa dá aj bez konkrétneho dôvodu.",
+          isTrue: true,
+          explanation: "Fráza 'Alles Gute!' sa používa na všeobecné blahoželanie a nemusí sa týkať konkrétnej udalosti."
+        }
+      ]
+    },
+    {
+      type: "dictation",
+      instruction: "Napíšte nasledujúce vety, ktoré počujete.",
+      sentences: [
+        {
+          de: "Ich gratuliere dir.",
+          sk: "Gratulujem ti."
+        },
+        {
+          de: "Wir feiern die Party.",
+          sk: "Oslavujeme párty."
+        },
+        {
+          de: "Ich bringe Kuchen mit.",
+          sk: "Prinášam koláč."
+        },
+        {
+          de: "Herzlichen Glückwunsch zum Geburtstag!",
+          sk: "Všetko najlepšie k narodeninám!"
+        },
+        {
+          de: "Das ist eine schöne Tradition.",
+          sk: "Toto je pekná tradícia."
+        }
+      ]
+    },
+    {
+      type: "categorysort",
+      instruction: "Roztrieďte slová do správnych kategórií.",
+      categories: [
+        {
+          name: "Oslavy a udalosti",
+          color: "blue",
+          words: [
+            "der Geburtstag",
+            "die Party",
+            "die Einladung",
+            "das Jahr"
+          ]
+        },
+        {
+          name: "Darčeky a dekorácie",
+          color: "rose",
+          words: [
+            "die Blume",
+            "der Kuchen",
+            "die Kerze"
+          ]
+        },
+        {
+          name: "Ľudia",
+          color: "green",
+          words: [
+            "der Freund",
+            "die Freundin",
+            "der Gast",
+            "die Gästin"
+          ]
+        }
+      ],
+      explanation: "Slová sú rozdelené do kategórií podľa ich významu: udalosti, predmety a ľudia."
+    },
+    {
+      type: "translation",
+      instruction: "Preložte nasledujúce slovenské vety do nemčiny.",
+      sentences: [
+        {
+          sk: "Všetko dobré!",
+          answer: "Alles Gute!",
+          hint: "Alles",
+          explanation: "Fráza 'Alles Gute!' sa používa na všeobecné blahoželanie."
+        },
+        {
+          sk: "Pozývam priateľa.",
+          answer: "Ich lade einen Freund ein.",
+          hint: "einladen",
+          explanation: "Sloveso 'einladen' (pozvať) sa v tomto kontexte používa s predponou 'ein-' a v slovese 'lade ein'."
+        },
+        {
+          sk: "Spievame pieseň.",
+          answer: "Wir singen ein Lied.",
+          hint: "singen",
+          explanation: "Sloveso 'singen' (spievať) sa časuje podľa osoby 'wir'."
+        },
+        {
+          sk: "Prinášam kvety.",
+          answer: "Ich bringe Blumen mit.",
+          hint: "bringen mit",
+          explanation: "Sloveso 'mitbringen' (priniesť so sebou) sa používa v tomto kontexte."
+        }
+      ]
+    },
+    {
+      type: "conjugation",
+      instruction: "Doplňte správne tvary slovesa 'gratulieren' v prítomnom čase.",
+      verbs: [
+        {
+          infinitive: "gratulieren",
+          translation: "gratulovať",
+          forms: [
+            {
+              pronoun: "ich",
+              correct: "gratiuliere"
+            },
+            {
+              pronoun: "du",
+              correct: "gratulierst"
+            },
+            {
+              pronoun: "er/sie/es",
+              correct: "gratuliert"
+            },
+            {
+              pronoun: "wir",
+              correct: "gratulieren"
+            },
+            {
+              pronoun: "ihr",
+              correct: "gratuliert"
+            },
+            {
+              pronoun: "sie/Sie",
+              correct: "gratulieren"
+            }
+          ],
+          note: "Sloveso 'gratulieren' je pravidelné sloveso, ktoré sa časuje podľa štandardných pravidiel pre slovesá na '-ieren'."
+        }
+      ]
+    }
   ],
-  reviewWords: [
-    "sollen → soll",
-    "sollten (K.II)",
-    "Man soll...",
-    "Man sollte...",
-    "die Ernährung",
-    "das Gemüse",
-    "das Obst",
-    "weniger Zucker",
-    "mehr Wasser",
-    "empfehlen",
-  ],
-  lessonNotes:
-    "Výborne! Nové modálne sloveso 'sollen' je veľmi dôležité. Pamätaj: 'sollen' = externá rada/príkaz; 'sollten' (K. II) = zdvorilé odporúčanie. 'Man soll/sollte' = všeobecné rady. Ďalšia lekcia: simulácia celej skúšky Goethe A1!",
+  reviewWords: []
 };

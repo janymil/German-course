@@ -2,507 +2,920 @@ export const lesson44 = {
   id: 44,
   week: 9,
   day: 4,
-  title: "Sport und Bewegung",
-  topic: "Šport a pohyb",
+  title: "Den Weg fragen und beschreiben",
+  topic: "Dopytovanie sa na cestu. Navigovanie (rechts, links, geradeaus).",
   cefr: "A1",
-  xpReward: 25,
-  narrativeContext:
-    "Jana beschließt, mehr Sport zu treiben. Sie geht ins Fitnessstudio und fängt an, regelmäßig zu laufen. 'Ich laufe jeden Morgen 30 Minuten.' Lukas ist begeistert!",
-  communicativeGoal:
-    "Po tejto lekcii viem hovoriť o športe a pohybe, opisovať, ako cvičím a ako dlho.",
-  skillFocus: ["speaking", "vocabulary", "grammar"],
-
-  grammarNote: {
-    rule: "Výrazy trvania a frekvencie: akuzatív trvania + X mal pro Woche",
-    explanation:
-      "Na vyjadrenie trvania sa v nemčine používa akuzatív bez predložky: 'Ich laufe 30 Minuten.' (nie 'für 30 Minuten'). Na frekvenciu: 'zweimal pro Woche' (dvakrát týždenne), 'dreimal im Monat' (trikrát do mesiaca). Frekvenčné príslovky: täglich (denne), oft (často), manchmal (niekedy), selten (zriedka), nie (nikdy). Otázka na trvanie: 'Wie lange dauert das Training?' → 'Eine Stunde.' / '30 Minuten.'",
-    examples: [
-      { de: "Ich laufe jeden Morgen 30 Minuten.", sk: "Behám každé ráno 30 minút." },
-      { de: "Ich schwimme zweimal pro Woche.", sk: "Plávam dvakrát týždenne." },
-      { de: "Wie lange dauert das Training?", sk: "Ako dlho trvá tréning?" },
-      { de: "Ich gehe dreimal im Monat ins Fitnessstudio.", sk: "Chodím trikrát do mesiaca do fitnescentra." },
-      { de: "Ich treibe täglich Sport.", sk: "Každý deň cvičím." },
-    ],
-    slovakContrastNote:
-      "Slovenčina: 'dvakrát týždenne' = zweimal pro Woche. Slovenčina trvanie: '30 minút' (akuzatív) — rovnaká logika! Nemčina nepoužíva predložku pri vyjadrení trvania (nie 'für 30 Minuten' ako angličtina!). Frekvenčné príslovky: oft = často, manchmal = niekedy, selten = zriedka, nie = nikdy.",
-  },
-
+  xpReward: 20,
+  narrativeContext: "Jana ist auf der Mariahilfer Straße. Ein Tourist fragt sie nach dem Weg zum Naschmarkt.",
+  communicativeGoal: "Nach dieser Lektion kann ich nach dem Weg fragen und den Weg beschreiben.",
+  skillFocus: [
+    "vocabulary",
+    "speaking",
+    "listening"
+  ],
+  lessonNotes: "V tejto lekcii sa naučíte, ako sa spýtať na cestu a ako ju opísať. Precvičíte si dôležité slovíčka ako 'rechts', 'links' a 'geradeaus'. Naučíte sa tiež užitočné frázy pre navigovanie v meste.",
+  grammarNotes: [
+    {
+      rule: "Der Imperativ (Rozkazovací spôsob)",
+      explanation: "<p>Rozkazovací spôsob (Imperativ) sa používa na vyjadrenie príkazov, pokynov, rád alebo výziev. V nemčine má štyri formy, ktoré sa líšia podľa toho, koho oslovujeme:</p><ul><li><strong>Ty (du)</strong>: Používa sa pre jednu osobu, ktorej tykáme. Tvorí sa od slovesného kmeňa v 2. osobe jednotného čísla prítomného času, pričom sa vynechá koncovka <em>-st</em> a zámeno <em>du</em>. Ak kmeň slovesa končí na <em>-d, -t, -ig, -el, -er</em>, pridáva sa koncovka <em>-e</em>. Pri slovesách so zmenou samohlásky <em>e</em> na <em>i/ie</em> (napr. <em>sprechen → sprichst → sprich!</em>), sa táto zmena zachováva, ale pri zmene <em>a</em> na <em>ä</em> (napr. <em>fahren → fährst</em>) sa pre Imperativ <em>ä</em> mení späť na <em>a</em> (<em>fahr!</em>).</li><li><strong>Vy (ihr)</strong>: Používa sa pre viac osôb, ktorým tykáme. Tvorí sa rovnako ako 2. osoba množného čísla prítomného času, pričom sa vynechá zámeno <em>ihr</em>.</li><li><strong>Vy (Sie)</strong>: Používa sa pre jednu alebo viac osôb, ktorým vykáme. Tvorí sa tak, že sa pred neurčitok slovesa (infinitív) pridá zámeno <em>Sie</em>. Je to najformálnejšia a najzdvorilejšia forma.</li><li><strong>My (wir)</strong>: Používa sa na výzvu k spoločnej činnosti (poďme!). Tvorí sa tak, že sa pred neurčitok slovesa (infinitív) pridá zámeno <em>wir</em>.</li></ul><p>Nepravidelné slovesá ako <em>sein</em> (buď!), <em>haben</em> (maj!) a <em>werden</em> (staň sa!) majú špecifické tvary.</p><div class=\"tip-box\">Pre smerovanie a navigáciu sú najčastejšie používané formy pre <strong>Sie</strong> (zdvorilé vykanie) a <strong>du</strong> (tykanie).</div>",
+      examples: [
+        {
+          de: "Geh geradeaus!",
+          sk: "Choď rovno!"
+        },
+        {
+          de: "Geht nach links!",
+          sk: "Choďte doľava!"
+        },
+        {
+          de: "Gehen Sie nach rechts!",
+          sk: "Choďte doprava!"
+        },
+        {
+          de: "Gehen wir zum Bahnhof!",
+          sk: "Poďme na stanicu!"
+        },
+        {
+          de: "Biegen Sie hier links ab!",
+          sk: "Zahnite tu doľava!"
+        },
+        {
+          de: "Nehmen Sie die nächste Straße rechts!",
+          sk: "Zoberte/Choďte po ďalšej ulici doprava!"
+        },
+        {
+          de: "Fahr vorsichtig!",
+          sk: "Jazdi opatrne!"
+        },
+        {
+          de: "Seien Sie pünktlich!",
+          sk: "Buďte presný/á/í!"
+        }
+      ],
+      slovakContrastNote: "V slovenčine máme rozkazovací spôsob pre 2. osobu jednotného a množného čísla (ty/vy) a pre 1. osobu množného čísla (my) a zdvorilostné vykanie sa vyjadruje inak (napr. \"Choďte, prosím\"). Nemčina má pre každú z týchto foriem špecifický tvar, pričom forma so <em>Sie</em> je veľmi bežná a zdvorilá pri dávaní pokynov neznámym ľuďom."
+    },
+    {
+      rule: "Fragen nach dem Weg (Pýtanie sa na cestu)",
+      explanation: "<p>Pri pýtaní sa na cestu v nemčine používame rôzne zdvorilostné frázy a otázkové štruktúry. Je dôležité začať zdvorilostnou frázou ako <em>\"Entschuldigen Sie...\"</em> (Prepáčte...) alebo <em>\"Verzeihung...\"</em> (Odpustite...). Následne môžeme použiť priame otázky alebo otázky s modálnymi slovesami, ktoré sú často zdvorilejšie.</p><p>Najčastejšie otázky sa týkajú polohy (<em>Wo ist...?</em>), smeru (<em>Wie komme ich...?</em>) alebo existencie niečoho v blízkosti (<em>Gibt es hier...?</em>). Pri pýtaní sa na smer k cieľu sa často používa predložka <em>zu</em> (k, ku) s Dativom alebo <em>nach</em> (do) pre mestá, krajiny a domov.</p><div class=\"tip-box\">Vždy používajte zdvorilostné formy (<em>Sie</em>) pri oslovovaní neznámych ľudí.</div>",
+      examples: [
+        {
+          de: "Entschuldigen Sie, wie komme ich zum Bahnhof?",
+          sk: "Prepáčte, ako sa dostanem na stanicu?"
+        },
+        {
+          de: "Können Sie mir sagen, wo die Post ist?",
+          sk: "Môžete mi povedať, kde je pošta?"
+        },
+        {
+          de: "Ist das weit von hier?",
+          sk: "Je to ďaleko odtiaľto?"
+        },
+        {
+          de: "Gibt es hier in der Nähe eine Apotheke?",
+          sk: "Je tu niekde nablízku lekáreň?"
+        },
+        {
+          de: "Wo ist die nächste Bushaltestelle?",
+          sk: "Kde je najbližšia autobusová zastávka?"
+        },
+        {
+          de: "Wie lange dauert es zu Fuß?",
+          sk: "Ako dlho to trvá pešo?"
+        },
+        {
+          de: "Ich suche das Rathaus. Können Sie mir helfen?",
+          sk: "Hľadám radnicu. Môžete mi pomôcť?"
+        }
+      ],
+      slovakContrastNote: "Slovenský jazyk má podobné otázkové štruktúry, ale nemecká veta často začína slovesom, ak ide o otázku bez opytovacieho zámena (napr. \"Ist das weit...?\"). Taktiež, nemecké zdvorilostné frázy ako <em>\"Entschuldigen Sie...\"</em> sú kľúčové pre začiatok konverzácie s neznámou osobou, podobne ako v slovenčine \"Prepáčte, prosím vás...\"."
+    }
+  ],
   vocab: [
     {
-      de: "das Training",
-      sk: "tréning",
-      example: "Das Training dauert eine Stunde.",
-      exampleSk: "Tréning trvá hodinu.",
-      gender: "N",
+      de: "der Weg",
+      sk: "cesta",
+      gender: "M",
       srsId: "L44_V01",
-      recycledFrom: [],
+      example: "Der Weg zum Markt ist lang.",
+      exampleSk: "Cesta na trh je dlhá.",
+      recycledFrom: []
     },
     {
-      de: "das Fitnessstudio",
-      sk: "fitnescentrum",
-      example: "Ich gehe zweimal pro Woche ins Fitnessstudio.",
-      exampleSk: "Chodím dvakrát týždenne do fitnescentra.",
-      gender: "N",
+      de: "die Richtung",
+      sk: "smer",
+      gender: "F",
       srsId: "L44_V02",
-      recycledFrom: [],
+      example: "Die Richtung zum Ziel ist klar.",
+      exampleSk: "Smer k cieľu je jasný.",
+      recycledFrom: []
     },
     {
-      de: "joggen",
-      sk: "joggingbehať, jogovať",
-      example: "Ich jogge jeden Morgen im Park.",
-      exampleSk: "Každé ráno jogujem v parku.",
-      gender: null,
+      de: "der Markt",
+      sk: "trh",
+      gender: "M",
       srsId: "L44_V03",
-      recycledFrom: [],
+      example: "Der Naschmarkt ist ein großer Markt in Wien.",
+      exampleSk: "Naschmarkt je veľký trh vo Viedni.",
+      recycledFrom: []
     },
     {
-      de: "Rad fahren",
-      sk: "jazdiť na bicykli",
-      example: "Im Sommer fahre ich gern Rad.",
-      exampleSk: "V lete rád/rada jazdím na bicykli.",
-      gender: null,
+      de: "der Tourist",
+      sk: "turista",
+      gender: "M",
       srsId: "L44_V04",
-      recycledFrom: [14],
+      example: "Ein Tourist fragt nach dem Weg.",
+      exampleSk: "Turista sa pýta na cestu.",
+      recycledFrom: []
     },
     {
-      de: "wandern",
-      sk: "turistikovať, chodiť na turistiku",
-      example: "Wir wandern am Wochenende in den Bergen.",
-      exampleSk: "Cez víkend chodíme na turistiku v horách.",
-      gender: null,
+      de: "die Frage",
+      sk: "otázka",
+      gender: "F",
       srsId: "L44_V05",
-      recycledFrom: [],
+      example: "Ich habe eine Frage an Sie.",
+      exampleSk: "Mám na vás otázku.",
+      recycledFrom: []
     },
     {
-      de: "das Yoga",
-      sk: "joga",
-      example: "Ich mache dreimal pro Woche Yoga.",
-      exampleSk: "Trikrát týždenne robím jogu.",
-      gender: "N",
+      de: "die Antwort",
+      sk: "odpoveď",
+      gender: "F",
       srsId: "L44_V06",
-      recycledFrom: [],
+      example: "Die Antwort ist einfach.",
+      exampleSk: "Odpoveď je jednoduchá.",
+      recycledFrom: []
     },
     {
-      de: "zweimal pro Woche",
-      sk: "dvakrát týždenne",
-      example: "Ich schwimme zweimal pro Woche.",
-      exampleSk: "Plávam dvakrát týždenne.",
-      gender: null,
+      de: "das Ziel",
+      sk: "cieľ",
+      gender: "N",
       srsId: "L44_V07",
-      recycledFrom: [],
+      example: "Das Ziel ist der Naschmarkt.",
+      exampleSk: "Cieľom je Naschmarkt.",
+      recycledFrom: []
     },
     {
-      de: "täglich",
-      sk: "každý deň, denne",
-      example: "Jana läuft täglich 30 Minuten.",
-      exampleSk: "Jana behá každý deň 30 minút.",
-      gender: null,
+      de: "die Kreuzung",
+      sk: "križovatka",
+      gender: "F",
       srsId: "L44_V08",
-      recycledFrom: [42],
+      example: "An der nächsten Kreuzung biegen Sie links ab.",
+      exampleSk: "Na najbližšej križovatke odbočte doľava.",
+      recycledFrom: []
     },
     {
-      de: "manchmal",
-      sk: "niekedy",
-      example: "Manchmal gehe ich ins Schwimmbad.",
-      exampleSk: "Niekedy chodím do bazéna.",
+      de: "abbiegen",
+      sk: "odbočiť",
       gender: null,
       srsId: "L44_V09",
-      recycledFrom: [],
+      example: "Sie müssen hier rechts abbiegen.",
+      exampleSk: "Musíte tu odbočiť doprava.",
+      recycledFrom: []
     },
     {
-      de: "selten",
-      sk: "zriedka",
-      example: "Ich spiele selten Tennis.",
-      exampleSk: "Zriedka hrám tenis.",
+      de: "fragen",
+      sk: "spýtať sa",
       gender: null,
       srsId: "L44_V10",
-      recycledFrom: [],
+      example: "Ich frage einen Mann nach dem Weg.",
+      exampleSk: "Pýtam sa muža na cestu.",
+      recycledFrom: []
     },
     {
-      de: "nie",
-      sk: "nikdy",
-      example: "Ich laufe nie ohne Musik.",
-      exampleSk: "Nikdy nebehám bez hudby.",
+      de: "antworten",
+      sk: "odpovedať",
       gender: null,
       srsId: "L44_V11",
-      recycledFrom: [],
+      example: "Jana antwortet dem Touristen.",
+      exampleSk: "Jana odpovedá turistovi.",
+      recycledFrom: []
     },
     {
-      de: "oft",
-      sk: "často",
-      example: "Thomas geht oft ins Fitnessstudio.",
-      exampleSk: "Thomas často chodí do fitnescentra.",
+      de: "kommen",
+      sk: "prísť",
       gender: null,
       srsId: "L44_V12",
-      recycledFrom: [],
+      example: "Wie komme ich zum Naschmarkt?",
+      exampleSk: "Ako sa dostanem na Naschmarkt?",
+      recycledFrom: []
     },
     {
-      de: "dauern",
-      sk: "trvať",
-      example: "Wie lange dauert das Spiel?",
-      exampleSk: "Ako dlho trvá zápas?",
+      de: "zeigen",
+      sk: "ukázať",
       gender: null,
       srsId: "L44_V13",
-      recycledFrom: [],
+      example: "Können Sie mir den Weg zeigen?",
+      exampleSk: "Môžete mi ukázať cestu?",
+      recycledFrom: []
     },
     {
-      de: "die Stunde",
-      sk: "hodina (60 min)",
-      example: "Das Training dauert eine Stunde.",
-      exampleSk: "Tréning trvá hodinu.",
-      gender: "F",
+      de: "suchen",
+      sk: "hľadať",
+      gender: null,
       srsId: "L44_V14",
-      recycledFrom: [34],
+      example: "Ich suche den Markt.",
+      exampleSk: "Hľadám trh.",
+      recycledFrom: []
     },
     {
-      de: "fit bleiben",
-      sk: "zostať fit",
-      example: "Ich möchte fit bleiben — deshalb laufe ich.",
-      exampleSk: "Chcem zostať fit — preto behám.",
+      de: "verstehen",
+      sk: "rozumieť",
       gender: null,
       srsId: "L44_V15",
-      recycledFrom: [],
+      example: "Ich verstehe die Richtung nicht.",
+      exampleSk: "Nerozumiem smeru.",
+      recycledFrom: []
     },
+    {
+      de: "geradeaus",
+      sk: "rovno",
+      gender: null,
+      srsId: "L44_V16",
+      example: "Bleiben Sie auf diesem Weg geradeaus.",
+      exampleSk: "Zostaňte na tejto ceste rovno.",
+      recycledFrom: []
+    },
+    {
+      de: "links",
+      sk: "vľavo",
+      gender: null,
+      srsId: "L44_V17",
+      example: "Biegen Sie links ab.",
+      exampleSk: "Odbočte doľava.",
+      recycledFrom: []
+    },
+    {
+      de: "rechts",
+      sk: "vpravo",
+      gender: null,
+      srsId: "L44_V18",
+      example: "Der Markt ist dann rechts.",
+      exampleSk: "Trh je potom vpravo.",
+      recycledFrom: []
+    },
+    {
+      de: "Entschuldigen Sie!",
+      sk: "Prepáčte!",
+      gender: null,
+      srsId: "L44_V19",
+      example: "Entschuldigen Sie! Wie komme ich zum Markt?",
+      exampleSk: "Prepáčte! Ako sa dostanem na trh?",
+      recycledFrom: []
+    },
+    {
+      de: "Wie komme ich zu...?",
+      sk: "Ako sa dostanem k...?",
+      gender: null,
+      srsId: "L44_V20",
+      example: "Wie komme ich zum Naschmarkt?",
+      exampleSk: "Ako sa dostanem na Naschmarkt?",
+      recycledFrom: []
+    },
+    {
+      de: "Bitte schön!",
+      sk: "Prosím!",
+      gender: null,
+      srsId: "L44_V21",
+      example: "Jana antwortet: \"Bitte schön!\"",
+      exampleSk: "Jana odpovedá: \"Prosím!\"",
+      recycledFrom: []
+    },
+    {
+      de: "Vielen Dank!",
+      sk: "Ďakujem pekne!",
+      gender: null,
+      srsId: "L44_V22",
+      example: "Der Tourist ruft: \"Vielen Dank!\"",
+      exampleSk: "Turista volá: \"Ďakujem pekne!\"",
+      recycledFrom: []
+    },
+    {
+      de: "immer",
+      sk: "vždy, stále",
+      gender: null,
+      srsId: "L44_V23",
+      example: "Sie müssen immer geradeaus.",
+      exampleSk: "Musíte stále rovno.",
+      recycledFrom: []
+    },
+    {
+      de: "weit",
+      sk: "ďaleko",
+      gender: null,
+      srsId: "L44_V24",
+      example: "Ist das Ziel weit?",
+      exampleSk: "Je cieľ ďaleko?",
+      recycledFrom: []
+    },
+    {
+      de: "nah",
+      sk: "blízko",
+      gender: null,
+      srsId: "L44_V25",
+      example: "Nein, es ist nicht weit, es ist nah.",
+      exampleSk: "Nie, nie je to ďaleko, je to blízko.",
+      recycledFrom: []
+    }
   ],
-
   exercises: [
     {
       type: "flashcard",
-      instruction:
-        "Prezri si karty so športmi, frekvenčnými príslovkami a výrazmi trvania. Ku každej karte povedz vetu o sebe.",
-      items: [
-        "L44_V01",
-        "L44_V02",
-        "L44_V03",
-        "L44_V04",
-        "L44_V05",
-        "L44_V06",
-        "L44_V07",
-        "L44_V08",
-        "L44_V09",
-        "L44_V10",
-        "L44_V11",
-        "L44_V12",
-        "L44_V13",
-        "L44_V14",
-        "L44_V15",
-      ],
-    },
-    {
-      type: "mcq",
-      instruction: "Vyber správnu odpoveď.",
-      questions: [
-        {
-          question:
-            "Jana hovorí: 'Ich laufe jeden Morgen ___ Minuten.' Ktorý pád je správny?",
-          options: [
-            "für 30 Minuten",
-            "seit 30 Minuten",
-            "30 Minuten (kein Artikel nötig)",
-            "in 30 Minuten",
-          ],
-          answer: "30 Minuten (kein Artikel nötig)",
-          explanation:
-            "Trvanie v nemčine = akuzatív bez predložky! Ich laufe 30 Minuten. Nie 'für 30 Minuten' (to by bol anglicizmus).",
-        },
-        {
-          question: "'Wie lange dauert das Training?' správna odpoveď:",
-          options: [
-            "Zweimal pro Woche.",
-            "Often.",
-            "Eine Stunde.",
-            "Im Fitnessstudio.",
-          ],
-          answer: "Eine Stunde.",
-          explanation:
-            "'Wie lange?' pýta sa na trvanie → odpoveď je čas: Eine Stunde, 30 Minuten, zwei Stunden.",
-        },
-        {
-          question: "Čo znamená 'selten'?",
-          options: ["nikdy", "niekedy", "zriedka", "často"],
-          answer: "zriedka",
-          explanation:
-            "Frekvenčné príslovky: nie (nikdy) < selten (zriedka) < manchmal (niekedy) < oft (často) < immer (vždy).",
-        },
-        {
-          question:
-            "Thomas ide do fitnescentra dvakrát týždenne. Ako sa to povie?",
-          options: [
-            "Thomas geht zweimal die Woche ins Fitnessstudio.",
-            "Thomas geht zweimal pro Woche ins Fitnessstudio.",
-            "Thomas geht zweimal von Woche ins Fitnessstudio.",
-            "Thomas geht nach zweimal Woche ins Fitnessstudio.",
-          ],
-          answer: "Thomas geht zweimal pro Woche ins Fitnessstudio.",
-          explanation:
-            "'zweimal pro Woche' = dvakrát týždenne. 'pro' = na (za). Štandardný výraz v nemčine.",
-        },
-        {
-          question: "Čo je opak slova 'oft'?",
-          options: ["manchmal", "täglich", "selten", "immer"],
-          answer: "selten",
-          explanation: "oft = často ↔ selten = zriedka. Sú to antonymá.",
-        },
-      ],
-    },
-    {
-      type: "fill",
-      instruction: "Doplň správne slovo.",
-      questions: [
-        {
-          sentence: "Ich gehe dreimal pro ___ ins Fitnessstudio.",
-          answer: "Woche",
-          hint: "týždeň",
-          explanation: "'pro Woche' = týždenne. Dreimal pro Woche = trikrát týždenne.",
-        },
-        {
-          sentence: "Wie lange ___ der Kurs?",
-          answer: "dauert",
-          hint: "trvať — 3. osoba sg.",
-          explanation: "'dauern' → dauert (er/sie/es dauert).",
-        },
-        {
-          sentence: "Jana läuft ___ Morgen 30 Minuten.",
-          answer: "jeden",
-          hint: "každý (Morgen — Akk, M)",
-          explanation: "'jeder' → Akk M = jeden. jeden Morgen = každé ráno.",
-        },
-        {
-          sentence: "Ich mag Sport. Ich treibe ___ Sport.",
-          answer: "täglich",
-          hint: "každý deň",
-          explanation: "'täglich' = každý deň, denne. Frekvenčné príslovka.",
-        },
-        {
-          sentence: "Das ___ dauert eine Stunde.",
-          answer: "Training",
-          hint: "tréning (N)",
-          explanation: "'das Training' = tréning.",
-        },
-      ],
-    },
-    {
-      type: "listen",
-      instruction:
-        "Počúvaj vety o športe. Opakuj ich nahlas a nájdi v nich frekvenčné výrazy.",
-      questions: [
-        { de: "Ich laufe jeden Morgen 30 Minuten.", sk: "Každé ráno behám 30 minút." },
-        { de: "Ich gehe zweimal pro Woche ins Fitnessstudio.", sk: "Dvakrát týždenne chodím do fitnescentra." },
-        { de: "Wie lange dauert das Training?", sk: "Ako dlho trvá tréning?" },
-        { de: "Das Training dauert eine Stunde.", sk: "Tréning trvá hodinu." },
-        { de: "Ich mache manchmal Yoga.", sk: "Niekedy robím jogu." },
-        { de: "Er fährt selten Rad.", sk: "Zriedka jazdí na bicykli." },
-        { de: "Ich treibe nie Sport — ich bin zu faul!", sk: "Nikdy necvičím — som príliš lenivý/á!" },
-        { de: "Jana möchte fit bleiben.", sk: "Jana chce zostať fit." },
-      ],
+      instruction: "Prezri si slovíčka tejto lekcie. Klikni na kartičku pre preklad."
     },
     {
       type: "match",
-      instruction: "Spoj nemecké výrazy so slovenským prekladom.",
+      instruction: "Priraďte nemecké slová a frázy k ich slovenským prekladom.",
       pairs: [
-        ["das Training", "tréning"],
-        ["das Fitnessstudio", "fitnescentrum"],
-        ["joggen", "joggingbehať"],
-        ["wandern", "chodiť na turistiku"],
-        ["täglich", "každý deň"],
-        ["manchmal", "niekedy"],
-        ["selten", "zriedka"],
-        ["nie", "nikdy"],
-        ["dauern", "trvať"],
-        ["fit bleiben", "zostať fit"],
-      ],
-    },
-    {
-      type: "dialogue",
-      instruction:
-        "Prečítaj si rozhovor medzi Janou a Thomasom o ich tréningových plánoch.",
-      lines: [
-        {
-          speaker: "Thomas",
-          de: "Jana, ich höre, du läufst jetzt regelmäßig?",
-          sk: "Jana, počujem, že teraz pravidelne behaj?",
-        },
-        {
-          speaker: "Jana",
-          de: "Ja! Ich laufe jeden Morgen 30 Minuten im Park.",
-          sk: "Áno! Každé ráno behám 30 minút v parku.",
-        },
-        {
-          speaker: "Thomas",
-          de: "Super! Wie oft gehst du ins Fitnessstudio?",
-          sk: "Super! Ako často chodíš do fitnescentra?",
-        },
-        {
-          speaker: "Jana",
-          de: "Zweimal pro Woche. Und du?",
-          sk: "Dvakrát týždenne. A ty?",
-        },
-        {
-          speaker: "Thomas",
-          de: "Ich gehe dreimal — Montag, Mittwoch und Freitag. Wie lange dauert dein Training?",
-          sk: "Chodím trikrát — v pondelok, v stredu a v piatok. Ako dlho trvá tvoj tréning?",
-        },
-        {
-          speaker: "Jana",
-          de: "Ungefähr eine Stunde. Manchmal auch 90 Minuten.",
-          sk: "Asi hodinu. Niekedy aj 90 minút.",
-        },
-        {
-          speaker: "Thomas",
-          de: "Machst du auch Yoga?",
-          sk: "Robíš aj jogu?",
-        },
-        {
-          speaker: "Jana",
-          de: "Ja, einmal pro Woche. Es hilft mir, entspannt zu bleiben.",
-          sk: "Áno, raz týždenne. Pomáha mi zostať uvoľnenou.",
-        },
-        {
-          speaker: "Thomas",
-          de: "Ich wandere am Wochenende oft. Frische Luft ist wichtig!",
-          sk: "Cez víkendy často chodím na turistiku. Čerstvý vzduch je dôležitý!",
-        },
-        {
-          speaker: "Jana",
-          de: "Stimmt. Ich fahre selten Rad — ich bin nicht so gut damit.",
-          sk: "Pravda. Zriedka jazdím na bicykli — nie som v tom taká dobrá.",
-        },
-      ],
-      comprehensionQuestions: [
-        {
-          question: "Wie oft geht Jana ins Fitnessstudio?",
-          answer: "Jana geht zweimal pro Woche ins Fitnessstudio.",
-          explanation: "Jana sagt: 'Zweimal pro Woche.'",
-        },
-        {
-          question: "Wie lange dauert Janas Training?",
-          answer: "Janas Training dauert ungefähr eine Stunde (manchmal 90 Minuten).",
-          explanation: "'Ungefähr eine Stunde. Manchmal auch 90 Minuten.'",
-        },
-        {
-          question: "Was macht Thomas am Wochenende?",
-          answer: "Thomas wandert am Wochenende.",
-          explanation: "'Ich wandere am Wochenende oft.'",
-        },
-      ],
-    },
-    {
-      type: "minitext",
-      instruction:
-        "Prečítaj si článok o behu pre začiatočníkov. Odpovedz na otázky.",
-      text:
-        "Laufen für Anfänger — Tipps aus Wien\nLaufen ist ein super Sport für jeden! Für Anfänger ist es wichtig, langsam anzufangen. Laufen Sie zuerst nur 20 Minuten täglich. Nach zwei Wochen können Sie 30 Minuten laufen. Ein gutes Ziel: dreimal pro Woche 30 Minuten joggen. Das Training dauert nicht lange, aber die Wirkung ist groß. Im Wiener Prater gibt es viele schöne Laufwege. Trinken Sie nach dem Training viel Wasser und ruhen Sie sich aus.",
-      textSk:
-        "Beh pre začiatočníkov — tipy z Viedne\nBehanie je skvelý šport pre každého! Pre začiatočníkov je dôležité začať pomaly. Najprv behajte len 20 minút denne. Po dvoch týždňoch môžete behať 30 minút. Dobrý cieľ: trikrát týždenne 30 minút jogu. Tréning netrvá dlho, ale účinok je veľký. Vo Viedenskom Pratri je veľa krásnych bežeckých trás. Po tréningu pite veľa vody a odpočívajte.",
-      questions: [
-        {
-          question: "Wie lange sollen Anfänger zuerst laufen?",
-          answer: "Anfänger sollen zuerst 20 Minuten täglich laufen.",
-          explanation: "'Laufen Sie zuerst nur 20 Minuten täglich.'",
-        },
-        {
-          question: "Was ist das empfohlene Ziel für Laufanfänger?",
-          answer: "Das Ziel ist dreimal pro Woche 30 Minuten joggen.",
-          explanation: "'Ein gutes Ziel: dreimal pro Woche 30 Minuten joggen.'",
-        },
-        {
-          question: "Was soll man nach dem Training tun?",
-          answer: "Man soll viel Wasser trinken und sich ausruhen.",
-          explanation: "'Trinken Sie nach dem Training viel Wasser und ruhen Sie sich aus.'",
-        },
-      ],
-    },
-    {
-      type: "freewrite",
-      instruction:
-        "Napíš odstavec o svojom športe alebo pohybe. Použi frekvenčné príslovky a výrazy trvania.",
-      prompt:
-        "Wie oft treibst du Sport? Was ist dein Lieblingssport? Wie lange machst du das schon?",
-      minWords: 30,
-      exampleAnswer:
-        "Ich treibe Sport dreimal pro Woche. Mein Lieblingssport ist Schwimmen. Ich schwimme jeden Donnerstag und Samstag — das Training dauert ungefähr eine Stunde. Manchmal gehe ich auch wandern. Ich mache das schon seit zwei Jahren. Yoga mache ich selten, aber ich möchte öfter üben. Sport ist wichtig, um fit zu bleiben!",
+        [
+          "der Weg",
+          "cesta"
+        ],
+        [
+          "die Richtung",
+          "smer"
+        ],
+        [
+          "die Kreuzung",
+          "križovatka"
+        ],
+        [
+          "abbiegen",
+          "odbočiť"
+        ],
+        [
+          "fragen",
+          "spýtať sa"
+        ],
+        [
+          "antworten",
+          "odpovedať"
+        ],
+        [
+          "geradeaus",
+          "rovno"
+        ],
+        [
+          "links",
+          "vľavo"
+        ],
+        [
+          "rechts",
+          "vpravo"
+        ],
+        [
+          "Entschuldigen Sie!",
+          "Prepáčte!"
+        ],
+        [
+          "Wie komme ich zu...?",
+          "Ako sa dostanem k...?"
+        ],
+        [
+          "Vielen Dank!",
+          "Ďakujem pekne!"
+        ]
+      ]
     },
     {
       type: "wordorder",
-      instruction: "ZoraÄ slovÃ¡ do sprÃ¡vnej nemeckej vety.",
+      instruction: "Usporiadajte slová tak, aby ste vytvorili správne nemecké vety.",
       sentences: [
         {
-          words: ["Das", "Schloss", "wurde", "im", "Jahre", "1756", "gebaut."],
-          correct: "Das Schloss wurde im Jahre 1756 gebaut.",
-          hint: "ZÃ¡mok bol postavenÃ½ v roku 1756.",
-          explanation: "PasÃ­v PrÃ¤teritum: 'wurde' + Partizip II na konci vety.",
+          words: [
+            "Bitte",
+            "geh",
+            "geradeaus",
+            "dann",
+            "links"
+          ],
+          correct: "Bitte geh geradeaus, dann links",
+          hint: "Prosím, choď rovno, potom vľavo.",
+          explanation: "V rozkazovacom spôsobe pre 'du' je sloveso na začiatku v tvare bez '-st' (geh). 'Bitte' môže stáť na začiatku alebo po slovese."
         },
         {
-          words: ["Das", "Brot", "wurde", "gestern", "gekauft."],
-          correct: "Das Brot wurde gestern gekauft.",
-          hint: "Chlieb bol kÃºpenÃ½ vÄera.",
-          explanation: "'wurde gekauft' â€” minulÃ½ pasÃ­v; ÄasovÃ© prÃ­slovky stoja pred Partizip II.",
+          words: [
+            "Biegen",
+            "Sie",
+            "bitte",
+            "links",
+            "ab"
+          ],
+          correct: "Biegen Sie bitte links ab",
+          hint: "Odbočte prosím vľavo.",
+          explanation: "V rozkazovacom spôsobe pre 'Sie' je sloveso na začiatku v infinitívnom tvare, za ním nasleduje 'Sie'. 'Abbiegen' je odlučiteľné sloveso, prefix ide na koniec."
         },
         {
-          words: ["Der", "Brief", "wurde", "geschrieben."],
-          correct: "Der Brief wurde geschrieben.",
-          hint: "List bol napÃ­sanÃ½.",
-          explanation: "'geschrieben' = Partizip II od 'schreiben' (silnÃ© sloveso).",
+          words: [
+            "Wie",
+            "komme",
+            "ich",
+            "zum",
+            "Markt"
+          ],
+          correct: "Wie komme ich zum Markt",
+          hint: "Ako sa dostanem na trh?",
+          explanation: "Štandardná otázka na cestu. Sloveso je na druhom mieste. 'Zum' je skratka pre 'zu dem'."
         },
         {
-          words: ["Die", "TÃ¼r", "wurde", "geÃ¶ffnet."],
-          correct: "Die TÃ¼r wurde geÃ¶ffnet.",
-          hint: "Dvere boli otvorenÃ©.",
-          explanation: "'geÃ¶ffnet' = Partizip II od 'Ã¶ffnen'; Ã¶=[Ã¸] â€” zaokrÃºhlenÃ© 'e'.",
+          words: [
+            "Gehen",
+            "Sie",
+            "immer",
+            "geradeaus"
+          ],
+          correct: "Gehen Sie immer geradeaus",
+          hint: "Choďte stále rovno.",
+          explanation: "Rozkazovací spôsob pre 'Sie'. Sloveso v infinitívnom tvare na začiatku, za ním 'Sie'."
         },
         {
-          words: ["Das", "Problem", "wurde", "gelÃ¶st."],
-          correct: "Das Problem wurde gelÃ¶st.",
-          hint: "ProblÃ©m bol vyrieÅ¡enÃ½.",
-          explanation: "'gelÃ¶st' = Partizip II od 'lÃ¶sen'; Ã¶=[Ã¸].",
+          words: [
+            "Nimm",
+            "die",
+            "erste",
+            "Straße",
+            "rechts"
+          ],
+          correct: "Nimm die erste Straße rechts",
+          hint: "Vezmi prvú ulicu vpravo.",
+          explanation: "Rozkazovací spôsob pre 'du' od slovesa 'nehmen' je 'nimm'. 'Die erste Straße rechts' znamená 'prvá ulica vpravo'."
+        }
+      ]
+    },
+    {
+      type: "fill",
+      instruction: "Doplňte správne slovo do medzery.",
+      questions: [
+        {
+          sentence: "Entschuldigen Sie! Wie ___ ich zum Bahnhof?",
+          answer: "komme",
+          hint: "Prepáčte! Ako sa dostanem na stanicu?",
+          explanation: "Fráza 'Wie komme ich zu...?' sa používa na pýtanie sa na cestu. Sloveso 'kommen' je v tvare pre 'ich'."
         },
-      ],
+        {
+          sentence: "___ bitte hier rechts ab.",
+          answer: "Bieg",
+          hint: "Odboč prosím tu vpravo.",
+          explanation: "Rozkazovací spôsob pre 'du' od odlučiteľného slovesa 'abbiegen' je 'Bieg ab'. Prefix 'ab' ide na koniec vety."
+        },
+        {
+          sentence: "Gehen Sie immer ___. Dann sehen Sie den Park.",
+          answer: "geradeaus",
+          hint: "Choďte stále rovno. Potom uvidíte park.",
+          explanation: "'Geradeaus' znamená 'rovno' a často sa používa pri navigovaní."
+        },
+        {
+          sentence: "___ Sie die zweite Straße links.",
+          answer: "Nehmen",
+          hint: "Vezmite druhú ulicu vľavo.",
+          explanation: "Rozkazovací spôsob pre 'Sie' od slovesa 'nehmen' je 'Nehmen Sie'."
+        },
+        {
+          sentence: "Kannst du ___ bitte helfen? Ich suche den Weg.",
+          answer: "mir",
+          hint: "Môžeš mi prosím pomôcť? Hľadám cestu.",
+          explanation: "Sloveso 'helfen' (pomôcť) si vyžaduje datívny pád. 'Mir' je datívny tvar osobného zámena 'ich'."
+        },
+        {
+          sentence: "Wir ___ gestern nach Berlin ___.",
+          answer: "sind ... gefahren",
+          hint: "Včera sme išli do Berlína.",
+          explanation: "Sloveso 'fahren' (ísť, cestovať) vyjadruje pohyb a tvorí perfekt s pomocným slovesom 'sein'. Minulé príčastie je 'gefahren'."
+        },
+        {
+          sentence: "Die ___ ist sehr nah, nur fünf Minuten zu Fuß.",
+          answer: "Kreuzung",
+          hint: "Križovatka je veľmi blízko, len päť minút pešo.",
+          explanation: "'Kreuzung' znamená 'križovatka'."
+        }
+      ]
+    },
+    {
+      type: "listen",
+      instruction: "Počúvajte a napíšte nemecké slovo alebo frázu, ktorú počujete.",
+      questions: [
+        {
+          de: "der Weg",
+          sk: "cesta"
+        },
+        {
+          de: "links",
+          sk: "vľavo"
+        },
+        {
+          de: "rechts",
+          sk: "vpravo"
+        },
+        {
+          de: "geradeaus",
+          sk: "rovno"
+        },
+        {
+          de: "die Richtung",
+          sk: "smer"
+        },
+        {
+          de: "abbiegen",
+          sk: "odbočiť"
+        },
+        {
+          de: "die Kreuzung",
+          sk: "križovatka"
+        },
+        {
+          de: "Entschuldigen Sie!",
+          sk: "Prepáčte!"
+        },
+        {
+          de: "Wie komme ich zum Markt?",
+          sk: "Ako sa dostanem na trh?"
+        },
+        {
+          de: "Vielen Dank!",
+          sk: "Ďakujem pekne!"
+        }
+      ]
+    },
+    {
+      type: "mcq",
+      instruction: "Vyberte správnu odpoveď.",
+      questions: [
+        {
+          question: "Čo je správny rozkazovací spôsob pre 'du' od slovesa 'gehen'?",
+          options: [
+            "Gehst du!",
+            "Geh!",
+            "Gehen!",
+            "Geht!"
+          ],
+          answer: 1,
+          explanation: "Rozkazovací spôsob pre 'du' sa tvorí odobratím koncovky '-st' a vynechaním zámena 'du'. Správne je 'Geh!'."
+        },
+        {
+          question: "Ak nejdete vľavo alebo vpravo, idete...",
+          options: [
+            "nah",
+            "weit",
+            "geradeaus",
+            "immer"
+          ],
+          answer: 2,
+          explanation: "Ak nejdete vľavo ani vpravo, idete rovno. 'Geradeaus' znamená 'rovno'."
+        },
+        {
+          question: "Ktorá veta je správna na opýtanie sa na cestu?",
+          options: [
+            "Wo ist der Weg zum Bahnhof?",
+            "Wie komme ich zum Bahnhof?",
+            "Ich möchte zum Bahnhof kommen?",
+            "Kannst du mir zum Bahnhof zeigen?"
+          ],
+          answer: 1,
+          explanation: "Štandardná a najbežnejšia fráza na pýtanie sa na cestu je 'Wie komme ich zu...?'."
+        },
+        {
+          question: "Kde kupujeme čerstvé ovocie a zeleninu?",
+          options: [
+            "in der Bäckerei",
+            "auf dem Markt",
+            "in der Apotheke",
+            "im Supermarkt"
+          ],
+          answer: 1,
+          explanation: "Čerstvé ovocie a zeleninu kupujeme na trhu ('auf dem Markt')."
+        },
+        {
+          question: "Doplňte správny tvar slovesa 'sein' v Präteritum: Letztes Jahr ___ ich in Deutschland.",
+          options: [
+            "bin",
+            "war",
+            "hatte",
+            "ist"
+          ],
+          answer: 1,
+          explanation: "Minulý čas (Präteritum) slovesa 'sein' pre 'ich' je 'war'. Používa sa pre udalosti v minulosti, najmä v písomnom alebo naratívnom štýle."
+        },
+        {
+          question: "Doplňte správne modálne sloveso: ___ du mir bitte helfen? Ich verstehe die Frage nicht.",
+          options: [
+            "Willst",
+            "Musst",
+            "Kannst",
+            "Sollst"
+          ],
+          answer: 2,
+          explanation: "'Kannst' (môžeš) je správne modálne sloveso pre zdvorilú otázku, či niekto dokáže alebo je ochotný pomôcť. Ostatné modálne slovesá menia význam vety."
+        },
+        {
+          question: "Ktorá veta je správny rozkazovací spôsob pre 'Sie' od slovesa 'abbiegen'?",
+          options: [
+            "Sie biegen ab!",
+            "Biegen Sie ab!",
+            "Abbiegen Sie!",
+            "Biegst du ab!"
+          ],
+          answer: 1,
+          explanation: "Rozkazovací spôsob pre 'Sie' sa tvorí umiestnením slovesa v infinitívnom tvare na začiatok vety, za ním nasleduje 'Sie'. Odlučiteľný prefix 'ab' ide na koniec vety."
+        }
+      ]
+    },
+    {
+      type: "minitext",
+      instruction: "Lies den Dialog und beantworte die Fragen.",
+      text: "Tourist: Entschuldigen Sie! Ich habe eine Frage.\nJana: Ja, bitte schön!\nTourist: Ich suche den Naschmarkt. Wie komme ich dorthin? Ist das weit?\nJana: Nein, der Weg ist nicht weit. Gehen Sie diese Straße hier immer geradeaus.\nTourist: Geradeaus? Okay.\nJana: Ja, immer geradeaus. Dann kommt eine große Kreuzung. Dort biegen Sie bitte links ab. Schauen Sie dann nach rechts. Der Naschmarkt ist direkt dort. Das ist unser großer Markt.\nTourist: Ah, super! Vielen Dank für die Antwort und die Hilfe!\nJana: Gern geschehen! Ich freue mich, dass ich Ihnen den Weg zeigen konnte.",
+      textSk: "Turista: Prepáčte! Mám otázku.\nJana: Áno, prosím!\nTurista: Hľadám Naschmarkt. Ako sa tam dostanem? Je to ďaleko?\nJana: Nie, cesta nie je ďaleko. Choďte po tejto ulici stále rovno.\nTurista: Rovno? Dobre.\nJana: Áno, stále rovno. Potom príde veľká križovatka. Tam odbočte, prosím, vľavo. Potom sa pozrite doprava. Naschmarkt je priamo tam. To je náš veľký trh.\nTurista: Aha, super! Ďakujem pekne za odpoveď a pomoc!\nJana: Nemáte za čo! Teším sa, že som vám mohla ukázať cestu.",
+      questions: [
+        {
+          question: "Was sucht der Tourist?",
+          options: [
+            "Ein Hotel",
+            "Den Naschmarkt",
+            "Eine Bushaltestelle",
+            "Jana"
+          ],
+          answer: 1,
+          explanation: "Der Tourist sagt: \"Ich suche den Naschmarkt.\""
+        },
+        {
+          question: "Was soll der Tourist zuerst machen?",
+          options: [
+            "Links abbiegen",
+            "Nach rechts schauen",
+            "Immer geradeaus gehen",
+            "Eine Frage stellen"
+          ],
+          answer: 2,
+          explanation: "Jana sagt: \"Gehen Sie diese Straße hier immer geradeaus.\""
+        },
+        {
+          question: "Wo ist der Naschmarkt, nachdem der Tourist links abgebogen ist?",
+          options: [
+            "Auf der linken Seite",
+            "Direkt auf der rechten Seite",
+            "Hinter der Kreuzung",
+            "Sehr weit weg"
+          ],
+          answer: 1,
+          explanation: "Jana sagt: \"Schauen Sie dann nach rechts. Der Naschmarkt ist direkt dort.\""
+        },
+        {
+          question: "Wie fühlt sich Jana am Ende?",
+          options: [
+            "Sie ist müde",
+            "Sie ist froh, dass sie helfen konnte",
+            "Sie ist verwirrt",
+            "Sie ist traurig"
+          ],
+          answer: 1,
+          explanation: "Jana sagt: \"Ich freue mich, dass ich Ihnen den Weg zeigen konnte.\""
+        }
+      ]
     },
     {
       type: "speaking",
-      instruction: "PoÄÃºvaj nemeckÃº vetu. Potom hovor nahlas a skontroluj sa.",
+      instruction: "Höre zu und sprich nach.",
       phrases: [
         {
-          de: "Das Schloss wurde im 18. Jahrhundert gebaut.",
-          sk: "ZÃ¡mok bol postavenÃ½ v 18. storoÄÃ­.",
-          tip: "wurde=[vurde], gebaut=[gebaut]",
+          de: "rechts",
+          sk: "vpravo",
+          tip: "Ch ako v slove \"ich\", nie ako \"kš\"."
         },
         {
-          de: "Das Brot wurde gestern gekauft.",
-          sk: "Chlieb bol kÃºpenÃ½ vÄera.",
-          tip: "gestern=[gestern], krÃ¡tke vokÃ¡ly",
+          de: "geradeaus",
+          sk: "rovno",
+          tip: "G ako v \"gut\", au ako v \"Haus\"."
         },
         {
-          de: "Die TÃ¼r wurde geÃ¶ffnet.",
-          sk: "Dvere boli otvorenÃ©.",
-          tip: "geÃ¶ffnet=[geÅ“fnet], Ã¶=[Å“]",
+          de: "Entschuldigen Sie!",
+          sk: "Prepáčte!",
+          tip: "Sch ako v \"škola\", s v \"Sie\" ako [z]."
         },
         {
-          de: "Das Problem wurde gelÃ¶st.",
-          sk: "ProblÃ©m bol vyrieÅ¡enÃ½.",
-          tip: "gelÃ¶st=[gelÃ¸Ëst], Ã¶ dlhÃ©",
+          de: "Wie komme ich...?",
+          sk: "Ako sa dostanem k...?",
+          tip: "Ch v \"ich\" je mäkké, ako v slove \"ich\"."
         },
         {
-          de: "Das Haus wurde verkauft.",
-          sk: "Dom bol predanÃ½.",
-          tip: "verkauft=[ferkauft], v=[f]",
+          de: "Wie komme ich zum Markt?",
+          sk: "Ako sa dostanem na trh?",
+          tip: "Ch v \"ich\" je mäkké, a v \"Markt\" je krátke."
         },
-      ],
+        {
+          de: "Gehen Sie geradeaus.",
+          sk: "Choďte rovno.",
+          tip: "G ako v \"gut\", s v \"Sie\" ako [z]."
+        },
+        {
+          de: "Dann biegen Sie links ab.",
+          sk: "Potom odbočte vľavo.",
+          tip: "Ie ako dlhé \"í\", b ako v \"Bett\"."
+        },
+        {
+          de: "Gehen Sie geradeaus und dann rechts.",
+          sk: "Choďte rovno a potom vpravo.",
+          tip: "G ako v \"gut\", s v \"Sie\" ako [z], ch v \"rechts\" je mäkké."
+        }
+      ]
     },
+    {
+      type: "truefalse",
+      instruction: "Prečítajte si tvrdenia o rozkazovacom spôsobe (Imperativ) a pýtaní sa na cestu. Rozhodnite, či sú pravdivé (Wahr) alebo nepravdivé (Falsch).",
+      statements: [
+        {
+          statement: "Pre rozkazovací spôsob v tvare 'du' sa často vynecháva koncovka '-st' a zámeno 'du'. Napríklad, z 'du gehst' je 'Geh!'",
+          isTrue: true,
+          explanation: "Áno, pre rozkazovací spôsob v tvare 'du' sa zámeno 'du' vynecháva a koncovka '-st' sa tiež väčšinou vynecháva, pričom zostane len kmeň slovesa (napr. 'gehen' → 'Geh!')."
+        },
+        {
+          statement: "Ak sa pýtame na cestu k trhu, môžeme použiť otázku 'Wie komme ich zu dem Markt?'",
+          isTrue: true,
+          explanation: "Áno, fráza 'Wie komme ich zu...?' je správna na pýtanie sa na cestu. 'Zu dem' sa často skracuje na 'zum'."
+        },
+        {
+          statement: "Nemecké slovo 'geradeaus' znamená 'vľavo'.",
+          isTrue: false,
+          explanation: "Nie, 'geradeaus' znamená 'rovno'. Slovo pre 'vľavo' je 'links'."
+        },
+        {
+          statement: "Pre zdvorilostný rozkazovací spôsob (Sie-Form) používame sloveso v neurčitku a za ním zámeno 'Sie'. Napríklad: 'Gehen Sie!'",
+          isTrue: true,
+          explanation: "Áno, zdvorilostný rozkazovací spôsob sa tvorí neurčitkom slovesa a zámenom 'Sie', ktoré je vždy na druhom mieste."
+        },
+        {
+          statement: "Fráza 'Vielen Dank!' sa používa na pozdrav pri stretnutí s niekým.",
+          isTrue: false,
+          explanation: "Nie, 'Vielen Dank!' znamená 'Ďakujem pekne!' a používa sa na vyjadrenie vďaky, nie na pozdrav."
+        }
+      ]
+    },
+    {
+      type: "dictation",
+      instruction: "Napíšte po nemecky, čo počujete. Venujte pozornosť výslovnosti a pravopisu.",
+      sentences: [
+        {
+          de: "Geh links!",
+          sk: "Choď vľavo!",
+          hint: "Imperativ 'du' forma"
+        },
+        {
+          de: "Fahren Sie geradeaus!",
+          sk: "Choďte rovno!",
+          hint: "Imperativ 'Sie' forma"
+        },
+        {
+          de: "Wie komme ich zum Markt?",
+          sk: "Ako sa dostanem na trh?",
+          hint: "Fráza na pýtanie sa na cestu"
+        },
+        {
+          de: "Der Tourist sucht den Weg zum Ziel.",
+          sk: "Turista hľadá cestu k cieľu.",
+          hint: "Sloveso 'suchen' a podstatné mená"
+        },
+        {
+          de: "Entschuldigen Sie, wo ist die Kreuzung?",
+          sk: "Prepáčte, kde je križovatka?",
+          hint: "Zdvorilostná fráza a otázka"
+        }
+      ]
+    },
+    {
+      type: "categorysort",
+      instruction: "Roztrieďte slová do správnych kategórií.",
+      categories: [
+        {
+          name: "Podstatné mená (Nomen)",
+          color: "blue",
+          words: [
+            "der Weg",
+            "die Richtung",
+            "der Markt",
+            "die Frage",
+            "die Antwort",
+            "das Ziel",
+            "die Kreuzung",
+            "der Tourist"
+          ]
+        },
+        {
+          name: "Slovesá a príslovky (Verben und Adverbien)",
+          color: "green",
+          words: [
+            "abbiegen",
+            "fragen",
+            "antworten",
+            "kommen",
+            "zeigen",
+            "suchen",
+            "verstehen",
+            "geradeaus",
+            "links",
+            "rechts",
+            "immer",
+            "weit",
+            "nah"
+          ]
+        }
+      ],
+      explanation: "Slová sú rozdelené do dvoch hlavných kategórií: podstatné mená (Nomen), ktoré označujú osoby, veci alebo miesta, a slovesá (Verben) spolu s príslovkami (Adverbien), ktoré opisujú činnosti, stavy alebo spôsob, miesto a čas."
+    },
+    {
+      type: "translation",
+      instruction: "Preložte nasledujúce vety zo slovenčiny do nemčiny.",
+      sentences: [
+        {
+          sk: "Odbočte vpravo!",
+          answer: "Biegen Sie rechts ab!",
+          hint: "abbiegen, Sie",
+          explanation: "Rozkazovací spôsob pre 'Sie' sa tvorí neurčitkom slovesa a zámenom 'Sie'. Sloveso 'abbiegen' je odlučiteľné (trennbare Verben), takže predpona 'ab-' ide na koniec vety."
+        },
+        {
+          sk: "Hľadám trh.",
+          answer: "Ich suche den Markt.",
+          hint: "suchen, der Markt",
+          explanation: "Sloveso 'suchen' (hľadať) si vyžaduje priamy predmet v 4. páde (Akkusativ). Podstatné meno 'der Markt' (mužský rod) sa v Akkusative mení na 'den Markt'."
+        },
+        {
+          sk: "Prepáčte, ako sa dostanem k cieľu?",
+          answer: "Entschuldigen Sie, wie komme ich zum Ziel?",
+          hint: "Entschuldigen Sie, zum",
+          explanation: "Fráza 'Wie komme ich zu...?' sa používa na pýtanie sa na cestu. Predložka 'zu' sa spája s 3. pádom (Dativ). 'Zu dem' sa často skracuje na 'zum'."
+        },
+        {
+          sk: "Choďte stále rovno.",
+          answer: "Geh immer geradeaus!",
+          hint: "gehen, immer",
+          explanation: "Toto je rozkazovací spôsob pre 'du' (ty forma). Sloveso 'gehen' je silné, ale v Imperative pre 'du' sa používa kmeň slovesa bez koncovky '-e' (Geh!)."
+        }
+      ]
+    },
+    {
+      type: "conjugation",
+      instruction: "Vyčasujte slovesá v prítomnom čase (Präsens).",
+      verbs: [
+        {
+          infinitive: "abbiegen",
+          translation: "odbočiť",
+          forms: [
+            {
+              pronoun: "ich",
+              correct: "ich biege ab"
+            },
+            {
+              pronoun: "du",
+              correct: "du biegst ab"
+            },
+            {
+              pronoun: "er/sie/es",
+              correct: "er/sie/es biegt ab"
+            },
+            {
+              pronoun: "wir",
+              correct: "wir biegen ab"
+            },
+            {
+              pronoun: "ihr",
+              correct: "ihr biegt ab"
+            },
+            {
+              pronoun: "sie/Sie",
+              correct: "sie/Sie biegen ab"
+            }
+          ],
+          note: "Sloveso 'abbiegen' je odlučiteľné (trennbare Verben), čo znamená, že predpona 'ab-' sa v prítomnom čase oddeľuje a stojí na konci vety. V druhej a tretej osobe jednotného čísla sa kmeňová samohláska nemení."
+        },
+        {
+          infinitive: "suchen",
+          translation: "hľadať",
+          forms: [
+            {
+              pronoun: "ich",
+              correct: "ich suche"
+            },
+            {
+              pronoun: "du",
+              correct: "du suchst"
+            },
+            {
+              pronoun: "er/sie/es",
+              correct: "er/sie/es sucht"
+            },
+            {
+              pronoun: "wir",
+              correct: "wir suchen"
+            },
+            {
+              pronoun: "ihr",
+              correct: "ihr sucht"
+            },
+            {
+              pronoun: "sie/Sie",
+              correct: "sie/Sie suchen"
+            }
+          ],
+          note: "Sloveso 'suchen' je pravidelné sloveso a časuje sa podľa štandardných pravidiel pre slovesá v prítomnom čase (Präsens)."
+        }
+      ]
+    }
   ],
-
-  reviewWords: [
-    "L44_V02",
-    "L44_V03",
-    "L44_V06",
-    "L44_V07",
-    "L44_V08",
-    "L44_V09",
-    "L44_V10",
-    "L44_V11",
-    "L44_V13",
-  ],
-
-  lessonNotes:
-    "Kľúčová gramatika: trvanie = akuzatív bez predložky (Ich laufe 30 Minuten — nie 'für'!). Frekvencia: X mal pro Woche / im Monat. Frekvenčné príslovky: immer > oft > manchmal > selten > nie. Slovosled: frekvenčné príslovky stoja zvyčajne po slovese alebo pred časovým údajom. 'Wie lange?' = ako dlho → odpoveď: čas (eine Stunde, 20 Minuten). 'Wie oft?' = ako často → odpoveď: frekvenčné príslovky alebo X mal pro Woche.",
+  reviewWords: []
 };

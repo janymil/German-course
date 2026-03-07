@@ -1,12 +1,37 @@
 {
-  "xp": 26,
+  "xp": 422,
   "streak": 1,
-  "lastStudyDate": "2026-02-28",
+  "lastStudyDate": "2026-03-04",
   "completedLessons": {
     "1": {
       "completedAt": "2026-02-28T03:48:12.980Z",
       "score": 0,
       "xpEarned": 0
+    },
+    "2": {
+      "completedAt": "2026-03-01T01:27:59.196Z",
+      "score": 88,
+      "xpEarned": 13
+    },
+    "3": {
+      "completedAt": "2026-03-01T03:36:04.464Z",
+      "score": 95,
+      "xpEarned": 19
+    },
+    "4": {
+      "completedAt": "2026-03-02T19:25:23.157Z",
+      "score": 85,
+      "xpEarned": 17
+    },
+    "5": {
+      "completedAt": "2026-03-02T23:25:17.394Z",
+      "score": 97,
+      "xpEarned": 19
+    },
+    "6": {
+      "completedAt": "2026-03-04T01:50:44.866Z",
+      "score": 89,
+      "xpEarned": 18
     }
   },
   "vocabSeen": {
@@ -329,14 +354,14 @@
       "lastSeen": "2026-02-28T03:19:49.942Z"
     },
     "sein": {
-      "seenCount": 1,
+      "seenCount": 3,
       "wrongCount": 0,
-      "repetitions": 1,
-      "interval": 1,
-      "easeFactor": 2.6,
-      "dueDate": "2026-03-01",
-      "mastered": false,
-      "lastSeen": "2026-02-28T03:19:51.655Z"
+      "repetitions": 3,
+      "interval": 16,
+      "easeFactor": 2.8,
+      "dueDate": "2026-03-20",
+      "mastered": true,
+      "lastSeen": "2026-03-04T03:03:00.613Z"
     },
     "du": {
       "seenCount": 1,
@@ -347,6 +372,196 @@
       "dueDate": "2026-03-01",
       "mastered": false,
       "lastSeen": "2026-02-28T03:19:53.201Z"
+    },
+    "hallo": {
+      "seenCount": 1,
+      "wrongCount": 0,
+      "repetitions": 1,
+      "interval": 1,
+      "easeFactor": 2.6,
+      "dueDate": "2026-03-05",
+      "mastered": false,
+      "lastSeen": "2026-03-04T03:03:07.311Z"
+    },
+    "guten Tag": {
+      "seenCount": 1,
+      "wrongCount": 0,
+      "repetitions": 1,
+      "interval": 1,
+      "easeFactor": 2.6,
+      "dueDate": "2026-03-05",
+      "mastered": false,
+      "lastSeen": "2026-03-04T03:03:09.945Z"
+    },
+    "tschüss": {
+      "seenCount": 1,
+      "wrongCount": 0,
+      "repetitions": 1,
+      "interval": 1,
+      "easeFactor": 2.6,
+      "dueDate": "2026-03-05",
+      "mastered": false,
+      "lastSeen": "2026-03-04T03:03:11.782Z"
+    },
+    "auf Wiedersehen": {
+      "seenCount": 1,
+      "wrongCount": 0,
+      "repetitions": 1,
+      "interval": 1,
+      "easeFactor": 2.6,
+      "dueDate": "2026-03-05",
+      "mastered": false,
+      "lastSeen": "2026-03-04T03:03:14.109Z"
+    },
+    "ja": {
+      "seenCount": 1,
+      "wrongCount": 0,
+      "repetitions": 1,
+      "interval": 1,
+      "easeFactor": 2.6,
+      "dueDate": "2026-03-05",
+      "mastered": false,
+      "lastSeen": "2026-03-04T03:04:20.116Z"
+    },
+    "nein": {
+      "seenCount": 1,
+      "wrongCount": 0,
+      "repetitions": 1,
+      "interval": 1,
+      "easeFactor": 2.6,
+      "dueDate": "2026-03-05",
+      "mastered": false,
+      "lastSeen": "2026-03-04T03:04:21.894Z"
+    },
+    "danke": {
+      "seenCount": 1,
+      "wrongCount": 0,
+      "repetitions": 1,
+      "interval": 1,
+      "easeFactor": 2.6,
+      "dueDate": "2026-03-05",
+      "mastered": false,
+      "lastSeen": "2026-03-04T03:04:23.450Z"
+    },
+    "bitte": {
+      "seenCount": 1,
+      "wrongCount": 0,
+      "repetitions": 1,
+      "interval": 1,
+      "easeFactor": 2.6,
+      "dueDate": "2026-03-05",
+      "mastered": false,
+      "lastSeen": "2026-03-04T03:06:58.832Z"
+    },
+    "heißen": {
+      "seenCount": 1,
+      "wrongCount": 0,
+      "repetitions": 1,
+      "interval": 1,
+      "easeFactor": 2.6,
+      "dueDate": "2026-03-05",
+      "mastered": false,
+      "lastSeen": "2026-03-04T03:07:02.126Z"
+    },
+    "Wie heißt du?": {
+      "seenCount": 1,
+      "wrongCount": 0,
+      "repetitions": 1,
+      "interval": 1,
+      "easeFactor": 2.6,
+      "dueDate": "2026-03-05",
+      "mastered": false,
+      "lastSeen": "2026-03-04T03:07:04.479Z"
+    },
+    "Mein Name ist...": {
+      "seenCount": 1,
+      "wrongCount": 0,
+      "repetitions": 1,
+      "interval": 1,
+      "easeFactor": 2.6,
+      "dueDate": "2026-03-05",
+      "mastered": false,
+      "lastSeen": "2026-03-04T03:07:06.324Z"
+    },
+    "wie": {
+      "seenCount": 1,
+      "wrongCount": 0,
+      "repetitions": 1,
+      "interval": 1,
+      "easeFactor": 2.36,
+      "dueDate": "2026-03-05",
+      "mastered": false,
+      "lastSeen": "2026-03-04T03:07:08.216Z"
+    },
+    "was": {
+      "seenCount": 1,
+      "wrongCount": 0,
+      "repetitions": 1,
+      "interval": 1,
+      "easeFactor": 2.6,
+      "dueDate": "2026-03-05",
+      "mastered": false,
+      "lastSeen": "2026-03-04T03:07:10.016Z"
+    },
+    "wo": {
+      "seenCount": 1,
+      "wrongCount": 0,
+      "repetitions": 1,
+      "interval": 1,
+      "easeFactor": 2.36,
+      "dueDate": "2026-03-05",
+      "mastered": false,
+      "lastSeen": "2026-03-04T03:07:12.076Z"
+    },
+    "die Frau": {
+      "seenCount": 1,
+      "wrongCount": 0,
+      "repetitions": 1,
+      "interval": 1,
+      "easeFactor": 2.6,
+      "dueDate": "2026-03-05",
+      "mastered": false,
+      "lastSeen": "2026-03-04T03:07:13.845Z"
+    },
+    "der Herr": {
+      "seenCount": 1,
+      "wrongCount": 0,
+      "repetitions": 1,
+      "interval": 1,
+      "easeFactor": 2.6,
+      "dueDate": "2026-03-05",
+      "mastered": false,
+      "lastSeen": "2026-03-04T03:07:15.338Z"
+    },
+    "schlecht": {
+      "seenCount": 1,
+      "wrongCount": 0,
+      "repetitions": 1,
+      "interval": 1,
+      "easeFactor": 2.6,
+      "dueDate": "2026-03-05",
+      "mastered": false,
+      "lastSeen": "2026-03-04T03:07:18.703Z"
+    },
+    "Hallo, ich bin Jana.": {
+      "seenCount": 1,
+      "wrongCount": 0,
+      "repetitions": 1,
+      "interval": 1,
+      "easeFactor": 2.36,
+      "dueDate": "2026-03-05",
+      "mastered": false,
+      "lastSeen": "2026-03-04T04:52:28.258Z"
+    },
+    "dokonca, aj": {
+      "seenCount": 1,
+      "wrongCount": 1,
+      "repetitions": 0,
+      "interval": 1,
+      "easeFactor": 1.96,
+      "dueDate": "2026-03-07",
+      "mastered": false,
+      "lastSeen": "2026-03-06T17:54:12.296Z"
     }
   },
   "dailyXP": [
@@ -357,6 +572,26 @@
     {
       "date": "2026-02-28",
       "xp": 16
+    },
+    {
+      "date": "2026-03-01",
+      "xp": 32
+    },
+    {
+      "date": "2026-03-02",
+      "xp": 36
+    },
+    {
+      "date": "2026-03-04",
+      "xp": 18
+    },
+    {
+      "date": "2026-03-06",
+      "xp": 225
+    },
+    {
+      "date": "2026-03-07",
+      "xp": 85
     }
   ],
   "conversationPhrases": [
@@ -387,8 +622,37 @@
   ],
   "placementTestDone": true,
   "placementUnlockedUpTo": 0,
-  "storiesRead": {},
-  "readingVocab": [],
+  "storiesRead": {
+    "story_09": {
+      "completedAt": "2026-03-06T03:48:25.951Z",
+      "quizScore": 4,
+      "wordsAdded": 0
+    },
+    "story_10": {
+      "completedAt": "2026-03-06T17:56:42.603Z",
+      "quizScore": 8,
+      "wordsAdded": 1
+    },
+    "story_11": {
+      "completedAt": "2026-03-06T18:28:14.626Z",
+      "quizScore": 6,
+      "wordsAdded": 0
+    },
+    "story_14": {
+      "completedAt": "2026-03-07T00:35:55.991Z",
+      "quizScore": 7,
+      "wordsAdded": 0
+    }
+  },
+  "readingVocab": [
+    {
+      "de": "dokonca, aj",
+      "sk": "dokonca, aj",
+      "storyId": "story_10",
+      "storyTitle": "Ich bin Sofie und ich bin 10 Jahre alt",
+      "savedAt": "2026-03-06T17:56:42.603Z"
+    }
+  ],
   "grammarSeen": {},
   "passiveSessions": [
     {
@@ -407,30 +671,470 @@
   "customVocab": [],
   "lessonStates": {
     "1": {
-      "updatedAt": "2026-02-28T04:38:16.824Z",
-      "phase": "interleaved",
-      "seqIndex": 1,
+      "updatedAt": "2026-03-01T16:08:26.669Z",
+      "phase": "grammar",
+      "exerciseIndex": 0,
       "scores": [],
       "exState": null,
-      "mode": "interleaved"
+      "mode": "classic"
     },
     "2": {
-      "updatedAt": "2026-03-01T01:27:28.964Z",
-      "phase": "interleaved",
-      "seqIndex": 8,
+      "updatedAt": "2026-03-01T16:08:40.755Z",
+      "phase": "grammar",
+      "exerciseIndex": 0,
+      "scores": [],
+      "exState": null,
+      "mode": "classic"
+    },
+    "3": {
+      "updatedAt": "2026-03-03T21:36:39.650Z",
+      "phase": "grammar",
+      "exerciseIndex": 0,
+      "scores": [],
+      "exState": null,
+      "mode": "classic"
+    },
+    "4": null,
+    "5": null,
+    "6": null,
+    "7": {
+      "updatedAt": "2026-03-06T17:52:21.643Z",
+      "phase": "exercises",
+      "exerciseIndex": 9,
       "scores": [
+        80,
         100,
         100,
-        125,
-        80,
-        83,
-        80,
-        33
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
       ],
       "exState": null,
-      "mode": "interleaved"
+      "mode": "classic"
     }
   },
-  "generatedWords": {},
+  "generatedWords": {
+    "sogar": {
+      "type": "adverb",
+      "sk": "dokonca, aj",
+      "comparison": null,
+      "example": "Ich habe viele Dinge in Lila – mein T-Shirt, mein Rucksack und sogar meine Wasserflasche.",
+      "exampleSk": "Mám veľa vecí vo fialovej farbe – moje tričko, môj batoh a dokonca aj moju fľašu na vodu."
+    },
+    "lade": {
+      "type": "verb",
+      "sk": "pozvať",
+      "infinitiv": "einladen",
+      "conjugation": {
+        "ich": "lade ein",
+        "du": "lädst ein",
+        "er/sie/es": "lädt ein",
+        "wir": "laden ein",
+        "ihr": "ladet ein",
+        "sie": "laden ein"
+      },
+      "example": "Am Sonntag backe ich oft Brot oder Kuchen und lade meine Freundin zum Kaffee ein.",
+      "exampleSk": "V nedeľu často pečiem chlieb alebo koláč a pozývam priateľku na kávu."
+    },
+    "frisch": {
+      "type": "adjective",
+      "sk": "čerstvý",
+      "comparison": {
+        "Positiv": "frisch",
+        "Komparativ": "frischer",
+        "Superlativ": "am frischesten"
+      },
+      "example": "Ein Kaffee, ein Croissant mit Marmelade- frisch von der Bäckerei.",
+      "exampleSk": "Káva, croissant s džemom - čerstvé z pekárne."
+    }
+  },
+  "smartTutorHistory": [
+    {
+      "query": "ausfullen",
+      "data": {
+        "explanation_slovak": [
+          "Sloveso 'ausfüllen' znamená 'vypĺňať'. Je to odlučiteľné sloveso, čo znamená, že predpona 'aus' sa oddeľuje a ide na koniec vety.",
+          "V prítomnom čase sa sloveso 'ausfüllen' skloňuje podľa osoby. Napríklad: 'ich fülle aus', 'du füllst aus'."
+        ],
+        "grammar_matrix": [
+          {
+            "label": "ich",
+            "val": "fülle aus"
+          },
+          {
+            "label": "du",
+            "val": "füllst aus"
+          },
+          {
+            "label": "er/sie/es",
+            "val": "füllt aus"
+          },
+          {
+            "label": "wir",
+            "val": "füllen aus"
+          },
+          {
+            "label": "ihr",
+            "val": "füllt aus"
+          },
+          {
+            "label": "sie/Sie",
+            "val": "füllen aus"
+          }
+        ],
+        "exercise_blocks": [
+          {
+            "type": "fill_in_the_blank",
+            "title": "Doplňovačka",
+            "exercises": [
+              {
+                "german_sentence": "Ich [fülle] das Formular [aus].",
+                "slovak_translation": "Vypĺňam formulár."
+              },
+              {
+                "german_sentence": "Du [füllst] den Antrag [aus].",
+                "slovak_translation": "Ty vypĺňaš žiadosť."
+              },
+              {
+                "german_sentence": "Er [füllt] das Dokument [aus].",
+                "slovak_translation": "On vypĺňa dokument."
+              },
+              {
+                "german_sentence": "Wir [füllen] die Fragen [aus].",
+                "slovak_translation": "My vypĺňame otázky."
+              },
+              {
+                "german_sentence": "Ihr [füllt] die Formulare [aus].",
+                "slovak_translation": "Vy vypĺňate formuláre."
+              }
+            ]
+          },
+          {
+            "type": "multiple_choice",
+            "title": "Vyber správnu možnosť",
+            "exercises": [
+              {
+                "question": "Ich ___ das Formular ___.",
+                "options": [
+                  "fülle ... aus",
+                  "ausfülle ...",
+                  "fülle ... an"
+                ],
+                "correct_option": "fülle ... aus",
+                "slovak_translation": "Vypĺňam formulár."
+              },
+              {
+                "question": "Du ___ den Antrag ___.",
+                "options": [
+                  "füllst ... aus",
+                  "ausfüllst ...",
+                  "füllst ... an"
+                ],
+                "correct_option": "füllst ... aus",
+                "slovak_translation": "Ty vypĺňaš žiadosť."
+              },
+              {
+                "question": "Er ___ das Dokument ___.",
+                "options": [
+                  "füllt ... aus",
+                  "ausfüllt ...",
+                  "füllt ... an"
+                ],
+                "correct_option": "füllt ... aus",
+                "slovak_translation": "On vypĺňa dokument."
+              },
+              {
+                "question": "Wir ___ die Fragen ___.",
+                "options": [
+                  "füllen ... aus",
+                  "ausfüllen ...",
+                  "füllen ... an"
+                ],
+                "correct_option": "füllen ... aus",
+                "slovak_translation": "My vypĺňame otázky."
+              },
+              {
+                "question": "Ihr ___ die Formulare ___.",
+                "options": [
+                  "füllt ... aus",
+                  "ausfüllt ...",
+                  "füllt ... an"
+                ],
+                "correct_option": "füllt ... aus",
+                "slovak_translation": "Vy vypĺňate formuláre."
+              }
+            ]
+          },
+          {
+            "type": "translation",
+            "title": "Preklad",
+            "exercises": [
+              {
+                "slovak_sentence": "Ja vypĺňam formulár.",
+                "german_sentence": "Ich fülle das Formular aus."
+              },
+              {
+                "slovak_sentence": "Ty vypĺňaš žiadosť.",
+                "german_sentence": "Du füllst den Antrag aus."
+              },
+              {
+                "slovak_sentence": "On vypĺňa dokument.",
+                "german_sentence": "Er füllt das Dokument aus."
+              },
+              {
+                "slovak_sentence": "My vypĺňame otázky.",
+                "german_sentence": "Wir füllen die Fragen aus."
+              },
+              {
+                "slovak_sentence": "Vy vypĺňate formuláre.",
+                "german_sentence": "Ihr füllt die Formulare aus."
+              }
+            ]
+          },
+          {
+            "type": "scramble",
+            "title": "Zoraď slová do vety",
+            "exercises": [
+              {
+                "slovak_translation": "Ja vypĺňam formulár.",
+                "scrambled_words": [
+                  "das Formular",
+                  "fülle",
+                  "aus",
+                  "Ich"
+                ],
+                "correct_sentence": "Ich fülle das Formular aus."
+              },
+              {
+                "slovak_translation": "Ty vypĺňaš žiadosť.",
+                "scrambled_words": [
+                  "den Antrag",
+                  "füllst",
+                  "aus",
+                  "Du"
+                ],
+                "correct_sentence": "Du füllst den Antrag aus."
+              },
+              {
+                "slovak_translation": "On vypĺňa dokument.",
+                "scrambled_words": [
+                  "das Dokument",
+                  "füllt",
+                  "aus",
+                  "Er"
+                ],
+                "correct_sentence": "Er füllt das Dokument aus."
+              },
+              {
+                "slovak_translation": "My vypĺňame otázky.",
+                "scrambled_words": [
+                  "die Fragen",
+                  "füllen",
+                  "aus",
+                  "Wir"
+                ],
+                "correct_sentence": "Wir füllen die Fragen aus."
+              },
+              {
+                "slovak_translation": "Vy vypĺňate formuláre.",
+                "scrambled_words": [
+                  "die Formulare",
+                  "füllt",
+                  "aus",
+                  "Ihr"
+                ],
+                "correct_sentence": "Ihr füllt die Formulare aus."
+              }
+            ]
+          }
+        ]
+      },
+      "savedAt": "2026-03-04T01:51:26.577Z"
+    },
+    {
+      "query": "ausfullen",
+      "data": {
+        "explanation_slovak": "Sloveso 'ausfüllen' znamená 'vypĺňať'. Je to odlučiteľné sloveso, čo znamená, že predpona 'aus' sa oddeľuje od koreňa slova 'füllen' v prítomnom čase. Napríklad: 'Ich fülle das Formular aus.' (Vypĺňam formulár.) Predpona 'aus' ide na koniec vety. V prítomnom čase sa sloveso skloňuje podľa osoby: ich (1. osoba jednotného čísla), du (2. osoba jednotného čísla), er/sie/es (3. osoba jednotného čísla), wir (1. osoba množného čísla), ihr (2. osoba množného čísla), sie/Sie (3. osoba množného čísla a formálne oslovenie).",
+        "grammar_matrix": {
+          "der/die/das": "das Formular (formulár), die Papiere (papiere)",
+          "ich": "ich fülle aus (vypĺňam), ich mache (robím)"
+        },
+        "exercise_blocks": [
+          {
+            "type": "fill_in_the_blank",
+            "title": "Doplňovačka",
+            "exercises": [
+              {
+                "german_sentence": "Ich [fülle] das Formular [aus].",
+                "slovak_translation": "Vypĺňam formulár."
+              },
+              {
+                "german_sentence": "Du [füllst] die Papiere [aus].",
+                "slovak_translation": "Ty vypĺňaš papiere."
+              },
+              {
+                "german_sentence": "Er [füllt] den Antrag [aus].",
+                "slovak_translation": "On vypĺňa žiadosť."
+              },
+              {
+                "german_sentence": "Wir [füllen] die Formulare [aus].",
+                "slovak_translation": "My vypĺňame formuláre."
+              },
+              {
+                "german_sentence": "Ihr [füllt] die Fragen [aus].",
+                "slovak_translation": "Vy vypĺňate otázky."
+              }
+            ]
+          },
+          {
+            "type": "multiple_choice",
+            "title": "Vyber správnu možnosť",
+            "exercises": [
+              {
+                "question": "Ich ___ das Formular ___.",
+                "options": [
+                  "fülle ... aus",
+                  "ausfülle ...",
+                  "fülle ... an"
+                ],
+                "correct_option": "fülle ... aus",
+                "slovak_translation": "Vypĺňam formulár."
+              },
+              {
+                "question": "Du ___ die Papiere ___.",
+                "options": [
+                  "füllst ... aus",
+                  "ausfüllst ...",
+                  "füllst ... an"
+                ],
+                "correct_option": "füllst ... aus",
+                "slovak_translation": "Ty vypĺňaš papiere."
+              },
+              {
+                "question": "Er ___ den Antrag ___.",
+                "options": [
+                  "füllt ... aus",
+                  "ausfüllt ...",
+                  "füllt ... an"
+                ],
+                "correct_option": "füllt ... aus",
+                "slovak_translation": "On vypĺňa žiadosť."
+              },
+              {
+                "question": "Wir ___ die Formulare ___.",
+                "options": [
+                  "füllen ... aus",
+                  "ausfüllen ...",
+                  "füllen ... an"
+                ],
+                "correct_option": "füllen ... aus",
+                "slovak_translation": "My vypĺňame formuláre."
+              },
+              {
+                "question": "Ihr ___ die Fragen ___.",
+                "options": [
+                  "füllt ... aus",
+                  "ausfüllt ...",
+                  "füllt ... an"
+                ],
+                "correct_option": "füllt ... aus",
+                "slovak_translation": "Vy vypĺňate otázky."
+              }
+            ]
+          },
+          {
+            "type": "translation",
+            "title": "Preklad",
+            "exercises": [
+              {
+                "slovak_sentence": "My vypĺňame formulár.",
+                "german_sentence": "Wir füllen das Formular aus."
+              },
+              {
+                "slovak_sentence": "Ty vypĺňaš papiere.",
+                "german_sentence": "Du füllst die Papiere aus."
+              },
+              {
+                "slovak_sentence": "On vypĺňa žiadosť.",
+                "german_sentence": "Er füllt den Antrag aus."
+              },
+              {
+                "slovak_sentence": "Ja vypĺňam otázky.",
+                "german_sentence": "Ich fülle die Fragen aus."
+              },
+              {
+                "slovak_sentence": "Vy vypĺňate formuláre.",
+                "german_sentence": "Ihr füllt die Formulare aus."
+              }
+            ]
+          },
+          {
+            "type": "scramble",
+            "title": "Zoraď slová do vety",
+            "exercises": [
+              {
+                "slovak_translation": "Ty vypĺňaš formulár.",
+                "scrambled_words": [
+                  "das Formular",
+                  "füllst",
+                  "aus",
+                  "Du"
+                ],
+                "correct_sentence": "Du füllst das Formular aus."
+              },
+              {
+                "slovak_translation": "My vypĺňame papiere.",
+                "scrambled_words": [
+                  "Papiere",
+                  "aus",
+                  "wir",
+                  "füllen",
+                  "die"
+                ],
+                "correct_sentence": "Wir füllen die Papiere aus."
+              },
+              {
+                "slovak_translation": "On vypĺňa žiadosť.",
+                "scrambled_words": [
+                  "Antrag",
+                  "füllt",
+                  "aus",
+                  "er",
+                  "den"
+                ],
+                "correct_sentence": "Er füllt den Antrag aus."
+              },
+              {
+                "slovak_translation": "Ja vypĺňam otázky.",
+                "scrambled_words": [
+                  "Fragen",
+                  "aus",
+                  "ich",
+                  "fülle",
+                  "die"
+                ],
+                "correct_sentence": "Ich fülle die Fragen aus."
+              },
+              {
+                "slovak_translation": "Vy vypĺňate formuláre.",
+                "scrambled_words": [
+                  "Formulare",
+                  "ihr",
+                  "aus",
+                  "füllt",
+                  "die"
+                ],
+                "correct_sentence": "Ihr füllt die Formulare aus."
+              }
+            ]
+          }
+        ]
+      },
+      "savedAt": "2026-03-04T00:26:20.905Z"
+    }
+  ],
   "test": "123"
 }

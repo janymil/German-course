@@ -15,15 +15,20 @@ import { useProgress } from './hooks/useProgress';
 import { LESSONS, WEEKLY_PLAN } from './data/curriculum';
 import WeeklyTest from './views/WeeklyTest';
 import AIConversation from './views/AIConversation';
+import SmartTutor from './views/SmartTutor';
 import APIKeyModal from './components/APIKeyModal';
 import PlacementTest from './views/PlacementTest';
 import StudyCoachPage from './views/StudyCoachPage';
 import StoryBrowser from './views/StoryBrowser';
 import StoryReader from './views/StoryReader';
+import EbookBrowser from './views/EbookBrowser';
+import EbookReader from './views/EbookReader';
 import VideoCoach from './views/VideoCoach';
 import FeaturesPage from './views/FeaturesPage';
 import RoadmapPage from './views/RoadmapPage';
 import OnboardingModal from './components/OnboardingModal';
+import { SentenceTrainer } from './views/SentenceTrainer';
+import ApiStats from './views/ApiStats';
 
 export default function App() {
   const [activeView, setActiveView] = useState(() => {
@@ -41,6 +46,7 @@ export default function App() {
   const [showApiKey, setShowApiKey] = useState(false);
   const [showOnboarding, setShowOnboarding] = useState(() => !localStorage.getItem('german_onboarded'));
   const [selectedStoryId, setSelectedStoryId] = useState(null);
+  const [selectedEbookId, setSelectedEbookId] = useState(null);
   const { progress, completeLesson, markVocabSeen, markVocabWrong, reviewVocab, saveConversationPhrases, completeWeeklyTest, completePlacementTest, completeStory, addCustomVocab, saveLessonState, resetLesson, resetProgress } = useProgress();
   const [backendDown, setBackendDown] = useState(false);
 
@@ -162,6 +168,9 @@ export default function App() {
               onMarkVocabSeen={markVocabSeen}
             />
           )}
+          {activeView === 'smarttutor' && (
+            <SmartTutor onOpenAPIKey={() => setShowApiKey(true)} />
+          )}
           {activeView === 'lesson_mode_select' && selectedLesson && (
             <LessonModeSelect
               lesson={selectedLesson}
@@ -228,14 +237,29 @@ export default function App() {
               onBack={() => setActiveView('stories')}
             />
           )}
+          {activeView === 'ebooks' && (
+            <EbookBrowser onSelectEbook={(id) => { setSelectedEbookId(id); setActiveView('ebook'); }} />
+          )}
+          {activeView === 'ebook' && selectedEbookId && (
+            <EbookReader
+              ebookId={selectedEbookId}
+              onBack={() => setActiveView('ebooks')}
+            />
+          )}
           {activeView === 'videocoach' && (
             <VideoCoach />
+          )}
+          {activeView === 'sentence_trainer' && (
+            <SentenceTrainer />
           )}
           {activeView === 'features' && (
             <FeaturesPage onNavigate={setActiveView} />
           )}
           {activeView === 'roadmap' && (
             <RoadmapPage />
+          )}
+          {activeView === 'api_stats' && (
+            <ApiStats />
           )}
           {activeView === 'weeklytest' && selectedWeekNum && (
             <WeeklyTest

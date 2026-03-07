@@ -1,0 +1,17 @@
+{
+  "gemini-2.5-pro": {
+    "calls": 80,
+    "inputTokens": 270484,
+    "outputTokens": 108684
+  },
+  "gemini-2.5-flash-lite": {
+    "inputTokens": 6896,
+    "outputTokens": 1188,
+    "calls": 11
+  },
+  "gpt-4o-mini": {
+    "inputTokens": 2137,
+    "outputTokens": 3089,
+    "calls": 3
+  }
+}

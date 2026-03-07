@@ -17,6 +17,9 @@
  */
 import React from 'react';
 import { LESSONS } from '../data/curriculum';
+import { GLOBAL_NOUNS } from '../data/globalNouns';
+import { ALL_STORY_WORDS } from '../data/stories';
+import { SENTENCE_UNITS } from '../data/sentenceTrainer';
 
 // ─── Color definitions ───────────────────────────────────────────────
 export const GENDER_COLORS = {
@@ -58,15 +61,59 @@ let _genderMap = null;
 export function getGenderMap() {
   if (_genderMap) return _genderMap;
   _genderMap = {};
+
+  // Helper to add word variations
+  const addVariations = (de, article, cases, plural) => {
+    if (!article) return;
+    const gender = article.toLowerCase() === 'der' ? 'M' : article.toLowerCase() === 'die' ? 'F' : 'N';
+    if (de) {
+      const bare = de.replace(/^(der|die|das)\s+/i, '').trim();
+      _genderMap[bare] = gender;
+    }
+    const parts = [plural, cases?.Nominativ, cases?.Akkusativ, cases?.Dativ, cases?.Genitiv];
+    for (const p of parts) {
+      if (!p || p === 'N/A') continue;
+      const bare = p.replace(/^(der|die|das|den|dem|des)\s+/i, '').trim();
+      if (bare) _genderMap[bare] = gender;
+    }
+  };
+
+  // 1. Lessons Vocab
   for (const lesson of LESSONS) {
     if (!lesson?.vocab) continue;
     for (const v of lesson.vocab) {
       if (!v.gender) continue;
-      // Extract bare noun: "der Name" → "Name", "die Schweiz" → "Schweiz"
       const bare = v.de.replace(/^(der|die|das)\s+/i, '').trim();
       _genderMap[bare] = v.gender;
     }
   }
+
+  // 2. Global Nouns
+  for (const [key, val] of Object.entries(GLOBAL_NOUNS)) {
+    if (val.type === 'noun') {
+      _genderMap[key] = val.article === 'der' ? 'M' : val.article === 'die' ? 'F' : 'N';
+      addVariations(key, val.article, val.cases, val.plural);
+    }
+  }
+
+  // 3. Story Words
+  for (const [key, val] of Object.entries(ALL_STORY_WORDS)) {
+    if (val.type === 'noun') {
+      _genderMap[key] = val.article === 'der' ? 'M' : val.article === 'die' ? 'F' : 'N';
+      addVariations(key, val.article, val.cases, val.plural);
+    }
+  }
+
+  // 4. Sentence Trainer Vocab
+  for (const unit of SENTENCE_UNITS) {
+    if (!unit?.vocab) continue;
+    for (const v of unit.vocab) {
+      if (!v.gender) continue;
+      const bare = v.de.replace(/^(der|die|das)\s+/i, '').trim();
+      _genderMap[bare] = v.gender;
+    }
+  }
+
   return _genderMap;
 }
 
@@ -115,91 +162,136 @@ export function GenderWord({ word, gender, className = '', showDot = false }) {
   );
 }
 
-// ─── GenderText: auto-color nouns in German text ─────────────────────
-/**
- * Renders German text with automatically color-coded nouns.
- * Detects "der/die/das + Noun" patterns and standalone known nouns.
- *
- * @param {string} text - German text to render
- * @param {string} className - additional CSS classes on the wrapper span
- * @param {Object} extraMap - additional noun→gender entries to merge with global map
- */
+const ARTICLES_SET = new Set([
+  'der', 'die', 'das', 'den', 'dem', 'des', 'ein', 'eine', 'einen', 'einem', 'einer',
+  'kein', 'keine', 'keinen', 'keinem', 'keiner', 'mein', 'meine', 'meinen', 'meinem', 'meiner',
+  'dein', 'deine', 'deinen', 'deinem', 'deiner', 'ihr', 'ihre', 'ihren', 'ihrem', 'ihrer',
+  'sein', 'seine', 'seinen', 'seinem', 'seiner', 'unser', 'unsere', 'unseren', 'unserem', 'unserer',
+  'euer', 'eure', 'euren', 'eurem', 'eurer'
+]);
+
+const PREPOSITIONS_SET = new Set([
+  'mit', 'aus', 'bei', 'nach', 'seit', 'von', 'zu',
+  'durch', 'für', 'ohne', 'um', 'gegen',
+  'in', 'an', 'auf', 'neben', 'hinter', 'über', 'unter', 'vor', 'zwischen',
+  'im', 'am', 'zum', 'zur', 'beim', 'vom', 'ans', 'ins'
+]);
+
 export function GenderText({ text, className = '', extraMap = null }) {
   if (!text) return <span className={className}></span>;
 
   const genderMap = getGenderMap();
   const map = extraMap ? { ...genderMap, ...extraMap } : genderMap;
 
-  // Split text into tokens preserving whitespace.
-  // We split on whitespace boundaries while keeping the whitespace.
-  const tokens = text.split(/(\s+)/);
-  const result = [];
-  let i = 0;
+  // Split text by words and non-words. [A-Za-zÄÖÜäöüß]+ matches German words.
+  const tokens = text.split(/([A-Za-zÄÖÜäöüß]+)/);
+  const colors = new Array(tokens.length).fill(null);
 
-  while (i < tokens.length) {
+  // Robust Backward Chunker (finds Nouns and looks backwards for Adjectives/Articles/Prepositions)
+  for (let i = 0; i < tokens.length; i++) {
     const token = tokens[i];
+    if (!token) continue;
 
-    // Skip whitespace tokens — just push them
-    if (/^\s+$/.test(token)) {
-      result.push(token);
-      i++;
-      continue;
+    // Check if it's a capitalized word
+    if (/^[A-Za-zÄÖÜäöüß]+$/.test(token) && /^[A-ZÄÖÜ]/.test(token)) {
+      const gender = map[token];
+      if (gender) {
+        colors[i] = gender; // Color the noun itself First
+
+        let tempIndices = [];
+        let foundArticle = false;
+        let foundPrep = false;
+
+        // Traverse backward from the Noun
+        for (let j = i - 1; j >= 0; j--) {
+          const tok = tokens[j];
+          if (!tok) continue;
+
+          if (/^[A-Za-zÄÖÜäöüß]+$/.test(tok)) {
+            // Found a word
+            const lowerTok = tok.toLowerCase();
+            const isArticle = ARTICLES_SET.has(lowerTok);
+            const isPrep = PREPOSITIONS_SET.has(lowerTok);
+            const isCap = /^[A-ZÄÖÜ]/.test(tok);
+
+            if (isArticle) {
+              if (foundArticle || foundPrep) break; // Cannot chain article before prep or another article
+              foundArticle = true;
+
+              tempIndices.push(j);
+              for (const idx of tempIndices) colors[idx] = gender; // Commit chunk!
+              tempIndices = [];
+
+              if (isCap) break; // Start of sentence with article
+            } else if (isPrep) {
+              if (foundPrep) break;
+              foundPrep = true;
+
+              tempIndices.push(j);
+              for (const idx of tempIndices) colors[idx] = gender; // Commit chunk!
+              tempIndices = [];
+
+              if (isCap) break; // Start of sentence with prep
+            } else {
+              // Non-trigger word
+              if (isCap) {
+                break; // Hit another capitalized word (noun or unknown). Stop absorbing.
+              } else {
+                if (foundArticle || foundPrep) break; // Lowercase words (adjectives) cannot precede articles/preps
+                tempIndices.push(j); // Accept adjective/lowercase word into temp buffer
+              }
+            }
+          } else {
+            // Punctuation and Whitespace
+            if (/^[.,!?;\:]+$/.test(tok.trim()) && tok.trim() !== ',') {
+              break; // Hard punctuation stop (allow commas for lists of adjectives)
+            }
+            tempIndices.push(j);
+          }
+        }
+      }
     }
+  }
 
-    const lower = token.toLowerCase().replace(/[.,!?;:]+$/, '');
+  // Build the final React Elements grouped by contiguous coloring blocks
+  const result = [];
+  let currentBlock = [];
+  let currentColor = null;
 
-    // Check if this is a definite article: der, die, das
-    // (also handle sentence-initial capitalized: Der, Die, Das)
-    if (['der', 'die', 'das'].includes(lower)) {
-      // Look ahead: next token should be whitespace, then the noun
-      const ws = (i + 1 < tokens.length && /^\s+$/.test(tokens[i + 1])) ? tokens[i + 1] : '';
-      const nextIdx = ws ? i + 2 : i + 1;
-      const nextToken = nextIdx < tokens.length ? tokens[nextIdx] : '';
+  for (let i = 0; i < tokens.length; i++) {
+    const tok = tokens[i];
+    if (!tok) continue;
 
-      if (nextToken) {
-        // Strip trailing punctuation for lookup
-        const bareNext = nextToken.replace(/[.,!?;:]+$/, '');
-        const gender = map[bareNext];
-
-        if (gender) {
-          const colors = GENDER_COLORS[gender];
-          // Color the article + whitespace + noun together
+    if (colors[i] === currentColor) {
+      currentBlock.push(tok);
+    } else {
+      if (currentBlock.length > 0) {
+        if (currentColor) {
           result.push(
-            <span key={i} className={colors.text}>
-              {token}{ws}{nextToken}
+            <span key={`block-${i}`} className={GENDER_COLORS[currentColor].text}>
+              {currentBlock.join('')}
             </span>
           );
-          i = nextIdx + 1;
-          continue;
+        } else {
+          result.push(currentBlock.join(''));
         }
       }
+      currentColor = colors[i];
+      currentBlock = [tok];
     }
+  }
 
-    // Check if standalone word is a known noun
-    // In German, nouns are capitalized. Check if this word starts with uppercase.
-    if (token.length > 0 && /^[A-ZÄÖÜ]/.test(token)) {
-      const bare = token.replace(/[.,!?;:]+$/, '');
-      const trailingPunct = token.slice(bare.length);
-      const gender = map[bare];
-
-      if (gender) {
-        const colors = GENDER_COLORS[gender];
-        result.push(
-          <span key={i} className={colors.text}>
-            {bare}
-          </span>
-        );
-        if (trailingPunct) {
-          result.push(trailingPunct);
-        }
-        i++;
-        continue;
-      }
+  // Push the final uncommitted block
+  if (currentBlock.length > 0) {
+    if (currentColor) {
+      result.push(
+        <span key={`block-end`} className={GENDER_COLORS[currentColor].text}>
+          {currentBlock.join('')}
+        </span>
+      );
+    } else {
+      result.push(currentBlock.join(''));
     }
-
-    // No match — render as-is
-    result.push(token);
-    i++;
   }
 
   return <span className={className}>{result}</span>;

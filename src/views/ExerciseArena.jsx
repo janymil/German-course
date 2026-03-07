@@ -4,16 +4,16 @@ import React, { useState, useEffect, useCallback, useRef } from 'react';
 import {
     Target, Play, Clock, Zap, Star, StopCircle, RefreshCw,
     Volume2, Mic, CheckCircle2, XCircle, Keyboard, Shuffle,
-    Trophy, MessageSquare, Flame, Key, Loader2, ChevronRight
+    Trophy, MessageSquare, Flame, Key, Loader2, ChevronRight, HelpCircle
 } from 'lucide-react';
 import { LESSONS } from '../data/curriculum';
 import { useTTS } from '../hooks/useTTS';
 import { callGemini } from '../hooks/useAI';
+import { isAnswerCloseEnough, normalizeGerman } from '../utils/text';
 
 // ─── Helpers ────────────────────────────────────────────────────────────────
 const rnd = (arr) => arr[Math.floor(Math.random() * arr.length)];
 const shuf = (arr) => [...arr].sort(() => Math.random() - 0.5);
-const norm = (s = '') => s.toLowerCase().replace(/ä/g, 'ae').replace(/ö/g, 'oe').replace(/ü/g, 'ue').replace(/ß/g, 'ss').replace(/[^a-z0-9]/g, '');
 const getKey = () => import.meta.env.VITE_GEMINI_API_KEY || localStorage.getItem('gemini_api_key') || '';
 
 // Extract phonetic items: examples with [phonetic] notation → dictation from phonetic
@@ -147,14 +147,35 @@ function buildPool(sourceLessons, allUnlocked) {
 
 // AI: generate extra exercises for a lesson
 async function fetchAIExercises(lesson, allUnlockedLessons, count = 10) {
-    let cached = [];
+    // ── Knowledge Base lookup (upsert — array grows over time) ───────────────
+    const kbType = 'arena_exercises';
+    const kbKey  = `arena::L${lesson.id}`;
+    let cached   = [];
+
     try {
-        const res = await fetch(`http://${window.location.hostname}:5173/api/aibank`);
+        const res = await fetch(`/api/kb?type=${encodeURIComponent(kbType)}&key=${encodeURIComponent(kbKey)}`);
         if (res.ok) {
             const data = await res.json();
-            if (data[lesson.id]) cached = data[lesson.id];
+            if (data.found && Array.isArray(data.output)) cached = data.output;
         }
     } catch { }
+
+    // Legacy aibank fallback (transition period — will be empty once KB has data)
+    if (cached.length === 0) {
+        try {
+            const legRes = await fetch(`http://${window.location.hostname}:5173/api/aibank`);
+            if (legRes.ok) {
+                const legData = await legRes.json();
+                if (legData[lesson.id] && legData[lesson.id].length > 0) {
+                    cached = legData[lesson.id];
+                    // Promote legacy data to KB
+                    fetch('/api/kb', { method: 'POST', headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ type: kbType, key: kbKey, input: { lessonId: lesson.id }, output: cached, model: 'gemini-2.5-pro', sourceApp: 'exercise_arena (promoted)', upsert: true })
+                    }).catch(() => {});
+                }
+            }
+        } catch { }
+    }
 
     // If we already have enough cached exercises, recycle them (shuffle and pick)
     if (cached.length >= count) {
@@ -168,11 +189,12 @@ async function fetchAIExercises(lesson, allUnlockedLessons, count = 10) {
     if (!key) return cached; // return whatever we have if no key
 
     const vocabList = allUnlockedLessons.flatMap(l => l.vocab || []).map(v => v.de).join(', ');
-    const system = `Si učiteľ nemčiny. Vygeneruj presne ${needed} rôznych prekladových cvičení pre lekciu "${lesson.title}" na úrovni A1. 
-DÔLEŽITÉ PRAVIDLÁ:
-1. Tvoja nová slovná zásoba musí byť VÝHRADNE z tohto zoznamu povolených slov: ${vocabList}. Nikdy nepouži iné zložité slová.
-2. Nekombinuj len 2 slová dokolečka. Použi čo najväčšiu šírku z tohto zoznamu, nech sú vety nápadité.
-3. Odpovedaj VÝHRADNE JSON poľom bez markdownu. Každý objekt má tvar: {"type":"translation","de":"nemecká veta z povolených slov","sk":"slovenský preklad"}`;
+    const system = `Si obzvlášť kreatívny učiteľ nemčiny. Vygeneruj presne ${needed} originálnych prekladových cvičení pre lekciu "${lesson.title}" na úrovni A1. 
+DÔLEŽITÉ PRAVIDLÁ PRE KVALITNÝ OBSAH (SMART AI):
+1. Tvoja nová slovná zásoba musí byť VÝHRADNE z tohto zoznamu povolených slov: ${vocabList}. NIKDY nepouži nezvyčajné alebo pokročilé slová mimo zoznamu.
+2. Predíď nude a recyklácii: Nekombinuj tie isté slová dokola. Použi čo najväčšiu šírku z udeleného zoznamu. Vytváraj logické a pre život užitočné vety.
+3. Variabilita: Striedaj osoby (ich, du, er/sie/es, wir, ihr, sie) a typy viet (oznamovacie, opytovacie, záporné), aby boli cvičenia pestré.
+4. Odpovedaj VÝHRADNE JSON poľom bez markdownu. Každý objekt má tvar: {"type":"translation","de":"nemecká veta z povolených slov","sk":"slovenský preklad"}`;
     try {
         const raw = await callGemini(
             [{ role: 'system', content: system }],
@@ -192,8 +214,15 @@ DÔLEŽITÉ PRAVIDLÁ:
             id: Math.random().toString(36).substring(7)
         }));
 
-        // Combine and save to persistent file via our custom API
+        // Combine and save to KB (upsert — accumulated over time)
         const combined = [...cached, ...newItems];
+        fetch('/api/kb', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ type: kbType, key: kbKey, input: { lessonId: lesson.id }, output: combined, model: 'gemini-2.5-pro', sourceApp: 'exercise_arena', upsert: true })
+        }).catch(() => {});
+
+        // Also write to legacy aibank for backward compatibility
         try {
             await fetch(`http://${window.location.hostname}:5173/api/aibank`, {
                 method: 'POST',
@@ -212,7 +241,7 @@ function wordDiff(spoken = '', target = '') {
     const tWords = target.toLowerCase().split(/\s+/).filter(Boolean);
     return tWords.map(tw => ({
         word: tw,
-        ok: sWords.some(sw => sw.includes(norm(tw)) || norm(tw).includes(norm(sw)))
+        ok: sWords.some(sw => isAnswerCloseEnough(sw, tw))
     }));
 }
 
@@ -322,9 +351,18 @@ export default function ExerciseArena({ progress, onNavigate }) {
     }, []);
 
     // ── Pick next item ────────────────────────────────────────────────────────
-    const nextItem = useCallback((currentPool) => {
+    const nextItem = useCallback((currentPool, currentRoundIdx = 0) => {
         if (!currentPool.length) return;
-        const item = rnd(currentPool);
+
+        let types = [];
+        if (currentRoundIdx === 0) types = ['translation', 'mcq', 'dictation'];
+        else if (currentRoundIdx === 1) types = ['translation_reverse', 'wordorder', 'fill'];
+        else types = ['speech', 'phonetic_dictation', 'dialogue'];
+
+        let availableItems = currentPool.filter(i => types.includes(i.type));
+        if (!availableItems.length) availableItems = currentPool;
+
+        const item = rnd(availableItems);
         setCurrentItem(item);
         setFeedback(null);
         setFeedbackMsg('');
@@ -352,10 +390,12 @@ export default function ExerciseArena({ progress, onNavigate }) {
         stopBlitz();
         setTotalAnswered(t => t + 1);
         setSessionHistory(h => [...h, { item: currentItem, isCorrect, userAnswer, correctAnswer: correctAnswer || currentItem?.correct || '', type: currentItem?.type }]);
+
+        const newStreak = isCorrect ? streak + 1 : 0;
         if (isCorrect) {
             setTotalCorrect(t => t + 1);
-            setStreak(s => s + 1);
-            setScore(s => s + 10 + streak * 2);
+            setStreak(newStreak);
+            setScore(s => s + 10 + newStreak * 2);
             setFeedback('correct');
             setFeedbackMsg('✓ Správne!');
         } else {
@@ -364,7 +404,9 @@ export default function ExerciseArena({ progress, onNavigate }) {
             setFeedbackMsg(correctAnswer ? `Správne: „${correctAnswer}"` : '✗ Nesprávne');
         }
         if (explanation) setFeedbackMsg(p => p + (explanation ? ` — ${explanation}` : ''));
-        setTimeout(() => nextItem(pool), isCorrect ? 1200 : 2400);
+
+        const nextRoundIdx = newStreak < 3 ? 0 : newStreak < 6 ? 1 : 2;
+        setTimeout(() => nextItem(pool, nextRoundIdx), isCorrect ? 1200 : 2400);
     }, [streak, pool, nextItem, stopBlitz, currentItem]);
 
     // ── Start / Stop ──────────────────────────────────────────────────────────
@@ -389,7 +431,7 @@ export default function ExerciseArena({ progress, onNavigate }) {
         setScore(0); setStreak(0); setTotalAnswered(0); setTotalCorrect(0); setSessionHistory([]);
         setTimeRemaining(sessionDuration * 60);
         setIsDone(false); setIsTraining(true);
-        nextItem(newPool);
+        nextItem(newPool, 0);
     };
 
     const stopTraining = () => {
@@ -409,9 +451,7 @@ export default function ExerciseArena({ progress, onNavigate }) {
     const handleTextSubmit = (e) => {
         e?.preventDefault();
         if (feedback !== null || !textInput.trim()) return;
-        const ok = norm(textInput) === norm(currentItem.correct) ||
-            (norm(currentItem.correct).includes(norm(textInput)) &&
-                norm(textInput).length >= norm(currentItem.correct).length - 2);
+        const ok = isAnswerCloseEnough(textInput, currentItem.correct);
         processAnswer(ok, textInput, currentItem.correct, currentItem.explanation);
     };
 
@@ -440,23 +480,25 @@ export default function ExerciseArena({ progress, onNavigate }) {
 
     const handleWordOrderSubmit = () => {
         if (feedback || !wordSlots.length) return;
-        const ok = norm(wordSlots.join(' ')) === norm(currentItem.correct);
+        const ok = isAnswerCloseEnough(wordSlots.join(' '), currentItem.correct);
         processAnswer(ok, wordSlots.join(' '), currentItem.correct, currentItem.explanation);
     };
 
     // ── Speech ────────────────────────────────────────────────────────────────
-    const startListening = () => { resetTranscript(); SpeechRecognition.startListening({ language: 'de-DE', continuous: false }); };
-    const stopListeningEval = () => {
-        SpeechRecognition.stopListening();
-        // Give it a moment to finalize the transcript from the speech API
-        setTimeout(() => {
-            const spoken = transcriptRef.current;
-            const target = currentItem.correct;
-            const ok = spoken && (norm(spoken).includes(norm(target)) ||
-                norm(target).includes(norm(spoken)));
-            setWordDiffResult(wordDiff(spoken, target));
-            processAnswer(ok, spoken, target);
-        }, 1000);
+    const toggleListening = () => {
+        if (listening) {
+            SpeechRecognition.stopListening();
+            setTimeout(() => {
+                const spoken = transcriptRef.current;
+                const target = currentItem.correct;
+                const ok = spoken && isAnswerCloseEnough(spoken, target);
+                setWordDiffResult(wordDiff(spoken, target));
+                processAnswer(ok, spoken, target);
+            }, 1000);
+        } else {
+            resetTranscript();
+            SpeechRecognition.startListening({ language: 'de-DE', continuous: true });
+        }
     };
 
     const formatTime = (s) => `${Math.floor(s / 60)}:${String(s % 60).padStart(2, '0')}`;
@@ -669,6 +711,16 @@ export default function ExerciseArena({ progress, onNavigate }) {
                             <Flame size={11} /> {streak}× Kombo
                         </span>
                     )}
+                    {(() => {
+                        const rIdx = streak < 3 ? 0 : streak < 6 ? 1 : 2;
+                        const rName = rIdx === 0 ? '🌟 EASY' : rIdx === 1 ? '🔥 INTERMEDIATE' : '💀 HARD';
+                        const rCol = rIdx === 0 ? 'text-emerald-400 bg-emerald-500/10 border-emerald-500/30' : rIdx === 1 ? 'text-amber-400 bg-amber-500/10 border-amber-500/30' : 'text-red-400 bg-red-500/10 border-red-500/30';
+                        return (
+                            <span className={`hidden sm:flex items-center gap-1 text-xs font-bold px-2 py-1 rounded-lg border ${rCol}`}>
+                                {rName}
+                            </span>
+                        );
+                    })()}
                 </div>
                 <div className="flex items-center gap-4">
                     <div className="text-right hidden sm:block">
@@ -790,7 +842,6 @@ export default function ExerciseArena({ progress, onNavigate }) {
                         {feedback && (
                             <div className={`mt-4 p-3 rounded-xl text-sm font-medium w-full max-w-sm ${feedback === 'correct' ? 'bg-emerald-900/30 border border-emerald-800/50 text-emerald-400' : 'bg-red-900/30 border border-red-800/50 text-red-400'}`}>
                                 {feedback === 'correct' ? '✓ Správne!' : `✗ Správne: „${currentItem.correct}"`}
-                                {currentItem.hint && <span className="text-gray-500 ml-2">({currentItem.hint})</span>}
                             </div>
                         )}
                     </div>
@@ -802,7 +853,14 @@ export default function ExerciseArena({ progress, onNavigate }) {
                         <p className="text-xs text-gray-500 uppercase tracking-widest mb-4">Vidíte fonetický prepis. Napíšte nemecké slovo:</p>
                         <div className="bg-gray-800/50 rounded-2xl p-6 mb-6 w-full max-w-md text-center">
                             <p className="text-4xl font-extrabold text-cyan-400 font-mono tracking-widest">{currentItem.phoneticText}</p>
-                            {currentItem.hint && <p className="text-gray-500 text-sm mt-2">Slovensky: {currentItem.hint}</p>}
+                            {currentItem.hint && (
+                                <div className="group mt-3">
+                                    <span className="text-xs text-gray-500 bg-gray-900 rounded px-2 py-1 select-none flex items-center justify-center gap-1 mx-auto w-max cursor-help transition-colors hover:text-cyan-300">
+                                        <HelpCircle size={12} /> Nápoveda (podrž myš)
+                                    </span>
+                                    <p className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-sm text-cyan-400 mt-2 font-medium">Slovensky: {currentItem.hint}</p>
+                                </div>
+                            )}
                         </div>
                         <form onSubmit={handleTextSubmit} className="w-full max-w-sm space-y-3">
                             <div className="relative">
@@ -841,7 +899,14 @@ export default function ExerciseArena({ progress, onNavigate }) {
                                 ))}
                             </p>
                         </div>
-                        {currentItem.hint && <p className="text-xs text-gray-500 mb-4">Nápoveda: <span className="text-orange-400 font-medium">{currentItem.hint}</span></p>}
+                        {currentItem.hint && (
+                            <div className="group mb-4 text-center">
+                                <span className="text-xs text-gray-500 bg-gray-800 rounded px-2 py-1 select-none flex items-center justify-center gap-1 mx-auto w-max cursor-help transition-colors hover:text-orange-300">
+                                    <HelpCircle size={12} /> Nápoveda (podrž myš)
+                                </span>
+                                <p className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-sm text-orange-400 mt-2 font-medium">Nápoveda: {currentItem.hint}</p>
+                            </div>
+                        )}
                         <form onSubmit={handleTextSubmit} className="w-full max-w-sm space-y-3">
                             <div className="relative">
                                 <Keyboard size={16} className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500" />
@@ -866,7 +931,14 @@ export default function ExerciseArena({ progress, onNavigate }) {
                 {currentItem.type === 'wordorder' && (
                     <div className="flex flex-col flex-1">
                         <p className="text-xs text-gray-500 uppercase tracking-widest mb-1 text-center">Zoraďte slová do správnej vety:</p>
-                        {currentItem.hint && <p className="text-sm text-pink-400 text-center mb-3">({currentItem.hint})</p>}
+                        {currentItem.hint && (
+                            <div className="group mb-3 text-center">
+                                <span className="text-xs text-gray-500 bg-gray-800 rounded px-2 py-1 select-none flex items-center justify-center gap-1 mx-auto w-max cursor-help transition-colors hover:text-pink-300">
+                                    <HelpCircle size={12} /> Nápoveda (podrž myš)
+                                </span>
+                                <p className="opacity-0 absolute w-full group-hover:opacity-100 transition-opacity duration-200 text-sm text-pink-400 mt-1 font-medium z-10">({currentItem.hint})</p>
+                            </div>
+                        )}
                         <p className="text-[10px] text-gray-600 text-center mb-3">kliknite alebo potiahnite (drag & drop)</p>
 
                         {/* Answer slots drop zone */}
@@ -928,8 +1000,7 @@ export default function ExerciseArena({ progress, onNavigate }) {
                             <p className="text-amber-400 text-sm bg-amber-900/20 p-3 rounded-xl max-w-sm">⚠️ Váš prehliadač nepodporuje rozpoznávanie reči. Skúste Chrome.</p>
                         ) : (
                             <div className="flex flex-col items-center gap-4">
-                                <button onMouseDown={startListening} onMouseUp={stopListeningEval}
-                                    onTouchStart={startListening} onTouchEnd={stopListeningEval}
+                                <button onClick={toggleListening}
                                     disabled={feedback !== null}
                                     className={`w-24 h-24 rounded-full flex items-center justify-center transition-all select-none text-white ${listening ? 'bg-red-500 animate-pulse shadow-[0_0_50px_rgba(239,68,68,0.7)] scale-110' :
                                         feedback !== null ? 'bg-gray-800 text-gray-600' :
@@ -937,8 +1008,8 @@ export default function ExerciseArena({ progress, onNavigate }) {
                                     <Mic size={40} />
                                 </button>
 
-                                {!listening && feedback === null && <p className="text-gray-500 text-sm">Podržte a hovorte</p>}
-                                {listening && <p className="text-red-400 font-bold text-sm animate-pulse">🎤 Načúvam… uvoľnite pre vyhodnotenie</p>}
+                                {!listening && feedback === null && <p className="text-gray-500 text-sm">Kliknite a hovorte</p>}
+                                {listening && <p className="text-red-400 font-bold text-sm animate-pulse">🎤 Načúvam… kliknite pre vyhodnotenie</p>}
 
                                 {/* Word-level diff feedback */}
                                 {feedback && wordDiffResult && (

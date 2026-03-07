@@ -1,14 +1,25 @@
-import React, { useState, useEffect, useRef, useCallback } from 'react';
+import React, { useState, useEffect, useRef, useCallback, useMemo } from 'react';
 import YouTube from 'react-youtube';
 import getVideoId from 'get-video-id';
 import { useProgress } from '../hooks/useProgress';
 import { generateGrammarCard } from '../hooks/useAI';
 import { Play, Pause, Search, Loader2, BookmarkPlus, BookmarkCheck, X, AlertCircle, Film, ChevronDown, ChevronRight, Zap } from 'lucide-react';
 import { VIDEO_LIBRARY } from '../data/videoLibrary';
+import { ALL_STORY_WORDS } from '../data/stories';
+import { GLOBAL_NOUNS } from '../data/globalNouns';
 import { parseSrt } from '../utils/parseSrt.js';
 import AIVoiceModal from './AIVoiceModal.jsx';
 import VideoExercises from '../components/VideoExercises.jsx';
 import GrammarCard from '../components/GrammarCard.jsx';
+import WalkAndTalkLesson from '../components/WalkAndTalkLesson.jsx';
+import Lesson_qGBJYuCoamg from '../components/Lesson_qGBJYuCoamg.jsx';
+import Lesson_4_eDoThe6qo from '../components/Lesson_4_eDoThe6qo.jsx';
+
+const LESSON_COMPONENTS = {
+    'uzNrP5ZyH0A': WalkAndTalkLesson,
+    'qGBJYuCoamg': Lesson_qGBJYuCoamg,
+    '4-eDoThe6qo': Lesson_4_eDoThe6qo
+};
 
 // ─── MAIN COMPONENT ────────────────────────────────────────────────────────────
 
@@ -37,6 +48,7 @@ export default function VideoCoach() {
     // AI Voice Coach State
     const [segments, setSegments] = useState([]);
     const [isAIVoiceModalOpen, setIsAIVoiceModalOpen] = useState(false);
+    const [isLessonModalOpen, setIsLessonModalOpen] = useState(false);
     const [currentSegmentTopic, setCurrentSegmentTopic] = useState('');
     const [currentSegmentContext, setCurrentSegmentContext] = useState('');
     const [currentSegmentTranscript, setCurrentSegmentTranscript] = useState([]);
@@ -59,7 +71,55 @@ export default function VideoCoach() {
     };
 
     // Dictionary state
-    const storyWords = { ...progress.generatedWords };
+    const storyWords = useMemo(() => {
+        return {
+            ...ALL_STORY_WORDS,
+            ...GLOBAL_NOUNS,
+            ...progress?.generatedWords
+        };
+    }, [progress?.generatedWords]);
+    const nounColors = useMemo(() => {
+        const colors = {};
+        const articleToColor = {
+            'der': 'text-blue-400 font-bold',
+            'die': 'text-rose-400 font-bold',
+            'das': 'text-emerald-400 font-bold'
+        };
+        const activeArticleToColor = {
+            'der': 'bg-blue-600 text-white font-bold',
+            'die': 'bg-rose-600 text-white font-bold',
+            'das': 'bg-emerald-600 text-white font-bold'
+        };
+
+        const addWord = (w, color, activeColor) => {
+            if (!w) return;
+            const cleanW = w.replace(/[.,!?;:"„"()\[\]\-]/g, '').trim();
+            if (cleanW && cleanW !== '-') {
+                colors[cleanW] = { color, activeColor, base: color.split('-')[1] };
+            }
+        };
+
+        Object.entries(storyWords).forEach(([baseWord, data]) => {
+            if (data?.type === 'noun' && data?.article) {
+                const color = articleToColor[data.article];
+                const activeColor = activeArticleToColor[data.article];
+                if (!color) return;
+
+                addWord(baseWord, color, activeColor);
+                if (data.plural) {
+                    const pl = data.plural.split(' ').pop();
+                    addWord(pl, color, activeColor);
+                }
+                if (data.cases) {
+                    Object.values(data.cases).forEach(caseStr => {
+                        const cw = caseStr.split(' ').pop();
+                        addWord(cw, color, activeColor);
+                    });
+                }
+            }
+        });
+        return colors;
+    }, [storyWords]);
     const [activeWord, setActiveWord] = useState(null);
     const [isGenerating, setIsGenerating] = useState(false);
     const [savedWords, setSavedWords] = useState(new Set());
@@ -548,7 +608,7 @@ export default function VideoCoach() {
                             {activeIndex >= 0 ? (
                                 <div className="flex flex-col items-center gap-3 w-full">
                                     <div className="text-xl md:text-3xl font-bold leading-relaxed flex flex-wrap justify-center gap-x-1 md:gap-x-1.5 w-full max-w-4xl">
-                                        {transcript[activeIndex].text.split(/(\s+)/).map((token, ti) => {
+                                        {transcript[activeIndex].text.split(/(\s+)/).map((token, ti, arr) => {
                                             if (/\s+/.test(token)) {
                                                 return <span key={ti}>{token}</span>;
                                             }
@@ -557,6 +617,50 @@ export default function VideoCoach() {
                                             const hasGrammar = !!storyWords[clean];
                                             const isSaved = savedWords.has(clean);
                                             const isActiveGrammar = activeWord === clean;
+                                            let nounConfig = nounColors[clean];
+
+                                            // Look ahead to check if article
+                                            if (!nounConfig) {
+                                                const articles = ['der', 'die', 'das', 'den', 'dem', 'des', 'ein', 'eine', 'einen', 'einem', 'eines', 'mein', 'meine', 'meinen', 'meinem', 'meines', 'dein', 'deine', 'deinen', 'deinem', 'deines', 'sein', 'seine', 'seinen', 'seinem', 'seines', 'ihr', 'ihre', 'ihren', 'ihrem', 'ihres', 'unser', 'unsere', 'unseren', 'unserem', 'unseres', 'euer', 'eure', 'euren', 'eurem', 'eures', 'kein', 'keine', 'keinen', 'keinem', 'keines', 'am', 'im', 'zum', 'zur', 'beim', 'vom', 'ans', 'ins', 'ums'];
+                                                if (articles.includes(clean.toLowerCase())) {
+                                                    // arr also contains space tokens, so look up to 4 tokens ahead
+                                                    for (let k = 1; k <= 4; k++) {
+                                                        if (ti + k < arr.length) {
+                                                            const aheadToken = arr[ti + k];
+                                                            if (/\s+/.test(aheadToken)) continue;
+                                                            const ahead = aheadToken.replace(/[.,!?;:"„"()\[\]\-]/g, '').trim();
+                                                            if (nounColors[ahead]) {
+                                                                nounConfig = {
+                                                                    color: nounColors[ahead].color,
+                                                                    activeColor: nounColors[ahead].activeColor,
+                                                                    base: nounColors[ahead].base,
+                                                                    isArticle: true
+                                                                };
+                                                                break;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+
+                                            let tokenClass = `cursor-pointer rounded px-1 transition-all select-none drop-shadow-sm `;
+                                            if (isActiveGrammar) {
+                                                tokenClass += nounConfig && !nounConfig.isArticle ? `${nounConfig.activeColor} shadow-md scale-105` : 'bg-indigo-600 text-white shadow-md scale-105';
+                                            } else if (hasGrammar || (nounConfig && !nounConfig.isArticle)) {
+                                                if (isSaved) {
+                                                    tokenClass += nounConfig
+                                                        ? `${nounConfig.color} border-b-2 border-dotted border-${nounConfig.base}-600`
+                                                        : 'text-emerald-400 border-b-2 border-dotted border-emerald-600';
+                                                } else {
+                                                    tokenClass += nounConfig
+                                                        ? `${nounConfig.color} hover:text-${nounConfig.base}-200 border-b-2 border-dotted border-${nounConfig.base}-500/50 hover:bg-white/10`
+                                                        : 'text-indigo-300 hover:text-indigo-200 border-b-2 border-dotted border-indigo-500/50 hover:bg-indigo-900/40';
+                                                }
+                                            } else if (nounConfig && nounConfig.isArticle) {
+                                                tokenClass += `${nounConfig.color} hover:text-white/80 hover:bg-white/10`;
+                                            } else {
+                                                tokenClass += 'text-white hover:text-indigo-200 hover:bg-white/10';
+                                            }
 
                                             return (
                                                 <span
@@ -565,14 +669,7 @@ export default function VideoCoach() {
                                                         e.stopPropagation();
                                                         handleWordClick(token, transcript[activeIndex].text);
                                                     }}
-                                                    className={`cursor-pointer rounded px-1 transition-all select-none drop-shadow-sm ${isActiveGrammar
-                                                        ? 'bg-indigo-600 text-white shadow-md scale-105'
-                                                        : hasGrammar
-                                                            ? isSaved
-                                                                ? 'text-emerald-400 border-b-2 border-dotted border-emerald-600'
-                                                                : 'text-indigo-300 hover:text-indigo-200 border-b-2 border-dotted border-indigo-500/50 hover:bg-indigo-900/40'
-                                                            : 'text-white hover:text-indigo-200 hover:bg-white/10'
-                                                        }`}
+                                                    className={tokenClass}
                                                 >
                                                     {token}
                                                 </span>
@@ -628,36 +725,32 @@ export default function VideoCoach() {
                         <div className="flex items-center gap-1 mb-4 pb-4 border-b border-gray-800 flex-shrink-0">
                             <button
                                 onClick={() => setRightTab('transcript')}
-                                className={`px-4 py-1.5 rounded-lg text-sm font-bold transition-all ${
-                                    rightTab === 'transcript'
-                                        ? 'bg-indigo-600 text-white'
-                                        : 'text-gray-400 hover:text-white hover:bg-gray-800'
-                                }`}
+                                className={`px-4 py-1.5 rounded-lg text-sm font-bold transition-all ${rightTab === 'transcript'
+                                    ? 'bg-indigo-600 text-white'
+                                    : 'text-gray-400 hover:text-white hover:bg-gray-800'
+                                    }`}
                             >
                                 Prepis
                             </button>
                             <button
                                 onClick={() => setRightTab('segments')}
-                                className={`px-4 py-1.5 rounded-lg text-sm font-bold transition-all flex items-center gap-2 ${
-                                    rightTab === 'segments'
-                                        ? 'bg-indigo-600 text-white'
-                                        : 'text-gray-400 hover:text-white hover:bg-gray-800'
-                                }`}
+                                className={`px-4 py-1.5 rounded-lg text-sm font-bold transition-all flex items-center gap-2 ${rightTab === 'segments'
+                                    ? 'bg-indigo-600 text-white'
+                                    : 'text-gray-400 hover:text-white hover:bg-gray-800'
+                                    }`}
                             >
                                 Kapitoly
                                 {segments.length > 0 && (
-                                    <span className={`text-xs px-1.5 py-0.5 rounded-full font-medium ${
-                                        rightTab === 'segments' ? 'bg-indigo-500 text-white' : 'bg-gray-700 text-gray-300'
-                                    }`}>{segments.length}</span>
+                                    <span className={`text-xs px-1.5 py-0.5 rounded-full font-medium ${rightTab === 'segments' ? 'bg-indigo-500 text-white' : 'bg-gray-700 text-gray-300'
+                                        }`}>{segments.length}</span>
                                 )}
                             </button>
                             <button
                                 onClick={() => setRightTab('exercises')}
-                                className={`px-4 py-1.5 rounded-lg text-sm font-bold transition-all flex items-center gap-2 ${
-                                    rightTab === 'exercises'
-                                        ? 'bg-amber-600 text-white'
-                                        : 'text-gray-400 hover:text-white hover:bg-gray-800'
-                                }`}
+                                className={`px-4 py-1.5 rounded-lg text-sm font-bold transition-all flex items-center gap-2 ${rightTab === 'exercises'
+                                    ? 'bg-amber-600 text-white'
+                                    : 'text-gray-400 hover:text-white hover:bg-gray-800'
+                                    }`}
                             >
                                 Cvičenia
                                 {videoExercises && (
@@ -667,7 +760,15 @@ export default function VideoCoach() {
                                 )}
                             </button>
                             {rightTab === 'transcript' && (
-                                <p className="ml-auto text-xs text-gray-500">Klinutím na vetu pretočíš video</p>
+                                <p className="ml-auto text-xs text-gray-500 hidden xl:block">Klinutím na vetu pretočíš video</p>
+                            )}
+                            {LESSON_COMPONENTS[videoId] && (
+                                <button
+                                    onClick={() => setIsLessonModalOpen(true)}
+                                    className={`ml-auto px-4 py-1.5 rounded-lg text-sm font-bold transition-all flex items-center gap-2 bg-gradient-to-r from-emerald-600 to-teal-600 text-white hover:scale-105 shadow-md shadow-emerald-900/50`}
+                                >
+                                    🎓 Interaktívna lekcia
+                                </button>
                             )}
                         </div>
 
@@ -718,22 +819,19 @@ export default function VideoCoach() {
                                     return (
                                         <div
                                             key={idx}
-                                            className={`rounded-2xl border p-4 flex flex-col gap-3 transition-all ${
-                                                isActive
-                                                    ? 'bg-indigo-900/30 border-indigo-700/60'
-                                                    : 'bg-gray-800/40 border-gray-700/40 hover:border-gray-600/60'
-                                            }`}
+                                            className={`rounded-2xl border p-4 flex flex-col gap-3 transition-all ${isActive
+                                                ? 'bg-indigo-900/30 border-indigo-700/60'
+                                                : 'bg-gray-800/40 border-gray-700/40 hover:border-gray-600/60'
+                                                }`}
                                         >
                                             <div className="flex items-start gap-3">
-                                                <div className={`w-7 h-7 rounded-full flex items-center justify-center text-xs font-black flex-shrink-0 mt-0.5 ${
-                                                    isDone ? 'bg-emerald-600 text-white' : isActive ? 'bg-indigo-600 text-white' : 'bg-gray-700 text-gray-400'
-                                                }`}>
+                                                <div className={`w-7 h-7 rounded-full flex items-center justify-center text-xs font-black flex-shrink-0 mt-0.5 ${isDone ? 'bg-emerald-600 text-white' : isActive ? 'bg-indigo-600 text-white' : 'bg-gray-700 text-gray-400'
+                                                    }`}>
                                                     {isDone ? '✓' : idx + 1}
                                                 </div>
                                                 <div className="flex-1 min-w-0">
-                                                    <p className={`font-bold text-sm leading-tight mb-1 ${
-                                                        isActive ? 'text-white' : 'text-gray-200'
-                                                    }`}>{seg.topicDescription}</p>
+                                                    <p className={`font-bold text-sm leading-tight mb-1 ${isActive ? 'text-white' : 'text-gray-200'
+                                                        }`}>{seg.topicDescription}</p>
                                                     <p className="text-xs text-gray-500">{fmt(startSec)} – {fmt(endSec)}</p>
                                                 </div>
                                             </div>
@@ -794,6 +892,12 @@ export default function VideoCoach() {
                     if (playerRef.current) playerRef.current.playVideo();
                 }}
             />
+
+            {/* Walk & Talk Interactive Lesson Modal */}
+            {LESSON_COMPONENTS[videoId] && React.createElement(LESSON_COMPONENTS[videoId], {
+                isOpen: isLessonModalOpen,
+                onClose: () => setIsLessonModalOpen(false)
+            })}
         </div>
     );
 }

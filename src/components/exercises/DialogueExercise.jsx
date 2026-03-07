@@ -13,7 +13,7 @@ import { getExplanation } from '../../hooks/useAI';
 
 export function DialogueExercise({ exercise, lesson, onComplete }) {
   const { speak } = useTTS();
-  const turns = exercise.turns || [];
+  const turns = exercise.turns || exercise.conversation || [];
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedOption, setSelectedOption] = useState(null);
   const [confirmed, setConfirmed] = useState(false);
@@ -98,10 +98,10 @@ export function DialogueExercise({ exercise, lesson, onComplete }) {
           <div
             key={i}
             className={`flex-1 h-1 rounded-full transition-all duration-300 ${i < currentIndex
-                ? 'bg-emerald-500'
-                : i === currentIndex
-                  ? 'bg-indigo-500'
-                  : 'bg-gray-700'
+              ? 'bg-emerald-500'
+              : i === currentIndex
+                ? 'bg-indigo-500'
+                : 'bg-gray-700'
               }`}
           />
         ))}
@@ -110,8 +110,8 @@ export function DialogueExercise({ exercise, lesson, onComplete }) {
       {/* Turn card */}
       <div
         className={`card border rounded-2xl p-5 space-y-3 ${isPlayerTurn
-            ? 'border-indigo-700 bg-indigo-950/30'
-            : 'border-gray-700 bg-gray-800/60'
+          ? 'border-indigo-700 bg-indigo-950/30'
+          : 'border-gray-700 bg-gray-800/60'
           }`}
       >
         {/* Speaker label */}

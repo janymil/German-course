@@ -1,1 +1,44 @@
-{}
+{
+  "aké máš povolanie? (tykanie)|||was machst du von beruf?": {
+    "correct": false,
+    "corrected": "Was bist du von Beruf?",
+    "explanation": "V nemčine sa na otázku \"Aké máš povolanie?\" používa sloveso \"sein\" (byť), nie \"machen\" (robiť). Tvoja veta \"Was machst du von Beruf?\" by sa preložila skôr ako \"Čo robíš v rámci povolania?\", čo nie je presne to, čo sa pýtame.",
+    "tip": "Na otázku \"Aké máš povolanie?\" sa pýtaj \"Was bist du von Beruf?\"."
+  },
+  "pracujem ako informatik.|||ich arbeite als informatiker": {
+    "correct": true,
+    "corrected": "Ich arbeite als Informatiker",
+    "explanation": "Výborne! Veta je gramaticky správna a presne vyjadruje zadanú myšlienku.",
+    "tip": "Použitie 'als' je správne pri uvádzaní povolania."
+  },
+  "ona je lekárka. veľa pracuje.|||sie ist aertztin. sie arbeitet viel.": {
+    "correct": true,
+    "corrected": "Sie ist Aerztin. Sie arbeitet viel.",
+    "explanation": "Výborne! Tvoja veta je gramaticky správna. Použil si správne slová a slovosled.",
+    "tip": "Vždy si daj pozor na správne tvorenie podstatných mien a ich členov."
+  },
+  "1. wie alt ist jonas?|||jonas ist 10 jahre alt": {
+    "correct": false,
+    "corrected": "Jonas ist zehn Jahre alt.",
+    "explanation": "V nemčine sa začiatok vety píše s veľkým začiatočným písmenom. Číslovky sa tiež často píšu slovom.",
+    "tip": "Začiatok každej vety v nemčine musí byť s veľkým písmenom."
+  },
+  "2. wo wohnt jonas?|||jonas wohnt in dresden": {
+    "correct": true,
+    "corrected": "Jonas wohnt in Dresden.",
+    "explanation": "Výborne! Tvoja odpoveď je gramaticky správna a presne zodpovedá otázke.",
+    "tip": "Pri tvorení otázok a odpovedí si dávaj pozor na slovosled, najmä na pozíciu slovesa."
+  },
+  "3. in welche klasse geht er?|||er geht in vierte klasse": {
+    "correct": false,
+    "corrected": "Er geht in die vierte Klasse.",
+    "explanation": "V nemčine sa začiatok vety píše s veľkým začiatočným písmenom. Tiež je potrebné použiť člen 'die' pred 'vierte Klasse'.",
+    "tip": "Nezabudni na veľké začiatočné písmeno na začiatku vety a na správny člen pred podstatným menom."
+  },
+  "4. wie heißt sein bruder?|||dein bruder heißt max": {
+    "correct": false,
+    "corrected": "Sein Bruder heißt Max.",
+    "explanation": "V nemeckej gramatike sa zámená \"sein\" (jeho) a \"dein\" (tvoj) líšia. V tomto prípade sa pýtame na \"jeho\" brata, preto je správne použiť \"sein\".",
+    "tip": "Pozor na rozdiely medzi osobnými zámenami \"sein\" (jeho) a \"dein\" (tvoj)."
+  }
+}

@@ -1,0 +1,920 @@
+import React, { useState, useEffect } from 'react';
+import { BookOpen, MessageCircle, BookA, Dumbbell, Check, X, RefreshCw, Menu, ChevronRight } from 'lucide-react';
+
+// --- DATA: A1 Course Curriculum (FULL 9 LESSONS DEEP DIVE) ---
+const courseData = [
+  {
+    id: 1,
+    title: "Lektion 1: Hallo! (Pozdravy a predstavovanie)",
+    dialogs: [
+      { speaker: "Herr Müller", text: "Guten Morgen, Frau Schneider. Wie geht es Ihnen?" },
+      { speaker: "Frau Schneider", text: "Guten Morgen, Herr Müller. Danke, gut. Und Ihnen?" },
+      { speaker: "Junge Leute", text: "Hey Lena, na, wie geht's? - Super, danke. Und dir?" },
+      { speaker: "Lisa", text: "Hallo. Also hallo, wie heißt du?" },
+      { speaker: "Nico", text: "Ich heiße Nico. Und wie heißt du?" },
+      { speaker: "Lisa", text: "Ich heiße Lisa." },
+      { speaker: "Max", text: "Hallo, ich bin Max. Woher kommst du? Ich komme aus Deutschland." },
+      { speaker: "Nico", text: "Ich bin Nico. Ich komme aus Spanien." },
+      { speaker: "Max", text: "Und woher kommst du genau? Wo wohnst du in Spanien? Wohnst du in Barcelona, oder Madrid, Sevilla?" },
+      { speaker: "Nico", text: "Ich wohne in Sevilla." }
+    ],
+    vocabulary: [
+      { de: "Guten Morgen", en: "Dobré ráno" }, { de: "Guten Tag", en: "Dobrý deň" }, { de: "Guten Abend", en: "Dobrý večer" },
+      { de: "Hallo / Hey", en: "Ahoj (pri stretnutí)" }, { de: "Tschüss", en: "Ahoj (pri lúčení)" }, { de: "Auf Wiedersehen", en: "Dovidenia" },
+      { de: "Wie geht es Ihnen?", en: "Ako sa máte? (formálne/vykanie)" }, { de: "Wie geht es dir? / Wie geht's?", en: "Ako sa máš? (neformálne/tykanie)" },
+      { de: "Danke, gut / Super", en: "Ďakujem, dobre / Super" }, { de: "heißen", en: "volať sa" }, { de: "sein", en: "byť" },
+      { de: "kommen (aus)", en: "pochádzať (z)" }, { de: "wohnen (in)", en: "bývať (v)" }, { de: "der Name", en: "meno" },
+      { de: "das Land", en: "krajina" }, { de: "die Stadt", en: "mesto" }, { de: "genau", en: "presne" },
+      { de: "und / oder", en: "a / alebo" }, { de: "ja / nein", en: "áno / nie" }
+    ],
+    grammar: `
+      <h3 class="text-2xl font-bold text-indigo-900 mt-4 mb-3 border-b-2 border-indigo-100 pb-2">1. Osobné zámená a časovanie pravidelných slovies</h3>
+      <p class="mb-4">V nemčine, tak ako v slovenčine, menia slovesá svoju koncovku podľa osoby (časovanie). Pravidelné slovesá majú kmeň (napr. <strong>komm-</strong>) a k nemu sa pridáva koncovka.</p>
+      <div class="overflow-x-auto my-6 shadow-sm rounded-lg border border-slate-200">
+        <table class="min-w-full bg-white text-left">
+          <thead class="bg-indigo-50 text-indigo-900 border-b border-slate-200">
+            <tr><th class="py-3 px-4 font-semibold">Osoba</th><th class="py-3 px-4 font-semibold">kommen (pochádzať)</th><th class="py-3 px-4 font-semibold">wohnen (bývať)</th><th class="py-3 px-4 font-semibold">heißen* (volať sa)</th></tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100">
+            <tr><td class="py-3 px-4 font-bold">ich (ja)</td><td class="py-3 px-4">komm<strong class="text-indigo-600">-e</strong></td><td class="py-3 px-4">wohn<strong class="text-indigo-600">-e</strong></td><td class="py-3 px-4">heiß<strong class="text-indigo-600">-e</strong></td></tr>
+            <tr class="bg-slate-50"><td class="py-3 px-4 font-bold">du (ty)</td><td class="py-3 px-4">komm<strong class="text-indigo-600">-st</strong></td><td class="py-3 px-4">wohn<strong class="text-indigo-600">-st</strong></td><td class="py-3 px-4">heiß<strong class="text-indigo-600">-t</strong></td></tr>
+            <tr><td class="py-3 px-4 font-bold">er/sie/es (on/ona/ono)</td><td class="py-3 px-4">komm<strong class="text-indigo-600">-t</strong></td><td class="py-3 px-4">wohn<strong class="text-indigo-600">-t</strong></td><td class="py-3 px-4">heiß<strong class="text-indigo-600">-t</strong></td></tr>
+            <tr class="bg-slate-50"><td class="py-3 px-4 font-bold">wir (my)</td><td class="py-3 px-4">komm<strong class="text-indigo-600">-en</strong></td><td class="py-3 px-4">wohn<strong class="text-indigo-600">-en</strong></td><td class="py-3 px-4">heiß<strong class="text-indigo-600">-en</strong></td></tr>
+            <tr><td class="py-3 px-4 font-bold">ihr (vy - tykanie)</td><td class="py-3 px-4">komm<strong class="text-indigo-600">-t</strong></td><td class="py-3 px-4">wohn<strong class="text-indigo-600">-t</strong></td><td class="py-3 px-4">heiß<strong class="text-indigo-600">-t</strong></td></tr>
+            <tr class="bg-slate-50"><td class="py-3 px-4 font-bold">sie / Sie (oni / Vy)</td><td class="py-3 px-4">komm<strong class="text-indigo-600">-en</strong></td><td class="py-3 px-4">wohn<strong class="text-indigo-600">-en</strong></td><td class="py-3 px-4">heiß<strong class="text-indigo-600">-en</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-sm text-slate-500 italic mb-6">*Poznámka: Ak kmeň slovesa končí na -s, -ss, -ß alebo -z (ako pri <em>heißen</em>), v 2. osobe jednotného čísla sa pridáva iba <strong>-t</strong> (nie -st).</p>
+
+      <h3 class="text-2xl font-bold text-indigo-900 mt-8 mb-3 border-b-2 border-indigo-100 pb-2">2. Nepravidelné sloveso "sein" (byť)</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+        <ul class="bg-white border border-slate-200 rounded-lg p-4 shadow-sm"><li class="mb-2">ich <strong>bin</strong> (ja som)</li><li class="mb-2">du <strong>bist</strong> (ty si)</li><li>er/sie/es <strong>ist</strong> (on/ona/ono je)</li></ul>
+        <ul class="bg-white border border-slate-200 rounded-lg p-4 shadow-sm"><li class="mb-2">wir <strong>sind</strong> (my sme)</li><li class="mb-2">ihr <strong>seid</strong> (vy ste)</li><li>sie/Sie <strong>sind</strong> (oni sú / Vy ste)</li></ul>
+      </div>
+
+      <h3 class="text-2xl font-bold text-indigo-900 mt-8 mb-3 border-b-2 border-indigo-100 pb-2">3. Tvorba otázok (W-Fragen a Ja/Nein-Fragen)</h3>
+      <p class="mb-2"><strong>W-Fragen:</strong> Opytovacie zámeno na 1. mieste. Sloveso je vždy pevne na <strong>2. mieste</strong>.</p>
+      <ul class="list-disc pl-6 mb-4 space-y-1"><li><strong>Wie</strong> <em>heißt</em> du?</li><li><strong>Woher</strong> <em>kommst</em> du?</li><li><strong>Wo</strong> <em>wohnst</em> du?</li><li><strong>Wer</strong> <em>bist</em> du?</li></ul>
+      <p class="mb-2"><strong>Ja/Nein-Fragen:</strong> Odpovedáme Áno/Nie. Sloveso sa presunie na <strong>1. miesto</strong>.</p>
+      <ul class="list-disc pl-6 mb-4 space-y-1"><li><em>Kommst</em> du aus Spanien? -> Ja. / Nein.</li><li><em>Heißt</em> du Nico? -> Ja, ich heiße Nico.</li></ul>
+    `,
+    exercises: [
+      { type: "match", instruction: "1: Spojte pozdravy s prekladom.", pairs: [{ a: "Guten Morgen", b: "Dobré ráno" }, { a: "Guten Tag", b: "Dobrý deň" }, { a: "Guten Abend", b: "Dobrý večer" }, { a: "Auf Wiedersehen", b: "Dovidenia" }] },
+      { type: "match", instruction: "2: Spojte osobné zámená.", pairs: [{ a: "ich", b: "ja" }, { a: "du", b: "ty" }, { a: "wir", b: "my" }, { a: "Sie", b: "Vy (vykanie)" }] },
+      { type: "fill", instruction: "3: Vyčasujte 'sein' (bin, bist, ist, sind, seid).", text: "Ich {bin} Nico. Wer {bist} du? Das {ist} Lisa. Wir {sind} aus Deutschland. Woher {seid} ihr?" },
+      { type: "fill", instruction: "4: Vyčasujte 'kommen' (pochádzať).", text: "Ich {komme} aus Spanien. Woher {kommst} du? Max {kommt} aus Deutschland. Wir {kommen} aus Europa." },
+      { type: "fill", instruction: "5: Vyčasujte 'wohnen' a 'heißen'.", text: "Ich {wohne} in Sevilla. Wie {heißt} du? Er {heißt} Max und {wohnt} in Berlin. Wir {wohnen} hier." },
+      { type: "order", instruction: "6: Zostavte W-otázku.", words: ["heißt", "wie", "du", "?"], correct: "wie heißt du ?" },
+      { type: "order", instruction: "7: Zostavte W-otázku.", words: ["kommst", "woher", "genau", "du", "?"], correct: "woher kommst du genau ?" },
+      { type: "order", instruction: "8: Zostavte Ja/Nein otázku.", words: ["wohnst", "in", "du", "Spanien", "?"], correct: "wohnst du in spanien ?" },
+      { type: "translation", instruction: "9: Ako sa formálne (Vykanie) opýtate staršieho pána 'Ako sa máte?'", options: ["Wie geht es dir?", "Wie heißen Sie?", "Wie geht es Ihnen?", "Woher kommen Sie?"], correct: 2 },
+      { type: "translation", instruction: "10: Ako poviete 'Pochádzam z Nemecka.'?", options: ["Ich wohne in Deutschland.", "Ich komme aus Deutschland.", "Du kommst aus Deutschland.", "Ich bin Deutschland."], correct: 1 }
+    ]
+  },
+  {
+    id: 2,
+    title: "Lektion 2: Zahlen & Personalien (Čísla a údaje)",
+    dialogs: [
+      { speaker: "Polizist", text: "Setzen Sie sich doch bitte. Wie ist Ihre Adresse?" },
+      { speaker: "Nico", text: "Ich wohne in der Wagnergasse 136." },
+      { speaker: "Polizist", text: "Ihre Passnummer? Mein Pass ist weg. Oh, das ist nicht gut." },
+      { speaker: "Polizist", text: "Haben Sie eine Telefonnummer?" },
+      { speaker: "Lisa", text: "Das ist eine 0173 90 76 34 29." },
+      { speaker: "Sebastian", text: "Woher kommst du?" },
+      { speaker: "Nico", text: "Ich komme aus Spanien." },
+      { speaker: "Sebastian", text: "Und wie alt bist du?" },
+      { speaker: "Nico", text: "Ich bin 22 Jahre alt. Und du?" },
+      { speaker: "Sebastian", text: "Ich bin 25 Jahre alt und komme aus Deutschland." }
+    ],
+    vocabulary: [
+      { de: "die Adresse", en: "adresa" }, { de: "die Straße / die Gasse", en: "ulica / ulička" }, { de: "die Hausnummer", en: "číslo domu" },
+      { de: "die Telefonnummer", en: "telefónne číslo" }, { de: "der Pass", en: "cestovný pas" }, { de: "das Alter", en: "vek" },
+      { de: "das Jahr (Jahre)", en: "rok (roky)" }, { de: "die Polizei", en: "polícia" }, { de: "das Problem", en: "problém" },
+      { de: "die Tasche", en: "taška" }, { de: "weg", en: "stratený, preč" }, { de: "haben", en: "mať" }, { de: "alt", en: "starý" },
+      { de: "null, eins, zwei, drei", en: "0, 1, 2, 3" }, { de: "vier, fünf, sechs, sieben", en: "4, 5, 6, 7" },
+      { de: "acht, neun, zehn", en: "8, 9, 10" }, { de: "elf, zwölf", en: "11, 12" }, { de: "zwanzig, einundzwanzig", en: "20, 21" }
+    ],
+    grammar: `
+      <h3 class="text-2xl font-bold text-indigo-900 mt-4 mb-3 border-b-2 border-indigo-100 pb-2">1. Sloveso "haben" (mať)</h3>
+      <p class="mb-4">Toto je druhé najdôležitejšie nepravidelné sloveso v nemčine. Všimnite si, že v 2. a 3. osobe jednotného čísla stráca písmeno "b".</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+        <ul class="bg-white border border-slate-200 rounded-lg p-4 shadow-sm"><li class="mb-2">ich <strong>habe</strong> (ja mám)</li><li class="mb-2">du <strong>hast</strong> (ty máš)</li><li>er/sie/es <strong>hat</strong> (on/ona/ono má)</li></ul>
+        <ul class="bg-white border border-slate-200 rounded-lg p-4 shadow-sm"><li class="mb-2">wir <strong>haben</strong> (my máme)</li><li class="mb-2">ihr <strong>habt</strong> (vy máte)</li><li>sie/Sie <strong>haben</strong> (oni majú / Vy máte)</li></ul>
+      </div>
+
+      <h3 class="text-2xl font-bold text-indigo-900 mt-8 mb-3 border-b-2 border-indigo-100 pb-2">2. Určitý člen (Der, Die, Das)</h3>
+      <p class="mb-4">Podstatné mená sa <strong>vždy píšu s veľkým začiatočným písmenom!</strong> Každé podstatné meno má svoj rod.</p>
+      <ul class="list-none space-y-2 mb-6 bg-white p-5 rounded-lg border border-slate-200 shadow-sm">
+        <li><span class="inline-block w-16 font-bold text-blue-600">der</span> (mužský rod): der Pass, der Name</li>
+        <li><span class="inline-block w-16 font-bold text-red-600">die</span> (ženský rod): die Adresse, die Tasche, die Polizei</li>
+        <li><span class="inline-block w-16 font-bold text-green-600">das</span> (stredný rod): das Problem, das Alter</li>
+      </ul>
+
+      <h3 class="text-2xl font-bold text-indigo-900 mt-8 mb-3 border-b-2 border-indigo-100 pb-2">3. Číslovky (Zahlen 0 - 20+)</h3>
+      <p class="mb-2"><strong>Základ:</strong> 0 null, 1 eins, 2 zwei, 3 drei... 10 zehn, 11 elf, 12 zwölf.</p>
+      <p class="mb-2"><strong>13 - 19:</strong> Tvoria sa pridaním "-zehn" (13 dreizehn, 14 vierzehn). Pozor: 16 sechzehn, 17 siebzehn.</p>
+      <p class="mb-2"><strong>Od 21 ďalej:</strong> Čítajú sa "odzadu" pomocou <em>und</em>: 21 ein-und-zwanzig, 22 zwei-und-zwanzig.</p>
+    `,
+    exercises: [
+      { type: "match", instruction: "1: Spojte čísla (1-10).", pairs: [{ a: "zwei", b: "2" }, { a: "vier", b: "4" }, { a: "sieben", b: "7" }, { a: "acht", b: "8" }] },
+      { type: "match", instruction: "2: Spojte čísla (11-20).", pairs: [{ a: "elf", b: "11" }, { a: "sechzehn", b: "16" }, { a: "siebzehn", b: "17" }, { a: "zwanzig", b: "20" }] },
+      { type: "fill", instruction: "3: Vyčasujte 'haben'.", text: "Ich {habe} ein Problem. {Hast} du eine Nummer? Der Polizist {hat} den Pass. Wir {haben} Zeit." },
+      { type: "fill", instruction: "4: Mix 'haben' a 'sein'.", text: "Ich {bin} Nico und ich {habe} ein Problem. Wie alt {bist} du? Er {ist} 22 Jahre alt und er {hat} eine Tasche." },
+      { type: "fill", instruction: "5: Doplňte určitý člen (der, die, das).", text: "{die} Tasche ist schwarz. Wo ist {der} Pass? {das} Problem ist groß. {die} Adresse ist in Berlin." },
+      { type: "order", instruction: "6: Zostavte otázku.", words: ["ist", "wie", "Adresse", "Ihre", "?"], correct: "wie ist ihre adresse ?" },
+      { type: "order", instruction: "7: Zostavte vetu.", words: ["Jahre", "22", "bin", "ich", "alt", "."], correct: "ich bin 22 jahre alt ." },
+      { type: "order", instruction: "8: Zostavte otázku.", words: ["eine", "hast", "Telefonnummer", "du", "?"], correct: "hast du eine telefonnummer ?" },
+      { type: "translation", instruction: "9: Ako poviete 'Moja taška je preč.'?", options: ["Meine Tasche ist hier.", "Ich habe eine Tasche.", "Meine Tasche ist weg.", "Die Tasche ist groß."], correct: 2 },
+      { type: "translation", instruction: "10: Ako poviete 'Mám problém.'?", options: ["Ich bin ein Problem.", "Ich habe ein Problem.", "Das ist kein Problem.", "Du hast ein Problem."], correct: 1 }
+    ]
+  },
+  {
+    id: 3,
+    title: "Lektion 3: Im Restaurant (Jedlo a objednávanie)",
+    dialogs: [
+      { speaker: "Nico", text: "Habt ihr Hunger?" },
+      { speaker: "Lisa", text: "Ja. Hier ist die Speisekarte." },
+      { speaker: "Kellnerin", text: "Was möchtest du essen?" },
+      { speaker: "Nico", text: "Ich möchte eine Pizza bitte." },
+      { speaker: "Nina", text: "Ich nehme eine Pizza Hawaii ohne Schinken bitte. Ich bin Vegetarierin." },
+      { speaker: "Tarek", text: "Und was möchtest du trinken? Kaffee, Tee, Cola, Wasser?" },
+      { speaker: "Lisa", text: "Für mich bitte einen Kaffee mit Milch und Zucker." },
+      { speaker: "Kellnerin", text: "Zusammen oder getrennt?" },
+      { speaker: "Max", text: "Zusammen. Was kostet das?" },
+      { speaker: "Kellnerin", text: "Das macht 45 Euro. Zahlen Sie bar oder mit Karte?" }
+    ],
+    vocabulary: [
+      { de: "das Restaurant", en: "reštaurácia" }, { de: "die Speisekarte", en: "jedálny lístok" }, { de: "der Hunger / der Durst", en: "hlad / smäd" },
+      { de: "essen / trinken", en: "jesť / piť" }, { de: "nehmen", en: "vziať si (objednať)" }, { de: "das Wasser", en: "voda" },
+      { de: "der Kaffee / der Tee", en: "káva / čaj" }, { de: "die Milch / der Zucker", en: "mlieko / cukor" }, { de: "die Pizza", en: "pizza" },
+      { de: "der Schinken / die Salami", en: "šunka / saláma" }, { de: "mit / ohne", en: "s / bez" }, { de: "die Rechnung", en: "účet" },
+      { de: "zahlen / bezahlen", en: "platiť" }, { de: "zusammen / getrennt", en: "spolu / zvlášť" }, { de: "bar / mit Karte", en: "v hotovosti / kartou" }
+    ],
+    grammar: `
+      <h3 class="text-2xl font-bold text-indigo-900 mt-4 mb-3 border-b-2 border-indigo-100 pb-2">1. Neurčitý člen a Akuzatív (4. pád)</h3>
+      <p class="mb-4">Keď niečo objednávate (slovesá: <em>nehmen, essen, trinken, haben, möchten</em>), predmet je v <strong>4. páde (Akuzatív)</strong>.<br/>
+      <strong>Dôležité:</strong> Mení sa <strong>IBA mužský rod</strong>! (der -> den / ein -> einen).</p>
+      <div class="overflow-x-auto my-6 shadow-sm rounded-lg border border-slate-200">
+        <table class="min-w-full bg-white text-left">
+          <thead class="bg-indigo-50 text-indigo-900 border-b border-slate-200">
+            <tr><th class="py-3 px-4 font-semibold">Rod</th><th class="py-3 px-4 font-semibold">1. pád (Nominatív)</th><th class="py-3 px-4 font-semibold text-red-600">4. pád (Akuzatív)</th></tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100">
+            <tr><td class="py-3 px-4 font-bold">Mužský (der Kaffee)</td><td class="py-3 px-4">ein Kaffee</td><td class="py-3 px-4 bg-red-50 font-bold text-red-700">einen Kaffee</td></tr>
+            <tr class="bg-slate-50"><td class="py-3 px-4 font-bold">Ženský (die Pizza)</td><td class="py-3 px-4">eine Pizza</td><td class="py-3 px-4">eine Pizza</td></tr>
+            <tr><td class="py-3 px-4 font-bold">Stredný (das Wasser)</td><td class="py-3 px-4">ein Wasser</td><td class="py-3 px-4">ein Wasser</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="text-2xl font-bold text-indigo-900 mt-8 mb-3 border-b-2 border-indigo-100 pb-2">2. Sloveso "möchten" (chcel by som)</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+        <ul class="bg-white border border-slate-200 rounded-lg p-4 shadow-sm"><li class="mb-2">ich <strong>möchte</strong> (chcel by som)</li><li class="mb-2">du <strong>möchtest</strong> (chcel by si)</li><li>er/sie/es <strong>möchte</strong> (chcel by)</li></ul>
+        <ul class="bg-white border border-slate-200 rounded-lg p-4 shadow-sm"><li class="mb-2">wir <strong>möchten</strong> (chceli by sme)</li><li class="mb-2">ihr <strong>möchtet</strong> (chceli by ste)</li><li>sie/Sie <strong>möchten</strong> (chceli by / Vy)</li></ul>
+      </div>
+
+      <h3 class="text-2xl font-bold text-indigo-900 mt-8 mb-3 border-b-2 border-indigo-100 pb-2">3. Nepravidelné slovesá: nehmen a essen</h3>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>nehmen</strong>: ich nehme, <strong>du nimmst</strong>, <strong>er nimmt</strong>, wir nehmen.</li>
+        <li><strong>essen</strong>: ich esse, <strong>du isst</strong>, <strong>er isst</strong>, wir essen.</li>
+      </ul>
+    `,
+    exercises: [
+      { type: "match", instruction: "1: Spojte potraviny.", pairs: [{ a: "der Kaffee", b: "káva" }, { a: "der Tee", b: "čaj" }, { a: "der Schinken", b: "šunka" }, { a: "das Wasser", b: "voda" }] },
+      { type: "match", instruction: "2: Spojte frázy.", pairs: [{ a: "mit Milch", b: "s mliekom" }, { a: "ohne Zucker", b: "bez cukru" }, { a: "zusammen", b: "spolu (platiť)" }, { a: "getrennt", b: "zvlášť (platiť)" }] },
+      { type: "fill", instruction: "3: Doplňte člen v AKUZATÍVE (einen, eine, ein).", text: "Ich nehme {einen} Kaffee (der). Sie isst {eine} Pizza (die). Er trinkt {ein} Wasser (das). Wir möchten {einen} Tee (der)." },
+      { type: "fill", instruction: "4: Vyčasujte 'möchten'.", text: "Ich {möchte} eine Pizza. Was {möchtest} du trinken? Lisa und Max {möchten} zahlen. Er {möchte} einen Kaffee." },
+      { type: "fill", instruction: "5: Vyčasujte 'nehmen' a 'essen'.", text: "Ich {nehme} einen Tee. Was {nimmst} du? Nico {isst} eine Pizza. Was {esst} ihr?" },
+      { type: "order", instruction: "6: Zostavte otázku čašníka.", words: ["Sie", "zusammen", "zahlen", "getrennt", "oder", "?"], correct: "zahlen sie zusammen oder getrennt ?" },
+      { type: "order", instruction: "7: Zostavte objednávku.", words: ["nehme", "Pizza", "bitte", "ich", "eine", "."], correct: "ich nehme eine pizza bitte ." },
+      { type: "order", instruction: "8: Otázka na cenu.", words: ["kostet", "das", "was", "?"], correct: "was kostet das ?" },
+      { type: "translation", instruction: "9: Ako poviete 'Platíte v hotovosti alebo kartou?'", options: ["Zahlen Sie zusammen oder getrennt?", "Was kostet das, bitte?", "Zahlen Sie bar oder mit Karte?", "Ich möchte zahlen."], correct: 2 },
+      { type: "translation", instruction: "10: Ako si objednáte 'Kávu bez mlieka'?", options: ["Ich möchte eine Pizza ohne Salami.", "Einen Kaffee ohne Milch, bitte.", "Ein Wasser mit Zucker, bitte.", "Einen Tee mit Milch, bitte."], correct: 1 }
+    ]
+  },
+  {
+    id: 4,
+    title: "Lektion 4: Länder, Sprachen & Richtungen",
+    dialogs: [
+      { speaker: "Lisa", text: "Was ist das? Das ist eine Sehenswürdigkeit in Köln, der Kölner Dom." },
+      { speaker: "Lisa", text: "Warst du schon mal in Köln? Kennst du die Stadt?" },
+      { speaker: "Nico", text: "Ich war schon mal in Hamburg und in Köln. In Heidelberg war ich noch nie." },
+      { speaker: "Max", text: "Also, es gibt vier Teams. Im Osten, im Süden, im Westen und im Norden." },
+      { speaker: "Nico", text: "Hey, ich bin Nico. Ich komme aus Spanien, aus Sevilla. Sevilla ist im Süden von Spanien." },
+      { speaker: "Selma", text: "Ich bin Selma, komme aus Syrien. Damaskus. Damaskus ist auch im Süden von Syrien." },
+      { speaker: "Lisa", text: "Und welche Sprache sprichst du, Nico?" },
+      { speaker: "Nico", text: "Ich spreche Spanisch, ein bisschen Englisch und ein bisschen Deutsch." }
+    ],
+    vocabulary: [
+      { de: "der Norden / der Süden", en: "sever / juh" }, { de: "der Osten / der Westen", en: "východ / západ" },
+      { de: "die Sprache (Sprachen)", en: "jazyk (reč)" }, { de: "sprechen", en: "hovoriť / rozprávať" },
+      { de: "das Land", en: "krajina" }, { de: "die Stadt", en: "mesto" }, { de: "die Sehenswürdigkeit", en: "pamiatka" },
+      { de: "schon mal", en: "už niekedy" }, { de: "noch nie", en: "ešte nikdy" }, { de: "ein bisschen", en: "trochu" },
+      { de: "welche", en: "ktorý / aký (výber)" }, { de: "Spanisch / Englisch / Deutsch", en: "španielčina / angličtina / nemčina" }
+    ],
+    grammar: `
+      <h3 class="text-2xl font-bold text-indigo-900 mt-4 mb-3 border-b-2 border-indigo-100 pb-2">1. Nepravidelné sloveso "sprechen" (hovoriť)</h3>
+      <p class="mb-4">Pri slovese <em>sprechen</em> dochádza k zmene samohlásky v kmeni (e -> i) v 2. a 3. osobe jednotného čísla.</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+        <ul class="bg-white border border-slate-200 rounded-lg p-4 shadow-sm"><li class="mb-2">ich <strong>spreche</strong></li><li class="mb-2">du <strong>sprichst</strong></li><li>er/sie/es <strong>spricht</strong></li></ul>
+        <ul class="bg-white border border-slate-200 rounded-lg p-4 shadow-sm"><li class="mb-2">wir <strong>sprechen</strong></li><li class="mb-2">ihr <strong>sprecht</strong></li><li>sie/Sie <strong>sprechen</strong></li></ul>
+      </div>
+
+      <h3 class="text-2xl font-bold text-indigo-900 mt-8 mb-3 border-b-2 border-indigo-100 pb-2">2. Opytovacie zámeno "welche" (ktorý/aký)</h3>
+      <p class="mb-4">Používa sa, keď sa pýtame na výber z určitej skupiny. Skloňuje sa podľa podstatného mena, pred ktorým stojí.</p>
+      <ul class="list-disc pl-6 mb-4 space-y-1">
+        <li><strong>Welche</strong> Sprache sprichst du? (Akým jazykom hovoríš? - <em>die Sprache</em>)</li>
+        <li><strong>Welchen</strong> Pullover kaufst du? (Ktorý sveter kupuješ? - <em>der Pullover, Akuzatív</em>)</li>
+      </ul>
+
+      <h3 class="text-2xl font-bold text-indigo-900 mt-8 mb-3 border-b-2 border-indigo-100 pb-2">3. Svetové strany a predložky</h3>
+      <p class="mb-4">Svetové strany sú mužského rodu (der Norden). Keď hovoríme, kde sa niečo nachádza, používame <strong>im</strong> (in + dem).</p>
+      <ul class="list-disc pl-6 mb-4 space-y-1">
+        <li>Hamburg ist <strong>im Norden</strong> von Deutschland. (Hamburg je na severe Nemecka.)</li>
+        <li>Sevilla ist <strong>im Süden</strong> von Spanien.</li>
+      </ul>
+    `,
+    exercises: [
+      { type: "match", instruction: "1: Spojte svetové strany.", pairs: [{ a: "der Norden", b: "sever" }, { a: "der Süden", b: "juh" }, { a: "der Osten", b: "východ" }, { a: "der Westen", b: "západ" }] },
+      { type: "match", instruction: "2: Spojte frázy.", pairs: [{ a: "schon mal", b: "už niekedy" }, { a: "noch nie", b: "ešte nikdy" }, { a: "ein bisschen", b: "trochu" }, { a: "welche Sprache", b: "aký jazyk" }] },
+      { type: "fill", instruction: "3: Vyčasujte 'sprechen'.", text: "Ich {spreche} Spanisch. Welche Sprache {sprichst} du? Selma {spricht} Deutsch. Wir {sprechen} Englisch." },
+      { type: "fill", instruction: "4: Doplňte 'im'.", text: "Hamburg ist {im} Norden. Damaskus ist {im} Süden. Berlin ist {im} Osten." },
+      { type: "fill", instruction: "5: Doplňte 'welche' alebo 'ein bisschen'.", text: "{Welche} Sprache sprichst du? Ich spreche {ein bisschen} Deutsch. Hast du {schon mal} Pizza gegessen?" },
+      { type: "order", instruction: "6: Zostavte otázku o jazykoch.", words: ["Sprache", "welche", "du", "sprichst", "?"], correct: "welche sprache sprichst du ?" },
+      { type: "order", instruction: "7: Zostavte vetu o polohe.", words: ["im", "Süden", "Sevilla", "ist", "Spanien", "von", "."], correct: "sevilla ist im süden von spanien ." },
+      { type: "order", instruction: "8: Zostavte vetu s 'noch nie'.", words: ["in", "war", "ich", "Heidelberg", "nie", "noch", "."], correct: "ich war noch nie in heidelberg ." },
+      { type: "translation", instruction: "9: Ako poviete 'Hovorím trochu po anglicky.'?", options: ["Ich spreche gut Englisch.", "Ich bin Englisch.", "Ich spreche ein bisschen Englisch.", "Welche Sprache sprichst du?"], correct: 2 },
+      { type: "translation", instruction: "10: Ako poviete 'Bol si už niekedy v Berlíne?'", options: ["Warst du schon mal in Berlin?", "Ich war noch nie in Berlin.", "Wo ist Berlin?", "Kommst du aus Berlin?"], correct: 0 }
+    ]
+  },
+  {
+    id: 5,
+    title: "Lektion 5: Wohnen & Möbel (Bývanie a nábytok)",
+    dialogs: [
+      { speaker: "Vermieter", text: "Das ist die Wohnung. Die Fenster sind groß und hell." },
+      { speaker: "Lisa", text: "Es ist eine Vierzimmerwohnung. Es gibt vier Zimmer, eine Küche und ein Bad." },
+      { speaker: "Vermieter", text: "Das Zimmer ist vielleicht ganz schön groß. Es hat elf Quadratmeter." },
+      { speaker: "Lisa", text: "Die Küche ist sehr gemütlich. Hier sitzen wir oft." },
+      { speaker: "Nico", text: "Wie teuer ist das Zimmer?" },
+      { speaker: "Lisa", text: "Die Miete kostet mit Nebenkosten 400 Euro im Monat." },
+      { speaker: "Nico", text: "Ok, ich nehme das Zimmer." },
+      { speaker: "Max", text: "Der Tisch ist nicht schön. Die Stühle sind alt und der Schrank ist viel zu groß. Das Sofa stellen wir an die Wand." }
+    ],
+    vocabulary: [
+      { de: "die Wohnung", en: "byt" }, { de: "das Zimmer", en: "izba" }, { de: "die Küche", en: "kuchyňa" }, { de: "das Bad", en: "kúpeľňa" },
+      { de: "das Fenster", en: "okno" }, { de: "der Tisch", en: "stôl" }, { de: "der Stuhl (Stühle)", en: "stolička (stoličky)" },
+      { de: "der Schrank", en: "skriňa" }, { de: "das Sofa", en: "gauč" }, { de: "das Bett", en: "posteľ" },
+      { de: "die Miete", en: "nájomné" }, { de: "teuer / billig", en: "drahý / lacný" }, { de: "hell / dunkel", en: "svetlý / tmavý" },
+      { de: "groß / klein", en: "veľký / malý" }, { de: "gemütlich / ruhig", en: "útulný / tichý" }, { de: "alt / neu", en: "starý / nový" }
+    ],
+    grammar: `
+      <h3 class="text-2xl font-bold text-indigo-900 mt-4 mb-3 border-b-2 border-indigo-100 pb-2">1. Prídavné mená po slovese "sein"</h3>
+      <p class="mb-4">Keď používame prídavné mená na opis a stoja za slovesami ako <em>sein</em> (byť), <strong>neskloňujú sa</strong> (zostávajú v základnom tvare).</p>
+      <ul class="list-disc pl-6 mb-4 space-y-1">
+        <li>Das Zimmer ist <strong>groß</strong>. (Izba je veľká.)</li>
+        <li>Die Stühle sind <strong>alt</strong>. (Stoličky sú staré.)</li>
+      </ul>
+
+      <h3 class="text-2xl font-bold text-indigo-900 mt-8 mb-3 border-b-2 border-indigo-100 pb-2">2. Zápor: "nicht" vs. "kein"</h3>
+      <p class="mb-4">V nemčine máme dva spôsoby popierania:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>kein / keine / keinen</strong> (žiadny/a) popiera <strong>podstatné mená</strong>, ktoré nemajú člen alebo majú neurčitý člen.<br/>
+        <em>Ich habe <strong>kein</strong> Bett.</em> (Nemám [žiadnu] posteľ.)<br/>
+        <em>Hier ist <strong>keine</strong> Küche.</em> (Tu nie je [žiadna] kuchyňa.)</li>
+        <li><strong>nicht</strong> (nie) popiera slovesá, prídavné mená alebo podstatné mená s určitým členom. Stojí pred slovom, ktoré popiera, alebo na konci vety.<br/>
+        <em>Der Tisch ist <strong>nicht</strong> schön.</em> (Stôl nie je pekný.)<br/>
+        <em>Ich kaufe das Sofa <strong>nicht</strong>.</em> (Nekúpim ten gauč.)</li>
+      </ul>
+    `,
+    exercises: [
+      { type: "match", instruction: "1: Spojte protiklady prídavných mien.", pairs: [{ a: "groß", b: "klein" }, { a: "teuer", b: "billig" }, { a: "hell", b: "dunkel" }, { a: "alt", b: "neu" }] },
+      { type: "match", instruction: "2: Spojte nábytok.", pairs: [{ a: "der Tisch", b: "stôl" }, { a: "der Stuhl", b: "stolička" }, { a: "der Schrank", b: "skriňa" }, { a: "das Bett", b: "posteľ" }] },
+      { type: "fill", instruction: "3: Doplňte zápor 'kein/keine' (žiadny/a).", text: "Ich habe {kein} Zimmer (das). Hier ist {keine} Küche (die). Das ist {kein} Schrank (der)." },
+      { type: "fill", instruction: "4: Doplňte 'nicht' alebo 'kein'.", text: "Das Sofa ist {nicht} teuer. Ich habe {kein} Auto. Der Raum ist {nicht} hell. Er spricht {nicht} Deutsch." },
+      { type: "fill", instruction: "5: Doplňte prídavné mená (groß, gemütlich, teuer).", text: "11 Quadratmeter ist {groß}. Die Miete kostet 1000 Euro, das ist {teuer}. Die Küche ist sehr {gemütlich}." },
+      { type: "order", instruction: "6: Zostavte vetu o izbe.", words: ["Zimmer", "das", "groß", "ist", "sehr", "."], correct: "das zimmer ist sehr groß ." },
+      { type: "order", instruction: "7: Zostavte vetu so záporom.", words: ["Tisch", "der", "schön", "ist", "nicht", "."], correct: "der tisch ist nicht schön ." },
+      { type: "order", instruction: "8: Zostavte otázku o cene.", words: ["das", "teuer", "ist", "wie", "Zimmer", "?"], correct: "wie teuer ist das zimmer ?" },
+      { type: "translation", instruction: "9: Ako poviete 'Tu je kuchyňa a kúpeľňa.'?", options: ["Das ist eine Wohnung.", "Die Miete ist teuer.", "Hier ist eine Küche und ein Bad.", "Das Zimmer ist hell."], correct: 2 },
+      { type: "translation", instruction: "10: Ako poviete 'Nemám žiadnu stoličku.' (der Stuhl -> Akuzatív)", options: ["Ich habe keinen Stuhl.", "Ich habe nicht Stuhl.", "Der Stuhl ist alt.", "Ich brauche ein Sofa."], correct: 0 }
+    ]
+  },
+  {
+    id: 6,
+    title: "Lektion 6: Tagesablauf & Uhrzeit (Denný režim a čas)",
+    dialogs: [
+      { speaker: "Nina", text: "Wann arbeitest du morgen?" },
+      { speaker: "Lisa", text: "Ich arbeite morgen von 8 bis 12." },
+      { speaker: "Lisa", text: "Nico, hast du morgen Zeit? Emma steht um halb sieben auf." },
+      { speaker: "Nico", text: "Ja, gerne. Was macht sie?" },
+      { speaker: "Lisa", text: "Zum Frühstück isst sie normalerweise Müsli mit Milch. Das Mittagessen gibt es um 12. Von 2 bis 3 macht sie Hausaufgaben." },
+      { speaker: "Lisa", text: "Und nach dem Spielen: räume auf!" },
+      { speaker: "Tarek", text: "Am Wochenende öffnen wir morgens um neun und schließen abends um elf Uhr." }
+    ],
+    vocabulary: [
+      { de: "die Uhrzeit", en: "čas (hodiny)" }, { de: "die Stunde / die Minute", en: "hodina / minúta" },
+      { de: "aufstehen", en: "vstávať" }, { de: "aufräumen", en: "upratovať" }, { de: "einkaufen", en: "nakupovať" },
+      { de: "das Frühstück / das Mittagessen", en: "raňajky / obed" }, { de: "das Abendessen", en: "večera" },
+      { de: "halb", en: "pol (pri čase)" }, { de: "Viertel nach / Viertel vor", en: "štvrť na (po) / trištvrte na (pred)" },
+      { de: "der Morgen / morgens", en: "ráno / každé ráno" }, { de: "der Abend / abends", en: "večer / každý večer" },
+      { de: "von ... bis", en: "od ... do" }, { de: "um / am", en: "o (čase) / v (dni)" },
+      { de: "die Hausaufgaben machen", en: "robiť domáce úlohy" }
+    ],
+    grammar: `
+      <h3 class="text-2xl font-bold text-indigo-900 mt-4 mb-3 border-b-2 border-indigo-100 pb-2">1. Časové predložky (um, am, von... bis)</h3>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>um:</strong> používame pre konkrétny čas na hodinách.<br/><em>Emma steht <strong>um</strong> 7 Uhr auf.</em> (Vstáva o siedmej.)</li>
+        <li><strong>am:</strong> používame pre dni v týždni a časti dňa (okrem noci).<br/><em><strong>Am</strong> Montag spiele ich Fußball. <strong>Am</strong> Morgen trinke ich Kaffee.</em></li>
+        <li><strong>von... bis:</strong> používame pre vyjadrenie trvania.<br/><em>Ich arbeite <strong>von</strong> 8 <strong>bis</strong> 12 Uhr.</em></li>
+      </ul>
+
+      <h3 class="text-2xl font-bold text-indigo-900 mt-8 mb-3 border-b-2 border-indigo-100 pb-2">2. Odlučiteľné predpony (Trennbare Verben)</h3>
+      <p class="mb-4">Niektoré slovesá majú predponu (auf, ein, an, mit), ktorá sa pri časovaní v prítomnom čase odtrhne a presunie sa <strong>na úplný koniec vety</strong>.</p>
+      <ul class="list-disc pl-6 mb-4 space-y-1">
+        <li><strong>auf|stehen</strong> (vstať): Ich <strong>stehe</strong> um halb sieben <strong>auf</strong>.</li>
+        <li><strong>auf|räumen</strong> (upratať): Nico <strong>räumt</strong> das Zimmer <strong>auf</strong>.</li>
+        <li><strong>ein|kaufen</strong> (nakupovať): Wir <strong>kaufen</strong> im Supermarkt <strong>ein</strong>.</li>
+      </ul>
+
+      <h3 class="text-2xl font-bold text-indigo-900 mt-8 mb-3 border-b-2 border-indigo-100 pb-2">3. Slovosled: Inverzia</h3>
+      <p class="mb-4">Vyčasované sloveso je vždy na <strong>2. mieste</strong>. Ak vetu začneme časovým údajom, podmet (osoba) ide až za sloveso.</p>
+      <ul class="list-disc pl-6 mb-4 space-y-1">
+        <li><strong>Ich</strong> <em>stehe</em> um 7 Uhr auf. (Podmet na 1. mieste)</li>
+        <li><strong>Um 7 Uhr</strong> <em>stehe</em> <strong>ich</strong> auf. (Čas na 1. mieste -> Inverzia)</li>
+      </ul>
+    `,
+    exercises: [
+      { type: "match", instruction: "1: Spojte časti dňa.", pairs: [{ a: "der Morgen", b: "ráno" }, { a: "der Mittag", b: "obed" }, { a: "der Nachmittag", b: "popoludnie" }, { a: "der Abend", b: "večer" }] },
+      { type: "match", instruction: "2: Spojte činnosti.", pairs: [{ a: "aufstehen", b: "vstávať" }, { a: "aufräumen", b: "upratovať" }, { a: "einkaufen", b: "nakupovať" }, { a: "Hausaufgaben machen", b: "robiť domáce úlohy" }] },
+      { type: "fill", instruction: "3: Doplňte časové predložky (um, am, von, bis).", text: "Ich arbeite {von} 9 {bis} 17 Uhr. {Am} Montag habe ich frei. Wir essen {um} 12 Uhr." },
+      { type: "fill", instruction: "4: Doplňte odlučiteľné predpony (auf, ein).", text: "Ich stehe um 7 Uhr {auf}. Nico kauft im Supermarkt {ein}. Lisa räumt die Küche {auf}." },
+      { type: "fill", instruction: "5: Vyčasujte 'aufstehen' (vstávať).", text: "Wann {stehst} du auf? Ich {stehe} um halb 8 {auf}. Emma {steht} früh {auf}." },
+      { type: "order", instruction: "6: Zostavte vetu (pozor na odlučiteľnú predponu).", words: ["stehe", "7 Uhr", "ich", "um", "auf", "."], correct: "ich stehe um 7 uhr auf ." },
+      { type: "order", instruction: "7: Zostavte vetu s INVERZIOU (Čas na začiatku).", words: ["Morgen", "am", "ich", "räume", "auf", "."], correct: "am morgen räume ich auf ." },
+      { type: "order", instruction: "8: Zostavte otázku.", words: ["du", "arbeitest", "wann", "morgen", "?"], correct: "wann arbeitest du morgen ?" },
+      { type: "translation", instruction: "9: Ako poviete 'Ona raňajkuje Müsli.'?", options: ["Sie isst Müsli zum Mittagessen.", "Zum Frühstück isst sie Müsli.", "Sie kauft Müsli ein.", "Emma steht um halb sieben auf."], correct: 1 },
+      { type: "translation", instruction: "10: Čo znamená 'Viertel nach zwölf'?", options: ["12:15", "11:45", "12:30", "12:45"], correct: 0 }
+    ]
+  },
+  {
+    id: 7,
+    title: "Lektion 7: Berufe, Hobbys & Einkaufen",
+    dialogs: [
+      { speaker: "Lisa", text: "Was ist dein Beruf?" },
+      { speaker: "Nina", text: "Ich bin Lehrerin für Deutsch und Englisch." },
+      { speaker: "Max", text: "Ich bin Bankkaufmann." },
+      { speaker: "Nico", text: "Das verstehe ich nicht. Du hast auch ein Restaurant." },
+      { speaker: "Max", text: "Stimmt. Zusammen mit Tarek. Tarek ist eigentlich Elektriker von Beruf." },
+      { speaker: "Max", text: "Spielst du mit uns Fußball? Hast du Lust?" },
+      { speaker: "Tarek", text: "Ich angle auch sehr gern." },
+      { speaker: "Bäckerin", text: "Was darf es sein?" },
+      { speaker: "Nico", text: "Ich hätte gerne ein halbes Weißbrot." },
+      { speaker: "Nico", text: "Was kosten die Tomaten? Ich nehme ein Pfund Tomaten und drei Gurken." }
+    ],
+    vocabulary: [
+      { de: "der Beruf", en: "povolanie / profesia" }, { de: "der Lehrer / die Lehrerin", en: "učiteľ / učiteľka" },
+      { de: "der Bankkaufmann", en: "bankový úradník" }, { de: "arbeiten", en: "pracovať" },
+      { de: "das Hobby", en: "záľuba" }, { de: "spielen", en: "hrať (sa)" }, { de: "angeln", en: "chytat ryby" },
+      { de: "kochen", en: "variť" }, { de: "gern(e)", en: "rád (niečo robiť)" },
+      { de: "das Brot", en: "chlieb" }, { de: "das Fleisch", en: "mäso" }, { de: "die Tomate / die Gurke", en: "paradajka / uhorka" },
+      { de: "das Kilo / das Pfund", en: "kilo / pol kila (500g)" }, { de: "das Gramm", en: "gram" }, { de: "kosten", en: "stáť (o cene)" }
+    ],
+    grammar: `
+      <h3 class="text-2xl font-bold text-indigo-900 mt-4 mb-3 border-b-2 border-indigo-100 pb-2">1. Povolania (Berufe)</h3>
+      <p class="mb-4">Pri udávaní povolania sa v nemčine <strong>nepoužíva člen</strong>. Ženský rod sa zvyčajne tvorí pridaním prípony <strong>-in</strong>.</p>
+      <ul class="list-disc pl-6 mb-4 space-y-1">
+        <li>Ich bin Lehrer. (Som učiteľ.) -> Ich bin Lehrer<strong>in</strong>. (Som učiteľka.)</li>
+        <li>Er ist Elektriker. -> Sie ist Elektriker<strong>in</strong>.</li>
+      </ul>
+
+      <h3 class="text-2xl font-bold text-indigo-900 mt-8 mb-3 border-b-2 border-indigo-100 pb-2">2. Vyjadrenie záľub: "gern"</h3>
+      <p class="mb-4">Na rozdiel od slovenčiny, kde povieme "Rád varím" (použijeme sloveso mať rád), v nemčine použijeme hlavné sloveso a pridáme k nemu príslovku <strong>gern</strong> (alebo <em>gerne</em>).</p>
+      <ul class="list-disc pl-6 mb-4 space-y-1">
+        <li>Ich spiele <strong>gern</strong> Fußball. (Rád hrám futbal.)</li>
+        <li>Wir kochen <strong>gern</strong>. (Radi varíme.)</li>
+      </ul>
+
+      <h3 class="text-2xl font-bold text-indigo-900 mt-8 mb-3 border-b-2 border-indigo-100 pb-2">3. Nakupovanie (Množstvá a ceny)</h3>
+      <p class="mb-4">Pri otázke na cenu používame sloveso <em>kosten</em> podľa čísla predmetu.</p>
+      <ul class="list-disc pl-6 mb-4 space-y-1">
+        <li><strong>Was kostet</strong> <em>das Brot</em>? (Čo stojí ten chlieb? - jednotné číslo)</li>
+        <li><strong>Was kosten</strong> <em>die Tomaten</em>? (Čo stoja tie paradajky? - množné číslo)</li>
+        <li>Množstvá: 1 Kilo = 1000g. 1 Pfund = 500g.</li>
+      </ul>
+    `,
+    exercises: [
+      { type: "match", instruction: "1: Spojte povolania.", pairs: [{ a: "der Lehrer", b: "učiteľ" }, { a: "die Lehrerin", b: "učiteľka" }, { a: "der Elektriker", b: "elektrikár" }, { a: "der Bankkaufmann", b: "bankový úradník" }] },
+      { type: "match", instruction: "2: Spojte potraviny.", pairs: [{ a: "das Brot", b: "chlieb" }, { a: "das Fleisch", b: "mäso" }, { a: "die Tomate", b: "paradajka" }, { a: "die Gurke", b: "uhorka" }] },
+      { type: "fill", instruction: "3: Doplňte 'gern' pre vyjadrenie záľuby.", text: "Ich spiele {gern} Fußball. Tarek angelt {gern}. Wir kochen {gern}." },
+      { type: "fill", instruction: "4: Doplňte sloveso 'kosten' (kostet / kosten).", text: "Was {kostet} das Weißbrot? Was {kosten} die Tomaten? Ein Kilo Äpfel {kostet} 3 Euro." },
+      { type: "fill", instruction: "5: Doplňte ženské povolania (-in).", text: "Er ist Lehrer, sie ist Lehrer{in}. Er ist Elektriker, sie ist Elektriker{in}." },
+      { type: "order", instruction: "6: Zostavte vetu o povolaní.", words: ["bin", "Lehrerin", "ich", "Beruf", "von", "."], correct: "ich bin lehrerin von beruf ." },
+      { type: "order", instruction: "7: Zostavte otázku v obchode.", words: ["Gurken", "die", "kosten", "was", "?"], correct: "was kosten die gurken ?" },
+      { type: "order", instruction: "8: Zostavte vetu o záľubách.", words: ["Fußball", "spiele", "ich", "gern", "."], correct: "ich spiele gern fußball ." },
+      { type: "translation", instruction: "9: Ako povie žena 'Som učiteľka'?", options: ["Ich bin Lehrer.", "Ich bin eine Lehrerin.", "Ich bin Lehrerin.", "Mein Beruf ist Lehrer."], correct: 2 },
+      { type: "translation", instruction: "10: Čo je 'ein Pfund Tomaten'?", options: ["1000 gramov paradajok", "500 gramov paradajok", "10 paradajok", "1 paradajka"], correct: 1 }
+    ]
+  },
+  {
+    id: 8,
+    title: "Lektion 8: Kleidung & Farben (Oblečenie a farby)",
+    dialogs: [
+      { speaker: "Lisa", text: "Guten Morgen Nico. Wie siehst du denn aus? Ist der Pullover neu?" },
+      { speaker: "Nico", text: "Nein, das ist kein neuer Pullover. Er ist von Sebastian. Aber der Pullover ist viel zu groß." },
+      { speaker: "Lisa", text: "Du brauchst neue Sachen zum Anziehen. Ein schickes Hemd und einen warmen Pullover und eine schöne Hose." },
+      { speaker: "Verkäuferin", text: "Kann ich helfen? Das Hemd steht dir gut. Das passt auch." },
+      { speaker: "Nico", text: "Wie findest du die Farbe?" },
+      { speaker: "Selma", text: "Ich finde es schön. Die Jacke steht dir sehr gut." },
+      { speaker: "Nico", text: "Wie viel kostet es? 25 Euro. Das ist okay." }
+    ],
+    vocabulary: [
+      { de: "die Kleidung / die Sachen", en: "oblečenie / veci" }, { de: "das Hemd", en: "košeľa" },
+      { de: "der Pullover", en: "sveter" }, { de: "die Hose", en: "nohavice" }, { de: "die Jacke", en: "bunda" },
+      { de: "die Schuhe", en: "topánky" }, { de: "die Farbe", en: "farba" },
+      { de: "schwarz / weiß", en: "čierna / biela" }, { de: "rot / blau / grün", en: "červená / modrá / zelená" },
+      { de: "gelb / braun", en: "žltá / hnedá" }, { de: "anziehen", en: "obliecť (si)" },
+      { de: "passen", en: "sedieť (veľkosť)" }, { de: "stehen", en: "pristať (výzor)" },
+      { de: "gefallen", en: "páčiť sa" }, { de: "brauchen", en: "potrebovať" }, { de: "zu groß / zu klein", en: "príliš veľký / malý" }
+    ],
+    grammar: `
+      <h3 class="text-2xl font-bold text-indigo-900 mt-4 mb-3 border-b-2 border-indigo-100 pb-2">1. Slovesá s Datívom (passen, stehen, gefallen)</h3>
+      <p class="mb-4">Tieto slovesá sú spojené s osobou, ktorej niečo sedí, pristane alebo sa páči. Táto osoba musí byť v 3. páde (Datív).</p>
+      <div class="overflow-x-auto my-6 shadow-sm rounded-lg border border-slate-200">
+        <table class="min-w-full bg-white text-left">
+          <thead class="bg-indigo-50 text-indigo-900 border-b border-slate-200">
+            <tr><th class="py-3 px-4 font-semibold">Zámeno v Nominatíve</th><th class="py-3 px-4 font-semibold">Zámeno v Datíve</th><th class="py-3 px-4 font-semibold">Príklad</th></tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100">
+            <tr><td class="py-3 px-4">ich (ja)</td><td class="py-3 px-4 font-bold text-indigo-700">mir (mne)</td><td class="py-3 px-4">Die Jacke gefällt <strong>mir</strong>.</td></tr>
+            <tr class="bg-slate-50"><td class="py-3 px-4">du (ty)</td><td class="py-3 px-4 font-bold text-indigo-700">dir (tebe)</td><td class="py-3 px-4">Das Hemd steht <strong>dir</strong> gut.</td></tr>
+            <tr><td class="py-3 px-4">Sie (Vy - vykanie)</td><td class="py-3 px-4 font-bold text-indigo-700">Ihnen (Vám)</td><td class="py-3 px-4">Passt die Hose <strong>Ihnen</strong>?</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="text-2xl font-bold text-indigo-900 mt-8 mb-3 border-b-2 border-indigo-100 pb-2">2. Akuzatív po slovese "brauchen" (potrebovať)</h3>
+      <p class="mb-4">Podobne ako pri <em>haben</em> alebo <em>nehmen</em>, sloveso <em>brauchen</em> vyžaduje predmet v 4. páde. Opäť sa mení iba mužský rod (der -> den / ein -> einen).</p>
+      <ul class="list-disc pl-6 mb-4 space-y-1">
+        <li>Ich brauche <strong>einen</strong> Pullover. (Potrebujem sveter - mužský rod)</li>
+        <li>Ich brauche <strong>eine</strong> Hose. (ženský rod)</li>
+        <li>Ich brauche <strong>ein</strong> Hemd. (stredný rod)</li>
+      </ul>
+    `,
+    exercises: [
+      { type: "match", instruction: "1: Spojte oblečenie.", pairs: [{ a: "das Hemd", b: "košeľa" }, { a: "der Pullover", b: "sveter" }, { a: "die Hose", b: "nohavice" }, { a: "die Schuhe", b: "topánky" }] },
+      { type: "match", instruction: "2: Spojte farby.", pairs: [{ a: "schwarz", b: "čierna" }, { a: "weiß", b: "biela" }, { a: "blau", b: "modrá" }, { a: "grün", b: "zelená" }] },
+      { type: "fill", instruction: "3: Doplňte zámená v Datíve (mir, dir).", text: "Wie gefällt {dir} das Hemd? Die Jacke steht {mir} gut. Der Pullover passt {dir} nicht." },
+      { type: "fill", instruction: "4: Doplňte člen v AKUZATÍVE (einen, eine, ein).", text: "Ich brauche {einen} Pullover (der). Er sucht {eine} Jacke (die). Sie kauft {ein} Hemd (das)." },
+      { type: "fill", instruction: "5: Doplňte 'passt', 'steht' alebo 'gefällt'.", text: "Das Hemd ist zu groß, es {passt} nicht. Die rote Farbe {steht} dir gut. Die Jacke {gefällt} mir sehr." },
+      { type: "order", instruction: "6: Zostavte vetu o veľkosti.", words: ["Pullover", "der", "groß", "ist", "zu", "viel", "."], correct: "der pullover ist viel zu groß ." },
+      { type: "order", instruction: "7: Zostavte vetu v Datíve.", words: ["gut", "Hemd", "steht", "dir", "das", "."], correct: "das hemd steht dir gut ." },
+      { type: "order", instruction: "8: Zostavte otázku na názor.", words: ["du", "die", "Farbe", "findest", "wie", "?"], correct: "wie findest du die farbe ?" },
+      { type: "translation", instruction: "9: Ako poviete 'Potrebujem nohavice.'?", options: ["Ich brauche eine Hose.", "Die Hose passt mir.", "Ich suche Schuhe.", "Ich habe ein Hemd."], correct: 0 },
+      { type: "translation", instruction: "10: Ako poviete 'Bunda sa mi páči.'?", options: ["Die Jacke passt dir.", "Die Jacke steht dir.", "Die Jacke gefällt mir.", "Ich brauche eine Jacke."], correct: 2 }
+    ]
+  },
+  {
+    id: 9,
+    title: "Lektion 9: Körper & Gesundheit (Telo a zdravie)",
+    dialogs: [
+      { speaker: "Nico", text: "Aua!" },
+      { speaker: "Max", text: "Alles ok, Nico? Geht es dir gut?" },
+      { speaker: "Nico", text: "Ich habe Schmerzen." },
+      { speaker: "Lisa", text: "Wo tut es denn genau weh? Ist es das Knie oder das Bein? Der Fuß?" },
+      { speaker: "Arzt", text: "Haben Sie starke Schmerzen? Haben Sie eine Versichertenkarte?" },
+      { speaker: "Tarek", text: "Der Arzt sagt, es ist nicht gebrochen. Du sollst dich ausruhen." },
+      { speaker: "Max", text: "Dr. Grube hat Schmerztabletten und eine Salbe verschrieben. Wir waren schon bei der Apotheke." },
+      { speaker: "Lisa", text: "Nimm die Tabletten dreimal täglich." }
+    ],
+    vocabulary: [
+      { de: "der Körper", en: "telo" }, { de: "der Fuß / das Bein", en: "chodidlo / noha" },
+      { de: "das Knie", en: "koleno" }, { de: "der Arm / die Hand", en: "ruka (paža) / ruka (dlaň)" },
+      { de: "der Kopf / der Bauch", en: "hlava / brucho" }, { de: "der Rücken", en: "chrbát" },
+      { de: "der Arzt / die Ärztin", en: "lekár / lekárka" }, { de: "die Apotheke", en: "lekáreň" },
+      { de: "die Schmerzen", en: "bolesti" }, { de: "das Rezept", en: "recept (lekársky)" },
+      { de: "die Tablette / die Salbe", en: "tabletka / masť" }, { de: "wehtun", en: "bolieť" },
+      { de: "Gute Besserung!", en: "Skoré uzdravenie!" }, { de: "sich ausruhen", en: "odpočívať" }
+    ],
+    grammar: `
+      <h3 class="text-2xl font-bold text-indigo-900 mt-4 mb-3 border-b-2 border-indigo-100 pb-2">1. Privlastňovacie zámená (Possessivpronomen)</h3>
+      <p class="mb-4">Týmito zámenami vyjadrujeme, komu niečo patrí. Skloňujú sa podobne ako neurčitý člen (ein/eine).</p>
+      <div class="overflow-x-auto my-6 shadow-sm rounded-lg border border-slate-200">
+        <table class="min-w-full bg-white text-left">
+          <thead class="bg-indigo-50 text-indigo-900 border-b border-slate-200">
+            <tr><th class="py-3 px-4 font-semibold">Osoba</th><th class="py-3 px-4 font-semibold">Zámeno (mužský/stredný rod)</th><th class="py-3 px-4 font-semibold">Zámeno (ženský rod / plurál)</th></tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100">
+            <tr><td class="py-3 px-4 font-bold">ich (ja)</td><td class="py-3 px-4"><strong>mein</strong> (Fuß)</td><td class="py-3 px-4"><strong>meine</strong> (Hand)</td></tr>
+            <tr class="bg-slate-50"><td class="py-3 px-4 font-bold">du (ty)</td><td class="py-3 px-4"><strong>dein</strong> (Bein)</td><td class="py-3 px-4"><strong>deine</strong> (Salbe)</td></tr>
+            <tr><td class="py-3 px-4 font-bold">er / es (on/ono)</td><td class="py-3 px-4"><strong>sein</strong> (Kopf)</td><td class="py-3 px-4"><strong>seine</strong> (Tabletten)</td></tr>
+            <tr class="bg-slate-50"><td class="py-3 px-4 font-bold">sie (ona)</td><td class="py-3 px-4"><strong>ihr</strong> (Arzt)</td><td class="py-3 px-4"><strong>ihre</strong> (Tasche)</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="text-2xl font-bold text-indigo-900 mt-8 mb-3 border-b-2 border-indigo-100 pb-2">2. Modálne sloveso "sollen" (mať povinnosť / odporúčanie)</h3>
+      <p class="mb-4">Často sa používa pri tlmočení odporúčaní lekára. Ako každé modálne sloveso, aj <em>sollen</em> pošle druhé (hlavné) sloveso v neurčitku na úplný koniec vety.</p>
+      <ul class="list-disc pl-6 mb-4 space-y-1">
+        <li>ich <strong>soll</strong>, du <strong>sollst</strong>, er <strong>soll</strong>, wir sollen, ihr sollt, sie sollen</li>
+        <li>Der Arzt sagt, du <strong>sollst</strong> dich <strong>ausruhen</strong>. (Lekár hovorí, že máš odpočívať.)</li>
+      </ul>
+
+      <h3 class="text-2xl font-bold text-indigo-900 mt-8 mb-3 border-b-2 border-indigo-100 pb-2">3. Sloveso "wehtun" (bolieť)</h3>
+      <p class="mb-4">Je to sloveso s odlučiteľnou predponou (weh|tun).<br/>
+      <em>Mein Fuß <strong>tut</strong> weh.</em> (Bolí ma noha.)<br/>
+      <em>Wo <strong>tut</strong> es <strong>weh</strong>?</em> (Kde to bolí?)</p>
+    `,
+    exercises: [
+      { type: "match", instruction: "1: Spojte časti tela.", pairs: [{ a: "der Fuß", b: "chodidlo" }, { a: "das Bein", b: "noha" }, { a: "der Kopf", b: "hlava" }, { a: "die Hand", b: "ruka (dlaň)" }] },
+      { type: "match", instruction: "2: Spojte zdravotnícke pojmy.", pairs: [{ a: "der Arzt", b: "lekár" }, { a: "die Apotheke", b: "lekáreň" }, { a: "die Schmerzen", b: "bolesti" }, { a: "das Rezept", b: "recept" }] },
+      { type: "fill", instruction: "3: Doplňte privlastňovacie zámeno (mein, meine, dein).", text: "{mein} Fuß tut weh (der). Tut {dein} Bein weh (das)? Ich nehme {meine} Tabletten (die - Plural)." },
+      { type: "fill", instruction: "4: Vyčasujte 'sollen' (mal by).", text: "Ich {soll} mich ausruhen. Du {sollst} Tabletten nehmen. Der Arzt sagt, Nico {soll} im Bett bleiben." },
+      { type: "fill", instruction: "5: Doplňte 'tut' a 'weh'.", text: "Mein Knie {tut} weh. Wo tut es genau {weh}? Der Fuß {tut} sehr weh." },
+      { type: "order", instruction: "6: Zostavte vetu o bolesti.", words: ["habe", "ich", "Schmerzen", "starke", "."], correct: "ich habe starke schmerzen ." },
+      { type: "order", instruction: "7: Zostavte otázku lekára.", words: ["es", "tut", "wo", "genau", "weh", "?"], correct: "wo tut es genau weh ?" },
+      { type: "order", instruction: "8: Zostavte radu od lekára (modálne sloveso).", words: ["ausruhen", "du", "dich", "sollst", "."], correct: "du sollst dich ausruhen ." },
+      { type: "translation", instruction: "9: Ako poviete 'Skoré uzdravenie!'?", options: ["Guten Morgen!", "Alles ok?", "Gute Besserung!", "Ich bin krank."], correct: 2 },
+      { type: "translation", instruction: "10: Čo znamená 'Ich gehe zur Apotheke'?", options: ["Idem k lekárovi.", "Idem do lekárne.", "Potrebujem recept.", "Bolí ma noha."], correct: 1 }
+    ]
+  }
+];
+
+// --- EXERCISE COMPONENTS ---
+
+const FillInExercise = ({ exercise, onComplete }) => {
+  const parts = exercise.text.split(/({.*?})/);
+  const [answers, setAnswers] = useState({});
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const checkAnswers = () => {
+    let allCorrect = true;
+    parts.forEach((part, i) => {
+      if (part.startsWith('{') && part.endsWith('}')) {
+        const correct = part.slice(1, -1);
+        const userAns = (answers[i] || '').trim().toLowerCase();
+        if (userAns !== correct.toLowerCase()) allCorrect = false;
+      }
+    });
+    setIsSubmitted(true);
+    if (allCorrect) onComplete();
+  };
+
+  return (
+    <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-200 mb-6">
+      <h4 className="font-semibold text-lg text-slate-800 mb-4">{exercise.instruction}</h4>
+      <div className="text-lg leading-relaxed flex flex-wrap items-center gap-x-2 gap-y-3 mb-6">
+        {parts.map((part, i) => {
+          if (part.startsWith('{') && part.endsWith('}')) {
+            const correct = part.slice(1, -1);
+            const isCorrect = isSubmitted && (answers[i] || '').trim().toLowerCase() === correct.toLowerCase();
+            const isWrong = isSubmitted && !isCorrect;
+            return (
+              <input
+                key={i} type="text"
+                className={`w-28 px-2 py-1 text-center font-medium border-b-2 outline-none transition-colors
+                  ${isCorrect ? 'border-green-500 text-green-700 bg-green-50' : ''}
+                  ${isWrong ? 'border-red-500 text-red-700 bg-red-50' : ''}
+                  ${!isSubmitted ? 'border-indigo-300 focus:border-indigo-600 bg-slate-50' : ''}
+                `}
+                value={answers[i] || ''}
+                onChange={(e) => { setAnswers({ ...answers, [i]: e.target.value }); setIsSubmitted(false); }}
+                disabled={isSubmitted && isCorrect}
+              />
+            );
+          }
+          return <span key={i} className="text-slate-700">{part}</span>;
+        })}
+      </div>
+      <button onClick={checkAnswers} className="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2 rounded-lg font-medium transition-colors shadow-sm">
+        Skontrolovať odpovede
+      </button>
+    </div>
+  );
+};
+
+const OrderExercise = ({ exercise, onComplete }) => {
+  const [available, setAvailable] = useState([...exercise.words].sort(() => Math.random() - 0.5));
+  const [selected, setSelected] = useState([]);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isCorrect, setIsCorrect] = useState(false);
+
+  const moveWord = (word, fromAvail) => {
+    if (fromAvail) {
+      setAvailable(available.filter(w => w !== word));
+      setSelected([...selected, word]);
+    } else {
+      setSelected(selected.filter(w => w !== word));
+      setAvailable([...available, word]);
+    }
+    setIsSubmitted(false);
+  };
+
+  const checkAnswer = () => {
+    const userStr = selected.join(' ').toLowerCase();
+    const correctStr = exercise.correct.toLowerCase();
+    const correct = userStr === correctStr;
+    setIsCorrect(correct);
+    setIsSubmitted(true);
+    if (correct) onComplete();
+  };
+
+  const reset = () => {
+    setAvailable([...exercise.words].sort(() => Math.random() - 0.5));
+    setSelected([]);
+    setIsSubmitted(false);
+  };
+
+  return (
+    <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-200 mb-6">
+      <h4 className="font-semibold text-lg text-slate-800 mb-4">{exercise.instruction}</h4>
+      <div className="min-h-[60px] p-4 bg-slate-50 border-2 border-dashed border-slate-300 rounded-lg mb-4 flex flex-wrap gap-2 items-center">
+        {selected.length === 0 && <span className="text-slate-400 italic text-sm">Kliknite na slová nižšie a vytvorte vetu...</span>}
+        {selected.map((word, i) => (
+          <button key={`sel-${i}-${word}`} onClick={() => moveWord(word, false)} className="bg-indigo-100 hover:bg-red-100 hover:text-red-800 text-indigo-800 px-4 py-2 rounded-md font-medium transition-colors shadow-sm">{word}</button>
+        ))}
+      </div>
+      <div className="flex flex-wrap gap-2 mb-6 min-h-[40px] p-2 bg-slate-100 rounded-lg">
+        {available.map((word, i) => (
+          <button key={`avail-${i}-${word}`} onClick={() => moveWord(word, true)} className="bg-white border border-slate-300 shadow-sm hover:border-indigo-400 hover:text-indigo-600 text-slate-700 px-4 py-2 rounded-md font-medium transition-colors">{word}</button>
+        ))}
+      </div>
+      <div className="flex gap-3 items-center">
+        <button onClick={checkAnswer} className="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2 rounded-lg font-medium transition-colors shadow-sm">Skontrolovať</button>
+        <button onClick={reset} className="p-2 text-slate-500 hover:text-indigo-600 bg-slate-100 hover:bg-indigo-50 rounded-lg transition-colors" title="Znovu"><RefreshCw size={20} /></button>
+        {isSubmitted && isCorrect && <span className="text-green-600 font-medium flex items-center gap-1 ml-4"><Check size={20}/> Správne!</span>}
+        {isSubmitted && !isCorrect && <span className="text-red-500 font-medium flex items-center gap-1 ml-4"><X size={20}/> Skúste to znova.</span>}
+      </div>
+    </div>
+  );
+};
+
+const MatchExercise = ({ exercise, onComplete }) => {
+  const [itemsA, setItemsA] = useState([]);
+  const [itemsB, setItemsB] = useState([]);
+  const [selectedA, setSelectedA] = useState(null);
+  const [selectedB, setSelectedB] = useState(null);
+  const [matched, setMatched] = useState([]);
+
+  useEffect(() => {
+    setItemsA(exercise.pairs.map(p => p.a).sort(() => Math.random() - 0.5));
+    setItemsB(exercise.pairs.map(p => p.b).sort(() => Math.random() - 0.5));
+  }, [exercise]);
+
+  useEffect(() => {
+    if (selectedA && selectedB) {
+      const pair = exercise.pairs.find(p => p.a === selectedA && p.b === selectedB);
+      if (pair) {
+        setMatched([...matched, selectedA, selectedB]);
+        if (matched.length + 2 === exercise.pairs.length * 2) onComplete();
+      }
+      setTimeout(() => { setSelectedA(null); setSelectedB(null); }, 500);
+    }
+  }, [selectedA, selectedB]);
+
+  return (
+    <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-200 mb-6">
+      <h4 className="font-semibold text-lg text-slate-800 mb-6">{exercise.instruction}</h4>
+      <div className="flex gap-4 md:gap-8 flex-col md:flex-row">
+        <div className="flex-1 flex flex-col gap-3">
+          {itemsA.map((item, i) => {
+            const isMatched = matched.includes(item);
+            const isSelected = selectedA === item;
+            return (
+              <button key={`a-${i}`} disabled={isMatched} onClick={() => setSelectedA(item)}
+                className={`p-4 text-center md:text-left font-medium rounded-lg border-2 transition-all shadow-sm ${
+                  isMatched ? 'bg-green-50 border-green-200 text-green-700 opacity-50' : 
+                  isSelected ? 'bg-indigo-50 border-indigo-500 text-indigo-800 scale-[1.02]' : 
+                  'bg-slate-50 border-slate-200 hover:border-indigo-300 text-slate-700 hover:bg-white'
+                }`}
+              >{item}</button>
+            );
+          })}
+        </div>
+        <div className="flex-1 flex flex-col gap-3 mt-4 md:mt-0">
+          {itemsB.map((item, i) => {
+            const isMatched = matched.includes(item);
+            const isSelected = selectedB === item;
+            return (
+              <button key={`b-${i}`} disabled={isMatched} onClick={() => setSelectedB(item)}
+                className={`p-4 text-center md:text-left font-medium rounded-lg border-2 transition-all shadow-sm ${
+                  isMatched ? 'bg-green-50 border-green-200 text-green-700 opacity-50' : 
+                  isSelected ? 'bg-indigo-50 border-indigo-500 text-indigo-800 scale-[1.02]' : 
+                  'bg-slate-50 border-slate-200 hover:border-indigo-300 text-slate-700 hover:bg-white'
+                }`}
+              >{item}</button>
+            );
+          })}
+        </div>
+      </div>
+      {matched.length === exercise.pairs.length * 2 && (
+        <div className="mt-6 text-green-600 font-bold flex items-center justify-center gap-2 bg-green-50 p-3 rounded-lg border border-green-200">
+          <Check size={24}/> Výborne! Všetko ste spárovali správne.
+        </div>
+      )}
+    </div>
+  );
+};
+
+const TranslationExercise = ({ exercise, onComplete }) => {
+  const [selected, setSelected] = useState(null);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const checkAnswer = () => { setIsSubmitted(true); if (selected === exercise.correct) onComplete(); };
+
+  return (
+    <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-200 mb-6">
+      <h4 className="font-semibold text-lg text-slate-800 mb-4">{exercise.instruction}</h4>
+      <div className="flex flex-col gap-3 mb-6">
+        {exercise.options.map((opt, i) => (
+          <button key={`opt-${i}`} onClick={() => { setSelected(i); setIsSubmitted(false); }}
+            className={`p-4 text-left font-medium rounded-lg border-2 transition-all flex items-center justify-between shadow-sm ${
+              selected === i ? 'border-indigo-500 bg-indigo-50 text-indigo-800' : 'border-slate-200 hover:bg-slate-50 text-slate-700'
+            } ${isSubmitted && i === exercise.correct ? 'border-green-500 bg-green-50 text-green-800' : ''}
+              ${isSubmitted && selected === i && i !== exercise.correct ? 'border-red-500 bg-red-50 text-red-800' : ''}
+            `}
+          >
+            {opt}
+            {isSubmitted && i === exercise.correct && <Check size={22} className="text-green-600" />}
+            {isSubmitted && selected === i && i !== exercise.correct && <X size={22} className="text-red-500" />}
+          </button>
+        ))}
+      </div>
+      <button onClick={checkAnswer} disabled={selected === null} className="bg-indigo-600 hover:bg-indigo-700 disabled:bg-slate-300 text-white px-6 py-2 rounded-lg font-medium transition-colors shadow-sm">
+        Skontrolovať
+      </button>
+    </div>
+  );
+};
+
+// --- MAIN APP COMPONENT ---
+
+export default function Lesson_4_eDoThe6qo({ isOpen, onClose }) {
+  if (!isOpen) return null;
+  const [activeLesson, setActiveLesson] = useState(courseData[0]);
+  const [activeTab, setActiveTab] = useState('grammar'); 
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  const tabs = [
+    { id: 'dialog', icon: <MessageCircle size={18} />, label: 'Dialógy' },
+    { id: 'vocab', icon: <BookA size={18} />, label: 'Slovíčka' },
+    { id: 'grammar', icon: <BookOpen size={18} />, label: 'Gramatika' },
+    { id: 'exercises', icon: <Dumbbell size={18} />, label: 'Cvičenia (10)' }
+  ];
+
+  return (
+    
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-0 md:p-4 bg-gray-900/80 backdrop-blur-sm">
+      <button onClick={onClose} className="absolute top-4 right-4 z-[60] p-2 bg-white rounded-full text-gray-500 hover:text-gray-900 hover:bg-gray-100 shadow-xl transition-all">
+        <X size={24} />
+      </button>
+      <div className="bg-slate-100 w-full h-full md:rounded-3xl md:h-[95vh] font-sans flex flex-col md:flex-row overflow-hidden relative shadow-2xl">
+
+      {/* Mobile Header */}
+      <div className="md:hidden bg-indigo-900 text-white p-4 flex items-center justify-between shadow-md z-20 relative">
+        <h1 className="text-xl font-bold tracking-wide">Nicos Weg A1</h1>
+        <button onClick={() => setSidebarOpen(!sidebarOpen)} className="p-2 hover:bg-indigo-800 rounded-lg transition-colors">
+          <Menu size={24} />
+        </button>
+      </div>
+
+      {/* Sidebar */}
+      <aside className={`
+        ${sidebarOpen ? 'translate-x-0 absolute h-full z-30' : '-translate-x-full absolute'} 
+        md:translate-x-0 md:relative md:block w-3/4 md:w-80 bg-indigo-900 text-slate-300 flex-shrink-0 flex flex-col
+        shadow-2xl md:shadow-none transition-transform duration-300 h-full md:sticky top-0
+      `}>
+        <div className="p-6">
+          <h1 className="text-2xl font-bold text-white mb-1 tracking-wide">Nicos Weg A1</h1>
+          <p className="text-indigo-300 text-sm font-medium">Kompletný kurz (Lekcie 1-9)</p>
+        </div>
+        <nav className="flex-1 px-4 pb-6 overflow-y-auto custom-scrollbar">
+          <h2 className="text-xs font-bold text-indigo-400 uppercase tracking-widest mb-4 mt-2 px-2">Dostupné lekcie</h2>
+          <div className="space-y-2">
+            {courseData.map(lesson => (
+              <button
+                key={lesson.id}
+                onClick={() => {
+                  setActiveLesson(lesson);
+                  setActiveTab('grammar'); 
+                  if(window.innerWidth < 768) setSidebarOpen(false);
+                }}
+                className={`w-full text-left px-4 py-3 rounded-lg flex items-center justify-between transition-all duration-200
+                  ${activeLesson.id === lesson.id 
+                    ? 'bg-indigo-700 text-white font-semibold shadow-inner' 
+                    : 'hover:bg-indigo-800/80 hover:text-white font-medium'
+                  }`}
+              >
+                <span className="truncate pr-2">{lesson.title}</span>
+                {activeLesson.id === lesson.id && <ChevronRight size={18} className="text-indigo-300" />}
+              </button>
+            ))}
+          </div>
+        </nav>
+      </aside>
+
+      {/* Overlay pre mobil */}
+      {sidebarOpen && (
+        <div className="md:hidden fixed inset-0 bg-slate-900/50 z-20" onClick={() => setSidebarOpen(false)} />
+      )}
+
+      {/* Main Content Area */}
+      <main className="flex-1 flex flex-col h-full overflow-hidden bg-slate-50 relative z-0">
+        {/* Header & Tabs */}
+        <header className="bg-white border-b border-slate-200 shadow-sm z-10">
+          <div className="px-6 md:px-12 pt-8 pb-4">
+            <h2 className="text-2xl md:text-3xl font-bold text-slate-800 mb-6">{activeLesson.title}</h2>
+            <div className="flex space-x-2 overflow-x-auto pb-1 no-scrollbar">
+              {tabs.map(tab => (
+                <button
+                  key={tab.id}
+                  onClick={() => setActiveTab(tab.id)}
+                  className={`flex items-center gap-2 px-6 py-3 font-semibold rounded-t-xl transition-all whitespace-nowrap border-x border-t border-transparent
+                    ${activeTab === tab.id 
+                      ? 'bg-indigo-50 text-indigo-700 border-indigo-100 border-b-2 !border-b-indigo-600' 
+                      : 'text-slate-500 hover:text-slate-800 hover:bg-slate-100'
+                    }`}
+                >
+                  {tab.icon}
+                  {tab.label}
+                </button>
+              ))}
+            </div>
+          </div>
+        </header>
+
+        {/* Tab Content */}
+        <div className="flex-1 overflow-y-auto p-6 md:p-12">
+          <div className="max-w-4xl mx-auto pb-20">
+            
+            {/* DIALOGS */}
+            {activeTab === 'dialog' && (
+              <div className="space-y-4">
+                <div className="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+                  {activeLesson.dialogs.map((d, i) => (
+                    <div key={`dialog-${i}`} className={`flex gap-4 p-5 ${i !== activeLesson.dialogs.length - 1 ? 'border-b border-slate-100' : ''} hover:bg-slate-50 transition-colors`}>
+                      <div className="w-24 md:w-32 flex-shrink-0 font-bold text-indigo-900 text-right pt-1 uppercase tracking-wider text-sm">{d.speaker}</div>
+                      <div className="w-1 bg-indigo-100 rounded-full"></div>
+                      <div className="text-slate-700 text-lg leading-relaxed font-medium">{d.text}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* VOCAB */}
+            {activeTab === 'vocab' && (
+              <div className="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+                <table className="w-full text-left border-collapse">
+                  <thead>
+                    <tr className="bg-slate-100 text-slate-600 uppercase text-xs tracking-wider border-b border-slate-200">
+                      <th className="p-5 font-bold w-1/2">Deutsch (Nemčina)</th>
+                      <th className="p-5 font-bold w-1/2">Slovenský preklad</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-slate-100">
+                    {activeLesson.vocabulary.map((v, i) => (
+                      <tr key={`voc-${i}`} className="hover:bg-slate-50 transition-colors">
+                        <td className="p-5 font-bold text-slate-800 text-lg">{v.de}</td>
+                        <td className="p-5 text-slate-600 text-lg">{v.en}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            )}
+
+            {/* GRAMMAR */}
+            {activeTab === 'grammar' && (
+              <div className="bg-white p-8 rounded-xl shadow-sm border border-slate-200 text-slate-800 text-lg"
+                   dangerouslySetInnerHTML={{ __html: activeLesson.grammar }}>
+              </div>
+            )}
+
+            {/* EXERCISES */}
+            {activeTab === 'exercises' && (
+              <div>
+                <div className="bg-indigo-50 border border-indigo-200 p-5 rounded-xl mb-8 flex gap-4 shadow-sm">
+                  <Dumbbell className="text-indigo-600 flex-shrink-0 mt-1" size={28}/>
+                  <div>
+                    <h3 className="text-indigo-900 font-bold text-lg mb-1">Hĺbkový tréning (10 cvičení)</h3>
+                    <p className="text-indigo-800 text-sm">Cvičenia postupne preveria slovíčka, časovanie aj skladbu vety.</p>
+                  </div>
+                </div>
+                {activeLesson.exercises?.map((ex, i) => {
+                  if (ex.type === 'fill') return <FillInExercise key={`ex-${i}`} exercise={ex} onComplete={() => {}} />;
+                  if (ex.type === 'order') return <OrderExercise key={`ex-${i}`} exercise={ex} onComplete={() => {}} />;
+                  if (ex.type === 'match') return <MatchExercise key={`ex-${i}`} exercise={ex} onComplete={() => {}} />;
+                  if (ex.type === 'translation') return <TranslationExercise key={`ex-${i}`} exercise={ex} onComplete={() => {}} />;
+                  return null;
+                })}
+              </div>
+            )}
+
+          </div>
+        </div>
+      </main>
+      </div>
+    </div>
+  );
+}

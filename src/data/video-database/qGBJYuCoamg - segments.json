@@ -1,0 +1,19 @@
+{
+  "segments": [
+    {
+      "startTimeMs": 280,
+      "endTimeMs": 309199,
+      "topicDescription": "Bananenbrot backen"
+    },
+    {
+      "startTimeMs": 305560,
+      "endTimeMs": 617279,
+      "topicDescription": "Bananenbrot backen"
+    },
+    {
+      "startTimeMs": 613519,
+      "endTimeMs": 807240,
+      "topicDescription": "Bananenbrot backen"
+    }
+  ]
+}

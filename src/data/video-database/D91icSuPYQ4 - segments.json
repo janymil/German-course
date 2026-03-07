@@ -1,0 +1,24 @@
+{
+  "segments": [
+    {
+      "startTimeMs": 599,
+      "endTimeMs": 309960,
+      "topicDescription": "Einkaufen im Biomarkt"
+    },
+    {
+      "startTimeMs": 307199,
+      "endTimeMs": 612279,
+      "topicDescription": "Einkaufen mit Janusch"
+    },
+    {
+      "startTimeMs": 609320,
+      "endTimeMs": 919480,
+      "topicDescription": "Einkaufen und Bezahlen"
+    },
+    {
+      "startTimeMs": 917759,
+      "endTimeMs": 937589,
+      "topicDescription": "Abschied und Verabschiedung"
+    }
+  ]
+}

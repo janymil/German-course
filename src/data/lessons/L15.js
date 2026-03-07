@@ -1,527 +1,847 @@
-﻿export const lesson15 = {
+export const lesson15 = {
   id: 15,
   week: 3,
   day: 5,
-  title: "Pluralformen — Die Mehrzahl",
-  topic: "Množné číslo podstatných mien",
+  title: "Kein Blau, das ist Grün!",
+  topic: "Negatívny člen (*kein, keine*) a farby.",
   cefr: "A1",
-  xpReward: 30,
-  narrativeContext:
-    "Jana schreibt eine Einkaufsliste für die neue Wohnung. Sie braucht viele Dinge: Tische, Stühle, Bücher, Lampen... und denkt dabei: 'Wie heißt der Plural von Buch? Von Stuhl?'",
-  communicativeGoal:
-    "Po tejto lekcii viem používať množné číslo bežných podstatných mien a viem, že všetky podstatné mená v množnom čísle používajú člen 'die'.",
-  skillFocus: ["vocabulary", "grammar"],
-
-  grammarNote: {
-    rule: "Pluralformen — 5 typov tvorenia množného čísla",
-    explanation:
-      "5 typov plurálu: (1) +(e): der Tisch → die Tische; der Stuhl → die Stühle (+ prehlás). (2) +(e)n: die Frau → die Frauen; die Lampe → die Lampen. (3) +(e)r: das Kind → die Kinder; das Buch → die Bücher (+ prehlás). (4) bez zmeny: das Fenster → die Fenster; das Zimmer → die Zimmer. (5) +s: das Café → die Cafés (prevzaté slová). ZLATÉ PRAVIDLO: Plurál nie je predvídateľný zo singulárnej formy — vždy sa uč podstatné meno spolu s plurálom! VŠETKY plurály používajú člen 'die'. Pozn.: die Leute = ľudia — len množné číslo, singulár = ein Mensch.",
-    examples: [
-      { de: "der Stuhl → die Stühle (+e, Umlaut)", sk: "stolička → stoličky" },
-      { de: "die Frau → die Frauen (+en)", sk: "žena → ženy" },
-      { de: "das Kind → die Kinder (+er)", sk: "dieťa → deti" },
-      { de: "das Fenster → die Fenster (=)", sk: "okno → okná" },
-      { de: "das Auto → die Autos (+s)", sk: "auto → autá" },
-    ],
-    slovakContrastNote:
-      "Slovenčina má 6+ tried skloňovania pre plurál podľa rodu a kmeňa. Nemčina má 5 typov plurálu, ale predvídateľnosť je nízka. Kľúčová stratégia: vždy si uč podstatné meno vo forme 'der/die/das [singulár] → die [plurál]'.",
-  },
-
+  xpReward: 20,
+  narrativeContext: "Jana möchte Farbe für ihre Wand kaufen. Sie geht in ein Geschäft.",
+  communicativeGoal: "Nach dieser Lektion kann ich sagen, was etwas nicht ist, und über Farben sprechen.",
+  skillFocus: [
+    "vocabulary",
+    "grammar",
+    "speaking",
+    "listening"
+  ],
+  lessonNotes: "V tejto lekcii sa naučíme, ako povedať, že niečo nie je. Spoznáme negatívny člen *kein* a *keine*, ktorý používame pred podstatnými menami. Tiež sa naučíme pomenovať rôzne farby a používať ich v jednoduchých vetách. Pripravte sa na nákup farieb!",
+  grammarNotes: [
+    {
+      rule: "Der Negativartikel \"kein\"",
+      explanation: "\n      <p>V nemčine používame <strong>negatívny člen \"kein\"</strong> (žiaden, žiadna, žiadne) na popretie neurčitého podstatného mena (ktoré by inak malo člen \"ein\" alebo \"eine\") alebo podstatného mena v množnom čísle (ktoré neurčitý člen nemá vôbec). Je to, akoby sme povedali \"nie je to žiaden stôl\" alebo \"nemám žiadne peniaze\".</p>\n      <p>Tento člen sa skloňuje podobne ako neurčitý člen \"ein\", ale má aj tvar pre množné číslo. V nominatíve (1. pád) vyzerá takto:</p>\n      <table>\n        <thead>\n          <tr>\n            <th>Rod</th>\n            <th>Neurčitý člen</th>\n            <th>Negatívny člen</th>\n            <th>Príklad</th>\n          </tr>\n        </thead>\n        <tbody>\n          <tr>\n            <td>Maskulínum (mužský)</td>\n            <td>ein</td>\n            <td><strong>kein</strong></td>\n            <td>kein Stuhl (žiaden stôl)</td>\n          </tr>\n          <tr>\n            <td>Feminínum (ženský)</td>\n            <td>eine</td>\n            <td><strong>keine</strong></td>\n            <td>keine Lampe (žiadna lampa)</td>\n          </tr>\n          <tr>\n            <td>Neutrum (stredný)</td>\n            <td>ein</td>\n            <td><strong>kein</strong></td>\n            <td>kein Buch (žiadna kniha)</td>\n          </tr>\n          <tr>\n            <td>Plurál (množné číslo)</td>\n            <td>-</td>\n            <td><strong>keine</strong></td>\n            <td>keine Stühle (žiadne stoličky)</td>\n          </tr>\n        </tbody>\n      </table>\n      <p>Je dôležité rozlišovať medzi \"kein\" a \"nicht\". \"Kein\" popiera podstatné meno (napr. \"Das ist <strong>kein</strong> Stuhl.\"), zatiaľ čo \"nicht\" popiera slovesá, prídavné mená, príslovky alebo celé vety (napr. \"Ich spreche <strong>nicht</strong> Deutsch.\", \"Das ist <strong>nicht</strong> gut.\").</p>\n    ",
+      examples: [
+        {
+          de: "Das ist ein Stuhl.",
+          sk: "To je stolička."
+        },
+        {
+          de: "Das ist kein Stuhl.",
+          sk: "To nie je žiadna stolička.",
+          note: "Popretie neurčitého podstatného mena (maskulínum)."
+        },
+        {
+          de: "Das ist eine Lampe.",
+          sk: "To je lampa."
+        },
+        {
+          de: "Das ist keine Lampe.",
+          sk: "To nie je žiadna lampa.",
+          note: "Popretie neurčitého podstatného mena (feminínum)."
+        },
+        {
+          de: "Ist das ein Buch? Nein, das ist kein Buch.",
+          sk: "Je to kniha? Nie, to nie je žiadna kniha.",
+          note: "Popretie neurčitého podstatného mena (neutrum)."
+        },
+        {
+          de: "Sind das Stühle? Nein, das sind keine Stühle.",
+          sk: "Sú to stoličky? Nie, to nie sú žiadne stoličky.",
+          note: "Popretie podstatného mena v množnom čísle."
+        },
+        {
+          de: "Ich habe kein Geld.",
+          sk: "Nemám žiadne peniaze.",
+          note: "Použitie s podstatným menom bez člena (neutrum)."
+        },
+        {
+          de: "Ich spreche nicht Deutsch.",
+          sk: "Nehovorím po nemecky.",
+          note: "Porovnanie: \"nicht\" popiera sloveso."
+        }
+      ],
+      slovakContrastNote: "\n      <p>V slovenčine na popretie neurčitého podstatného mena zvyčajne používame záporné sloveso (\"nie je\") a podstatné meno, prípadne zámeno \"žiaden/žiadna/žiadne\". Napríklad, namiesto \"Das ist kein Stuhl\" povieme \"To nie je stolička\" alebo \"To nie je žiadna stolička\".</p>\n      <p>Pre slovenského študenta je kľúčové zapamätať si, že v nemčine sa \"kein\" používa špecificky na popretie podstatných mien, ktoré by inak mali neurčitý člen (ein/eine) alebo sú v množnom čísle. Nie je to priamy preklad \"nie je\", ale skôr \"nie je žiaden/žiadna\".</p>\n    "
+    },
+    {
+      rule: "Farben (Farby)",
+      explanation: "\n      <p>Farby sú v nemčine prídavné mená a používame ich na opis predmetov. V tejto fáze sa zameriame na ich použitie vo vetách, kde opisujú farbu predmetu, napríklad \"Der Stuhl ist rot\" (Stolička je červená).</p>\n      <p>Tu sú niektoré základné farby:</p>\n      <ul>\n        <li><strong>rot</strong> (červená)</li>\n        <li><strong>blau</strong> (modrá)</li>\n        <li><strong>gelb</strong> (žltá)</li>\n        <li><strong>grün</strong> (zelená)</li>\n        <li><strong>schwarz</strong> (čierna)</li>\n        <li><strong>weiß</strong> (biela)</li>\n        <li><strong>grau</strong> (sivá)</li>\n        <li><strong>braun</strong> (hnedá)</li>\n        <li><strong>orange</strong> (oranžová)</li>\n        <li><strong>lila</strong> (fialová)</li>\n        <li><strong>rosa</strong> (ružová)</li>\n      </ul>\n      <p>Farby môžu byť použité aj ako podstatné mená (napr. \"Das Rot\" - červená farba), ale pre A1 úroveň sa sústreďte na ich použitie ako prídavných mien po slovese \"sein\" (byť).</p>\n    ",
+      examples: [
+        {
+          de: "Der Stuhl ist rot.",
+          sk: "Stolička je červená."
+        },
+        {
+          de: "Die Lampe ist blau.",
+          sk: "Lampa je modrá."
+        },
+        {
+          de: "Das Buch ist grün.",
+          sk: "Kniha je zelená."
+        },
+        {
+          de: "Mein Auto ist schwarz.",
+          sk: "Moje auto je čierne."
+        },
+        {
+          de: "Welche Farbe hat das? Es ist gelb.",
+          sk: "Akú to má farbu? Je to žlté."
+        },
+        {
+          de: "Meine Lieblingsfarbe ist Orange.",
+          sk: "Moja obľúbená farba je oranžová."
+        }
+      ],
+      slovakContrastNote: "\n      <p>Použitie farieb v nemčine je veľmi podobné slovenčine. Aj v slovenčine povieme \"Stolička je červená\", kde \"červená\" je prídavné meno. Hlavný rozdiel spočíva v skloňovaní prídavných mien, keď stoja pred podstatným menom (napr. \"červená stolička\" vs. \"ein roter Stuhl\"), ale to je téma pre vyššie úrovne. Pre A1 sa sústreďte na jednoduché vety s \"ist + farba\".</p>\n    "
+    }
+  ],
   vocab: [
     {
-      de: "die Tische",
-      sk: "stoly",
-      example: "Wir brauchen zwei Tische.",
-      exampleSk: "Potrebujeme dva stoly.",
-      gender: "Pl",
+      de: "die Farbe",
+      sk: "farba",
+      gender: "F",
       srsId: "L15_V01",
-      recycledFrom: [7],
+      example: "Die Farbe ist schön.",
+      exampleSk: "Farba je pekná.",
+      recycledFrom: []
     },
     {
-      de: "die Stühle",
-      sk: "stoličky",
-      example: "Vier Stühle, bitte.",
-      exampleSk: "Štyri stoličky, prosím.",
-      gender: "Pl",
+      de: "das Blau",
+      sk: "modrá (farba)",
+      gender: "N",
       srsId: "L15_V02",
-      recycledFrom: [7],
+      example: "Ich möchte das Blau.",
+      exampleSk: "Chcem modrú (farbu).",
+      recycledFrom: []
     },
     {
-      de: "die Bücher",
-      sk: "knihy",
-      example: "Meine Bücher stehen im Regal.",
-      exampleSk: "Moje knihy sú na poličke.",
-      gender: "Pl",
+      de: "das Grün",
+      sk: "zelená (farba)",
+      gender: "N",
       srsId: "L15_V03",
-      recycledFrom: [7],
+      example: "Das ist kein Grün.",
+      exampleSk: "To nie je zelená (farba).",
+      recycledFrom: []
     },
     {
-      de: "die Fenster",
-      sk: "okná",
-      example: "Die Fenster sind groß.",
-      exampleSk: "Okná sú veľké.",
-      gender: "Pl",
+      de: "das Rot",
+      sk: "červená (farba)",
+      gender: "N",
       srsId: "L15_V04",
-      recycledFrom: [7],
+      example: "Ich mag das Rot.",
+      exampleSk: "Mám rád červenú (farbu).",
+      recycledFrom: []
     },
     {
-      de: "die Türen",
-      sk: "dvere",
-      example: "Alle Türen sind weiß.",
-      exampleSk: "Všetky dvere sú biele.",
-      gender: "Pl",
+      de: "der Laden",
+      sk: "obchod",
+      gender: "M",
       srsId: "L15_V05",
-      recycledFrom: [7],
+      example: "Der Laden ist groß.",
+      exampleSk: "Obchod je veľký.",
+      recycledFrom: []
     },
     {
-      de: "die Lampen",
-      sk: "lampy",
-      example: "Drei Lampen reichen.",
-      exampleSk: "Tri lampy postačia.",
-      gender: "Pl",
+      de: "der Wunsch",
+      sk: "želanie",
+      gender: "M",
       srsId: "L15_V06",
-      recycledFrom: [7],
+      example: "Das ist kein Wunsch von mir.",
+      exampleSk: "To nie je moje želanie.",
+      recycledFrom: []
     },
     {
-      de: "die Zimmer",
-      sk: "izby",
-      example: "Die Wohnung hat drei Zimmer.",
-      exampleSk: "Byt má tri izby.",
-      gender: "Pl",
+      de: "die Ahnung",
+      sk: "tušenie, poňatie",
+      gender: "F",
       srsId: "L15_V07",
-      recycledFrom: [7],
+      example: "Ich habe keine Ahnung.",
+      exampleSk: "Nemám poňatia.",
+      recycledFrom: []
     },
     {
-      de: "die Männer",
-      sk: "muži",
-      example: "Zwei Männer warten.",
-      exampleSk: "Dvaja muži čakajú.",
-      gender: "Pl",
+      de: "verstehen",
+      sk: "rozumieť",
+      gender: null,
       srsId: "L15_V08",
-      recycledFrom: [],
+      example: "Ich verstehe das nicht.",
+      exampleSk: "Nerozumiem tomu.",
+      recycledFrom: []
     },
     {
-      de: "die Frauen",
-      sk: "ženy",
-      example: "Die Frauen sprechen Deutsch.",
-      exampleSk: "Ženy hovoria po nemecky.",
-      gender: "Pl",
+      de: "bestellen",
+      sk: "objednať",
+      gender: null,
       srsId: "L15_V09",
-      recycledFrom: [],
+      example: "Wir bestellen die Farbe.",
+      exampleSk: "Objednávame farbu.",
+      recycledFrom: []
     },
     {
-      de: "die Kinder",
-      sk: "deti",
-      example: "Die Kinder spielen.",
-      exampleSk: "Deti sa hrajú.",
-      gender: "Pl",
+      de: "geben",
+      sk: "dať",
+      gender: null,
       srsId: "L15_V10",
-      recycledFrom: [13],
+      example: "Kannst du mir das geben?",
+      exampleSk: "Môžeš mi to dať?",
+      recycledFrom: []
     },
     {
-      de: "die Häuser",
-      sk: "domy",
-      example: "Die Häuser in Wien sind alt.",
-      exampleSk: "Domy vo Viedni sú staré.",
-      gender: "Pl",
+      de: "blau",
+      sk: "modrý",
+      gender: null,
       srsId: "L15_V11",
-      recycledFrom: [],
+      example: "Die Farbe ist blau.",
+      exampleSk: "Farba je modrá.",
+      recycledFrom: []
     },
     {
-      de: "die Städte",
-      sk: "mestá",
-      example: "Welche Städte kennst du?",
-      exampleSk: "Ktoré mestá poznáš?",
-      gender: "Pl",
+      de: "grün",
+      sk: "zelený",
+      gender: null,
       srsId: "L15_V12",
-      recycledFrom: [],
+      example: "Die Farbe ist grün.",
+      exampleSk: "Farba je zelená.",
+      recycledFrom: []
     },
     {
-      de: "die Länder",
-      sk: "krajiny, štáty",
-      example: "In wie vielen Ländern warst du?",
-      exampleSk: "V koľkých krajinách si bol/a?",
-      gender: "Pl",
+      de: "rot",
+      sk: "červený",
+      gender: null,
       srsId: "L15_V13",
-      recycledFrom: [9],
+      example: "Das ist keine rote Farbe.",
+      exampleSk: "To nie je červená farba.",
+      recycledFrom: []
     },
     {
-      de: "die Büros",
-      sk: "kancelárie",
-      example: "Die Büros sind im dritten Stock.",
-      exampleSk: "Kancelárie sú na treťom poschodí.",
-      gender: "Pl",
+      de: "gelb",
+      sk: "žltý",
+      gender: null,
       srsId: "L15_V14",
-      recycledFrom: [4],
+      example: "Ist die Farbe gelb?",
+      exampleSk: "Je farba žltá?",
+      recycledFrom: []
     },
     {
-      de: "die Cafés",
-      sk: "kaviarne",
-      example: "Wien hat viele schöne Cafés.",
-      exampleSk: "Viedeň má veľa krásnych kaviarní.",
-      gender: "Pl",
+      de: "weiß",
+      sk: "biely",
+      gender: null,
       srsId: "L15_V15",
-      recycledFrom: [8],
+      example: "Ich möchte eine weiße Farbe.",
+      exampleSk: "Chcem bielu farbu.",
+      recycledFrom: []
     },
     {
-      de: "die Menschen",
-      sk: "ľudia",
-      example: "Viele Menschen leben in Wien.",
-      exampleSk: "Veľa ľudí žije vo Viedni.",
-      gender: "Pl",
+      de: "schwarz",
+      sk: "čierny",
+      gender: null,
       srsId: "L15_V16",
-      recycledFrom: [],
+      example: "Das ist kein Schwarz.",
+      exampleSk: "To nie je čierna (farba).",
+      recycledFrom: []
     },
     {
-      de: "die Leute",
-      sk: "ľudia (len množné číslo!)",
-      example: "Die Leute hier sind sehr nett.",
-      exampleSk: "Ľudia tu sú veľmi milí.",
-      gender: "Pl",
+      de: "kein / keine",
+      sk: "žiadny / žiadna",
+      gender: null,
       srsId: "L15_V17",
-      recycledFrom: [],
+      example: "Ich habe keine Zeit.",
+      exampleSk: "Nemám čas.",
+      recycledFrom: []
     },
     {
-      de: "viele",
-      sk: "mnoho, veľa",
-      example: "Viele Leute sprechen Deutsch.",
-      exampleSk: "Veľa ľudí hovorí po nemecky.",
+      de: "Warum?",
+      sk: "Prečo?",
       gender: null,
       srsId: "L15_V18",
-      recycledFrom: [],
-    },
-    {
-      de: "alle",
-      sk: "všetci, všetky",
-      example: "Alle Zimmer sind hell.",
-      exampleSk: "Všetky izby sú svetlé.",
-      gender: null,
-      srsId: "L15_V19",
-      recycledFrom: [],
-    },
-    {
-      de: "einige",
-      sk: "niektorí, niekoľko",
-      example: "Einige Kollegen kommen aus Deutschland.",
-      exampleSk: "Niektorí kolegovia pochádzajú z Nemecka.",
-      gender: null,
-      srsId: "L15_V20",
-      recycledFrom: [],
-    },
+      example: "Warum ist das so?",
+      exampleSk: "Prečo je to tak?",
+      recycledFrom: []
+    }
   ],
-
   exercises: [
     {
       type: "flashcard",
-      instruction:
-        "Prelistuj si plurálne formy. Každá karta = singulár → plurál. Spomeň si na typ zmeny!",
-      items: [
-        "der Tisch → die Tische = stôl → stoly (+e)",
-        "der Stuhl → die Stühle = stolička → stoličky (+e, Umlaut)",
-        "das Buch → die Bücher = kniha → knihy (+er, Umlaut)",
-        "das Fenster → die Fenster = okno → okná (nezmenené)",
-        "die Tür → die Türen = dvere → dvere (+en)",
-        "die Lampe → die Lampen = lampa → lampy (+n)",
-        "das Zimmer → die Zimmer = izba → izby (nezmenené)",
-        "der Mann → die Männer = muž → muži (+er, Umlaut)",
-        "die Frau → die Frauen = žena → ženy (+en)",
-        "das Kind → die Kinder = dieťa → deti (+er)",
-        "das Haus → die Häuser = dom → domy (+er, Umlaut)",
-        "die Stadt → die Städte = mesto → mestá (+e, Umlaut)",
-        "das Land → die Länder = krajina → krajiny (+er, Umlaut)",
-        "das Büro → die Büros = kancelária → kancelárie (+s)",
-        "das Café → die Cafés = kaviareň → kaviarne (+s)",
-        "die Leute = ľudia (len množné číslo!)",
-        "viele = mnoho, veľa",
-        "alle = všetci, všetky",
-        "einige = niektorí, niekoľko",
-      ],
-    },
-    {
-      type: "mcq",
-      instruction: "Vyber správnu odpoveď.",
-      questions: [
-        {
-          question: "Aký člen používajú VŠETKY podstatné mená v množnom čísle?",
-          options: ["der", "die", "das", "Závisí od rodu."],
-          answer: 1,
-          explanation:
-            "Zlaté pravidlo: VŠETKY podstatné mená v množnom čísle používajú člen 'die', bez ohľadu na pôvodný rod (der/die/das).",
-        },
-        {
-          question: "Aký je plurál od 'das Haus'?",
-          options: ["die Haus", "die Hauser", "die Häuser", "die Häuse"],
-          answer: 2,
-          explanation:
-            "'Das Haus' → die Häuser (typ +er s prehlásením a→ä). Sleduj vzor: Kind→Kinder, Haus→Häuser.",
-        },
-        {
-          question: "Čo je špeciálne na slove 'die Leute'?",
-          options: [
-            "Je to formálne slovo pre ľudí.",
-            "Existuje len v množnom čísle, singulár = ein Mensch.",
-            "Je to zastarané slovo.",
-            "Má nepravidelný plurál.",
-          ],
-          answer: 1,
-          explanation:
-            "'Die Leute' = ľudia (len Pl!). Singulár: 'ein Mensch' (nie eine Leute!). Porovnaj: slovenčina nemá presný ekvivalent — 'ľudia' je tiež len Pl.",
-        },
-        {
-          question: "Jana braucht Stühle. Správny plurál od 'der Stuhl'?",
-          options: ["die Stuhle", "die Stühle", "die Stühlen", "die Stuhlen"],
-          answer: 1,
-          explanation:
-            "'Der Stuhl' → die Stühle (+e s prehlásením u→ü). Podobný vzor: der Tisch → die Tische (ale bez prehlásenia).",
-        },
-        {
-          question: "Ako povieš 'veľa kaviarne' po nemecky?",
-          options: [
-            "viele Café",
-            "viele Cafén",
-            "viele Cafés",
-            "viele Cafés",
-          ],
-          answer: 2,
-          explanation:
-            "'Das Café' → die Cafés (+s). Prevzaté slová z francúzštiny/angličtiny bežne tvoria plurál pomocou +s.",
-        },
-      ],
-    },
-    {
-      type: "fill",
-      instruction: "Doplň správny plurál podstatného mena do medzery ___.",
-      questions: [
-        {
-          sentence: "Jana braucht zwei ___ für die Küche. (der Stuhl)",
-          answer: "Stühle",
-          hint: "der Stuhl → die Stühle (Umlaut + e)",
-          explanation: "der Stuhl → die Stühle. Prehlásenie: u→ü.",
-        },
-        {
-          sentence: "Es gibt viele schöne ___ in Wien. (das Café)",
-          answer: "Cafés",
-          hint: "das Café → die Cafés (+s, prevzaté slovo)",
-          explanation: "Prevzaté slová z francúzštiny tvoria plurál pomocou +s.",
-        },
-        {
-          sentence: "Die ___ in der Wohnung sind groß. (das Fenster)",
-          answer: "Fenster",
-          hint: "das Fenster → die Fenster (nezmenené)",
-          explanation: "Slová na -er väčšinou nemajú zmenu v pluráli.",
-        },
-        {
-          sentence: "Die ___ spielen im Park. (das Kind)",
-          answer: "Kinder",
-          hint: "das Kind → die Kinder (+er)",
-          explanation: "das Kind → die Kinder (+er). Žiadne prehlásenie tu.",
-        },
-        {
-          sentence: "___ Leute sprechen in Wien Deutsch. (many)",
-          answer: "Viele",
-          hint: "mnoho, veľa = V___",
-          explanation: "'Viele' = mnoho, veľa. Používa sa s množným číslom.",
-        },
-        {
-          sentence: "___ Zimmer in der Wohnung sind hell. (all)",
-          answer: "Alle",
-          hint: "všetky = A___",
-          explanation: "'Alle' = všetky/všetci. Tu: Alle Zimmer = všetky izby.",
-        },
-      ],
-    },
-    {
-      type: "listen",
-      instruction: "Počúvaj a zopakuj. Sústred sa na plurálne formy.",
-      questions: [
-        { de: "Wir brauchen zwei Tische und vier Stühle.", sk: "Potrebujeme dva stoly a štyri stoličky." },
-        { de: "Die Fenster sind groß und hell.", sk: "Okná sú veľké a svetlé." },
-        { de: "Meine Bücher stehen im Regal.", sk: "Moje knihy sú na poličke." },
-        { de: "Alle Zimmer sind hell.", sk: "Všetky izby sú svetlé." },
-        { de: "Die Leute hier sind sehr nett.", sk: "Ľudia tu sú veľmi milí." },
-        { de: "Wien hat viele schöne Cafés.", sk: "Viedeň má veľa krásnych kaviarní." },
-        { de: "Die Kinder spielen im Park.", sk: "Deti sa hrajú v parku." },
-        { de: "Einige Kollegen kommen aus Deutschland.", sk: "Niektorí kolegovia pochádzajú z Nemecka." },
-      ],
+      instruction: "Prezri si slovíčka tejto lekcie. Klikni na kartičku pre preklad."
     },
     {
       type: "match",
-      instruction: "Spoj singulárnu formu s jej plurálom.",
+      instruction: "Priraďte nemecké slová k ich slovenským prekladom.",
       pairs: [
-        ["der Stuhl", "die Stühle"],
-        ["das Buch", "die Bücher"],
-        ["die Frau", "die Frauen"],
-        ["das Zimmer", "die Zimmer"],
-        ["das Kind", "die Kinder"],
-        ["die Stadt", "die Städte"],
-        ["das Café", "die Cafés"],
-        ["das Haus", "die Häuser"],
-      ],
-    },
-    {
-      type: "dialogue",
-      instruction:
-        "Prečítaj si dialóg. Jana telefonuje s IKEA zákazníckym servisom a pýta sa na nábytok.",
-      lines: [
-        {
-          speaker: "B",
-          de: "Guten Tag, IKEA Wien, wie kann ich Ihnen helfen?",
-          sk: "Dobrý deň, IKEA Viedeň, ako vám môžem pomôcť?",
-        },
-        {
-          speaker: "A",
-          de: "Guten Tag! Ich brauche Möbel für meine neue Wohnung. Haben Sie Tische?",
-          sk: "Dobrý deň! Potrebujem nábytok do nového bytu. Máte stoly?",
-        },
-        {
-          speaker: "B",
-          de: "Ja, natürlich! Wir haben viele Tische — runde, eckige, große und kleine.",
-          sk: "Áno, samozrejme! Máme veľa stolov — okrúhle, hranatá, veľké aj malé.",
-        },
-        {
-          speaker: "A",
-          de: "Und Stühle? Ich brauche vier Stühle.",
-          sk: "A stoličky? Potrebujem štyri stoličky.",
-        },
-        {
-          speaker: "B",
-          de: "Stühle haben wir auch. Alle unsere Stühle sind sehr komfortabel.",
-          sk: "Stoličky tiež máme. Všetky naše stoličky sú veľmi pohodlné.",
-        },
-        {
-          speaker: "A",
-          de: "Gut. Haben Sie auch Lampen für ein Wohnzimmer?",
-          sk: "Dobre. Máte aj lampy do obývačky?",
-        },
-        {
-          speaker: "B",
-          de: "Ja, viele Lampen! Einige Lampen sind gerade im Angebot.",
-          sk: "Áno, veľa lámp! Niektoré lampy sú práve vo výpredaji.",
-        },
-        {
-          speaker: "A",
-          de: "Super! Und Bücher... ich meine, Bücherregale?",
-          sk: "Super! A knihy... myslím, knižnice?",
-        },
-        {
-          speaker: "B",
-          de: "Bücherregale haben wir in drei Größen.",
-          sk: "Knižnice máme v troch veľkostiach.",
-        },
-        {
-          speaker: "A",
-          de: "Wie viele Zimmer müssen wir einrichten?",
-          sk: "Koľko izieb musíme zariadiť?",
-        },
-        {
-          speaker: "B",
-          de: "Das weiß ich nicht — das ist Ihre Frage!",
-          sk: "To neviem — to je vaša otázka!",
-        },
-        {
-          speaker: "A",
-          de: "Haha, stimmt! Ich habe drei Zimmer. Bis bald bei IKEA!",
-          sk: "Haha, pravda! Mám tri izby. Čoskoro prídem do IKEA!",
-        },
-      ],
-      comprehensionQuestions: [
-        {
-          question: "Was braucht Jana für ihre Wohnung?",
-          options: [
-            "Nur Lampen.",
-            "Tische, Stühle, Lampen und Bücherregale.",
-            "Nur Tische und Stühle.",
-          ],
-          answer: 1,
-        },
-        {
-          question: "Wie viele Stühle braucht Jana?",
-          options: ["Zwei", "Drei", "Vier"],
-          answer: 2,
-        },
-        {
-          question: "Was ist gerade im Angebot?",
-          options: ["Tische", "Lampen", "Bücherregale"],
-          answer: 1,
-        },
-      ],
+        [
+          "die Farbe",
+          "farba"
+        ],
+        [
+          "das Blau",
+          "modrá (farba)"
+        ],
+        [
+          "der Laden",
+          "obchod"
+        ],
+        [
+          "verstehen",
+          "rozumieť"
+        ],
+        [
+          "bestellen",
+          "objednať"
+        ],
+        [
+          "geben",
+          "dať"
+        ],
+        [
+          "blau",
+          "modrý"
+        ],
+        [
+          "grün",
+          "zelený"
+        ],
+        [
+          "rot",
+          "červený"
+        ],
+        [
+          "kein / keine",
+          "žiadny / žiadna"
+        ]
+      ]
     },
     {
       type: "wordorder",
-      instruction: "Zoraď slová do správnej nemeckej vety.",
+      instruction: "Usporiadajte slová do správneho poradia, aby ste vytvorili zmysluplnú nemeckú vetu.",
       sentences: [
         {
-          words: ["Ich", "brauche", "drei", "Stühle", "und", "zwei", "Tische."],
-          correct: "Ich brauche drei Stühle und zwei Tische.",
-          hint: "Potrebujem tri stoličky a dva stoly.",
-          explanation: "Stuhl → Stühle (s Umlautom + -e). Tisch → Tische (-e bez Umlauta)."
+          words: [
+            "habe",
+            "keine",
+            "Ahnung",
+            "Ich"
+          ],
+          correct: "Ich habe keine Ahnung",
+          hint: "Nemám tušenie.",
+          explanation: "Negatívny člen 'keine' sa používa pred podstatným menom ženského rodu 'die Ahnung' na vyjadrenie 'žiadna'."
         },
         {
-          words: ["Alle", "Bücher", "sind", "auf", "dem", "Regal."],
-          correct: "Alle Bücher sind auf dem Regal.",
-          hint: "Všetky knihy sú na polici.",
-          explanation: "Buch → Bücher (s Umlautom + -er). 'alle' = všetky → plurál."
+          words: [
+            "ist",
+            "kein",
+            "Wunsch",
+            "Das"
+          ],
+          correct: "Das ist kein Wunsch",
+          hint: "To nie je želanie.",
+          explanation: "Negatívny člen 'kein' sa používa pred podstatným menom mužského rodu 'der Wunsch' na vyjadrenie 'žiadny'."
         },
         {
-          words: ["Die", "Frauen", "sprechen", "Deutsch."],
-          correct: "Die Frauen sprechen Deutsch.",
-          hint: "Ženy hovoria po nemecky.",
-          explanation: "Frau → Frauen (+ -en). Plurál 'die Frauen' = ženy."
+          words: [
+            "ist",
+            "grün",
+            "Der",
+            "Laden",
+            "nicht"
+          ],
+          correct: "Der Laden ist nicht grün",
+          hint: "Obchod nie je zelený.",
+          explanation: "Farba 'grün' je prídavné meno a opisuje 'der Laden'. 'Nicht' neguje prídavné meno."
         },
         {
-          words: ["Wie", "viele", "Lampen", "hast", "du?"],
-          correct: "Wie viele Lampen hast du?",
-          hint: "Koľko lámp máš?",
-          explanation: "Lampe → Lampen (+ -n). 'Wie viele?' = koľko? + plurálový tvar."
+          words: [
+            "haben",
+            "Wir",
+            "kein",
+            "rotes",
+            "Auto"
+          ],
+          correct: "Wir haben kein rotes Auto",
+          hint: "Nemáme žiadne červené auto.",
+          explanation: "Negatívny člen 'kein' sa používa pred neurčitým podstatným menom 'Auto'. Prídavné meno 'rot' sa skloňuje na 'rotes', pretože stojí pred podstatným menom stredného rodu."
         },
         {
-          words: ["Es", "gibt", "viele", "Restaurants", "in", "Wien."],
-          correct: "Es gibt viele Restaurants in Wien.",
-          hint: "Vo Viedni je veľa reštaurácií.",
-          explanation: "Restaurant → Restaurants (+s — prevzaté slová). es gibt + akkuzatív."
+          words: [
+            "möchte",
+            "Ich",
+            "kein",
+            "blaues",
+            "Hemd",
+            "bestellen"
+          ],
+          correct: "Ich möchte kein blaues Hemd bestellen",
+          hint: "Nechcem si objednať žiadnu modrú košeľu.",
+          explanation: "Modalné sloveso 'möchten' je na druhom mieste, plnovýznamové sloveso 'bestellen' na konci. 'Kein' neguje 'Hemd'. 'Blaues' je prídavné meno pred podstatným menom stredného rodu."
+        }
+      ]
+    },
+    {
+      type: "fill",
+      instruction: "Doplňte do viet správne slovo.",
+      questions: [
+        {
+          sentence: "Ich habe ___ Ahnung.",
+          answer: "keine",
+          hint: "Nemám tušenie.",
+          explanation: "Podstatné meno 'Ahnung' (tušenie) je ženského rodu (die Ahnung), preto používame negatívny člen 'keine'."
+        },
+        {
+          sentence: "Das ist ___ Wunsch.",
+          answer: "kein",
+          hint: "To nie je želanie.",
+          explanation: "Podstatné meno 'Wunsch' (želanie) je mužského rodu (der Wunsch), preto používame negatívny člen 'kein'."
+        },
+        {
+          sentence: "Die Farbe ist ___.",
+          answer: "blau",
+          hint: "Farba je modrá.",
+          explanation: "Farby sa používajú ako prídavné mená na opis. 'Blau' znamená 'modrá'."
+        },
+        {
+          sentence: "Wir verstehen ___ Deutsch.",
+          answer: "kein",
+          hint: "Nerozumieme žiadnej nemčine.",
+          explanation: "Slovo 'Deutsch' (nemčina) sa tu používa ako podstatné meno stredného rodu, preto používame negatívny člen 'kein'."
+        },
+        {
+          sentence: "Der Stuhl ist ___.",
+          answer: "rot",
+          hint: "Stolička je červená.",
+          explanation: "Farba 'rot' (červená) je prídavné meno a opisuje stoličku. V nemčine sa farby v takejto pozícii neskloňujú."
+        },
+        {
+          sentence: "Ist das ___ Buch?",
+          answer: "ein",
+          hint: "Je to kniha?",
+          explanation: "Podstatné meno 'Buch' (kniha) je stredného rodu (das Buch), preto používame neurčitý člen 'ein'."
+        },
+        {
+          sentence: "Ich ___ einen Hund.",
+          answer: "habe",
+          hint: "Mám psa.",
+          explanation: "Sloveso 'haben' (mať) sa pre zámeno 'ich' (ja) časuje ako 'habe'."
+        }
+      ]
+    },
+    {
+      type: "listen",
+      instruction: "Vypočujte si slovo a napíšte ho po nemecky. Potom skontrolujte jeho význam.",
+      questions: [
+        {
+          de: "blau",
+          sk: "modrý"
+        },
+        {
+          de: "grün",
+          sk: "zelený"
+        },
+        {
+          de: "rot",
+          sk: "červený"
+        },
+        {
+          de: "gelb",
+          sk: "žltý"
+        },
+        {
+          de: "weiß",
+          sk: "biely"
+        },
+        {
+          de: "schwarz",
+          sk: "čierny"
+        },
+        {
+          de: "die Farbe",
+          sk: "farba"
+        },
+        {
+          de: "der Laden",
+          sk: "obchod"
+        },
+        {
+          de: "verstehen",
+          sk: "rozumieť"
+        },
+        {
+          de: "bestellen",
+          sk: "objednať"
+        }
+      ]
+    },
+    {
+      type: "mcq",
+      instruction: "Vyberte správnu odpoveď.",
+      questions: [
+        {
+          question: "Ich habe ___ Geld.",
+          options: [
+            "kein",
+            "keine",
+            "nicht",
+            "keinen"
+          ],
+          answer: 0,
+          explanation: "Podstatné meno 'Geld' (peniaze) je v nemčine stredného rodu (das Geld), preto používame negatívny člen 'kein'."
+        },
+        {
+          question: "Wir haben ___ Kinder.",
+          options: [
+            "kein",
+            "keine",
+            "nicht",
+            "keinen"
+          ],
+          answer: 1,
+          explanation: "Podstatné meno 'Kinder' (deti) je v množnom čísle, preto používame negatívny člen 'keine'."
+        },
+        {
+          question: "Aká je farba neba?",
+          options: [
+            "Rot",
+            "Grün",
+            "Blau",
+            "Gelb"
+          ],
+          answer: 2,
+          explanation: "Nebo je zvyčajne modré. 'Blau' znamená modrá."
+        },
+        {
+          question: "Der Apfel ist ___.",
+          options: [
+            "rot",
+            "rote",
+            "rotes",
+            "roter"
+          ],
+          answer: 0,
+          explanation: "Keď je farba použitá ako prídavné meno za slovesom 'sein' (byť), nepridáva sa žiadna koncovka. 'Rot' znamená červený."
+        },
+        {
+          question: "Čo znamená 'der Laden'?",
+          options: [
+            "kniha",
+            "obchod",
+            "dom",
+            "auto"
+          ],
+          answer: 1,
+          explanation: "'Der Laden' v nemčine znamená 'obchod'."
+        },
+        {
+          question: "___ Sonne scheint.",
+          options: [
+            "Der",
+            "Die",
+            "Das",
+            "Ein"
+          ],
+          answer: 1,
+          explanation: "Podstatné meno 'Sonne' (slnko) je v nemčine ženského rodu (die Sonne), preto používame určitý člen 'die'."
+        },
+        {
+          question: "___ kommst du?",
+          options: [
+            "Was",
+            "Wer",
+            "Woher",
+            "Wie"
+          ],
+          answer: 2,
+          explanation: "Otázka 'Woher?' (Odkiaľ?) sa používa na pýtanie sa na pôvod. 'Woher kommst du?' znamená 'Odkiaľ pochádzaš?'."
         }
       ]
     },
     {
       type: "minitext",
-      instruction: "Prečítaj si krátky text o Jane. Potom odpovedaj na otázky.",
-      text: "Jana macht eine Einkaufsliste für ihre neue Wohnung. Sie braucht vier Stühle, zwei Tische und drei Lampen. Jana merkt: Alle Substantive im Plural haben den Artikel 'die'! Sie geht ins IKEA und kauft alles. Die Rechnung ist groß, aber die Wohnung ist jetzt schön.",
-      textSk: "Jana robí nákupný zoznam pre nový byt. Potrebuje štyri stoličky, dva stoly a tri lampy. Jana si všimne: Všetky podstatné mená v množnom čísle majú člen 'die'! Ide do IKEAy a kúpi všetko. Účet je veľký, ale byt je teraz pekný.",
+      instruction: "Lies den Dialog und beantworte die Fragen.",
+      text: "Jana: Guten Tag! Ich habe Farbe bestellt.\nVerkäufer: Ja, hier ist Ihre Farbe. Grün.\nJana: Moment! Das ist kein Grün. Ich möchte keine grüne Farbe. Ich brauche Blau! Ich habe Blau bestellt.\nVerkäufer: Oh, Entschuldigung! Das ist ein Fehler. Hier ist das Blau. Kein Problem!\nJana: Petra, ich habe jetzt Blau. Aber im Laden... keine Ahnung, warum sie das nicht verstehen!",
+      textSk: "Jana: Dobrý deň! Objednala som si farbu.\nPredavač: Áno, tu je vaša farba. Zelená.\nJana: Moment! To nie je žiadna zelená. Nechcem žiadnu zelenú farbu. Potrebujem modrú! Objednala som si modrú.\nPredavač: Och, prepáčte! To je chyba. Tu je modrá. Žiaden problém!\nJana: Petra, teraz mám modrú. Ale v obchode... nemám poňatia, prečo to nechápu!",
       questions: [
         {
-          question: "Koľko stoličiek Jana potrebuje?",
-          options: ["Zwei", "Drei", "Vier", "Fünf"],
+          question: "Welche Farbe hat Jana bestellt?",
+          options: [
+            "Grün",
+            "Rot",
+            "Blau",
+            "Gelb"
+          ],
           answer: 2,
-          explanation: "V texte: 'Sie braucht vier Stühle...'"
+          explanation: "Jana sagt: „Ich habe Blau bestellt.“"
         },
         {
-          question: "Aký člen majú všetky podstatné mená v množnom čísle?",
-          options: ["Der", "Die", "Das", "Ein"],
+          question: "Welche Farbe hat der Verkäufer Jana zuerst gegeben?",
+          options: [
+            "Blau",
+            "Grün",
+            "Rot",
+            "Weiß"
+          ],
           answer: 1,
-          explanation: "V texte: 'Alle Substantive im Plural haben den Artikel die!'"
+          explanation: "Der Verkäufer sagt: „Ja, hier ist Ihre Farbe. Grün.“"
         },
         {
-          question: "Kde sa Jana nakupuje?",
-          options: ["Im Supermarkt", "Im BILLA", "Im IKEA", "Im Kaufhaus"],
+          question: "Was ist Janas Problem am Ende des Dialogs?",
+          options: [
+            "Sie hat keine Farbe bekommen.",
+            "Die Farbe ist zu teuer.",
+            "Sie versteht nicht, warum der Verkäufer den Fehler gemacht hat.",
+            "Sie möchte noch mehr Farbe kaufen."
+          ],
           answer: 2,
-          explanation: "V texte: 'Sie geht ins IKEA und kauft alles.'"
+          explanation: "Jana sagt: „...keine Ahnung, warum sie das nicht verstehen!“"
+        },
+        {
+          question: "Ist das Problem am Ende gelöst?",
+          options: [
+            "Ja, Jana hat die blaue Farbe.",
+            "Nein, sie hat immer noch grüne Farbe.",
+            "Nein, sie hat den Laden ohne Farbe verlassen.",
+            "Der Text sagt es nicht."
+          ],
+          answer: 0,
+          explanation: "Jana sagt: „Petra, ich habe jetzt Blau.“"
         }
       ]
     },
     {
       type: "speaking",
-      instruction: "Počúvaj nemeckú vetu. Potom hovor nahlas a skontroluj sa.",
+      instruction: "Höre zu und sprich nach.",
       phrases: [
-        { de: "Ich brauche vier Stühle.", sk: "Potrebujem štyri stoličky.", tip: "brauche: au=[ao], ch=[x]" },
-        { de: "Alle Bücher sind auf dem Regal.", sk: "Všetky knihy sú na polici.", tip: "Bücher: ü=[ü], ch=[x]" },
-        { de: "Wie viele Lampen haben Sie?", sk: "Koľko lámp máte?", tip: "viele: ie=[í], e tiché" },
-        { de: "Die Frauen sprechen Deutsch.", sk: "Ženy hovoria po nemecky.", tip: "Frauen: au=[ao]" },
-        { de: "Es gibt viele Restaurants.", sk: "Je tu veľa reštaurácií.", tip: "Restaurants: s na konci" }
+        {
+          de: "rot",
+          sk: "červený",
+          tip: "[R] ako v \"Róbert\", [o:] dlhé. Koncové [t] ostré."
+        },
+        {
+          de: "grün",
+          sk: "zelený",
+          tip: "[R] ako v \"Róbert\", [ü] ako v \"München\"."
+        },
+        {
+          de: "keine Farbe",
+          sk: "žiadna farba",
+          tip: "[ai] ako \"aj\". [R] ako v \"Róbert\". Koncové [ə] ako \"a\" v \"stôl-a\"."
+        },
+        {
+          de: "kein Rot",
+          sk: "žiadna červená (farba)",
+          tip: "[ai] ako \"aj\". [R] ako v \"Róbert\", [o:] dlhé."
+        },
+        {
+          de: "Ich habe kein Grün.",
+          sk: "Nemám žiadnu zelenú (farbu).",
+          tip: "[ç] ako \"ch\" v \"ich\". [ai] ako \"aj\". [ü] ako v \"München\"."
+        },
+        {
+          de: "Wir bestellen keine blaue Farbe.",
+          sk: "Neobjednávame žiadnu modrú farbu.",
+          tip: "[ɛ] ako \"e\" v \"pes\". [ai] ako \"aj\". [au] ako \"au\"."
+        },
+        {
+          de: "Warum hast du keine Ahnung?",
+          sk: "Prečo nemáš žiadne tušenie?",
+          tip: "[v] ako \"v\" v \"voda\". [a:] dlhé. [ai] ako \"aj\"."
+        },
+        {
+          de: "Ich verstehe. Ich gebe dir keine gelbe Farbe.",
+          sk: "Rozumiem. Nedám ti žiadnu žltú farbu.",
+          tip: "[ç] ako \"ch\" v \"ich\". [e:] dlhé. [ai] ako \"aj\"."
+        }
       ]
     },
+    {
+      type: "truefalse",
+      instruction: "Prečítaj si vety a rozhodni, či sú pravdivé (Wahr) alebo nepravdivé (Falsch).",
+      statements: [
+        {
+          statement: "Negatívny člen 'kein' sa používa pre podstatné mená mužského a stredného rodu.",
+          isTrue: true,
+          explanation: "Áno, 'kein' (žiadny/žiadne) sa používa pre 'der' a 'das' podstatné mená v nominatíve a akuzatíve (ak nie je zmena rodu)."
+        },
+        {
+          statement: "Pre ženský rod a množné číslo používame 'keine'.",
+          isTrue: true,
+          explanation: "Správne, 'keine' (žiadna/žiadne) sa používa pre 'die' podstatné mená a pre množné číslo."
+        },
+        {
+          statement: "Veta 'Das ist kein rot.' je správna, ak chcem povedať 'To nie je červené.'",
+          isTrue: false,
+          explanation: "Nie, farby ako prídavné mená sa negujú pomocou 'nicht', napr. 'Das ist nicht rot.' 'Kein' sa používa na negáciu podstatných mien, napr. 'Das ist keine rote Farbe.'"
+        },
+        {
+          statement: "Farby ako 'rot' alebo 'blau' sú v nemčine vždy podstatné mená.",
+          isTrue: false,
+          explanation: "Nie, farby sú primárne prídavné mená (rot, blau). Môžu sa však použiť aj ako podstatné mená (das Rot, das Blau)."
+        },
+        {
+          statement: "Ak chcem povedať 'Nemám žiadne želanie', poviem 'Ich habe keinen Wunsch'.",
+          isTrue: true,
+          explanation: "Áno, 'der Wunsch' (želanie) je mužského rodu. V akuzatíve sa 'kein' mení na 'keinen'."
+        }
+      ]
+    },
+    {
+      type: "dictation",
+      instruction: "Počúvaj a napíš, čo počuješ. Potom skontroluj preklad.",
+      sentences: [
+        {
+          de: "Das ist blau.",
+          sk: "To je modré."
+        },
+        {
+          de: "Ich habe keinen Wunsch.",
+          sk: "Nemám žiadne želanie."
+        },
+        {
+          de: "Sie hat keine Ahnung.",
+          sk: "Ona nemá žiadne tušenie."
+        },
+        {
+          de: "Wir verstehen kein Deutsch.",
+          sk: "Nerozumieme po nemecky."
+        },
+        {
+          de: "Ich bestelle keine grüne Farbe.",
+          sk: "Neobjednávam žiadnu zelenú farbu."
+        }
+      ]
+    },
+    {
+      type: "categorysort",
+      instruction: "Roztrieď slová do správnych kategórií.",
+      categories: [
+        {
+          name: "Farben (Farby)",
+          color: "blue",
+          words: [
+            "blau",
+            "grün",
+            "rot",
+            "gelb"
+          ]
+        },
+        {
+          name: "Nomen (Podstatné mená)",
+          color: "rose",
+          words: [
+            "die Farbe",
+            "der Laden",
+            "der Wunsch",
+            "die Ahnung",
+            "das Blau",
+            "das Grün",
+            "das Rot"
+          ]
+        },
+        {
+          name: "Verben (Slovesá)",
+          color: "green",
+          words: [
+            "verstehen",
+            "bestellen",
+            "geben"
+          ]
+        }
+      ],
+      explanation: "Cvičenie na roztriedenie slovíčok do kategórií: farby (prídavné mená), podstatné mená a slovesá. Pomôže ti to upevniť si slovnú zásobu a rozlišovať typy slov."
+    },
+    {
+      type: "translation",
+      instruction: "Prelož nasledujúce vety zo slovenčiny do nemčiny. Použi 'kein/keine' a farby.",
+      sentences: [
+        {
+          sk: "Nemám žiadne želanie.",
+          answer: "Ich habe keinen Wunsch.",
+          hint: "Wunsch, haben",
+          explanation: "'Der Wunsch' (želanie) je mužského rodu. V akuzatíve sa 'kein' mení na 'keinen'."
+        },
+        {
+          sk: "Neobjednávame žiadnu zelenú farbu.",
+          answer: "Wir bestellen keine grüne Farbe.",
+          hint: "bestellen, Farbe",
+          explanation: "'Die Farbe' (farba) je ženského rodu, preto používame 'keine'. Prídavné meno 'grün' sa skloňuje pred podstatným menom."
+        },
+        {
+          sk: "On nemá žiadne tušenie.",
+          answer: "Er hat keine Ahnung.",
+          hint: "Ahnung, haben",
+          explanation: "'Die Ahnung' (tušenie) je ženského rodu, preto používame 'keine'."
+        },
+        {
+          sk: "Prečo nemáš žiadnu modrú farbu?",
+          answer: "Warum hast du keine blaue Farbe?",
+          hint: "Warum, Farbe",
+          explanation: "Otázka s 'Warum'. 'Die Farbe' (farba) je ženského rodu, preto 'keine'. Prídavné meno 'blau' sa skloňuje."
+        }
+      ]
+    },
+    {
+      type: "conjugation",
+      instruction: "Doplň správne tvary slovies v prítomnom čase (Präsens).",
+      verbs: [
+        {
+          infinitive: "verstehen",
+          translation: "rozumieť",
+          forms: [
+            {
+              pronoun: "ich",
+              correct: "verstehe"
+            },
+            {
+              pronoun: "du",
+              correct: "verstehst"
+            },
+            {
+              pronoun: "er/sie/es",
+              correct: "versteht"
+            },
+            {
+              pronoun: "wir",
+              correct: "verstehen"
+            },
+            {
+              pronoun: "ihr",
+              correct: "versteht"
+            },
+            {
+              pronoun: "sie/Sie",
+              correct: "verstehen"
+            }
+          ],
+          note: "Sloveso 'verstehen' je pravidelné sloveso. Koncovky sa menia podľa osoby ako pri väčšine pravidelných slovies."
+        },
+        {
+          infinitive: "geben",
+          translation: "dať",
+          forms: [
+            {
+              pronoun: "ich",
+              correct: "gebe"
+            },
+            {
+              pronoun: "du",
+              correct: "gibst"
+            },
+            {
+              pronoun: "er/sie/es",
+              correct: "gibt"
+            },
+            {
+              pronoun: "wir",
+              correct: "geben"
+            },
+            {
+              pronoun: "ihr",
+              correct: "gebt"
+            },
+            {
+              pronoun: "sie/Sie",
+              correct: "geben"
+            }
+          ],
+          note: "Sloveso 'geben' je silné (nepravidelné) sloveso. V druhej a tretej osobe jednotného čísla (du, er/sie/es) dochádza k zmene kmeňovej samohlásky z 'e' na 'i'."
+        }
+      ]
+    }
   ],
-
-  reviewWords: ["L07_V01", "L07_V02", "L07_V03", "L07_V04", "L07_V05", "L07_V06", "L07_V07"],
-  lessonNotes:
-    "Zlaté pravidlo: vždy sa uč podstatné meno s plurálom! Napr. der Tisch, -e (= die Tische). VŠETKY plurály = die. Die Leute = len množné číslo! Päť typov: +e, +en, +er, nezmenené, +s. Prevzaté slová: +s.",
+  reviewWords: []
 };

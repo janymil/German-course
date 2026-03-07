@@ -1,0 +1,15 @@
+Per-feature coverage
+
+Feature	AI used	Now tracked
+
+Lesson exercises (writing, dialogue)	Gemini 2.5 Pro	✅
+Passive phrases	Browser Web Speech API (free, zero API cost)	N/A
+Vocabulary (explain button)	Gemini 2.5 Pro	✅
+Čítanie / StoryReader	Gemini 2.5 Pro	✅
+Video Coach	Gemini Flash Lite + TTS-1 Std + Whisper	✅ fixed
+Tréner viet (ExerciseArena)	Gemini 2.5 Pro	✅
+Gramatika (GrammarGuide)	Static data — no AI	N/A
+AI konverzácia	Gemini 2.5 Pro	✅
+Smart Tutor	GPT-4o Mini	✅
+Files changed
+scripts/ai-voice-coach-api.js 

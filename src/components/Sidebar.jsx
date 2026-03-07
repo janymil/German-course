@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Home, Calendar, Brain, BookOpen, HelpCircle, Headphones, MessageSquare, Key, FlaskConical, Target, Lightbulb, Newspaper, MonitorPlay, LayoutList, Map, MoreHorizontal, X } from 'lucide-react';
+import { Home, Calendar, Brain, BookOpen, HelpCircle, Headphones, MessageSquare, Key, FlaskConical, Target, Lightbulb, Newspaper, MonitorPlay, LayoutList, Map, MoreHorizontal, X, Mic, Activity, Zap } from 'lucide-react';
 
 const NAV = [
   { id: 'dashboard', label: 'Prehľad', Icon: Home },
@@ -7,10 +7,13 @@ const NAV = [
   { id: 'passive', label: 'Pasívna fáza', Icon: Headphones },
   { id: 'vocab', label: 'Slovíčka', Icon: Brain },
   { id: 'stories', label: 'Čítanie', Icon: Newspaper },
+  { id: 'ebooks', label: 'E-Knihy', Icon: BookOpen },
   { id: 'videocoach', label: 'Video Coach', Icon: MonitorPlay },
+  { id: 'sentence_trainer', label: 'Tréner viet', Icon: Mic },
   { id: 'grammar', label: 'Gramatika', Icon: BookOpen },
   { id: 'arena', label: 'Aréna', Icon: Target },
   { id: 'chat', label: 'AI Konverzácia', Icon: MessageSquare },
+  { id: 'smarttutor', label: 'Smart Tutor', Icon: Zap },
   { id: 'placement', label: 'Vstupný test', Icon: FlaskConical },
   { id: 'studycoach', label: 'Study Coach', Icon: Lightbulb },
   { id: 'features', label: 'Funkcie', Icon: LayoutList },
@@ -51,6 +54,14 @@ export default function Sidebar({ activeView, setActiveView, onOpenAPIKey }) {
           ))}
         </nav>
         <div className="mt-auto px-1">
+          <button
+            onClick={() => setActiveView('api_stats')}
+            className={`w-full flex items-center gap-2 px-3 py-2 rounded-xl text-xs transition-all mb-1
+               ${activeView === 'api_stats' ? 'bg-indigo-800/60 text-indigo-300' : 'text-gray-600 hover:text-gray-400 hover:bg-gray-800/40'}`}
+          >
+            <Activity size={14} />
+            API Štatistiky
+          </button>
           <button
             onClick={onOpenAPIKey}
             className="w-full flex items-center gap-2 px-3 py-2 rounded-xl text-xs text-gray-600 hover:text-gray-400 hover:bg-gray-800/40 transition-all"

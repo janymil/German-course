@@ -2,553 +2,926 @@ export const lesson41 = {
   id: 41,
   week: 9,
   day: 1,
-  title: "Körper und Gesundheit",
-  topic: "Časti tela a zdravie",
+  title: "Wo ist die Bäckerei?",
+  topic: "Miesta v meste a inštitúcie, obchody.",
   cefr: "A1",
-  xpReward: 30,
-  narrativeContext:
-    "Jana wacht am Montagmorgen auf und fühlt sich schlecht. Sie hat Kopfschmerzen und Halsschmerzen. Sie beschreibt Lukas ihre Symptome. 'Mir tut der Kopf weh!'",
-  communicativeGoal:
-    "Po tejto lekcii viem pomenovať časti tela, opísať symptómy a povedať, čo ma bolí.",
-  skillFocus: ["speaking", "vocabulary", "grammar"],
-
-  grammarNote: {
-    rule: "'Mir tut ___ weh' / 'Mir tun ___ weh' — vyjadrovanie bolesti",
-    explanation:
-      "Na vyjadrenie bolesti v nemčine sa používa konštrukcia 'mir tut/tun … weh'. Podmet je časť tela. 'Mir' je datív (= mne). Sloveso sa skloňuje podľa počtu: tut (jednotné číslo) / tun (množné číslo). Na bolesti orgánov sa tiež používa 'Ich habe ___schmerzen': Kopfschmerzen, Halsschmerzen, Bauchschmerzen, Rückenschmerzen.",
-    examples: [
-      { de: "Mir tut der Kopf weh.", sk: "Bolí ma hlava." },
-      { de: "Mir tun die Beine weh.", sk: "Bolia ma nohy." },
-      { de: "Ich habe Kopfschmerzen.", sk: "Mám bolesti hlavy." },
-      { de: "Ich habe Halsschmerzen.", sk: "Mám bolesti hrdla." },
-      { de: "Ich fühle mich krank.", sk: "Cítim sa chorý/á." },
-    ],
-    slovakContrastNote:
-      "Slovenčina: 'Bolí ma hlava' — reflexívna konštrukcia. Nemčina: 'Mir tut der Kopf weh' — datívna konštrukcia. Obe sú neosobné, ale štruktúra je odlišná. V nemčine je podmet časť tela, v slovenčine je podmet osoba (mňa bolí).",
-  },
-
+  xpReward: 20,
+  narrativeContext: "Jana ist neu in Wien. Heute geht sie spazieren und entdeckt ihre neue Umgebung im 4. Bezirk.",
+  communicativeGoal: "Nach dieser Lektion kann ich wichtige Orte in der Stadt benennen und sagen, wo sie sind.",
+  skillFocus: [
+    "vocabulary",
+    "speaking",
+    "listening",
+    "reading"
+  ],
+  lessonNotes: "V tejto lekcii sa naučíš pomenovať dôležité miesta v meste, ako sú obchody a inštitúcie. Precvičíš si, ako sa pýtať na cestu a ako povedať, kde sa čo nachádza. Jana ti ukáže, ako objavuje svoje nové okolie vo Viedni.",
+  grammarNotes: [
+    {
+      rule: "Perfekt s „haben“ a „sein“",
+      explanation: "<p>Perfekt je minulý čas, ktorý sa v nemčine používa predovšetkým v hovorenej reči a v neformálnej písomnej komunikácii. Tvorí sa pomocou pomocného slovesa (<em>haben</em> alebo <em>sein</em>) v prítomnom čase (Präsens) a príčastia minulého (Partizip II) plnovýznamového slovesa.</p><p>Pomocné sloveso sa časuje podľa osoby a čísla, zatiaľ čo Partizip II ostáva nezmenené na konci vety. Väčšina slovies tvorí Perfekt s <em>haben</em>. Sloveso <em>sein</em> sa používa pre slovesá vyjadrujúce pohyb (napr. <em>gehen, fahren, fliegen</em>), zmenu stavu (napr. <em>werden, einschlafen</em>) a pre slovesá <em>sein, bleiben, werden</em>.</p><p><strong>Časovanie pomocných slovies v Präsens:</strong></p><table><thead><tr><th>Osoba</th><th>haben</th><th>sein</th></tr></thead><tbody><tr><td>ich</td><td>habe</td><td>bin</td></tr><tr><td>du</td><td>hast</td><td>bist</td></tr><tr><td>er/sie/es</td><td>hat</td><td>ist</td></tr><tr><td>wir</td><td>haben</td><td>sind</td></tr><tr><td>ihr</td><td>habt</td><td>seid</td></tr><tr><td>sie/Sie</td><td>haben</td><td>sind</td></tr></tbody></table>",
+      examples: [
+        {
+          de: "Ich habe einen Kaffee getrunken.",
+          sk: "Pil som kávu."
+        },
+        {
+          de: "Hast du die Hausaufgaben gemacht?",
+          sk: "Urobil si si domácu úlohu?"
+        },
+        {
+          de: "Wir sind nach Berlin gefahren.",
+          sk: "Išli sme do Berlína."
+        },
+        {
+          de: "Sie ist gestern Abend zu Hause geblieben.",
+          sk: "Včera večer zostala doma."
+        },
+        {
+          de: "Er hat ein neues Buch gelesen.",
+          sk: "Prečítal si novú knihu."
+        },
+        {
+          de: "Seid ihr ins Kino gegangen?",
+          sk: "Išli ste do kina?"
+        },
+        {
+          de: "Ich bin müde geworden.",
+          sk: "Unavil som sa."
+        },
+        {
+          de: "Sie haben lange gewartet.",
+          sk: "Dlho čakali."
+        }
+      ],
+      slovakContrastNote: "V slovenčine sa minulý čas tvorí jednoduchšie, pridaním prípony k slovesu (napr. \"robiť\" → \"robil som\"). Nemáme rozdelenie na Perfekt (hovorový) a Präteritum (písomný) v takom rozsahu ako v nemčine. Pre slovenského študenta je dôležité si zapamätať, že Perfekt je primárny minulý čas pre bežnú komunikáciu. Taktiež, v slovenčine sa pomocné sloveso \"byť\" používa len v prvej a druhej osobe jednotného a množného čísla (napr. \"bol som\", \"boli ste\"), zatiaľ čo v nemčine sa pomocné sloveso (haben/sein) používa vždy a časuje sa."
+    },
+    {
+      rule: "Tvorba Partizip II",
+      explanation: "<p>Partizip II (príčastie minulé) je kľúčovou súčasťou pre tvorbu Perfektu, Pasívu a ďalších gramatických štruktúr. Jeho tvorba závisí od typu slovesa.</p><ul><li><strong>Pravidelné slovesá (slabé slovesá):</strong> Tvorí sa pridaním predpony <em>ge-</em> a prípony <em>-t</em> ku kmeňu slovesa. Ak kmeň slovesa končí na <em>-t, -d, -chn, -ffn</em>, pridáva sa <em>-et</em>.</li><li><strong>Nepravidelné slovesá (silné slovesá):</strong> Tvorí sa pridaním predpony <em>ge-</em> a prípony <em>-en</em>, pričom kmeň slovesa sa často mení (prehlasuje sa samohláska). Tieto formy sa treba naučiť naspamäť.</li><li><strong>Zmiešané slovesá:</strong> Majú predponu <em>ge-</em> a príponu <em>-t</em> ako pravidelné slovesá, ale menia kmeň ako nepravidelné slovesá.</li><li><strong>Slovesá končiace na <em>-ieren</em>:</strong> Netvoria predponu <em>ge-</em>, iba pridávajú príponu <em>-t</em>.</li><li><strong>Slovesá s neoddeliteľnými predponami (napr. <em>be-, ge-, ent-, emp-, er-, miss-, ver-, zer-</em>):</strong> Netvoria predponu <em>ge-</em>, iba pridávajú príponu <em>-t</em> alebo <em>-en</em> podľa typu slovesa.</li><li><strong>Slovesá s oddeliteľnými predponami:</strong> Predpona <em>ge-</em> sa vkladá medzi oddeliteľnú predponu a kmeň slovesa.</li></ul>",
+      examples: [
+        {
+          de: "machen → gemacht",
+          sk: "robiť → urobený"
+        },
+        {
+          de: "kaufen → gekauft",
+          sk: "kúpiť → kúpený"
+        },
+        {
+          de: "arbeiten → gearbeitet",
+          sk: "pracovať → pracovaný"
+        },
+        {
+          de: "gehen → gegangen",
+          sk: "ísť → išiel"
+        },
+        {
+          de: "schreiben → geschrieben",
+          sk: "písať → napísaný"
+        },
+        {
+          de: "kennen → gekannt",
+          sk: "poznať → poznaný"
+        },
+        {
+          de: "studieren → studiert",
+          sk: "študovať → študovaný",
+          note: "Bez \"ge-\" pre slovesá na \"-ieren\""
+        },
+        {
+          de: "besuchen → besucht",
+          sk: "navštíviť → navštívený",
+          note: "Bez \"ge-\" pre slovesá s neoddeliteľnou predponou"
+        },
+        {
+          de: "einkaufen → eingekauft",
+          sk: "nakupovať → nakúpený",
+          note: "\"ge-\" je medzi predponou a kmeňom"
+        }
+      ],
+      slovakContrastNote: "Slovenské príčastia minulé sa tvoria pridaním rôznych prípon (napr. -lý, -ný, -tý) a súhlasia v rode a čísle s podstatným menom, ku ktorému sa vzťahujú. Nemecké Partizip II je v Perfekte nemenné a nečasuje sa podľa rodu alebo čísla podmetu. Taktiež, v slovenčine nemáme takú striktnú kategorizáciu slovies na \"slabé\" a \"silné\" s takým vplyvom na tvorbu príčastia."
+    }
+  ],
   vocab: [
     {
-      de: "der Kopf",
-      sk: "hlava",
-      example: "Mir tut der Kopf weh.",
-      exampleSk: "Bolí ma hlava.",
+      de: "der Supermarkt",
+      sk: "supermarket",
       gender: "M",
       srsId: "L41_V01",
-      recycledFrom: [],
+      example: "Der Supermarkt ist sonntags geschlossen.",
+      exampleSk: "Supermarket je v nedeľu zatvorený.",
+      recycledFrom: []
     },
     {
-      de: "der Hals",
-      sk: "hrdlo, krk",
-      example: "Ich habe Halsschmerzen.",
-      exampleSk: "Mám bolesti hrdla.",
-      gender: "M",
+      de: "die Bäckerei",
+      sk: "pekáreň",
+      gender: "F",
       srsId: "L41_V02",
-      recycledFrom: [],
+      example: "Hier ist die Bäckerei. Ich kaufe Brot.",
+      exampleSk: "Tu je pekáreň. Kúpim si chlieb.",
+      recycledFrom: []
     },
     {
-      de: "der Bauch",
-      sk: "brucho",
-      example: "Mir tut der Bauch weh.",
-      exampleSk: "Bolí ma brucho.",
-      gender: "M",
+      de: "das Café",
+      sk: "kaviareň",
+      gender: "N",
       srsId: "L41_V03",
-      recycledFrom: [40],
+      example: "Dort ist ein schönes Café. Wollen wir Kaffee trinken?",
+      exampleSk: "Tam je pekná kaviareň. Chceme si dať kávu?",
+      recycledFrom: []
     },
     {
-      de: "der Rücken",
-      sk: "chrbát",
-      example: "Ich habe Rückenschmerzen.",
-      exampleSk: "Mám bolesti chrbta.",
+      de: "der Bahnhof",
+      sk: "železničná stanica",
       gender: "M",
       srsId: "L41_V04",
-      recycledFrom: [40],
+      example: "Ist der Bahnhof weit von hier?",
+      exampleSk: "Je železničná stanica ďaleko odtiaľto?",
+      recycledFrom: []
     },
     {
-      de: "der Arm",
-      sk: "ruka (rameno)",
-      example: "Mir tut der Arm weh.",
-      exampleSk: "Bolí ma ruka.",
+      de: "der Park",
+      sk: "park",
       gender: "M",
       srsId: "L41_V05",
-      recycledFrom: [],
+      example: "Ich bin gestern im Park spazieren gegangen.",
+      exampleSk: "Včera som sa prešla v parku.",
+      recycledFrom: []
     },
     {
-      de: "das Bein",
-      sk: "noha",
-      example: "Mir tun die Beine weh.",
-      exampleSk: "Bolia ma nohy.",
-      gender: "N",
-      srsId: "L41_V06",
-      recycledFrom: [],
-    },
-    {
-      de: "die Hand",
-      sk: "ruka (dlaň)",
-      example: "Meine Hand ist kalt.",
-      exampleSk: "Moja ruka je studená.",
+      de: "die Schule",
+      sk: "škola",
       gender: "F",
-      srsId: "L41_V07",
-      recycledFrom: [],
+      srsId: "L41_V06",
+      example: "Meine Kinder gehen in diese Schule.",
+      exampleSk: "Moje deti chodia do tejto školy.",
+      recycledFrom: []
     },
     {
-      de: "das Ohr / die Ohren",
-      sk: "ucho / uši",
-      example: "Mir tut das Ohr weh.",
-      exampleSk: "Bolí ma ucho.",
+      de: "das Restaurant",
+      sk: "reštaurácia",
+      gender: "N",
+      srsId: "L41_V07",
+      example: "Am Abend haben wir im Restaurant gegessen.",
+      exampleSk: "Večer sme jedli v reštaurácii.",
+      recycledFrom: []
+    },
+    {
+      de: "das Geschäft",
+      sk: "obchod",
       gender: "N",
       srsId: "L41_V08",
-      recycledFrom: [],
+      example: "Dieses Geschäft hat heute bis 18 Uhr geöffnet.",
+      exampleSk: "Tento obchod je dnes otvorený do 18. hodiny.",
+      recycledFrom: []
     },
     {
-      de: "die Nase",
-      sk: "nos",
-      example: "Meine Nase läuft.",
-      exampleSk: "Tečie mi z nosa.",
+      de: "die Bank",
+      sk: "banka",
       gender: "F",
       srsId: "L41_V09",
-      recycledFrom: [],
+      example: "Ich muss zur Bank gehen.",
+      exampleSk: "Musím ísť do banky.",
+      recycledFrom: []
     },
     {
-      de: "der Mund",
-      sk: "ústa",
-      example: "Bitte öffnen Sie den Mund.",
-      exampleSk: "Prosím, otvorte ústa.",
-      gender: "M",
+      de: "das Museum",
+      sk: "múzeum",
+      gender: "N",
       srsId: "L41_V10",
-      recycledFrom: [],
+      example: "Das Museum war sehr interessant.",
+      exampleSk: "Múzeum bolo veľmi zaujímavé.",
+      recycledFrom: []
     },
     {
-      de: "das Auge / die Augen",
-      sk: "oko / oči",
-      example: "Meine Augen sind müde.",
-      exampleSk: "Moje oči sú unavené.",
-      gender: "N",
+      de: "die Post",
+      sk: "pošta",
+      gender: "F",
       srsId: "L41_V11",
-      recycledFrom: [],
+      example: "Ich habe einen Brief bei der Post abgegeben.",
+      exampleSk: "Podala som list na pošte.",
+      recycledFrom: []
     },
     {
-      de: "der Zahn / die Zähne",
-      sk: "zub / zuby",
-      example: "Ich habe Zahnschmerzen.",
-      exampleSk: "Mám bolesti zubov.",
-      gender: "M",
+      de: "die Kirche",
+      sk: "kostol",
+      gender: "F",
       srsId: "L41_V12",
-      recycledFrom: [],
+      example: "Die alte Kirche ist sehr schön.",
+      exampleSk: "Starý kostol je veľmi pekný.",
+      recycledFrom: []
     },
     {
-      de: "die Schmerzen (Pl.)",
-      sk: "bolesti",
-      example: "Ich habe starke Schmerzen.",
-      exampleSk: "Mám silné bolesti.",
-      gender: "Pl",
+      de: "der Platz",
+      sk: "námestie",
+      gender: "M",
       srsId: "L41_V13",
-      recycledFrom: [],
+      example: "Wir treffen uns auf dem Platz.",
+      exampleSk: "Stretneme sa na námestí.",
+      recycledFrom: []
     },
     {
-      de: "Kopfschmerzen haben",
-      sk: "mať bolesti hlavy",
-      example: "Ich habe seit gestern Kopfschmerzen.",
-      exampleSk: "Mám bolesti hlavy od včera.",
-      gender: null,
+      de: "die Straße",
+      sk: "ulica",
+      gender: "F",
       srsId: "L41_V14",
-      recycledFrom: [],
+      example: "In dieser Straße gibt es viele Geschäfte.",
+      exampleSk: "Na tejto ulici je veľa obchodov.",
+      recycledFrom: []
     },
     {
-      de: "Mir tut … weh.",
-      sk: "Bolí ma …",
-      example: "Mir tut der Bauch weh.",
-      exampleSk: "Bolí ma brucho.",
-      gender: null,
+      de: "die Haltestelle",
+      sk: "zastávka",
+      gender: "F",
       srsId: "L41_V15",
-      recycledFrom: [],
+      example: "Wo ist die nächste Bushaltestelle?",
+      exampleSk: "Kde je najbližšia autobusová zastávka?",
+      recycledFrom: []
     },
     {
-      de: "krank",
-      sk: "chorý/á",
-      example: "Ich bin krank und bleibe heute zu Hause.",
-      exampleSk: "Som chorý/á a zostávam dnes doma.",
-      gender: null,
+      de: "die U-Bahn",
+      sk: "metro",
+      gender: "F",
       srsId: "L41_V16",
-      recycledFrom: [40],
+      example: "Ich fahre oft mit der U-Bahn zur Arbeit.",
+      exampleSk: "Často chodím metrom do práce.",
+      recycledFrom: []
     },
     {
-      de: "das Fieber",
-      sk: "horúčka",
-      example: "Ich habe Fieber.",
-      exampleSk: "Mám teplotu.",
-      gender: "N",
+      de: "der Bus",
+      sk: "autobus",
+      gender: "M",
       srsId: "L41_V17",
-      recycledFrom: [],
+      example: "Der Bus fährt direkt zum Bahnhof.",
+      exampleSk: "Autobus ide priamo na stanicu.",
+      recycledFrom: []
     },
     {
-      de: "Ich habe Fieber.",
-      sk: "Mám teplotu.",
-      example: "Ich habe 39 Grad Fieber.",
-      exampleSk: "Mám 39 stupňov teplotu.",
-      gender: null,
+      de: "das Kino",
+      sk: "kino",
+      gender: "N",
       srsId: "L41_V18",
-      recycledFrom: [],
+      example: "Wir waren gestern Abend im Kino.",
+      exampleSk: "Včera večer sme boli v kine.",
+      recycledFrom: []
     },
     {
-      de: "der Husten",
-      sk: "kašeľ",
-      example: "Ich habe Husten und Schnupfen.",
-      exampleSk: "Mám kašeľ a nádchu.",
-      gender: "M",
+      de: "die Buchhandlung",
+      sk: "knižníctvo",
+      gender: "F",
       srsId: "L41_V19",
-      recycledFrom: [],
+      example: "Ich habe ein neues Buch in der Buchhandlung gekauft.",
+      exampleSk: "Kúpila som si novú knihu v kníhkupectve.",
+      recycledFrom: []
     },
     {
-      de: "der Schnupfen",
-      sk: "nádcha",
-      example: "Bei einem Schnupfen trinke ich viel Tee.",
-      exampleSk: "Pri nádche pijem veľa čaju.",
-      gender: "M",
+      de: "besuchen",
+      sk: "navštíviť",
+      gender: null,
       srsId: "L41_V20",
-      recycledFrom: [],
+      example: "Jana möchte ihre Freundin besuchen.",
+      exampleSk: "Jana chce navštíviť svoju kamarátku.",
+      recycledFrom: []
     },
+    {
+      de: "einkaufen",
+      sk: "nakupovať",
+      gender: null,
+      srsId: "L41_V21",
+      example: "Am Samstag muss ich im Supermarkt einkaufen.",
+      exampleSk: "V sobotu musím nakúpiť v supermarkete.",
+      recycledFrom: []
+    },
+    {
+      de: "finden",
+      sk: "nájsť",
+      gender: null,
+      srsId: "L41_V22",
+      example: "Ich kann meine Schlüssel nicht finden.",
+      exampleSk: "Nemôžem nájsť svoje kľúče.",
+      recycledFrom: []
+    },
+    {
+      de: "hier",
+      sk: "tu",
+      gender: null,
+      srsId: "L41_V23",
+      example: "Hier wohne ich.",
+      exampleSk: "Tu bývam.",
+      recycledFrom: []
+    },
+    {
+      de: "dort",
+      sk: "tam",
+      gender: null,
+      srsId: "L41_V24",
+      example: "Dort ist mein Auto.",
+      exampleSk: "Tam je moje auto.",
+      recycledFrom: []
+    },
+    {
+      de: "da drüben",
+      sk: "tamto",
+      gender: null,
+      srsId: "L41_V25",
+      example: "Da drüben ist die Post.",
+      exampleSk: "Tamto je pošta.",
+      recycledFrom: []
+    }
   ],
-
   exercises: [
     {
       type: "flashcard",
-      instruction: "Zapamätaj si časti tela a symptómy. Prezri si karty a zopakuj ich nahlas.",
-      items: [
-        "L41_V01",
-        "L41_V02",
-        "L41_V03",
-        "L41_V04",
-        "L41_V05",
-        "L41_V06",
-        "L41_V07",
-        "L41_V08",
-        "L41_V09",
-        "L41_V10",
-        "L41_V11",
-        "L41_V12",
-        "L41_V13",
-        "L41_V17",
-        "L41_V19",
-        "L41_V20",
-      ],
+      instruction: "Prezri si slovíčka tejto lekcie. Klikni na kartičku pre preklad."
     },
     {
-      type: "mcq",
-      instruction: "Vyber správnu odpoveď.",
-      questions: [
+      type: "match",
+      instruction: "Priraď nemecké slová k ich slovenským prekladom.",
+      pairs: [
+        [
+          "der Supermarkt",
+          "supermarket"
+        ],
+        [
+          "die Bäckerei",
+          "pekáreň"
+        ],
+        [
+          "das Café",
+          "kaviareň"
+        ],
+        [
+          "der Bahnhof",
+          "železničná stanica"
+        ],
+        [
+          "der Park",
+          "park"
+        ],
+        [
+          "die Schule",
+          "škola"
+        ],
+        [
+          "das Restaurant",
+          "reštaurácia"
+        ],
+        [
+          "das Geschäft",
+          "obchod"
+        ],
+        [
+          "die Bank",
+          "banka"
+        ],
+        [
+          "das Museum",
+          "múzeum"
+        ]
+      ]
+    },
+    {
+      type: "wordorder",
+      instruction: "Usporiadaj slová tak, aby vytvorili správnu nemeckú vetu.",
+      sentences: [
         {
-          question: "Jana hovorí: 'Mir tut ___ Kopf weh.' Ktoré slovo chýba?",
-          options: ["der", "den", "die", "das"],
-          answer: "der",
-          explanation:
-            "'der Kopf' je mužského rodu (M), nominatív — podmeta vety. Preto 'der Kopf'.",
-        },
-        {
-          question: "Ako po nemecky poviete 'Bolia ma nohy'?",
-          options: [
-            "Mir tut die Beine weh.",
-            "Mir tun die Beine weh.",
-            "Ich habe Beinschmerzen.",
-            "Mir tut das Bein weh.",
+          words: [
+            "Ich",
+            "bin",
+            "gestern",
+            "zum",
+            "Supermarkt",
+            "gegangen"
           ],
-          answer: "Mir tun die Beine weh.",
-          explanation:
-            "'die Beine' je množné číslo → sloveso 'tun' (nie 'tut'). Správne: Mir tun die Beine weh.",
+          correct: "Ich bin gestern zum Supermarkt gegangen",
+          hint: "Včera som išiel do supermarketu.",
+          explanation: "Veta je v Perfekte. Pomocné sloveso 'sein' je na druhom mieste, Partizip II 'gegangen' je na konci vety. Používa sa 'sein' pre slovesá pohybu."
         },
         {
-          question: "Čo znamená 'Ich habe Fieber'?",
-          options: ["Mám horúčku.", "Som unavený.", "Bolí ma hlava.", "Mám kašeľ."],
-          answer: "Mám horúčku.",
-          explanation:
-            "'das Fieber' = horúčka/teplota. 'Ich habe Fieber.' = Mám teplotu/horúčku.",
-        },
-        {
-          question: "Ktorá veta je správna pre 'Bolí ma hrdlo'?",
-          options: [
-            "Mir tut der Hals weh.",
-            "Mir tut die Hals weh.",
-            "Mir tun der Hals weh.",
-            "Ich tut der Hals weh.",
+          words: [
+            "Wir",
+            "waren",
+            "am",
+            "Wochenende",
+            "im",
+            "Park"
           ],
-          answer: "Mir tut der Hals weh.",
-          explanation:
-            "'der Hals' je mužského rodu, jednotné číslo. Preto: Mir tut der Hals weh.",
+          correct: "Wir waren am Wochenende im Park",
+          hint: "Cez víkend sme boli v parku.",
+          explanation: "Používame Präteritum slovesa 'sein' ('waren'), ktoré je na druhom mieste vo vete. 'Im Park' znamená 'v parku'."
         },
         {
-          question: "'Der Schnupfen' po slovensky znamená:",
-          options: ["kašeľ", "horúčka", "nádcha", "bolesť"],
-          answer: "nádcha",
-          explanation: "'der Schnupfen' = nádcha. 'der Husten' = kašeľ. 'das Fieber' = horúčka.",
+          words: [
+            "Sie",
+            "hat",
+            "ein",
+            "Buch",
+            "in",
+            "der",
+            "Buchhandlung",
+            "gekauft"
+          ],
+          correct: "Sie hat ein Buch in der Buchhandlung gekauft",
+          hint: "Kúpila si knihu v kníhkupectve.",
+          explanation: "Veta je v Perfekte. Pomocné sloveso 'haben' je na druhom mieste, Partizip II 'gekauft' je na konci vety. 'In der Buchhandlung' znamená 'v kníhkupectve'."
         },
-      ],
+        {
+          words: [
+            "Wo",
+            "ist",
+            "die",
+            "Post",
+            "hier"
+          ],
+          correct: "Wo ist die Post hier",
+          hint: "Kde je tu pošta?",
+          explanation: "Otázka začína opytovacím zámenom 'Wo', za ktorým nasleduje sloveso 'ist' a potom podmet 'die Post'."
+        },
+        {
+          words: [
+            "Möchtest",
+            "du",
+            "ins",
+            "Kino",
+            "gehen"
+          ],
+          correct: "Möchtest du ins Kino gehen",
+          hint: "Chceš ísť do kina?",
+          explanation: "Sloveso 'möchten' je na druhom mieste, infinitív 'gehen' je na konci vety. 'Ins Kino' je skratka pre 'in das Kino' a znamená 'do kina'."
+        }
+      ]
     },
     {
       type: "fill",
       instruction: "Doplň správne slovo do vety.",
       questions: [
         {
-          sentence: "Mir ___ der Kopf weh.",
-          answer: "tut",
-          hint: "Jednotné číslo (der Kopf)",
-          explanation: "'der Kopf' je sg. → tut (nie tun).",
+          sentence: "Ich ___ gestern im Restaurant.",
+          answer: "war",
+          hint: "Ja ___ včera v reštaurácii.",
+          explanation: "Používame Präteritum slovesa 'sein' pre 'ich', čo je 'war'. Vyjadruje to, že som bol/a v reštaurácii v minulosti."
         },
         {
-          sentence: "Ich habe Hals___.",
-          answer: "schmerzen",
-          hint: "bolesť hrdla — zložené slovo",
-          explanation: "Halsschmerzen = bolesti hrdla. Schmerzen = bolesti.",
+          sentence: "Wir sind zum Bahnhof ___.",
+          answer: "gefahren",
+          hint: "Išli sme na železničnú stanicu.",
+          explanation: "Sloveso 'fahren' (ísť, cestovať) tvorí Perfekt so 'sein' a Partizip II je 'gefahren'."
         },
         {
-          sentence: "Mir ___ die Augen weh.",
-          answer: "tun",
-          hint: "Množné číslo (die Augen)",
-          explanation: "'die Augen' je pl. → tun (nie tut).",
+          sentence: "Hast du die Bäckerei ___?",
+          answer: "gefunden",
+          hint: "Našiel si pekáreň?",
+          explanation: "Sloveso 'finden' (nájsť) tvorí Perfekt s 'haben' a Partizip II je 'gefunden'."
         },
         {
-          sentence: "Ich habe ___. Mein Körper ist 39 Grad warm.",
-          answer: "Fieber",
-          hint: "horúčka",
-          explanation: "'das Fieber' = horúčka/teplota.",
+          sentence: "Ich ___ gern im Park spazieren.",
+          answer: "gehe",
+          hint: "Ja ___ rád/rada v parku na prechádzku.",
+          explanation: "Pre 'ich' je správny tvar slovesa 'gehen' v prítomnom čase 'gehe'. 'Gern' vyjadruje, že to robím rád/rada."
         },
         {
-          sentence: "Jana fühlt sich ___. Sie bleibt zu Hause.",
-          answer: "krank",
-          hint: "chorý/á",
-          explanation: "'krank' = chorý/á. 'Ich fühle mich krank.' = Cítim sa chorý/á.",
+          sentence: "Wo ist ___ Buchhandlung?",
+          answer: "die",
+          hint: "Kde je ___ kníhkupectvo?",
+          explanation: "Slovo 'Buchhandlung' je ženského rodu (die Buchhandlung), preto používame určitý člen 'die'."
         },
-      ],
+        {
+          sentence: "Wir ___ am Montag ins Museum.",
+          answer: "gehen",
+          hint: "My ___ v pondelok do múzea.",
+          explanation: "Pre 'wir' je správny tvar slovesa 'gehen' v prítomnom čase 'gehen'. 'Ins Museum' znamená 'do múzea'."
+        },
+        {
+          sentence: "Er ___ keine Zeit für das Café.",
+          answer: "hat",
+          hint: "On ___ žiadny čas na kaviareň.",
+          explanation: "Pre 'er' je správny tvar slovesa 'haben' v prítomnom čase 'hat'. 'Keine' je záporný člen pre 'Zeit'."
+        }
+      ]
     },
     {
       type: "listen",
-      instruction: "Počúvaj vety a zopakuj ich nahlas. Skontroluj výslovnosť.",
+      instruction: "Vypočuj si slovo a priraď ho k slovenskému prekladu.",
       questions: [
-        { de: "Mir tut der Kopf weh.", sk: "Bolí ma hlava." },
-        { de: "Ich habe Halsschmerzen.", sk: "Mám bolesti hrdla." },
-        { de: "Mir tun die Beine weh.", sk: "Bolia ma nohy." },
-        { de: "Ich habe Fieber.", sk: "Mám teplotu." },
-        { de: "Ich habe Husten und Schnupfen.", sk: "Mám kašeľ a nádchu." },
-        { de: "Ich fühle mich krank.", sk: "Cítim sa chorý/á." },
-        { de: "Mir tut das Ohr weh.", sk: "Bolí ma ucho." },
-        { de: "Ich habe Bauchschmerzen.", sk: "Mám bolesti brucha." },
-      ],
+        {
+          de: "der Park",
+          sk: "park"
+        },
+        {
+          de: "die Bank",
+          sk: "banka"
+        },
+        {
+          de: "das Kino",
+          sk: "kino"
+        },
+        {
+          de: "die Post",
+          sk: "pošta"
+        },
+        {
+          de: "die Schule",
+          sk: "škola"
+        },
+        {
+          de: "der Bahnhof",
+          sk: "železničná stanica"
+        },
+        {
+          de: "das Restaurant",
+          sk: "reštaurácia"
+        },
+        {
+          de: "der Supermarkt",
+          sk: "supermarket"
+        },
+        {
+          de: "die Bäckerei",
+          sk: "pekáreň"
+        },
+        {
+          de: "die Buchhandlung",
+          sk: "knižníctvo"
+        }
+      ]
     },
     {
-      type: "match",
-      instruction: "Spoj nemecké výrazy s ich slovenským prekladom.",
-      pairs: [
-        ["der Kopf", "hlava"],
-        ["der Hals", "hrdlo, krk"],
-        ["das Bein", "noha"],
-        ["die Hand", "ruka (dlaň)"],
-        ["das Auge", "oko"],
-        ["der Zahn", "zub"],
-        ["das Fieber", "horúčka"],
-        ["der Husten", "kašeľ"],
-        ["der Schnupfen", "nádcha"],
-        ["die Schmerzen", "bolesti"],
-      ],
-    },
-    {
-      type: "dialogue",
-      instruction: "Prečítaj si dialóg medzi Janou a Lukasom. Jana opisuje svoje symptómy.",
-      lines: [
+      type: "mcq",
+      instruction: "Vyber správnu odpoveď.",
+      questions: [
         {
-          speaker: "Lukas",
-          de: "Guten Morgen, Jana! Wie geht es dir? Du siehst nicht gut aus.",
-          sk: "Dobré ráno, Jana! Ako sa máš? Nevyzeráš dobre.",
+          question: "Vyber správnu formu Perfektu: 'Ich ___ gestern einen Film im Kino ___.'",
+          options: [
+            "habe ... gesehen",
+            "bin ... gesehen",
+            "habe ... gesehenen",
+            "bin ... gesehen"
+          ],
+          answer: 0,
+          explanation: "Sloveso 'sehen' (vidieť) tvorí Perfekt s pomocným slovesom 'haben' a Partizip II je 'gesehen'. 'Ich habe gesehen' je správne."
         },
         {
-          speaker: "Jana",
-          de: "Mir geht es nicht gut. Mir tut der Kopf weh.",
-          sk: "Nie je mi dobre. Bolí ma hlava.",
+          question: "Ktorá veta je správna?",
+          options: [
+            "Ich muss zum Supermarkt gehen.",
+            "Ich muss zum Supermarkt zu gehen.",
+            "Ich muss gehen zum Supermarkt.",
+            "Ich muss gehe zum Supermarkt."
+          ],
+          answer: 0,
+          explanation: "Pri modálnych slovesách (ako 'müssen') stojí modálne sloveso na druhom mieste a plnovýznamové sloveso v infinitíve na konci vety (Satzklammer)."
         },
         {
-          speaker: "Lukas",
-          de: "Oh nein! Hast du auch Fieber?",
-          sk: "Och nie! Máš aj teplotu?",
+          question: "Čo znamená 'die Haltestelle'?",
+          options: [
+            "železničná stanica",
+            "zastávka",
+            "ulica",
+            "námestie"
+          ],
+          answer: 1,
+          explanation: "'Die Haltestelle' znamená 'zastávka' (napr. autobusová, električková)."
         },
         {
-          speaker: "Jana",
-          de: "Ich glaube ja. Und mir tut der Hals weh. Ich habe Halsschmerzen.",
-          sk: "Myslím, že áno. A bolí ma hrdlo. Mám bolesti hrdla.",
+          question: "Doplň správny člen: 'Ich gehe in ___ Park.'",
+          options: [
+            "der",
+            "den",
+            "dem",
+            "das"
+          ],
+          answer: 1,
+          explanation: "Sloveso 'gehen' vyžaduje Akkusativ, keď sa vyjadruje smer pohybu. 'Park' je mužského rodu (der Park), preto v Akkusative je 'den Park'. 'In den Park' sa často skracuje na 'in den Park'."
         },
         {
-          speaker: "Lukas",
-          de: "Hast du auch Husten?",
-          sk: "Máš aj kašeľ?",
+          question: "Vyber správnu formu Präterita: 'Wir ___ letztes Jahr in Berlin.'",
+          options: [
+            "waren",
+            "hatten",
+            "sind",
+            "haben"
+          ],
+          answer: 0,
+          explanation: "Pre vyjadrenie, že sme niekde boli v minulosti, používame Präteritum slovesa 'sein'. Pre 'wir' je to 'waren'."
         },
         {
-          speaker: "Jana",
-          de: "Ja, ein bisschen. Und meine Nase läuft.",
-          sk: "Áno, trochu. A tečie mi z nosa.",
+          question: "Čo znamená 'einkaufen'?",
+          options: [
+            "navštíviť",
+            "nájsť",
+            "nakupovať",
+            "pracovať"
+          ],
+          answer: 2,
+          explanation: "'Einkaufen' znamená 'nakupovať'."
         },
         {
-          speaker: "Lukas",
-          de: "Das klingt nach einer Erkältung. Mir tun die Augen weh, wenn ich krank bin.",
-          sk: "Znie to ako prechladnutie. Mne bolia oči, keď som chorý.",
-        },
-        {
-          speaker: "Jana",
-          de: "Ich fühle mich wirklich krank. Mir tun auch die Beine weh.",
-          sk: "Cítim sa naozaj chorá. Bolia ma aj nohy.",
-        },
-        {
-          speaker: "Lukas",
-          de: "Du musst zu Hause bleiben. Hast du Tee?",
-          sk: "Musíš zostať doma. Máš čaj?",
-        },
-        {
-          speaker: "Jana",
-          de: "Ja, ich habe Kamillentee. Aber ich habe keine Tabletten.",
-          sk: "Áno, mám harmanček. Ale nemám žiadne tabletky.",
-        },
-        {
-          speaker: "Lukas",
-          de: "Ich bringe dir Aspirin. Ruh dich aus!",
-          sk: "Prinesiem ti Aspirin. Odpočívaj!",
-        },
-        {
-          speaker: "Jana",
-          de: "Danke, Lukas. Du bist sehr nett!",
-          sk: "Ďakujem, Lukas. Si veľmi milý!",
-        },
-      ],
-      comprehensionQuestions: [
-        {
-          question: "Was tut Jana weh? Nenn zwei Körperteile.",
-          answer: "Der Kopf und der Hals tun Jana weh.",
-          explanation: "Jana sagt: 'Mir tut der Kopf weh' und 'Mir tut der Hals weh'.",
-        },
-        {
-          question: "Was bringt Lukas für Jana?",
-          answer: "Lukas bringt Aspirin (Tabletten).",
-          explanation: "Lukas sagt: 'Ich bringe dir Aspirin.'",
-        },
-        {
-          question: "Was hat Jana zu Hause?",
-          answer: "Jana hat Kamillentee, aber keine Tabletten.",
-          explanation: "Jana sagt: 'Ich habe Kamillentee. Aber ich habe keine Tabletten.'",
-        },
-      ],
+          question: "Vyber správnu odpoveď: 'Was hast du am Wochenende gemacht?'",
+          options: [
+            "Ich habe im Café einen Kaffee getrunken.",
+            "Ich bin im Café einen Kaffee getrunken.",
+            "Ich habe im Café einen Kaffee getrinkt.",
+            "Ich bin im Café einen Kaffee getrinkt."
+          ],
+          answer: 0,
+          explanation: "Sloveso 'trinken' (piť) tvorí Perfekt s pomocným slovesom 'haben' a Partizip II je 'getrunken'. 'Ich habe getrunken' je správne."
+        }
+      ]
     },
     {
       type: "minitext",
-      instruction: "Prečítaj si krátky text o Jane. Potom odpovedz na otázky.",
-      text:
-        "Es ist Montagmorgen. Jana wacht auf und fühlt sich schlecht. Ihr tut der Kopf weh und sie hat Halsschmerzen. Sie hat auch ein bisschen Fieber — 38 Grad. Ihre Nase läuft und sie hat Husten. Jana ruft Lukas an: 'Mir geht es nicht gut. Mir tut der Kopf weh und ich habe Halsschmerzen.' Lukas sagt: 'Bleib zu Hause und trink viel Tee!' Jana trinkt Kamillentee und liegt im Bett.",
-      textSk:
-        "Je pondelkové ráno. Jana sa zobúdza a cíti sa zle. Bolí ju hlava a má bolesti hrdla. Má aj trochu teploty — 38 stupňov. Tečie jej z nosa a má kašeľ. Jana zavolá Lukasovi: 'Nie je mi dobre. Bolí ma hlava a mám bolesti hrdla.' Lukas hovorí: 'Zostaň doma a pi veľa čaju!' Jana pije harmanček a leží v posteli.",
+      instruction: "Lies den Text und beantworte die Fragen.",
+      text: "Jana macht am Sonntag einen Spaziergang in Wien, im 4. Bezirk. „Hier ist eine Bäckerei, aber sie ist geschlossen“, denkt sie. „Dort drüben ist ein schönes Café. Das ist gut für Montag. Und hier ist eine Bank. Weiter rechts ist ein Supermarkt und ein kleines Geschäft. Dort kann ich einkaufen. Und da drüben ist ein großer Park. Ich sehe auch eine Schule und die Post. Ich möchte das Restaurant finden und das Kino besuchen. Ich habe viele Fotos für meine Mama gemacht. Sie ist glücklich.“",
+      textSk: "Jana sa v nedeľu prechádza vo Viedni, v 4. obvode. „Tu je pekáreň, ale je zatvorená,“ myslí si. „Tamto je pekná kaviareň. To je dobré na pondelok. A tu je banka. Ďalej vpravo je supermarket a malý obchod. Tam si môžem nakúpiť. A tamto je veľký park. Vidím tiež školu a poštu. Chcem nájsť reštauráciu a navštíviť kino. Urobila som veľa fotiek pre moju mamu. Je šťastná.“",
       questions: [
         {
-          question: "Wie viel Fieber hat Jana?",
-          answer: "Jana hat 38 Grad Fieber.",
-          explanation: "Der Text sagt: 'sie hat auch ein bisschen Fieber — 38 Grad.'",
+          question: "Wo ist Jana am Sonntag?",
+          options: [
+            "Im Supermarkt",
+            "Im Café",
+            "In Wien, im 4. Bezirk",
+            "In der Bäckerei"
+          ],
+          answer: 2,
+          explanation: "Jana macht am Sonntag einen Spaziergang in Wien, im 4. Bezirk."
         },
         {
-          question: "Was rät Lukas Jana zu machen?",
-          answer: "Lukas rät Jana, zu Hause zu bleiben und viel Tee zu trinken.",
-          explanation: "'Bleib zu Hause und trink viel Tee!'",
+          question: "Was ist am Sonntag geschlossen?",
+          options: [
+            "Das Café",
+            "Die Bank",
+            "Die Bäckerei",
+            "Der Park"
+          ],
+          answer: 2,
+          explanation: "„Hier ist eine Bäckerei, aber sie ist geschlossen“, denkt sie."
         },
         {
-          question: "Was macht Jana am Ende?",
-          answer: "Jana trinkt Kamillentee und liegt im Bett.",
-          explanation: "Der letzte Satz: 'Jana trinkt Kamillentee und liegt im Bett.'",
-        },
-      ],
-    },
-    {
-      type: "freewrite",
-      instruction:
-        "Napíš krátky text po nemecky. Použi slovnú zásobu z tejto lekcie.",
-      prompt:
-        "Wie fühlst du dich heute? Was tut dir weh? Was machst du, wenn du krank bist?",
-      minWords: 30,
-      exampleAnswer:
-        "Heute fühle ich mich nicht so gut. Mir tut der Kopf ein bisschen weh und ich habe Schnupfen. Wenn ich krank bin, bleibe ich zu Hause und trinke viel Tee. Ich mag Kamillentee. Manchmal nehme ich auch Aspirin. Ich ruhe mich aus und schlafe viel.",
-    },
-    {
-      type: "wordorder",
-      instruction: "ZoraÄ slovÃ¡ do sprÃ¡vnej nemeckej vety.",
-      sentences: [
-        {
-          words: ["Jana", "wÃ¼rde", "gern", "nach", "Berlin", "fahren."],
-          correct: "Jana wÃ¼rde gern nach Berlin fahren.",
-          hint: "Jana by rada cestovala do BerlÃ­na.",
-          explanation: "Konjunktiv II s 'wÃ¼rde': wÃ¼rde + InfinitÃ­v na konci vety.",
+          question: "Warum macht Jana Fotos?",
+          options: [
+            "Für das Museum",
+            "Für ihre Mama",
+            "Für die Schule",
+            "Für das Restaurant"
+          ],
+          answer: 1,
+          explanation: "Ich habe viele Fotos für meine Mama gemacht."
         },
         {
-          words: ["Ich", "wÃ¼rde", "ein", "neues", "Auto", "kaufen."],
-          correct: "Ich wÃ¼rde ein neues Auto kaufen.",
-          hint: "KÃºpil/a by som novÃ© auto.",
-          explanation: "'wÃ¼rde kaufen' = Konjunktiv II â€” vyjadruje hypotetickÃº situÃ¡ciu.",
-        },
-        {
-          words: ["Wir", "wÃ¼rden", "zusammen", "ins", "Kino", "gehen."],
-          correct: "Wir wÃ¼rden zusammen ins Kino gehen.",
-          hint: "IÅ¡li by sme spolu do kina.",
-          explanation: "'wÃ¼rden' je tvar Konjunktiv II pre 'wir' â€” InfinitÃ­v ostÃ¡va na konci.",
-        },
-        {
-          words: ["Er", "wÃ¼rde", "mehr", "Wasser", "trinken."],
-          correct: "Er wÃ¼rde mehr Wasser trinken.",
-          hint: "Pil by viac vody.",
-          explanation: "'wÃ¼rde trinken' = hypotetickÃ¡ akcia v KonjunktÃ­v II.",
-        },
-        {
-          words: ["WÃ¼rdest", "du", "auch", "mitkommen?"],
-          correct: "WÃ¼rdest du auch mitkommen?",
-          hint: "PriÅ¡iel/priÅ¡la by si aj ty?",
-          explanation: "OtÃ¡zka v KonjunktÃ­v II: 'WÃ¼rdest' na zaÄiatku, subjekt za nÃ­m.",
-        },
-      ],
+          question: "Welches dieser Gebäude sieht Jana NICHT?",
+          options: [
+            "Eine Bank",
+            "Eine Schule",
+            "Einen Bahnhof",
+            "Einen Park"
+          ],
+          answer: 2,
+          explanation: "Jana sieht eine Bäckerei, ein Café, eine Bank, einen Supermarkt, ein Geschäft, einen Park, eine Schule und die Post. Ein Bahnhof wird nicht erwähnt."
+        }
+      ]
     },
     {
       type: "speaking",
-      instruction: "PoÄÃºvaj nemeckÃº vetu. Potom hovor nahlas a skontroluj sa.",
+      instruction: "Höre zu und sprich nach.",
       phrases: [
         {
-          de: "Ich wÃ¼rde gern nach Berlin fahren.",
-          sk: "Ja by som rÃ¡d/rada cestoval/a do BerlÃ­na.",
-          tip: "wÃ¼rde=[vYrde], InfinitÃ­v na konci",
+          de: "Die Bäckerei",
+          sk: "Pekáreň",
+          tip: "ä ako 'e' v 'pes', ei ako 'aj'."
         },
         {
-          de: "Was wÃ¼rdest du kaufen?",
-          sk: "ÄŒo by si kÃºpil/a?",
-          tip: "wÃ¼rdest=[vYrdest], d na konci",
+          de: "Die Kirche",
+          sk: "Kostol",
+          tip: "ch po 'i' je mäkké [ç]."
         },
         {
-          de: "Wir wÃ¼rden zusammen kochen.",
-          sk: "Varili by sme spolu.",
-          tip: "wÃ¼rden=[vYrden]",
+          de: "Der Platz",
+          sk: "Námestie",
+          tip: "tz vyslov ako 'c' v 'cena' [ts]."
         },
         {
-          de: "Jana wÃ¼rde mehr schlafen.",
-          sk: "Jana by viac spala.",
-          tip: "InfinitÃ­v vÅ¾dy na konci vety",
+          de: "Hier ist der Park.",
+          sk: "Tu je park.",
+          tip: "ie ako dlhé 'í', 'r' je hrdelné."
         },
         {
-          de: "Das wÃ¼rde mir gefallen.",
-          sk: "To by sa mi pÃ¡Äilo.",
-          tip: "gefallen=[gefalen], mir=datÃ­v",
+          de: "Da drüben ist die Post.",
+          sk: "Tamto je pošta.",
+          tip: "ü ako 'u' so zaokrúhlenými perami, st ako 'št'."
         },
-      ],
+        {
+          de: "Ich besuche das Museum.",
+          sk: "Navštívim múzeum.",
+          tip: "ch po 'i' je mäkké [ç], 's' ako 'z'."
+        },
+        {
+          de: "Ich finde einen Supermarkt.",
+          sk: "Nájsť supermarket.",
+          tip: "i je krátke [ɪ], 'r' je hrdelné."
+        }
+      ]
     },
+    {
+      type: "truefalse",
+      instruction: "Prečítajte si vety a rozhodnite, či sú pravdivé (Wahr) alebo nepravdivé (Falsch). Opravte nepravdivé vety.",
+      statements: [
+        {
+          statement: "Perfekt s „sein“ sa používa pre slovesá pohybu a zmeny stavu.",
+          isTrue: true,
+          explanation: "Áno, napríklad „gehen“ (ísť) – „Ich bin gegangen“."
+        },
+        {
+          statement: "„Ich bin gegangen.“ je správny Perfekt pre sloveso „gehen“ (ísť).",
+          isTrue: true,
+          explanation: "Správne. Slovesá pohybu tvoria Perfekt so „sein“."
+        },
+        {
+          statement: "„Wir haben im Park gewesen.“ je správna veta v Perfekte.",
+          isTrue: false,
+          explanation: "Nesprávne. Sloveso „sein“ (byť) tvorí Perfekt so „sein“. Správne je: „Wir sind im Park gewesen.“"
+        },
+        {
+          statement: "Imperatív pre „du“ sa tvorí pridaním koncovky „-st“ na koniec slovesa.",
+          isTrue: false,
+          explanation: "Nesprávne. Pri Imperatíve pre „du“ koncovka „-st“ odpadá. Napríklad: „Geh!“ (Choď!) namiesto „Gehst!“"
+        },
+        {
+          statement: "„Ich konnte nicht kommen.“ znamená „Nemohol som prísť.“",
+          isTrue: true,
+          explanation: "Áno, „konnte“ je Präteritum modálneho slovesa „können“ (môcť)."
+        }
+      ]
+    },
+    {
+      type: "dictation",
+      instruction: "Počúvajte vety a napíšte ich po nemecky. Potom skontrolujte svoj preklad.",
+      sentences: [
+        {
+          de: "Geh zum Supermarkt!",
+          sk: "Choď do supermarketu!",
+          hint: "Imperatív, smer"
+        },
+        {
+          de: "Ich war im Kino.",
+          sk: "Bol som v kine.",
+          hint: "minulý čas 'byť'"
+        },
+        {
+          de: "Wir haben Brot gekauft.",
+          sk: "Kúpili sme chlieb.",
+          hint: "Perfekt, 'kúpiť'"
+        },
+        {
+          de: "Sie musste zur Post gehen.",
+          sk: "Musela ísť na poštu.",
+          hint: "minulý čas 'musieť'"
+        },
+        {
+          de: "Hast du den Bahnhof besucht?",
+          sk: "Navštívil si stanicu?",
+          hint: "Perfekt, otázka"
+        }
+      ]
+    },
+    {
+      type: "categorysort",
+      instruction: "Roztrieďte miesta v meste do správnych kategórií.",
+      categories: [
+        {
+          name: "Obchody a služby",
+          color: "blue",
+          words: [
+            "der Supermarkt",
+            "die Bäckerei",
+            "das Restaurant",
+            "die Bank",
+            "die Post",
+            "die Buchhandlung"
+          ]
+        },
+        {
+          name: "Verejné miesta",
+          color: "green",
+          words: [
+            "der Park",
+            "die Schule",
+            "das Museum",
+            "die Kirche",
+            "der Platz",
+            "das Kino"
+          ]
+        },
+        {
+          name: "Doprava",
+          color: "rose",
+          words: [
+            "der Bahnhof",
+            "die Haltestelle",
+            "die U-Bahn",
+            "der Bus"
+          ]
+        }
+      ],
+      explanation: "Táto aktivita vám pomôže rozoznať rôzne typy miest v meste a ich nemecké názvy. Rozdelenie do kategórií uľahčuje zapamätanie si slovnej zásoby."
+    },
+    {
+      type: "translation",
+      instruction: "Preložte nasledujúce vety zo slovenčiny do nemčiny.",
+      sentences: [
+        {
+          sk: "Musím ísť do banky.",
+          answer: "Ich muss zur Bank gehen.",
+          hint: "muss, zur",
+          explanation: "Použitie modálneho slovesa „müssen“ (musieť) a predložky „zu“ s datívom pre smer k inštitúcii."
+        },
+        {
+          sk: "Včera som bol v parku.",
+          answer: "Gestern war ich im Park.",
+          hint: "Gestern, war",
+          explanation: "Použitie Präterita slovesa „sein“ (bol) pre minulosť a predložky „in“ s datívom pre miesto."
+        },
+        {
+          sk: "Kúpili ste si chlieb v pekárni?",
+          answer: "Habt ihr Brot in der Bäckerei gekauft?",
+          hint: "Habt ihr, gekauft",
+          explanation: "Tvorba otázky v Perfekte s pomocným slovesom „haben“ a Partizip II. „In der Bäckerei“ je datív."
+        },
+        {
+          sk: "Navštívte múzeum! (vykanie)",
+          answer: "Besuchen Sie das Museum!",
+          hint: "Besuchen Sie",
+          explanation: "Tvorba Imperatívu (rozkazovacieho spôsobu) pre formálne oslovenie „Sie“."
+        }
+      ]
+    },
+    {
+      type: "conjugation",
+      instruction: "Vyčasujte slovesá v Präterite alebo Perfekte.",
+      verbs: [
+        {
+          infinitive: "haben",
+          translation: "mať",
+          forms: [
+            {
+              pronoun: "ich",
+              correct: "hatte"
+            },
+            {
+              pronoun: "du",
+              correct: "hattest"
+            },
+            {
+              pronoun: "er/sie/es",
+              correct: "hatte"
+            },
+            {
+              pronoun: "wir",
+              correct: "hatten"
+            },
+            {
+              pronoun: "ihr",
+              correct: "hattet"
+            },
+            {
+              pronoun: "sie/Sie",
+              correct: "hatten"
+            }
+          ],
+          note: "Slovesá „haben“ a „sein“ sa v A1 úrovni učia v Präterite, pretože sa často používajú aj v hovorenej reči namiesto Perfektu."
+        },
+        {
+          infinitive: "besuchen",
+          translation: "navštíviť",
+          forms: [
+            {
+              pronoun: "ich",
+              correct: "habe besucht"
+            },
+            {
+              pronoun: "du",
+              correct: "hast besucht"
+            },
+            {
+              pronoun: "er/sie/es",
+              correct: "hat besucht"
+            },
+            {
+              pronoun: "wir",
+              correct: "haben besucht"
+            },
+            {
+              pronoun: "ihr",
+              correct: "habt besucht"
+            },
+            {
+              pronoun: "sie/Sie",
+              correct: "haben besucht"
+            }
+          ],
+          note: "Sloveso „besuchen“ tvorí Perfekt s pomocným slovesom „haben“, pretože nevyjadruje pohyb ani zmenu stavu. Partizip II je pravidelné (ge- + kmeň + -t)."
+        }
+      ]
+    }
   ],
-
-  reviewWords: [
-    "L41_V01",
-    "L41_V02",
-    "L41_V03",
-    "L41_V04",
-    "L41_V06",
-    "L41_V11",
-    "L41_V15",
-    "L41_V17",
-    "L41_V19",
-    "L41_V20",
-  ],
-
-  lessonNotes:
-    "Kľúčová gramatika: 'Mir tut/tun … weh' — datívna konštrukcia. Podmiet je časť tela (nominatív), 'mir' je datív. Pozor na zhodu: tut (sg.) vs. tun (pl.). Naučte sa výrazy ako celky: Kopfschmerzen, Halsschmerzen, Bauchschmerzen, Rückenschmerzen. Fráza 'Ich habe Fieber' je fixer Ausdruck — bez článku!",
+  reviewWords: []
 };

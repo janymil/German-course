@@ -1,321 +1,901 @@
-﻿export const lesson67 = {
+export const lesson67 = {
   id: 67,
   week: 14,
   day: 2,
-  title: "Pronomen: man, jemand, niemand, etwas, nichts",
-  topic: "Neurčité zámená: man, jemand, niemand, etwas, nichts",
+  title: "Man sagt...",
+  topic: "Reagovanie na klebety a všeobecné vyjadrenia o správaní.",
   cefr: "A1",
-  xpReward: 25,
-  narrativeContext: "Jana číta vývesné pravidlá svojho bytového domu (Hausordnung) — 'Man darf nicht laut Musik hören.' Navyše pri rozhovore so susedom sa dozvedá, kto niečo urobil: 'Jemand hat meinen Brief geöffnet!' 'Niemand weiß, wer das war.' Neurčité zámená v každodennej reči.",
-  communicativeGoal: "Po tejto lekcii viem použiť neurčité zámená 'man, jemand, niemand, etwas, nichts' v bežných vetách.",
-  skillFocus: ["grammar", "reading", "vocabulary"],
-  grammarNote: {
-    rule: "Neurčité zámená: man, jemand, niemand, etwas, nichts",
-    explanation: "'man' = sa/človek/ľudia (neosobné): 'Man spricht hier Deutsch.' = Hovorí sa tu po nemecky. Používa er/sie/es tvary slovies. Nedá sa skloňovať (*dem man je chyba). 'jemand' = niekto. 'niemand' = nikto. 'etwas' = niečo. 'nichts' = nič (po 'nichts' nenasleduje člen!). Paralely: etwas Gutes = niečo dobré; nichts Interessantes = nič zaujímavé (prídavné meno sa veľkým písmenom po etwas/nichts).",
-    examples: [
-      { de: "Man darf hier nicht rauchen.", sk: "Tu sa nesmie fajčiť." },
-      { de: "Jemand hat angerufen.", sk: "Niekto volal." },
-      { de: "Niemand hat geantwortet.", sk: "Nikto neodpovedal." },
-      { de: "Ich möchte etwas essen.", sk: "Chcel/a by som niečo zjesť." }
-    ],
-    slovakContrastNote: "Slovenské 'man' = 'sa' (zvratná pasíva): 'Tu sa hovorí po nemecky.' vs. nemecké aktívum 'Man spricht hier Deutsch.' Slovenčina: niekto/nikto/niečo/nič — priamo zodpovedá jemand/niemand/etwas/nichts. Paralela je jasná a pomáha zapamätaniu!"
-  },
+  xpReward: 20,
+  narrativeContext: "Jana hört im Büro Klatsch über einen neuen Kollegen. Sie möchte höflich reagieren und Klatsch vermeiden.",
+  communicativeGoal: "Nach dieser Lektion kann ich allgemeine Aussagen mit 'man' machen und auf solche Aussagen reagieren.",
+  skillFocus: [
+    "grammar",
+    "speaking",
+    "listening"
+  ],
+  lessonNotes: "Naučíme sa používať zámeno 'man' na vyjadrenie všeobecných pravidiel alebo názorov. Ukážeme si, ako reagovať na takéto výroky bez toho, aby sme sa zapájali do klebiet. Zameriame sa na frázy ako 'Man sagt...' a 'Man sollte...'.",
+  grammarNotes: [
+    {
+      rule: "Das unpersönliche 'man'",
+      explanation: "<p>V nemčine môžeme použiť zámeno <strong>'man'</strong> na vyjadrenie všeobecných pravidiel, zvykov alebo toho, čo ľudia zvyčajne robia. Je to podobné ako v slovenčine, keď povieme 'ľudia', 'niekto' alebo použijeme všeobecné podstatné meno v množnom čísle. Zámeno 'man' sa v nemčine časuje ako sloveso v 3. osobe jednotného čísla v prítomnom čase (Präsens). Používa sa najmä vtedy, keď nechceme alebo nepotrebujeme špecifikovať konkrétnu osobu, ktorá niečo robí.</p><p><strong>Časovanie 'man':</strong></p><table><thead><tr><th>Infinitív</th><th>'man' + sloveso (Präsens)</th></tr></thead><tbody><tr><td>machen</td><td>man macht</td></tr><tr><td>sprechen</td><td>man spricht</td></tr><tr><td>gehen</td><td>man geht</td></tr><tr><td>essen</td><td>man isst</td></tr></tbody></table><p>Je dôležité si pamätať, že 'man' je vždy v nominatíve a nikdy sa nemení podľa pádu. V slovenčine často používame trpný rod alebo všeobecného 'niekoho' či 'ľudí'.</p>",
+      examples: [
+        {
+          de: "In Deutschland spricht man Deutsch.",
+          sk: "V Nemecku sa hovorí po nemecky."
+        },
+        {
+          de: "Man isst hier viel Brot.",
+          sk: "Tu sa je veľa chleba."
+        },
+        {
+          de: "Man muss früh aufstehen.",
+          sk: "Človek musí skoro vstať."
+        },
+        {
+          de: "Wenn man müde ist, geht man schlafen.",
+          sk: "Keď je človek unavený, ide spať."
+        },
+        {
+          de: "Wie sagt man das auf Deutsch?",
+          sk: "Ako sa to povie po nemecky?"
+        },
+        {
+          de: "Man kann hier gut schwimmen.",
+          sk: "Človek tu môže dobre plávať."
+        }
+      ],
+      slovakContrastNote: "V slovenčine nemáme priame ekvivalentné zámeno ako nemecké 'man'. Často používame trpný rod ('hovorí sa', 'je sa'), alebo všeobecné podstatné mená v množnom čísle ('ľudia hovoria') či neurčité zámená ('niekto', 'všeobecne'). Nemecké 'man' je vždy v nominatíve a časuje sa s 3. osobou jednotného čísla, čo je jednoduchšie ako slovenské možnosti."
+    },
+    {
+      rule: "Nadväzovanie kontaktu a reagovanie",
+      explanation: "<p>V tejto lekcii sa zameriavame na frázy, ktoré používame pri nadväzovaní kontaktu s inými ľuďmi a na reagovanie na ich výroky. Ide o bežné spoločenské situácie, kde potrebujeme prejaviť záujem, súhlasiť, nesúhlasiť alebo položiť doplňujúcu otázku. Tieto frázy sú kľúčové pre plynulú konverzáciu a budovanie vzťahov.</p><p><strong>Príklady bežných reakcií:</strong></p><ul><li><strong>Súhlas:</strong> Ja, genau. (Áno, presne tak.)</li><li><strong>Nesúhlas:</strong> Nein, das stimmt nicht. (Nie, to nie je pravda.)</li><li><strong>Dopyt:</strong> Und du? / Und Sie? (A ty? / A Vy?)</li><li><strong>Prekvapenie:</strong> Wirklich? (Naozaj?)</li><li><strong>Záujem:</strong> Das ist interessant. (To je zaujímavé.)</li></ul><p>Používanie týchto fráz vám pomôže lepšie sa zapojiť do konverzácie a ukázať, že počúvate a reagujete na to, čo hovorí váš partner.</p>",
+      examples: [
+        {
+          de: "Das ist eine gute Idee.",
+          sk: "To je dobrý nápad."
+        },
+        {
+          de: "Ja, das finde ich auch.",
+          sk: "Áno, aj ja si to myslím."
+        },
+        {
+          de: "Wir gehen ins Kino.",
+          sk: "Ideme do kina."
+        },
+        {
+          de: "Oh, das ist schön!",
+          sk: "Ó, to je pekné!"
+        },
+        {
+          de: "Ich habe Hunger.",
+          sk: "Mám hlad."
+        },
+        {
+          de: "Wirklich? Was möchtest du essen?",
+          sk: "Naozaj? Čo by si chcel jesť?"
+        },
+        {
+          de: "Das Wetter ist schlecht.",
+          sk: "Počasie je zlé."
+        },
+        {
+          de: "Ja, leider.",
+          sk: "Áno, bohužiaľ."
+        }
+      ],
+      slovakContrastNote: "Slovenské frázy na nadväzovanie kontaktu a reagovanie sú často veľmi podobné nemeckým. Rozdiel môže byť v nuansách alebo v tom, ktoré frázy sú v danej situácii bežnejšie. Napríklad, zatiaľ čo 'Wirklich?' je priamy preklad 'Naozaj?', v slovenčine môžeme použiť aj 'Fakt?' alebo 'Vážne?'. Dôležité je osvojiť si nemecké ekvivalenty, aby konverzácia znela prirodzene."
+    }
+  ],
   vocab: [
-    { de: "man", sk: "sa (neosobné), človek, ľudia", example: "Man spricht hier Deutsch.", exampleSk: "Tu sa hovorí po nemecky.", gender: null, srsId: "L67_V01", recycledFrom: [] },
-    { de: "jemand", sk: "niekto", example: "Jemand hat angerufen.", exampleSk: "Niekto volal.", gender: null, srsId: "L67_V02", recycledFrom: [] },
-    { de: "niemand", sk: "nikto", example: "Niemand ist zu Hause.", exampleSk: "Nikto nie je doma.", gender: null, srsId: "L67_V03", recycledFrom: [] },
-    { de: "etwas", sk: "niečo", example: "Ich möchte etwas trinken.", exampleSk: "Chcel/a by som niečo piť.", gender: null, srsId: "L67_V04", recycledFrom: [] },
-    { de: "nichts", sk: "nič", example: "Ich habe nichts gesagt.", exampleSk: "Nič som nepovedal/a.", gender: null, srsId: "L67_V05", recycledFrom: [] },
-    { de: "Man darf nicht...", sk: "Nesmie sa...", example: "Man darf nicht laut Musik hören.", exampleSk: "Nesmie sa hlasno počúvať hudba.", gender: null, srsId: "L67_V06", recycledFrom: [] },
-    { de: "Man kann...", sk: "Dá sa, môže sa...", example: "Hier kann man gut essen.", exampleSk: "Tu sa dá dobre jesť.", gender: null, srsId: "L67_V07", recycledFrom: [] },
-    { de: "Man sagt, dass...", sk: "Hovorí sa, že...", example: "Man sagt, dass Wien sehr schön ist.", exampleSk: "Hovorí sa, že Viedeň je veľmi krásna.", gender: null, srsId: "L67_V08", recycledFrom: [] },
-    { de: "Gibt es hier jemanden?", sk: "Je tu niekto?", example: "Hallo? Gibt es hier jemanden?", exampleSk: "Ahoj? Je tu niekto?", gender: null, srsId: "L67_V09", recycledFrom: [11] },
-    { de: "Niemand ist zu Hause.", sk: "Nikto nie je doma.", example: "Es klingelt, aber niemand ist zu Hause.", exampleSk: "Zvonia, ale nikto nie je doma.", gender: null, srsId: "L67_V10", recycledFrom: [] },
-    { de: "Ich möchte etwas trinken.", sk: "Chcel/a by som niečo piť.", example: "Ich möchte etwas Kaltes trinken.", exampleSk: "Chcel/a by som niečo studené piť.", gender: null, srsId: "L67_V11", recycledFrom: [] },
-    { de: "Ich habe nichts gesagt.", sk: "Nič som nepovedal/a.", example: "Ich weiß nichts.", exampleSk: "Nič neviem.", gender: null, srsId: "L67_V12", recycledFrom: [] },
-    { de: "irgendwas (hovorový tvar)", sk: "čosi, hocičo", example: "Hast du irgendwas gegessen?", exampleSk: "Jedol/a si hocičo?", gender: null, srsId: "L67_V13", recycledFrom: [] },
-    { de: "irgendwo", sk: "niekde, hocigde", example: "Er wohnt irgendwo in Wien.", exampleSk: "Býva niekde vo Viedni.", gender: null, srsId: "L67_V14", recycledFrom: [] },
-    { de: "irgendwann", sk: "niekedy, hocikedy", example: "Irgendwann lerne ich Spanisch.", exampleSk: "Niekedy sa naučím španielčinu.", gender: null, srsId: "L67_V15", recycledFrom: [] }
+    {
+      de: "das Gerücht",
+      sk: "povesť, chýr",
+      gender: "N",
+      srsId: "L67_V01",
+      example: "Man hört ein Gerücht über den neuen Kollegen.",
+      exampleSk: "Počúvajú sa povesť o novom kolegovi.",
+      recycledFrom: []
+    },
+    {
+      de: "der Kollege",
+      sk: "kolega",
+      gender: "M",
+      srsId: "L67_V02",
+      example: "Man sagt, der neue Kollege ist sehr streng.",
+      exampleSk: "Hovorí sa, že nový kolega je veľmi prísny.",
+      recycledFrom: []
+    },
+    {
+      de: "das Büro",
+      sk: "kancelária",
+      gender: "N",
+      srsId: "L67_V03",
+      example: "Jana ist im Büro.",
+      exampleSk: "Jana je v kancelárii.",
+      recycledFrom: []
+    },
+    {
+      de: "die Arbeit",
+      sk: "práca",
+      gender: "F",
+      srsId: "L67_V04",
+      example: "Die Arbeit ist interessant.",
+      exampleSk: "Práca je zaujímavá.",
+      recycledFrom: []
+    },
+    {
+      de: "die Leute",
+      sk: "ľudia",
+      gender: "F",
+      srsId: "L67_V05",
+      example: "Die Leute reden viel.",
+      exampleSk: "Ľudia veľa rozprávajú.",
+      recycledFrom: []
+    },
+    {
+      de: "der Nachbar",
+      sk: "sused",
+      gender: "M",
+      srsId: "L67_V06",
+      example: "Mein Nachbar ist nett.",
+      exampleSk: "Môj sused je milý.",
+      recycledFrom: []
+    },
+    {
+      de: "die Nachbarin",
+      sk: "susedka",
+      gender: "F",
+      srsId: "L67_V07",
+      example: "Die Nachbarin hilft mir.",
+      exampleSk: "Susedka mi pomáha.",
+      recycledFrom: []
+    },
+    {
+      de: "das Gespräch",
+      sk: "rozhovor",
+      gender: "N",
+      srsId: "L67_V08",
+      example: "Das Gespräch ist wichtig.",
+      exampleSk: "Rozhovor je dôležitý.",
+      recycledFrom: []
+    },
+    {
+      de: "der Kontakt",
+      sk: "kontakt",
+      gender: "M",
+      srsId: "L67_V09",
+      example: "Ich suche Kontakt.",
+      exampleSk: "Hľadám kontakt.",
+      recycledFrom: []
+    },
+    {
+      de: "die Meinung",
+      sk: "názor",
+      gender: "F",
+      srsId: "L67_V10",
+      example: "Was ist deine Meinung?",
+      exampleSk: "Aký je tvoj názor?",
+      recycledFrom: []
+    },
+    {
+      de: "das Wort",
+      sk: "slovo",
+      gender: "N",
+      srsId: "L67_V11",
+      example: "Ein Wort ist nicht genug.",
+      exampleSk: "Jedno slovo nestačí.",
+      recycledFrom: []
+    },
+    {
+      de: "die Sache",
+      sk: "vec",
+      gender: "F",
+      srsId: "L67_V12",
+      example: "Das ist eine wichtige Sache.",
+      exampleSk: "Toto je dôležitá vec.",
+      recycledFrom: []
+    },
+    {
+      de: "der Tag",
+      sk: "deň",
+      gender: "M",
+      srsId: "L67_V13",
+      example: "Heute ist ein schöner Tag.",
+      exampleSk: "Dnes je pekný deň.",
+      recycledFrom: []
+    },
+    {
+      de: "die Zeit",
+      sk: "čas",
+      gender: "F",
+      srsId: "L67_V14",
+      example: "Ich habe keine Zeit.",
+      exampleSk: "Nemám čas.",
+      recycledFrom: []
+    },
+    {
+      de: "sagen",
+      sk: "povedať",
+      gender: null,
+      srsId: "L67_V15",
+      example: "Man sagt, er ist nett.",
+      exampleSk: "Hovorí sa, že je milý.",
+      recycledFrom: []
+    },
+    {
+      de: "reden",
+      sk: "rozprávať",
+      gender: null,
+      srsId: "L67_V16",
+      example: "Sie reden über die Arbeit.",
+      exampleSk: "Rozprávajú o práci.",
+      recycledFrom: []
+    },
+    {
+      de: "hören",
+      sk: "počuť",
+      gender: null,
+      srsId: "L67_V17",
+      example: "Ich höre ein Gerücht.",
+      exampleSk: "Počujem povesť.",
+      recycledFrom: []
+    },
+    {
+      de: "machen",
+      sk: "robiť",
+      gender: null,
+      srsId: "L67_V18",
+      example: "Man macht Fehler.",
+      exampleSk: "Človek robí chyby.",
+      recycledFrom: []
+    },
+    {
+      de: "dürfen",
+      sk: "smieť",
+      gender: null,
+      srsId: "L67_V19",
+      example: "Man darf nicht alles glauben.",
+      exampleSk: "Človek nesmie všetkému veriť.",
+      recycledFrom: []
+    },
+    {
+      de: "müssen",
+      sk: "musieť",
+      gender: null,
+      srsId: "L67_V20",
+      example: "Man muss vorsichtig sein.",
+      exampleSk: "Človek musí byť opatrný.",
+      recycledFrom: []
+    },
+    {
+      de: "man sagt",
+      sk: "hovorí sa",
+      gender: null,
+      srsId: "L67_V21",
+      example: "Man sagt, das Wetter wird besser.",
+      exampleSk: "Hovorí sa, že počasie sa zlepší.",
+      recycledFrom: []
+    },
+    {
+      de: "nicht so viel reden",
+      sk: "nerozprávať sa toľko",
+      gender: null,
+      srsId: "L67_V22",
+      example: "Man sollt nicht so viel reden.",
+      exampleSk: "Človek by nemal toľko rozprávať.",
+      recycledFrom: []
+    },
+    {
+      de: "Kontakt aufnehmen",
+      sk: "nadviazať kontakt",
+      gender: null,
+      srsId: "L67_V23",
+      example: "Es ist gut, Kontakt aufzunehmen.",
+      exampleSk: "Je dobré nadviazať kontakt.",
+      recycledFrom: []
+    },
+    {
+      de: "vorsichtig sein",
+      sk: "byť opatrný",
+      gender: null,
+      srsId: "L67_V24",
+      example: "Man muss vorsichtig sein.",
+      exampleSk: "Človek musí byť opatrný.",
+      recycledFrom: []
+    },
+    {
+      de: "alles glauben",
+      sk: "veriť všetkému",
+      gender: null,
+      srsId: "L67_V25",
+      example: "Man darf nicht alles glauben.",
+      exampleSk: "Človek nesmie všetkému veriť.",
+      recycledFrom: []
+    }
   ],
   exercises: [
     {
       type: "flashcard",
-      instruction: "Nauč sa neurčité zámená a ich použitie vo vetách.",
-      items: [
-        "man = sa, človek (neosobné) | Man spricht hier Deutsch.",
-        "jemand = niekto | Jemand hat angerufen.",
-        "niemand = nikto | Niemand ist zu Hause.",
-        "etwas = niečo | Ich möchte etwas essen.",
-        "nichts = nič | Ich habe nichts gesagt.",
-        "Man darf nicht... = Nesmie sa...",
-        "Man kann... = Dá sa, môže sa...",
-        "Man sagt, dass... = Hovorí sa, že...",
-        "Gibt es hier jemanden? = Je tu niekto?",
-        "Niemand weiß das. = Nikto to nevie.",
-        "etwas Interessantes = niečo zaujímavé",
-        "nichts Neues = nič nové",
-        "irgendwas = čosi, hocičo (hovorový)",
-        "irgendwo = niekde",
-        "irgendwann = niekedy"
+      instruction: "Prezri si slovíčka tejto lekcie. Klikni na kartičku pre preklad."
+    },
+    {
+      type: "match",
+      instruction: "Spojte nemecké slová s ich slovenskými prekladmi.",
+      pairs: [
+        [
+          "das Gerücht",
+          "povesť, chýr"
+        ],
+        [
+          "der Kollege",
+          "kolega"
+        ],
+        [
+          "das Büro",
+          "kancelária"
+        ],
+        [
+          "die Arbeit",
+          "práca"
+        ],
+        [
+          "die Leute",
+          "ľudia"
+        ],
+        [
+          "der Nachbar",
+          "sused"
+        ],
+        [
+          "das Gespräch",
+          "rozhovor"
+        ],
+        [
+          "die Meinung",
+          "názor"
+        ],
+        [
+          "sagen",
+          "povedať"
+        ],
+        [
+          "hören",
+          "počuť"
+        ],
+        [
+          "man sagt",
+          "hovorí sa"
+        ],
+        [
+          "vorsichtig sein",
+          "byť opatrný"
+        ]
       ]
     },
     {
-      type: "mcq",
-      instruction: "Vyber správne neurčité zámeno.",
-      questions: [
+      type: "wordorder",
+      instruction: "Usporiadajte slová do správneho nemeckého poradia.",
+      sentences: [
         {
-          question: "Ako sa povie 'Tu sa nesmie parkovať'?",
-          options: [
-            "Hier darf jemand nicht parken.",
-            "Hier darf man nicht parken.",
-            "Hier darf niemand parken.",
-            "Hier kann man parken."
+          words: [
+            "man",
+            "nicht",
+            "so",
+            "viel",
+            "sollte",
+            "reden"
           ],
-          answer: "Hier darf man nicht parken.",
-          explanation: "'man' sa používa pre neosobné pravidlá a všeobecné výroky. 'Man darf nicht...' = Nesmie sa... Niemand by tiež mohlo fungovať, ale 'man darf nicht' je typický výraz pre pravidlá."
+          correct: "man sollte nicht so viel reden",
+          hint: "Človek by nemal toľko rozprávať.",
+          explanation: "V tejto lekcii sa učíme používať zámeno 'man' na vyjadrenie všeobecných rád alebo zvykov. Sloveso 'sollte' je v osobnom tvare na druhom mieste a infinitív 'reden' je na konci vety."
         },
         {
-          question: "Ako sa povie 'Niekto zabudol svoju tašku'?",
-          options: [
-            "Man hat seine Tasche vergessen.",
-            "Etwas hat seine Tasche vergessen.",
-            "Jemand hat seine Tasche vergessen.",
-            "Niemand hat seine Tasche vergessen."
+          words: [
+            "man",
+            "muss",
+            "vorsichtig",
+            "sein"
           ],
-          answer: "Jemand hat seine Tasche vergessen.",
-          explanation: "'jemand' = niekto. Ak vieme, že existuje konkrétna osoba (aj keď nepoznáme koho), používame 'jemand'."
+          correct: "man muss vorsichtig sein",
+          hint: "Človek musí byť opatrný.",
+          explanation: "Použitie 'man' s modálnym slovesom 'muss'. Infinitív 'sein' je na konci vety."
         },
         {
-          question: "Jana do chladničky pozerá a hovorí: 'Ich habe ___ gegessen — die Küche ist leer!'",
-          options: ["jemand", "etwas", "nichts", "niemand"],
-          answer: "nichts",
-          explanation: "'nichts' = nič. Jana ešte nič nejedla. Pozor: po 'nichts' nepoužívame člen — 'nichts Essen' píšeme s veľkým písmenom! 'Ich habe nichts gegessen.'"
+          words: [
+            "man",
+            "darf",
+            "nicht",
+            "alles",
+            "glauben"
+          ],
+          correct: "man darf nicht alles glauben",
+          hint: "Človek nesmie veriť všetkému.",
+          explanation: "Použitie 'man' s modálnym slovesom 'darf'. Infinitív 'glauben' je na konci vety."
         },
         {
-          question: "Prečo NEMÔŽEME povedať 'Ich habe kein gegessen' namiesto 'Ich habe nichts gegessen'?",
-          options: [
-            "Môžeme — sú to synonymá",
-            "'kein' sa používa len pred podstatným menom (kein Brot), nie samostatne",
-            "'kein' je príliš formálne",
-            "'kein' patrí do plurálu"
+          words: [
+            "man",
+            "kann",
+            "Kontakt",
+            "aufnehmen"
           ],
-          answer: "'kein' sa používa len pred podstatným menom (kein Brot), nie samostatne",
-          explanation: "'kein' stojí vždy pred podstatným menom: 'Ich habe kein Brot gegessen.' Ale ak hovoríme všeobecne bez substantíva, používame 'nichts': 'Ich habe nichts gegessen.'"
+          correct: "man kann Kontakt aufnehmen",
+          hint: "Človek môže nadviazať kontakt.",
+          explanation: "Použitie 'man' s modálnym slovesom 'kann'. Slovesná fráza 'Kontakt aufnehmen' je na konci vety."
         },
         {
-          question: "Čo je správne: 'etwas Gutes' alebo 'etwas gutes'?",
-          options: [
-            "etwas gutes (malé písmeno)",
-            "etwas Gutes (veľké písmeno — adjektívum sa substantivizuje)",
-            "etwas gut",
-            "etwas das Gute"
+          words: [
+            "die",
+            "Leute",
+            "reden",
+            "viel"
           ],
-          answer: "etwas Gutes (veľké písmeno — adjektívum sa substantivizuje)",
-          explanation: "Po 'etwas', 'nichts', 'alles' sa prídavné meno píše s VEĽKÝM písmenom a dostáva -es: etwas Gutes, nichts Neues, alles Schöne."
+          correct: "die Leute reden viel",
+          hint: "Ľudia veľa rozprávajú.",
+          explanation: "Základná stavba vety s podmetom 'die Leute' a slovesom 'reden' na druhom mieste."
         }
       ]
     },
     {
       type: "fill",
-      instruction: "Doplň správne neurčité zámeno do vety.",
+      instruction: "Doplňte chýbajúce slová do viet.",
       questions: [
         {
-          sentence: "___ darf hier nicht laut Musik hören. (neosobné pravidlo)",
-          answer: "Man",
-          hint: "Neosobné pravidlá = ?",
-          explanation: "'man' sa používa pre všeobecné pravidlá a zvyklosti. Man darf hier nicht laut Musik hören."
+          sentence: "Man sagt, dass das ein gutes Restaurant ist. Das ist ein Gerücht.",
+          answer: "Gerücht",
+          hint: "Čo sa hovorí, ale nemusí byť pravda?",
+          explanation: "Slovo 'das Gerücht' znamená povesť alebo chýr."
         },
         {
-          sentence: "___ hat mein Fahrrad gestohlen! (neznáma osoba)",
-          answer: "Jemand",
-          hint: "Neznáma osoba, ale existuje = ?",
-          explanation: "'jemand' = niekto. Viem, že to urobila nejaká osoba, len neviem kto."
+          sentence: "Mein Kollege arbeitet im gleichen ____.",
+          answer: "Büro",
+          hint: "Kde pracuje kolega?",
+          explanation: "Slovo 'das Büro' znamená kancelária."
         },
         {
-          sentence: "Ich bin so hungrig! Ich möchte ___ essen.",
-          answer: "etwas",
-          hint: "niečo = ?",
-          explanation: "'etwas' = niečo. Ich möchte etwas essen. = Chcem niečo zjesť."
+          sentence: "Ich muss heute viel ____.",
+          answer: "arbeiten",
+          hint: "Čo robí človek v práci?",
+          explanation: "Sloveso 'arbeiten' znamená pracovať."
         },
         {
-          sentence: "Ich habe ___ Neues gehört. (nič nové)",
-          answer: "nichts",
-          hint: "nič = ? (s veľkým písmenom prídavného mena)",
-          explanation: "'nichts' = nič. Po 'nichts' + prídavné meno: nichts Neues (veľké N!). Ich habe nichts Neues gehört."
+          sentence: "Viele ____ sprechen Deutsch.",
+          answer: "Leute",
+          hint: "Kto hovorí po nemecky?",
+          explanation: "Slovo 'die Leute' znamená ľudia."
         },
         {
-          sentence: "Es klingelt, aber ___ öffnet die Tür.",
-          answer: "niemand",
-          hint: "nikto = ?",
-          explanation: "'niemand' = nikto. Es klingelt, aber niemand öffnet die Tür. = Zvonia, ale nikto neotvorí dvere."
+          sentence: "Mein ____ wohnt neben uns.",
+          answer: "Nachbar",
+          hint: "Kto býva vedľa?",
+          explanation: "Slovo 'der Nachbar' znamená sused."
         },
         {
-          sentence: "___ sagt, dass das Restaurant sehr gut ist. (hovorí sa / ľudia hovoria)",
-          answer: "Man",
-          hint: "Všeobecný výrok = ?",
-          explanation: "'man' pre všeobecné tvrdenia. Man sagt, dass... = Hovorí sa, že..."
+          sentence: "Wir hatten ein interessantes ____ gestern.",
+          answer: "Gespräch",
+          hint: "Čo ste mali včera?",
+          explanation: "Slovo 'das Gespräch' znamená rozhovor."
+        },
+        {
+          sentence: "Ich ____ nicht, was ich sagen soll.",
+          answer: "weiß",
+          hint: "Čo nevieš?",
+          explanation: "Toto je príklad z predchádzajúcich lekcií (L27). Sloveso 'wissen' (vedieť) v 1. osobe sg. je 'weiß'."
+        },
+        {
+          sentence: "Du ____ sehr gut singen!",
+          answer: "kannst",
+          hint: "Čo vieš robiť?",
+          explanation: "Toto je príklad z predchádzajúcich lekcií (L22). Modálne sloveso 'können' v 2. osobe sg. je 'kannst'."
         }
       ]
     },
     {
       type: "listen",
-      instruction: "Počúvaj pravidlá a vety s neurčitými zámenami. Opakuj nahlas.",
+      instruction: "Počúvajte a napíšte, čo počujete.",
       questions: [
-        { de: "Man darf hier nicht rauchen.", sk: "Tu sa nesmie fajčiť." },
-        { de: "Jemand hat angerufen, aber ich kenne die Nummer nicht.", sk: "Niekto volal, ale nepoznám číslo." },
-        { de: "Niemand ist im Büro.", sk: "Nikto nie je v kancelárii." },
-        { de: "Ich möchte etwas Warmes essen.", sk: "Chcel/a by som niečo teplé zjesť." },
-        { de: "Ich habe nichts vergessen.", sk: "Na nič som nezabudol/a." },
-        { de: "Man kann hier gut einkaufen.", sk: "Tu sa dá dobre nakupovať." },
-        { de: "Hat jemand meinen Schlüssel gesehen?", sk: "Videl niekto môj kľúč?" },
-        { de: "Irgendwo in Wien gibt es ein perfektes Café.", sk: "Niekde vo Viedni je perfektná kaviareň." }
+        {
+          de: "das Wort",
+          sk: "slovo"
+        },
+        {
+          de: "der Tag",
+          sk: "deň"
+        },
+        {
+          de: "die Zeit",
+          sk: "čas"
+        },
+        {
+          de: "der Kollege",
+          sk: "kolega"
+        },
+        {
+          de: "die Nachbarin",
+          sk: "susedka"
+        },
+        {
+          de: "die Meinung",
+          sk: "názor"
+        },
+        {
+          de: "Kontakt aufnehmen",
+          sk: "nadviazať kontakt"
+        },
+        {
+          de: "nicht so viel reden",
+          sk: "nerozprávať sa toľko"
+        },
+        {
+          de: "vorsichtig sein",
+          sk: "byť opatrný"
+        },
+        {
+          de: "alles glauben",
+          sk: "veriť všetkému"
+        }
       ]
     },
     {
-      type: "match",
-      instruction: "Spoj nemecké neurčité zámeno s jeho slovenským ekvivalentom a príkladom.",
-      pairs: [
-        ["man", "sa / ľudia (neosobné)"],
-        ["jemand", "niekto"],
-        ["niemand", "nikto"],
-        ["etwas", "niečo"],
-        ["nichts", "nič"],
-        ["irgendwas", "čosi, hocičo (hovorový)"],
-        ["irgendwo", "niekde"],
-        ["irgendwann", "niekedy"]
-      ]
-    },
-    {
-      type: "dialogue",
-      instruction: "Jana hovorí so susedkou o pravidlách bytového domu a záhadnom liste.",
-      lines: [
-        { speaker: "A", de: "Guten Tag! Haben Sie schon die neuen Hausordnung gelesen?", sk: "Dobrý deň! Čítali ste už nové pravidlá domu?" },
-        { speaker: "B", de: "Noch nicht. Was steht da drin?", sk: "Ešte nie. Čo je tam napísané?" },
-        { speaker: "A", de: "Man darf nicht laut Musik hören nach 22 Uhr.", sk: "Po 22. hodine sa nesmie hlasno počúvať hudba." },
-        { speaker: "B", de: "Das ist vernünftig. Und was noch?", sk: "To je rozumné. A čo ešte?" },
-        { speaker: "A", de: "Man muss den Müll richtig trennen. Und man kann den Keller benutzen.", sk: "Treba správne triediť odpad. A suterén sa môže používať." },
-        { speaker: "B", de: "Gut. Aber wissen Sie — jemand hat meinen Brief geöffnet!", sk: "Dobre. Ale viete — niekto otvoril môj list!" },
-        { speaker: "A", de: "Was? Das ist nicht erlaubt! Hat jemand das gesehen?", sk: "Čo? To je zakázané! Videl to niekto?" },
-        { speaker: "B", de: "Niemand weiß, wer das war. Ich habe nichts gefunden.", sk: "Nikto nevie, kto to bol. Nič som nenašla." },
-        { speaker: "A", de: "Seltsam. Brauchen Sie etwas? Kann ich Ihnen helfen?", sk: "Čudné. Potrebujete niečo? Môžem vám pomôcť?" },
-        { speaker: "B", de: "Danke! Ich brauche nichts, aber ich werde mit dem Hausmeister sprechen.", sk: "Ďakujem! Nič nepotrebujem, ale budem hovoriť so správcom domu." }
-      ],
-      comprehensionQuestions: [
+      type: "mcq",
+      instruction: "Vyberte správnu možnosť.",
+      questions: [
         {
-          question: "Čo je zakázané po 22:00?",
-          options: ["Používať kuchyňu", "Hlasno počúvať hudbu", "Otvárať dvere", "Parkovať"],
-          answer: "Hlasno počúvať hudbu"
+          question: "Čo znamená 'man sagt'?",
+          options: [
+            "Hovorím",
+            "Hovorí sa",
+            "Hovoríš",
+            "Hovorí"
+          ],
+          answer: 1,
+          explanation: "'Man sagt' je neosobný výraz, ktorý znamená 'hovorí sa' alebo 'ľudia hovoria'."
         },
         {
-          question: "Čo sa stalo so susedkiným listom?",
-          options: ["Bol stratený", "Bol poškodený", "Niekto ho otvoril", "Nedorazil"],
-          answer: "Niekto ho otvoril"
+          question: "Čo znamená 'das Gerücht'?",
+          options: [
+            "Názor",
+            "Rozhovor",
+            "Povesť, chýr",
+            "Slovo"
+          ],
+          answer: 2,
+          explanation: "'Das Gerücht' je podstatné meno, ktoré znamená povesť alebo chýr."
         },
         {
-          question: "S kým bude susedka hovoriť?",
-          options: ["S políciou", "So správcom domu", "S Janou", "S poštárom"],
-          answer: "So správcom domu"
+          question: "Čo znamená 'Kontakt aufnehmen'?",
+          options: [
+            "Stratit kontakt",
+            "Nadviazať kontakt",
+            "Zrušiť kontakt",
+            "Zmeniť kontakt"
+          ],
+          answer: 1,
+          explanation: "'Kontakt aufnehmen' je slovesná fráza, ktorá znamená nadviazať kontakt."
+        },
+        {
+          question: "Čo znamená 'vorsichtig sein'?",
+          options: [
+            "Byť nahnevaný",
+            "Byť opatrný",
+            "Byť šťastný",
+            "Byť unavený"
+          ],
+          answer: 1,
+          explanation: "'Vorsichtig sein' je slovesná fráza, ktorá znamená byť opatrný."
+        },
+        {
+          question: "Ktorý tvar slovesa 'sein' je správny vo vete 'Man ___ vorsichtig.'?",
+          options: [
+            "ist",
+            "bin",
+            "seid",
+            "sein"
+          ],
+          answer: 3,
+          explanation: "Pri použití neosobného 'man' sa sloveso časuje v 3. osobe sg., ale keď je prítomný modálny sloveso, hlavné sloveso zostáva v infinitíve na konci vety. Tu je správne 'man muss vorsichtig sein' alebo 'man sollte vorsichtig sein'. Ak by sme mali len 'Man ___ vorsichtig', tak by to bolo 'Man ist vorsichtig'. Ale v kontexte tejto lekcie s modálnymi slovesami je najčastejšia forma s infinitívom na konci."
+        },
+        {
+          question: "Čo znamená 'nicht so viel reden'?",
+          options: [
+            "Veľa rozprávať",
+            "Nerozprávať sa toľko",
+            "Hovoriť potichu",
+            "Hovoriť nahlas"
+          ],
+          answer: 1,
+          explanation: "'Nicht so viel reden' znamená 'nerozprávať sa toľko'."
+        },
+        {
+          question: "Ktoré sloveso sa používa na vyjadrenie možnosti alebo dovolenia s 'man'?",
+          options: [
+            "müssen",
+            "wollen",
+            "können",
+            "sollen"
+          ],
+          answer: 2,
+          explanation: "Sloveso 'können' (môcť, vedieť) sa často používa s 'man' na vyjadrenie všeobecných možností alebo schopností, napr. 'Man kann hier gut essen.' (Dá sa tu dobre najesť)."
+        },
+        {
+          question: "Veta 'Ich ____ meinen Kollegen.' znamená 'Ja ____ môjho kolegu.' Aké sloveso sem patrí?",
+          options: [
+            "sehe",
+            "siehst",
+            "sehen",
+            "seht"
+          ],
+          answer: 0,
+          explanation: "Toto je príklad z predchádzajúcich lekcií (L17, L18, L63). Sloveso 'sehen' (vidieť) v 1. osobe sg. je 'sehe'. 'Meinen Kollegen' je v akuzatíve."
         }
       ]
     },
     {
       type: "minitext",
-      instruction: "Prečítaj domový poriadok (Hausordnung) a odpovedaj na otázky.",
-      text: "Hausordnung — Musterstraße 12, Wien.\n1. Man darf nicht laut Musik hören nach 22 Uhr.\n2. Man muss den Müll richtig trennen.\n3. Man darf keine Tiere halten ohne Erlaubnis.\n4. Man kann den Fahrradraum benutzen.\n5. Man darf nicht im Treppenhaus rauchen.\n6. Man muss die Haustür nach 20 Uhr abschließen.\n7. Man darf keine Pakete für Fremde annehmen.\n8. Man kann den Garten von 8 bis 20 Uhr benutzen.",
-      textSk: "Domový poriadok — Musterstraße 12, Viedeň.\n1. Nesmie sa hlasno počúvať hudba po 22. hodine.\n2. Treba správne triediť odpad.\n3. Nesmú sa chovať zvieratá bez povolenia.\n4. Môže sa používať sklad na bicykle.\n5. V schodišti sa nesmie fajčiť.\n6. Treba zamknúť vchodové dvere po 20. hodine.\n7. Nesmú sa prijímať balíky pre cudzích ľudí.\n8. Záhrada sa môže používať od 8 do 20 hodiny.",
+      instruction: "Lies den Dialog und beantworte die Fragen.",
+      text: "Anna: Jana, hörst du die Gerüchte über den neuen Kollegen?\nJana: Was sagen die Leute?\nAnna: Man sagt, er ist sehr streng und mag keine Fehler.\nJana: Ach so. Man sollte nicht so viel über andere Leute reden, bevor man sie kennt.\nAnna: Ja, das stimmt. Aber man macht das oft.\nJana: Vielleicht. Ich möchte ihn erst mal kennenlernen. Man muss vorsichtig sein, aber auch offen.\nAnna: Du hast Recht. Lass uns ihm einen schönen Tag im Büro wünschen, wenn wir ihn sehen.",
+      textSk: "Anna: Janka, počula si tie chýry o novom kolegovi?\nJana: Čo hovoria ľudia?\nAnna: Vraví sa, že je veľmi prísny a nemá rád chyby.\nJana: Ach tak. Nemalo by sa toľko rozprávať o iných ľuďoch, kým ich človek pozná.\nAnna: Áno, to je pravda. Ale často sa to robí.\nJana: Možno. Chcela by som ho najprv spoznať. Treba byť opatrný, ale aj otvorený.\nAnna: Máš pravdu. Poďme mu popriať pekný deň v kancelárii, keď ho uvidíme.",
       questions: [
         {
-          question: "Do koľkej hodiny môžu nájomníci používať záhradu?",
-          options: ["Do 18:00", "Do 20:00", "Do 22:00", "Celý deň"],
-          answer: "Do 20:00"
+          question: "Was hört Anna über den neuen Kollegen?",
+          options: [
+            "Er ist sehr nett.",
+            "Er ist sehr streng.",
+            "Er mag keine Arbeit.",
+            "Er ist schon lange im Büro."
+          ],
+          answer: 1,
+          explanation: "Anna sagt: 'Man sagt, er ist sehr streng und mag keine Fehler.'"
         },
         {
-          question: "Čo je zakázané bez povolenia?",
-          options: ["Bicyklovanie", "Chov zvierat", "Používanie záhrady", "Fajčenie"],
-          answer: "Chov zvierat"
+          question: "Was meint Jana über das Reden über andere Leute?",
+          options: [
+            "Es ist gut, über alle zu reden.",
+            "Man sollte nicht so viel reden, bevor man die Leute kennt.",
+            "Man sollte nur über gute Dinge reden.",
+            "Es ist wichtig, Gerüchte zu verbreiten."
+          ],
+          answer: 1,
+          explanation: "Jana sagt: 'Man sollte nicht so viel über andere Leute reden, bevor man sie kennt.'"
         },
         {
-          question: "Koľkokrát sa vyskytuje 'man' v texte?",
-          options: ["4-krát", "6-krát", "8-krát", "10-krát"],
-          answer: "8-krát"
-        }
-      ]
-    },
-    {
-      type: "freewrite",
-      instruction: "Napíš pravidlá pre miesto, ktoré poznáš — školu, kanceláriu, byt alebo park.",
-      prompt: "Beschreibe Regeln in einem Ort, den du kennst (Schule, Büro, Wohnung, Park). Benutze: man darf (nicht)..., man muss..., man kann..., jemand/niemand...",
-      minWords: 35,
-      exampleAnswer: "In meinem Büro gibt es viele Regeln. Man darf nicht laut telefonieren. Man muss pünktlich sein. Man kann das Mittagessen im kleinen Café kaufen. Jemand hat immer frischen Kaffee gemacht — das war sehr nett! Niemand darf ohne Erlaubnis den Computer des Chefs benutzen. Man muss um 17 Uhr das Büro verlassen."
-    },
-    {
-      type: "wordorder",
-      instruction: "Zoraď slová do správnej nemeckej vety.",
-      sentences: [
-        {
-          words: ["Jana", "lernt", "Deutsch,", "damit", "sie", "in", "Wien", "arbeiten", "kann"],
-          correct: "Jana lernt Deutsch, damit sie in Wien arbeiten kann",
-          hint: "Jana sa učí nemčinu, aby mohla pracovať vo Viedni.",
-          explanation: "'damit' uvádza finálnu vedľajšiu vetu. Modalverb 'kann' ide na koniec vedľajšej vety."
+          question: "Wie will Jana den neuen Kollegen behandeln?",
+          options: [
+            "Sie will ihn ignorieren.",
+            "Sie will sofort Kontakt aufnehmen.",
+            "Sie will ihn erst kennenlernen und offen sein.",
+            "Sie will vorsichtig sein und nichts sagen."
+          ],
+          answer: 2,
+          explanation: "Jana sagt: 'Ich möchte ihn erst mal kennenlernen. Man muss vorsichtig sein, aber auch offen.'"
         },
         {
-          words: ["Ich", "spare", "Geld,", "damit", "ich", "reisen", "kann"],
-          correct: "Ich spare Geld, damit ich reisen kann",
-          hint: "Sporím peniaze, aby som mohol/a cestovať.",
-          explanation: "'damit' + vedľajšia veta vyjadruje zámer. Infinitív 'reisen' + modalverb 'kann' na konci."
-        },
-        {
-          words: ["Er", "übt", "täglich,", "damit", "er", "besser", "wird"],
-          correct: "Er übt täglich, damit er besser wird",
-          hint: "Cvičí denne, aby bol lepší.",
-          explanation: "'damit er besser wird' = finálna vedľajšia veta. 'wird' (pomocné sloveso) je na konci."
-        },
-        {
-          words: ["Ich", "schreibe", "es", "auf,", "damit", "ich", "es", "nicht", "vergesse"],
-          correct: "Ich schreibe es auf, damit ich es nicht vergesse",
-          hint: "Zapisujem si to, aby som nezabudol/a.",
-          explanation: "Odlučiteľné 'aufschreiben' → 'schreibe ... auf'. 'damit' vedľajšia veta: 'vergesse' na konci."
-        },
-        {
-          words: ["Wir", "lernen", "früh,", "damit", "wir", "die", "Prüfung", "bestehen"],
-          correct: "Wir lernen früh, damit wir die Prüfung bestehen",
-          hint: "Učíme sa zavčasu, aby sme obstáli na skúške.",
-          explanation: "'damit' + Konjunktiv (Prézens tu postačuje). 'bestehen' = obstáť (skúšku), ide na koniec vety."
+          question: "Was schlägt Anna am Ende vor?",
+          options: [
+            "Sie wollen den neuen Kollegen meiden.",
+            "Sie wollen ihn nach seiner Meinung fragen.",
+            "Sie wollen ihm einen schönen Tag wünschen.",
+            "Sie wollen ein Gespräch mit ihm beginnen."
+          ],
+          answer: 2,
+          explanation: "Anna sagt: 'Lass uns ihm einen schönen Tag im Büro wünschen, wenn wir ihn sehen.'"
         }
       ]
     },
     {
       type: "speaking",
-      instruction: "Počúvaj nemeckú vetu. Potom hovor nahlas a skontroluj sa.",
+      instruction: "Höre zu und sprich nach.",
       phrases: [
         {
-          de: "Jana lernt Deutsch, damit sie arbeiten kann.",
-          sk: "Jana sa učí nemčinu, aby mohla pracovať.",
-          tip: "damit: d-a-MIT; Verb ans Ende!"
+          de: "Das Gerücht",
+          sk: "Povesť, chýr",
+          tip: "Gerücht: [g] vs [d], ü [y] vs [i]"
         },
         {
-          de: "Ich spare, damit ich reisen kann.",
-          sk: "Sporím, aby som mohol/a cestovať.",
-          tip: "damit ≠ dadurch; damit = aby (Ziel)"
+          de: "Der Kollege",
+          sk: "Kolega",
+          tip: "Kollege: [k] vs [g], e [ə]"
         },
         {
-          de: "Er übt täglich, damit er besser wird.",
-          sk: "Cvičí denne, aby bol lepší.",
-          tip: "übt: ü=[y], Verb am Satzende"
+          de: "Das Büro",
+          sk: "Kancelária",
+          tip: "Büro: ü [y] vs [i], o [o]"
         },
         {
-          de: "Ich schreibe es auf, damit ich es nicht vergesse.",
-          sk: "Zapisujem si to, aby som nezabudol/a.",
-          tip: "aufschreiben: trennbar; auf ans Ende"
+          de: "Man sagt",
+          sk: "Hovorí sa",
+          tip: "Man: [m] vs [n], a [a]"
         },
         {
-          de: "Wir lernen früh, damit wir bestehen.",
-          sk: "Učíme sa zavčasu, aby sme obstáli.",
-          tip: "bestehen: be-STE-hen, Finalzweck"
+          de: "Die Leute reden",
+          sk: "Ľudia sa rozprávajú",
+          tip: "Leute: eu [ɔy] vs [oj], reden: [r] vs [ɾ]"
+        },
+        {
+          de: "Man muss vorsichtig sein",
+          sk: "Treba byť opatrný",
+          tip: "muss: [mʊs], sein: s [z] vs [s]"
+        },
+        {
+          de: "Man darf nicht alles glauben",
+          sk: "Nesmie sa všetkému veriť",
+          tip: "dürfen: ü [y] vs [i], glauben: [g] vs [d]"
+        },
+        {
+          de: "Man hört ein Gespräch",
+          sk: "Počuje sa rozhovor",
+          tip: "hört: ö [ø] vs [o], Gespräch: ch [ç] vs [x]"
+        }
+      ]
+    },
+    {
+      type: "truefalse",
+      instruction: "Rozhodnite, či sú nasledujúce tvrdenia pravdivé (wahr) alebo nepravdivé (falsch).",
+      statements: [
+        {
+          statement: "Man darf nicht alles glauben, was man hört.",
+          isTrue: true,
+          explanation: "Toto je všeobecne platné pravidlo, ktoré hovorí, že nemáme veriť všetkému, čo počujeme."
+        },
+        {
+          statement: "Der Kollege muss immer viel reden.",
+          isTrue: false,
+          explanation: "Nie je pravda, že kolega musí vždy veľa rozprávať. Niektorí ľudia sú tichší."
+        },
+        {
+          statement: "Wenn man neue Leute kennenlernt, muss man vorsichtig sein.",
+          isTrue: true,
+          explanation: "Pri spoznávaní nových ľudí je často dobré byť opatrný, kým ich lepšie nespoznáme."
+        },
+        {
+          statement: "Das Büro ist ein Ort für Gespräche.",
+          isTrue: true,
+          explanation: "V kancelárii sa často vedú rozhovory, či už pracovné alebo neformálne."
+        },
+        {
+          statement: "Man muss keinen Kontakt mit den Nachbarn aufnehmen.",
+          isTrue: false,
+          explanation: "Je dobré nadväzovať kontakt so susedmi, aj keď to nie je povinné."
+        }
+      ]
+    },
+    {
+      type: "dictation",
+      instruction: "Napíšte vety, ktoré počujete.",
+      sentences: [
+        {
+          de: "Das ist ein Gerücht.",
+          sk: "Toto je povesť."
+        },
+        {
+          de: "Der Kollege ist im Büro.",
+          sk: "Kolega je v kancelárii."
+        },
+        {
+          de: "Man muss nicht alles sagen.",
+          sk: "Nemusíš všetko povedať."
+        },
+        {
+          de: "Wir müssen die Arbeit machen.",
+          sk: "Musíme urobiť prácu."
+        },
+        {
+          de: "Man soll vorsichtig sein bei neuen Kontakten.",
+          sk: "Pri nových kontaktoch treba byť opatrný."
+        }
+      ]
+    },
+    {
+      type: "categorysort",
+      instruction: "Roztrieďte slová do správnych kategórií.",
+      categories: [
+        {
+          name: "Osoby (Personen)",
+          color: "blue",
+          words: [
+            "der Kollege",
+            "der Nachbar",
+            "die Nachbarin",
+            "die Leute"
+          ]
+        },
+        {
+          name: "Činnosti a situácie (Aktivitäten und Situationen)",
+          color: "rose",
+          words: [
+            "das Gerücht",
+            "das Büro",
+            "die Arbeit",
+            "das Gespräch",
+            "der Kontakt",
+            "die Meinung",
+            "der Tag",
+            "die Zeit"
+          ]
+        },
+        {
+          name: "Slová a vyjadrenia (Wörter und Ausdrücke)",
+          color: "green",
+          words: [
+            "sagen",
+            "reden",
+            "hören",
+            "machen",
+            "dürfen",
+            "müssen",
+            "man sagt"
+          ]
+        }
+      ],
+      explanation: "Slová sú rozdelené do kategórií podľa ich významu: osoby, činnosti/situácie a slová/vyjadrenia."
+    },
+    {
+      type: "translation",
+      instruction: "Preložte vety zo slovenčiny do nemčiny.",
+      sentences: [
+        {
+          sk: "Hovorí sa, že je to len povesť.",
+          answer: "Man sagt, das ist nur ein Gerücht.",
+          hint: "man sagt, das Gerücht",
+          explanation: "Používame neosobné 'man' na vyjadrenie všeobecného tvrdenia. 'Man sagt' znamená 'hovorí sa'."
+        },
+        {
+          sk: "Nemôžem veľa rozprávať.",
+          answer: "Ich darf nicht viel reden.",
+          hint: "darf nicht, reden",
+          explanation: "Sloveso 'dürfen' (smieť) sa používa na vyjadrenie povolenia alebo jeho absencie. Tu 'ich darf nicht' znamená 'nesmiem'."
+        },
+        {
+          sk: "Musíme nadviazať kontakt.",
+          answer: "Wir müssen Kontakt aufnehmen.",
+          hint: "müssen, Kontakt aufnehmen",
+          explanation: "Sloveso 'müssen' (musieť) vyjadruje nutnosť. 'Kontakt aufnehmen' znamená 'nadviazať kontakt'."
+        },
+        {
+          sk: "Čo si o tom myslíš?",
+          answer: "Was ist deine Meinung dazu?",
+          hint: "Meinung",
+          explanation: "Priamy preklad 'aký je tvoj názor na to?' je 'Was ist deine Meinung dazu?'."
+        }
+      ]
+    },
+    {
+      type: "conjugation",
+      instruction: "Doplňte správne tvary slovesa 'sagen' (povedať) v prítomnom čase.",
+      verbs: [
+        {
+          infinitive: "sagen",
+          translation: "povedať",
+          forms: [
+            {
+              pronoun: "ich",
+              correct: "sage"
+            },
+            {
+              pronoun: "du",
+              correct: "sagst"
+            },
+            {
+              pronoun: "er/sie/es",
+              correct: "sagt"
+            },
+            {
+              pronoun: "wir",
+              correct: "sagen"
+            },
+            {
+              pronoun: "ihr",
+              correct: "sagt"
+            },
+            {
+              pronoun: "sie/Sie",
+              correct: "sagen"
+            }
+          ],
+          note: "Sloveso 'sagen' je pravidelné sloveso, ktoré sa časuje podľa štandardných pravidiel pre slovesá na '-en'."
         }
       ]
     }
   ],
-  reviewWords: ["man", "jemand", "niemand", "etwas", "nichts", "irgendwas", "irgendwo", "irgendwann", "Man darf nicht...", "Man kann...", "Man sagt, dass..."],
-  lessonNotes: "Neurčité zámená: man=sa/ľudia (neosobné, er-formy slovies), jemand=niekto, niemand=nikto, etwas=niečo, nichts=nič. Po etwas/nichts + adjektívum: veľké písmeno + -es: etwas Gutes, nichts Neues. man NEMOŽNO skloňovať (*dem man je chyba!)."
+  reviewWords: []
 };

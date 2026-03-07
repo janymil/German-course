@@ -1,556 +1,892 @@
-﻿export const lesson59 = {
+export const lesson59 = {
   id: 59,
   week: 12,
   day: 4,
-  title: "Beim Friseur und im Alltag",
-  topic: "U kaderníka a v bežných službách – vyjadrovanie želaní",
+  title: "Was soll ich tun?",
+  topic: "Modálne sloveso 'sollen' pri dávaní rád, najmä v súvislosti so zdravím.",
   cefr: "A1",
   xpReward: 20,
-  narrativeContext:
-    "Jana sa rozhodla pre novú vizáž vo Viedni. Ide k miestnemu kaderníkovi v 6. okrese. Trochu nervózne vstúpi do salóna a pokúsi sa vysvätiť, čo chce: 'Nicht zu kurz, und vorne bitte ein bisschen kürzer.' Kaderníčka je trpezlivá a zrkadlo neklame. Jana vyjde spokojná – a naučí sa pritom niekoľko užitočných viet pre každodennú život v Rakúsku.",
-  communicativeGoal:
-    "Po tejto lekcii viem komunikovať pri každodenných službách (kaderník, krajčír), vyjadriť priania a opísať čo chcem.",
-  skillFocus: ["speaking", "vocabulary", "listening"],
-  grammarNote: {
-    rule: "'Nicht zu + adjektívum' a 'ein bisschen/etwas + komparatív'",
-    explanation:
-      "'Nicht zu kurz' = nie príliš nakrátko. 'Nicht zu lang' = nie príliš dlho. Toto je veľmi bežná fráza pri službách, objednávkach, nakupovaní. Komparatívy v kontexte pomocou 'ein bisschen' alebo 'etwas': 'Ein bisschen kürzer bitte.' (Trochu kratšie.) 'Etwas kürzer, bitte.' (O niečo kratšie.) 'Nicht so kurz wie letztes Mal.' (Nie také krátke ako minule.) Úvod do 'lassen' + infinitív: 'Ich möchte die Haare kürzen lassen.' = Chcem si dať ostríhať vlasy. Toto sa len učíme ako celistný frazeologický výraz – analýza príde neskôr!",
-    examples: [
-      { de: "Nicht zu kurz, bitte.", sk: "Nie príliš nakrátko, prosím." },
-      { de: "Ein bisschen kürzer, bitte.", sk: "Trochu kratšie, prosím." },
-      { de: "Etwas kürzer als letztes Mal.", sk: "O niečo kratšie ako minule." },
-      { de: "Ich möchte die Haare kürzen lassen.", sk: "Chcem si dať ostríhať vlasy." },
-      { de: "Sind Sie zufrieden?", sk: "Ste spokojný/á?" },
-    ],
-    slovakContrastNote:
-      "Slovenčina 'Chcem ostríhať kratšie.' = nemčina 'Ich möchte die Haare kürzer schneiden lassen.' Konštrukcia 'lassen + infinitív' (kauzatívum) je typicky nemecká – slovenčina používa jednoduchší infinitív. Zatiaľ si zapamätaj len frázy ako celky: 'kürzen lassen', 'waschen lassen'.",
-  },
+  narrativeContext: "Jana ist krank. Sie geht zum Arzt. Der Arzt gibt ihr Ratschläge.",
+  communicativeGoal: "Nach dieser Lektion kann ich Ratschläge mit 'sollen' geben und verstehen, besonders wenn es um Gesundheit geht.",
+  skillFocus: [
+    "grammar",
+    "vocabulary",
+    "listening",
+    "speaking"
+  ],
+  lessonNotes: "Naučíme sa používať modálne sloveso 'sollen' na dávanie pokynov a rád, hlavne v lekárskom kontexte. Zameriame sa na jeho časovanie v prítomnom čase a na bežné frázy týkajúce sa zdravia a liečby.",
+  grammarNotes: [
+    {
+      rule: "Modalverb 'sollen'",
+      explanation: "<p>Modálne sloveso <strong>sollen</strong> sa v nemčine používa na vyjadrenie rady, odporúčania alebo úlohy. V slovenčine mu najčastejšie zodpovedá spojenie 'mal by/mala by' alebo 'má/majú'. Používa sa najmä v situáciách, keď niekto niečo navrhuje alebo prikazuje, ale nie tak silno ako sloveso 'müssen' (musieť).</p><p>V súčasnosti (Präsens) sa sloveso 'sollen' časuje nepravidelne. V spojení s iným slovesom stojí toto druhé sloveso v základnom tvare (infinitív) na konci vety. Napríklad: 'Du sollst mehr schlafen.' (Mal by si viac spať.)</p><p>V minulom čase (Perfekt) sa používa pomocné sloveso 'haben' a sloveso 'sollen' v tvare Partizip II, ktoré je 'gesollt'. Opäť stojí na konci vety: 'Er hat das nicht gewollt.' (On to nechcel / nemal chcieť.)</p>",
+      examples: [
+        {
+          de: "Du sollst mehr Wasser trinken.",
+          sk: "Mal by si piť viac vody."
+        },
+        {
+          de: "Wir sollen zum Arzt gehen.",
+          sk: "Mali by sme ísť k lekárovi."
+        },
+        {
+          de: "Soll ich dir helfen?",
+          sk: "Mám ti pomôcť? / Mám ti pomôcť?"
+        },
+        {
+          de: "Er soll früh ins Bett gehen.",
+          sk: "On má ísť skoro spať."
+        },
+        {
+          de: "Sie sollen das Medikament dreimal täglich nehmen.",
+          sk: "Ona má užívať liek trikrát denne."
+        },
+        {
+          de: "Was soll ich tun?",
+          sk: "Čo mám robiť?"
+        },
+        {
+          de: "Er hat das nicht gewollt.",
+          sk: "On to nechcel / nemal chcieť."
+        },
+        {
+          de: "Ihr sollt euch ausruhen.",
+          sk: "Mali by ste si oddýchnuť."
+        }
+      ],
+      slovakContrastNote: "V slovenčine používame 'mal by/mala by' alebo 'má/majú', čo je často priamejší preklad. V nemčine 'sollen' pokrýva širšie spektrum významov od rady až po úlohu, ktorá nie je nutne morálnou povinnosťou. V otázkach 'Soll ich...?' sa pýtame na radu alebo pokyn, podobne ako v slovenčine 'Mám...?'."
+    },
+    {
+      rule: "Minulý čas 'sein' a 'haben'",
+      explanation: "<p>V nemčine sa na vyjadrenie minulosti používajú dva hlavné časy: Perfekt (predprítomný čas) a Präteritum (minulý čas). Pre slovesá 'sein' (byť) a 'haben' (mať) je v bežnej reči oveľa častejšie používaný Präteritum, aj keď Perfekt je tiež správny.</p><p><strong>Präteritum:</strong></p><ul><li>sein: ich war, du warst, er/sie/es war, wir waren, ihr wart, sie/Sie waren</li><li>haben: ich hatte, du hattest, er/sie/es hatte, wir hatten, ihr hattet, sie/Sie hatten</li></ul><p><strong>Perfekt:</strong></p><ul><li>sein: ich bin gewesen, du bist gewesen, er/sie/es ist gewesen, wir sind gewesen, ihr seid gewesen, sie/Sie sind gewesen</li><li>haben: ich habe gehabt, du hast gehabt, er/sie/es hat gehabt, wir haben gehabt, ihr habt gehabt, sie/Sie haben gehabt</li></ul><p>V slovenčine máme len jeden minulý čas, ktorý zodpovedá nemeckému Präteritu aj Perfektu. Preto je dôležité naučiť sa tieto tvary, najmä pre 'sein' a 'haben', ktoré sa často používajú ako pomocné slovesá pri tvorbe Perfektu iných slovies.</p>",
+      examples: [
+        {
+          de: "Ich war gestern müde.",
+          sk: "Včera som bol unavený."
+        },
+        {
+          de: "Du hattest Fieber.",
+          sk: "Mal si horúčku."
+        },
+        {
+          de: "Er war krank.",
+          sk: "On bol chorý."
+        },
+        {
+          de: "Wir hatten Kopfschmerzen.",
+          sk: "Mali sme bolesti hlavy."
+        },
+        {
+          de: "Ihr wart im Krankenhaus.",
+          sk: "Boli ste v nemocnici."
+        },
+        {
+          de: "Sie hatten Husten.",
+          sk: "Oni mali kašeľ."
+        },
+        {
+          de: "Ich bin gewesen.",
+          sk: "Bol som."
+        },
+        {
+          de: "Ich habe gehabt.",
+          sk: "Mal som."
+        }
+      ],
+      slovakContrastNote: "Slovenčina má len jeden minulý čas, zatiaľ čo nemčina rozlišuje Perfekt a Präteritum. Pre slovesá 'byť' a 'mať' sa v hovorovej nemčine používa najmä Präteritum (war, hatte), zatiaľ čo v slovenčine používame jednoducho 'bol som', 'mal som'. V slovenčine sa minulý čas tvorí pomocou príčastia a spôn (som, si, je, sme, ste, sú), čo je odlišný mechanizmus od nemeckých pomocných slovies 'haben' a 'sein' v Perfekte."
+    }
+  ],
   vocab: [
     {
-      de: "der Friseur / die Friseurin",
-      sk: "kaderník / kaderníčka",
-      example: "Ich gehe heute zum Friseur.",
-      exampleSk: "Dnes idem ku kaderníčke.",
-      gender: "M",
+      de: "die Tablette",
+      sk: "tableta",
+      gender: "F",
       srsId: "L59_V01",
-      recycledFrom: [],
+      example: "Sie müssen täglich eine Tablette nehmen.",
+      exampleSk: "Musíte denne užívať jednu tabletu.",
+      recycledFrom: []
     },
     {
-      de: "der Haarschnitt",
-      sk: "strihanie vlasov / účes",
-      example: "Ich hätte gern einen kurzen Haarschnitt.",
-      exampleSk: "Chcel/a by som krátke strihanie vlasov.",
-      gender: "M",
+      de: "das Wasser",
+      sk: "voda",
+      gender: "N",
       srsId: "L59_V02",
-      recycledFrom: [],
+      example: "Trinken Sie viel Wasser.",
+      exampleSk: "Pite veľa vody.",
+      recycledFrom: []
     },
     {
-      de: "schneiden",
-      sk: "strihať",
-      example: "Können Sie bitte vorne kürzer schneiden?",
-      exampleSk: "Môžete prosím vpredu ostríhať kratšie?",
-      gender: null,
+      de: "die Arbeit",
+      sk: "práca",
+      gender: "F",
       srsId: "L59_V03",
-      recycledFrom: [32],
+      example: "Sie sollen nicht arbeiten.",
+      exampleSk: "Nemali by ste pracovať.",
+      recycledFrom: []
     },
     {
-      de: "die Haare",
-      sk: "vlasy",
-      example: "Meine Haare sind zu lang.",
-      exampleSk: "Moje vlasy sú príliš dlhé.",
-      gender: null,
+      de: "der Rat",
+      sk: "rada",
+      gender: "M",
       srsId: "L59_V04",
-      recycledFrom: [],
+      example: "Der Arzt gibt Rat.",
+      exampleSk: "Lekár dáva radu.",
+      recycledFrom: []
     },
     {
-      de: "Nicht zu kurz!",
-      sk: "Nie príliš nakrátko!",
-      example: "Bitte nicht zu kurz – ich möchte die Länge behalten.",
-      exampleSk: "Prosím nie príliš nakrátko – chcem si zachovať dĺžku.",
-      gender: null,
+      de: "der Patient",
+      sk: "pacient",
+      gender: "M",
       srsId: "L59_V05",
-      recycledFrom: [],
+      example: "Der Patient ist krank.",
+      exampleSk: "Pacient je chorý.",
+      recycledFrom: []
     },
     {
-      de: "Ein bisschen kürzer bitte.",
-      sk: "Trochu kratšie prosím.",
-      example: "Vorne ein bisschen kürzer bitte.",
-      exampleSk: "Vpredu trochu kratšie prosím.",
-      gender: null,
+      de: "die Anweisung",
+      sk: "pokyn",
+      gender: "F",
       srsId: "L59_V06",
-      recycledFrom: [],
+      example: "Das ist die Anweisung vom Arzt.",
+      exampleSk: "Toto je pokyn od lekára.",
+      recycledFrom: []
     },
     {
-      de: "waschen",
-      sk: "umyť / prať",
-      example: "Können Sie die Haare zuerst waschen?",
-      exampleSk: "Môžete najprv umyť vlasy?",
-      gender: null,
+      de: "der Tag",
+      sk: "deň",
+      gender: "M",
       srsId: "L59_V07",
-      recycledFrom: [21],
+      example: "Sie sollen dreimal täglich eine Tablette nehmen.",
+      exampleSk: "Mali by ste trikrát denne užiť jednu tabletu.",
+      recycledFrom: []
     },
     {
-      de: "föhnen",
-      sk: "fúkať (fénovačom) / sušiť fénom",
-      example: "Bitte föhnen Sie die Haare gerade.",
-      exampleSk: "Prosím, vysušte vlasy rovno fénom.",
-      gender: null,
+      de: "das Medikament",
+      sk: "liek",
+      gender: "N",
       srsId: "L59_V08",
-      recycledFrom: [],
+      example: "Er nimmt das Medikament.",
+      exampleSk: "On užíva liek.",
+      recycledFrom: []
     },
     {
-      de: "der Termin",
-      sk: "termín / schôdzka",
-      example: "Ich habe einen Termin um 15 Uhr.",
-      exampleSk: "Mám termín o 15:00.",
-      gender: "M",
+      de: "die Gesundheit",
+      sk: "zdravie",
+      gender: "F",
       srsId: "L59_V09",
-      recycledFrom: [19, 37, 42],
+      example: "Ich wünsche Ihnen gute Gesundheit.",
+      exampleSk: "Prajem Vám dobré zdravie.",
+      recycledFrom: []
     },
     {
-      de: "Ich hätte gern einen Termin.",
-      sk: "Chcel/a by som si dohodnúť termín.",
-      example: "Ich hätte gern einen Termin für nächste Woche.",
-      exampleSk: "Chcel/a by som termín na budúci týždeň.",
-      gender: null,
+      de: "die Nachricht",
+      sk: "správa",
+      gender: "F",
       srsId: "L59_V10",
-      recycledFrom: [55],
+      example: "Sie hat eine Nachricht von Luisa.",
+      exampleSk: "Má správu od Luisi.",
+      recycledFrom: []
     },
     {
-      de: "Wie lange dauert das?",
-      sk: "Ako dlho to trvá?",
-      example: "Wie lange dauert ein Haarschnitt bei Ihnen?",
-      exampleSk: "Ako dlho trvá strihanie vlasov u vás?",
-      gender: null,
-      srsId: "L59_V11",
-      recycledFrom: [44],
-    },
-    {
-      de: "der Preis",
-      sk: "cena",
-      example: "Was ist der Preis für einen Haarschnitt?",
-      exampleSk: "Aká je cena za strihanie vlasov?",
+      de: "der Rat",
+      sk: "rada",
       gender: "M",
-      srsId: "L59_V12",
-      recycledFrom: [17],
+      srsId: "L59_V11",
+      example: "Kannst du mir einen Rat geben?",
+      exampleSk: "Môžeš mi dať radu?",
+      recycledFrom: []
     },
     {
-      de: "Wie viel kostet das?",
-      sk: "Koľko to stojí?",
-      example: "Wie viel kostet ein Haarschnitt mit Föhnen?",
-      exampleSk: "Koľko stojí strihanie s fénovaním?",
+      de: "nehmen",
+      sk: "brať, užívať",
+      gender: null,
+      srsId: "L59_V12",
+      example: "Sie muss die Tablette nehmen.",
+      exampleSk: "Musí užiť tabletu.",
+      recycledFrom: []
+    },
+    {
+      de: "trinken",
+      sk: "piť",
       gender: null,
       srsId: "L59_V13",
-      recycledFrom: [17],
+      example: "Du sollst viel Wasser trinken.",
+      exampleSk: "Mal by si piť veľa vody.",
+      recycledFrom: []
     },
     {
-      de: "etwas kürzer",
-      sk: "trochu kratšie / o niečo kratšie",
-      example: "Etwas kürzer hinten, bitte.",
-      exampleSk: "O niečo kratšie vzadu, prosím.",
+      de: "arbeiten",
+      sk: "pracovať",
       gender: null,
       srsId: "L59_V14",
-      recycledFrom: [],
+      example: "Er kann nicht arbeiten.",
+      exampleSk: "Nemôže pracovať.",
+      recycledFrom: []
     },
     {
-      de: "zufrieden",
-      sk: "spokojný/á",
-      example: "Sind Sie zufrieden mit dem Ergebnis?",
-      exampleSk: "Ste spokojní s výsledkom?",
+      de: "geben",
+      sk: "dať",
       gender: null,
       srsId: "L59_V15",
-      recycledFrom: [],
+      example: "Der Arzt gibt mir ein Rezept.",
+      exampleSk: "Lekár mi dáva recept.",
+      recycledFrom: []
     },
+    {
+      de: "sagen",
+      sk: "povedať",
+      gender: null,
+      srsId: "L59_V16",
+      example: "Was hat der Arzt gesagt?",
+      exampleSk: "Čo povedal lekár?",
+      recycledFrom: []
+    },
+    {
+      de: "rufen",
+      sk: "volať",
+      gender: null,
+      srsId: "L59_V17",
+      example: "Sie ruft Luisa an.",
+      exampleSk: "Volá Luise.",
+      recycledFrom: []
+    },
+    {
+      de: "dreimal täglich",
+      sk: "trikrát denne",
+      gender: null,
+      srsId: "L59_V18",
+      example: "Nehmen Sie die Tablette dreimal täglich.",
+      exampleSk: "Užívajte tabletu trikrát denne.",
+      recycledFrom: []
+    },
+    {
+      de: "viel Wasser",
+      sk: "veľa vody",
+      gender: null,
+      srsId: "L59_V19",
+      example: "Sie soll viel Wasser trinken.",
+      exampleSk: "Mala by piť veľa vody.",
+      recycledFrom: []
+    },
+    {
+      de: "nicht arbeiten",
+      sk: "nepracovať",
+      gender: null,
+      srsId: "L59_V20",
+      example: "Der Arzt sagt: Nicht arbeiten!",
+      exampleSk: "Lekár hovorí: Nepracovať!",
+      recycledFrom: []
+    },
+    {
+      de: "Gute Besserung!",
+      sk: "Skoré uzdravenie!",
+      gender: null,
+      srsId: "L59_V21",
+      example: "Ich wünsche dir gute Besserung!",
+      exampleSk: "Prajem ti skoré uzdravenie!",
+      recycledFrom: []
+    },
+    {
+      de: "Wie geht es Ihnen?",
+      sk: "Ako sa máte?",
+      gender: null,
+      srsId: "L59_V22",
+      example: "Der Arzt fragt: Wie geht es Ihnen?",
+      exampleSk: "Lekár sa pýta: Ako sa máte?",
+      recycledFrom: []
+    },
+    {
+      de: "Mir geht es nicht gut.",
+      sk: "Necítim sa dobre.",
+      gender: null,
+      srsId: "L59_V23",
+      example: "Luisa sagt: Mir geht es nicht gut.",
+      exampleSk: "Luisa hovorí: Necítim sa dobre.",
+      recycledFrom: []
+    },
+    {
+      de: "Ich habe Schmerzen.",
+      sk: "Mám bolesti.",
+      gender: null,
+      srsId: "L59_V24",
+      example: "Sie sagt: Ich habe Schmerzen.",
+      exampleSk: "Hovorí: Mám bolesti.",
+      recycledFrom: []
+    },
+    {
+      de: "Was tut Ihnen weh?",
+      sk: "Čo Vás bolí?",
+      gender: null,
+      srsId: "L59_V25",
+      example: "Der Arzt fragt: Was tut Ihnen weh?",
+      exampleSk: "Lekár sa pýta: Čo Vás bolí?",
+      recycledFrom: []
+    }
   ],
   exercises: [
     {
       type: "flashcard",
-      instruction: "Nauč sa slovnú zásobu z kaderníctva a frázy pre každodenné služby.",
-      items: [
-        "der Friseur / die Friseurin = kaderník / kaderníčka",
-        "der Haarschnitt = strihanie vlasov",
-        "schneiden = strihať",
-        "die Haare = vlasy",
-        "Nicht zu kurz! = Nie príliš nakrátko!",
-        "Ein bisschen kürzer bitte. = Trochu kratšie prosím.",
-        "etwas kürzer = trochu kratšie",
-        "waschen = umyť",
-        "föhnen = fúkať fénom",
-        "der Termin = termín",
-        "Ich hätte gern einen Termin. = Chcel/a by som termín.",
-        "Wie lange dauert das? = Ako dlho to trvá?",
-        "Wie viel kostet das? = Koľko to stojí?",
-        "zufrieden = spokojný/á",
-        "Sind Sie zufrieden? = Ste spokojní?",
-      ],
-    },
-    {
-      type: "mcq",
-      instruction: "Vyber správnu odpoveď pre každú otázku o kaderníkovi a každodenných službách.",
-      questions: [
-        {
-          question: "Jana hovorí kaderníčke: 'Nicht zu kurz!' Čo tým myslí?",
-          options: [
-            "Ostres mi vlasy čo najkratšie.",
-            "Nestrihaj mi vlasy príliš nakrátko.",
-            "Nestrihaj mi vlasy vôbec.",
-            "Strihaj rýchlo, nemám čas.",
-          ],
-          answer: "Nestrihaj mi vlasy príliš nakrátko.",
-          explanation:
-            "'Nicht zu kurz' = nie príliš nakrátko. 'Nicht zu + adjektívum' = nie príliš + šak. Ďalšie príklady: 'nicht zu lang' (nie príliš dlho), 'nicht zu teuer' (nie príliš draho).",
-        },
-        {
-          question: "Ako sa zdvorilo pýtaš na cenu strihania vlasov?",
-          options: [
-            "Was kostet?",
-            "Wie viel kostet ein Haarschnitt?",
-            "Der Preis bitte.",
-            "Ich zahle wie viel?",
-          ],
-          answer: "Wie viel kostet ein Haarschnitt?",
-          explanation:
-            "'Wie viel kostet...?' = Koľko stojí...? Je to základná otázka na cenu. Alternatíva: 'Was kostet ein Haarschnitt?' (rovnaká otázka, iné slovo).",
-        },
-        {
-          question: "Jana chce trošku skrátiť vlasy, nie veľa. Čo povie?",
-          options: [
-            "Schneiden Sie alles ab!",
-            "Nicht zu kurz, bitte.",
-            "Ein bisschen kürzer, bitte.",
-            "Lassen Sie die Haare lang.",
-          ],
-          answer: "Ein bisschen kürzer, bitte.",
-          explanation:
-            "'Ein bisschen kürzer' = trochu kratšie. 'Ein bisschen' = trochu (malé množstvo). 'Kürzer' je komparatív od 'kurz'. Podobne: 'ein bisschen länger' (trochu dlhšie).",
-        },
-        {
-          question: "Čo znamená vo fráze 'Ich möchte die Haare kürzen lassen' slovo 'lassen'?",
-          options: [
-            "Nechaj / pousti",
-            "Kauzatívum – dám si urobiť niečo (niektý iný to urobí za mňa)",
-            "Chcieť",
-            "Môcť",
-          ],
-          answer: "Kauzatívum – dám si urobiť niečo (niektý iný to urobí za mňa)",
-          explanation:
-            "'Lassen + infinitív' = dať si niečo urobiť (niekto iný to spraví). 'Haare kürzen lassen' = dať si ostríhať vlasy (kaderník to urobí). Slovenčina: 'dám si ostrihať'. Tento vzor sa v nemčine bežne používa pri opravárenstve, kaderníctve, cleaningoch...",
-        },
-        {
-          question: "Kaderníčka sa pýta: 'Sind Sie zufrieden?' Čo odpovieš, ak si spokojná?",
-          options: [
-            "Nein, danke.",
-            "Das ist zu kurz.",
-            "Ja, sehr schön! Danke!",
-            "Ich weiß nicht.",
-          ],
-          answer: "Ja, sehr schön! Danke!",
-          explanation:
-            "'Zufrieden' = spokojný/á. Pozitívna odpoveď: 'Ja, sehr schön!' alebo 'Ja, danke!' alebo 'Ja, perfekt!' Negatívna: 'Nein, nicht ganz – könnten Sie noch...'",
-        },
-        {
-          question: "Jana si volá kaderníčke. Čo povie, aby si dohodla termín?",
-          options: [
-            "Ich möchte einen Friseurtermin bitte.",
-            "Ich hätte gern einen Termin.",
-            "Wann können Sie mir helfen?",
-            "Alle obigen Möglichkeiten sind richtig.",
-          ],
-          answer: "Alle obigen Möglichkeiten sind richtig.",
-          explanation:
-            "Všetky tri frázy sú správne a prirodzené. 'Ich hätte gern einen Termin' (najzdvorilejšia), 'Ich möchte einen Friseurtermin' (štandardná), 'Wann können Sie mir helfen?' (priama). V praxi fungujú všetky!",
-        },
-        {
-          question: "Kaderníčka sa pýta: 'Wie hätten Sie die Haare gern?' Čo to znamená?",
-          options: [
-            "Ako dlho máte vlasy?",
-            "Aké by ste chceli mať vlasy / ako to chcete urobiť?",
-            "Koľko stojí strihanie?",
-            "Kedy máte čas?",
-          ],
-          answer: "Aké by ste chceli mať vlasy / ako to chcete urobiť?",
-          explanation:
-            "'Wie hätten Sie die Haare gern?' = Ako by ste chceli vlasy? (opýtanie sa na želanie). 'Hätten gern' = Konjunktív II od 'haben' – zdvorilá forma žiadosti alebo otázky.",
-        },
-      ],
-    },
-    {
-      type: "fill",
-      instruction: "Doplň správne slovo alebo frázu do dialógu u kaderníka. Použi ___.",
-      questions: [
-        {
-          sentence: "Ich ___ gern einen Termin für nächste Woche. (zdvorilé – Konjunktív II)",
-          answer: "hätte",
-          hint: "Konjunktív II od haben = hätte",
-          explanation:
-            "'Ich hätte gern...' = Chcel/a by som... 'Hätte' je Konjunktív II od haben – zdvorilá forma žiadosti.",
-        },
-        {
-          sentence: "Nicht ___ kurz bitte – ich möchte die Länge behalten.",
-          answer: "zu",
-          hint: "nie príliš = nicht ...",
-          explanation:
-            "'Nicht zu kurz' = nie príliš nakrátko. 'Nicht zu + adjektívum' je bežná fráza na obmedzenie: nie príliš krátke, nie príliš dlhé...",
-        },
-        {
-          sentence: "Ein ___ kürzer vorne, bitte.",
-          answer: "bisschen",
-          hint: "trochu = ein ...",
-          explanation:
-            "'Ein bisschen kürzer' = trochu kratšie. 'Ein bisschen' = trochu, o malý kúsok. Porovnaj: 'etwas kürzer' (o niečo kratšie – mierne formálnejšie).",
-        },
-        {
-          sentence: "___ Sie die Haare zuerst waschen? (zdvorilá žiadosť)",
-          answer: "Könnten",
-          hint: "Konjunktív II od können = könnten (zdvorilé)",
-          explanation:
-            "'Könnten Sie...?' = Mohli by ste...? Zdvorilejšie ako 'Können Sie...?'. Ideálne pri žiadostiach v obslužných situáciách.",
-        },
-        {
-          sentence: "Wie lange ___ ein Haarschnitt bei Ihnen?",
-          answer: "dauert",
-          hint: "trvať = dauern; 3. os. sg.",
-          explanation:
-            "'Wie lange dauert...?' = Ako dlho trvá...? 'Dauern' = trvať. 3. os. sg.: 'dauert'. Bežná otázka pri objednávaní termínu.",
-        },
-        {
-          sentence: "___ Sie die Haare kürzer schneiden, nicht so kurz wie letztes Mal.",
-          answer: "Könnten",
-          hint: "zdvorilá žiadosť = Könnten Sie...",
-          explanation:
-            "'Könnten Sie...' + 'nicht so kurz wie letztes Mal' = nie také krátke ako minule. Komparatívna fráza s 'wie' (ako) je tu veľmi prirodzená.",
-        },
-        {
-          sentence: "Sind Sie mit dem Ergebnis ___?",
-          answer: "zufrieden",
-          hint: "spokojný/á = z...",
-          explanation:
-            "'Zufrieden' = spokojný/á. 'Sind Sie zufrieden?' je štandardná otázka po ukončení služby. 'Ich bin sehr zufrieden' = Som veľmi spokojný/á.",
-        },
-      ],
-    },
-    {
-      type: "listen",
-      instruction: "Nacvič si tieto frázy z kaderníctva. Prečítaj ich nahlas, sústred sa na výslovnosť.",
-      questions: [
-        { de: "Ich hätte gern einen Haarschnitt.", sk: "Chcel/a by som ostríhať vlasy." },
-        { de: "Nicht zu kurz bitte!", sk: "Nie príliš nakrátko prosím!" },
-        { de: "Ein bisschen kürzer vorne.", sk: "Trochu kratšie vpredu." },
-        { de: "Können Sie die Haare zuerst waschen?", sk: "Môžete najprv umyť vlasy?" },
-        { de: "Wie lange dauert das?", sk: "Ako dlho to trvá?" },
-        { de: "Wie viel kostet ein Haarschnitt mit Föhnen?", sk: "Koľko stojí strihanie s fénovaním?" },
-        { de: "Sind Sie zufrieden?", sk: "Ste spokojní?" },
-        { de: "Ja, perfekt! Vielen Dank!", sk: "Áno, perfektné! Veľmi pekne ďakujem!" },
-      ],
+      instruction: "Prezri si slovíčka tejto lekcie. Klikni na kartičku pre preklad."
     },
     {
       type: "match",
-      instruction: "Spoj frázy s ich prekladom alebo opisom.",
+      instruction: "Spojte nemecké slová s ich slovenskými ekvivalentmi.",
       pairs: [
-        ["Nicht zu kurz!", "Nie príliš nakrátko!"],
-        ["Ein bisschen kürzer.", "Trochu kratšie."],
-        ["Wie viel kostet das?", "Koľko to stojí?"],
-        ["Wie lange dauert das?", "Ako dlho to trvá?"],
-        ["Ich hätte gern einen Termin.", "Chcel/a by som termín."],
-        ["Sind Sie zufrieden?", "Ste spokojní?"],
-        ["föhnen", "sušiť fénom"],
-        ["der Haarschnitt", "strihanie vlasov"],
-      ],
-    },
-    {
-      type: "dialogue",
-      instruction:
-        "Jana je u kaderníčky vo Viedni. Opisuje, čo chce, sleduje výsledok v zrkadle a platí.",
-      lines: [
-        {
-          speaker: "B",
-          de: "Guten Tag! Schön, dass Sie da sind. Was darf es heute sein?",
-          sk: "Dobrý deň! Radi vás vidíme. Čo si dnes dáte?",
-        },
-        {
-          speaker: "A",
-          de: "Guten Tag! Ich hätte gern einen Haarschnitt. Nicht zu kurz, bitte.",
-          sk: "Dobrý deň! Chcela by som ostríhať vlasy. Nie príliš nakrátko, prosím.",
-        },
-        {
-          speaker: "B",
-          de: "Natürlich! Möchten Sie sie zuerst waschen lassen?",
-          sk: "Samozrejme! Chcete ich najprv umyť?",
-        },
-        {
-          speaker: "A",
-          de: "Ja, bitte. Und dann ein bisschen kürzer – vorne und an den Seiten.",
-          sk: "Áno, prosím. A potom trochu kratšie – vpredu a po bokoch.",
-        },
-        {
-          speaker: "B",
-          de: "Wie viel kürzer? So wie letztes Mal oder etwas anders?",
-          sk: "O koľko kratšie? Tak ako minule alebo trochu inak?",
-        },
-        {
-          speaker: "A",
-          de: "Etwas kürzer als letztes Mal, aber nicht zu viel. Die Länge hinten bitte behalten.",
-          sk: "O niečo kratšie ako minule, ale nie príliš. Dĺžku vzadu prosím zachovajte.",
-        },
-        {
-          speaker: "B",
-          de: "Verstanden! Setzen Sie sich bitte. Ich beginne mit dem Waschen.",
-          sk: "Pochopené! Sadnite si prosím. Začnem umývaním.",
-        },
-        {
-          speaker: "A",
-          de: "Danke. Wie lange dauert das ungefähr?",
-          sk: "Ďakujem. Ako dlho to asi trvá?",
-        },
-        {
-          speaker: "B",
-          de: "Etwa 45 Minuten mit Waschen und Föhnen. Möchten Sie auch föhnen lassen?",
-          sk: "Asi 45 minút s umytím a fénovaním. Chcete aj féniku?",
-        },
-        {
-          speaker: "A",
-          de: "Ja, bitte! [Nach dem Haarschnitt] Oh, das sieht wunderbar aus! Ich bin sehr zufrieden!",
-          sk: "Áno, prosím! [Po strihaní] Ó, to vyzerá nádherně! Som veľmi spokojná!",
-        },
-      ],
-      comprehensionQuestions: [
-        {
-          question: "Was möchte Jana beim Friseur?",
-          options: [
-            "Einen sehr kurzen Haarschnitt",
-            "Einen Haarschnitt – nicht zu kurz, vorne und an den Seiten kürzer",
-            "Nur waschen, kein Schneiden",
-            "Eine neue Haarfarbe",
-          ],
-          answer: "Einen Haarschnitt – nicht zu kurz, vorne und an den Seiten kürzer",
-        },
-        {
-          question: "Wie lange dauert der Haarschnitt mit Waschen und Föhnen?",
-          options: ["20 Minuten", "30 Minuten", "45 Minuten", "60 Minuten"],
-          answer: "45 Minuten",
-        },
-        {
-          question: "Ist Jana zufrieden mit dem Ergebnis?",
-          options: [
-            "Nein, es ist zu kurz",
-            "Ja, sehr zufrieden",
-            "Sie ist unsicher",
-            "Nein, sie möchte es nochmal machen",
-          ],
-          answer: "Ja, sehr zufrieden",
-        },
-      ],
-    },
-    {
-      type: "minitext",
-      instruction:
-        "Prečítaj si recenziu kaderníctva na Google Maps a odpovedz na otázky.",
-      text:
-        "⭐⭐⭐⭐⭐ Jana Nováková – vor 2 Wochen\n\nIch bin zum ersten Mal bei diesem Friseur in Wien gewesen und war sehr begeistert! Die Friseurin hat sehr gut zugehört – ich wollte nicht zu kurz, ein bisschen kürzer vorne und die Länge hinten behalten. Sie hat genau das gemacht. Der Haarschnitt mit Waschen und Föhnen hat nur 45 Minuten gedauert. Der Preis war sehr fair – 35 Euro für alles. Das Studio ist sauber, freundlich und zentral gelegen. Ich komme definitiv wieder!\n\nAntwort des Inhabers: Herzlichen Dank, Jana! Wir freuen uns auf Ihren nächsten Besuch! 🌟",
-      textSk:
-        "⭐⭐⭐⭐⭐ Jana Nováková – pred 2 týždňami\n\nBola som prvýkrát u tohto kaderníka vo Viedni a bola som veľmi nadšená! Kaderníčka veľmi dobre počúvala – chcela som nie príliš nakrátko, trochu kratšie vpredu a zachovať dĺžku vzadu. Urobila presne to. Strihanie s umytím a fénovaním trvalo len 45 minút. Cena bola veľmi férová – 35 eur za všetko. Štúdio je čisté, priateľské a nachádza sa centrálne. Určite sa vrátim!\n\nOdpoveď majiteľa: Srdečná vďaka, Jana! Tešíme sa na váš ďalší visit! 🌟",
-      questions: [
-        {
-          question: "Wie viel hat der Haarschnitt mit Waschen und Föhnen gekostet?",
-          options: ["€25", "€30", "€35", "€45"],
-          answer: "€35",
-        },
-        {
-          question: "Was hat Jana beim Friseur gewollt?",
-          options: [
-            "Sehr kurz und ohne Föhnen",
-            "Nicht zu kurz, vorne kürzer, Länge hinten behalten",
-            "Nur waschen, kein Schneiden",
-            "Neue Haarfarbe",
-          ],
-          answer: "Nicht zu kurz, vorne kürzer, Länge hinten behalten",
-        },
-        {
-          question: "Wie viele Sterne hat Jana dem Friseur gegeben?",
-          options: ["3 Sterne", "4 Sterne", "5 Sterne", "2 Sterne"],
-          answer: "5 Sterne",
-        },
-      ],
-    },
-    {
-      type: "freewrite",
-      instruction:
-        "Napíš krátky odstavec o návšteve kaderníka (skutočnej alebo vymyslenej). Použ naučenú slovnú zásobu.",
-      prompt:
-        "Du gehst zu einem Friseur/einer Friseurin. Beschreibe, was du möchtest und wie das Ergebnis war.",
-      minWords: 30,
-      exampleAnswer:
-        "Ich bin letzte Woche zum Friseur gegangen. Ich wollte einen Haarschnitt – nicht zu kurz, aber ein bisschen kürzer als vorher. Die Friseurin hat zuerst meine Haare gewaschen und dann geschnitten. Ich habe gesagt: 'Vorne bitte ein bisschen kürzer, hinten die Länge behalten.' Das Ergebnis war wunderschön! Ich bin sehr zufrieden gewesen. Der Preis war faire – nur 30 Euro.",
+        [
+          "die Tablette",
+          "tableta"
+        ],
+        [
+          "das Wasser",
+          "voda"
+        ],
+        [
+          "der Rat",
+          "rada"
+        ],
+        [
+          "der Patient",
+          "pacient"
+        ],
+        [
+          "das Medikament",
+          "liek"
+        ],
+        [
+          "nehmen",
+          "brať, užívať"
+        ],
+        [
+          "trinken",
+          "piť"
+        ],
+        [
+          "dreimal täglich",
+          "trikrát denne"
+        ],
+        [
+          "viel Wasser",
+          "veľa vody"
+        ],
+        [
+          "Gute Besserung!",
+          "Skoré uzdravenie!"
+        ]
+      ]
     },
     {
       type: "wordorder",
-      instruction: "Zoraď slová do správnej nemeckej vety.",
+      instruction: "Usporiadajte slová do správneho nemeckého poriadku vety.",
       sentences: [
         {
-          words: ["Wegen", "des", "Wetters", "bleibt", "Jana", "zu", "Hause"],
-          correct: "Wegen des Wetters bleibt Jana zu Hause",
-          hint: "Kvôli počasiu zostáva Jana doma.",
-          explanation: "'wegen' + Genitív: 'des Wetters' (neutrum → des + -s). Inversné poradie po príslovkovom určení na začiatku vety.",
+          words: [
+            "Sie",
+            "sollen",
+            "viel",
+            "Wasser",
+            "trinken"
+          ],
+          correct: "Sie sollen viel Wasser trinken",
+          hint: "Mali by ste piť veľa vody.",
+          explanation: "V klasickej oznamovacej vete je sloveso na druhom mieste. Modálne sloveso 'sollen' je na druhom mieste a hlavné sloveso 'trinken' je na konci vety v neurčitku."
         },
         {
-          words: ["Trotz", "der", "Kälte", "geht", "sie", "spazieren"],
-          correct: "Trotz der Kälte geht sie spazieren",
-          hint: "Napriek chladu ide sa prejsť.",
-          explanation: "'trotz' + Genitív: 'der Kälte' (femininum → der v genitíve). Inversné poradie po príslovkovom určení.",
+          words: [
+            "Ich",
+            "soll",
+            "die",
+            "Tablette",
+            "nehmen"
+          ],
+          correct: "Ich soll die Tablette nehmen",
+          hint: "Mal by som si vziať tú tabletku.",
+          explanation: "Modálne sloveso 'sollen' je na druhom mieste, hlavné sloveso 'nehmen' je na konci vety v neurčitku."
         },
         {
-          words: ["Während", "des", "Unterrichts", "schreibt", "sie", "Notizen"],
-          correct: "Während des Unterrichts schreibt sie Notizen",
-          hint: "Počas vyučovania píše poznámky.",
-          explanation: "'während' + Genitív: 'des Unterrichts' (maskulinum → des + -s). Inversné poradie: schreibt pred sie.",
+          words: [
+            "Was",
+            "soll",
+            "ich",
+            "tun"
+          ],
+          correct: "Was soll ich tun",
+          hint: "Čo mám robiť?",
+          explanation: "V otázke s opytovacím slovom je opytovacie slovo na prvom mieste, sloveso na druhom mieste a hlavné sloveso v neurčitku na konci."
         },
         {
-          words: ["Statt", "des", "Busses", "nimmt", "Jana", "die", "U-Bahn"],
-          correct: "Statt des Busses nimmt Jana die U-Bahn",
-          hint: "Namiesto autobusu berie Jana metro.",
-          explanation: "'statt' + Genitív: 'des Busses' (maskulinum → des + -es). Inversné poradie po príslovkovom určení.",
+          words: [
+            "Du",
+            "sollst",
+            "nicht",
+            "arbeiten",
+            "heute"
+          ],
+          correct: "Du sollst heute nicht arbeiten",
+          hint: "Dnes by si nemal pracovať.",
+          explanation: "V tejto vete je 'heute' (dnes) časové určenie, ktoré zvyčajne stojí pred ostatnými vetnými členmi okrem slovesa. 'nicht' neguje sloveso 'arbeiten'."
         },
         {
-          words: ["Wegen", "der", "Prüfung", "lernt", "sie", "jeden", "Tag"],
-          correct: "Wegen der Prüfung lernt sie jeden Tag",
-          hint: "Kvôli skúšce sa učí každý deň.",
-          explanation: "'wegen' + Genitív: 'der Prüfung' (femininum → der v genitíve). Inversion: lernt pred sie po príslovkovom určení.",
+          words: [
+            "Der",
+            "Arzt",
+            "hat",
+            "gesagt",
+            "Sie",
+            "sollen",
+            "sich",
+            "ausruhen"
+          ],
+          correct: "Der Arzt hat gesagt, Sie sollen sich ausruhen",
+          hint: "Lekár povedal, že sa máte oddýchnuť.",
+          explanation: "Po 'gesagt' nasleduje vedľajšia veta, kde je sloveso 'sollen' na druhom mieste a hlavné sloveso 'ausruhen' na konci."
+        }
+      ]
+    },
+    {
+      type: "fill",
+      instruction: "Doplňte chýbajúce slová alebo slovné tvary.",
+      questions: [
+        {
+          sentence: "Der Arzt sagt: 'Sie ___ viel Wasser trinken.'",
+          answer: "sollen",
+          hint: "Modálne sloveso pre radu.",
+          explanation: "Používame modálne sloveso 'sollen' na vyjadrenie rady lekára."
         },
-      ],
+        {
+          sentence: "Ich habe Kopfschmerzen. Was soll ich ___?",
+          answer: "nehmen",
+          hint: "Čo sa užíva pri bolestiach?",
+          explanation: "Pri bolestiach sa zvyčajne užívajú lieky, preto je tu sloveso 'nehmen'."
+        },
+        {
+          sentence: "Der Patient muss das Medikament ___.",
+          answer: "nehmen",
+          hint: "Užívať liek.",
+          explanation: "Sloveso 'nehmen' sa používa s liekmi (Medikament)."
+        },
+        {
+          sentence: "Gute Besserung! Ich hoffe, es ___ bald besser.",
+          answer: "wird",
+          hint: "Budúcnosť alebo zmena stavu.",
+          explanation: "Toto je príklad z minulých lekcií (L56), kde sa používa 'werden' na vyjadrenie budúcnosti alebo zmeny stavu."
+        },
+        {
+          sentence: "Er ___ gestern im Krankenhaus.",
+          answer: "war",
+          hint: "Minulý čas slovesa 'sein'.",
+          explanation: "Používame minulý čas slovesa 'sein' (Präteritum), pretože sa hovorí o minulosti ('gestern')."
+        },
+        {
+          sentence: "Ich ___ gestern einen Termin beim Arzt.",
+          answer: "hatte",
+          hint: "Minulý čas slovesa 'haben'.",
+          explanation: "Používame minulý čas slovesa 'haben' (Präteritum), pretože sa hovorí o minulosti ('gestern')."
+        },
+        {
+          sentence: "Der Arzt gibt dem Patienten eine ___.",
+          answer: "Tablette",
+          hint: "Čo dá lekár pacientovi?",
+          explanation: "Lekár často predpisuje tabletky."
+        }
+      ]
+    },
+    {
+      type: "listen",
+      instruction: "Počúvajte a napíšte, čo počujete.",
+      questions: [
+        {
+          de: "die Tablette",
+          sk: "tableta"
+        },
+        {
+          de: "das Wasser",
+          sk: "voda"
+        },
+        {
+          de: "der Rat",
+          sk: "rada"
+        },
+        {
+          de: "der Patient",
+          sk: "pacient"
+        },
+        {
+          de: "das Medikament",
+          sk: "liek"
+        },
+        {
+          de: "nehmen",
+          sk: "brať, užívať"
+        },
+        {
+          de: "trinken",
+          sk: "piť"
+        },
+        {
+          de: "dreimal täglich",
+          sk: "trikrát denne"
+        },
+        {
+          de: "viel Wasser",
+          sk: "veľa vody"
+        },
+        {
+          de: "Gute Besserung!",
+          sk: "Skoré uzdravenie!"
+        }
+      ]
+    },
+    {
+      type: "mcq",
+      instruction: "Vyberte správnu možnosť.",
+      questions: [
+        {
+          question: "Was ___ ich tun?",
+          options: [
+            "sollst",
+            "soll",
+            "sollt",
+            "sollen"
+          ],
+          answer: 1,
+          explanation: "Pri 'ich' sa modálne sloveso 'sollen' konjuguje ako 'soll'."
+        },
+        {
+          question: "Der Arzt gibt mir eine ____.",
+          options: [
+            "der Rat",
+            "das Wasser",
+            "die Tablette",
+            "der Tag"
+          ],
+          answer: 2,
+          explanation: "Lekár dáva pacientovi tabletku (die Tablette)."
+        },
+        {
+          question: "Du ___ heute nicht arbeiten. Du musst dich ausruhen.",
+          options: [
+            "kannst",
+            "musst",
+            "darfst",
+            "sollst"
+          ],
+          answer: 3,
+          explanation: "'sollen' sa používa na vyjadrenie rady alebo odporúčania."
+        },
+        {
+          question: "Wie spät ist es? Es ist halb drei. Was ___ du dann machen?",
+          options: [
+            "wirst",
+            "kannst",
+            "sollst",
+            "hast"
+          ],
+          answer: 2,
+          explanation: "V tejto situácii sa pýtame na radu alebo odporúčanie, preto použijeme 'sollst'."
+        },
+        {
+          question: "Ich habe Fieber. Der Arzt sagt: 'Sie ___ viel Wasser trinken.'",
+          options: [
+            "trinkst",
+            "trinken",
+            "trank",
+            "trink"
+          ],
+          answer: 1,
+          explanation: "Po modálnom slovese 'sollen' nasleduje hlavné sloveso v neurčitku. Tu je to 'trinken'."
+        },
+        {
+          question: "Er ___ gestern im Krankenhaus.",
+          options: [
+            "ist",
+            "war",
+            "hat",
+            "hatte"
+          ],
+          answer: 1,
+          explanation: "Pre minulý čas slovesa 'sein' v 3. osobe jednotného čísla sa používa 'war'."
+        },
+        {
+          question: "Ich ___ gestern einen Termin beim Arzt.",
+          options: [
+            "bin",
+            "war",
+            "habe",
+            "hatte"
+          ],
+          answer: 3,
+          explanation: "Pre minulý čas slovesa 'haben' v 1. osobe jednotného čísla sa používa 'hatte'."
+        }
+      ]
+    },
+    {
+      type: "minitext",
+      instruction: "Lies den Dialog und beantworte die Fragen.",
+      text: "Dr. Hirsch: Guten Tag, Frau Nováková.\nJana: Guten Tag, Herr Doktor.\nDr. Hirsch: Wie geht es Ihnen?\nJana: Mir geht es nicht gut. Ich habe Schmerzen.\nDr. Hirsch: Was tut Ihnen weh?\nJana: Mein Kopf tut weh.\nDr. Hirsch: Ah, ich verstehe. Sie sollen dreimal täglich eine Tablette nehmen. Und Sie sollen viel Wasser trinken. Sie sollen auch nicht arbeiten. Hier ist das Medikament.\nJana: Danke, Herr Doktor.\nDr. Hirsch: Gute Besserung!\n\nLuisa: Hallo Jana! Wie geht es dir?\nJana: Hallo Luisa. Mir geht es nicht gut. Ich war beim Arzt. Ich soll dreimal täglich eine Tablette nehmen und viel Wasser trinken. Ich soll auch nicht arbeiten.",
+      textSk: "Dr. Hirsch: Dobrý deň, pani Nováková.\nJana: Dobrý deň, pán doktor.\nDr. Hirsch: Ako sa máte?\nJana: Necítim sa dobre. Mám bolesti.\nDr. Hirsch: Čo Vás bolí?\nJana: Bolí ma hlava.\nDr. Hirsch: Ach, rozumiem. Máte užívať jednu tabletu trikrát denne. A máte piť veľa vody. Tiež nemáte pracovať. Tu je liek.\nJana: Ďakujem, pán doktor.\nDr. Hirsch: Skoré uzdravenie!\n\nLuisa: Ahoj Jana! Ako sa máš?\nJana: Ahoj Luisa. Necítim sa dobre. Bola som u lekára. Mám užívať jednu tabletu trikrát denne a piť veľa vody. Tiež nemám pracovať.",
+      questions: [
+        {
+          question: "Warum geht Jana zum Arzt?",
+          options: [
+            "Weil sie Kopfschmerzen hat.",
+            "Weil sie müde ist.",
+            "Weil sie arbeiten muss.",
+            "Weil sie Durst hat."
+          ],
+          answer: 0,
+          explanation: "Jana sagt: \"Mir geht es nicht gut. Ich habe Schmerzen.\" und später: \"Mein Kopf tut weh.\""
+        },
+        {
+          question: "Was soll Jana dreimal täglich nehmen?",
+          options: [
+            "Einen Kaffee",
+            "Eine Tablette",
+            "Wasser",
+            "Eine Nachricht"
+          ],
+          answer: 1,
+          explanation: "Dr. Hirsch sagt: \"Sie sollen dreimal täglich eine Tablette nehmen.\""
+        },
+        {
+          question: "Was soll Jana auch tun?",
+          options: [
+            "Sie soll viel arbeiten.",
+            "Sie soll viel Kaffee trinken.",
+            "Sie soll viel Wasser trinken.",
+            "Sie soll viel schlafen."
+          ],
+          answer: 2,
+          explanation: "Dr. Hirsch sagt: \"Und Sie sollen viel Wasser trinken.\""
+        },
+        {
+          question: "Was soll Jana laut Dr. Hirsch nicht tun?",
+          options: [
+            "Sie soll nicht trinken.",
+            "Sie soll nicht schlafen.",
+            "Sie soll nicht essen.",
+            "Sie soll nicht arbeiten."
+          ],
+          answer: 3,
+          explanation: "Dr. Hirsch sagt: \"Sie sollen auch nicht arbeiten.\""
+        },
+        {
+          question: "Wie geht es Jana laut Luisa?",
+          options: [
+            "Ihr geht es sehr gut.",
+            "Ihr geht es nicht gut.",
+            "Sie ist müde.",
+            "Sie hat keine Schmerzen."
+          ],
+          answer: 1,
+          explanation: "Jana sagt zu Luisa: \"Mir geht es nicht gut.\""
+        }
+      ]
     },
     {
       type: "speaking",
-      instruction: "Počúvaj nemeckú vetu. Potom hovor nahlas a skontroluj sa.",
+      instruction: "Höre zu und sprich nach.",
       phrases: [
         {
-          de: "Wegen des Wetters bleibt Jana zu Hause.",
-          sk: "Kvôli počasiu zostáva Jana doma.",
-          tip: "wegen + genitív: des Wetters, nie dem Wetter",
+          de: "die Tablette",
+          sk: "tableta",
+          tip: "T [t], t [t] - ako v slovenčine"
         },
         {
-          de: "Trotz der Kälte geht sie spazieren.",
-          sk: "Napriek chladu ide sa prejsť.",
-          tip: "trotz + genitív: der Kälte (femininum)",
+          de: "das Wasser",
+          sk: "voda",
+          tip: "W [v] - ako v slovenčine"
         },
         {
-          de: "Während des Unterrichts schreibt sie Notizen.",
-          sk: "Počas vyučovania píše poznámky.",
-          tip: "während=[vɛːrənt] – w=[v], ä=[ɛː]",
+          de: "nehmen",
+          sk: "brať, užívať",
+          tip: "n [n], m [m] - ako v slovenčine"
         },
         {
-          de: "Statt des Busses nimmt Jana die U-Bahn.",
-          sk: "Namiesto autobusu berie Jana metro.",
-          tip: "statt + genitív: des Busses (mask. -es)",
+          de: "dreimal täglich",
+          sk: "trikrát denne",
+          tip: "ei [aj], ä [ɛ], ch [ç] - mäkké ch"
         },
         {
-          de: "Wegen der Prüfung lernt sie jeden Tag.",
-          sk: "Kvôli skúšce sa učí každý deň.",
-          tip: "Prüfung ü=[y], wegen der – femininum genití­v",
+          de: "viel Wasser",
+          sk: "veľa vody",
+          tip: "v [v], W [v], l [l] - ako v slovenčine"
         },
-      ],
+        {
+          de: "Sie sollen viel Wasser trinken.",
+          sk: "Mali by ste piť veľa vody.",
+          tip: "sollen [zɔlən], trinken [trɪŋkən]"
+        },
+        {
+          de: "Was soll ich tun?",
+          sk: "Čo by som mal robiť?",
+          tip: "Was [vas], soll [zɔl], tun [tuːn]"
+        },
+        {
+          de: "Sie sollen nicht arbeiten.",
+          sk: "Nemali by ste pracovať.",
+          tip: "nicht [nɪçt], arbeiten [aʁbaɪtən]"
+        }
+      ]
     },
+    {
+      type: "truefalse",
+      instruction: "Rozhodnite, či sú nasledujúce tvrdenia pravdivé (wahr) alebo nepravdivé (falsch).",
+      statements: [
+        {
+          statement: "Sie sollen viel Wasser trinken, wenn Sie krank sind.",
+          isTrue: true,
+          explanation: "Sloveso 'sollen' sa používa na vyjadrenie rady. V tomto prípade je rada piť veľa vody, keď ste chorý, správna."
+        },
+        {
+          statement: "Der Patient hat das Medikament gestern genommen.",
+          isTrue: true,
+          explanation: "Veta používa Perfektum slovesa 'nehmen' (hat genommen), čo je správny čas na vyjadrenie dokončeného deja v minulosti."
+        },
+        {
+          statement: "Ich soll morgen arbeiten.",
+          isTrue: false,
+          explanation: "Veta naznačuje, že máte povinnosť alebo úlohu pracovať zajtra. V kontexte zdravia a rady by to mohlo byť nesprávne, ak sa necítite dobre."
+        },
+        {
+          statement: "Er hat gestern viel Wasser getrunken.",
+          isTrue: true,
+          explanation: "Veta je gramaticky správna a používa Perfektum slovesa 'trinken' (hat getrunken)."
+        },
+        {
+          statement: "Sie soll die Tablette nicht nehmen.",
+          isTrue: false,
+          explanation: "Veta dáva záporný pokyn. Ak je cieľom liečba, je nepravdepodobné, že by rada znela 'nemala by užívať tabletu', pokiaľ nie sú uvedené ďalšie okolnosti."
+        }
+      ]
+    },
+    {
+      type: "dictation",
+      instruction: "Napíšte vety, ktoré počujete.",
+      sentences: [
+        {
+          de: "Trink Wasser.",
+          sk: "Pi vodu."
+        },
+        {
+          de: "Ich soll schlafen.",
+          sk: "Mal by som spať."
+        },
+        {
+          de: "Nehmen Sie die Tablette.",
+          sk: "Užite si tabletu."
+        },
+        {
+          de: "Er hat Medikamente genommen.",
+          sk: "Užil lieky."
+        },
+        {
+          de: "Gute Besserung, mein Freund!",
+          sk: "Skoré uzdravenie, môj priateľ!"
+        }
+      ]
+    },
+    {
+      type: "categorysort",
+      instruction: "Roztrieďte slová do správnych kategórií.",
+      categories: [
+        {
+          name: "Zdravie a liečba",
+          color: "rose",
+          words: [
+            "die Tablette",
+            "das Medikament",
+            "die Gesundheit",
+            "Gute Besserung!"
+          ]
+        },
+        {
+          name: "Činnosti a rady",
+          color: "blue",
+          words: [
+            "nehmen",
+            "trinken",
+            "arbeiten",
+            "der Rat",
+            "sollen"
+          ]
+        },
+        {
+          name: "Čas a počet",
+          color: "green",
+          words: [
+            "der Tag",
+            "dreimal täglich"
+          ]
+        }
+      ],
+      explanation: "Slová sú rozdelené do kategórií podľa ich významu: veci a pojmy týkajúce sa zdravia a liečby, slovesá a rady týkajúce sa činností a slová týkajúce sa času a frekvencie."
+    },
+    {
+      type: "translation",
+      instruction: "Preložte vety zo slovenčiny do nemčiny.",
+      sentences: [
+        {
+          sk: "Mal by si piť veľa vody.",
+          answer: "Du sollst viel Wasser trinken.",
+          hint: "sollen, trinken",
+          explanation: "Použitie modálneho slovesa 'sollen' na vyjadrenie rady. 'Du sollst' znamená 'mal by si'."
+        },
+        {
+          sk: "Pacient užil liek.",
+          answer: "Der Patient hat das Medikament genommen.",
+          hint: "hat genommen",
+          explanation: "Použitie Perfekta slovesa 'nehmen' (hat genommen) na vyjadrenie dokončeného deja v minulosti."
+        },
+        {
+          sk: "Dám ti radu.",
+          answer: "Ich gebe dir einen Rat.",
+          hint: "geben, Rat",
+          explanation: "Preklad slovesa 'geben' (dať) a podstatného mena 'der Rat' (rada)."
+        },
+        {
+          sk: "Ako sa máš?",
+          answer: "Wie geht es dir?",
+          hint: "Wie geht es",
+          explanation: "Štandardná otázka na zistenie stavu osoby, ktorá je nám blízka (tykanie)."
+        }
+      ]
+    },
+    {
+      type: "conjugation",
+      instruction: "Doplňte správne tvary slovesa 'sollen' v prítomnom čase.",
+      verbs: [
+        {
+          infinitive: "sollen",
+          translation: "mať (povinnosť, radu)",
+          forms: [
+            {
+              pronoun: "ich",
+              correct: "soll"
+            },
+            {
+              pronoun: "du",
+              correct: "sollst"
+            },
+            {
+              pronoun: "er/sie/es",
+              correct: "soll"
+            },
+            {
+              pronoun: "wir",
+              correct: "sollen"
+            },
+            {
+              pronoun: "ihr",
+              correct: "sollt"
+            },
+            {
+              pronoun: "sie/Sie",
+              correct: "sollen"
+            }
+          ],
+          note: "Sloveso 'sollen' sa v nemčine používa na vyjadrenie rady, odporúčania alebo úlohy. V slovenčine mu najčastejšie zodpovedá spojenie 'mal by/mala by'."
+        }
+      ]
+    }
   ],
-  reviewWords: ["L59_V01", "L59_V02", "L59_V05", "L59_V06", "L59_V09", "L59_V10", "L59_V15"],
-  lessonNotes:
-    "U kaderníka v Rakúsku: vždy sa pýtaj na cenu vopred – 'Wie viel kostet ein Haarschnitt?' Ceny sa líšia od €20 (basic v predmestí) do €80+ (Luxus Salon v centre). Tip: hľadaj kaderníkov s online rezerváciou – stačí zavolať s frázami z tejto lekcie. Viedenské kadernícke salóny sú zvyčajne veľmi dobre vybavené. 'Föhnen' je voliteľná služba za extra poplatok.",
+  reviewWords: []
 };

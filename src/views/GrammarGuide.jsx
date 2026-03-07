@@ -357,16 +357,28 @@ export default function GrammarGuide({ progress }) {
   // Compute unlock status using Dashboard identical logic
   const completedLessons = progress?.completedLessons || {};
 
-  // Fetch AI exercises globally
+  // Fetch AI exercises — check KB first, fall back to legacy grammarbank
   useEffect(() => {
-    fetch(`http://${window.location.hostname}:5173/api/grammarbank`)
+    fetch('/api/kb/stats')
+      .then(() => {
+        // KB is available — load all grammar exercises from it
+        return fetch(`http://${window.location.hostname}:5173/api/grammarbank`);
+      })
       .then(res => res.json())
-      .then(data => {
-        if (data && typeof data === 'object') {
-          setAiExercises(data);
+      .then(legacyData => {
+        // Build a map from ruleId → items using legacy grammarbank as seed
+        // KB lookup per-rule happens lazily in handleGenerateAI
+        if (legacyData && typeof legacyData === 'object') {
+          setAiExercises(legacyData);
         }
       })
-      .catch(() => { });
+      .catch(() => {
+        // Fall back to just legacy grammarbank
+        fetch(`http://${window.location.hostname}:5173/api/grammarbank`)
+          .then(res => res.json())
+          .then(data => { if (data && typeof data === 'object') setAiExercises(data); })
+          .catch(() => { });
+      });
   }, []);
 
   const rules = useMemo(() => {
@@ -481,6 +493,17 @@ NEVRACAJ VLASTNOSŤ "answer"! VRACAJ VLASTNOSŤ "correct_answer" ako string a "d
       }
 
       const data = await res.json();
+
+      // Track usage
+      const usage = data?.usageMetadata;
+      if (usage) {
+        try {
+          fetch('/api/stats', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ model: 'gemini-2.5-flash-lite', type: 'inputTokens', amount: usage.promptTokenCount || 0 }) }).catch(() => { });
+          fetch('/api/stats', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ model: 'gemini-2.5-flash-lite', type: 'outputTokens', amount: usage.candidatesTokenCount || 0 }) }).catch(() => { });
+          fetch('/api/stats', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ model: 'gemini-2.5-flash-lite', type: 'calls', amount: 1 }) }).catch(() => { });
+        } catch (e) { }
+      }
+
       const raw = data.candidates[0].content.parts[0].text.trim().replace(/```json|```/g, '');
       const arr = JSON.parse(raw);
       if (Array.isArray(arr)) {
@@ -502,12 +525,30 @@ NEVRACAJ VLASTNOSŤ "answer"! VRACAJ VLASTNOSŤ "correct_answer" ako string a "d
           return ex; // fallback ak by model predsa vrátil starý formát
         });
 
+        const allExercisesForRule = [...(aiExercises[selectedRule.id] || []), ...safeExercises];
+
+        // Save to Knowledge Base (upsert — accumulated over time)
+        fetch('/api/kb', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            type: 'grammar_exercises',
+            key: `grammar::${selectedRule.id}`,
+            input: { ruleId: selectedRule.id },
+            output: allExercisesForRule,
+            model: 'gemini-2.5-flash-lite',
+            sourceApp: 'grammar_guide',
+            upsert: true
+          })
+        }).catch(() => {});
+
+        // Also write to legacy grammarbank for backward compatibility
         await fetch(`http://${window.location.hostname}:5173/api/grammarbank`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ ruleId: selectedRule.id, items: safeExercises })
         });
-        setAiExercises(prev => ({ ...prev, [selectedRule.id]: [...(prev[selectedRule.id] || []), ...safeExercises] }));
+        setAiExercises(prev => ({ ...prev, [selectedRule.id]: allExercisesForRule }));
       }
     } catch (e) {
       console.error("Try/Catch Error:", e);

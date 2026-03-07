@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { CheckCircle2, XCircle, ChevronDown, ChevronRight, RotateCcw } from 'lucide-react';
+import { GenderText } from '../utils/genderColors';
+import { isAnswerCloseEnough } from '../utils/text';
 
 // ── WordOrder mini-exercise ─────────────────────────────────────────────
 function WordOrderEx({ ex, exKey, answers, results, onCheck }) {
@@ -39,7 +41,7 @@ function WordOrderEx({ ex, exKey, answers, results, onCheck }) {
                     : built.map(token => (
                         <button key={token.id} onClick={() => removeWord(token)}
                             className="bg-indigo-700 hover:bg-indigo-600 text-white text-sm font-medium px-2.5 py-1 rounded-lg transition-all">
-                            {token.text}
+                            <GenderText text={token.text} />
                         </button>
                     ))
                 }
@@ -49,14 +51,14 @@ function WordOrderEx({ ex, exKey, answers, results, onCheck }) {
                 {available.map(token => (
                     <button key={token.id} onClick={() => addWord(token)}
                         className="bg-gray-700 hover:bg-gray-600 text-gray-200 text-sm font-medium px-2.5 py-1 rounded-lg transition-all">
-                        {token.text}
+                        <GenderText text={token.text} />
                     </button>
                 ))}
             </div>
             {/* Feedback */}
             {checked && (
                 <div className={`rounded-xl px-4 py-2.5 text-sm ${correct ? 'bg-emerald-900/40 border border-emerald-700/50 text-emerald-300' : 'bg-red-900/30 border border-red-700/40 text-red-300'}`}>
-                    {correct ? '✓ Správne!' : `✗ Správne: „${ex.correct}"`}
+                    {correct ? '✓ Správne!' : <>✗ Správne: „<GenderText text={ex.correct} />“</>}
                     {ex.explanation && <p className="text-xs mt-1 opacity-70">{ex.explanation}</p>}
                 </div>
             )}
@@ -85,7 +87,7 @@ function FillEx({ ex, exKey, results, onCheck }) {
     const correct = results[exKey] === true;
 
     const check = () => {
-        onCheck(exKey, value.trim().toLowerCase() === ex.answer.toLowerCase());
+        onCheck(exKey, isAnswerCloseEnough(value, ex.answer));
     };
     const reset = () => { setValue(''); onCheck(exKey, undefined); };
 
@@ -94,7 +96,7 @@ function FillEx({ ex, exKey, results, onCheck }) {
     return (
         <div className="space-y-3">
             <p className="text-gray-200 text-sm leading-relaxed">
-                {parts[0]}
+                <GenderText text={parts[0]} />
                 <input
                     type="text"
                     value={value}
@@ -109,11 +111,11 @@ function FillEx({ ex, exKey, results, onCheck }) {
                                 : 'border-red-600 text-red-400'
                             : 'border-gray-600 focus:border-indigo-500 text-white'}`}
                 />
-                {parts[1]}
+                <GenderText text={parts[1]} />
             </p>
             {checked && (
                 <div className={`rounded-xl px-4 py-2.5 text-sm ${correct ? 'bg-emerald-900/40 border border-emerald-700/50 text-emerald-300' : 'bg-red-900/30 border border-red-700/40 text-red-300'}`}>
-                    {correct ? '✓ Správne!' : `✗ Správna odpoveď: „${ex.answer}"`}
+                    {correct ? '✓ Správne!' : <>✗ Správna odpoveď: „<GenderText text={ex.answer} />“</>}
                     {ex.explanation && <p className="text-xs mt-1 opacity-70">{ex.explanation}</p>}
                 </div>
             )}
@@ -149,7 +151,7 @@ function MCQEx({ ex, exKey, results, onCheck }) {
 
     return (
         <div className="space-y-3">
-            <p className="text-gray-200 text-sm font-medium">{ex.question}</p>
+            <p className="text-gray-200 text-sm font-medium"><GenderText text={ex.question} /></p>
             <div className="grid grid-cols-1 gap-2">
                 {ex.options.map((opt, idx) => {
                     let cls = 'border-gray-700 bg-gray-800 text-gray-300 hover:border-indigo-500 hover:text-white';
@@ -162,14 +164,14 @@ function MCQEx({ ex, exKey, results, onCheck }) {
                         <button key={idx} onClick={() => choose(idx)}
                             className={`text-left px-4 py-2 rounded-xl border text-sm font-medium transition-all ${cls}`}>
                             <span className="text-xs mr-2 opacity-60">{String.fromCharCode(65 + idx)}.</span>
-                            {opt}
+                            <GenderText text={opt} />
                         </button>
                     );
                 })}
             </div>
             {checked && (
                 <div className={`rounded-xl px-4 py-2.5 text-sm ${results[exKey] ? 'bg-emerald-900/40 border border-emerald-700/50 text-emerald-300' : 'bg-red-900/30 border border-red-700/40 text-red-300'}`}>
-                    {results[exKey] ? '✓ Správne!' : `✗ Správna odpoveď: „${ex.options[ex.answer]}"`}
+                    {results[exKey] ? '✓ Správne!' : <>✗ Správna odpoveď: „<GenderText text={ex.options[ex.answer]} />“</>}
                     {ex.explanation && <p className="text-xs mt-1 opacity-70">{ex.explanation}</p>}
                     <button onClick={reset}
                         className="flex items-center gap-1 mt-2 px-3 py-1 rounded-lg bg-gray-700 hover:bg-gray-600 text-gray-300 text-xs font-bold transition-all">

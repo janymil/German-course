@@ -1,545 +1,861 @@
-﻿export const lesson53 = {
+export const lesson53 = {
   id: 53,
   week: 11,
   day: 3,
-  title: "Formular ausfüllen",
-  topic: "Vypĺňanie formulárov – osobné údaje, úradné skratky, viedenský Meldezettel",
+  title: "Termín, prosím!",
+  topic: "Dohadovanie a zrušenie stretnutí, presúvanie termínov.",
   cefr: "A1",
-  xpReward: 25,
-  narrativeContext:
-    "Jana sa práve presťahovala do Viedne a musí sa úradne prihlásiť k pobytu – vyplniť Meldezettel na miestnom Meldeamt. Pôsobí trochu nervózne pred tou byrokraciou, ale úradníčka je ochotná a pomôže jej pochopiť každé políčko: Vorname, Nachname, Geburtsdatum, Straße, PLZ... Jana si uvedomuje, že nemecký úradný jazyk nie je taký desivý, keď pozná kľúčové slová.",
-  communicativeGoal:
-    "Po tejto lekcii viem vyplniť nemecký formulár s osobnými údajmi a porozumiem úradným skratkám a výrazom.",
-  skillFocus: ["reading", "writing", "vocabulary"],
-  grammarNote: {
-    rule: "Privlastňovacie zámená v úradných formulároch: mein/meine + Nominatív/Akuzatív",
-    explanation:
-      "Pri formulároch a sebaidentifikácii používame privlastňovacie zámená: 'mein Name' (môj meno – M), 'meine Adresse' (moja adresa – F), 'mein Geburtsdatum' (môj dátum narodenia – N). Formálne oslovenie: Sie (Vy s veľkým V) sa používa na úradoch. Dátumy: 15.03.1996 sa vyslovuje 'am fünfzehnten März neunzehnhundert sechsundneunzig'. Skratky: Vor. = Vorname, geb. = geboren, PLZ = Postleitzahl, Nr. = Nummer.",
-    examples: [
-      { de: "Mein Name ist Jana Nováková.", sk: "Moje meno je Jana Nováková." },
-      { de: "Meine Adresse ist Mariahilfer Straße 15.", sk: "Moja adresa je Mariahilfer Straße 15." },
-      { de: "Ich bin am 15.03.1996 geboren.", sk: "Narodila som sa 15.03.1996." },
-      { de: "Bitte füllen Sie das Formular aus.", sk: "Prosím, vyplňte formulár." },
-      { de: "Ihre Unterschrift bitte.", sk: "Váš podpis, prosím." },
-    ],
-    slovakContrastNote:
-      "Slovenské 'č.' (číslo) zodpovedá nemeckému 'Nr.' (Nummer). Slovenčina pozná 'rodné číslo', ktoré nemá priamy nemecký ekvivalent – namiesto neho sa používa len 'Geburtsdatum'. Slovenský '1. poschodie' = nemecký '2. Stock' (Erdgeschoss je v nemčine poschodie 0)! Slovenský 'PSČ' = nemecký 'PLZ' (Postleitzahl).",
-  },
+  xpReward: 20,
+  narrativeContext: "Jana hat einen wichtigen Termin. Aber sie muss ihn verschieben. Sie ruft an und spricht mit einer Person am Telefon.",
+  communicativeGoal: "Nach dieser Lektion kann ich Termine vereinbaren, verschieben und absagen.",
+  skillFocus: [
+    "vocabulary",
+    "grammar",
+    "speaking",
+    "listening"
+  ],
+  lessonNotes: "Dnes sa naučíš, ako sa dohodnúť na stretnutí, ako ho presunúť alebo zrušiť. Použijeme slovíčka ako 'verschieben' (posunúť) a 'absagen' (zrušiť). Zameriame sa na bežné frázy pri dohadovaní stretnutí, napríklad u lekára alebo kaderníka.",
+  grammarNotes: [
+    {
+      rule: "Perfekt mit haben und sein",
+      explanation: "<p>V nemčine sa minulé časy tvoria najčastejšie pomocou Perfekta. Toto Perfektum sa skladá z dvoch častí: pomocného slovesa (<em>haben</em> alebo <em>sein</em>) v prítomnom čase a hlavného slovesa vo forme príčastia minulého (Partizip II). </p><p><strong>Kedy použiť <em>haben</em> a kedy <em>sein</em>?</strong></p><ul><li><strong><em>haben</em></strong> sa používa s väčšinou slovies, najmä s tými, ktoré vyjadrujú činnosť, ktorá sa vykonáva, alebo s prechodnými slovesami (ktoré môžu mať predmet).</li><li><strong><em>sein</em></strong> sa používa s slovesami pohybu (<em>gehen, fahren, kommen</em>), slovesami zmeny stavu (<em>aufwachen, einschlafen, sterben</em>) a so slovesami <em>bleiben, werden</em>.</li></ul><p>Príslušné sloveso (<em>haben/sein</em>) stojí v strede vety, zatiaľ čo Partizip II je na konci vety.</p>",
+      examples: [
+        {
+          de: "Ich habe Deutsch gelernt.",
+          sk: "Učil som sa po nemecky."
+        },
+        {
+          de: "Er hat das Buch gelesen.",
+          sk: "On čítal tú knihu."
+        },
+        {
+          de: "Wir haben im Park gespielt.",
+          sk: "Hrali sme sa v parku."
+        },
+        {
+          de: "Sie hat Kaffee getrunken.",
+          sk: "Ona pila kávu."
+        },
+        {
+          de: "Ich bin nach Hause gegangen.",
+          sk: "Išiel som domov."
+        },
+        {
+          de: "Er ist gestern angekommen.",
+          sk: "On včera prišiel."
+        },
+        {
+          de: "Wir sind nach Berlin gefahren.",
+          sk: "Išli sme do Berlína."
+        },
+        {
+          de: "Sie ist früh aufgewacht.",
+          sk: "Ona skoro vstala."
+        }
+      ],
+      slovakContrastNote: "V slovenčine sa minulé časy tvoria primárne pomocou príčastia minulého s príslušnou osobnou koncovkou slovesa (napr. 'učil som sa', 'čítal som'). V nemčine je štruktúra odlišná – pomocné sloveso v prítomnom čase + príčastie minulé na konci vety. Rozlišovanie medzi 'haben' a 'sein' ako pomocnými slovesami v Perfekte je kľúčové a v slovenčine takáto systematická dualita neexistuje."
+    },
+    {
+      rule: "Präteritum von sein und haben",
+      explanation: "<p>Hoci Perfektum je v hovorovej nemčine častejšie, slovesá <em>sein</em> (byť) a <em>haben</em> (mať) sa v minulom čase často používajú vo forme Präterita, najmä v písomnom prejave a v ustálených frázach. Tieto tvary je dobré poznať.</p><p><strong>Konjugácia v Präterite:</strong></p><table><thead><tr><td>Osoba</td><td>sein (bol/bola/bolo)</td><td>haben (mal/mala/malo)</td></tr></thead><tbody><tr><td>ich</td><td>war</td><td>hatte</td></tr><tr><td>du</td><td>warst</td><td>hattest</td></tr><tr><td>er/sie/es</td><td>war</td><td>hatte</td></tr><tr><td>wir</td><td>waren</td><td>hatten</td></tr><tr><td>ihr</td><td>wart</td><td>hattet</td></tr><tr><td>sie/Sie</td><td>waren</td><td>hatten</td></tr></tbody></table><p>Tieto tvary sa používajú podobne ako slovesá v minulom čase v slovenčine, ale sú menej bežné v hovorovej reči ako Perfektum."
+    },
+    {
+      rule: "Imperativ",
+      explanation: "<p>Rozkazovací spôsob (Imperativ) sa používa na dávanie príkazov, pokynov alebo žiadostí. V nemčine má rôzne tvary v závislosti od osoby, ktorej sa rozkaz týka.</p><p><strong>Tvorenie Imperatívu:</strong></p><ul><li><strong><em>du</em> forma:</strong> Kmeň slovesa + koncovka <em>-e</em> (často sa vynecháva pri slovesách s kmeňovou samohláskou <em>a</em> alebo <em>e</em>). Používa sa s osobným zámenom <em>du</em> (ty).</li><li><strong><em>ihr</em> forma:</strong> Kmeň slovesa + koncovka <em>-t</em>. Používa sa s osobným zámenom <em>ihr</em> (vy).</li><li><strong><em>Sie</em> forma:</strong> Pomocné sloveso <em>Sie</em> v prítomnom čase (<em>sagen Sie</em>) + hlavné sloveso na konci vety.</li><li><strong><em>wir</em> forma:</strong> Používa sa s <em>wir</em> (my) na vyjadrenie návrhu alebo spoločnej akcie (napr. <em>Gehen wir!</em>).</li></ul><p>V Imperatíve sa nepoužívajú osobné zámená (okrem formy pre <em>Sie</em> a niekedy pre <em>wir</em>).</p>",
+      examples: [
+        {
+          de: "Komm her!",
+          sk: "Poď sem!"
+        },
+        {
+          de: "Sei ruhig!",
+          sk: "Buď ticho!"
+        },
+        {
+          de: "Lernt Deutsch!",
+          sk: "Učte sa po nemecky!"
+        },
+        {
+          de: "Sprecht bitte langsamer!",
+          sk: "Hovorte prosím pomalšie!"
+        },
+        {
+          de: "Gehen Sie nach links.",
+          sk: "Choďte doľava."
+        },
+        {
+          de: "Haben Sie Geduld.",
+          sk: "Majte trpezlivosť."
+        },
+        {
+          de: "Lass uns essen!",
+          sk: "Poďme jesť!"
+        },
+        {
+          de: "Machen wir eine Pause.",
+          sk: "Urobme si prestávku."
+        }
+      ],
+      slovakContrastNote: "Slovenský rozkazovací spôsob sa tvorí inak. Pre 'ty' sa používa tvar slovesa bez prípony '-ť' (napr. 'choď', 'choďte'). Pre 'my' sa používa 'poďme' + sloveso v neurčitku ('poďme jesť'). V nemčine je tvorba systematickejšia a závisí od konkrétnej osoby (du, ihr, Sie, wir). Forma 'Sie' v nemčine zodpovedá slovenskému vykǎkaniu ('Choďte!'), zatiaľ čo forma 'ihr' zodpovedá tykaniu viacerým osobám ('Choďte!')."
+    }
+  ],
   vocab: [
     {
-      de: "der Vorname",
-      sk: "krstné meno",
-      example: "Mein Vorname ist Jana.",
-      exampleSk: "Moje krstné meno je Jana.",
+      de: "der Termin",
+      sk: "termín",
       gender: "M",
       srsId: "L53_V01",
-      recycledFrom: [],
+      example: "Ich habe einen neuen Termin.",
+      exampleSk: "Mám nový termín.",
+      recycledFrom: []
     },
     {
-      de: "der Nachname / Familienname",
-      sk: "priezvisko",
-      example: "Mein Familienname ist Nováková.",
-      exampleSk: "Moje priezvisko je Nováková.",
-      gender: "M",
+      de: "die Arbeit",
+      sk: "práca",
+      gender: "F",
       srsId: "L53_V02",
-      recycledFrom: [],
+      example: "Ich muss wegen der Arbeit den Termin verschieben.",
+      exampleSk: "Musím posunúť termín kvôli práci.",
+      recycledFrom: []
     },
     {
-      de: "die Adresse / die Anschrift",
-      sk: "adresa",
-      example: "Meine Anschrift ist Mariahilfer Straße 15.",
-      exampleSk: "Moja adresa je Mariahilfer Straße 15.",
+      de: "die Zahnärztin",
+      sk: "zubárka",
       gender: "F",
       srsId: "L53_V03",
-      recycledFrom: [],
+      example: "Ich rufe die Zahnärztin an.",
+      exampleSk: "Volám zubárke.",
+      recycledFrom: []
     },
     {
-      de: "die Straße",
-      sk: "ulica",
-      example: "Ich wohne in der Hauptstraße.",
-      exampleSk: "Bývam na Hauptstraße.",
-      gender: "F",
+      de: "der Zahnarzt",
+      sk: "zubár",
+      gender: "M",
       srsId: "L53_V04",
-      recycledFrom: [23],
+      example: "Ich habe einen Termin beim Zahnarzt.",
+      exampleSk: "Mám termín u zubára.",
+      recycledFrom: []
     },
     {
-      de: "die Hausnummer",
-      sk: "číslo domu",
-      example: "Meine Hausnummer ist 15.",
-      exampleSk: "Moje číslo domu je 15.",
-      gender: "F",
+      de: "das Treffen",
+      sk: "stretnutie",
+      gender: "N",
       srsId: "L53_V05",
-      recycledFrom: [],
+      example: "Wir hatten ein wichtiges Treffen.",
+      exampleSk: "Mali sme dôležité stretnutie.",
+      recycledFrom: []
     },
     {
-      de: "die Postleitzahl (PLZ)",
-      sk: "poštové smerovacie číslo (PSČ)",
-      example: "Die Postleitzahl von Wien ist 1010.",
-      exampleSk: "PSČ Viedne je 1010.",
+      de: "die Friseurin",
+      sk: "kaderníčka",
       gender: "F",
       srsId: "L53_V06",
-      recycledFrom: [],
+      example: "Ich habe einen Termin bei der Friseurin.",
+      exampleSk: "Mám termín u kaderníčky.",
+      recycledFrom: []
     },
     {
-      de: "der Ort / die Stadt",
-      sk: "mesto",
-      example: "Mein Ort ist Wien.",
-      exampleSk: "Moje mesto je Viedeň.",
+      de: "der Friseur",
+      sk: "kaderník",
       gender: "M",
       srsId: "L53_V07",
-      recycledFrom: [23],
+      example: "Ich muss den Termin beim Friseur absagen.",
+      exampleSk: "Musím zrušiť termín u kaderníka.",
+      recycledFrom: []
     },
     {
-      de: "das Land",
-      sk: "krajina",
-      example: "Mein Land ist die Slowakei.",
-      exampleSk: "Moja krajina je Slovensko.",
-      gender: "N",
+      de: "die Nachricht",
+      sk: "správa",
+      gender: "F",
       srsId: "L53_V08",
-      recycledFrom: [],
+      example: "Ich habe eine Nachricht bekommen.",
+      exampleSk: "Dostal som správu.",
+      recycledFrom: []
     },
     {
-      de: "die Staatsangehörigkeit",
-      sk: "štátna príslušnosť",
-      example: "Meine Staatsangehörigkeit ist slowakisch.",
-      exampleSk: "Moja štátna príslušnosť je slovenská.",
+      de: "die Hilfe",
+      sk: "pomoc",
       gender: "F",
       srsId: "L53_V09",
-      recycledFrom: [],
+      example: "Kann ich um Hilfe bitten?",
+      exampleSk: "Môžem požiadať o pomoc?",
+      recycledFrom: []
     },
     {
-      de: "das Geburtsdatum",
-      sk: "dátum narodenia",
-      example: "Mein Geburtsdatum ist der 15. März 1996.",
-      exampleSk: "Môj dátum narodenia je 15. marca 1996.",
-      gender: "N",
-      srsId: "L53_V10",
-      recycledFrom: [46, 47],
-    },
-    {
-      de: "geboren am",
-      sk: "narodený/á dňa",
-      example: "Ich bin am 15.03.1996 geboren.",
-      exampleSk: "Narodil/a som sa 15.03.1996.",
-      gender: null,
-      srsId: "L53_V11",
-      recycledFrom: [],
-    },
-    {
-      de: "die Unterschrift",
-      sk: "podpis",
-      example: "Bitte geben Sie hier Ihre Unterschrift.",
-      exampleSk: "Prosím, dajte tu svoj podpis.",
-      gender: "F",
-      srsId: "L53_V12",
-      recycledFrom: [],
-    },
-    {
-      de: "unterschreiben (→ unterschreibt)",
-      sk: "podpísať",
-      example: "Bitte unterschreiben Sie hier.",
-      exampleSk: "Prosím, podpíšte sa tu.",
-      gender: null,
-      srsId: "L53_V13",
-      recycledFrom: [],
-    },
-    {
-      de: "ausfüllen (→ füllt aus) ⚠️",
-      sk: "vyplniť (formulár)",
-      example: "Bitte füllen Sie das Formular aus.",
-      exampleSk: "Prosím, vyplňte formulár.",
-      gender: null,
-      srsId: "L53_V14",
-      recycledFrom: [],
-    },
-    {
-      de: "der Meldezettel ⚠️",
-      sk: "Meldezettel – rakúsky prihlasovací lístok k pobytu",
-      example: "In Österreich muss man einen Meldezettel ausfüllen.",
-      exampleSk: "V Rakúsku treba vyplniť Meldezettel.",
+      de: "der Vorschlag",
+      sk: "návrh",
       gender: "M",
+      srsId: "L53_V10",
+      example: "Das ist ein guter Vorschlag.",
+      exampleSk: "To je dobrý návrh.",
+      recycledFrom: []
+    },
+    {
+      de: "die Alternative",
+      sk: "alternatíva",
+      gender: "F",
+      srsId: "L53_V11",
+      example: "Haben Sie eine Alternative?",
+      exampleSk: "Máte nejakú alternatívu?",
+      recycledFrom: []
+    },
+    {
+      de: "der Vormittag",
+      sk: "dopoludnie",
+      gender: "M",
+      srsId: "L53_V12",
+      example: "Passt es Ihnen am Vormittag?",
+      exampleSk: "Vyhovuje Vám to doobeda?",
+      recycledFrom: []
+    },
+    {
+      de: "der Nachmittag",
+      sk: "poobede",
+      gender: "M",
+      srsId: "L53_V13",
+      example: "Wir können uns am Nachmittag treffen.",
+      exampleSk: "Môžeme sa stretnúť poobede.",
+      recycledFrom: []
+    },
+    {
+      de: "der Abend",
+      sk: "večer",
+      gender: "M",
+      srsId: "L53_V14",
+      example: "Passt es Ihnen am Abend?",
+      exampleSk: "Vyhovuje Vám to večer?",
+      recycledFrom: []
+    },
+    {
+      de: "verschoben",
+      sk: "posunutý",
+      gender: null,
       srsId: "L53_V15",
-      recycledFrom: [],
+      example: "Der Termin wurde verschoben.",
+      exampleSk: "Termín bol posunutý.",
+      recycledFrom: []
     },
     {
-      de: "das Formular",
-      sk: "formulár",
-      example: "Haben Sie das Formular mitgebracht?",
-      exampleSk: "Priniesli ste formulár?",
-      gender: "N",
+      de: "abgesagt",
+      sk: "zrušený",
+      gender: null,
       srsId: "L53_V16",
-      recycledFrom: [],
+      example: "Mein Termin wurde abgesagt.",
+      exampleSk: "Môj termín bol zrušený.",
+      recycledFrom: []
     },
     {
-      de: "angeben (→ gibt an) ⚠️",
-      sk: "uviesť / uvádzať",
-      example: "Bitte geben Sie Ihre Adresse an.",
-      exampleSk: "Prosím, uveďte svoju adresu.",
+      de: "verschieben",
+      sk: "posunúť",
       gender: null,
       srsId: "L53_V17",
-      recycledFrom: [],
+      example: "Ich muss den Termin verschieben.",
+      exampleSk: "Musím posunúť termín.",
+      recycledFrom: []
     },
     {
-      de: "die Angabe",
-      sk: "údaj",
-      example: "Alle Angaben müssen korrekt sein.",
-      exampleSk: "Všetky údaje musia byť správne.",
-      gender: "F",
+      de: "absagen",
+      sk: "zrušiť",
+      gender: null,
       srsId: "L53_V18",
-      recycledFrom: [],
+      example: "Ich muss den Termin absagen.",
+      exampleSk: "Musím zrušiť termín.",
+      recycledFrom: []
     },
+    {
+      de: "machen",
+      sk: "urobiť",
+      gender: null,
+      srsId: "L53_V19",
+      example: "Wir können einen neuen Termin machen.",
+      exampleSk: "Môžeme urobiť nový termín.",
+      recycledFrom: []
+    },
+    {
+      de: "bekommen",
+      sk: "dostať",
+      gender: null,
+      srsId: "L53_V20",
+      example: "Ich habe eine E-Mail bekommen.",
+      exampleSk: "Dostal som e-mail.",
+      recycledFrom: []
+    },
+    {
+      de: "passen",
+      sk: "vyhovovať",
+      gender: null,
+      srsId: "L53_V21",
+      example: "Passt Ihnen dieser Termin?",
+      exampleSk: "Vyhovuje Vám tento termín?",
+      recycledFrom: []
+    },
+    {
+      de: "Ich muss leider verschieben.",
+      sk: "Bohužiaľ musím posunúť.",
+      gender: null,
+      srsId: "L53_V22",
+      example: "Ich muss leider verschieben.",
+      exampleSk: "Bohužiaľ musím posunúť.",
+      recycledFrom: []
+    },
+    {
+      de: "Können wir einen neuen Termin machen?",
+      sk: "Môžeme urobiť nový termín?",
+      gender: null,
+      srsId: "L53_V23",
+      example: "Können wir einen neuen Termin machen?",
+      exampleSk: "Môžeme urobiť nový termín?",
+      recycledFrom: []
+    },
+    {
+      de: "Passt es Ihnen am Vormittag?",
+      sk: "Vyhovuje Vám to doobeda?",
+      gender: null,
+      srsId: "L53_V24",
+      example: "Passt es Ihnen am Vormittag?",
+      exampleSk: "Vyhovuje Vám to doobeda?",
+      recycledFrom: []
+    },
+    {
+      de: "Ich möchte den Termin absagen.",
+      sk: "Chcel by som zrušiť termín.",
+      gender: null,
+      srsId: "L53_V25",
+      example: "Ich möchte den Termin absagen.",
+      exampleSk: "Chcel by som zrušiť termín.",
+      recycledFrom: []
+    }
   ],
   exercises: [
     {
       type: "flashcard",
-      instruction: "Nauč sa slovnú zásobu z úradných formulárov. Otáčaj kartičky!",
-      items: [
-        "der Vorname = krstné meno",
-        "der Nachname = priezvisko",
-        "die Adresse / Anschrift = adresa",
-        "die Straße = ulica",
-        "die Hausnummer = číslo domu",
-        "die Postleitzahl (PLZ) = PSČ",
-        "das Geburtsdatum = dátum narodenia",
-        "geboren am = narodený/á dňa",
-        "die Staatsangehörigkeit = štátna príslušnosť",
-        "die Unterschrift = podpis",
-        "ausfüllen = vyplniť formulár",
-        "unterschreiben = podpísať",
-        "das Formular = formulár",
-        "der Meldezettel = prihlasovací lístok (rakúsky)",
-        "angeben = uviesť",
-        "die Angabe = údaj",
-        "das Land = krajina",
-      ],
-    },
-    {
-      type: "mcq",
-      instruction: "Vyber správnu odpoveď na každú otázku o formulároch a osobných údajoch.",
-      questions: [
-        {
-          question: "Čo znamená skratka 'PLZ' na nemeckom formulári?",
-          options: ["Postleitzahl", "Platznummer", "Personalnummer", "Polizei"],
-          answer: "Postleitzahl",
-          explanation:
-            "'PLZ' je skratka pre 'Postleitzahl' – poštové smerovacie číslo, v slovenčine PSČ. Viedeň má PLZ 1010 (1. okres) až 1230 (23. okres).",
-        },
-        {
-          question: "Ako sa na nemeckom formulári nazýva políčko pre 'priezvisko'?",
-          options: ["Vorname", "Nachname / Familienname", "Spitzname", "Geburtsname"],
-          answer: "Nachname / Familienname",
-          explanation:
-            "'Nachname' alebo 'Familienname' = priezvisko. 'Vorname' = krstné meno. Poradie na formulároch: zvyčajne Vorname pred Nachnamen, alebo naopak.",
-        },
-        {
-          question: "Jana sa narodila 15. marca 1996. Ako to zapíše na formulár?",
-          options: ["15/03/1996", "März 15, 1996", "15.03.1996", "1996-03-15"],
-          answer: "15.03.1996",
-          explanation:
-            "Nemecký formát dátumu: deň.mesiac.rok = 15.03.1996. Bodky oddeľujú jednotlivé časti. Slovenčina používa rovnaký formát!",
-        },
-        {
-          question: "Čo znamená 'ausfüllen'?",
-          options: ["podpísať", "vyplniť (formulár)", "odovzdať", "prečítať"],
-          answer: "vyplniť (formulár)",
-          explanation:
-            "'Ausfüllen' (oddeliteľné sloveso: aus- + füllen) = vyplniť, napríklad formulár. 'Bitte füllen Sie das Formular aus.' Partizip II: ausgefüllt.",
-        },
-        {
-          question: "Čo je 'Meldezettel' v rakúskom kontexte?",
-          options: [
-            "Formulár na otvorenie bankového účtu",
-            "Rakúsky prihlasovací lístok k pobytu",
-            "Cestovný pas",
-            "Povolenie na prácu",
-          ],
-          answer: "Rakúsky prihlasovací lístok k pobytu",
-          explanation:
-            "'Meldezettel' je špecificky rakúsky termín. V Rakúsku (na rozdiel od Nemecka) musíš pri nastahovaní do nového bytu do 3 dní vyplniť Meldezettel a odovzdať ho na Meldeamt.",
-        },
-        {
-          question: "Ako sa formálne povie 'štátna príslušnosť' po nemecky?",
-          options: ["die Nationalität", "die Staatsangehörigkeit", "die Herkunft", "das Land"],
-          answer: "die Staatsangehörigkeit",
-          explanation:
-            "'Die Staatsangehörigkeit' je úradný termín pre štátnu príslušnosť. 'Die Nationalität' sa tiež používa, ale 'Staatsangehörigkeit' je presnejší právny termín na formulároch.",
-        },
-        {
-          question: "Čo napíšeš do políčka 'Unterschrift'?",
-          options: ["Dátum", "Podpis", "Adresu", "Telefónne číslo"],
-          answer: "Podpis",
-          explanation:
-            "'Die Unterschrift' = podpis (doslova: pod-pis, 'unter' = pod, 'schreiben' = písať). Na formulároch je vždy políčko na vlastnoručný podpis.",
-        },
-      ],
-    },
-    {
-      type: "fill",
-      instruction: "Doplň správne slovo do políčka formulára alebo vety. Použi ___.",
-      questions: [
-        {
-          sentence: "Mein ___ ist Jana. (krstné meno)",
-          answer: "Vorname",
-          hint: "Krstné meno = Vor...",
-          explanation:
-            "'Vorname' = krstné meno. 'Mein Vorname ist Jana.' Je to mužský rod (der Vorname), preto privlastňovacie zámeno 'mein' (nie 'meine').",
-        },
-        {
-          sentence: "Bitte ___ Sie das Formular ___ . (vyplniť – oddeliteľné sloveso)",
-          answer: "füllen ... aus",
-          hint: "vyplniť = aus...füllen; oddeliteľné sloveso!",
-          explanation:
-            "'Ausfüllen' je oddeliteľné sloveso. V oznamovacej vete sa predpona 'aus-' oddelí a ide na koniec: 'füllen Sie... aus'.",
-        },
-        {
-          sentence: "Mein ___ ist der 15. März 1996.",
-          answer: "Geburtsdatum",
-          hint: "dátum narodenia = Geburts...",
-          explanation:
-            "'Das Geburtsdatum' = dátum narodenia. Je to stredný rod 'das', preto 'mein' (nie 'meine').",
-        },
-        {
-          sentence: "Die Wienerin hat die ___ 1040. (PSČ skratka)",
-          answer: "PLZ",
-          hint: "PSČ = P_Z",
-          explanation:
-            "'PLZ' je skratka pre 'Postleitzahl'. Viedeň 4. okres má PLZ 1040. Toto číslo treba vždy uviesť na formulároch.",
-        },
-        {
-          sentence: "Jana muss auf dem Meldeamt einen ___ abgeben.",
-          answer: "Meldezettel",
-          hint: "rakúsky prihlasovací formulár",
-          explanation:
-            "'Der Meldezettel' je rakúsky prihlasovací lístok k miestu bydliska. 'Abgeben' (odovzdať) – pri nastahovaní do nového bytu je to povinnosť.",
-        },
-        {
-          sentence: "Bitte ___ Sie hier – auf der gestrichelten Linie. (podpísať)",
-          answer: "unterschreiben",
-          hint: "podpísať = unter...",
-          explanation:
-            "'Unterschreiben' = podpísať. Formálny imperatív: 'Unterschreiben Sie hier.' Doslova 'napísať pod' (niečo).",
-        },
-        {
-          sentence: "Meine ___ ist Slowakin. (štátna príslušnosť)",
-          answer: "Staatsangehörigkeit",
-          hint: "štátna príslušnosť = Staats...",
-          explanation:
-            "'Die Staatsangehörigkeit' = štátna príslušnosť. Je to ženský rod, preto 'meine'. Jana by napísala 'slowakisch' alebo 'Staatsbürgerin der Slowakischen Republik'.",
-        },
-      ],
-    },
-    {
-      type: "listen",
-      instruction: "Prečítaj si tieto úradné frázy a ich preklady. Dôležité pre komunikáciu na úrade.",
-      questions: [
-        { de: "Bitte füllen Sie das Formular aus.", sk: "Prosím, vyplňte formulár." },
-        { de: "Ihr Vorname und Nachname, bitte.", sk: "Vaše krstné meno a priezvisko, prosím." },
-        { de: "Geben Sie bitte Ihre Adresse an.", sk: "Prosím, uveďte svoju adresu." },
-        { de: "Unterschreiben Sie bitte hier.", sk: "Prosím, podpíšte sa tu." },
-        { de: "Haben Sie alle Angaben gemacht?", sk: "Uviedli ste všetky údaje?" },
-        { de: "Was ist Ihre Staatsangehörigkeit?", sk: "Aká je vaša štátna príslušnosť?" },
-        { de: "Wann sind Sie geboren?", sk: "Kedy ste sa narodili?" },
-        { de: "Wie lautet Ihre Postleitzahl?", sk: "Aké je vaše PSČ?" },
-      ],
+      instruction: "Prezri si slovíčka tejto lekcie. Klikni na kartičku pre preklad."
     },
     {
       type: "match",
-      instruction: "Spoj úradné skratky a termíny s ich plným významom alebo slovenským prekladom.",
+      instruction: "Spojte nemecké slová s ich slovenskými ekvivalentmi.",
       pairs: [
-        ["PLZ", "Postleitzahl (PSČ)"],
-        ["Nr.", "Nummer (číslo)"],
-        ["geb.", "geboren (narodený/á)"],
-        ["Vor.", "Vorname (krstné meno)"],
-        ["Str.", "Straße (ulica)"],
-        ["der Meldezettel", "rakúsky prihlasovací lístok"],
-        ["die Unterschrift", "podpis"],
-        ["das Geburtsdatum", "dátum narodenia"],
-      ],
-    },
-    {
-      type: "dialogue",
-      instruction:
-        "Jana je na Meldeamt (prihlasovacom úrade). Úradníčka (Beamtin) jej pomáha vyplniť Meldezettel.",
-      lines: [
-        {
-          speaker: "B",
-          de: "Guten Morgen! Womit kann ich Ihnen helfen?",
-          sk: "Dobré ráno! Čím vám môžem pomôcť?",
-        },
-        {
-          speaker: "A",
-          de: "Guten Morgen! Ich möchte mich anmelden. Ich bin neu in Wien.",
-          sk: "Dobré ráno! Chcela by som sa prihlásiť. Som nová vo Viedni.",
-        },
-        {
-          speaker: "B",
-          de: "Sehr gut. Bitte füllen Sie diesen Meldezettel aus. Haben Sie Ihren Reisepass dabei?",
-          sk: "Výborne. Prosím, vyplňte tento Meldezettel. Máte pri sebe pas?",
-        },
-        {
-          speaker: "A",
-          de: "Ja, hier ist mein Reisepass. Aber ich verstehe nicht alle Felder. Was bedeutet 'Anschrift'?",
-          sk: "Áno, tu je môj pas. Ale nerozumiem všetkým políčkam. Čo znamená 'Anschrift'?",
-        },
-        {
-          speaker: "B",
-          de: "'Anschrift' bedeutet Adresse. Bitte schreiben Sie Ihre Straße, Hausnummer und Postleitzahl.",
-          sk: "'Anschrift' znamená adresa. Prosím, napíšte svoju ulicu, číslo domu a PSČ.",
-        },
-        {
-          speaker: "A",
-          de: "Aha, verstehe. Und was kommt in das Feld 'Staatsangehörigkeit'?",
-          sk: "Aha, rozumiem. A čo ide do políčka 'Staatsangehörigkeit'?",
-        },
-        {
-          speaker: "B",
-          de: "Ihr Land. Sie kommen aus der Slowakei, oder? Schreiben Sie bitte 'slowakisch'.",
-          sk: "Vaša krajina. Ste zo Slovenska, však? Napíšte prosím 'slowakisch'.",
-        },
-        {
-          speaker: "A",
-          de: "Ja, korrekt. Und das 'Geburtsdatum' – ist das Tag, Monat, Jahr?",
-          sk: "Áno, správne. A 'Geburtsdatum' – je to deň, mesiac, rok?",
-        },
-        {
-          speaker: "B",
-          de: "Genau! In Deutschland und Österreich schreiben wir Tag.Monat.Jahr, zum Beispiel 15.03.1996.",
-          sk: "Presne! V Nemecku a Rakúsku píšeme deň.mesiac.rok, napríklad 15.03.1996.",
-        },
-        {
-          speaker: "A",
-          de: "Danke! Ich habe alles ausgefüllt. Wo soll ich unterschreiben?",
-          sk: "Ďakujem! Vyplnila som všetko. Kde sa mám podpísať?",
-        },
-      ],
-      comprehensionQuestions: [
-        {
-          question: "Was bedeutet 'Anschrift' laut der Beamtin?",
-          options: ["Unterschrift", "Geburtsdatum", "Adresse", "Staatsangehörigkeit"],
-          answer: "Adresse",
-        },
-        {
-          question: "Was soll Jana in das Feld 'Staatsangehörigkeit' schreiben?",
-          options: ["österreichisch", "deutsch", "slowakisch", "tschechisch"],
-          answer: "slowakisch",
-        },
-        {
-          question: "In welcher Reihenfolge schreibt man das Datum in Österreich?",
-          options: [
-            "Jahr.Monat.Tag",
-            "Tag.Monat.Jahr",
-            "Monat/Tag/Jahr",
-            "Jahr-Monat-Tag",
-          ],
-          answer: "Tag.Monat.Jahr",
-        },
-      ],
-    },
-    {
-      type: "minitext",
-      instruction:
-        "Pozri sa na vyplnený Meldezettel Jany a odpovedz na otázky. Meldezettel je rakúsky formulár prihlásenia k pobytu.",
-      text:
-        "MELDEZETTEL – Meldebehörde Wien\n\nVorname: Jana\nFamilienname: Nováková\nGeburtsdatum: 15.03.1996\nGeburtsort: Bratislava\nStaatsangehörigkeit: slowakisch\nAnschrift: Mariahilfer Straße 15/4, 1060 Wien\nStraße und Hausnummer: Mariahilfer Straße 15\nTop-Nummer: 4\nPLZ: 1060\nOrt: Wien\nLand: Österreich\nUnterschrift: [Jana Nováková]",
-      textSk:
-        "MELDEZETTEL – Úrad Viedeň\n\nKrstné meno: Jana\nPriezvisko: Nováková\nDátum narodenia: 15.03.1996\nMiesto narodenia: Bratislava\nŠtátna príslušnosť: slovenská\nAdresa: Mariahilfer Straße 15/4, 1060 Viedeň\nUlica a číslo domu: Mariahilfer Straße 15\nČíslo bytu: 4\nPSČ: 1060\nMesto: Viedeň\nKrajina: Rakúsko\nPodpis: [Jana Nováková]",
-      questions: [
-        {
-          question: "Was ist Janas Familienname?",
-          options: ["Jana", "Nováková", "Bratislava", "Wien"],
-          answer: "Nováková",
-        },
-        {
-          question: "Was ist Janas Postleitzahl in Wien?",
-          options: ["1010", "1040", "1060", "1160"],
-          answer: "1060",
-        },
-        {
-          question: "Wo ist Jana geboren?",
-          options: ["Wien", "Praha", "Bratislava", "Slowakei"],
-          answer: "Bratislava",
-        },
-      ],
-    },
-    {
-      type: "freewrite",
-      instruction:
-        "Vyplň nasledovný dotazník svojimi vlastnými údajmi (alebo vymyslenými). Môžeš písať v listovej forme alebo ako výplnok formulára.",
-      prompt:
-        "Füll den folgenden Fragebogen mit deinen eigenen Daten aus. Name, Adresse, Geburtsdatum, Staatsangehörigkeit...",
-      minWords: 20,
-      exampleAnswer:
-        "Vorname: Maria\nFamilienname: Müller\nGeburtsdatum: 22.07.1990\nGeburtsort: Košice\nStaatsangehörigkeit: slowakisch\nAdresse: Schönbrunner Straße 8/2, 1050 Wien\nUnterschrift: Maria Müller",
+        [
+          "der Termin",
+          "termín"
+        ],
+        [
+          "die Arbeit",
+          "práca"
+        ],
+        [
+          "das Treffen",
+          "stretnutie"
+        ],
+        [
+          "die Nachricht",
+          "správa"
+        ],
+        [
+          "die Hilfe",
+          "pomoc"
+        ],
+        [
+          "der Vorschlag",
+          "návrh"
+        ],
+        [
+          "verschoben",
+          "posunutý"
+        ],
+        [
+          "abgesagt",
+          "zrušený"
+        ],
+        [
+          "verschieben",
+          "posunúť"
+        ],
+        [
+          "absagen",
+          "zrušiť"
+        ]
+      ]
     },
     {
       type: "wordorder",
-      instruction: "Zoraď slová do správnej nemeckej vety.",
+      instruction: "Usporiadajte slová do správneho nemeckého poradia.",
       sentences: [
         {
-          words: ["Jana", "wird", "nächstes", "Jahr", "die", "Prüfung", "machen"],
-          correct: "Jana wird nächstes Jahr die Prüfung machen",
-          hint: "Jana bude robiť skúšku budúci rok.",
-          explanation: "Futur I: 'wird' na druhom mieste, infinitív 'machen' na konci vety. Časové výrazy (nächstes Jahr) môžu stáť pred alebo za podmetom.",
+          words: [
+            "muss",
+            "leider",
+            "Ich",
+            "verschieben"
+          ],
+          correct: "Ich muss leider verschieben",
+          hint: "Ich muss leider verschieben.",
+          explanation: "V nemčine je sloveso vo vete na druhom mieste. Pomocné sloveso 'muss' je na druhom mieste a hlavné sloveso 'verschieben' je na konci v infinitíve."
         },
         {
-          words: ["Es", "wird", "morgen", "regnen"],
-          correct: "Es wird morgen regnen",
-          hint: "Zajtra bude pršať.",
-          explanation: "Futur I na vyjadrenie predpovede: 'wird' + infinitív 'regnen' na konci. 'Es' je formálny podmety pre poveternostné javy.",
+          words: [
+            "einen",
+            "machen",
+            "Können",
+            "neuen",
+            "wir",
+            "Termin"
+          ],
+          correct: "Können wir einen neuen Termin machen",
+          hint: "Können wir einen neuen Termin machen?",
+          explanation: "V otázkach s otáznym slovom alebo bez neho (áno/nie otázky) je sloveso na prvom mieste. V tomto prípade je pomocné sloveso 'Können' na prvom mieste a hlavné sloveso 'machen' na konci v infinitíve."
         },
         {
-          words: ["Ich", "werde", "dir", "helfen"],
-          correct: "Ich werde dir helfen",
-          hint: "Pomôžem ti.",
-          explanation: "Futur I na vyjadrenie sľubu: 'werde' na druhom mieste, 'helfen' na konci. Datív 'dir' stojí pred infinitívom.",
+          words: [
+            "Ihnen",
+            "Passt",
+            "am",
+            "Vormittag",
+            "es"
+          ],
+          correct: "Passt es Ihnen am Vormittag",
+          hint: "Passt es Ihnen am Vormittag?",
+          explanation: "V otázkach bez otázneho slova je sloveso na prvom mieste. 'Passt' je na prvom mieste a sloveso 'passen' je v tejto forme."
         },
         {
-          words: ["Wir", "werden", "nächsten", "Monat", "umziehen"],
-          correct: "Wir werden nächsten Monat umziehen",
-          hint: "Budúci mesiac sa presťahujeme.",
-          explanation: "'umziehen' je separabilné sloveso — v infinitíve zostáva spojené (umziehen), nie oddelené.",
+          words: [
+            "möchte",
+            "Ich",
+            "absagen",
+            "den",
+            "Termin"
+          ],
+          correct: "Ich möchte den Termin absagen",
+          hint: "Ich möchte den Termin absagen.",
+          explanation: "Pri slovese 'möchte' (modálne sloveso) je hlavné sloveso 'absagen' na konci v infinitíve."
+        }
+      ]
+    },
+    {
+      type: "fill",
+      instruction: "Doplňte chýbajúce slová do viet.",
+      questions: [
+        {
+          sentence: "Ich muss den Termin leider ____.",
+          answer: "verschieben",
+          hint: "Posunúť termín.",
+          explanation: "Používame sloveso 'verschieben' (posunúť) v infinitíve, pretože je tu modálne sloveso 'muss'."
         },
         {
-          words: ["Er", "wird", "die", "Aufgabe", "erledigen"],
-          correct: "Er wird die Aufgabe erledigen",
-          hint: "Vyrieši úlohu.",
-          explanation: "Futur I: 'wird' na 2. mieste po podmete, infinitív 'erledigen' na konci vety — typická štruktúra.",
+          sentence: "Können wir einen neuen ____ machen?",
+          answer: "Termin",
+          hint: "Nový termín.",
+          explanation: "Hľadáme podstatné meno 'Termin' (termín), ktoré je v akuzatíve ako predmet slovesa 'machen'."
         },
-      ],
+        {
+          sentence: "Passt es Ihnen am ____?",
+          answer: "Vormittag",
+          hint: "Dopoludnia.",
+          explanation: "Používame časové určenie 'am Vormittag' (dopoludnia)."
+        },
+        {
+          sentence: "Ich möchte den Termin ____.",
+          answer: "absagen",
+          hint: "Zrušiť termín.",
+          explanation: "Používame sloveso 'absagen' (zrušiť) v infinitíve, pretože je tu modálne sloveso 'möchte'."
+        },
+        {
+          sentence: "Ich ____ gestern zum Arzt.",
+          answer: "war",
+          hint: "Bol som včera u lekára.",
+          explanation: "Používame minulý čas slovesa 'sein' (byť) vo forme 'war', pretože sa hovorí o minulosti ('gestern'). Toto je príklad použitia Präterita od 'sein'."
+        },
+        {
+          sentence: "Wir ____ gestern viel Arbeit gehabt.",
+          answer: "haben",
+          hint: "Včera sme mali veľa práce.",
+          explanation: "Používame minulý čas slovesa 'haben' (mať) vo forme 'haben', pretože sa hovorí o minulosti ('gestern'). Toto je príklad použitia Präterita od 'haben'."
+        }
+      ]
+    },
+    {
+      type: "listen",
+      instruction: "Zapíšte si, čo počujete.",
+      questions: [
+        {
+          de: "der Termin",
+          sk: "termín"
+        },
+        {
+          de: "die Arbeit",
+          sk: "práca"
+        },
+        {
+          de: "das Treffen",
+          sk: "stretnutie"
+        },
+        {
+          de: "die Nachricht",
+          sk: "správa"
+        },
+        {
+          de: "verschoben",
+          sk: "posunutý"
+        },
+        {
+          de: "abgesagt",
+          sk: "zrušený"
+        },
+        {
+          de: "verschieben",
+          sk: "posunúť"
+        },
+        {
+          de: "absagen",
+          sk: "zrušiť"
+        },
+        {
+          de: "Ich muss leider verschieben.",
+          sk: "Bohužiaľ musím posunúť."
+        },
+        {
+          de: "Können wir einen neuen Termin machen?",
+          sk: "Môžeme urobiť nový termín?"
+        }
+      ]
+    },
+    {
+      type: "mcq",
+      instruction: "Vyberte správnu možnosť.",
+      questions: [
+        {
+          question: "Čo znamená sloveso 'verschieben'?",
+          options: [
+            "Zrušiť",
+            "Posunúť",
+            "Urobiť",
+            "Dostať"
+          ],
+          answer: 1,
+          explanation: "'Verschieben' znamená 'posunúť', napríklad termín alebo stretnutie."
+        },
+        {
+          question: "Čo znamená 'abgesagt'?",
+          options: [
+            "Posunutý",
+            "Potvrdený",
+            "Zrušený",
+            "Naplánovaný"
+          ],
+          answer: 2,
+          explanation: "'Abgesagt' je príčastie minulosti od slovesa 'absagen' a znamená 'zrušený'."
+        },
+        {
+          question: "Ako sa pýta 'Je to možné?' v nemčine?",
+          options: [
+            "Ist das möglich?",
+            "Machen wir das?",
+            "Haben wir das?",
+            "Können wir das?"
+          ],
+          answer: 0,
+          explanation: "'Ist das möglich?' je správny preklad otázky 'Je to možné?'."
+        },
+        {
+          question: "Ktorá veta je gramaticky správna?",
+          options: [
+            "Ich habe gestern gearbeitet.",
+            "Ich gearbeitet gestern habe.",
+            "Ich habe gestern gearbeitet.",
+            "Ich gestern habe gearbeitet."
+          ],
+          answer: 0,
+          explanation: "V Perfekte je pomocné sloveso 'haben' na druhom mieste a príčastie minulosti 'gearbeitet' na konci vety."
+        },
+        {
+          question: "Čo znamená 'Passt es Ihnen am Nachmittag?'",
+          options: [
+            "Vyhovuje Vám to ráno?",
+            "Vyhovuje Vám to večer?",
+            "Vyhovuje Vám to popoludní?",
+            "Vyhovuje Vám to v noci?"
+          ],
+          answer: 2,
+          explanation: "'Am Nachmittag' znamená 'popoludní'."
+        },
+        {
+          question: "Minulý čas od 'haben' je:",
+          options: [
+            "bin",
+            "war",
+            "hatte",
+            "habe"
+          ],
+          answer: 2,
+          explanation: "Präteritum od slovesa 'haben' je 'hatte'."
+        },
+        {
+          question: "Čo znamená 'Ich möchte den Termin absagen.'?",
+          options: [
+            "Chcel by som termín posunúť.",
+            "Chcel by som termín potvrdiť.",
+            "Chcel by som termín zrušiť.",
+            "Chcel by som nový termín."
+          ],
+          answer: 2,
+          explanation: "'Absagen' znamená 'zrušiť'."
+        }
+      ]
+    },
+    {
+      type: "minitext",
+      instruction: "Lies den Dialog und beantworte die Fragen.",
+      text: "Jana: Guten Tag, hier ist Jana Nováková. Ich rufe wegen meines Termins bei Frau Dr. Hirsch an.\nRezeptionistin: Guten Tag, Frau Nováková. Ja, Ihr Termin ist morgen um 10 Uhr.\nJana: Ich muss den Termin leider verschieben. Ein wichtiges Arbeitstreffen ist dazwischengekommen.\nRezeptionistin: Kein Problem. Wann hätten Sie denn Zeit?\nJana: Können wir vielleicht am Nachmittag einen neuen Termin machen? Oder am Freitagvormittag?\nRezeptionistin: Am Freitagvormittag passt es mir gut. Um 11 Uhr?\nJana: Ja, das ist perfekt. Vielen Dank!\nRezeptionistin: Gern geschehen. Auf Wiederhören.\nJana: Auf Wiederhören. (zu sich selbst) Und jetzt muss ich noch meinen Friseurtermin absagen.",
+      textSk: "Jana: Dobrý deň, tu Jana Nováková. Volám ohľadom môjho termínu u pani doktorky Hirsch.\nRecepčná: Dobrý deň, pani Nováková. Áno, Váš termín je zajtra o 10. hodine.\nJana: Bohužiaľ musím termín posunúť. Prišlo mi do toho dôležité pracovné stretnutie.\nRecepčná: Žiadny problém. Kedy by ste mala čas?\nJana: Môžeme urobiť nový termín možno poobede? Alebo v piatok doobeda?\nRecepčná: V piatok doobeda mi to vyhovuje. O 11. hodine?\nJana: Áno, to je perfektné. Veľmi pekne ďakujem!\nRecepčná: S radosťou. Dovidenia.\nJana: Dovidenia. (pre seba) A teraz ešte musím zrušiť svoj termín u kaderníčky.",
+      questions: [
+        {
+          question: "Warum ruft Jana bei der Zahnärztin an?",
+          options: [
+            "Sie möchte einen neuen Termin machen.",
+            "Sie muss ihren Termin absagen.",
+            "Sie hat ihren Termin vergessen.",
+            "Sie hat eine Frage zur Behandlung."
+          ],
+          answer: 1,
+          explanation: "Jana sagt: \"Ich muss den Termin leider verschieben.\""
+        },
+        {
+          question: "Warum kann Jana den Termin nicht wahrnehmen?",
+          options: [
+            "Sie ist krank.",
+            "Sie hat keine Zeit.",
+            "Ein Arbeitstreffen ist dazwischengekommen.",
+            "Der Termin wurde abgesagt."
+          ],
+          answer: 2,
+          explanation: "Jana erklärt: \"Ein wichtiges Arbeitstreffen ist dazwischengekommen.\""
+        },
+        {
+          question: "Wann schlägt die Rezeptionistin einen neuen Termin vor?",
+          options: [
+            "Morgen um 10 Uhr",
+            "Am Freitagvormittag um 11 Uhr",
+            "Am Nachmittag",
+            "Am Abend"
+          ],
+          answer: 1,
+          explanation: "Die Rezeptionistin fragt: \"Am Freitagvormittag passt es mir gut. Um 11 Uhr?\" und Jana bestätigt: \"Ja, das ist perfekt.\""
+        },
+        {
+          question: "Was muss Jana noch tun?",
+          options: [
+            "Einen neuen Zahnarzttermin vereinbaren.",
+            "Ihre Arbeit absagen.",
+            "Einen Friseurtermin absagen.",
+            "Die Rezeptionistin zurückrufen."
+          ],
+          answer: 2,
+          explanation: "Jana sagt zu sich selbst: \"Und jetzt muss ich noch meinen Friseurtermin absagen.\""
+        }
+      ]
     },
     {
       type: "speaking",
-      instruction: "Počúvaj nemeckú vetu. Potom hovor nahlas a skontroluj sa.",
+      instruction: "Höre zu und sprich nach.",
       phrases: [
         {
-          de: "Jana wird nächstes Jahr die Prüfung machen.",
-          sk: "Jana bude robiť skúšku budúci rok.",
-          tip: "wird=[vɪʁt], Prüfung ü=[y]",
+          de: "der Termin",
+          sk: "termín",
+          tip: "T [t], R [r], M [m], N [n]"
         },
         {
-          de: "Es wird morgen regnen.",
-          sk: "Zajtra bude pršať.",
-          tip: "regnen=[ʁeːgnən] – dlhé e, g pred n",
+          de: "die Arbeit",
+          sk: "práca",
+          tip: "A [a], R [r], B [b], T [t]"
         },
         {
-          de: "Ich werde dir helfen.",
-          sk: "Pomôžem ti.",
-          tip: "werde=[veːɐ̯də] – sľub do budúcnosti",
+          de: "verschoben",
+          sk: "posunutý",
+          tip: "v [f], sch [ʃ], o [o], e [ə]"
         },
         {
-          de: "Wir werden nächsten Monat umziehen.",
-          sk: "Budúci mesiac sa presťahujeme.",
-          tip: "nächsten=[nɛːçstən] – ä=[ɛː], ch=[ç]",
+          de: "Ich muss leider verschieben.",
+          sk: "Bohužiaľ musím posunúť.",
+          tip: "Ich [ɪç], muss [mʊs], leider [ˈlaɪdɐ], verschieben [fɛɐ̯ˈ..."
         },
         {
-          de: "Das wird gut sein.",
-          sk: "To bude dobré.",
-          tip: "wird gut sein – infinitív sein na konci",
+          de: "Können wir einen neuen Termin machen?",
+          sk: "Môžeme urobiť nový termín?",
+          tip: "Können [ˈkœnən], wir [vɪɐ̯], neuen [ˈnɔɪən], Termin [tɛɐ̯..."
         },
-      ],
+        {
+          de: "Passt es Ihnen am Nachmittag?",
+          sk: "Vyhovuje Vám to poobede?",
+          tip: "Passt [past], Ihnen [ˈiːnən], Nachmittag [ˈnaχtˌmɪtɑːk]"
+        },
+        {
+          de: "Ich möchte den Termin absagen.",
+          sk: "Chcel by som zrušiť termín.",
+          tip: "möchte [ˈmœçtə], absagen [ˈapsaːɡən]"
+        }
+      ]
     },
+    {
+      type: "truefalse",
+      instruction: "Rozhodnite, či sú nasledujúce tvrdenia pravdivé (wahr) alebo nepravdivé (falsch).",
+      statements: [
+        {
+          statement: "Der Zahnarzt hat den Termin verschoben.",
+          isTrue: true,
+          explanation: "Toto je možné. Zubár mohol posunúť termín."
+        },
+        {
+          statement: "Ich habe gestern die Arbeit abgesagt.",
+          isTrue: false,
+          explanation: "Práca sa zvyčajne neruší, ale stretnutia alebo termíny áno. Sloveso 'absagen' sa používa na zrušenie dohôd, nie práce ako takej."
+        },
+        {
+          statement: "Können wir am Abend einen neuen Termin machen?",
+          isTrue: true,
+          explanation: "Toto je bežná otázka pri dohadovaní stretnutia."
+        },
+        {
+          statement: "Sie hat die Hilfe bekommen.",
+          isTrue: true,
+          explanation: "Toto je správne použitie Perfekta so slovesom 'haben'."
+        },
+        {
+          statement: "Wir waren gestern beim Friseur.",
+          isTrue: false,
+          explanation: "Veta používa Präteritum slovesa 'sein' ('waren'), čo je v poriadku, ale kontext 'boli sme u kaderníka' je menej bežný ako napr. 'boli sme doma'."
+        }
+      ]
+    },
+    {
+      type: "dictation",
+      instruction: "Napíšte správne vety podľa diktátu.",
+      sentences: [
+        {
+          de: "Der Termin ist weg.",
+          sk: "Termín je preč."
+        },
+        {
+          de: "Ich muss absagen.",
+          sk: "Musím zrušiť."
+        },
+        {
+          de: "Wir haben einen Vorschlag.",
+          sk: "Máme návrh."
+        },
+        {
+          de: "Passt es Ihnen am Nachmittag?",
+          sk: "Vyhovuje Vám to poobede?"
+        },
+        {
+          de: "Ich habe die Nachricht bekommen.",
+          sk: "Dostal som tú správu."
+        }
+      ]
+    },
+    {
+      type: "categorysort",
+      instruction: "Roztrieďte slová do správnych kategórií.",
+      categories: [
+        {
+          name: "Osoby (Personen)",
+          color: "blue",
+          words: [
+            "der Zahnarzt",
+            "die Zahnärztin",
+            "der Friseur",
+            "die Friseurin"
+          ]
+        },
+        {
+          name: "Časové údaje (Zeitangaben)",
+          color: "rose",
+          words: [
+            "der Vormittag",
+            "der Nachmittag",
+            "der Abend"
+          ]
+        },
+        {
+          name: "Dohody (Vereinbarungen)",
+          color: "green",
+          words: [
+            "der Termin",
+            "das Treffen",
+            "die Arbeit",
+            "der Vorschlag",
+            "die Nachricht"
+          ]
+        }
+      ],
+      explanation: "Prvá kategória obsahuje názvy osôb, druhá časové časti dňa a tretia slová súvisiace s dohodami a komunikáciou."
+    },
+    {
+      type: "translation",
+      instruction: "Preložte vety zo slovenčiny do nemčiny.",
+      sentences: [
+        {
+          sk: "Musím posunúť termín.",
+          answer: "Ich muss den Termin verschieben.",
+          hint: "verschieben",
+          explanation: "Použili sme sloveso 'verschieben' (posunúť) a podstatné meno 'der Termin' (termín). Veta je v prítomnom čase s modálnym slovesom 'müssen'."
+        },
+        {
+          sk: "Chcel by som zrušiť stretnutie.",
+          answer: "Ich möchte das Treffen absagen.",
+          hint: "absagen",
+          explanation: "Použili sme sloveso 'absagen' (zrušiť) a podstatné meno 'das Treffen' (stretnutie). Veta používa modálne sloveso 'möchten'."
+        },
+        {
+          sk: "Dostal som pomoc.",
+          answer: "Ich habe Hilfe bekommen.",
+          hint: "bekommen",
+          explanation: "Toto je Perfektum so slovesom 'haben'. 'Ich habe ... bekommen'."
+        },
+        {
+          sk: "Bolo to včera.",
+          answer: "Es war gestern.",
+          hint: "war",
+          explanation: "Toto je Präteritum slovesa 'sein' ('war'). Používa sa na opis minulých udalostí."
+        }
+      ]
+    },
+    {
+      type: "conjugation",
+      instruction: "Doplňte správne tvary slovesa 'verschieben' v prítomnom čase.",
+      verbs: [
+        {
+          infinitive: "verschieben",
+          translation: "posunúť",
+          forms: [
+            {
+              pronoun: "ich",
+              correct: "verschiebe"
+            },
+            {
+              pronoun: "du",
+              correct: "verschiebst"
+            },
+            {
+              pronoun: "er/sie/es",
+              correct: "verschiebt"
+            },
+            {
+              pronoun: "wir",
+              correct: "verschieben"
+            },
+            {
+              pronoun: "ihr",
+              correct: "verschiebt"
+            },
+            {
+              pronoun: "sie/Sie",
+              correct: "verschieben"
+            }
+          ],
+          note: "Sloveso 'verschieben' je nepravidelné v 2. a 3. osobe jednotného čísla (du, er/sie/es), kde sa samohláska 'ie' mení na 'i'."
+        }
+      ]
+    }
   ],
-  reviewWords: ["L53_V01", "L53_V02", "L53_V03", "L53_V06", "L53_V10", "L53_V12", "L53_V14"],
-  lessonNotes:
-    "Meldezettel je praktická rakúska realita. Každý, kto sa nasťahujem do Rakúska, musí do 3 dní od príchodu vyplniť Meldezettel. Formulár je dostupný online (https://www.wien.gv.at) alebo priamo na Magistratischen Bezirksamt. Skratky PLZ, Nr., geb. sú na všetkých nemecky hovoriacich formulároch rovnaké.",
+  reviewWords: []
 };

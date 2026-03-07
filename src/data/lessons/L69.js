@@ -1,339 +1,926 @@
-﻿export const lesson69 = {
+export const lesson69 = {
   id: 69,
   week: 14,
   day: 4,
-  title: "Relativsätze (Einführung)",
-  topic: "Vzťažné vety — úvod",
+  title: "Mülltrennung in Wien",
+  topic: "Spoločenské pravidlá, doprava, ochrana životného prostredia, separovanie odpadu.",
   cefr: "A1",
-  xpReward: 40,
-  narrativeContext: "Jana číta brožúru opisujúcu Viedeň — 'Das ist ein Museum, das sehr bekannt ist.' Začína presnejšie opisovať ľudí a veci: 'Das ist ein Kollege, der gut Deutsch spricht.' Vzťažné vety robia jej nemčinu výrazne sofistikovanejšou.",
-  communicativeGoal: "Po tejto lekcii viem tvoriť jednoduché vzťažné vety (der/die/das + Verb am Ende) na opis ľudí a vecí.",
-  skillFocus: ["grammar", "reading", "speaking"],
-  grammarNote: {
-    rule: "Relativsatz — vzťažná veta so slovom der/die/das a slovesom na konci",
-    explanation: "Štruktúra: Podstatné meno + Vzťažné zámeno + [opis] + SLOVESO na KONCI. Nom: der (M), die (F), das (N), die (Pl). Akk: den (M), die (F), das (N), die (Pl). Kľúčové pravidlo: Rod vzťažného zámena sa zhoduje s ROD PODSTATNÉHO MENA, na ktoré odkazuje! 'Das ist ein Mann, DER...' (Mann=M→der). 'Das ist eine Frau, DIE...' (Frau=F→die). Po etwas/nichts/alles: 'was'.",
-    examples: [
-      { de: "Das ist ein Museum, das sehr bekannt ist.", sk: "To je múzeum, ktoré je veľmi slávne." },
-      { de: "Ich habe einen Kollegen, der gut Deutsch spricht.", sk: "Mám kolegu, ktorý dobre hovorí po nemecky." },
-      { de: "Das ist die Frau, die mir geholfen hat.", sk: "To je žena, ktorá mi pomohla." },
-      { de: "Das ist alles, was ich weiß.", sk: "To je všetko, čo viem." }
-    ],
-    slovakContrastNote: "Slovenská vzťažná veta: 'To je muž, ktorý dobre hovorí po nemecky.' Slovenčina používa 'ktorý/ktorá/ktoré' (jeden vzťažný pronomen, tri rody). Nemčina používa der/die/das — rovnaké ako člen! To je výhoda pre slovenských žiakov: rod podstatného mena už poznáš z členu."
-  },
+  xpReward: 20,
+  narrativeContext: "Jana wirft ihren Müll weg. Sie bekommt eine Strafe. Luisa hilft ihr, die Regeln zu verstehen.",
+  communicativeGoal: "Nach dieser Lektion kann ich über Regeln sprechen und Müll richtig trennen.",
+  skillFocus: [
+    "vocabulary",
+    "grammar",
+    "reading",
+    "speaking"
+  ],
+  lessonNotes: "V tejto lekcii sa naučíš slovnú zásobu týkajúcu sa separovania odpadu a pravidiel. Zameriame sa na používanie slovies 'müssen', 'dürfen' a 'nicht dürfen' pri opisovaní pravidiel. Prečítaš si informácie o triedení odpadu vo Viedni a precvičíš si, ako o tom hovoriť.",
+  grammarNotes: [
+    {
+      rule: "Imperativ",
+      explanation: "<p>Rozkazovací spôsob (Imperativ) sa používa na dávanie príkazov, pokynov alebo rád. V nemčine sa tvorí pre osoby 'du' (ty), 'ihr' (vy) a 'Sie' (Vy - formálne). Pre 'du' sa sloveso zvyčajne skracuje a stráca koncovku '-e'. Pre 'ihr' sa používa tvar ako v prítomnom čase. Pre 'Sie' sa používa tvar ako v prítomnom čase s pridaním zámena 'Sie' za sloveso.</p><p><strong>Tvorenie Imperatívu:</strong></p><ul><li><strong>du:</strong> kmeň slovesa + koncovka (často bez '-e')</li><li><strong>ihr:</strong> tvar ako v prítomnom čase</li><li><strong>Sie:</strong> tvar ako v prítomnom čase + Sie</li></ul><p>Nepravidelné slovesá ako 'sein' a 'haben' majú špecifické tvary.</p>",
+      examples: [
+        {
+          de: "Komm her!",
+          sk: "Poď sem!"
+        },
+        {
+          de: "Seid leise!",
+          sk: "Buďte ticho!"
+        },
+        {
+          de: "Haben Sie vielen Dank!",
+          sk: "Majte veľa vďaka! (Veľmi pekne ďakujem!)"
+        },
+        {
+          de: "Mach deine Hausaufgaben!",
+          sk: "Urob si svoju domácu úlohu!"
+        },
+        {
+          de: "Geht nach Hause!",
+          sk: "Choďte domov!"
+        },
+        {
+          de: "Lesen Sie das Buch!",
+          sk: "Prečítajte si tú knihu!"
+        },
+        {
+          de: "Iss das Gemüse!",
+          sk: "Zjedz to zeleninu!"
+        },
+        {
+          de: "Helft mir bitte!",
+          sk: "Pomôžte mi, prosím!"
+        }
+      ],
+      slovakContrastNote: "V slovenčine sa rozkazovací spôsob tvorí inak a má iné koncovky. Napríklad pre 'ty' sa používa koncovka '-i' (príď, urob), zatiaľ čo v nemčine sa často používa len kmeň slovesa (komm, mach). Taktiež nemáme priamy ekvivalent pre formálne 'Sie' v rozkazovacom spôsobe, kde by sa zámeno umiestňovalo za sloveso."
+    },
+    {
+      rule: "Konjunktiv II (würde)",
+      explanation: "<p>Konjunktiv II s použitím slovesa 'würde' sa používa na vyjadrenie želaní, podmienok alebo zdvorilých žiadostí, ktoré nie sú v súčasnosti splniteľné alebo sú len hypotetické. Je to najčastejší spôsob vyjadrenia podmieňovacieho spôsobu v modernej nemčine, najmä v hovorenej reči.</p><p><strong>Tvorenie:</strong> würde + infinitív hlavného slovesa.</p><p><strong>Použitie:</strong></p><ul><li><strong>Želania:</strong> Ich würde gerne nach Deutschland reisen. (Rád by som cestoval do Nemecka.)</li><li><strong>Podmienky:</strong> Wenn ich Zeit hätte, würde ich dir helfen. (Keby som mal čas, pomohol by som ti.)</li><li><strong>Zdvorilé žiadosti:</strong> Würden Sie mir bitte helfen? (Pomohli by ste mi, prosím?)</li></ul><div class='tip-box'><strong>Tip:</strong> Tento tvar je veľmi užitočný, keď chcete byť zdvorilejší alebo hovoriť o niečom, čo nie je skutočné.</div>",
+      examples: [
+        {
+          de: "Ich würde gerne ein Eis essen.",
+          sk: "Rád by som zjedol zmrzlinu."
+        },
+        {
+          de: "Was würdest du machen?",
+          sk: "Čo by si robil?"
+        },
+        {
+          de: "Er würde uns besuchen, wenn er könnte.",
+          sk: "Navštívil by nás, keby mohol."
+        },
+        {
+          de: "Sie würde das gerne lernen.",
+          sk: "Rada by sa to naučila."
+        },
+        {
+          de: "Wir würden jetzt gerne spazieren gehen.",
+          sk: "Teraz by sme sa radi prešli."
+        },
+        {
+          de: "Würdest du mir das Buch geben?",
+          sk: "Dal by si mi tú knihu?"
+        },
+        {
+          de: "Ich würde lieber zu Hause bleiben.",
+          sk: "Radšej by som zostal doma."
+        },
+        {
+          de: "Das würde mich sehr freuen.",
+          sk: "To by ma veľmi potešilo."
+        }
+      ],
+      slovakContrastNote: "Slovenský podmieňovací spôsob sa tvorí pomocou častice 'by' a príslušného tvaru minulého času slovesa (robil by som, jedol by si). Nemecký Konjunktiv II s 'würde' je podobný, ale používa sa konštrukcia 'würde' + infinitív, čo je v slovenčine neprítomné. V slovenčine sa tiež často používa aj Konjunktiv II tvorený z minulého času (robil by som), zatiaľ čo v nemčine je 'würde' + infinitív častejší pre vyjadrenie podmienky a želania."
+    }
+  ],
   vocab: [
-    { de: "der (Relativpronomen, M, Nom.)", sk: "ktorý (pre M rod)", example: "Das ist ein Kollege, der gut arbeitet.", exampleSk: "To je kolega, ktorý dobre pracuje.", gender: null, srsId: "L69_V01", recycledFrom: [] },
-    { de: "die (Relativpronomen, F, Nom.)", sk: "ktorá (pre F rod)", example: "Das ist die Stadt, die ich liebe.", exampleSk: "To je mesto, ktoré milujem.", gender: null, srsId: "L69_V02", recycledFrom: [] },
-    { de: "das (Relativpronomen, N, Nom.)", sk: "ktoré (pre N rod)", example: "Das ist ein Café, das sehr gut ist.", exampleSk: "To je kaviareň, ktorá je veľmi dobrá.", gender: null, srsId: "L69_V03", recycledFrom: [] },
-    { de: "Nom./Akk. Relativpronomen + Verb am Ende", sk: "Podstatné meno + ktorý/á/é + Sloveso na KONCI", example: "Der Mann, der hier wohnt, ist nett.", exampleSk: "Muž, ktorý tu býva, je milý.", gender: null, srsId: "L69_V04", recycledFrom: [] },
-    { de: "Das ist ein Kollege, der...", sk: "To je kolega, ktorý...", example: "Das ist ein Kollege, der gut Deutsch spricht.", exampleSk: "To je kolega, ktorý dobre hovorí po nemecky.", gender: null, srsId: "L69_V05", recycledFrom: [] },
-    { de: "Das ist eine Stadt, die...", sk: "To je mesto, ktoré...", example: "Das ist eine Stadt, die sehr schön ist.", exampleSk: "To je mesto, ktoré je veľmi krásne.", gender: null, srsId: "L69_V06", recycledFrom: [] },
-    { de: "Das ist ein Museum, das...", sk: "To je múzeum, ktoré...", example: "Das ist ein Museum, das ich empfehle.", exampleSk: "To je múzeum, ktoré odporúčam.", gender: null, srsId: "L69_V07", recycledFrom: [] },
-    { de: "bekannt", sk: "známy, slávny", example: "Das ist ein bekanntes Café.", exampleSk: "To je slávna kaviareň.", gender: null, srsId: "L69_V08", recycledFrom: [9, 36] },
-    { de: "beliebt", sk: "obľúbený", example: "Das ist ein beliebtes Restaurant.", exampleSk: "To je obľúbená reštaurácia.", gender: null, srsId: "L69_V09", recycledFrom: [] },
-    { de: "empfehlen → empfiehlt (e→ie zmena)", sk: "odporučiť", example: "Das Restaurant, das ich empfehle, ist super.", exampleSk: "Reštaurácia, ktorú odporúčam, je super.", gender: null, srsId: "L69_V10", recycledFrom: [] },
-    { de: "Das Restaurant, das ich empfehle,...", sk: "Reštaurácia, ktorú odporúčam,...", example: "Das Restaurant, das ich empfehle, liegt in Wien.", exampleSk: "Reštaurácia, ktorú odporúčam, leží vo Viedni.", gender: null, srsId: "L69_V11", recycledFrom: [] },
-    { de: "Der Mann, den ich kenne,...", sk: "Muž, ktorého poznám,... (Akk.)", example: "Der Mann, den ich kenne, heißt Thomas.", exampleSk: "Muž, ktorého poznám, sa volá Thomas.", gender: null, srsId: "L69_V12", recycledFrom: [] },
-    { de: "Die Frau, die ich treffe,...", sk: "Žena, ktorú stretávam,...", example: "Die Frau, die ich treffe, ist meine Kollegin.", exampleSk: "Žena, ktorú stretávam, je moja kolegyňa.", gender: null, srsId: "L69_V13", recycledFrom: [] },
-    { de: "Das Buch, das ich lese,...", sk: "Kniha, ktorú čítam,...", example: "Das Buch, das ich lese, ist sehr interessant.", exampleSk: "Kniha, ktorú čítam, je veľmi zaujímavá.", gender: null, srsId: "L69_V14", recycledFrom: [] },
-    { de: "Das ist alles, was...", sk: "To je všetko, čo...", example: "Das ist alles, was ich weiß.", exampleSk: "To je všetko, čo viem.", gender: null, srsId: "L69_V15", recycledFrom: [] }
+    {
+      de: "der Müll",
+      sk: "odpad",
+      gender: "M",
+      srsId: "L69_V01",
+      example: "Der Müll muss in die richtige Tonne.",
+      exampleSk: "Odpad musí ísť do správneho kontajnera.",
+      recycledFrom: []
+    },
+    {
+      de: "der Abfall",
+      sk: "odpad",
+      gender: "M",
+      srsId: "L69_V02",
+      example: "Bitte trennen Sie den Abfall.",
+      exampleSk: "Prosím, separujte odpad.",
+      recycledFrom: []
+    },
+    {
+      de: "die Tonne",
+      sk: "kontajner",
+      gender: "F",
+      srsId: "L69_V03",
+      example: "Die blaue Tonne ist für Papier.",
+      exampleSk: "Modrý kontajner je na papier.",
+      recycledFrom: []
+    },
+    {
+      de: "das Glas",
+      sk: "sklo",
+      gender: "N",
+      srsId: "L69_V04",
+      example: "Man muss das Glas in die grüne Tonne werfen.",
+      exampleSk: "Sklo sa musí hodiť do zeleného kontajnera.",
+      recycledFrom: []
+    },
+    {
+      de: "das Papier",
+      sk: "papier",
+      gender: "N",
+      srsId: "L69_V05",
+      example: "Ich habe viel Papier gesammelt.",
+      exampleSk: "Nazbieral som veľa papiera.",
+      recycledFrom: []
+    },
+    {
+      de: "der Restmüll",
+      sk: "zmesový odpad",
+      gender: "M",
+      srsId: "L69_V06",
+      example: "Der Restmüll kommt in die schwarze Tonne.",
+      exampleSk: "Zmesový odpad ide do čierneho kontajnera.",
+      recycledFrom: []
+    },
+    {
+      de: "die Bio-Tonne",
+      sk: "bio-kontajner",
+      gender: "F",
+      srsId: "L69_V07",
+      example: "Die Bio-Tonne ist für Essensreste.",
+      exampleSk: "Bio-kontajner je na zvyšky jedla.",
+      recycledFrom: []
+    },
+    {
+      de: "die Verpackung",
+      sk: "obal",
+      gender: "F",
+      srsId: "L69_V08",
+      example: "Diese Verpackung gehört in den gelben Sack.",
+      exampleSk: "Tento obal patrí do žltého vreca.",
+      recycledFrom: []
+    },
+    {
+      de: "der Sack",
+      sk: "vrecko",
+      gender: "M",
+      srsId: "L69_V09",
+      example: "Der gelbe Sack ist für Verpackungen.",
+      exampleSk: "Žlté vrece je na obaly.",
+      recycledFrom: []
+    },
+    {
+      de: "die Umwelt",
+      sk: "životné prostredie",
+      gender: "F",
+      srsId: "L69_V10",
+      example: "Wir müssen die Umwelt schützen.",
+      exampleSk: "Musíme chrániť životné prostredie.",
+      recycledFrom: []
+    },
+    {
+      de: "der Umweltschutz",
+      sk: "ochrana životného prostredia",
+      gender: "M",
+      srsId: "L69_V11",
+      example: "Umweltschutz ist sehr wichtig.",
+      exampleSk: "Ochrana životného prostredia je veľmi dôležitá.",
+      recycledFrom: []
+    },
+    {
+      de: "die Stadt",
+      sk: "mesto",
+      gender: "F",
+      srsId: "L69_V12",
+      example: "Wien hat ein gutes System für Müll.",
+      exampleSk: "Viedeň má dobrý systém na odpad.",
+      recycledFrom: []
+    },
+    {
+      de: "der Verkehr",
+      sk: "doprava",
+      gender: "M",
+      srsId: "L69_V13",
+      example: "Der Verkehr in der Stadt ist oft dicht.",
+      exampleSk: "Doprava v meste je často hustá.",
+      recycledFrom: []
+    },
+    {
+      de: "die Haltestelle",
+      sk: "zastávka",
+      gender: "F",
+      srsId: "L69_V14",
+      example: "Wir warten an der nächsten Haltestelle.",
+      exampleSk: "Čakáme na ďalšej zastávke.",
+      recycledFrom: []
+    },
+    {
+      de: "die Fahrkarte",
+      sk: "lístok (na MHD)",
+      gender: "F",
+      srsId: "L69_V15",
+      example: "Ich brauche eine Fahrkarte für die U-Bahn.",
+      exampleSk: "Potrebujem lístok do metra.",
+      recycledFrom: []
+    },
+    {
+      de: "die U-Bahn",
+      sk: "metro",
+      gender: "F",
+      srsId: "L69_V16",
+      example: "Die U-Bahn fährt alle paar Minuten.",
+      exampleSk: "Metro jazdí každých pár minút.",
+      recycledFrom: []
+    },
+    {
+      de: "der Bus",
+      sk: "autobus",
+      gender: "M",
+      srsId: "L69_V17",
+      example: "Der Bus kommt bald.",
+      exampleSk: "Autobus príde čoskoro.",
+      recycledFrom: []
+    },
+    {
+      de: "die Straßenbahn",
+      sk: "električka",
+      gender: "F",
+      srsId: "L69_V18",
+      example: "Die Straßenbahn ist eine gute Option.",
+      exampleSk: "Električka je dobrá možnosť.",
+      recycledFrom: []
+    },
+    {
+      de: "sortieren",
+      sk: "triediť",
+      gender: null,
+      srsId: "L69_V19",
+      example: "Man muss den Müll richtig sortieren.",
+      exampleSk: "Odpad sa musí správne triediť.",
+      recycledFrom: []
+    },
+    {
+      de: "trennen",
+      sk: "oddeľovať, separovať",
+      gender: null,
+      srsId: "L69_V20",
+      example: "Wir trennen Papier und Plastik.",
+      exampleSk: "Separujeme papier a plast.",
+      recycledFrom: []
+    },
+    {
+      de: "schützen",
+      sk: "chrániť",
+      gender: null,
+      srsId: "L69_V21",
+      example: "Wir wollen die Natur schützen.",
+      exampleSk: "Chceme chrániť prírodu.",
+      recycledFrom: []
+    },
+    {
+      de: "einsortieren",
+      sk: "zatriediť, zaradiť",
+      gender: null,
+      srsId: "L69_V22",
+      example: "Wo muss ich diesen Karton einsortieren?",
+      exampleSk: "Kam mám zaradiť tento kartón?",
+      recycledFrom: []
+    },
+    {
+      de: "fahren",
+      sk: "ísť (vozidlom)",
+      gender: null,
+      srsId: "L69_V23",
+      example: "Wir fahren mit der U-Bahn.",
+      exampleSk: "Ideme metrom.",
+      recycledFrom: []
+    },
+    {
+      de: "brauchen",
+      sk: "potrebovať",
+      gender: null,
+      srsId: "L69_V24",
+      example: "Brauchen wir eine Fahrkarte?",
+      exampleSk: "Potrebujeme lístok?",
+      recycledFrom: []
+    },
+    {
+      de: "müssen",
+      sk: "musieť",
+      gender: null,
+      srsId: "L69_V25",
+      example: "Man muss den Müll trennen.",
+      exampleSk: "Odpad sa musí triediť.",
+      recycledFrom: [
+        "L68_V01"
+      ]
+    },
+    {
+      de: "nicht dürfen",
+      sk: "nesmieť",
+      gender: null,
+      srsId: "L69_V26",
+      example: "Hier dürfen Sie nicht parken.",
+      exampleSk: "Tu nesmiete parkovať.",
+      recycledFrom: [
+        "L68_V03"
+      ]
+    },
+    {
+      de: "Wo muss das hin?",
+      sk: "Kam to patrí?",
+      gender: null,
+      srsId: "L69_V27",
+      example: "Entschuldigung, wo muss das Glas hin?",
+      exampleSk: "Prepáčte, kam patrí sklo?",
+      recycledFrom: []
+    },
+    {
+      de: "Das gehört in...",
+      sk: "To patrí do...",
+      gender: null,
+      srsId: "L69_V28",
+      example: "Diese Verpackung gehört in den gelben Sack.",
+      exampleSk: "Tento obal patrí do žltého vreca.",
+      recycledFrom: []
+    },
+    {
+      de: "Bitte trennen Sie den Abfall.",
+      sk: "Prosím, separujte odpad.",
+      gender: null,
+      srsId: "L69_V29",
+      example: "Bitte trennen Sie den Abfall richtig.",
+      exampleSk: "Prosím, separujte odpad správne.",
+      recycledFrom: []
+    }
   ],
   exercises: [
     {
       type: "flashcard",
-      instruction: "Prezri si vzťažné zámená a príklady vzťažných viet.",
-      items: [
-        "der (M, Nom.) = ktorý → Das ist ein Mann, der nett ist.",
-        "die (F, Nom.) = ktorá → Das ist eine Frau, die hilft.",
-        "das (N, Nom.) = ktoré → Das ist ein Haus, das groß ist.",
-        "den (M, Akk.) = ktorého → Der Mann, den ich kenne,...",
-        "die (F, Akk.) = ktorú → Die Frau, die ich treffe,...",
-        "das (N, Akk.) = ktoré → Das Buch, das ich lese,...",
-        "PRAVIDLO: Rod vzťažného zámena = rod podstatného mena!",
-        "PRAVIDLO: Sloveso vždy na KONCI vzťažnej vety!",
-        "bekannt = známy, slávny",
-        "beliebt = obľúbený",
-        "empfehlen → empfiehlt (e→ie) = odporučiť",
-        "Das ist ein Kollege, der... = To je kolega, ktorý...",
-        "Das ist eine Stadt, die... = To je mesto, ktoré...",
-        "Das ist ein Museum, das... = To je múzeum, ktoré...",
-        "Das ist alles, was... = To je všetko, čo... (po alles/nichts/etwas → was)"
+      instruction: "Prezri si slovíčka tejto lekcie. Klikni na kartičku pre preklad."
+    },
+    {
+      type: "match",
+      instruction: "Spojte nemecké slová s ich slovenskými ekvivalentmi.",
+      pairs: [
+        [
+          "der Müll",
+          "odpad"
+        ],
+        [
+          "die Tonne",
+          "kontajner"
+        ],
+        [
+          "das Glas",
+          "sklo"
+        ],
+        [
+          "das Papier",
+          "papier"
+        ],
+        [
+          "die Bio-Tonne",
+          "bio-kontajner"
+        ],
+        [
+          "die Umwelt",
+          "životné prostredie"
+        ],
+        [
+          "der Verkehr",
+          "doprava"
+        ],
+        [
+          "die Haltestelle",
+          "zastávka"
+        ],
+        [
+          "sortieren",
+          "triediť"
+        ],
+        [
+          "schützen",
+          "chrániť"
+        ]
       ]
     },
     {
-      type: "mcq",
-      instruction: "Vyber správne vzťažné zámeno.",
-      questions: [
+      type: "wordorder",
+      instruction: "Usporiadajte slová do správneho nemeckého poriadku vety.",
+      sentences: [
         {
-          question: "'Das ist ein Museum, ___ sehr berühmt ist.' (Museum = N rod)",
-          options: ["der", "die", "das", "den"],
-          answer: "das",
-          explanation: "Museum je stredného rodu (das Museum). Vzťažné zámeno v nom. N = das. Das ist ein Museum, DAS sehr berühmt ist."
-        },
-        {
-          question: "'Das ist eine Kollegin, ___ gut Englisch spricht.' (Kollegin = F rod)",
-          options: ["der", "die", "das", "das"],
-          answer: "die",
-          explanation: "Kollegin je ženského rodu (die Kollegin). Vzťažné zámeno v nom. F = die. Das ist eine Kollegin, DIE gut Englisch spricht."
-        },
-        {
-          question: "'Das ist der Mann, ___ ich kenne.' (Mann = M rod, akuzatív — objekt kennen)",
-          options: ["der", "die", "das", "den"],
-          answer: "den",
-          explanation: "Mann je mužského rodu. Ale tu je akuzatív (objekt 'kennen' = koho poznám?). Vzťažné zámeno M, Akk = den. Das ist der Mann, DEN ich kenne."
-        },
-        {
-          question: "Kde stojí sloveso vo vzťažnej vete?",
-          options: ["Na začiatku", "Na 2. pozícii ako v hlavnej vete", "Na konci", "Kdekoľvek"],
-          answer: "Na konci",
-          explanation: "Vzťažná veta = vedľajšia veta → sloveso VŽDY na KONCI! 'Das ist ein Café, das sehr gut IST.' 'Der Mann, den ich KENNE,...'"
-        },
-        {
-          question: "'Das ist alles, ___ ich weiß.' Prečo 'was' a nie 'das'?",
-          options: [
-            "Lebo 'alles' je stredný rod, 'was' je ekvivalent",
-            "Náhodne — oba tvary sú správne",
-            "Po 'alles', 'nichts', 'etwas' sa používa 'was' ako vzťažné zámeno",
-            "Lebo ide o akuzatív"
+          words: [
+            "Bitte",
+            "Sie",
+            "den",
+            "Abfall",
+            "trennen"
           ],
-          answer: "Po 'alles', 'nichts', 'etwas' sa používa 'was' ako vzťažné zámeno",
-          explanation: "Špeciálne pravidlo: po alles, nichts, etwas, das (= to) sa používa 'was' namiesto 'das': Das ist alles, WAS ich weiß. / Das ist nichts, WAS mich überrascht."
+          correct: "Bitte trennen Sie den Abfall",
+          hint: "Prosím, separujte odpad.",
+          explanation: "V Imperatíve Sie sa sloveso dáva na druhé miesto vo vete, zatiaľ čo zvyšok vety nasleduje. 'Bitte' je zdvorilostné slovo."
         },
         {
-          question: "Prečo hovoríme 'eine Stadt, die...' a nie 'eine Stadt, das...'?",
-          options: [
-            "Die Stadt je ženského rodu, preto vzťažné zámeno = die",
-            "Lebo nasleduje podstatné meno s -e",
-            "Náhodne, oba tvary sú správne",
-            "Lebo je to plurál"
+          words: [
+            "muss",
+            "Ich",
+            "in",
+            "die",
+            "Tonne",
+            "gelbe",
+            "werfen"
           ],
-          answer: "Die Stadt je ženského rodu, preto vzťažné zámeno = die",
-          explanation: "Kľúčový princíp: vzťažné zámeno sa zhoduje s ROD PODSTATNÉHO MENA, nie s vetným subjektom. die Stadt (F) → vzťažné zámeno = die."
+          correct: "Ich muss den gelben Abfall in die gelbe Tonne werfen",
+          hint: "Musím vyhodiť žltý odpad do žltého kontajnera.",
+          explanation: "V slovesných vetách s modálnym slovesom (muss) je hlavné sloveso (werfen) v infinitíve na konci vety. Predmet 'den gelben Abfall' je v akuzatíve."
+        },
+        {
+          words: [
+            "das",
+            "wohin",
+            "gehört",
+            "Glas"
+          ],
+          correct: "Wohin gehört das Glas",
+          hint: "Kam patrí sklo?",
+          explanation: "V otázkach s opytovacím slovom (Wohin) ide opytovacie slovo na prvé miesto, potom sloveso a nakoniec podmet. 'gehört' je sloveso v 3. osobe jednotného čísla."
+        },
+        {
+          words: [
+            "Umwelt",
+            "Wir",
+            "unsere",
+            "schützen",
+            "müssen"
+          ],
+          correct: "Wir müssen unsere Umwelt schützen",
+          hint: "Musíme chrániť naše životné prostredie.",
+          explanation: "Pri modálnych slovesách (müssen) je hlavné sloveso v infinitíve na konci vety. 'unsere Umwelt' je predmet v akuzatíve."
+        },
+        {
+          words: [
+            "in",
+            "Ich",
+            "die",
+            "Tonne",
+            "Bio-Tonne",
+            "werfe",
+            "die"
+          ],
+          correct: "Ich werfe die Essensreste in die Bio-Tonne",
+          hint: "Vyhadzujem zvyšky jedla do bio-kontajnera.",
+          explanation: "V tejto vete je sloveso 'werfe' v prítomnom čase na druhom mieste. 'die Essensreste' je predmet v akuzatíve a 'in die Bio-Tonne' je predložková väzba."
         }
       ]
     },
     {
       type: "fill",
-      instruction: "Doplň správne vzťažné zámeno.",
+      instruction: "Doplňte chýbajúce slová do viet.",
       questions: [
         {
-          sentence: "Das ist ein Café, ___ sehr gemütlich ist. (Café = N)",
-          answer: "das",
-          hint: "Café je stredný rod. Nom. N = ?",
-          explanation: "das Café (N). Vzťažné zámeno nom. N = das. Das ist ein Café, DAS sehr gemütlich ist."
+          sentence: "Bitte werfen Sie den Müll in die ____.",
+          answer: "Tonne",
+          hint: "Kontajner na odpad.",
+          explanation: "Sloveso 'werfen' (hádzať) sa často používa s predložkou 'in' a podstatným menom 'Tonne' (kontajner) na označenie miesta, kam sa odpad vyhadzuje."
         },
         {
-          sentence: "Das ist die Frau, ___ mir immer hilft. (Frau = F, Nom.)",
-          answer: "die",
-          hint: "Frau je ženský rod. Nom. F = ?",
-          explanation: "die Frau (F). Vzťažné zámeno nom. F = die. Die Frau, DIE mir hilft."
+          sentence: "Das Glas gehört in die ____ Tonne.",
+          answer: "Glas",
+          hint: "Kontajner na sklo.",
+          explanation: "Špecifické druhy odpadu sa triedia do špecifických kontajnerov. 'Glas' (sklo) patrí do 'Glas-Tonne'."
         },
         {
-          sentence: "Das ist ein Kollege, ___ sehr nett ist. (Kollege = M, Nom.)",
-          answer: "der",
-          hint: "Kollege je mužský rod. Nom. M = ?",
-          explanation: "der Kollege (M). Vzťažné zámeno nom. M = der. Das ist ein Kollege, DER sehr nett ist."
+          sentence: "Wir müssen die Umwelt ____.",
+          answer: "schützen",
+          hint: "Chrániť.",
+          explanation: "Sloveso 'schützen' (chrániť) je kľúčové slovo v kontexte ochrany životného prostredia."
         },
         {
-          sentence: "Das ist das Buch, ___ ich empfehle. (Buch = N, Akk. — objekt empfehlen)",
-          answer: "das",
-          hint: "Buch = N. Akk. N = das (rovnaký ako nom.!)",
-          explanation: "das Buch (N). Akuzatív N = das (rovnaký tvar ako nom.). Das ist das Buch, DAS ich empfehle."
+          sentence: "Wo muss ____ hin?",
+          answer: "das Papier",
+          hint: "Papier.",
+          explanation: "Otázka 'Wo muss das hin?' sa používa na zistenie, kam patrí určitý predmet. 'das Papier' (papier) je predmet v nominatíve."
         },
         {
-          sentence: "Das ist der Mann, ___ ich morgen treffe. (Mann = M, Akk. — objekt treffen)",
-          answer: "den",
-          hint: "Mann = M. Akk. M = ? (zmena od nom.!)",
-          explanation: "der Mann (M), ale v akuzatíve (koho stretávam?): den. Das ist der Mann, DEN ich morgen treffe."
+          sentence: "Der Bus fährt zur ____.",
+          answer: "Haltestelle",
+          hint: "Zastávka.",
+          explanation: "V slovníku dopravy je 'Haltestelle' (zastávka) miestom, kde ľudia čakajú na autobus alebo iné verejné dopravné prostriedky."
         },
         {
-          sentence: "Das ist nichts, ___ mich überrascht. (po 'nichts' → special form)",
-          answer: "was",
-          hint: "Po nichts/alles/etwas = ?",
-          explanation: "Po nichts, alles, etwas sa používa 'was' (nie 'das'!). Das ist nichts, WAS mich überrascht."
+          sentence: "Kannst du mir bitte ____?",
+          answer: "helfen",
+          hint: "Pomôcť.",
+          explanation: "Toto je príklad otázky testujúcej predchádzajúce učivo (L43 - Dativ). Sloveso 'helfen' (pomôcť) vyžaduje datívny tvar podstatného mena alebo zámena (mir)."
+        },
+        {
+          sentence: "Ich ____ heute keine Zeit.",
+          answer: "habe",
+          hint: "Mám.",
+          explanation: "Toto je príklad otázky testujúcej predchádzajúce učivo (L04, L07 - haben). Sloveso 'haben' (mať) sa konjuguje ako 'habe' pre prvú osobu jednotného čísla (ich)."
         }
       ]
     },
     {
       type: "listen",
-      instruction: "Počúvaj vety so vzťažnými vetami. Dávaj pozor na rod a pozíciu slovesa.",
+      instruction: "Počúvajte a napíšte, čo počujete.",
       questions: [
-        { de: "Das ist ein Museum, das sehr bekannt ist.", sk: "To je múzeum, ktoré je veľmi slávne." },
-        { de: "Das ist eine Stadt, die ich liebe.", sk: "To je mesto, ktoré milujem." },
-        { de: "Ich habe einen Kollegen, der gut Deutsch spricht.", sk: "Mám kolegu, ktorý dobre hovorí po nemecky." },
-        { de: "Das ist die Frau, die mir geholfen hat.", sk: "To je žena, ktorá mi pomohla." },
-        { de: "Das Buch, das ich lese, ist sehr gut.", sk: "Kniha, ktorú čítam, je veľmi dobrá." },
-        { de: "Das ist alles, was ich weiß.", sk: "To je všetko, čo viem." },
-        { de: "Der Stephansdom, der 136 Meter hoch ist, liegt im Zentrum.", sk: "Stephansdom, ktorý má 136 metrov, leží v centre." },
-        { de: "Das ist das Restaurant, das ich empfehle.", sk: "To je reštaurácia, ktorú odporúčam." }
+        {
+          de: "der Müll",
+          sk: "odpad"
+        },
+        {
+          de: "die Tonne",
+          sk: "kontajner"
+        },
+        {
+          de: "das Glas",
+          sk: "sklo"
+        },
+        {
+          de: "das Papier",
+          sk: "papier"
+        },
+        {
+          de: "die Umwelt",
+          sk: "životné prostredie"
+        },
+        {
+          de: "der Verkehr",
+          sk: "doprava"
+        },
+        {
+          de: "die Haltestelle",
+          sk: "zastávka"
+        },
+        {
+          de: "sortieren",
+          sk: "triediť"
+        },
+        {
+          de: "schützen",
+          sk: "chrániť"
+        },
+        {
+          de: "die Bio-Tonne",
+          sk: "bio-kontajner"
+        }
       ]
     },
     {
-      type: "match",
-      instruction: "Spoj hlavnú vetu so správnou vzťažnou vetou (dávaj pozor na rod).",
-      pairs: [
-        ["Das ist ein Mann, der...", "...gut kochen kann. (M, Nom.)"],
-        ["Das ist eine Frau, die...", "...sehr freundlich ist. (F, Nom.)"],
-        ["Das ist ein Kind, das...", "...viel lacht. (N, Nom.)"],
-        ["Das ist ein Kollege, den ich...", "...sehr schätze. (M, Akk.)"],
-        ["Das ist die Stadt, die ich...", "...immer besuchen wollte. (F, Akk.)"],
-        ["Das ist das Buch, das ich...", "...empfehle. (N, Akk.)"],
-        ["Das ist alles, was...", "...ich weiß. (po alles → was)"],
-        ["Das ist nichts, was...", "...mich interessiert. (po nichts → was)"]
-      ]
-    },
-    {
-      type: "dialogue",
-      instruction: "Jana a Mia listujú turistickým sprievodcom. Dávaj pozor na vzťažné vety.",
-      lines: [
-        { speaker: "A", de: "Schau mal! Das ist das Café Central, das sehr berühmt ist.", sk: "Pozri! To je Café Central, ktoré je veľmi slávne." },
-        { speaker: "B", de: "Ja, das ist das Café, das Freud und andere Intellektuelle besucht haben!", sk: "Áno, to je kaviareň, ktorú navštevovali Freud a ďalší intelektuáli!" },
-        { speaker: "A", de: "Und das ist der Stephansdom, der 136 Meter hoch ist.", sk: "A to je Stephansdom, ktorý má 136 metrov." },
-        { speaker: "B", de: "Das ist ein Gebäude, das ich immer sehen wollte.", sk: "To je budova, ktorú som vždy chcela vidieť." },
-        { speaker: "A", de: "Ich habe einen Kollegen, der sehr gut Wien kennt.", sk: "Mám kolegu, ktorý veľmi dobre pozná Viedeň." },
-        { speaker: "B", de: "Das ist der Mann, den du mir vorstellen wolltest, oder?", sk: "To je muž, ktorého si mi chcela predstaviť, nie?" },
-        { speaker: "A", de: "Genau! Er kennt ein Restaurant, das fantastische Schnitzel macht.", sk: "Presne! Pozná reštauráciu, ktorá robí fantastické rezne." },
-        { speaker: "B", de: "Das ist ein Restaurant, das ich unbedingt besuchen muss!", sk: "To je reštaurácia, ktorú musím za každú cenu navštíviť!" },
-        { speaker: "A", de: "Er empfiehlt auch ein Museum, das man nicht kennt — sehr interessant!", sk: "Odporúča aj múzeum, ktoré ľudia nepoznajú — veľmi zaujímavé!" },
-        { speaker: "B", de: "Das ist genau die Art von Ausflug, die ich mag.", sk: "To je presne ten typ výletu, ktorý mám rada." },
-        { speaker: "A", de: "Ja! Alles, was wir in Wien sehen können, ist faszinierend.", sk: "Áno! Všetko, čo môžeme vo Viedni vidieť, je fascinujúce." },
-        { speaker: "B", de: "Das ist alles, was man in einer Woche sehen kann — unmöglich!", sk: "To je všetko, čo sa dá vidieť za týždeň — nemožné!" }
-      ],
-      comprehensionQuestions: [
+      type: "mcq",
+      instruction: "Vyberte správnu možnosť.",
+      questions: [
         {
-          question: "Kto navštevoval Café Central?",
-          options: ["Rakúski cisári", "Freud a intelektuáli", "Turisti", "Hudobníci"],
-          answer: "Freud a intelektuáli"
+          question: "Čo znamená 'trennen'?",
+          options: [
+            "Triediť",
+            "Separovať",
+            "Hádzať",
+            "Chrániť"
+          ],
+          answer: 1,
+          explanation: "'Trennen' znamená separovať alebo oddeľovať, čo je dôležité pri triedení odpadu."
         },
         {
-          question: "Čo odporúča Janin kolega okrem reštaurácie?",
-          options: ["Kaviarňu", "Múzeum, ktoré ľudia nepoznajú", "Hotel", "Park"],
-          answer: "Múzeum, ktoré ľudia nepoznajú"
+          question: "Kam patrí papier?",
+          options: [
+            "In die Glas-Tonne",
+            "In die Bio-Tonne",
+            "In die Papier-Tonne",
+            "In den Restmüll"
+          ],
+          answer: 2,
+          explanation: "Papier sa triedi do špeciálneho kontajnera na papier (Papier-Tonne)."
         },
         {
-          question: "Prečo sa Mia nemôže navidieť všetko za týždeň?",
-          options: ["Lebo je lenivá", "Lebo všetko, čo sa dá vidieť, je príliš veľa na jeden týždeň", "Lebo nemá čas", "Lebo nechce"],
-          answer: "Lebo všetko, čo sa dá vidieť, je príliš veľa na jeden týždeň"
+          question: "Čo znamená 'Wo muss das hin?'",
+          options: [
+            "Kde to je?",
+            "Kam to patrí?",
+            "Kedy to príde?",
+            "Ako sa to volá?"
+          ],
+          answer: 1,
+          explanation: "Táto otázka sa používa na zistenie, do ktorého kontajnera alebo na ktoré miesto má určitý predmet patriť."
         },
         {
-          question: "Aká je výška Stephansdomu?",
-          options: ["100 metrov", "120 metrov", "136 metrov", "150 metrov"],
-          answer: "136 metrov"
+          question: "Ktorý tvar slovesa 'müssen' je správny pre 'Sie'?",
+          options: [
+            "muss",
+            "musst",
+            "müssen",
+            "müsst"
+          ],
+          answer: 2,
+          explanation: "Pre formálne 'Sie' sa sloveso 'müssen' konjuguje ako 'müssen' (rovnako ako pre 'wir' a 'sie')."
+        },
+        {
+          question: "Čo znamená 'die Fahrkarte'?",
+          options: [
+            "Vodičský preukaz",
+            "Lístok na vlak",
+            "Cestovný lístok (MHD)",
+            "Palubná vstupenka"
+          ],
+          answer: 2,
+          explanation: "'Fahrkarte' je špecifický termín pre cestovný lístok na verejnú dopravu, ako je autobus alebo električka."
+        },
+        {
+          question: "Ktorý z nasledujúcich výrazov je správny?",
+          options: [
+            "Ich kann nicht fahren",
+            "Ich darf nicht fahren",
+            "Ich soll nicht fahren",
+            "Ich will nicht fahren"
+          ],
+          answer: 0,
+          explanation: "Toto je príklad otázky testujúcej predchádzajúce učivo (L22 - können, L68 - müssen/dürfen). 'Ich kann nicht fahren' znamená 'Nemôžem ísť (nemám schopnosť/možnosť ísť)', zatiaľ čo 'Ich darf nicht fahren' znamená 'Nesmiem ísť (nemám povolenie)'."
+        },
+        {
+          question: "Ako sa povie 'ochrana životného prostredia'?",
+          options: [
+            "die Stadt",
+            "der Verkehr",
+            "der Umweltschutz",
+            "die Verpackung"
+          ],
+          answer: 2,
+          explanation: "'Der Umweltschutz' je presný nemecký výraz pre ochranu životného prostredia."
         }
       ]
     },
     {
       type: "minitext",
-      instruction: "Prečítaj turistickú brožúru o Viedni so vzťažnými vetami a odpovedaj.",
-      text: "Wien — eine Stadt, die Geschichte erzählt.\nDer Stephansdom, der im Herzen der Stadt liegt, ist das bekannteste Wahrzeichen Wiens. Das Kunsthistorische Museum, das eine riesige Kunstsammlung hat, ist ein Muss für Kunstliebhaber. Die Spanische Hofreitschule, die für ihre weißen Lipizzaner bekannt ist, begeistert Besucher aus aller Welt. Das Café Central, das im 19. Jahrhundert ein Treffpunkt der Intellektuellen war, lädt heute Touristen ein. Alles, was Wien zu bieten hat, kann man in einem Besuch nicht sehen.",
-      textSk: "Viedeň — mesto, ktoré rozpráva históriu.\nStephansdom, ktorý leží v srdci mesta, je najznámejší symbol Viedne. Kunsthistorisches Museum, ktoré má obrovskú umeleckú zbierku, je povinnosť pre milovníkov umenia. Španská jazdiareň, ktorá je slávna svojimi bielymi lipicánmi, uchváti návštevníkov z celého sveta. Café Central, ktoré bolo v 19. storočí stretávacím miestom intelektuálov, dnes pozýva turistov. Všetko, čo Viedeň ponúka, sa nedá vidieť na jednej návšteve.",
+      instruction: "Lies den Dialog und beantworte die Fragen.",
+      text: "Jana: Luisa, ich habe eine Strafe bekommen! Wegen des Mülls.\nLuisa: Oh nein, Jana! Was ist passiert?\nJana: Ich habe die Verpackung in die falsche Tonne geworfen. Man muss Glas hier, Papier dort, Bio dort einsortieren. Ich verstehe das nicht.\nLuisa: Ah, in Wien ist das kompliziert. Wir müssen den Abfall sehr genau trennen. Die Stadt will die Umwelt schützen. Du darfst Restmüll nicht einfach so wegwerfen.\nJana: Aber woher soll ich das wissen? Ich brauche einen Plan!\nLuisa: Keine Sorge. Hier, das ist der neue Guide. Wir müssen auch beim Verkehr aufpassen. Man darf nicht ohne Fahrkarte in die U-Bahn oder den Bus steigen. Das ist auch wichtig für die Umwelt.",
+      textSk: "Jana: Luisa, dostala som pokutu! Kvôli odpadu.\nLuisa: Ach nie, Jana! Čo sa stalo?\nJana: Obal som hodila do nesprávneho kontajnera. Človek musí sklo sem, papier tam, bio tam zatriediť. Nerozumiem tomu.\nLuisa: Áno, vo Viedni je to komplikované. Odpad musíme veľmi presne separovať. Mesto chce chrániť životné prostredie. Zmesový odpad nesmieš len tak vyhodiť.\nJana: Ale odkiaľ to mám vedieť? Potrebujem plán!\nLuisa: Neboj sa. Tu, toto je nový sprievodca. Aj pri doprave musíme dávať pozor. Nesmieš nastúpiť do metra alebo autobusu bez lístka. To je tiež dôležité pre životné prostredie.",
       questions: [
         {
-          question: "'Der Stephansdom, der...' — prečo používame 'der' ako vzťažné zámeno?",
+          question: "Warum hat Jana eine Strafe bekommen?",
           options: [
-            "Lebo je to akuzatív",
-            "Lebo der Stephansdom je mužského rodu",
-            "Lebo je to plurál",
-            "Náhodne"
+            "Sie hat zu viel Müll produziert.",
+            "Sie hat die Verpackung in die falsche Tonne geworfen.",
+            "Sie hat die Umwelt nicht geschützt.",
+            "Sie hat keine Fahrkarte für die U-Bahn gehabt."
           ],
-          answer: "Lebo der Stephansdom je mužského rodu"
+          answer: 1,
+          explanation: "Jana sagt: 'Ich habe die Verpackung in die falsche Tonne geworfen.'"
         },
         {
-          question: "Za čo je slávna Španská jazdiareň?",
-          options: ["Za biele cukrárne", "Za operu", "Za biele lipicány", "Za záhrady"],
-          answer: "Za biele lipicány"
-        },
-        {
-          question: "'Alles, was Wien zu bieten hat...' — prečo 'was' a nie 'das'?",
+          question: "Was muss man in Wien laut Luisa beim Müll beachten?",
           options: [
-            "Lebo Wien je stredný rod",
-            "Po 'alles' sa vždy používa 'was' ako vzťažné zámeno",
-            "Lebo je to akuzatív",
-            "Oba tvary sú správne"
+            "Man muss nur Papier trennen.",
+            "Man muss den Müll nicht sortieren.",
+            "Man muss den Abfall sehr genau trennen.",
+            "Man darf Verpackungen überall einsortieren."
           ],
-          answer: "Po 'alles' sa vždy používa 'was' ako vzťažné zámeno"
+          answer: 2,
+          explanation: "Luisa erklärt: 'Wir müssen den Abfall sehr genau trennen.'"
         },
         {
-          question: "Kedy bolo Café Central stretávacím miestom intelektuálov?",
-          options: ["V 18. storočí", "V 19. storočí", "V 20. storočí", "Dnes"],
-          answer: "V 19. storočí"
-        }
-      ]
-    },
-    {
-      type: "freewrite",
-      instruction: "Opíš 3 ľudí alebo 3 miesta, ktoré poznáš, pomocou vzťažných viet.",
-      prompt: "Beschreibe 3 Menschen oder 3 Orte, die du kennst. Verwende Relativsätze: 'Das ist ein/eine [Person/Ort], der/die/das...' oder '[Person/Ort], den/die/das ich...'. Denk an den richtigen Relativpronomen!",
-      minWords: 45,
-      exampleAnswer: "Das ist meine beste Freundin, die sehr lustig ist. Sie wohnt in einer Stadt, die sehr schön liegt. Das ist ein Café, das ich oft besuche — es ist ein Ort, der mich entspannt. Mein Bruder ist ein Mensch, den ich sehr schätze. Er empfiehlt immer Bücher, die mich wirklich interessieren. Das ist alles, was ich über meine Lieblingsmenschen sagen kann!"
-    },
-    {
-      type: "wordorder",
-      instruction: "Zoraď slová do správnej nemeckej vety.",
-      sentences: [
-        {
-          words: ["Die", "Lage", "des", "Büros", "ist", "sehr", "gut"],
-          correct: "Die Lage des Büros ist sehr gut",
-          hint: "Poloha kancelárie je veľmi dobrá.",
-          explanation: "Atributívny genitív: 'des Büros' (M/N genitív = des + -s). Genitívna skupina stojí za riadiacim podstatným menom."
+          question: "Was ist eine Regel für den Verkehr in Wien?",
+          options: [
+            "Man muss immer zu Fuß fahren.",
+            "Man darf nicht ohne Fahrkarte in öffentliche Verkehrsmittel steigen.",
+            "Man muss Glas und Papier im Bus trennen.",
+            "Man muss den Müll an der Haltestelle einsortieren."
+          ],
+          answer: 1,
+          explanation: "Luisa sagt: 'Man darf nicht ohne Fahrkarte in die U-Bahn oder den Bus steigen.'"
         },
         {
-          words: ["Der", "Name", "des", "Chefs", "ist", "Hoffmann"],
-          correct: "Der Name des Chefs ist Hoffmann",
-          hint: "Meno šéfa je Hoffmann.",
-          explanation: "'des Chefs' = genitív M. 'Chef' dostáva príponu -s v genitíve. Genitívna skupina nasleduje po riadiacom substantíve."
-        },
-        {
-          words: ["Das", "Ende", "des", "Kurses", "ist", "nächste", "Woche"],
-          correct: "Das Ende des Kurses ist nächste Woche",
-          hint: "Koniec kurzu je budúci týždeň.",
-          explanation: "'des Kurses' = genitív M/N (-s alebo -es). Tu: 'Kurses' s -es (výslovnostná ľahkosť). Genitív vyjadruje príslušnosť."
-        },
-        {
-          words: ["Die", "Idee", "der", "Kollegin", "war", "sehr", "gut"],
-          correct: "Die Idee der Kollegin war sehr gut",
-          hint: "Nápad kolegyne bol veľmi dobrý.",
-          explanation: "'der Kollegin' = genitív F. Genitívny člen F = 'der' (rovnako ako datív F, pozor na kontext!)."
-        },
-        {
-          words: ["Das", "Auto", "meines", "Vaters", "ist", "blau"],
-          correct: "Das Auto meines Vaters ist blau",
-          hint: "Auto môjho otca je modré.",
-          explanation: "'meines Vaters' = posesívny genitív M/N. 'mein' → 'meines' v genitíve M/N. 'Vater' dostáva -s."
+          question: "Warum ist die Mülltrennung in Wien wichtig?",
+          options: [
+            "Weil die Stadt Geld sparen will.",
+            "Weil die Stadt die Umwelt schützen will.",
+            "Weil Jana es nicht versteht.",
+            "Weil es eine neue Regel ist."
+          ],
+          answer: 1,
+          explanation: "Luisa erklärt: 'Die Stadt will die Umwelt schützen.'"
         }
       ]
     },
     {
       type: "speaking",
-      instruction: "Počúvaj nemeckú vetu. Potom hovor nahlas a skontroluj sa.",
+      instruction: "Höre zu und sprich nach.",
       phrases: [
         {
-          de: "Die Lage des Büros ist sehr gut.",
-          sk: "Poloha kancelárie je veľmi dobrá.",
-          tip: "des Büros: Gen. M/N = des + -s"
+          de: "der Müll",
+          sk: "odpad",
+          tip: "M [m], ü [y] - pery ako na [u], ale vyslov [i]."
         },
         {
-          de: "Der Name des Chefs ist Hoffmann.",
-          sk: "Meno šéfa je Hoffmann.",
-          tip: "des Chefs: Chef→Chefs genitív"
+          de: "die Tonne",
+          sk: "kontajner",
+          tip: "o [o], e [ə] - neurčitý samohláskový zvuk."
         },
         {
-          de: "Das Ende des Kurses ist nächste Woche.",
-          sk: "Koniec kurzu je budúci týždeň.",
-          tip: "des Kurses: K-OOR-ses, Gen. -es"
+          de: "das Glas",
+          sk: "sklo",
+          tip: "s [g] - ako v slove "
         },
         {
-          de: "Die Idee der Kollegin war toll.",
-          sk: "Nápad kolegyne bol skvelý.",
-          tip: "der Kollegin: Gen.F = der (nie des!)"
+          de: "sortieren",
+          sk: "triediť",
+          tip: "s [z], ie [i:], r [r] - jemne vibrujúce."
         },
         {
-          de: "Das Auto meines Vaters ist neu.",
-          sk: "Auto môjho otca je nové.",
-          tip: "meines Vaters: poss. Gen., mein→meines"
+          de: "die Umwelt",
+          sk: "životné prostredie",
+          tip: "U [ʊ], m [m], w [v], e [ə]."
+        },
+        {
+          de: "der Verkehr",
+          sk: "doprava",
+          tip: "V [f], e [ɛ], hr [hʀ]."
+        },
+        {
+          de: "Wo muss das hin?",
+          sk: "Kam to patrí?",
+          tip: "W [v], ss [s], muss [mʊs]."
+        },
+        {
+          de: "Das gehört in die Tonne.",
+          sk: "To patrí do kontajnera.",
+          tip: "gehört [gəˈhøːɐ̯t], in [ɪn], die [di:]."
+        }
+      ]
+    },
+    {
+      type: "truefalse",
+      instruction: "Rozhodnite, či sú nasledujúce tvrdenia pravdivé (wahr) alebo nepravdivé (falsch).",
+      statements: [
+        {
+          statement: "Der Bus fährt zur Haltestelle.",
+          isTrue: true,
+          explanation: "Autobus jazdí na zastávku, čo je bežná situácia v doprave."
+        },
+        {
+          statement: "Man muss den Restmüll in die Bio-Tonne sortieren.",
+          isTrue: false,
+          explanation: "Zmesový odpad (Restmüll) nepatrí do bio-kontajnera. Patrí do kontajnera na zmesový odpad."
+        },
+        {
+          statement: "Das Papier gehört in die Tonne für Glas.",
+          isTrue: false,
+          explanation: "Papier sa separuje do kontajnera na papier, nie do kontajnera na sklo."
+        },
+        {
+          statement: "Die Umwelt schützen ist wichtig.",
+          isTrue: true,
+          explanation: "Chrániť životné prostredie je dôležité, toto je správna gramatická konštrukcia."
+        },
+        {
+          statement: "Die Straßenbahn braucht keine Fahrkarte.",
+          isTrue: false,
+          explanation: "Na električku (Straßenbahn) je zvyčajne potrebná cestovná karta (Fahrkarte)."
+        }
+      ]
+    },
+    {
+      type: "dictation",
+      instruction: "Napíšte vety, ktoré počujete.",
+      sentences: [
+        {
+          de: "Trenne den Müll.",
+          sk: "Separuj odpad."
+        },
+        {
+          de: "Das Glas kommt hier rein.",
+          sk: "Sklo patrí sem."
+        },
+        {
+          de: "Ich brauche eine Fahrkarte.",
+          sk: "Potrebujem lístok."
+        },
+        {
+          de: "Bitte schützen Sie die Umwelt.",
+          sk: "Prosím, chráňte životné prostredie."
+        },
+        {
+          de: "Wo muss die Verpackung einsortiert werden?",
+          sk: "Kam treba zatriediť obal?"
+        }
+      ]
+    },
+    {
+      type: "categorysort",
+      instruction: "Roztrieďte slová do správnych kategórií.",
+      categories: [
+        {
+          name: "Odpad",
+          color: "rose",
+          words: [
+            "der Müll",
+            "der Abfall",
+            "der Restmüll",
+            "das Glas",
+            "das Papier"
+          ]
+        },
+        {
+          name: "Doprava",
+          color: "blue",
+          words: [
+            "der Bus",
+            "die U-Bahn",
+            "die Straßenbahn",
+            "die Haltestelle",
+            "die Fahrkarte"
+          ]
+        },
+        {
+          name: "Činnosti",
+          color: "green",
+          words: [
+            "sortieren",
+            "trennen",
+            "schützen",
+            "fahren",
+            "brauchen"
+          ]
+        }
+      ],
+      explanation: "Slová sú rozdelené do kategórií podľa ich významu: odpad, doprava a činnosti s nimi spojené."
+    },
+    {
+      type: "translation",
+      instruction: "Preložte slovenské vety do nemčiny.",
+      sentences: [
+        {
+          sk: "Kam patrí tento odpad?",
+          answer: "Wohin gehört dieser Abfall?",
+          hint: "Wohin, gehören",
+          explanation: "Použitie otázky 'Wohin' na smer a slovesa 'gehören' (patriť) v 3. osobe singuláru."
+        },
+        {
+          sk: "Musíme separovať papier.",
+          answer: "Wir müssen Papier trennen.",
+          hint: "müssen, trennen",
+          explanation: "Použitie modálneho slovesa 'müssen' (musieť) a slovesa 'trennen' (separovať) v infinitíve na konci vety."
+        },
+        {
+          sk: "Prosím, nehadžte smeti na zem.",
+          answer: "Bitte werfen Sie keinen Müll auf den Boden.",
+          hint: "werfen, keinen Müll",
+          explanation: "Použitie formálneho Imperatívu 'werfen Sie' a záporu 'keinen Müll'."
+        },
+        {
+          sk: "Chcel by som ísť autobusom.",
+          answer: "Ich würde gerne mit dem Bus fahren.",
+          hint: "würde, fahren",
+          explanation: "Použitie Konjunktívu II s 'würde' na vyjadrenie želania a slovesa 'fahren' (ísť) v infinitíve."
+        }
+      ]
+    },
+    {
+      type: "conjugation",
+      instruction: "Doplňte správne tvary slovesa 'brauchen' (potrebovať) v prítomnom čase.",
+      verbs: [
+        {
+          infinitive: "brauchen",
+          translation: "potrebovať",
+          forms: [
+            {
+              pronoun: "ich",
+              correct: "brauche"
+            },
+            {
+              pronoun: "du",
+              correct: "brauchst"
+            },
+            {
+              pronoun: "er/sie/es",
+              correct: "braucht"
+            },
+            {
+              pronoun: "wir",
+              correct: "brauchen"
+            },
+            {
+              pronoun: "ihr",
+              correct: "braucht"
+            },
+            {
+              pronoun: "sie/Sie",
+              correct: "brauchen"
+            }
+          ],
+          note: "Sloveso 'brauchen' je pravidelné sloveso v nemčine. V prítomnom čase sa časuje podľa štandardných pravidiel."
         }
       ]
     }
   ],
-  reviewWords: ["der (Relativpronomen M)", "die (Relativpronomen F)", "das (Relativpronomen N)", "den (Relativpronomen M Akk.)", "was (po alles/nichts/etwas)", "bekannt", "beliebt", "empfehlen"],
-  lessonNotes: "Vzťažná veta: Podstatné meno + Rel. zámeno (=rod podstatného mena!) + opis + SLOVESO NA KONCI. Nom: der/die/das/die. Akk: den/die/das/die. Po alles/nichts/etwas → was! Vzťažná veta je vždy oddelená čiarkou."
+  reviewWords: []
 };
