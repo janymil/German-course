@@ -1,0 +1,2499 @@
+{
+  "ebook_01_ch_01": [
+    {
+      "de": "Ein Kaffee, ein Croissant mit Marmelade- frisch von der Bäckerei.",
+      "sk": "Káva, croissant s lekvárom - čerstvé z pekárne.",
+      "format": "normal",
+      "startTime": 14.96,
+      "endTime": 22.6
+    },
+    {
+      "de": "Es ist Dienstagvormittag, 11 Uhr, und ich mache eine kleine Pause.",
+      "sk": "Je utorok predpoludním, 11 hodín, a ja si robím malú prestávku.",
+      "format": "normal",
+      "startTime": 22.6,
+      "endTime": 29.24
+    },
+    {
+      "de": "Ich sitze in der Sonne und frühstücke.",
+      "sk": "Sedím na slnku a raňajkujem.",
+      "format": "normal",
+      "startTime": 30,
+      "endTime": 36.32
+    },
+    {
+      "de": "Das Leben ist schön.",
+      "sk": "Život je krásny.",
+      "format": "normal",
+      "startTime": 30,
+      "endTime": 36.32
+    },
+    {
+      "de": "Aber dann kommt die Post und ich bekomme diesen Brief.",
+      "sk": "Ale potom príde pošta a ja dostanem tento list.",
+      "format": "normal",
+      "endParagraph": true,
+      "startTime": 36.32,
+      "endTime": 41.52
+    },
+    {
+      "de": "Ich habe es getan.",
+      "sk": "Urobil som to.",
+      "format": "letter",
+      "startTime": 41.52,
+      "endTime": 48.56
+    },
+    {
+      "de": "Ich habe einen Menschen ermordet.",
+      "sk": "Zavraždil som človeka.",
+      "format": "letter",
+      "startTime": 41.52,
+      "endTime": 48.56
+    },
+    {
+      "de": "Keiner hat mich gesehen, keiner gehört.",
+      "sk": "Nikto ma nevidel, nikto nepočul.",
+      "format": "letter",
+      "startTime": 48.56,
+      "endTime": 55.72
+    },
+    {
+      "de": "Auch die Polizei weiss nichts.",
+      "sk": "Ani polícia nič nevie.",
+      "format": "letter",
+      "startTime": 48.56,
+      "endTime": 55.72
+    },
+    {
+      "de": "Und du, Fender?",
+      "sk": "A ty, Fender?",
+      "format": "letter",
+      "startTime": 55.72,
+      "endTime": 63.08
+    },
+    {
+      "de": "Bist du wirklich so gut?",
+      "sk": "Si naozaj taký dobrý?",
+      "format": "letter",
+      "startTime": 55.72,
+      "endTime": 63.08
+    },
+    {
+      "de": "Schneller als die Polizei?",
+      "sk": "Rýchlejší ako polícia?",
+      "format": "letter",
+      "startTime": 55.72,
+      "endTime": 63.08
+    },
+    {
+      "de": "Findest du mich?",
+      "sk": "Nájdeš ma?",
+      "format": "letter",
+      "startTime": 63.08,
+      "endTime": 69
+    },
+    {
+      "de": "Viele Grüsse, der Mörder",
+      "sk": "S pozdravom, vrah",
+      "format": "letter_end",
+      "startTime": 63.08,
+      "endTime": 69
+    },
+    {
+      "de": "Was ist das?",
+      "sk": "Čo to je?",
+      "format": "normal",
+      "startTime": 69,
+      "endTime": 76.88
+    },
+    {
+      "de": "Soll das lustig sein?",
+      "sk": "Má to byť vtipné?",
+      "format": "normal",
+      "startTime": 69,
+      "endTime": 76.88
+    },
+    {
+      "de": "Wer schreibt mir da?",
+      "sk": "Kto mi to píše?",
+      "format": "normal",
+      "startTime": 69,
+      "endTime": 76.88
+    },
+    {
+      "de": "Wirklich ein Mörder?",
+      "sk": "Naozaj nejaký vrah?",
+      "format": "normal",
+      "startTime": 76.88,
+      "endTime": 82.6
+    },
+    {
+      "de": "Das kann ich nicht glauben.",
+      "sk": "Tomu nemôžem uveriť.",
+      "format": "normal",
+      "startTime": 76.88,
+      "endTime": 82.6
+    },
+    {
+      "de": "Und warum ich?",
+      "sk": "A prečo ja?",
+      "format": "normal",
+      "startTime": 82.96,
+      "endTime": 88.8
+    },
+    {
+      "de": "Warum schreibt er gerade mir?",
+      "sk": "Prečo píše práve mne?",
+      "format": "normal",
+      "startTime": 82.96,
+      "endTime": 88.8
+    },
+    {
+      "de": "Mein Kaffee wird langsam kalt.",
+      "sk": "Moja káva pomaly chladne.",
+      "format": "normal",
+      "startTime": 88.8,
+      "endTime": 97.04
+    },
+    {
+      "de": "Auch mein Croissant will ich nicht mehr essen.",
+      "sk": "Ani môj croissant už nechcem jesť.",
+      "format": "normal",
+      "startTime": 88.8,
+      "endTime": 97.04
+    },
+    {
+      "de": "Ich lese den Brief noch einmal.",
+      "sk": "Čítam ten list ešte raz.",
+      "format": "normal",
+      "startTime": 97.04,
+      "endTime": 102.44
+    },
+    {
+      "de": "Aber ich finde nichts.",
+      "sk": "Ale nenachádzam nič.",
+      "format": "normal",
+      "startTime": 97.04,
+      "endTime": 102.44
+    },
+    {
+      "de": "Kein Name, kein Datum, keine Antwort auf die Fragen Wer? und Warum?",
+      "sk": "Žiadne meno, žiadny dátum, žiadna odpoveď na otázky Kto? a Prečo?",
+      "format": "normal",
+      "endParagraph": true,
+      "startTime": 102.44,
+      "endTime": 110.64
+    },
+    {
+      "de": "Ich denke an die Webseite für mein Detektivbüro:",
+      "sk": "Myslím na webstránku mojej detektívnej kancelárie:",
+      "format": "normal",
+      "endParagraph": true,
+      "startTime": 110.96,
+      "endTime": 115.52
+    },
+    {
+      "de": "Detektivbüro M. Fender - Schneller als die Polizei ...",
+      "sk": "Detektívna kancelária M. Fender - Rýchlejší ako polícia ...",
+      "format": "website_title",
+      "startTime": 115.52,
+      "endTime": 121.84
+    },
+    {
+      "de": "Brauchen Sie wichtige Informationen? -> Fragen Sie Fender!",
+      "sk": "Potrebujete dôležité informácie? -> Spýtajte sa Fendera!",
+      "format": "website",
+      "startTime": 121.84,
+      "endTime": 127.8
+    },
+    {
+      "de": "Haben Sie etwas verloren? -> Fragen Sie Fender!",
+      "sk": "Niečo ste stratili? -> Spýtajte sa Fendera!",
+      "format": "website",
+      "startTime": 127.8,
+      "endTime": 132.72
+    },
+    {
+      "de": "Kann die Polizei ein Problem nicht lösen? -> Fragen Sie Fender!",
+      "sk": "Dokáže polícia nevyriešiť nejaký problém? -> Spýtajte sa Fendera!",
+      "format": "website_end",
+      "startTime": 132.72,
+      "endTime": 138.56
+    },
+    {
+      "de": "Der Briefschreiber kennt mich also.",
+      "sk": "Pisateľ listu ma teda pozná.",
+      "format": "normal",
+      "startTime": 141.24,
+      "endTime": 147.6
+    },
+    {
+      "de": "Oder hat er nur meine Webseite gelesen?",
+      "sk": "Alebo čítal len moju webstránku?",
+      "format": "normal",
+      "startTime": 141.24,
+      "endTime": 147.6
+    },
+    {
+      "de": "Schneller als die Polizei…",
+      "sk": "Rýchlejší ako polícia…",
+      "format": "normal",
+      "startTime": 147.6,
+      "endTime": 153.08
+    },
+    {
+      "de": "Und warum sage ich er?",
+      "sk": "A prečo hovorím on?",
+      "format": "normal",
+      "startTime": 147.6,
+      "endTime": 153.08
+    },
+    {
+      "de": "Es kann ja auch eine Frau sein.",
+      "sk": "Môže to byť predsa aj žena.",
+      "format": "normal",
+      "endParagraph": true,
+      "startTime": 153.08,
+      "endTime": 160.92
+    },
+    {
+      "de": "Ich sehe mir den Brief noch einmal an.",
+      "sk": "Pozriem si list ešte raz.",
+      "format": "normal",
+      "startTime": 153.08,
+      "endTime": 160.92
+    },
+    {
+      "de": "Aha, von der Post im 8. Bezirk in Wien.",
+      "sk": "Aha, z pošty v 8. obvode vo Viedni.",
+      "format": "normal",
+      "startTime": 160.92,
+      "endTime": 167.52
+    },
+    {
+      "de": "Aber der Mörder ist sicher nicht dumm.",
+      "sk": "Ale vrah určite nie je hlúpy.",
+      "format": "normal",
+      "startTime": 167.52,
+      "endTime": 174.4
+    },
+    {
+      "de": "Er bringt den Brief nicht bei seiner Wohnung zur Post.",
+      "sk": "Neodnesie list na poštu pri svojom byte.",
+      "format": "normal",
+      "startTime": 167.52,
+      "endTime": 179.2
+    },
+    {
+      "de": "Das hilft mir also auch nicht.",
+      "sk": "To mi teda tiež nepomôže.",
+      "format": "normal",
+      "endParagraph": true,
+      "startTime": 174.4,
+      "endTime": 179.2
+    },
+    {
+      "de": "Ich mache meinen Computer an und gehe ins Internet.",
+      "sk": "Zapnem si počítač a idem na internet.",
+      "format": "normal",
+      "startTime": 179.2,
+      "endTime": 185
+    },
+    {
+      "de": "Vielleicht ist gar kein Mord passiert.",
+      "sk": "Možno sa žiadna vražda vôbec nestala.",
+      "format": "normal",
+      "startTime": 185,
+      "endTime": 192.84
+    },
+    {
+      "de": "Dann muss ich nicht länger an die Sache denken.",
+      "sk": "Potom už nemusím nad tou vecou ďalej premýšľať.",
+      "format": "normal",
+      "startTime": 185,
+      "endTime": 192.84
+    },
+    {
+      "de": "Ich google nach Mord, Wien, Juni.",
+      "sk": "Vyhľadám na Googli vražda, Viedeň, jún.",
+      "format": "normal",
+      "startTime": 192.84,
+      "endTime": 200.36
+    },
+    {
+      "de": "Es kommen viele Links und ich lese in einer Zeitung:",
+      "sk": "Vyskočí veľa odkazov a ja si prečítam v novinách:",
+      "format": "normal",
+      "endParagraph": true,
+      "startTime": 200.36,
+      "endTime": 208.84
+    },
+    {
+      "de": "Mord in Wien",
+      "sk": "Vražda vo Viedni",
+      "format": "newspaper_title",
+      "startTime": 200.36,
+      "endTime": 208.84
+    },
+    {
+      "de": "Gestern am frühen Morgen hat es in Wien am Gallitzinberg einen Mord gegeben.",
+      "sk": "Včera skoro ráno sa vo Viedni na Gallitzinbergu stala vražda.",
+      "format": "newspaper",
+      "startTime": 208.84,
+      "endTime": 216.88
+    },
+    {
+      "de": "Ein Mann hat eine tote Frau gefunden.",
+      "sk": "Istý muž našiel mŕtvu ženu.",
+      "format": "newspaper",
+      "startTime": 216.88,
+      "endTime": 223.28
+    },
+    {
+      "de": "Er erzählt:",
+      "sk": "Hovorí:",
+      "format": "newspaper",
+      "startTime": 216.88,
+      "endTime": 223.28
+    },
+    {
+      "de": "Ich gehe spazieren, so wie jeden Tag, da sehe ich:",
+      "sk": "Idem sa prejsť, tak ako každý deň, a vtom vidím:",
+      "format": "newspaper",
+      "startTime": 223.28,
+      "endTime": 231.36
+    },
+    {
+      "de": "Bei den Bäumen liegt ein Mensch.",
+      "sk": "Pri stromoch leží človek.",
+      "format": "newspaper",
+      "startTime": 223.28,
+      "endTime": 231.36
+    },
+    {
+      "de": "Ich weiß sofort:",
+      "sk": "Viem okamžite:",
+      "format": "newspaper",
+      "startTime": 231.36,
+      "endTime": 240.2
+    },
+    {
+      "de": "Das ist nicht gut. Also gehe ich hin und finde Klara. Ich kann es nicht glauben!",
+      "sk": "To nie je dobré. Tak tam idem a nájdem Kláru. Nemôžem tomu uveriť!",
+      "format": "newspaper",
+      "startTime": 231.36,
+      "endTime": 246.84
+    },
+    {
+      "de": "Die tote Frau ist die 22-jährige Klara Kainz.",
+      "sk": "Tou mŕtvou ženou je 22-ročná Klara Kainz.",
+      "format": "newspaper",
+      "startTime": 240.2,
+      "endTime": 246.84
+    },
+    {
+      "de": "Sie war Studentin und hat nicht weit von dort gewohnt.",
+      "sk": "Bola študentka a nebývala ďaleko odtiaľ.",
+      "format": "newspaper",
+      "startTime": 246.84,
+      "endTime": 253.16
+    },
+    {
+      "de": "Wer ist der Mörder?",
+      "sk": "Kto je vrah?",
+      "format": "newspaper",
+      "startTime": 253.16,
+      "endTime": 258.76
+    },
+    {
+      "de": "Und warum hat er es getan?",
+      "sk": "A prečo to urobil?",
+      "format": "newspaper",
+      "startTime": 253.16,
+      "endTime": 258.76
+    },
+    {
+      "de": "Die Polizei weiß noch nichts.",
+      "sk": "Polícia ešte nič nevie.",
+      "format": "newspaper_end",
+      "startTime": 258.76,
+      "endTime": 263.28
+    },
+    {
+      "de": "Es gibt also wirklich einen Mord.",
+      "sk": "Existuje teda naozaj vražda.",
+      "format": "normal",
+      "startTime": 264,
+      "endTime": 272.04
+    },
+    {
+      "de": "Aber meint der Briefeschreiber diesen Mord?",
+      "sk": "Ale myslí pisateľ listu túto vraždu?",
+      "format": "normal",
+      "startTime": 264,
+      "endTime": 272.04
+    },
+    {
+      "de": "Ich suche noch ein bisschen im Internet, aber ich finde keinen anderen Mord in Wien.",
+      "sk": "Ešte chvíľu hľadám na internete, ale nenájdem vo Viedni žiadnu inú vraždu.",
+      "format": "normal",
+      "startTime": 272.04,
+      "endTime": 277.72
+    },
+    {
+      "de": "Klara Kainz also.",
+      "sk": "Takže Klara Kainz.",
+      "format": "normal",
+      "startTime": 277.72,
+      "endTime": 283
+    },
+    {
+      "de": "Ich habe einen Menschen ermordet.",
+      "sk": "Zavraždil som človeka.",
+      "format": "normal",
+      "startTime": 283.24,
+      "endTime": 291.56
+    },
+    {
+      "de": "Und die Polizei hat noch keinen Verdacht.",
+      "sk": "A polícia zatiaľ nemá žiadne podozrenie.",
+      "format": "normal",
+      "startTime": 283.24,
+      "endTime": 291.56
+    },
+    {
+      "de": "Ist das wirklich ein Fall für Fender?",
+      "sk": "Je to naozaj prípad pre Fendera?",
+      "format": "normal",
+      "endParagraph": true,
+      "startTime": 291.6,
+      "endTime": 296.28
+    },
+    {
+      "de": "Und wenn ein anderer den Brief geschrieben hat?",
+      "sk": "A čo ak ten list napísal niekto iný?",
+      "format": "normal",
+      "startTime": 296.48,
+      "endTime": 299.96
+    },
+    {
+      "de": "Wenn es gar nicht der Mörder war?",
+      "sk": "Ak to vôbec nebol vrah?",
+      "format": "normal",
+      "startTime": 299.96,
+      "endTime": 307
+    },
+    {
+      "de": "Vielleicht lacht er gerade über mich?",
+      "sk": "Možno sa na mne práve teraz smeje?",
+      "format": "normal",
+      "startTime": 299.96,
+      "endTime": 307
+    },
+    {
+      "de": "Egal, ich will jetzt wissen: Was ist hier los?",
+      "sk": "To je jedno, chcem to teraz vedieť: Čo sa tu deje?",
+      "format": "normal",
+      "startTime": 307,
+      "endTime": 313.32
+    },
+    {
+      "de": "Ich bin einfach neugierig.",
+      "sk": "Som jednoducho zvedavý.",
+      "format": "normal",
+      "startTime": 313.32,
+      "endTime": 320.76
+    },
+    {
+      "de": "Deshalb bin ich ja auch Detektiv.",
+      "sk": "Preto som predsa aj detektív.",
+      "format": "normal",
+      "endParagraph": true,
+      "startTime": 313.32,
+      "endTime": 320.76
+    },
+    {
+      "de": "Ich gehe wieder ins Internet und suche noch mehr Informationen über den Mord.",
+      "sk": "Znovu idem na internet a hľadám ešte viac informácií o vražde.",
+      "format": "normal",
+      "startTime": 320.8,
+      "endTime": 327.72
+    },
+    {
+      "de": "Dann schreibe ich alles auf ein Papier:",
+      "sk": "Potom si všetko zapíšem na papier:",
+      "format": "normal",
+      "endParagraph": true,
+      "startTime": 327.72,
+      "endTime": 332.56
+    },
+    {
+      "de": "Klara Kainz, 22 Jahre alt, Sportstudentin an der Universität Wien",
+      "sk": "Klara Kainz, 22 rokov, študentka športu na Viedenskej univerzite",
+      "format": "note",
+      "startTime": 333.04,
+      "endTime": 349.56
+    },
+    {
+      "de": "Fußballspielerin: Mitglied in einem guten Fußballclub, dem FC Vienna Women",
+      "sk": "Futbalistka: Členka v dobrom futbalovom klube, FC Vienna Women",
+      "format": "note",
+      "startTime": 349.76,
+      "endTime": 364.4
+    },
+    {
+      "de": "Tatort: Gallitzinberg, 16. Bezirk in Wien",
+      "sk": "Miesto činu: Gallitzinberg, 16. obvod vo Viedni",
+      "format": "note",
+      "startTime": 364.4,
+      "endTime": 375.52
+    },
+    {
+      "de": "die Polizei hat noch keinen Verdacht",
+      "sk": "polícia ešte nemá podozrenie",
+      "format": "note_end",
+      "startTime": 375.68,
+      "endTime": 384.04
+    },
+    {
+      "de": "Also los, Fender, schneller als die Polizei.",
+      "sk": "Tak poďme na to, Fender, rýchlejší ako polícia.",
+      "format": "normal",
+      "startTime": 385.68,
+      "endTime": 391.88
+    },
+    {
+      "de": "Was soll ich jetzt tun?",
+      "sk": "Čo by som mal teraz robiť?",
+      "format": "normal",
+      "startTime": 391.88,
+      "endTime": 398
+    },
+    {
+      "de": "Ich gehe am besten gleich zum Tatort auf den Gallitzinberg.",
+      "sk": "Najlepšie bude, ak pôjdem hneď na miesto činu na Gallitzinberg.",
+      "format": "normal",
+      "startTime": 391.88,
+      "endTime": 398
+    },
+    {
+      "de": "Klar, der Mord war gestern, viel kann man dort nicht mehr finden, aber vielleicht habe ich ja Glück...",
+      "sk": "Jasné, vražda sa stala včera, veľa sa tam už nedá nájsť, ale možno budem mať šťastie...",
+      "format": "normal",
+      "endParagraph": true,
+      "startTime": 398,
+      "endTime": 410.88
+    }
+  ],
+  "ebook_01_ch_02": [
+    {
+      "de": "Der Blick über Wien ist sehr schön.",
+      "sk": "Pohľad na Viedeň je veľmi pekný.",
+      "format": "normal",
+      "startTime": 8.02,
+      "endTime": 14.72
+    },
+    {
+      "de": "Von hier aus, vom Gallitzinberg, sieht man die ganze Stadt: den Stephansdom, die Hofburg, das Schloss Schönbrunn ...",
+      "sk": "Odtiaľto z Gallitzinbergu je vidieť celé mesto: Dóm svätého Štefana, Hofburg, zámok Schönbrunn...",
+      "format": "normal",
+      "startTime": 0.32,
+      "endTime": 14.72
+    },
+    {
+      "de": "Und der Gallitzinberg ist auch ein schöner Platz: ein Park mit alten Bäumen und viel Grün.",
+      "sk": "A Gallitzinberg je tiež krásne miesto: park so starými stromami a množstvom zelene.",
+      "format": "normal",
+      "endParagraph": true,
+      "startTime": 14.72,
+      "endTime": 22.84
+    },
+    {
+      "de": "Stopp ...",
+      "sk": "Zastav ...",
+      "format": "normal",
+      "startTime": 28.64,
+      "endTime": 37
+    },
+    {
+      "de": "Ich bin nicht als Tourist hier.",
+      "sk": "Nie som tu ako turista.",
+      "format": "normal",
+      "startTime": 28.64,
+      "endTime": 37
+    },
+    {
+      "de": "Ich will einen Mord aufklären.",
+      "sk": "Chcem objasniť vraždu.",
+      "format": "normal",
+      "endParagraph": true,
+      "startTime": 37,
+      "endTime": 41.64
+    },
+    {
+      "de": "Hier ist Klara Kainz also gestorben, gestern am frühen Morgen, da, bei den Bäumen.",
+      "sk": "Tu teda Klara Kainz zomrela, včera skoro ráno, tam, pri stromoch.",
+      "format": "normal",
+      "startTime": 41.64,
+      "endTime": 51.56
+    },
+    {
+      "de": "Vielleicht hat der Mörder schon auf sie gewartet ...",
+      "sk": "Možno tu na ňu vrah už čakal ...",
+      "format": "normal",
+      "endParagraph": true,
+      "startTime": 51.56,
+      "endTime": 55.88
+    },
+    {
+      "de": "Es gibt hier auch ein Café und da gehe ich jetzt hin.",
+      "sk": "Je tu aj kaviareň a tam teraz pôjdem.",
+      "format": "normal",
+      "startTime": 55.88,
+      "endTime": 60.84
+    },
+    {
+      "de": "Erstens trinke ich immer gern Kaffee, und zweitens kann ich dort vielleicht interessante Dinge hören.",
+      "sk": "Po prvé vždy si rád dám kávu, a po druhé môžem tam možno počuť zaujímavé veci.",
+      "format": "normal",
+      "startTime": 60.84,
+      "endTime": 70
+    },
+    {
+      "de": "Bei Kaffee und Kuchen sprechen die Leute gern und viel.",
+      "sk": "Pri káve a koláči ľudia rozprávajú radi a veľa.",
+      "format": "normal",
+      "endParagraph": true,
+      "startTime": 70,
+      "endTime": 77.84
+    },
+    {
+      "de": "Hier sitzen viele Touristen, aber ich suche Leute aus Wien.",
+      "sk": "Sedí tu veľa turistov, ale ja hľadám ľudí z Viedne.",
+      "format": "normal",
+      "startTime": 77.84,
+      "endTime": 83.64
+    },
+    {
+      "de": "In einer Ecke sehe ich drei alte Leute, zwei Männer und eine Frau.",
+      "sk": "V jednom rohu vidím troch starších ľudí, dvoch mužov a jednu ženu.",
+      "format": "normal",
+      "startTime": 83.64,
+      "endTime": 89.96
+    },
+    {
+      "de": "Sie trinken Kaffee, reden, und sie sehen nicht durch die Fenster zum Schloss Schönbrunn und zum Stephansdom.",
+      "sk": "Pijú kávu, rozprávajú sa a nepozerajú sa cez okno na zámok Schönbrunn a Dóm sv. Štefana.",
+      "format": "normal",
+      "startTime": 89.96,
+      "endTime": 99.8
+    },
+    {
+      "de": "Das sind sicher keine Touristen.",
+      "sk": "To určite nie sú turisti.",
+      "format": "normal",
+      "startTime": 99.8,
+      "endTime": 105.8
+    },
+    {
+      "de": "Das sind Wiener.",
+      "sk": "To sú Viedenčania.",
+      "format": "normal",
+      "endParagraph": true,
+      "startTime": 99.8,
+      "endTime": 105.8
+    },
+    {
+      "de": "Ich setze mich an den Nebentisch, bestelle einen Kaffee und höre zu.",
+      "sk": "Sadnem si k vedľajšiemu stolu, objednám si kávu a počúvam.",
+      "format": "normal",
+      "endParagraph": true,
+      "startTime": 105.8,
+      "endTime": 113.4
+    },
+    {
+      "de": "Die alten Leute sprechen über das Wetter und dann über ihre Familien.",
+      "sk": "Starší ľudia hovoria o počasí a potom o svojich rodinách.",
+      "format": "normal",
+      "startTime": 113.4,
+      "endTime": 119.44
+    },
+    {
+      "de": "Mein Kaffee kommt.",
+      "sk": "Prichádza moja káva.",
+      "format": "normal",
+      "endParagraph": true,
+      "startTime": 119.44,
+      "endTime": 121.72
+    },
+    {
+      "de": "„Herr Ober, bitte noch einen Schokoladenkuchen.“",
+      "sk": "„Pán vrchný, prosím ešte jeden čokoládový koláč.“",
+      "format": "dialogue_start",
+      "startTime": 121.72,
+      "endTime": 125.56
+    },
+    {
+      "de": "„Kommt sofort.“",
+      "sk": "„Hneď to bude.“",
+      "format": "dialogue_end",
+      "startTime": 125.56,
+      "endTime": 128.64
+    },
+    {
+      "de": "Jetzt sprechen sie über das Einkaufen.",
+      "sk": "Teraz sa rozprávajú o nakupovaní.",
+      "format": "normal",
+      "startTime": 128.64,
+      "endTime": 132.2
+    },
+    {
+      "de": "Der Kuchen kommt.",
+      "sk": "Prichádza koláč.",
+      "format": "normal",
+      "startTime": 132.2,
+      "endTime": 134.52
+    },
+    {
+      "de": "Kann ich hier wirklich etwas Neues über den Mord hören?",
+      "sk": "Môžem tu naozaj počuť niečo nové o vražde?",
+      "format": "normal",
+      "startTime": 134.52,
+      "endTime": 139.28
+    },
+    {
+      "de": "War das eine gute Idee?",
+      "sk": "Bol to dobrý nápad?",
+      "format": "normal",
+      "endParagraph": true,
+      "startTime": 139.28,
+      "endTime": 143.12
+    },
+    {
+      "de": "„Die Klara, ja, das ist schrecklich“,",
+      "sk": "„Tá Klára, áno, to je hrozné,“",
+      "format": "dialogue_start",
+      "startTime": 143.12,
+      "endTime": 149.68
+    },
+    {
+      "de": "sagt der Mann mit der Glatze.",
+      "sk": "hovorí muž s plešinou.",
+      "format": "normal",
+      "startTime": 143.12,
+      "endTime": 149.68
+    },
+    {
+      "de": "Na also, jetzt wird es interessant.",
+      "sk": "No vidíš, teraz to začína byť zaujímavé.",
+      "format": "normal",
+      "startTime": 149.68,
+      "endTime": 154.08
+    },
+    {
+      "de": "„Hast du sie gut gekannt?“,",
+      "sk": "„Poznal si ju dobre?,“",
+      "format": "dialogue_start",
+      "startTime": 154.08,
+      "endTime": 158.76
+    },
+    {
+      "de": "fragt die Frau neben ihm.",
+      "sk": "pýta sa žena vedľa neho.",
+      "format": "normal",
+      "startTime": 154.08,
+      "endTime": 158.76
+    },
+    {
+      "de": "„Na ja, gut gekannt ... Sie hat nicht weit von hier gewohnt. Man sieht sich auf der Straße, man sagt ,Hallo', man redet über das Wetter ...“",
+      "sk": "„Nuž, dobre poznal... Nebývala ďaleko odtiaľto. Človek sa vidí na ulici, povie si 'Ahoj', porozpráva o počasí...“",
+      "format": "dialogue",
+      "startTime": 158.76,
+      "endTime": 171.56
+    },
+    {
+      "de": "„Weiß die Polizei schon etwas?“,",
+      "sk": "„Vie už polícia niečo?,“",
+      "format": "dialogue",
+      "startTime": 171.56,
+      "endTime": 176.92
+    },
+    {
+      "de": "fragt der Mann mit den grauen Haaren.",
+      "sk": "pýta sa muž s bielymi vlasmi.",
+      "format": "normal",
+      "startTime": 171.56,
+      "endTime": 176.92
+    },
+    {
+      "de": "„Nein, ich glaube nicht. Der Mord war ja erst gestern. So schnell ist die Polizei nicht.“",
+      "sk": "„Nie, myslím, že nie. Vražda bola predsa len včera. Polícia nie je taká rýchla.“",
+      "format": "dialogue",
+      "startTime": 176.92,
+      "endTime": 185.64
+    },
+    {
+      "de": "„Hat Klara einen Freund gehabt?“,",
+      "sk": "„Mala Klára priateľa?,“",
+      "format": "dialogue",
+      "startTime": 185.64,
+      "endTime": 189.88
+    },
+    {
+      "de": "fragt die Frau.",
+      "sk": "pýta sa žena.",
+      "format": "normal",
+      "startTime": 185.64,
+      "endTime": 189.88
+    },
+    {
+      "de": "„Ich glaube, ja“,",
+      "sk": "„Myslím, že áno, „",
+      "format": "dialogue_start",
+      "startTime": 189.88,
+      "endTime": 193.96
+    },
+    {
+      "de": "sagt der Mann mit der Glatze,",
+      "sk": "hovorí muž s plešinou,",
+      "format": "normal",
+      "startTime": 216.16,
+      "endTime": 219.72
+    },
+    {
+      "de": "„manchmal habe ich sie mit einem Mann gesehen. Aber in den letzten Wochen nicht mehr.“",
+      "sk": "„občas som ju videl s nejakým mužom. Ale v posledných týždňoch už nie.“",
+      "format": "dialogue",
+      "startTime": 229.96,
+      "endTime": 240.88
+    },
+    {
+      "de": "„Vielleicht sind sie nicht mehr zusammen?“,",
+      "sk": "„Možno už nie sú spolu?,“",
+      "format": "dialogue",
+      "startTime": 254.32,
+      "endTime": 258.08
+    },
+    {
+      "de": "fragt die Frau.",
+      "sk": "pýta sa žena.",
+      "format": "normal",
+      "startTime": 275.16,
+      "endTime": 278.76
+    },
+    {
+      "de": "„Und jetzt ist der Ex-Freund der Mörder ...?“",
+      "sk": "„A teraz je bývalý priateľ jej vrahom...?“",
+      "format": "dialogue_start",
+      "startTime": 282.52,
+      "endTime": 286.24
+    },
+    {
+      "de": "„Jeden Tag ist sie am Morgen hier laufen gegangen. Immer um sechs Uhr“,",
+      "sk": "„Každý deň tu išla ráno behať. Vždy o šiestej, „",
+      "format": "dialogue",
+      "startTime": 282.52,
+      "endTime": 292.56
+    },
+    {
+      "de": "sagt der Mann mit der Glatze.",
+      "sk": "hovorí muž s plešinou.",
+      "format": "normal",
+      "endParagraph": true,
+      "startTime": 295.52,
+      "endTime": 304.16
+    },
+    {
+      "de": "„Ja, sie war sehr sportlich. Und der Fußball war ihr wichtig“,",
+      "sk": "„Áno, bola veľmi športovo založená. A futbal bol pre ňu dôležitý,“",
+      "format": "dialogue_start",
+      "startTime": 326.28,
+      "endTime": 329.28
+    },
+    {
+      "de": "weiß die Frau.",
+      "sk": "vie žena. ",
+      "format": "normal",
+      "startTime": 356.12,
+      "endTime": 359.4
+    },
+    {
+      "de": "„Ja, immer Training.“",
+      "sk": "„Áno, stále tréning.“",
+      "format": "dialogue",
+      "startTime": 359.4,
+      "endTime": 361.4
+    },
+    {
+      "de": "„Sie war auch in einem guten Club.“",
+      "sk": "„Bola tiež v dobrom klube.“",
+      "format": "dialogue",
+      "startTime": 386.64,
+      "endTime": 389.56
+    },
+    {
+      "de": "„Ja, im nächsten Jahr spielen sie in der Profiliga, habe ich gehört“,",
+      "sk": "„Áno, budúci rok hrajú v profesionálnej lige, to som počula,“",
+      "format": "dialogue",
+      "startTime": 389.56,
+      "endTime": 391.56
+    },
+    {
+      "de": "sagt die Frau.",
+      "sk": "hovorí žena.",
+      "format": "normal",
+      "startTime": 391.56,
+      "endTime": 393.56
+    },
+    {
+      "de": "„Was? Das ist ja ein Ding! Sie steigen auf?“",
+      "sk": "„Čože? To je teda niečo! Majú postupovať vyššie?“",
+      "format": "dialogue_start",
+      "startTime": 393.56,
+      "endTime": 395.56
+    },
+    {
+      "de": "„Klara war der Star in der Mannschaft.“",
+      "sk": "„Klára bola hviezdou v tíme.“",
+      "format": "dialogue",
+      "startTime": 395.56,
+      "endTime": 397.56
+    },
+    {
+      "de": "„Und jetzt der Mord ...“",
+      "sk": "„A teraz tá vražda...“",
+      "format": "dialogue_end",
+      "startTime": 397.56,
+      "endTime": 399.56
+    },
+    {
+      "de": "Dann sagen sie eine Zeit lang nichts mehr.",
+      "sk": "Potom nejaký ten čas nikto nič nehovorí.",
+      "format": "normal",
+      "startTime": 399.56,
+      "endTime": 401.56
+    },
+    {
+      "de": "Ich trinke noch ein bisschen Kaffee und esse meinen Kuchen.",
+      "sk": "Vypijem ešte trochu kávy a zjem svoj koláč.",
+      "format": "normal",
+      "endParagraph": true,
+      "startTime": 401.56,
+      "endTime": 403.56
+    },
+    {
+      "de": "Dann sagt der Mann mit den grauen Haaren:",
+      "sk": "Potom hovorí ten muž s bielymi vlasmi:",
+      "format": "normal",
+      "startTime": 382.12,
+      "endTime": 389.56
+    },
+    {
+      "de": "„Ich habe in letzter Zeit hier oft einen jungen Mann gesehen. Immer am Morgen, wenn Klara hier gelaufen ist.“",
+      "sk": "„V poslednom čase som tu často videl jedného mladého muža. Vždy ráno, keď tu Klára behala.“",
+      "format": "dialogue_start",
+      "startTime": 389.56,
+      "endTime": 391.56
+    },
+    {
+      "de": "„Ihren Freund?“,",
+      "sk": "„Jej priateľa?,“",
+      "format": "dialogue",
+      "startTime": 386.64,
+      "endTime": 389.56
+    },
+    {
+      "de": "fragt die Frau.",
+      "sk": "pýta sa žena.",
+      "format": "normal",
+      "startTime": 389.56,
+      "endTime": 391.56
+    },
+    {
+      "de": "„Das weiß ich nicht, den kenne ich nicht.“",
+      "sk": "„To neviem, toho nepoznám.“",
+      "format": "dialogue_start",
+      "startTime": 382.12,
+      "endTime": 389.56
+    },
+    {
+      "de": "„Vielleicht ist er ja der Mörder!“",
+      "sk": "„Možno je on ten vrah!“",
+      "format": "dialogue",
+      "startTime": 382.12,
+      "endTime": 389.56
+    },
+    {
+      "de": "„Er hat immer dort bei den Bäumen gestanden“,",
+      "sk": "„Stál vždy tam pri stromoch,“",
+      "format": "dialogue",
+      "startTime": 382.12,
+      "endTime": 389.56
+    },
+    {
+      "de": "der Mann zeigt aus dem Fenster.",
+      "sk": "hovel ten muž ukazovať oknom.",
+      "format": "normal",
+      "startTime": 389.56,
+      "endTime": 391.56
+    },
+    {
+      "de": "„Man hat ihn von der Straße nicht gut gesehen. Ja, ich glaube, der hat Klara ...“",
+      "sk": "„Z cesty ho nebolo dobre vidieť. Áno, myslím,, že ten Kláru...“",
+      "format": "dialogue_start",
+      "startTime": 391.56,
+      "endTime": 393.56
+    },
+    {
+      "de": "Keiner sagt etwas.",
+      "sk": "Nikto nehovorí nič.",
+      "format": "normal",
+      "startTime": 393.56,
+      "endTime": 395.56
+    },
+    {
+      "de": "„Trinken wir noch einen Kaffee?“",
+      "sk": "„Dáme si ešte jednu kávu?“",
+      "format": "dialogue_start",
+      "startTime": 395.56,
+      "endTime": 397.56
+    },
+    {
+      "de": "„Ja, gute Idee.“",
+      "sk": "„Áno, dobrý nápad.“",
+      "format": "dialogue",
+      "startTime": 397.56,
+      "endTime": 399.56
+    },
+    {
+      "de": "„Und ich nehme noch einen Kuchen.“",
+      "sk": "„A ja si dám ešte koláč.“",
+      "format": "dialogue",
+      "startTime": 382.12,
+      "endTime": 389.56
+    },
+    {
+      "de": "„Das Wetter ist heute sehr schön ...“",
+      "sk": "„Počasie je dnes ale veľmi pekné...“",
+      "format": "dialogue_end",
+      "startTime": 389.56,
+      "endTime": 391.56
+    },
+    {
+      "de": "Ok, ich glaube, hier höre ich keine neuen Dinge mehr über den Mord ...",
+      "sk": "Ok, myslím si, že tu už nebudem počuť žiadne nové veci o vražde...",
+      "format": "normal",
+      "startTime": 382.12,
+      "endTime": 389.56
+    },
+    {
+      "de": "Klara ist also jeden Morgen hier gelaufen.",
+      "sk": "Klára sem teda pravidelne každé ráno chodila behať.",
+      "format": "normal",
+      "startTime": 389.56,
+      "endTime": 391.56
+    },
+    {
+      "de": "Der unbekannte Mann war oft hier, er hat sich alles genau angesehen.",
+      "sk": "Neznámy muž tu často bol a presne sledoval všetko okolo.",
+      "format": "normal",
+      "endParagraph": true,
+      "startTime": 391.56,
+      "endTime": 393.56
+    },
+    {
+      "de": "In dem großen Park kann man sich leicht verstecken.",
+      "sk": "V tomto veľkom parku je ľahké sa skryť.",
+      "format": "normal",
+      "startTime": 393.56,
+      "endTime": 395.56
+    },
+    {
+      "de": "Und um sechs Uhr ist noch kein Mensch auf der Straße.",
+      "sk": "A o šiestej ešte nikto nie je vonku na ulici.",
+      "format": "normal",
+      "startTime": 395.56,
+      "endTime": 397.56
+    },
+    {
+      "de": "Ist Klaras Freund der Mörder?",
+      "sk": "Je teda Klárin priateľ ten vrah?",
+      "format": "normal",
+      "startTime": 386.64,
+      "endTime": 389.56
+    },
+    {
+      "de": "Oder ein anderer Mann?",
+      "sk": "Alebo iný muž?",
+      "format": "normal",
+      "startTime": 386.64,
+      "endTime": 389.56
+    },
+    {
+      "de": "Ich muss ihn finden.",
+      "sk": "Musím ho nájsť.",
+      "format": "normal",
+      "endParagraph": true,
+      "startTime": 382.12,
+      "endTime": 389.56
+    },
+    {
+      "de": "Aber wenn der Mörder gar kein Mann ist?",
+      "sk": "Ale čo keď vrah vôbec nie je muž?",
+      "format": "normal",
+      "startTime": 389.56,
+      "endTime": 391.56
+    },
+    {
+      "de": "Wenn es eine Frau ist?",
+      "sk": "Ak je to žena?",
+      "format": "normal",
+      "startTime": 391.56,
+      "endTime": 393.56
+    },
+    {
+      "de": "Vielleicht eine Frau aus dem Fußballclub?",
+      "sk": "Možno nejaká žena z futbalového klubu?",
+      "format": "normal",
+      "startTime": 382.12,
+      "endTime": 389.56
+    },
+    {
+      "de": "Klara war dort der Star.",
+      "sk": "Klára tam bola hviezda.",
+      "format": "normal",
+      "startTime": 382.12,
+      "endTime": 389.56
+    },
+    {
+      "de": "Das gefällt wahrscheinlich nicht allen.",
+      "sk": "To sa pravdepodobne všetkým nepáči.",
+      "format": "normal",
+      "startTime": 389.56,
+      "endTime": 391.56
+    },
+    {
+      "de": "Vielleicht will eine andere Spielerin der Star sein?",
+      "sk": "Možno iná hráčka chce byť tou hviezdou?",
+      "format": "normal",
+      "endParagraph": true,
+      "startTime": 382.12,
+      "endTime": 389.56
+    },
+    {
+      "de": "Ich glaube, diesen Fußballclub sehe ich mir jetzt gleich ein bisschen genauer an.",
+      "sk": "Myslím, že sa na tento futbalový klub pôjdem teraz pozrieť trochu bližšie.",
+      "format": "normal",
+      "startTime": 389.56,
+      "endTime": 391.56
+    },
+    {
+      "de": "Vielleicht bekomme ich dort auch Informationen über den Freund oder auch Ex-Freund ...",
+      "sk": "Možno tam tiež získam nejaké informácie o jej priateľovi alebo bývalom priateľovi...",
+      "format": "normal",
+      "endParagraph": true,
+      "startTime": 382.12,
+      "endTime": 389.56
+    },
+    {
+      "de": "„Herr Ober, zahlen bitte!“",
+      "sk": "„Pán vrchný, platím prosím!“",
+      "format": "dialogue_start",
+      "startTime": 389.56,
+      "endTime": 391.36
+    }
+  ],
+  "ebook_01_ch_03": [
+    {
+      "de": "Ich fahre zu Klaras Fußballclub.",
+      "sk": "Cestujem do Klárinho futbalového klubu.",
+      "format": "normal",
+      "startTime": 7,
+      "endTime": 14
+    },
+    {
+      "de": "In der Straßenbahn google ich den FC Vienna Women.",
+      "sk": "V električke vyhľadávam FC Vienna Women na googli.",
+      "format": "normal",
+      "startTime": 7,
+      "endTime": 14
+    },
+    {
+      "de": "Seit einem Jahr gibt es dort eine neue Trainerin.",
+      "sk": "Už rok je tam nová trénerka.",
+      "format": "normal",
+      "startTime": 15,
+      "endTime": 22
+    },
+    {
+      "de": "Mit ihr ist die Mannschaft viel besser geworden.",
+      "sk": "S ňou sa družstvo stalo oveľa lepším.",
+      "format": "normal",
+      "startTime": 15,
+      "endTime": 22
+    },
+    {
+      "de": "Das letzte Spiel vor der Sommerpause ist am Sonntag.",
+      "sk": "Posledný zápas pred letnou prestávkou je v nedeľu.",
+      "format": "normal",
+      "startTime": 22,
+      "endTime": 31
+    },
+    {
+      "de": "Und das müssen sie gewinnen.",
+      "sk": "A ten musia vyhrať.",
+      "format": "normal",
+      "startTime": 22,
+      "endTime": 31
+    },
+    {
+      "de": "Dann steigen sie im nächsten Jahr in die Profiliga auf.",
+      "sk": "Potom postúpia budúci rok do profesionálnej ligy.",
+      "format": "normal",
+      "startTime": 32,
+      "endTime": 36
+    },
+    {
+      "de": "In der neuen Liga ändert sich wahrscheinlich viel:",
+      "sk": "V novej lige sa pravdepodobne veľa vecí zmení:",
+      "format": "normal",
+      "startTime": 37,
+      "endTime": 46
+    },
+    {
+      "de": "Neue Spielerinnen kommen und alte müssen gehen.",
+      "sk": "Nové hráčky prídu a staré musia odísť.",
+      "format": "normal",
+      "endParagraph": true,
+      "startTime": 37,
+      "endTime": 46
+    },
+    {
+      "de": "Ich komme zum Fußballplatz.",
+      "sk": "Prichádzam na futbalové ihrisko.",
+      "format": "normal",
+      "startTime": 46,
+      "endTime": 56
+    },
+    {
+      "de": "Dort trainieren die Spielerinnen für das wichtige Spiel am Sonntag.",
+      "sk": "Tam trénujú hráčky na dôležitý zápas v nedeľu.",
+      "format": "normal",
+      "startTime": 46,
+      "endTime": 56
+    },
+    {
+      "de": "Daneben stehen ein Mann und eine Frau und schauen zu.",
+      "sk": "Vedľa nich stoja jeden muž a jedna žena a prizerajú sa.",
+      "format": "normal",
+      "startTime": 57,
+      "endTime": 62
+    },
+    {
+      "de": "Die kenne ich doch, denke ich.",
+      "sk": "Tých predsa poznám, pomyslím si.",
+      "format": "normal",
+      "startTime": 63,
+      "endTime": 70
+    },
+    {
+      "de": "Die habe ich gerade im Internet gesehen:",
+      "sk": "Tých som akurát práve videl na internete:",
+      "format": "normal",
+      "startTime": 63,
+      "endTime": 70
+    },
+    {
+      "de": "Die Frau ist die neue Trainerin.",
+      "sk": "Tá žena je nová trénerka.",
+      "format": "normal",
+      "startTime": 70,
+      "endTime": 82
+    },
+    {
+      "de": "Und der Mann - er ist älter - ist der Präsident von FC Vienna Women.",
+      "sk": "A ten muž - je starší - je prezident FC Vienna Women.",
+      "format": "normal",
+      "endParagraph": true,
+      "startTime": 70,
+      "endTime": 82
+    },
+    {
+      "de": "„Hallo“,",
+      "sk": "„Ahojte,“",
+      "format": "dialogue_start",
+      "startTime": 82,
+      "endTime": 84
+    },
+    {
+      "de": "sage ich,",
+      "sk": "hovorím,",
+      "format": "normal",
+      "startTime": 83,
+      "endTime": 92
+    },
+    {
+      "de": "„mein Name ist Murkovic. Ich komme von der Zeitung ‚Fußball heute‘. Haben Sie einen Moment Zeit?“",
+      "sk": "„moje meno je Murkovic. Prichádzam z novín 'Futbal dnes'. Máte na mňa chvíľku?“",
+      "format": "dialogue",
+      "startTime": 83,
+      "endTime": 101
+    },
+    {
+      "de": "Ich denke mir: Sicher will keiner im Club mit einem Detektiv sprechen.",
+      "sk": "Pomyslím si: S detektívom sa asi v klube nikto rozprávať nechce.",
+      "format": "normal",
+      "startTime": 92,
+      "endTime": 101
+    },
+    {
+      "de": "Nicht jetzt nach dem Mord.",
+      "sk": "Nie teraz po tej vražde.",
+      "format": "normal",
+      "startTime": 102,
+      "endTime": 111
+    },
+    {
+      "de": "Na ja, mit der Zeitung wollen sie vielleicht auch nicht sprechen.",
+      "sk": "Nuž, s novinami sa možno tiež nechcú rozprávať.",
+      "format": "normal",
+      "startTime": 102,
+      "endTime": 111
+    },
+    {
+      "de": "Aber mal sehen ...",
+      "sk": "Ale uvidíme...",
+      "format": "normal",
+      "endParagraph": true,
+      "startTime": 102,
+      "endTime": 111
+    },
+    {
+      "de": "„Keine Interviews“,",
+      "sk": "„Žiadne rozhovory,“",
+      "format": "dialogue_start",
+      "startTime": 112,
+      "endTime": 120
+    },
+    {
+      "de": "sagt der Präsident.",
+      "sk": "hovorí prezident.",
+      "format": "normal",
+      "startTime": 112,
+      "endTime": 120
+    },
+    {
+      "de": "„Sie wollen sicher über den Mord sprechen.“",
+      "sk": "„Vy chcete asi rozprávať o tej vražde.“",
+      "format": "dialogue",
+      "startTime": 112,
+      "endTime": 120
+    },
+    {
+      "de": "„Nein, ich möchte über ... ähhh ... den Club sprechen.",
+      "sk": "„Nie, rád by som sa rozprával o... eeh... o klube.",
+      "format": "dialogue",
+      "startTime": 120,
+      "endTime": 128
+    },
+    {
+      "de": "Über den Aufstieg, über das nächste Jahr.“",
+      "sk": "O postupe do ligy, o ďalšom roku.“",
+      "format": "dialogue_end",
+      "startTime": 120,
+      "endTime": 128
+    },
+    {
+      "de": "Trainerin und Präsident sprechen leise.",
+      "sk": "Trénerka a prezident sa potichu zhovárajú.",
+      "format": "normal",
+      "endParagraph": true,
+      "startTime": 129,
+      "endTime": 133
+    },
+    {
+      "de": "„Okay“,",
+      "sk": "„Tak dobre,“",
+      "format": "dialogue_start",
+      "startTime": 133,
+      "endTime": 135
+    },
+    {
+      "de": "sagt der Präsident dann.",
+      "sk": "hovorí napokon prezident.",
+      "format": "normal",
+      "startTime": 134,
+      "endTime": 142
+    },
+    {
+      "de": "„Aber nur kurz. Wir haben am Wochenende ein wichtiges Spiel.",
+      "sk": "„Ale len v krátkosti. Máme cez víkend dôležitý zápas.",
+      "format": "dialogue",
+      "startTime": 134,
+      "endTime": 142
+    },
+    {
+      "de": "Und nach der Sache mit Klara Kainz ist es für die Spielerinnen nicht leicht.“",
+      "sk": "A po tej záležitosti s Klárou Kainz to pre hráčky nie je ľahké.“",
+      "format": "dialogue",
+      "startTime": 143,
+      "endTime": 148
+    },
+    {
+      "de": "„Kein Problem, nur kurz ... danke. Der FC Vienna Women steigt im nächsten Jahr wahrscheinlich auf - wie haben Sie das gemacht?“",
+      "sk": "„Máte ho mať, len nakrátko... Cení sa to. FC Vienna Women zjavne budúci rok postupuje - ako ste to dokázali?“",
+      "format": "dialogue",
+      "startTime": 148,
+      "endTime": 162
+    },
+    {
+      "de": "„Mit viel Training“,",
+      "sk": "„So strašne veľa tréningami,“",
+      "format": "dialogue_start",
+      "startTime": 163,
+      "endTime": 168
+    },
+    {
+      "de": "sagt die Trainerin.",
+      "sk": "hovorí trénerka.",
+      "format": "normal",
+      "startTime": 163,
+      "endTime": 168
+    },
+    {
+      "de": "„Mehr als früher.“",
+      "sk": "„Viac ako do nedávna.“",
+      "format": "dialogue",
+      "startTime": 163,
+      "endTime": 168
+    },
+    {
+      "de": "„Und mit einer besseren Trainerin!“,",
+      "sk": "„A vďaka omnoho lepšej trénerke!“,",
+      "format": "dialogue_start",
+      "startTime": 169,
+      "endTime": 174
+    },
+    {
+      "de": "erklärt der Präsident.",
+      "sk": "vysvetľuje prezident.",
+      "format": "normal",
+      "startTime": 169,
+      "endTime": 174
+    },
+    {
+      "de": "„Sonntag ist ein wichtiger Tag“,",
+      "sk": "„Nedeľa je veľmi dôležitý deň,“",
+      "format": "dialogue_start",
+      "startTime": 175,
+      "endTime": 182
+    },
+    {
+      "de": "sage ich.",
+      "sk": "hovorím.",
+      "format": "normal",
+      "startTime": 175,
+      "endTime": 182
+    },
+    {
+      "de": "„Wie ist Ihr Plan - ohne Klara Kainz?“",
+      "sk": "„Aký je Váš plán - bez Kláry Kainzovej?“",
+      "format": "dialogue_start",
+      "startTime": 175,
+      "endTime": 182
+    },
+    {
+      "de": "„Klara ist tot, wir sind alle sehr traurig. Sie war eine tolle Spielerin. Aber wir haben auch andere, sehr gute Fußballerinnen“,",
+      "sk": "„Klára je mŕtva, všetci za ňou smútime. Bola to úžasná hráčka. Ale mame tu aj iné, rovnako skvelé futbalistky,“",
+      "format": "dialogue_start",
+      "startTime": 183,
+      "endTime": 195
+    },
+    {
+      "de": "sagt die Trainerin.",
+      "sk": "reaguje trénerka.",
+      "format": "normal",
+      "startTime": 234,
+      "endTime": 237
+    },
+    {
+      "de": "„Die Mannschaft spielt am Sonntag für Klara - und gewinnt für Klara“,",
+      "sk": "„Tím hrá v nedeľu za Kláru - a vyhrá za Kláru,“",
+      "format": "dialogue_start",
+      "startTime": 253,
+      "endTime": 260
+    },
+    {
+      "de": "sagt der Präsident.",
+      "sk": "vyhlási prezident.",
+      "format": "normal",
+      "startTime": 283,
+      "endTime": 290
+    },
+    {
+      "de": "„Klara Kainz war hier ein Star ...",
+      "sk": "„Klara Kainz tu bola asi dosť veľkou hviezdou...",
+      "format": "dialogue_start",
+      "startTime": 321,
+      "endTime": 326
+    },
+    {
+      "de": "das haben wahrscheinlich nicht alle Spielerinnen gut gefunden, oder?“",
+      "sk": "to si asi nie pre každú stálu hráčku našlo pochopenie, hm?“",
+      "format": "dialogue",
+      "startTime": 336,
+      "endTime": 343
+    },
+    {
+      "de": "„Sie wollen ja doch über Klara Kainz sprechen!“",
+      "sk": "„Tak Vy by ste predsa len o tej Klare chceli rozprávať!“",
+      "format": "dialogue_end",
+      "startTime": 345,
+      "endTime": 353
+    },
+    {
+      "de": "Der Präsident sieht mich böse an.",
+      "sk": "Prezident na mňa nahnevane pozrie.",
+      "format": "normal",
+      "startTime": 373,
+      "endTime": 377
+    },
+    {
+      "de": "„Nein, nein. Ich denke nur: Eine wichtige Spielerin ist weg. Jetzt kommt eine andere auf ihre Position. Wer ist das?“",
+      "sk": "„Nie, to vôbec. Iba mám taký pocit: Významná hráčka zmizla. Teraz ju strieda iná hráčka. A kto tou inou je?“",
+      "format": "dialogue_start",
+      "startTime": 368,
+      "endTime": 377
+    },
+    {
+      "de": "Die Trainerin sieht aufs Spielfeld:",
+      "sk": "Trénerka sa zadíva na hracie pole:",
+      "format": "normal",
+      "startTime": 377,
+      "endTime": 379
+    },
+    {
+      "de": "„Das wissen wir heute Abend oder morgen.“",
+      "sk": "„To spoznáme dnes večer alebo zajtra.“",
+      "format": "dialogue",
+      "startTime": 379,
+      "endTime": 381
+    },
+    {
+      "de": "„Diese andere Spielerin ist sicher froh über Klaras Tod.“",
+      "sk": "„Iná hráčka by bola za Klárinu smrť úprimne šťastná.“",
+      "format": "dialogue",
+      "startTime": 386,
+      "endTime": 390
+    },
+    {
+      "de": "„Was sagen Sie denn da?“",
+      "sk": "„Ale čo to vyprávate?“",
+      "format": "dialogue",
+      "startTime": 382,
+      "endTime": 390
+    },
+    {
+      "de": "„Sie kann im nächsten Jahr vielleicht als Profi spielen. Nicht alle hier kommen in die neue Mannschaft.“",
+      "sk": "„Nuž, na budúci rok možno dostane príležitosť fungovať na profi úrovni. Nie všetky sa dostanú do hlavnej zostavy.“",
+      "format": "dialogue",
+      "startTime": 382,
+      "endTime": 390
+    },
+    {
+      "de": "„Das stimmt, aber ...“",
+      "sk": "„Aké pravdivé, avšak...“",
+      "format": "dialogue",
+      "startTime": 382,
+      "endTime": 390
+    },
+    {
+      "de": "„Vielleicht hat eine Spielerin mit dem Mord zu tun.“",
+      "sk": "„Môžbyť, že by nejaká aj mala s tou vraždou čo dočinenia.“",
+      "format": "dialogue",
+      "startTime": 386,
+      "endTime": 390
+    },
+    {
+      "de": "„Was ...?“",
+      "sk": "„Prosím...?“",
+      "format": "dialogue_end",
+      "startTime": 390,
+      "endTime": 392
+    },
+    {
+      "de": "Der Präsident ist jetzt sehr böse.",
+      "sk": "Teraz je už prezident skutočne naštvaný.",
+      "format": "normal",
+      "startTime": 386,
+      "endTime": 390
+    },
+    {
+      "de": "„Können Sie mir bitte ein paar Namen sagen?“",
+      "sk": "„Boli by ste tak dobrý uviesť aspoň trochu mien?“",
+      "format": "dialogue_start",
+      "startTime": 390,
+      "endTime": 392
+    },
+    {
+      "de": "„Sie sprechen immer über den Mord.",
+      "sk": "„Akoby ste furt nevyzvedali iba ohľadom vraždy.",
+      "format": "dialogue",
+      "startTime": 392,
+      "endTime": 394
+    },
+    {
+      "de": "Wer sind Sie wirklich?“",
+      "sk": "Kto do čerta vôbec ste?“",
+      "format": "dialogue_end",
+      "startTime": 382,
+      "endTime": 390
+    },
+    {
+      "de": "Ich glaube, ich gehe jetzt besser.",
+      "sk": "Myslím, že sa by mi bolo lepšie zdvihnúť a ísť o dům dlhšie.",
+      "format": "normal",
+      "startTime": 390,
+      "endTime": 392
+    },
+    {
+      "de": "Aber der Präsident stellt sich in den Weg.",
+      "sk": "Akurát ten prezident sa postaví hneď do dverí.",
+      "format": "normal",
+      "endParagraph": true,
+      "startTime": 392,
+      "endTime": 394
+    },
+    {
+      "de": "„Zeigen Sie mir Ihren Journalistenausweis!“",
+      "sk": "„Ukážte mi váš novinársky preukaz!“",
+      "format": "dialogue_start",
+      "startTime": 382,
+      "endTime": 390
+    },
+    {
+      "de": "Einige Spielerinnen sind gekommen und schauen uns zu.",
+      "sk": "Zopár prvoligových hráčiek z poľa sa na mňa zdesene pozerá.",
+      "format": "normal",
+      "startTime": 390,
+      "endTime": 392
+    },
+    {
+      "de": "Ich sage: „Oje, ich habe meinen Ausweis leider zu Hause vergessen.“",
+      "sk": "A tak zahlásim: „Ej ha, mne ten môj preukaz asi ostal vysieť niekde doma.“",
+      "format": "dialogue_start",
+      "startTime": 392,
+      "endTime": 394
+    },
+    {
+      "de": "„Geben Sie mir Ihren Ausweis oder ich hole die Polizei.“",
+      "sk": "„Hneď mi ukážte aspoň bežnú občianku alebo na mieste volám fízlov.“",
+      "format": "dialogue",
+      "startTime": 394,
+      "endTime": 396
+    },
+    {
+      "de": "Ich gebe ihm meinen Ausweis.",
+      "sk": "Ja mu teda nejaký doklad hodím.",
+      "format": "normal",
+      "startTime": 396,
+      "endTime": 398
+    },
+    {
+      "de": "„Ein Detektiv! Was wollen Sie hier?“",
+      "sk": "„Čo, detektív! No tak to sme tu verili dobrej rozprávke. Čo chcete?“",
+      "format": "dialogue_start",
+      "startTime": 398,
+      "endTime": 400
+    },
+    {
+      "de": "„Mein Name ist Fender. Ich ermittle im Fall Klara Kainz.“",
+      "sk": "„Meno Fender. Vediem pátranie ohľadom toho zabitia Kláry Kainzovej.“",
+      "format": "dialogue",
+      "startTime": 386,
+      "endTime": 390
+    },
+    {
+      "de": "„Raus hier!“",
+      "sk": "„Ráčte zmiznúť!“",
+      "format": "dialogue",
+      "startTime": 390,
+      "endTime": 392
+    },
+    {
+      "de": "„Wenn Sie Informationen für mich haben ...“",
+      "sk": "„Ešte ak by ste predsa len pre mňa nejakých tu informanto...“",
+      "format": "dialogue",
+      "startTime": 392,
+      "endTime": 394
+    },
+    {
+      "de": "„Raus! Oder ich hole sofort die Polizei.“",
+      "sk": "„Ráčte! Lebo inak ja tu fakt stváram strážmajstrov.“",
+      "format": "dialogue",
+      "startTime": 394,
+      "endTime": 396
+    },
+    {
+      "de": "Er nimmt sein Handy.",
+      "sk": "Do ruky vytiahne mobil.",
+      "format": "normal",
+      "startTime": 396,
+      "endTime": 398
+    },
+    {
+      "de": "„Ich gehe ja schon.“",
+      "sk": "„Už už som na ceste tak teda preč.“",
+      "format": "dialogue_start",
+      "startTime": 382,
+      "endTime": 390
+    },
+    {
+      "de": "„Und kommen Sie nie wieder!“,",
+      "sk": "„A radšej už viacej nechodievajte!“,",
+      "format": "dialogue_start",
+      "startTime": 382,
+      "endTime": 390
+    },
+    {
+      "de": "sagt die Trainerin.",
+      "sk": "vypiskne nahnevaná trénerka z plnších pľúc.",
+      "format": "normal",
+      "endParagraph": true,
+      "startTime": 390,
+      "endTime": 392
+    },
+    {
+      "de": "Das ist schlecht gelaufen, denke ich.",
+      "sk": "Toto celkovo nevyšlo úplne najlepšie, si tak celou cestou rozmýšľam.",
+      "format": "normal",
+      "startTime": 386,
+      "endTime": 390
+    },
+    {
+      "de": "Was mache ich jetzt?",
+      "sk": "Čo len tak budem odteraz robiť?",
+      "format": "normal",
+      "startTime": 390,
+      "endTime": 392
+    },
+    {
+      "de": "Ich fahre am besten erst einmal zurück ins Büro.",
+      "sk": "Azda sa pre túto chvíľu najlepšie tak poberiem len do kanclu.",
+      "format": "normal",
+      "startTime": 392,
+      "endTime": 394
+    },
+    {
+      "de": "Ich warte also auf die Straßenbahn.",
+      "sk": "Tak ešte trošu trčím pomaly na moju linku električky.",
+      "format": "normal",
+      "endParagraph": true,
+      "startTime": 394,
+      "endTime": 396
+    },
+    {
+      "de": "Da kommt eine junge Fußballerin.",
+      "sk": "V tom kde tu nič sa vynorila jedna vľúdna mladá futbalistka.",
+      "format": "normal",
+      "startTime": 396,
+      "endTime": 398
+    },
+    {
+      "de": "Sie gibt mir ihre Telefonnummer:",
+      "sk": "Láskavo mi priamo dala do rúk jej mobilné číslo voľne popri čakaní:",
+      "format": "normal",
+      "endParagraph": true,
+      "startTime": 382,
+      "endTime": 390
+    },
+    {
+      "de": "„Rufen Sie mich an. Später. Wegen Klara.“",
+      "sk": "„Jednozančne ma potom zavolajte... Hlavne neskôr. Kvôli Kláre.“",
+      "format": "dialogue_start",
+      "startTime": 390,
+      "endTime": 392
+    },
+    {
+      "de": "„Wer sind Sie? Was ...?“",
+      "sk": "„To z akej sa vy, čo...?“",
+      "format": "dialogue",
+      "startTime": 382,
+      "endTime": 390
+    },
+    {
+      "de": "Aber sie läuft schon wieder zurück.",
+      "sk": "Hráčka okamžite stihla len odbehnúť naspäť.",
+      "format": "normal",
+      "startTime": 382,
+      "endTime": 390
+    },
+    {
+      "de": "Vielleicht ist es doch nicht so schlecht gelaufen.",
+      "sk": "Kto vie, možno na toto moje vystupovanie bolo nakoniec pre niečo dobré.",
+      "format": "normal",
+      "endParagraph": true,
+      "startTime": 386,
+      "endTime": 390
+    }
+  ],
+  "ebook_01_ch_04": [
+    {
+      "de": "„Julia Kalman“",
+      "sk": "„Julia Kalman“",
+      "format": "dialogue_start",
+      "startTime": 75.64,
+      "endTime": 84.64
+    },
+    {
+      "de": "„Hallo, hier Fender.“",
+      "sk": "„Haló, tu Fender.“",
+      "format": "dialogue",
+      "startTime": 152,
+      "endTime": 158.16
+    },
+    {
+      "de": "„Bitte wer?“",
+      "sk": "„Prosím, kto?“",
+      "format": "dialogue",
+      "startTime": 158.16,
+      "endTime": 163.08
+    },
+    {
+      "de": "„Fender, der Detektiv“,",
+      "sk": "„Fender, ten detektív,“",
+      "format": "dialogue_start",
+      "startTime": 163.08,
+      "endTime": 165.08
+    },
+    {
+      "de": "sage ich.",
+      "sk": "hovorím.",
+      "format": "normal",
+      "startTime": 172.16,
+      "endTime": 176.72
+    },
+    {
+      "de": "„Wir haben heute gesprochen. Beim Fußballclub. Sie haben mir Ihre Nummer gegeben.“",
+      "sk": "„Dnes sme spolu rozprávali. Vo futbalovom klube. Dali ste mi Vaše číslo.“",
+      "format": "dialogue",
+      "startTime": 176.72,
+      "endTime": 178.72
+    },
+    {
+      "de": "„Ach so, ja, guten Tag, Herr Fender.“",
+      "sk": "„Jáj, tak. Áno, dobrý deň, pán Fender.“",
+      "format": "dialogue",
+      "startTime": 178.72,
+      "endTime": 180.72
+    },
+    {
+      "de": "„Sie möchten mit mir sprechen? Über Klara Kainz?“",
+      "sk": "„Vy by ste sa so mnou radi rozprávali? Ohľadom Kláry Kainzovej?“",
+      "format": "dialogue",
+      "startTime": 197.92,
+      "endTime": 208.24
+    },
+    {
+      "de": "„Ja, aber nicht jetzt. Nicht am Telefon.“",
+      "sk": "„Áno, ale nie teraz. Nie cez telefón.“",
+      "format": "dialogue_end",
+      "startTime": 285,
+      "endTime": 297.96
+    },
+    {
+      "de": "Ich höre ganz leise Leute reden und Musik aus dem Radio.",
+      "sk": "Úplne potichu počujem rozprávať ľudí a hudbu z rádia.",
+      "format": "normal",
+      "endParagraph": true,
+      "startTime": 272.6,
+      "endTime": 297.96
+    },
+    {
+      "de": "„Ich bin gerade in einem Café“,",
+      "sk": "„Akurát sedím v kaviarni,“",
+      "format": "dialogue_start",
+      "startTime": 285,
+      "endTime": 297.96
+    },
+    {
+      "de": "sagt Julia Kalman.",
+      "sk": "hovorí Julia Kalman.",
+      "format": "normal",
+      "startTime": 319.24,
+      "endTime": 328.6
+    },
+    {
+      "de": "„Können wir uns später treffen?“,",
+      "sk": "„Mohli by sme sa stretnúť neskôr?,“",
+      "format": "dialogue_start",
+      "startTime": 319.24,
+      "endTime": 328.6
+    },
+    {
+      "de": "frage ich.",
+      "sk": "pýtam sa.",
+      "format": "normal",
+      "startTime": 328.6,
+      "endTime": 330.6
+    },
+    {
+      "de": "„Ja, gut. Wie ist es heute Abend um halb zehn?“",
+      "sk": "„Áno, dobre. Čo tak dnes večer o pol desiatej?“",
+      "format": "dialogue_start",
+      "startTime": 345.8,
+      "endTime": 350.36
+    },
+    {
+      "de": "„Ja, das geht gut.“",
+      "sk": "„Áno, to by išlo.“",
+      "format": "dialogue",
+      "startTime": 345.8,
+      "endTime": 350.36
+    },
+    {
+      "de": "„In der Bandgasse, Ecke Kandlgasse, okay?“,",
+      "sk": "„Na Bandgasse, roh Kandlgasse, okej?,“",
+      "format": "dialogue_start",
+      "startTime": 350.36,
+      "endTime": 352.36
+    },
+    {
+      "de": "fragt Julia Kalman.",
+      "sk": "pýta sa Julia Kalman.",
+      "format": "normal",
+      "startTime": 352.36,
+      "endTime": 354.36
+    },
+    {
+      "de": "„Ja, in Ordnung. Dann bis später.“",
+      "sk": "„Áno, v poriadku. Tak teda do zotmenia.“",
+      "format": "dialogue_start",
+      "startTime": 354.36,
+      "endTime": 356.36
+    },
+    {
+      "de": "„Bis dann.“",
+      "sk": "„Tak zatiaľ.“",
+      "format": "dialogue_end",
+      "startTime": 356.36,
+      "endTime": 358.36
+    },
+    {
+      "de": "Also bin ich kurz vor halb zehn in der Bandgasse im 7. Bezirk.",
+      "sk": "A tak som tesne pred pol desiatou na Bandgasse v 7. okrese.",
+      "format": "normal",
+      "startTime": 358.36,
+      "endTime": 360.36
+    },
+    {
+      "de": "Ich denke nach:",
+      "sk": "Premýšľam:",
+      "format": "normal",
+      "startTime": 335.52,
+      "endTime": 350.36
+    },
+    {
+      "de": "Warum will Julia Kalman mit mir sprechen?",
+      "sk": "Prečo sa so mnou chce Julia Kalman rozprávať?",
+      "format": "normal",
+      "startTime": 350.36,
+      "endTime": 352.36
+    },
+    {
+      "de": "Was will sie mir sagen?",
+      "sk": "Čo mi chce povedať?",
+      "format": "normal",
+      "startTime": 352.36,
+      "endTime": 354.36
+    },
+    {
+      "de": "Kennt sie den Mörder?",
+      "sk": "Pozná vraha?",
+      "format": "normal",
+      "startTime": 354.36,
+      "endTime": 356.36
+    },
+    {
+      "de": "Oder hat sie einen Verdacht?",
+      "sk": "Alebo má nejaké podozrenie?",
+      "format": "normal",
+      "startTime": 356.36,
+      "endTime": 358.36
+    },
+    {
+      "de": "Warum geht sie dann nicht zur Polizei?",
+      "sk": "Prečo potom nejde na políciu?",
+      "format": "normal",
+      "startTime": 358.36,
+      "endTime": 360.36
+    },
+    {
+      "de": "Oder hat sie etwas mit dem Mord zu tun?",
+      "sk": "Alebo má s tou vraždou niečo spoločné?",
+      "format": "normal",
+      "startTime": 335.52,
+      "endTime": 350.36
+    },
+    {
+      "de": "Ist vielleicht sie die Mörderin?",
+      "sk": "Je možno onou vrahyňou?",
+      "format": "normal",
+      "startTime": 345.8,
+      "endTime": 350.36
+    },
+    {
+      "de": "Ist das hier eine Falle?",
+      "sk": "Je toto tu pasca?",
+      "format": "normal",
+      "endParagraph": true,
+      "startTime": 345.8,
+      "endTime": 350.36
+    },
+    {
+      "de": "Ich sehe auf die Uhr. 21:30 Uhr.",
+      "sk": "Pozriem sa na hodinky. 21:30 hod.",
+      "format": "normal",
+      "startTime": 345.8,
+      "endTime": 350.36
+    },
+    {
+      "de": "Es wird langsam dunkel.",
+      "sk": "Pomaly sa stmieva.",
+      "format": "normal",
+      "startTime": 350.36,
+      "endTime": 352.36
+    },
+    {
+      "de": "Ich gehe die Straße auf und ab.",
+      "sk": "Prechádzam sa hore-dole po ulici.",
+      "format": "normal",
+      "endParagraph": true,
+      "startTime": 335.52,
+      "endTime": 350.36
+    },
+    {
+      "de": "21:35 Uhr.",
+      "sk": "21:35 hod.",
+      "format": "normal",
+      "startTime": 350.36,
+      "endTime": 352.36
+    },
+    {
+      "de": "Zwei Leute gehen vorbei, ein Mann und eine Frau.",
+      "sk": "Dvaja ľudia idú okolo, muž a žena.",
+      "format": "normal",
+      "startTime": 352.36,
+      "endTime": 354.36
+    },
+    {
+      "de": "Sie halten sich an der Hand.",
+      "sk": "Držia sa za ruky.",
+      "format": "normal",
+      "startTime": 354.36,
+      "endTime": 356.36
+    },
+    {
+      "de": "Eine Familie kommt aus einem Restaurant. Vater, Mutter und zwei Kinder.",
+      "sk": "Rodina vychádza z reštaurácie. Otec, matka a dve deti.",
+      "format": "normal",
+      "endParagraph": true,
+      "startTime": 356.36,
+      "endTime": 358.36
+    },
+    {
+      "de": "21:40 Uhr.",
+      "sk": "21:40 hod.",
+      "format": "normal",
+      "startTime": 358.36,
+      "endTime": 360.36
+    },
+    {
+      "de": "Ich rufe Julia Kalman besser noch einmal an.",
+      "sk": "Radšej to Julii Kalmanovej zavolám ešte raz.",
+      "format": "normal",
+      "endParagraph": true,
+      "startTime": 335.52,
+      "endTime": 350.36
+    },
+    {
+      "de": "„Das ist die Mailbox von Julia Kalman. Ich kann gerade nicht sprechen. Bitte sprechen Sie eine Nachricht nach dem Beep.“",
+      "sk": "„Tu je hlasová schránka Julie Kalmanovej. Práve teraz nemôžem hovoriť. Prosím zanechajte správu po zaznení tónu.“",
+      "format": "dialogue_start",
+      "startTime": 345.8,
+      "endTime": 350.36
+    },
+    {
+      "de": "„Hallo, hier Fender. Es ist schon zehn nach halb. Kommen Sie noch? Bitte rufen Sie mich zurück.“",
+      "sk": "„Dobrý, tu Fender. Je už desať minút po pol. Idete vlastne? Ozvite sa mi prosím naspäť.“",
+      "format": "dialogue_end",
+      "startTime": 335.52,
+      "endTime": 350.36
+    },
+    {
+      "de": "Ein alter Mann geht mit seinem Hund spazieren.",
+      "sk": "Jeden starý ujo ide vyvenčiť svojho psa.",
+      "format": "normal",
+      "startTime": 350.36,
+      "endTime": 352.36
+    },
+    {
+      "de": "Dann kommt eine Gruppe junger Leute.",
+      "sk": "Následne ide skupina mladých.",
+      "format": "normal",
+      "startTime": 352.36,
+      "endTime": 354.36
+    },
+    {
+      "de": "Sie lachen, sprechen laut, ich glaube, sie suchen die nächste Bar.",
+      "sk": "Smejú sa, hlasito rozprávajú, myslím, že hľadajú ďalší bar.",
+      "format": "normal",
+      "endParagraph": true,
+      "startTime": 345.8,
+      "endTime": 350.36
+    },
+    {
+      "de": "21:45 Uhr.",
+      "sk": "21:45 hod.",
+      "format": "normal",
+      "startTime": 350.36,
+      "endTime": 352.36
+    },
+    {
+      "de": "Warum kommt sie nicht?",
+      "sk": "Prečo nejde?",
+      "format": "normal",
+      "startTime": 352.36,
+      "endTime": 354.36
+    },
+    {
+      "de": "Was ist los?",
+      "sk": "Čo sa deje?",
+      "format": "normal",
+      "startTime": 345.8,
+      "endTime": 350.36
+    },
+    {
+      "de": "Ich rufe noch einmal an.",
+      "sk": "Volám ešte raz.",
+      "format": "normal",
+      "endParagraph": true,
+      "startTime": 335.52,
+      "endTime": 350.36
+    },
+    {
+      "de": "„Das ist die Mailbox von ...“",
+      "sk": "„Tu je hlasová schránka od...“",
+      "format": "dialogue_start",
+      "startTime": 345.8,
+      "endTime": 350.36
+    },
+    {
+      "de": "Fünf Minuten warte ich noch, dann gehe ich.",
+      "sk": "Ešte chvíľu päť minút a potom idem.",
+      "format": "normal",
+      "startTime": 335.52,
+      "endTime": 350.36
+    },
+    {
+      "de": "Was ist denn das für ein Fall?",
+      "sk": "Čo je toto potom za prípad?",
+      "format": "normal",
+      "startTime": 345.8,
+      "endTime": 350.36
+    },
+    {
+      "de": "Zuerst dieser Brief, dann will die Fußballerin mit mir sprechen, aber sie kommt nicht.",
+      "sk": "Najprv ten list, potom sa so mnou chce futbalistka rozprávať, ale nepríde.",
+      "format": "normal",
+      "startTime": 345.8,
+      "endTime": 350.36
+    },
+    {
+      "de": "Stopp.",
+      "sk": "Stoj.",
+      "format": "normal",
+      "startTime": 350.36,
+      "endTime": 352.36
+    },
+    {
+      "de": "Ist dort jemand?",
+      "sk": "Je tam niekto?",
+      "format": "normal",
+      "startTime": 345.8,
+      "endTime": 350.36
+    },
+    {
+      "de": "In dem grünen Auto?",
+      "sk": "V tom zelenom aute?",
+      "format": "normal",
+      "startTime": 350.36,
+      "endTime": 352.36
+    },
+    {
+      "de": "Ist das Julia Kalman?",
+      "sk": "Je to Julia Kalman?",
+      "format": "normal",
+      "endParagraph": true,
+      "startTime": 345.8,
+      "endTime": 350.36
+    },
+    {
+      "de": "Nein, da sitzt ein Mann im Auto.",
+      "sk": "Nie, v aute sedí nejaký chlap.",
+      "format": "normal",
+      "startTime": 350.36,
+      "endTime": 352.36
+    },
+    {
+      "de": "Ist der schon länger da?",
+      "sk": "Je tam už dlhšie?",
+      "format": "normal",
+      "startTime": 345.8,
+      "endTime": 350.36
+    },
+    {
+      "de": "Es ist schon fast dunkel, ich kann den Mann nicht gut sehen.",
+      "sk": "Je už skoro úplná tma, nevidím toho muža dobre.",
+      "format": "normal",
+      "startTime": 345.8,
+      "endTime": 350.36
+    },
+    {
+      "de": "Ich gehe mal über die Straße, näher zum Auto.",
+      "sk": "Prejdem cez cestu, bližšie k autu.",
+      "format": "normal",
+      "startTime": 335.52,
+      "endTime": 350.36
+    },
+    {
+      "de": "Da - jetzt macht er das Licht an.",
+      "sk": "Aha - teraz zapol svetlo.",
+      "format": "normal",
+      "startTime": 335.52,
+      "endTime": 350.36
+    },
+    {
+      "de": "Aber so kann ich ihn gar nicht mehr sehen.",
+      "sk": "Ale takto ho už vôbec nedokážem rozoznať.",
+      "format": "normal",
+      "endParagraph": true,
+      "startTime": 350.36,
+      "endTime": 352.36
+    },
+    {
+      "de": "Das Auto startet.",
+      "sk": "Auto štartuje.",
+      "format": "normal",
+      "startTime": 345.8,
+      "endTime": 350.36
+    },
+    {
+      "de": "Es fährt auf mich zu.",
+      "sk": "Ide rovno priamo na mňa.",
+      "format": "normal",
+      "startTime": 350.36,
+      "endTime": 352.36
+    },
+    {
+      "de": "Die Lichter kommen näher.",
+      "sk": "Svetlá sa blížia.",
+      "format": "normal",
+      "startTime": 345.8,
+      "endTime": 350.36
+    },
+    {
+      "de": "Ich stehe auf der Straße, sieht der mich nicht?",
+      "sk": "Stojím na ceste, to ma nevidí?",
+      "format": "normal",
+      "startTime": 350.36,
+      "endTime": 352.36
+    },
+    {
+      "de": "Das Auto wird schneller.",
+      "sk": "Auto zrýchľuje.",
+      "format": "normal",
+      "startTime": 345.8,
+      "endTime": 350.36
+    },
+    {
+      "de": "Halt!",
+      "sk": "Stáť!",
+      "format": "normal",
+      "startTime": 350.36,
+      "endTime": 352.36
+    },
+    {
+      "de": "Will der mich ... ?",
+      "sk": "Chce ma ten... ?",
+      "format": "normal",
+      "startTime": 352.36,
+      "endTime": 354.36
+    },
+    {
+      "de": "Halt!!!",
+      "sk": "Stáť!!!",
+      "format": "normal",
+      "startTime": 354.36,
+      "endTime": 356.36
+    },
+    {
+      "de": "Ich springe in letzter Sekunde zur Seite.",
+      "sk": "Skáčem v poslednej sekunde nabok.",
+      "format": "normal",
+      "startTime": 356.36,
+      "endTime": 358.36
+    },
+    {
+      "de": "Das Auto fährt weiter.",
+      "sk": "Auto ide ďalej.",
+      "format": "normal",
+      "startTime": 345.8,
+      "endTime": 350.36
+    },
+    {
+      "de": "Eine Sekunde später und ich ...",
+      "sk": "O sekundu neskôr a ja ...",
+      "format": "normal",
+      "endParagraph": true,
+      "startTime": 335.52,
+      "endTime": 350.36
+    },
+    {
+      "de": "Puh!",
+      "sk": "Fú!",
+      "format": "normal",
+      "startTime": 350.36,
+      "endTime": 352.36
+    },
+    {
+      "de": "Was war das?",
+      "sk": "Čo to malo znamenať?",
+      "format": "normal",
+      "startTime": 345.8,
+      "endTime": 350.36
+    },
+    {
+      "de": "Ich stehe langsam auf und setze mich auf eine Bank.",
+      "sk": "Pomaly vstanem a sadnem si na lavičku.",
+      "format": "normal",
+      "startTime": 335.52,
+      "endTime": 350.36
+    },
+    {
+      "de": "Wer war in dem Auto?",
+      "sk": "Kto bol v tom aute?",
+      "format": "normal",
+      "startTime": 350.36,
+      "endTime": 352.36
+    },
+    {
+      "de": "Ein Mann, ja, aber mehr habe ich nicht gesehen.",
+      "sk": "Muž, hej, ale nič viac som nevidel.",
+      "format": "normal",
+      "startTime": 352.36,
+      "endTime": 354.36
+    },
+    {
+      "de": "Ein grünes Auto, okay, aber das ist auch schon alles.",
+      "sk": "Zelené auto, okej, ale to je už všetko.",
+      "format": "normal",
+      "endParagraph": true,
+      "startTime": 345.8,
+      "endTime": 350.36
+    },
+    {
+      "de": "Will Julia Kalman mich ermorden?",
+      "sk": "Chce ma Julia Kalman zavraždiť?",
+      "format": "normal",
+      "startTime": 350.36,
+      "endTime": 352.36
+    },
+    {
+      "de": "Hat sie diesen Mann bezahlt?",
+      "sk": "Zaplatila tomu mužovi?",
+      "format": "normal",
+      "startTime": 352.36,
+      "endTime": 354.36
+    },
+    {
+      "de": "Wollte sie mich deshalb treffen?",
+      "sk": "Preto sa so mnou chcela stretnúť?",
+      "format": "normal",
+      "startTime": 354.36,
+      "endTime": 356.36
+    },
+    {
+      "de": "Oder will ein anderer mich töten?",
+      "sk": "Alebo ma chce zabiť niekto iný?",
+      "format": "normal",
+      "startTime": 356.36,
+      "endTime": 358.36
+    },
+    {
+      "de": "Der Präsident des Clubs vielleicht?",
+      "sk": "Možno prezident klubu?",
+      "format": "normal",
+      "startTime": 358.36,
+      "endTime": 360.36
+    },
+    {
+      "de": "Oder die Trainerin?",
+      "sk": "Alebo trénerka?",
+      "format": "normal",
+      "endParagraph": true,
+      "startTime": 345.8,
+      "endTime": 350.36
+    },
+    {
+      "de": "Aber die wissen ja nichts von meinem Treffen mit Julia Kalman.",
+      "sk": "Lenže oni predsa nič nevedeli o mojom stretnutí s Juliou Kalman.",
+      "format": "normal",
+      "startTime": 345.8,
+      "endTime": 350.36
+    },
+    {
+      "de": "Vielleicht hat es aber auch nichts mit Julia zu tun.",
+      "sk": "Možno to však s Juliou nemá nič spoločné.",
+      "format": "normal",
+      "startTime": 335.52,
+      "endTime": 350.36
+    },
+    {
+      "de": "Vielleicht hat mich der Autofahrer einfach nicht gesehen.",
+      "sk": "Možno ma ten šofér proste iba nevidel.",
+      "format": "normal",
+      "startTime": 335.52,
+      "endTime": 350.36
+    },
+    {
+      "de": "Vielleicht hat er zu viel Wein getrunken?",
+      "sk": "Možno vypil trochu priveľa vína?",
+      "format": "normal",
+      "startTime": 335.52,
+      "endTime": 350.36
+    },
+    {
+      "de": "Ich gehe jetzt nach Hause.",
+      "sk": "Teraz idem domov.",
+      "format": "normal",
+      "startTime": 335.52,
+      "endTime": 350.36
+    },
+    {
+      "de": "Und ich rufe noch einmal Julia an.",
+      "sk": "A zavolám ešte raz Julii.",
+      "format": "normal",
+      "endParagraph": true,
+      "startTime": 335.52,
+      "endTime": 350.36
+    },
+    {
+      "de": "„Das ist die Mailbox von ...“",
+      "sk": "„Tu je hlasová schránka od...“",
+      "format": "dialogue_start",
+      "startTime": 345.8,
+      "endTime": 350.36
+    }
+  ]
+}

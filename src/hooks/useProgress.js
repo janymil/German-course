@@ -284,9 +284,15 @@ export function useProgress() {
 
       if (quality >= 3) {
         // Correct answer — advance the schedule
-        if (repetitions === 0) interval = 1;
-        else if (repetitions === 1) interval = 6;
-        else interval = Math.round(interval * easeFactor);
+        if (repetitions === 0) {
+          interval = (quality === 5) ? 4 : 1;
+        } else if (repetitions === 1) {
+          interval = (quality === 5) ? 8 : 3;
+        } else {
+          // Standard SM-2 with slight bonus for quality=5
+          const bonus = quality === 5 ? 1.3 : (quality === 4 ? 1.0 : 0.8);
+          interval = Math.round(interval * easeFactor * bonus);
+        }
         repetitions += 1;
       } else {
         // Wrong answer — reset to relearn

@@ -32,3 +32,15 @@ public/audio/stories/*.mp3
 
 # Personal progress — never commit, lives on your machine
 progress.json
+progress.backup.json
+
+# Large ANKI binary files — too big for GitHub
+ANKI/*.apkg
+ANKI/unzipped/
+ANKI/collection.anki2
+
+# Ebook source folder — large mp3/media files, tracked via public/ only
+ebook/
+
+# Backup files
+*.bak

@@ -123,6 +123,13 @@ export function getGenderMap() {
  */
 export function getGenderForWord(word) {
   if (!word) return null;
+
+  // Instant resolution if the vocab word explicitly contains its article (e.g. from Anki)
+  const text = word.trim();
+  if (/^der\s+[A-ZÄÖÜ]/i.test(text)) return 'M';
+  if (/^die\s+[A-ZÄÖÜ]/i.test(text)) return 'F';
+  if (/^das\s+[A-ZÄÖÜ]/i.test(text)) return 'N';
+
   const map = getGenderMap();
   // Try exact match first
   if (map[word]) return map[word];

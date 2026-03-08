@@ -1,5 +1,6 @@
 import React, { useState, useCallback, useMemo } from 'react';
-import { ChevronLeft, List, Volume2, BookText, Globe } from 'lucide-react';
+import { ChevronLeft, List, Volume2, BookText, Globe, Mic } from 'lucide-react';
+import ShadowingExercise from '../components/exercises/ShadowingExercise';
 import { EBOOKS } from '../data/ebooks';
 import { LessonAudioPlayer } from '../components/LessonAudioPlayer';
 import { useProgress } from '../hooks/useProgress';
@@ -23,6 +24,10 @@ function getFormatClasses(format) {
         case 'note': return 'bg-amber-950/40 py-0.5 px-6 md:px-8 mx-4 md:mx-12 border-x border-amber-700/30 text-amber-100/90 font-mono md:-rotate-1 shadow-sm transform-gpu';
         case 'note_end': return 'bg-amber-950/40 pb-4 pt-0.5 px-6 md:px-8 mb-6 mx-4 md:mx-12 border-b border-x border-amber-700/30 text-amber-100/90 font-mono rounded-b-md md:-rotate-1 shadow-sm transform-gpu';
 
+        case 'dialogue': return 'pl-4 border-l-[3px] border-emerald-500/50 text-gray-100 bg-emerald-900/10 py-1 w-full rounded-r-lg';
+        case 'dialogue_start': return 'pl-4 border-l-[3px] border-emerald-500/50 text-gray-100 bg-emerald-900/10 pt-2 pb-1 mt-4 w-full rounded-tr-lg';
+        case 'dialogue_end': return 'pl-4 border-l-[3px] border-emerald-500/50 text-gray-100 bg-emerald-900/10 pb-2 pt-1 mb-4 w-full rounded-br-lg';
+
         default: return 'py-0.5 text-gray-200';
     }
 }
@@ -33,6 +38,7 @@ export default function EbookReader({ ebookId, onBack }) {
 
     const [currentChapterIdx, setCurrentChapterIdx] = useState(0);
     const [showToc, setShowToc] = useState(false);
+    const [showShadowing, setShowShadowing] = useState(false);
 
     // Interactive Dictionary State
     const [activeWord, setActiveWord] = useState(null);
@@ -135,13 +141,23 @@ export default function EbookReader({ ebookId, onBack }) {
                     <span className="text-xs uppercase tracking-widest text-indigo-400/80 font-black px-2 py-0.5 rounded border border-indigo-500/20 bg-indigo-500/10">{ebook.cefr}</span>
                     <h2 className="text-sm font-bold mt-1 text-gray-300">{ebook.title}</h2>
                 </div>
-                <button
-                    onClick={() => setShowToc(!showToc)}
-                    className="flex items-center gap-2 text-gray-400 hover:text-white hover:bg-gray-800 px-4 py-2 rounded-xl transition-all"
-                >
-                    <span className="hidden sm:inline font-medium">Kapitoly</span>
-                    <List size={20} />
-                </button>
+                <div className="flex items-center gap-2">
+                    <button
+                        onClick={() => setShowShadowing(true)}
+                        className="flex items-center gap-2 text-emerald-400 hover:text-white hover:bg-emerald-900/40 border border-emerald-500/20 px-4 py-2 rounded-xl transition-all font-medium"
+                        title="Otvoriť shadowing cvičenie"
+                    >
+                        <Mic size={18} />
+                        <span className="hidden sm:inline">Shadowing</span>
+                    </button>
+                    <button
+                        onClick={() => setShowToc(!showToc)}
+                        className="flex items-center gap-2 text-gray-400 hover:text-white hover:bg-gray-800 px-4 py-2 rounded-xl transition-all"
+                    >
+                        <span className="hidden sm:inline font-medium">Kapitoly</span>
+                        <List size={20} />
+                    </button>
+                </div>
             </div>
 
             {/* Main Content Layout - Strict height wrapper to allow left scroll without right scroll */}
@@ -285,13 +301,23 @@ export default function EbookReader({ ebookId, onBack }) {
                     )}
 
                     {/* Cover art block (hide if vocabulary is open to save vertical space on smaller screens) */}
-                    {!activeWord && ebook.coverImage && (
+                    {!activeWord && (chapter.image || ebook.coverImage) && (
                         <div className="w-full flex-1 min-h-0 rounded-3xl overflow-hidden shadow-2xl border border-gray-800 relative bg-gray-900 hidden lg:flex items-center justify-center">
-                            <img src={ebook.coverImage} alt={ebook.title} className="w-full h-full object-contain p-2 drop-shadow-2xl opacity-90" />
+                            <img src={chapter.image || ebook.coverImage} alt={chapter.title || ebook.title} className="w-full h-full object-contain p-2 drop-shadow-2xl opacity-90" />
                         </div>
                     )}
                 </div>
             </div>
+
+            {/* Shadowing Exercise Overlay */}
+            {showShadowing && (
+                <ShadowingExercise
+                    sentences={chapter.sentences}
+                    audioSrc={chapter.audioSrc || null}
+                    title={chapter.title}
+                    onClose={() => setShowShadowing(false)}
+                />
+            )}
 
             {/* Table of Contents Modal */}
             {showToc && (
