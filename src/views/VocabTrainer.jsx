@@ -34,48 +34,55 @@ function buildDeck(progress, selectedChapterId) {
     baseVocab = [...baseVocab, ...customVocab];
   }
 
-  const combined = baseVocab;
-  const vocabSeen = progress.vocabSeen || {};
+  // Deduplicate base vocab to prevent seeing the same word multiple times
+  // in a single session if it's introduced in multiple lessons
+  const uniqueVocab = new Map();
+  // We iterate backwards or just forward, forward is fine to keep the earliest occurrence 
+  baseVocab.forEach(v => {
+    if (!uniqueVocab.has(v.de)) {
+      uniqueVocab.set(v.de, v);
+    }
+  });
 
+  const combined = Array.from(uniqueVocab.values());
+  const vocabSeen = progress.vocabSeen || {};
   // Filter out archived/ignored words where interval is arbitrarily high e.g. 10000
   const activeCombined = combined.filter(v => {
     const seen = vocabSeen[v.de];
     return !seen || seen.interval < 10000;
   });
 
-  // Sort cards into buckets:
-  // 1. Overdue (dueDate <= today) — most important, sorted by how overdue they are
-  // 2. Unseen — never reviewed
-  // 3. Due in future — not yet, show a few as preview
+  // Sort cards into buckets (SRS mode):
   const getDaysOverdue = (v) => {
     const due = vocabSeen[v.de]?.dueDate;
     if (!due) return null; // unseen
     return Math.ceil((new Date(today) - new Date(due)) / 86400000); // positive = overdue
   };
 
+  const isAllVariant = selectedChapterId.endsWith('_all');
+
+  // Logic: For single chapters, just return all words shuffled (no SRS)
+  if (!isAllVariant) {
+    return shuffle(activeCombined);
+  }
+
+  // Logic: For "All" chapters, use the real SRS buckets
   const overdue = activeCombined
     .filter(v => { const d = getDaysOverdue(v); return d !== null && d >= 0; })
     .sort((a, b) => (getDaysOverdue(b) || 0) - (getDaysOverdue(a) || 0));
 
   let unseen = activeCombined.filter(v => !vocabSeen[v.de]);
 
-  // Feature: If practicing an entire course, don't dump 2000 new words at once.
-  // We cap new unseen words to 20 per session. Because baseVocab is ordered chapter by chapter,
-  // this naturally feeds new words from Chapter 1, then Chapter 2, etc!
-  if (selectedChapterId.endsWith('_all') && unseen.length > 20) {
+  // Feature: cap unseen words to 20 per session for "_all" decks
+  if (unseen.length > 20) {
     unseen = unseen.slice(0, 20);
   }
 
   const upcoming = activeCombined
     .filter(v => { const d = getDaysOverdue(v); return d !== null && d < 0; })
-    .sort((a, b) => (getDaysOverdue(a) || 0) - (getDaysOverdue(b) || 0));
+    .sort((a, b) => (getDaysOverdue(b) || 0) - (getDaysOverdue(a) || 0));
 
-  // Feature: If practicing a single small chapter and it's totally done, don't keep feeding "upcoming" 
-  // cards back to the user, otherwise they feel stuck in a loop. Only use upcoming if it's the `_all` deck.
-  const isAllVariant = selectedChapterId.endsWith('_all');
-  const allowedUpcoming = isAllVariant ? upcoming.slice(0, 5) : [];
-
-  return [...overdue, ...unseen, ...allowedUpcoming];
+  return [...overdue, ...unseen, ...upcoming.slice(0, 5)];
 }
 
 function buildMCQOptions(current, selectedChapterId) {
@@ -88,7 +95,7 @@ function buildMCQOptions(current, selectedChapterId) {
     }
   }
   const pool = shuffle(
-    poolVocab.map(v => v.sk).filter((sk) => sk !== current.sk && sk)
+    Array.from(new Set(poolVocab.map(v => v.sk))).filter((sk) => sk !== current.sk && sk)
   );
   return shuffle([current.sk, ...pool.slice(0, 3)]);
 }
