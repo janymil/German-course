@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nemecká Gramatika A1 — Akadémia</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+<aside id="sidebar">
+    <div class="sidebar-brand">
+        <div class="brand-logo"><i class="fa-solid fa-graduation-cap"></i></div>
+        <div class="brand-text">
+            <div class="brand-title">Nemčina A1</div>
+            <div class="brand-sub">Gramatická Akadémia</div>
+        </div>
+        <button id="sidebar-collapse-btn" title="Zbaliť"><i class="fa-solid fa-chevron-left"></i></button>
+    </div>
+    <div class="sidebar-progress-block">
+        <div class="sp-header">
+            <span class="sp-label">Celkový pokrok</span>
+            <span id="sidebar-progress-pct" class="sp-pct">0%</span>
+        </div>
+        <div class="sp-track"><div class="sp-fill" id="sidebar-progress-bar" style="width:0%"></div></div>
+        <div class="sp-sub"><span id="sidebar-lessons-done">0</span> / <span id="sidebar-lessons-total">0</span> lekcií dokončených</div>
+    </div>
+    <nav id="sidebar-nav"></nav>
+    <div class="sidebar-footer">
+        <button class="sidebar-footer-btn" id="reset-progress-btn" title="Resetovať pokrok">
+            <i class="fa-solid fa-rotate-left"></i> Resetovať pokrok
+        </button>
+    </div>
+</aside>
+
+<div id="sidebar-overlay"></div>
+
+<div id="app-shell">
+    <header id="topbar">
+        <div class="topbar-left">
+            <button id="mobile-menu-btn"><i class="fa-solid fa-bars"></i></button>
+            <div id="topbar-breadcrumb">Domov</div>
+        </div>
+        <div class="topbar-right">
+            <label class="study-mode-wrap" title="Skryť slovenské preklady — hover na text ho odhalí">
+                <span class="study-label">Skryť preklady</span>
+                <span id="study-toggle" class="toggle-pill">
+                    <span class="tp-track"><span class="tp-thumb"></span></span>
+                </span>
+                <input type="checkbox" id="study-checkbox" hidden>
+            </label>
+        </div>
+    </header>
+    <main id="main-content"></main>
+</div>
+
+<!-- Exercise modal -->
+<div id="exercise-modal" class="modal hidden">
+    <div class="modal-backdrop" id="ex-backdrop"></div>
+    <div class="modal-box" id="exercise-modal-box">
+        <button class="modal-close" id="exercise-modal-close"><i class="fa-solid fa-xmark"></i></button>
+        <div id="exercise-modal-content"></div>
+    </div>
+</div>
+
+<!-- Flashcard modal -->
+<div id="flashcard-modal" class="modal hidden">
+    <div class="modal-box modal-box--wide"></div>
+</div>
+
+<script src="js/data/lessons.js"></script>
+<script src="js/data/exercises.js"></script>
+<script src="js/data/chunks.js"></script>
+<script src="js/tts.js"></script>
+<script src="js/progress.js"></script>
+<script src="js/modules/lessonRenderer.js"></script>
+<script src="js/modules/exerciseEngine.js"></script>
+<script src="js/modules/flashcards.js"></script>
+<script src="js/modules/artikelGame.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

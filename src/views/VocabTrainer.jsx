@@ -17,15 +17,20 @@ function shuffle(arr) {
   return a;
 }
 
-function buildDeck(progress, selectedChapterId) {
+function buildDeck(progress, selectedChapterId, deckOverride) {
   const today = new Date().toISOString().slice(0, 10);
 
   let baseVocab = [];
-  for (const d of ALL_DECKS) {
-    const chapter = d.chapters?.find(c => c.id === selectedChapterId);
-    if (chapter) {
-      baseVocab = chapter.vocab || [];
-      break;
+  if (deckOverride) {
+    const chapter = deckOverride.chapters?.find(c => c.id === selectedChapterId);
+    if (chapter) baseVocab = chapter.vocab || [];
+  } else {
+    for (const d of (deckOverride ? [deckOverride] : ALL_DECKS)) {
+      const chapter = d.chapters?.find(c => c.id === selectedChapterId);
+      if (chapter) {
+        baseVocab = chapter.vocab || [];
+        break;
+      }
     }
   }
 
@@ -87,7 +92,7 @@ function buildDeck(progress, selectedChapterId) {
 
 function buildMCQOptions(current, selectedChapterId) {
   let poolVocab = [];
-  for (const d of ALL_DECKS) {
+  for (const d of (deckOverride ? [deckOverride] : ALL_DECKS)) {
     const chapter = d.chapters?.find(c => c.id === selectedChapterId);
     if (chapter) {
       poolVocab = chapter.vocab || [];
@@ -113,7 +118,7 @@ const MODES = [
   { id: 'C', label: 'Doplňovanie', Icon: Edit3 },
 ];
 
-export default function VocabTrainer({ progress, onMarkVocab, onMarkVocabWrong, onReviewVocab, onAddCustomVocab }) {
+export default function VocabTrainer({ progress, onMarkVocab, onMarkVocabWrong, onReviewVocab, onAddCustomVocab, deckOverride }) {
   const { speak } = useTTS();
   const [mainTab, setMainTab] = useState('decks'); // 'decks' | 'words' | 'chunks'
   const [selectedParentDeckId, setSelectedParentDeckId] = useState(null);
@@ -201,7 +206,7 @@ export default function VocabTrainer({ progress, onMarkVocab, onMarkVocabWrong, 
 
   // Filter vocabSeen to only count mastered words in the CURRENT active deck
   let activeDeckVocab = [];
-  for (const d of ALL_DECKS) {
+  for (const d of (deckOverride ? [deckOverride] : ALL_DECKS)) {
     const chapter = d.chapters?.find(c => c.id === selectedChapterId);
     if (chapter) {
       activeDeckVocab = chapter.vocab || [];
@@ -490,11 +495,11 @@ export default function VocabTrainer({ progress, onMarkVocab, onMarkVocabWrong, 
                 <ChevronLeft size={16} /> Späť na kurzy
               </button>
               <div className="mb-4 space-y-1">
-                <h2 className="text-xl font-bold text-white">{ALL_DECKS.find(d => d.id === selectedParentDeckId)?.title}</h2>
+                <h2 className="text-xl font-bold text-white">{(deckOverride ? [deckOverride] : ALL_DECKS).find(d => d.id === selectedParentDeckId)?.title}</h2>
                 <p className="text-gray-400 text-sm">Vyber si lekciu na precvičovanie:</p>
               </div>
               <div className="grid grid-cols-1 gap-2">
-                {ALL_DECKS.find(d => d.id === selectedParentDeckId)?.chapters?.map(c => (
+                {(deckOverride ? [deckOverride] : ALL_DECKS).find(d => d.id === selectedParentDeckId)?.chapters?.map(c => (
                   <div
                     key={c.id}
                     onClick={() => { setSelectedChapterId(c.id); setMainTab('words'); }}
@@ -512,7 +517,7 @@ export default function VocabTrainer({ progress, onMarkVocab, onMarkVocabWrong, 
             <>
               <p className="text-gray-400 text-sm">Vyber si kurz:</p>
               <div className="grid grid-cols-1 gap-3">
-                {ALL_DECKS.map(d => (
+                {(deckOverride ? [deckOverride] : ALL_DECKS).map(d => (
                   <div
                     key={d.id}
                     onClick={() => setSelectedParentDeckId(d.id)}

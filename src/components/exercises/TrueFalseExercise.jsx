@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { CheckCircle, XCircle, Volume2 } from 'lucide-react';
 import { useTTS } from '../../hooks/useTTS';
+import { normalizeGerman } from '../../utils/text';
 
 /**
  * TrueFalseExercise — Student decides if a German statement is Richtig or Falsch.

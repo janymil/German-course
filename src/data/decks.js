@@ -1,6 +1,7 @@
 import { LESSONS } from './curriculum';
 import { nicosWegDeck as nwRawDeck } from './decks/nicos_weg';
-
+import { momenteDeck as mmRawDeck } from './decks/momente_a1_1';
+import { momenteA1_2Deck as mmA1_2RawDeck } from './decks/momente_a1_2';
 const mainCourseChapters = LESSONS.map(l => ({
   id: l.id,
   title: l.title,
@@ -35,5 +36,7 @@ export const nicosWegDeck = {
 
 export const ALL_DECKS = [
   mainCourseDeck,
-  nicosWegDeck
+  nicosWegDeck,
+  mmRawDeck,
+  mmA1_2RawDeck
 ];

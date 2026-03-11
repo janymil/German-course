@@ -228,7 +228,7 @@ async function processVideo(videoId) {
   fs.mkdirSync(CACHE_DIR, { recursive: true });
 
   const cacheFile = path.join(CACHE_DIR, `${videoId}.json`);
-  const segmentFile = path.join(CACHE_DIR, `${videoId} - segments.json`);
+  const segmentFile = path.join(CACHE_DIR, `${videoId}-segments.json`);
 
   let transcript = null;
   let translations = null;
@@ -321,6 +321,7 @@ const LIBRARY_IDS = [
   // Vlogy a prechádzky
   { id: 'uzNrP5ZyH0A', title: 'Learn German the Natural Way - Walk & Talk Through the City' },
   { id: 'qGBJYuCoamg', title: 'Bananenbrot backen - Interaktiver Kochkurs' },
+  { id: 'jwNJ8pE4ol0', title: 'Wie man Schokolade macht | SWR Handwerkskunst' },
   // Easy German
   { id: 'D91icSuPYQ4', title: 'Supermarket in Slow German (Super Easy German 288)' },
 ];

@@ -30,6 +30,20 @@ Before editing ANY file in this project:
 
 ---
 
+## RULE 1C — THINK BROADLY AND CODE CAREFULLY (MANDATORY BEFORE CODING)
+
+**This rule exists because agents often rush to fix one local issue and break the broader system, or provide lazy, repetitive data (like 150 exercises with the same 3 words) because they did not think about the user experience.**
+
+Before writing any code or data, ask yourself:
+1. **Holistic Impact**: How does this one piece interact with the rest of the application? (e.g. if I change a data structure, what components break?)
+2. **Quality Variation**: Is the content I am generating actually valuable to a learner? If generating exercises, am I mathematically ensuring proper distribution of nouns, adjectives, and grammar rules, or am I just repeating the same subject/predicate? (Use procedural generation scripts for large datasets; don't hand-guess).
+3. **Data Flow Tracing**: Before fixing a bug, do not just stare at the UI layer. Trace the source of the data, the engine that parses it, and the component that renders it.
+4. **Code Carefully**: Do not rush. Make sure JavaScript variable scoping (`var` vs `const` in vanilla HTML) is correct for the specific environment (React vs Vanilla JS).
+
+Do not submit code or data until you have thought through its broad implications.
+
+---
+
 ## RULE 1B — FULL INTERCONNECTION AUDIT (MANDATORY FOR EVERY TASK)
 
 **This rule exists because the user should NOT have to point out missing connections. That is the agent's job.**

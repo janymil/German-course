@@ -4,6 +4,7 @@ import fs from 'fs';
 import path from 'path';
 import { handleGenerateStory } from './scripts/story-generator-api.js';
 import { handleSegmentVideo, handleTranscribeAudio, handleVoiceChat, handleGenerateVideoExercises } from './scripts/ai-voice-coach-api.js';
+import { handleGenerateDrill } from './scripts/intensive-drill-api.js';
 import { createRequire } from 'module';
 const require = createRequire(import.meta.url);
 
@@ -243,6 +244,35 @@ function progressPlugin() {
         res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
         if (req.method === 'OPTIONS') { res.writeHead(204); res.end(); return; }
         if (req.method === 'POST') return handleGenerateStory(req, res);
+        res.writeHead(405); res.end('method not allowed');
+      });
+
+      // ── Intensive Drill Endpoint ────────────────────────────────────────────
+      server.middlewares.use('/api/generate-drill', async (req, res) => {
+        res.setHeader('Access-Control-Allow-Origin', '*');
+        res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
+        if (req.method === 'OPTIONS') { res.writeHead(204); res.end(); return; }
+        if (req.method === 'POST') return handleGenerateDrill(req, res);
+        res.writeHead(405); res.end('method not allowed');
+      });
+
+      server.middlewares.use('/api/custom-drills', async (req, res) => {
+        res.setHeader('Access-Control-Allow-Origin', '*');
+        res.setHeader('Access-Control-Allow-Methods', 'GET, OPTIONS');
+        if (req.method === 'OPTIONS') { res.writeHead(204); res.end(); return; }
+        if (req.method === 'GET') {
+          const DB_FILE = path.join(process.cwd(), 'src', 'data', 'intensive_drills_custom.json');
+          if (fs.existsSync(DB_FILE)) {
+            res.setHeader('Content-Type', 'application/json');
+            res.writeHead(200);
+            res.end(fs.readFileSync(DB_FILE, 'utf8'));
+          } else {
+            res.setHeader('Content-Type', 'application/json');
+            res.writeHead(200);
+            res.end('[]');
+          }
+          return;
+        }
         res.writeHead(405); res.end('method not allowed');
       });
 

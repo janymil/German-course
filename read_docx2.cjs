@@ -1,0 +1,1 @@
+const mammoth = require('mammoth'); mammoth.convertToHtml({path:'C:/Users/USER/Documents/GERMAN/ANKI/Momente_A1_1_KB_Glossar_Deutsch_Englisch.docx'}).then(r => console.log(r.value)).catch(e => console.error(e));

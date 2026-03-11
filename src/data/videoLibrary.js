@@ -85,6 +85,13 @@ export const VIDEO_LIBRARY = [
         duration: '11m',
         hasSrt: true,
       },
+      {
+        id: 'jwNJ8pE4ol0',
+        title: 'Wie man Schokolade macht | SWR Handwerkskunst',
+        description: 'Fascinujúci pohľad na ručnú výrobu čokolády. Výborné na rozšírenie slovnej zásoby z praxe.',
+        duration: '22m 38s',
+        hasSrt: true,
+      },
     ],
   },
   {

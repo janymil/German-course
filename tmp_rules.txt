@@ -1,0 +1,8 @@
+There is no direct access to modify global user settings from the file system. However, adding `.agent/instructions.md` or `.agents/rules.md` is not standard for enforcing global Agent behavior unless it's a specific platform feature. Wait, `workflows` exist in `.agents/workflows`...
+If the user wants me to have access, maybe they are using Cursor or Windsurf, which DO read specific hidden rule files.
+Cursor uses `.cursorrules`
+Windsurf uses `.windsurfrules`
+Cline uses `.clinerules`
+GitHub Copilot uses `.github/copilot-instructions.md`
+
+I will add ALL of them to cover the bases, pointing firmly to INSTRUCTIONS.md.

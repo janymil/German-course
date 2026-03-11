@@ -1,0 +1,29 @@
+{
+  "segments": [
+    {
+      "startTimeMs": 4280,
+      "endTimeMs": 316360,
+      "topicDescription": "Kakaobohnen verarbeiten"
+    },
+    {
+      "startTimeMs": 316480,
+      "endTimeMs": 625920,
+      "topicDescription": "Schokoladenherstellungsprozess"
+    },
+    {
+      "startTimeMs": 626040,
+      "endTimeMs": 963040,
+      "topicDescription": "Schokoladenherstellung Pralinen"
+    },
+    {
+      "startTimeMs": 965120,
+      "endTimeMs": 1274160,
+      "topicDescription": "Schokoladenherstellung erklärt"
+    },
+    {
+      "startTimeMs": 1276000,
+      "endTimeMs": 1350280,
+      "topicDescription": "Freude am Handwerk"
+    }
+  ]
+}

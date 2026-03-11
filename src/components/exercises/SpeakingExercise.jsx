@@ -14,12 +14,11 @@ import { useState, useEffect, useRef, useCallback } from 'react';
 import { Volume2, CheckCircle, RefreshCw, ArrowRight, Mic, MicOff, EyeOff, Eye } from 'lucide-react';
 import { useTTS } from '../../hooks/useTTS';
 import { GenderText } from '../../utils/genderColors';
-
-const normalize = (s) => (s || '').toLowerCase().replace(/[.,?!¿¡;:—–\-]/g, '').replace(/\s+/g, ' ').trim();
+import { normalizeGerman } from '../../utils/text';
 
 const isMatch = (userText, targetText) => {
-  const u = normalize(userText);
-  const t = normalize(targetText);
+  const u = normalizeGerman(userText);
+  const t = normalizeGerman(targetText);
   if (!u || !t) return false;
   if (u === t) return true;
   if (u.includes(t) || t.includes(u)) return true;

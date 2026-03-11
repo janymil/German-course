@@ -132,7 +132,66 @@ export const EBOOKS = [
             "Seite": { type: "noun", sk: "strana", article: "die", plural: "die Seiten", cases: { Nominativ: "die Seite", Akkusativ: "die Seite", Dativ: "der Seite", Genitiv: "der Seite" } },
             "Bank": { type: "noun", sk: "lavička", article: "die", plural: "die Bänke", cases: { Nominativ: "die Bank", Akkusativ: "die Bank", Dativ: "der Bank", Genitiv: "der Bank" } },
             "Autofahrer": { type: "noun", sk: "vodič", article: "der", plural: "die Autofahrer", cases: { Nominativ: "der Autofahrer", Akkusativ: "den Autofahrer", Dativ: "dem Autofahrer", Genitiv: "des Autofahrers" } },
-            "Wein": { type: "noun", sk: "víno", article: "der", plural: "die Weine", cases: { Nominativ: "der Wein", Akkusativ: "den Wein", Dativ: "dem Wein", Genitiv: "des Weines" } }
+            "Wein": { type: "noun", sk: "víno", article: "der", plural: "die Weine", cases: { Nominativ: "der Wein", Akkusativ: "den Wein", Dativ: "dem Wein", Genitiv: "des Weines" } },
+            "Adresse": { type: "noun", sk: "adresa", article: "die", plural: "die Adressen", cases: { Nominativ: "die Adresse", Akkusativ: "die Adresse", Dativ: "der Adresse", Genitiv: "der Adresse" } },
+            "Treppe": { type: "noun", sk: "schody", article: "die", plural: "die Treppen", cases: { Nominativ: "die Treppe", Akkusativ: "die Treppe", Dativ: "der Treppe", Genitiv: "der Treppe" } },
+            "Stock": { type: "noun", sk: "poschodie", article: "der", plural: "die Stockwerke", cases: { Nominativ: "der Stock", Akkusativ: "den Stock", Dativ: "dem Stock", Genitiv: "des Stocks" } },
+            "Tür": { type: "noun", sk: "dvere", article: "die", plural: "die Türen", cases: { Nominativ: "die Tür", Akkusativ: "die Tür", Dativ: "der Tür", Genitiv: "der Tür" } },
+            "Fuss": { type: "noun", sk: "noha", article: "der", plural: "die Füsse", cases: { Nominativ: "der Fuss", Akkusativ: "den Fuss", Dativ: "dem Fuss", Genitiv: "des Fusses" } },
+            "Küchentisch": { type: "noun", sk: "kuchynský stôl", article: "der", plural: "die Küchentische", cases: { Nominativ: "der Küchentisch", Akkusativ: "den Küchentisch", Dativ: "dem Küchentisch", Genitiv: "des Küchentisches" } },
+            "Sportstudent": { type: "noun", sk: "študent športu", article: "der", plural: "die Sportstudenten", cases: { Nominativ: "der Sportstudent", Akkusativ: "den Sportstudent", Dativ: "dem Sportstudent", Genitiv: "des Sportstudenten" } },
+            "Fussball": { type: "noun", sk: "futbal", article: "der", plural: "die Fussbälle", cases: { Nominativ: "der Fussball", Akkusativ: "den Fussball", Dativ: "dem Fussball", Genitiv: "des Fussballs" } },
+            "Erzählungen": { type: "noun", sk: "rozprávania", article: "die", plural: "die Erzählungen", cases: { Nominativ: "die Erzählungen", Akkusativ: "die Erzählungen", Dativ: "den Erzählungen", Genitiv: "der Erzählungen" } },
+            "Bett": { type: "noun", sk: "posteľ", article: "das", plural: "die Betten", cases: { Nominativ: "das Bett", Akkusativ: "das Bett", Dativ: "dem Bett", Genitiv: "des Bettes" } },
+            "Gallitzinberg": { type: "noun", sk: "Gallitzinberg", article: "der", plural: "-", cases: { Nominativ: "der Gallitzinberg", Akkusativ: "den Gallitzinberg", Dativ: "dem Gallitzinberg", Genitiv: "des Gallitzinbergs" } },
+            "Briefe": { type: "noun", sk: "listy", article: "die", plural: "die Briefe", cases: { Nominativ: "die Briefe", Akkusativ: "die Briefe", Dativ: "den Briefen", Genitiv: "der Briefe" } },
+            "Taxi": { type: "noun", sk: "taxík", article: "das", plural: "die Taxis", cases: { Nominativ: "das Taxi", Akkusativ: "das Taxi", Dativ: "dem Taxi", Genitiv: "des Taxis" } },
+            "Strassen": { type: "noun", sk: "ulice", article: "die", plural: "die Strassen", cases: { Nominativ: "die Strassen", Akkusativ: "die Strassen", Dativ: "den Strassen", Genitiv: "der Strassen" } },
+            "Bäume": { type: "noun", sk: "stromy", article: "die", plural: "die Bäume", cases: { Nominativ: "die Bäume", Akkusativ: "die Bäume", Dativ: "den Bäumen", Genitiv: "der Bäume" } },
+            "Büsche": { type: "noun", sk: "kríky", article: "die", plural: "die Büsche", cases: { Nominativ: "die Büsche", Akkusativ: "die Büsche", Dativ: "den Büschen", Genitiv: "der Büsche" } },
+            "Kleidung": { type: "noun", sk: "oblečenie", article: "die", plural: "-", cases: { Nominativ: "die Kleidung", Akkusativ: "die Kleidung", Dativ: "der Kleidung", Genitiv: "der Kleidung" } },
+            "Fenster": { type: "noun", sk: "okno", article: "das", plural: "die Fenster", cases: { Nominativ: "das Fenster", Akkusativ: "das Fenster", Dativ: "dem Fenster", Genitiv: "des Fensters" } },
+            "Ast": { type: "noun", sk: "konár", article: "der", plural: "die Äste", cases: { Nominativ: "der Ast", Akkusativ: "den Ast", Dativ: "dem Ast", Genitiv: "des Astes" } },
+            "Mal": { type: "noun", sk: "krát", article: "das", plural: "die Male", cases: { Nominativ: "das Mal", Akkusativ: "das Mal", Dativ: "dem Mal", Genitiv: "des Males" } },
+            "Busch": { type: "noun", sk: "krík", article: "der", plural: "die Büsche", cases: { Nominativ: "der Busch", Akkusativ: "den Busch", Dativ: "dem Busch", Genitiv: "des Busches" } },
+            "Hilfe": { type: "noun", sk: "pomoc", article: "die", plural: "-", cases: { Nominativ: "die Hilfe", Akkusativ: "die Hilfe", Dativ: "der Hilfe", Genitiv: "der Hilfe" } },
+            "Sofa": { type: "noun", sk: "pohovka", article: "das", plural: "die Sofas", cases: { Nominativ: "das Sofa", Akkusativ: "das Sofa", Dativ: "dem Sofa", Genitiv: "des Sofas" } },
+            "Grosseltern": { type: "noun", sk: "starí rodičia", article: "die", plural: "die Grosseltern", cases: { Nominativ: "die Grosseltern", Akkusativ: "die Grosseltern", Dativ: "den Grosseltern", Genitiv: "der Grosseltern" } },
+            "Urlaub": { type: "noun", sk: "dovolenka", article: "der", plural: "die Urlaube", cases: { Nominativ: "der Urlaub", Akkusativ: "den Urlaub", Dativ: "dem Urlaub", Genitiv: "des Urlaubs" } },
+            "Ahnung": { type: "noun", sk: "tušenie", article: "die", plural: "die Ahnungen", cases: { Nominativ: "die Ahnung", Akkusativ: "die Ahnung", Dativ: "der Ahnung", Genitiv: "der Ahnung" } },
+            "Kaffeebecher": { type: "noun", sk: "pohár na kávu", article: "der", plural: "die Kaffeebecher", cases: { Nominativ: "der Kaffeebecher", Akkusativ: "den Kaffeebecher", Dativ: "dem Kaffeebecher", Genitiv: "des Kaffeebechers" } },
+            "Lieblingscafé": { type: "noun", sk: "obľúbená kaviareň", article: "das", plural: "die Lieblingscafés", cases: { Nominativ: "das Lieblingscafé", Akkusativ: "das Lieblingscafé", Dativ: "dem Lieblingscafé", Genitiv: "des Lieblingscafés" } },
+            "Chef": { type: "noun", sk: "šéf", article: "der", plural: "die Chefs", cases: { Nominativ: "der Chef", Akkusativ: "den Chef", Dativ: "dem Chef", Genitiv: "des Chefs" } },
+            "Junge": { type: "noun", sk: "chlapec", article: "der", plural: "die Jungen", cases: { Nominativ: "der Junge", Akkusativ: "den Jungen", Dativ: "dem Jungen", Genitiv: "des Jungen" } },
+            "Schule": { type: "noun", sk: "škola", article: "die", plural: "die Schulen", cases: { Nominativ: "die Schule", Akkusativ: "die Schule", Dativ: "der Schule", Genitiv: "der Schule" } },
+            "Haare": { type: "noun", sk: "vlasy", article: "die", plural: "die Haare", cases: { Nominativ: "die Haare", Akkusativ: "die Haare", Dativ: "den Haaren", Genitiv: "der Haare" } },
+            "Narbe": { type: "noun", sk: "jazva", article: "die", plural: "die Narben", cases: { Nominativ: "die Narbe", Akkusativ: "die Narbe", Dativ: "der Narbe", Genitiv: "der Narbe" } },
+            "Auge": { type: "noun", sk: "oko", article: "das", plural: "die Augen", cases: { Nominativ: "das Auge", Akkusativ: "das Auge", Dativ: "dem Auge", Genitiv: "des Auges" } },
+            "Verdächtigen": { type: "noun", sk: "podozriví", article: "die", plural: "die Verdächtigen", cases: { Nominativ: "die Verdächtigen", Akkusativ: "die Verdächtigen", Dativ: "den Verdächtigen", Genitiv: "der Verdächtigen" } },
+            "Profimannschaft": { type: "noun", sk: "profesionálne družstvo", article: "die", plural: "die Profimannschaften", cases: { Nominativ: "die Profimannschaft", Akkusativ: "die Profimannschaft", Dativ: "der Profimannschaft", Genitiv: "der Profimannschaft" } },
+            "Freundin": { type: "noun", sk: "priateľka", article: "die", plural: "die Freundinnen", cases: { Nominativ: "die Freundin", Akkusativ: "die Freundin", Dativ: "der Freundin", Genitiv: "der Freundin" } },
+            "Briefeschreiber": { type: "noun", sk: "pisateľ listov", article: "der", plural: "die Briefeschreiber", cases: { Nominativ: "der Briefeschreiber", Akkusativ: "den Briefeschreiber", Dativ: "dem Briefeschreiber", Genitiv: "des Briefeschreibers" } },
+            "Kunde": { type: "noun", sk: "zákazník", article: "der", plural: "die Kunden", cases: { Nominativ: "der Kunde", Akkusativ: "den Kunden", Dativ: "dem Kunden", Genitiv: "des Kunden" } },
+            "Dumme": { type: "noun", sk: "hlupák", article: "der", plural: "die Dummen", cases: { Nominativ: "der Dumme", Akkusativ: "den Dummen", Dativ: "dem Dummen", Genitiv: "des Dummen" } },
+            "Foto": { type: "noun", sk: "fotka", article: "das", plural: "die Fotos", cases: { Nominativ: "das Foto", Akkusativ: "das Foto", Dativ: "dem Foto", Genitiv: "des Fotos" } },
+            "Text": { type: "noun", sk: "text", article: "der", plural: "die Texte", cases: { Nominativ: "der Text", Akkusativ: "den Text", Dativ: "dem Text", Genitiv: "des Textes" } },
+            "Jahre": { type: "noun", sk: "roky", article: "die", plural: "die Jahre", cases: { Nominativ: "die Jahre", Akkusativ: "die Jahre", Dativ: "den Jahren", Genitiv: "der Jahre" } },
+            "Unfall": { type: "noun", sk: "nehoda", article: "der", plural: "die Unfälle", cases: { Nominativ: "der Unfall", Akkusativ: "den Unfall", Dativ: "dem Unfall", Genitiv: "des Unfalls" } },
+            "Bergen": { type: "noun", sk: "hory (Dativ)", article: "die", plural: "die Berge", cases: { Nominativ: "die Berge", Akkusativ: "die Berge", Dativ: "den Bergen", Genitiv: "der Berge" } },
+            "Schulfreund": { type: "noun", sk: "zo školy", article: "der", plural: "die Schulfreunde", cases: { Nominativ: "der Schulfreund", Akkusativ: "den Schulfreund", Dativ: "dem Schulfreund", Genitiv: "des Schulfreunds" } },
+            "Bandgasse": { type: "noun", sk: "Bandgasse", article: "die", plural: "-", cases: { Nominativ: "die Bandgasse", Akkusativ: "die Bandgasse", Dativ: "der Bandgasse", Genitiv: "der Bandgasse" } },
+            "Treffen": { type: "noun", sk: "stretnutie", article: "das", plural: "die Treffen", cases: { Nominativ: "das Treffen", Akkusativ: "das Treffen", Dativ: "dem Treffen", Genitiv: "des Treffens" } },
+            "Bahnhof": { type: "noun", sk: "stanica", article: "der", plural: "die Bahnhöfe", cases: { Nominativ: "der Bahnhof", Akkusativ: "den Bahnhof", Dativ: "dem Bahnhof", Genitiv: "des Bahnhofs" } },
+            "Park": { type: "noun", sk: "park", article: "der", plural: "die Parks", cases: { Nominativ: "der Park", Akkusativ: "den Park", Dativ: "dem Park", Genitiv: "des Parks" } },
+            "Nähe": { type: "noun", sk: "blízkosť", article: "die", plural: "die Nähe", cases: { Nominativ: "die Nähe", Akkusativ: "die Nähe", Dativ: "der Nähe", Genitiv: "der Nähe" } },
+            "Café": { type: "noun", sk: "kaviareň", article: "das", plural: "die Cafés", cases: { Nominativ: "das Café", Akkusativ: "das Café", Dativ: "dem Café", Genitiv: "des Cafés" } },
+            "Anfang": { type: "noun", sk: "začiatok", article: "der", plural: "die Anfänge", cases: { Nominativ: "der Anfang", Akkusativ: "den Anfang", Dativ: "dem Anfang", Genitiv: "des Anfangs" } },
+            "Nacht": { type: "noun", sk: "noc", article: "die", plural: "die Nächte", cases: { Nominativ: "die Nacht", Akkusativ: "die Nacht", Dativ: "der Nacht", Genitiv: "der Nacht" } },
+            "Sonntag": { type: "noun", sk: "nedeľa", article: "der", plural: "die Sonntage", cases: { Nominativ: "der Sonntag", Akkusativ: "den Sonntag", Dativ: "dem Sonntag", Genitiv: "des Sonntags" } },
+            "Profifußballerin": { type: "noun", sk: "profesionálna futbalistka", article: "die", plural: "die Profifußballerinnen", cases: { Nominativ: "die Profifußballerin", Akkusativ: "die Profifußballerin", Dativ: "der Profifußballerin", Genitiv: "der Profifußballerin" } },
+            "Bessere": { type: "noun", sk: "tá lepšia", article: "die", plural: "die Besseren", cases: { Nominativ: "die Bessere", Akkusativ: "die Bessere", Dativ: "der Besseren", Genitiv: "der Besseren" } },
+            "Augen": { type: "noun", sk: "oči", article: "die", plural: "die Augen", cases: { Nominativ: "die Augen", Akkusativ: "die Augen", Dativ: "den Augen", Genitiv: "der Augen" } },
+            "Kundin": { type: "noun", sk: "zákazníčka", article: "die", plural: "die Kundinnen", cases: { Nominativ: "die Kundin", Akkusativ: "die Kundin", Dativ: "der Kundin", Genitiv: "der Kundin" } }
         },
         chapters: [
             {
@@ -711,6 +770,407 @@ export const EBOOKS = [
                     { de: "Aber ich glaube es nicht.", sk: "Ale neverím tomu.", format: "normal", endParagraph: true },
 
                     { de: "Julia sagt: „Ich muss Ihnen noch ein paar Dinge über Harald und Klara erzählen …\"", sk: "Júlia hovorí: „Musím Vám ešte porozprávať pár vecí o Haraldovi a Kláre …\"", format: "dialogue_start" }
+                ]
+            },
+            {
+                id: 'ch_06',
+                title: 'Kapitel 6: Der Ex-Freund',
+                audioSrc: '/ebooks/A1-Du-Findest-mich-nicht/Du_findest_mich_nicht_Krimi_Track_06_Kapitel_6_Der_Ex-Freund.mp3',
+                image: '/ebooks/A1-Du-Findest-mich-nicht/kapitel6.png',
+                sentences: [
+                    { de: "Julia hat mir die Adresse von Harald Hammerl gegeben, ich fahre gleich zu ihm.", sk: "Julia mi dala adresu Haralda Hammerla, hneď k nemu idem.", format: "normal" },
+                    { de: "Aber er ist nicht da.", sk: "Ale nie je tam.", format: "normal" },
+                    { de: "Ich warte ein paar Minuten, dann fahre ich ins Büro zurück.", sk: "Čakám pár minút, potom sa vraciam do kancelárie.", format: "normal", endParagraph: true },
+
+                    { de: "Um 20 Uhr stehe ich wieder vor seinem Haus.", sk: "O 20. hodine stojím opäť pred jeho domom.", format: "normal" },
+                    { de: "Jetzt, am Abend, ist er wahrscheinlich zu Hause.", sk: "Teraz, večer, je pravdepodobne doma.", format: "normal" },
+                    { de: "Ich gehe über die Treppe in den 3. Stock und klingle an seiner Tür.", sk: "Idem po schodoch na 3. poschodie a zazvoním pri jeho dverách.", format: "normal" },
+                    { de: "Ein junger Mann öffnet.", sk: "Otvorí mladý muž.", format: "normal", endParagraph: true },
+
+                    { de: "„Ja, bitte?\"", sk: "„Áno, prosím?\"", format: "dialogue_start" },
+                    { de: "„Harald Hammer?\",", sk: "„Harald Hammer?\",", format: "dialogue" },
+                    { de: "frage ich.", sk: "pýtam sa.", format: "normal" },
+                    { de: "„Ja. Was ist los?\"", sk: "„Áno. Čo sa deje?\"", format: "dialogue_start" },
+                    { de: "„Ich muss kurz mit Ihnen sprechen.\"", sk: "„Musím s Vami krátko hovoriť.\"", format: "dialogue" },
+                    { de: "„Okay, um was geht es?\",", sk: "„Okej, o čo ide?\",", format: "dialogue" },
+                    { de: "fragt Harald.", sk: "pýta sa Harald.", format: "normal" },
+                    { de: "„Können wir in Ihre Wohnung gehen?\"", sk: "„Môžeme ísť do Vášho bytu?\"", format: "dialogue_start" },
+                    { de: "„Äh.. Wer sind Sie?\"", sk: "„Eh.. Kto ste?\"", format: "dialogue_end" },
+
+                    { de: "Ich zeige ihm meinen Ausweis.", sk: "Ukážem mu svoj preukaz.", format: "normal" },
+                    { de: "„Ein Detektiv… Ich verstehe nicht.\"", sk: "„Detektív… Nerozumiem.\"", format: "dialogue_start" },
+                    { de: "„Es geht um Frau Kainz.\"", sk: "„Ide o pani Kainzovú.\"", format: "dialogue" },
+                    { de: "„Sind Sie von der Polizei?\"", sk: "„Ste od polície?\"", format: "dialogue" },
+                    { de: "„Nein, aber…\"", sk: "„Nie, ale…\"", format: "dialogue" },
+                    { de: "„Dann muss ich nicht mit Ihnen sprechen.\"", sk: "„Tak to s Vami nemusím hovoriť.\"", format: "dialogue_end" },
+
+                    { de: "Er will die Tür schliessen.", sk: "Chce zavrieť dvere.", format: "normal" },
+                    { de: "„Doch, müssen Sie.\"", sk: "„Ba áno, musíte.\"", format: "dialogue_start" },
+                    { de: "Ich stelle meinen Fuss in die Tür.", sk: "Vložím nohu do dverí.", format: "normal" },
+                    { de: "„Nein, muss ich nicht. Gehen Sie!\"", sk: "„Nie, nemusím. Choďte!\"", format: "dialogue_start" },
+                    { de: "„Ich arbeite mit der Polizei zusammen.\"", sk: "„Spolupracujem s políciou.\"", format: "dialogue_end" },
+
+                    { de: "Das ist nicht richtig, aber vielleicht spricht er dann mit mir.", sk: "To nie je pravda, ale možno potom bude so mnou hovoriť.", format: "normal", endParagraph: true },
+
+                    { de: "„Wirklich?\"", sk: "„Naozaj?\"", format: "dialogue_start" },
+                    { de: "„Können wir jetzt in Ihre Wohnung gehen?\"", sk: "„Môžeme ísť teraz do Vášho bytu?\"", format: "dialogue" },
+                    { de: "„Okay, kommen Sie.\"", sk: "„Okej, poďte.\"", format: "dialogue_end" },
+
+                    { de: "Wir setzen uns an seinen Küchentisch.", sk: "Sadneme si k jeho kuchynskému stolu.", format: "normal", endParagraph: true },
+
+                    { de: "„Herr Hammerl, Sie sind auch Sportstudent?\",", sk: "„Pán Hammerl, Vy ste tiež študent športu?\",", format: "dialogue_start" },
+                    { de: "frage ich.", sk: "pýtam sa.", format: "normal" },
+                    { de: "„Ja.\"", sk: "„Áno.\"", format: "dialogue_start" },
+                    { de: "„Sie spielen auch Fussball?\"", sk: "„Hráte tiež futbal?\"", format: "dialogue" },
+                    { de: "„Ja, aber…\"", sk: "„Áno, ale…\"", format: "dialogue" },
+                    { de: "„Klara war besser als Sie. Vielleicht hat Ihnen das nicht gefallen.\"", sk: "„Klára bola lepšia ako Vy. Možno sa Vám to nepáčilo.\"", format: "dialogue" },
+                    { de: "„Was hat das mit ihrem Tod zu tun?\"", sk: "„Čo to má spoločné s jej smrťou?\"", format: "dialogue_end" },
+
+                    { de: "„Wie lange sind Sie nicht mehr mit Klara zusammen?\",", sk: "„Ako dlho už nie ste s Klárou spolu?\",", format: "dialogue_start" },
+                    { de: "frage ich.", sk: "pýtam sa.", format: "normal" },
+                    { de: "„Drei Wochen. Aber sie wollte zu mir zurückkommen.\"", sk: "„Tri týždne. Ale chcela sa ku mne vrátiť.\"", format: "dialogue_start" },
+                    { de: "„Das glaube ich nicht\",", sk: "„Tomu neverím\",", format: "dialogue_start" },
+                    { de: "sage ich und denke an Julias Erzählungen.", sk: "hovorím a myslím na Juliino rozprávanie.", format: "normal" },
+                    { de: "„Sie wissen gar nichts.\"", sk: "„Vôbec nič neviete.\"", format: "dialogue_start" },
+                    { de: "Er sieht mich böse an.", sk: "Nahnevane sa na mňa pozrie.", format: "normal" },
+
+                    { de: "„Hat Klara einen neuen Freund gehabt?\",", sk: "„Mala Klára nového priateľa?\",", format: "dialogue_start" },
+                    { de: "frage ich.", sk: "pýtam sa.", format: "normal" },
+                    { de: "„Sind Sie verrückt? Ich war ihr Freund. Sie wollte zu mir…\"", sk: "„Ste blázon? Ja som bol jej priateľ. Ona chcela ku mne…\"", format: "dialogue_start" },
+                    { de: "„Ja, ja, das haben Sie schon gesagt. Warum ist Klara gegangen?\"", sk: "„Áno, áno, to ste už povedali. Prečo Klára odišla?\"", format: "dialogue" },
+                    { de: "„Das weiss ich auch nicht. Ich habe sie geliebt.\"", sk: "„To tiež neviem. Miloval som ju.\"", format: "dialogue" },
+                    { de: "„Doch, Sie wissen es.\"", sk: "„Ale áno, viete to.\"", format: "dialogue" },
+                    { de: "„Nein … ja… Vielleicht.\"", sk: "„Nie … áno… Možno.\"", format: "dialogue" },
+                    { de: "„Sie haben sie geschlagen.\"", sk: "„Vy ste ju zbili.\"", format: "dialogue" },
+                    { de: "„Nein, nein, das war… das war nur… Ich wollte das nicht.\"", sk: "„Nie, nie, to bolo… to bolo len… Nechcel som to.\"", format: "dialogue" },
+                    { de: "„Und in den letzten drei Wochen…\",", sk: "„A v posledných troch týždňoch…\",", format: "dialogue_start" },
+                    { de: "sage ich,", sk: "hovorím,", format: "normal" },
+                    { de: "„… haben Sie Klara oft angerufen, auf sie gewartet, ihr teure Dinge gekauft.\"", sk: "„… ste Kláre často volali, čakali na ňu, kupovali jej drahé veci.\"", format: "dialogue_end" },
+                    { de: "„Ja, ich wollte mich entschuldigen. Ich habe Klara geliebt. Ich liebe sie noch immer!\"", sk: "„Áno, chcel som sa ospravedlniť. Miloval som Kláru. Stále ju milujem!\"", format: "dialogue_start" },
+
+                    { de: "Er beginnt zu weinen.", sk: "Začne plakať.", format: "normal", endParagraph: true },
+
+                    { de: "„Wo waren Sie am Dienstagmorgen um sechs Uhr?\",", sk: "„Kde ste boli v utorok ráno o šiestej hodine?\",", format: "dialogue_start" },
+                    { de: "frage ich.", sk: "pýtam sa.", format: "normal" },
+                    { de: "„Da ist Klara doch ermordet worden?\"", sk: "„To predsa bola Klára zavraždená?\"", format: "dialogue_start" },
+                    { de: "„Herr Hammerl, wo?\"", sk: "„Pán Hammerl, kde?\"", format: "dialogue" },
+                    { de: "„Na, hier, im Bett. Wo sind Sie denn um sechs Uhr? Ich habe geschlafen.\"", sk: "„No, tu, v posteli. Kde ste vy o šiestej hodine? Ja som spal.\"", format: "dialogue" },
+                    { de: "„Waren Sie allein?\"", sk: "„Boli ste sám?\"", format: "dialogue" },
+                    { de: "„Natürlich. Klara ist doch… Klara war doch…\"", sk: "„Samozrejme. Klára je predsa… Klára bola predsa…\"", format: "dialogue_end" },
+
+                    { de: "Er weint wieder.", sk: "Zasa plače.", format: "normal", endParagraph: true },
+
+                    { de: "„Vielleicht waren Sie gar nicht zu Hause\",", sk: "„Možno ste vôbec neboli doma\",", format: "dialogue_start" },
+                    { de: "sage ich.", sk: "hovorím.", format: "normal" },
+                    { de: "„Vielleicht waren Sie am Gallitzinberg.\"", sk: "„Možno ste boli na Gallitzinbergu.\"", format: "dialogue_start" },
+                    { de: "„Hören Sie schlecht?\"", sk: "„Počujete zle?\"", format: "dialogue" },
+                    { de: "Jetzt wird er böse.", sk: "Teraz je už nahnevaný.", format: "normal" },
+                    { de: "„Ich war im Bett! Hier!\"", sk: "„Bol som v posteli! Tu!\"", format: "dialogue_end" },
+
+                    { de: "Er steht auf.", sk: "Vstane.", format: "normal" },
+                    { de: "„Gehen Sie jetzt!\"", sk: "„Choďte už!\"", format: "dialogue_start" },
+                    { de: "„Herr Hammerl, bitte..\"", sk: "„Pán Hammerl, prosím..\"", format: "dialogue" },
+                    { de: "„Raus! Sofort!\"", sk: "„Von! Okamžite!\"", format: "dialogue_end" },
+
+                    { de: "Ich gehe langsam die Treppe hinunter.", sk: "Kráčam pomaly po schodoch dole.", format: "normal" },
+                    { de: "Hat er Klara ermordet?", sk: "Zavraždil on Kláru?", format: "normal" },
+                    { de: "Kann schon sein.", sk: "Môže to tak byť.", format: "normal" },
+                    { de: "Aber warum sollte er mir Briefe schreiben?", sk: "Ale prečo by mi písal listy?", format: "normal", endParagraph: true },
+
+                    { de: "Da klingelt mein Handy.", sk: "Vtom mi zazvoní mobil.", format: "normal" },
+                    { de: "„Herr Fender, bitte helfen Sie mir!\"", sk: "„Pán Fender, prosím pomôžte mi!\"", format: "dialogue_start" },
+                    { de: "„Wer ist da?\"", sk: "„Kto je tam?\"", format: "dialogue" },
+                    { de: "„Hier ist Julia Kalman. Herr Fender, da ist jemand vor meinem Haus. Der beobachtet mich. Bitte kommen Sie schnell.\"", sk: "„Tu je Julia Kalman. Pán Fender, niekto je pred mojím domom. Pozoruje ma. Prosím príďte rýchlo.\"", format: "dialogue_end" }
+                ]
+            },
+            {
+                id: 'ch_07',
+                title: 'Kapitel 7: Wer ist im Garten?',
+                audioSrc: '/ebooks/A1-Du-Findest-mich-nicht/Du_findest_mich_nicht_Krimi_Track_07_Kapitel_7_Wer_ist_im_Garten.mp3',
+                image: '/ebooks/A1-Du-Findest-mich-nicht/kapitel7.png',
+                sentences: [
+                    { de: "Ich telefoniere mit Julia.", sk: "Telefonujem s Juliou.", format: "normal" },
+                    { de: "„Also mal langsam. Was ist los?\"", sk: "„Tak pekne pomaly. Čo sa deje?\"", format: "dialogue_start" },
+                    { de: "„Da ist ein Mann vor meinem Haus.", sk: "„Pred mojím domom je nejaký muž.", format: "dialogue" },
+                    { de: "Ich habe ihn aber nur kurz gesehen.", sk: "Videla som ho však len nakrátko.", format: "dialogue" },
+                    { de: "Er versteckt sich.\"", sk: "Skrýva sa.\"", format: "dialogue_end" },
+
+                    { de: "„Und Sie glauben, er beobachtet Sie?\"", sk: "„A myslíte si, že vás pozoruje?\"", format: "dialogue_start" },
+                    { de: "„Ja, genau.\"", sk: "„Áno, presne tak.\"", format: "dialogue_end" },
+
+                    { de: "„Und Sie glauben, er ist jetzt noch da?\"", sk: "„A myslíte, že je tam ešte aj teraz?\"", format: "dialogue_start" },
+                    { de: "„Ja, aber ich bin nicht ganz sicher.\"", sk: "„Áno, ale nie som si celkom istá.\"", format: "dialogue_end" },
+
+                    { de: "„Warum rufen Sie nicht die Polizei an?\"", sk: "„Prečo nezavoláte políciu?\"", format: "dialogue_start" },
+                    { de: "„Habe ich ja gemacht.", sk: "„Už som to urobila.", format: "dialogue" },
+                    { de: "Aber die hat gesagt warten Sie 20 Minuten.", sk: "Ale oni povedali, počkajte 20 minút.", format: "dialogue" },
+                    { de: "Wenn er dann immer noch da ist, rufen Sie noch einmal an.", sk: "Ak tam potom stále bude, zavolajte ešte raz.", format: "dialogue" },
+                    { de: "Ich will aber nicht warten.", sk: "Ja ale nechcem čakať.", format: "dialogue" },
+                    { de: "Bitte helfen Sie mir!\"", sk: "Prosím, pomôžte mi!\"", format: "dialogue_end" },
+
+                    { de: "Ich nehme ein Taxi und fahre zu Julia in den 13. Bezirk.", sk: "Beriem si taxík a idem za Juliou do 13. obvodu.", format: "normal" },
+                    { de: "Ich steige zwei Strassen vor ihrem Haus aus.", sk: "Vystupujem dve ulice pred jej domom.", format: "normal" },
+                    { de: "Der Mann soll mich nicht hören - wenn es ihn wirklich gibt.", sk: "Ten muž ma nesmie počuť - ak vôbec naozaj existuje.", format: "normal" },
+                    { de: "Ich gehe leise näher.", sk: "Idem potichu bližšie.", format: "normal" },
+                    { de: "Vor Julias Haus ist ein kleiner Garten.", sk: "Pred Juliiným domom je malá záhrada.", format: "normal" },
+                    { de: "Hier gibt es viele Bäume und Büsche.", sk: "Je tu veľa stromov a kríkov.", format: "normal", endParagraph: true },
+
+                    { de: "Da, zwischen den Büschen ist wirklich jemand!", sk: "Tam, medzi kríkmi niekto naozaj je!", format: "normal" },
+                    { de: "Ein Mann mit dunkler Kleidung.", sk: "Muž v tmavom oblečení.", format: "normal" },
+                    { de: "Er versteckt sich und sieht zum Fenster.", sk: "Skrýva sa a pozerá sa na okno.", format: "normal" },
+                    { de: "Was macht der hier?", sk: "Čo tu robí?", format: "normal" },
+                    { de: "Was will der von Julia?", sk: "Čo chce od Julie?", format: "normal" },
+                    { de: "So, Fender, denke ich, jetzt geh leise.", sk: "Tak, Fender, pomyslím si, teraz choď potichu.", format: "normal" },
+                    { de: "Ich komme näher.", sk: "Prichádzam bližšie.", format: "normal" },
+                    { de: "Gleich bin ich da.", sk: "Hneď tam budem.", format: "normal", endParagraph: true },
+
+                    { de: "Krrrkkk, oje … ein Ast … das war zu laut.", sk: "Krrrkkk, ojé … konár … to bolo príliš hlučné.", format: "normal" },
+                    { de: "Das hat er sicher gehört.", sk: "To on určite počul.", format: "normal" },
+                    { de: "Ja, wirklich, er sieht zu mir und läuft dann weg.", sk: "Áno, naozaj, pozrie sa na mňa a uteká preč.", format: "normal", endParagraph: true },
+
+                    { de: "„He, bleiben Sie stehen! Wer sind Sie?\"", sk: "„Hej, stojte! Kto ste?\"", format: "dialogue_start" },
+
+                    { de: "Ich laufe ihm nach.", sk: "Bežím za ním.", format: "normal" },
+                    { de: "Den muss ich …", sk: "Toho musím …", format: "normal" },
+                    { de: "Aber er ist schnell und es ist dunkel.", sk: "Ale je rýchly a je tma.", format: "normal" },
+                    { de: "Und er kennt den Weg.", sk: "A pozná cestu.", format: "normal" },
+                    { de: "Der war nicht zum ersten Mal hier, da bin ich sicher.", sk: "Nebol tu po prvýkrát, tým som si istý.", format: "normal" },
+                    { de: "Ich gehe zurück zu dem Busch.", sk: "Idem naspäť k tomu kríku.", format: "normal" },
+                    { de: "Hier hat er also gestanden.", sk: "Tu teda stál.", format: "normal" },
+                    { de: "Ich suche noch ein bisschen beim Busch.", sk: "Ešte chvíľu hľadám pri kríku.", format: "normal" },
+                    { de: "Was ist das hier?", sk: "Čo to tu je?", format: "normal" },
+                    { de: "Das nehme ich besser mit.", sk: "To si radšej vezmem so sebou.", format: "normal" },
+                    { de: "Ich klingle bei Julia.", sk: "Zvoním u Julie.", format: "normal", endParagraph: true },
+
+                    { de: "„Herr Fender, zum Glück sind Sie hier!\"", sk: "„Pán Fender, našťastie ste tu!\"", format: "dialogue_start" },
+                    { de: "„Es war wirklich ein Mann in Ihrem Garten.", sk: "„Vo vašej záhrade bol naozaj jeden muž.", format: "dialogue" },
+                    { de: "Jetzt ist er nicht mehr da.\"", sk: "Teraz tam už nie je.\"", format: "dialogue_end" },
+
+                    { de: "„Danke für Ihre Hilfe!\"", sk: "„Ďakujem za vašu pomoc!\"", format: "dialogue_start" },
+                    { de: "„Kein Problem.", sk: "„Žiadny problém.", format: "dialogue" },
+                    { de: "Ich bleibe besser noch ein bisschen hier.", sk: "Radšej tu ešte chvíľu zostanem.", format: "dialogue" },
+                    { de: "Vielleicht kommt er zurück.\"", sk: "Možno sa vráti.\"", format: "dialogue_end" },
+
+                    { de: "Wir gehen ins Haus, Julia macht Kaffee und ich setze mich auf das Sofa.", sk: "Ideme do domu, Julia robí kávu a ja si sadnem na pohovku.", format: "normal", endParagraph: true },
+
+                    { de: "„Ein schönes Haus\",", sk: "„Pekný dom\",", format: "dialogue_start" },
+                    { de: "sage ich.", sk: "hovorím.", format: "normal" },
+                    { de: "„Wohnen Sie hier allein?\"", sk: "„Bývate tu sama?\"", format: "dialogue_start" },
+                    { de: "„Das ist das Haus von meinen Grosseltern.", sk: "„To je dom mojich starých rodičov.", format: "dialogue" },
+                    { de: "Ich wohne im ersten Stock.\"", sk: "Ja bývam na prvom poschodí.\"", format: "dialogue_end" },
+
+                    { de: "„Und Ihre Grosseltern?\"", sk: "„A vaši starí rodičia?\"", format: "dialogue_start" },
+                    { de: "„Sie sind zurzeit im Urlaub.\"", sk: "„Tí sú momentálne na dovolenke.\"", format: "dialogue_end" },
+
+                    { de: "Dann frage ich:", sk: "Potom sa opýtam:", format: "normal" },
+                    { de: "„Wer war da im Garten?", sk: "„Kto to bol tam v záhrade?", format: "dialogue_start" },
+                    { de: "Was denken Sie?\"", sk: "Čo myslíte?\"", format: "dialogue_end" },
+
+                    { de: "„Ich habe keine Ahnung, leider.\"", sk: "„Nemám tušenia, bohužiaľ.\"", format: "dialogue_start" },
+
+                    { de: "„Sehen Sie mal, das habe ich draussen gefunden.", sk: "„Pozrite sa, toto som našiel vonku.", format: "dialogue" },
+                    { de: "Da ist noch ein bisschen Kaffee drin und er ist noch warm.", sk: "Ešte je v tom trochu kávy a je ešte teplá.", format: "dialogue" },
+                    { de: "Der ist wahrscheinlich von dem Mann.\"", sk: "To je pravdepodobne od toho muža.\"", format: "dialogue_end" },
+
+                    { de: "Ich zeige ihr einen Kaffeebecher aus Papier.", sk: "Ukážem jej kávový papierový pohár.", format: "normal", endParagraph: true },
+
+                    { de: "„Der ist ja von Coffee & Co, da bin ich oft.", sk: "„Ten je predsa z Coffee & Co, tam som často.", format: "dialogue_start" },
+                    { de: "Das ist mein Lieblingscafé.\"", sk: "To je moja obľúbená kaviareň.\"", format: "dialogue_end" },
+
+                    { de: "„Interessant.. kennen Sie dort jemanden?\",", sk: "„Zaujímavé.. poznáte tam niekoho?\",", format: "dialogue_start" },
+                    { de: "frage ich.", sk: "pýtam sa.", format: "normal" },
+                    { de: "„Na ja, kennen… den Chef kenne ich ein bisschen.", sk: "„No áno, poznať… trochu poznám šéfa.", format: "dialogue_start" },
+                    { de: "Mit dem spreche ich oft, wenn er meinen Kaffee bringt.", sk: "S tým sa často rozprávam, keď mi prinesie kávu.", format: "dialogue" },
+                    { de: "Den finde ich ganz nett.\"", sk: "Považujem ho za celkom milého.\"", format: "dialogue_end" },
+
+                    { de: "„Ganz nett?\"", sk: "„Celkom milého?\"", format: "dialogue_start" },
+                    { de: "„Sagen wir mal, ich mag ihn, aber manchmal sieht er mich so an.. so verliebt… ich weiss nicht.", sk: "„Povedzme, že ho mám rada, ale niekedy sa na mňa tak pozerá.. tak zamilovane… neviem.", format: "dialogue_start" },
+                    { de: "Das gefällt mir nicht.\"", sk: "To sa mi nepáči.\"", format: "dialogue_end" },
+
+                    { de: "„Vielleicht ist er wirklich in Sie verliebt?", sk: "„Možno je naozaj do vás zamilovaný?", format: "dialogue_start" },
+                    { de: "Vielleicht will er nah bei Ihnen sein.", sk: "Možno chce byť blízko vás.", format: "dialogue" },
+                    { de: "Und beobachtet Sie zu Hause?\"", sk: "A pozoruje vás doma?\"", format: "dialogue_end" },
+
+                    { de: "„Das glaube ich nicht.\"", sk: "„Tomu neverím.\"", format: "dialogue_start" },
+
+                    { de: "„Wie heisst er?\",", sk: "„Ako sa volá?\",", format: "dialogue_start" },
+                    { de: "frage ich.", sk: "pýtam sa.", format: "normal" },
+                    { de: "„Chris.\"", sk: "„Chris.\"", format: "dialogue_start" },
+
+                    { de: "Hm, Chris… das ist kurz für Christoph.", sk: "Hm, Chris… to je skratka pre Christoph.", format: "normal" },
+                    { de: "Oder für Christian?", sk: "Alebo pre Christian?", format: "normal" },
+                    { de: "Wie der Junge aus meiner Schule?", sk: "Ako ten chlapec z mojej školy?", format: "normal" },
+                    { de: "Aber viele Leute heissen so.", sk: "Ale veľa ľudí sa tak volá.", format: "normal", endParagraph: true },
+
+                    { de: "„Erzählen Sie mir von Chris.", sk: "„Porozprávajte mi o Chrisovi.", format: "dialogue_start" },
+                    { de: "Wie sieht er aus?\",", sk: "Ako vyzerá?\",", format: "dialogue" },
+                    { de: "sage ich.", sk: "hovorím.", format: "normal" },
+                    { de: "„Ich weiss nicht viel.", sk: "„Neviem veľa.", format: "dialogue_start" },
+                    { de: "Er ist vielleicht so alt wie Sie, Mitte 30 oder so.", sk: "Je možno taký starý ako vy, po tridsiatke alebo tak.", format: "dialogue" },
+                    { de: "Er hat schwarze Haare, und er hat eine Narbe über dem rechten Auge.\"", sk: "Má čierne vlasy, a nad pravým okom má jazvu.\"", format: "dialogue_end" },
+
+                    { de: "Aha, mein Christian hatte keine Narbe.", sk: "Aha, môj Christian nemal jazvu.", format: "normal" },
+                    { de: "Dann ist es wahrscheinlich ein anderer.", sk: "Potom to bude pravdepodobne niekto iný.", format: "normal", endParagraph: true },
+
+                    { de: "„Morgen google ich diesen Chris von Coffee & Co.", sk: "„Zajtra si vygooglim tohto Chrisa z Coffee & Co.", format: "dialogue_start" },
+                    { de: "Vielleicht finde ich etwas\",", sk: "Možno niečo zistím\",", format: "dialogue" },
+                    { de: "sage ich.", sk: "hovorím.", format: "normal", endParagraph: true },
+
+                    { de: "Ich bleibe noch ein bisschen bei Julia.", sk: "Zostanem u Julie ešte chvíľu.", format: "normal" },
+                    { de: "Aber der Mann kommt nicht mehr zurück.", sk: "Ale ten muž sa už nevráti.", format: "normal", endParagraph: true }
+                ]
+            },
+            {
+                id: 'ch_08',
+                title: 'Kapitel 8: Einer oder zwei?',
+                audioSrc: '/ebooks/A1-Du-Findest-mich-nicht/Du_findest_mich_nicht_Krimi_Track_08_Kapitel_8_Einer_oder_zwei.mp3',
+                image: '/ebooks/A1-Du-Findest-mich-nicht/kapitel8.png',
+                sentences: [
+                    { de: "Am nächsten Morgen sitze ich in meinem Büro und schreibe die wichtigen Dinge über die Verdächtigen auf:", sk: "Na ďalšie ráno sedím v mojej kancelárii a zapisujem si dôležité veci o podozrivých:", format: "normal", endParagraph: true },
+
+                    { de: "- Harald, der Ex-Freund: Er will Klara nicht gehen lassen.", sk: "- Harald, bývalý priateľ: Nechce nechať Kláru odísť.", format: "note" },
+                    { de: "Vielleicht hat sie einen neuen Freund gefunden.", sk: "Možno si našla nového priateľa.", format: "note" },
+                    { de: "Aber das will Harald nicht.", sk: "Ale to Harald nechce.", format: "note" },
+                    { de: "Und: Klara war besser im Fussball. Das findet er nicht gut.", sk: "A: Klára bola futbale lepšia. To sa mu nepáči.", format: "note_end" },
+
+                    { de: "- Julia: Klara ist tot, jetzt gibt es mehr Platz in der Profimannschaft im nächsten Jahr.", sk: "- Júlia: Klára je mŕtva, teraz je na budúci rok viac miesta v profi tíme.", format: "note" },
+                    { de: "Aber: Ich glaube nicht, dass Julia ihre beste Freundin ermordet hat.", sk: "Ale: Neverím, že Júlia zavraždila svoju najlepšiu priateľku.", format: "note" },
+                    { de: "Vielleicht war es eine andere Fussballerin: Viele wollen in die Profimannschaft.", sk: "Možno to bola iná futbalistka: Mnohé sa chcú dostať do profi tímu.", format: "note_end" },
+
+                    { de: "- Der Briefeschreiber: Wer ist er? Ist er der Mörder? Was hat er gegen Klara?", sk: "- Pisateľ listu: Kto je to? Je to vrah? Čo má proti Kláre?", format: "note" },
+                    { de: "Vielleicht hat er von dem Mord gelesen und jetzt schreibt er mir und will mich ärgern?", sk: "Možno čítal o vražde a teraz mi píše a chce ma nahnevať?", format: "note" },
+                    { de: "Vielleicht ist er böse auf mich? Vielleicht ist es auch ein früherer Kunde von mir:", sk: "Možno je na mňa nahnevaný? Možno je to aj môj bývalý zákazník:", format: "note" },
+                    { de: "Ein paar Leute sind zu mir gekommen, aber ich habe Ihnen leider nicht helfen können…", sk: "Zopár ľudí za mnou prišlo, ale bohužiaľ som im nevedel pomôcť…", format: "note_end" },
+
+                    { de: "- Oder ist das wirklich der Christian aus meiner Schule? „Wer ist jetzt der Dumme?“ …", sk: "- Alebo je to naozaj ten Christian z mojej školy? „Kto je teraz hlúpy?“ …", format: "note" },
+                    { de: "Aber hat Christian Klara gekannt? Ist er der Chris aus Julias Lieblingscafé?", sk: "Ale poznal Christian Kláru? Je to ten Chris z Júliinej obľúbenej kaviarne?", format: "note_end" },
+
+                    { de: "Die Post kommt, und - ich kann es nicht glauben - da ist schon wieder ein Brief vom Mörder:", sk: "Prichádza pošta a - nemôžem tomu uveriť - je tam opäť list od vraha:", format: "normal", endParagraph: true },
+
+                    { de: "Na, Fender, noch immer keine Idee?", sk: "No, Fender, ešte stále žiadny nápad?", format: "letter" },
+                    { de: "Du bist wirklich ein schlechter Detektiv!", sk: "Si naozaj zlý detektív!", format: "letter" },
+                    { de: "Na ja, ich habe es mir schon gedacht…", sk: "No áno, to som si už myslel…", format: "letter" },
+                    { de: "Viele Grüße, der Mörder", sk: "S pozdravom, vrah", format: "letter_end" },
+
+                    { de: "Der ist wirklich verrückt!", sk: "Ten je naozaj blázon!", format: "normal" },
+                    { de: "Ich google jetzt meinen Christian.", sk: "Teraz vygooglim toho môjho Christiana.", format: "normal" },
+                    { de: "Vielleicht hilft das.", sk: "Možno to pomôže.", format: "normal" },
+                    { de: "Aha, er ist wirklich der Chef von Coffee & Co in Wien… und es gibt ein Foto von ihm in seinem grünen Auto.", sk: "Aha, naozaj je to šéf Coffee & Co vo Viedni… a je tu fotka s ním v jeho zelenom aute.", format: "normal" },
+                    { de: "Interessant…", sk: "Zaujímavé…", format: "normal" },
+                    { de: "Und hier, das ist aus einer Zeitung, der Text ist fünf Jahre alt:", sk: "A tu, toto je z jedných novín, ten text má päť rokov:", format: "normal", endParagraph: true },
+
+                    { de: "Unfall in den Bergen", sk: "Nehoda v horách", format: "newspaper_title" },
+                    { de: "So einen Urlaub wünscht sich keiner!", sk: "Takúto dovolenku si neželá nikto!", format: "newspaper" },
+                    { de: "Gestern hatte der Wiener Christian K. einen schweren Unfall in den Salzburger Bergen.", sk: "Včera mal Viedenčan Christian K. ťažkú nehodu v salzburských horách.", format: "newspaper" },
+                    { de: "Auf dem Weg zum…", sk: "Na ceste na…", format: "newspaper_end" },
+
+                    { de: "Aha, die Narbe über dem rechten Auge… die kommt sicher von diesem Unfall.", sk: "Aha, tá jazva nad pravým okom… tá pochádza určite z tejto nehody.", format: "normal", endParagraph: true },
+                    { de: "Chris ist also wirklich mein alter Schulfreund.", sk: "Chris je teda naozaj môj starý spolužiak.", format: "normal" },
+                    { de: "Wahrscheinlich war er auch der Mann in Julias Garten gestern Abend.", sk: "Pravdepodobne on bol aj ten muž vo včerajšej záhrade u Júlie.", format: "normal" },
+                    { de: "Er hat den Kaffeebecher liegen lassen.", sk: "Nechal tam ten kávový pohár.", format: "normal" },
+                    { de: "Christian ist in sie verliebt, das hat sie selbst gesagt.", sk: "Christian je do nej zamilovaný, to povedala ona sama.", format: "normal" },
+                    { de: "Wahrscheinlich hat er auch die Briefe an mich geschrieben.", sk: "Asi mi napísal aj tie listy.", format: "normal", endParagraph: true },
+
+                    { de: "Und er war der Mann in dem grünen Auto, da bin ich sicher.", sk: "A bol to ten muž v zelenom aute, tým som si istý.", format: "normal" },
+                    { de: "Er hat in der Bandgasse gewartet und hat mich fast getötet.", sk: "Čakal na Bandgasse a takmer ma zabil.", format: "normal" },
+                    { de: "Julia und ich haben am Telefon über dieses Treffen gesprochen.", sk: "Júlia a ja sme o tomto stretnutí hovorili cez telefón.", format: "normal" },
+                    { de: "Da war sie gerade in einem Café - in seinem Café, und er hat alles gehört.", sk: "A vtedy bola akurát v kaviarni - v jeho kaviarni, a všetko to počul.", format: "normal", endParagraph: true },
+
+                    { de: "Okay, alles schön und gut.", sk: "Okej, to je všetko pekné a dobré.", format: "normal" },
+                    { de: "Christian ist verrückt, er schreibt mir diese Briefe und vielleicht will er mich sogar töten.", sk: "Christian je blázon, píše mi tieto listy a možno ma chce dokonca zabiť.", format: "normal" },
+                    { de: "Aber Klara ermorden? Warum?", sk: "Ale zavraždiť Kláru? Prečo?", format: "normal" },
+                    { de: "Ich denke, es sind zwei verschiedene Menschen: Der Mörder und der Briefeschreiber.", sk: "Myslím si, že sú to dvaja rozdielni ľudia: Vrah a pisateľ listov.", format: "normal", endParagraph: true },
+
+                    { de: "Da klingelt mein Telefon.", sk: "Vtom zazvoní môj telefón.", format: "normal" },
+                    { de: "„Ich bin's, Julia. Herr Fender, ich bin fast sicher: Chris ist der Mörder…“", sk: "„To som ja, Júlia. Pán Fender, som si takmer istá: Chris je ten vrah…“", format: "dialogue_start" }
+                ]
+            },
+            {
+                id: 'ch_09',
+                title: 'Kapitel 9: Danke, Mörder!',
+                audioSrc: '/ebooks/A1-Du-Findest-mich-nicht/Du_findest_mich_nicht_Krimi_Track_09_Kapitel_9_Danke_Moerder.mp3',
+                image: '/ebooks/A1-Du-Findest-mich-nicht/kapitel9.png',
+                sentences: [
+                    { de: "„Julia, was ist los?“,", sk: "„Júlia, čo sa deje?“,", format: "dialogue_start" },
+                    { de: "frage ich am Telefon.", sk: "pýtam sa do telefónu.", format: "normal" },
+                    { de: "„Chris hat Klara umgebracht.\"", sk: "„Chris zabil Kláru.\"", format: "dialogue_start" },
+                    { de: "„Okay… Warum glauben Sie das?\"", sk: "„Okej… Prečo si to myslíte?\"", format: "dialogue_start" },
+                    { de: "„Er hat gesagt, ich soll dem Mörder ‚danke‘ sagen …\"", sk: "„Povedal, že by som mala vrahovi povedať ‚ďakujem‘ …\"", format: "dialogue_start" },
+                    { de: "Ich verstehe nur Bahnhof.", sk: "Ničomu z toho nerozumiem.", format: "normal" },
+                    { de: "„Julia, wo sind Sie jetzt?“,", sk: "„Júlia, kde ste teraz?“,", format: "dialogue_start" },
+                    { de: "frage ich.", sk: "pýtam sa.", format: "normal" },
+                    { de: "„Ich bin in einem kleinen Park, in der Nähe von Chris' Café.\"", sk: "„Som v jednom malom parku, blízko Chrisovej kaviarne.\"", format: "dialogue_start" },
+                    { de: "„Okay, erzählen Sie mir, was passiert ist, von Anfang an.\"", sk: "„Okej, porozprávajte mi, čo sa stalo, od začiatku.\"", format: "dialogue_start" },
+
+                    { de: "Julia erzählt am Telefon:", sk: "Júlia rozpráva do telefónu:", format: "normal", endParagraph: true },
+
+                    { de: "„Ich habe gestern Abend die ganze Zeit an den Mann im Garten gedacht, auch in der Nacht habe ich nicht geschlafen.", sk: "„Včera večer som celý čas myslela na toho muža v záhrade, ani v noci som nespala.", format: "dialogue_start" },
+                    { de: "Und heute Morgen will ich dann wissen: War das wirklich Chris?", sk: "A dnes ráno som chcela vedieť: Bol to naozaj Chris?", format: "dialogue" },
+                    { de: "Ich gehe gleich in sein Café, setze mich an die Bar und beobachte ihn:", sk: "Idem hneď do jeho kaviarne, sadnem si k baru a pozorujem ho:", format: "dialogue" },
+                    { de: "Was tut er, wenn er mich sieht? Ist er anders als in den letzten Wochen?", sk: "Čo urobí, keď ma uvidí? Je iný ako v posledných týždňoch?", format: "dialogue_end" },
+
+                    { de: "Chris sieht mich bald und … Ich glaube, er will am liebsten weglaufen.", sk: "Chris ma čoskoro zbadá a … Myslím si, že by najradšej utiekol.", format: "dialogue_start" },
+                    { de: "Ja, er war es, denke ich. Sicher!", sk: "Áno, bol to on, myslím si. Určite!", format: "dialogue" },
+                    { de: "Er war gestern in meinem Garten.", sk: "Bol včera v mojej záhrade.", format: "dialogue" },
+                    { de: "Dann kommt er doch zu mir und bringt mir wie immer einen Kaffee.", sk: "Potom predsa len ku mne príde a prinesie mi ako vždy kávu.", format: "dialogue_end" },
+
+                    { de: "‚Hallo Julia, wie geht es dir?‘, fragt er.", sk: "‚Ahoj Júlia, ako sa máš?‘, pýta sa.", format: "dialogue_start" },
+                    { de: "Und dann spricht er über den Mord an Klara:", sk: "A potom začne hovoriť o vražde Kláry:", format: "dialogue" },
+                    { de: "‚Das ist schrecklich! Sie war deine Freundin, oder? Wer macht denn so etwas?‘", sk: "‚To je hrozné! Bola to tvoja priateľka, však? Kto preboha niečo také urobí?‘", format: "dialogue" },
+                    { de: "Er ist wirklich nett.", sk: "Je naozaj milý.", format: "dialogue" },
+                    { de: "Und ich denke mir: Ach, ich bin ein schlechter Mensch!", sk: "A ja si pomyslím: Ach, som ja ale zlý človek!", format: "dialogue" },
+                    { de: "Chris ist so nett, und ich glaube, er ist der Mann aus meinem Garten.", sk: "Chris je taký milý, a ja si myslím, že on je ten muž z mojej záhrady.", format: "dialogue" },
+                    { de: "Chris ist einfach ein normaler Mann, vielleicht ist er ein bisschen in mich verliebt, aber na ja, das kann doch passieren.", sk: "Chris je jednoducho normálny muž, možno je do mňa trochu zamilovaný, ale no čo, to sa predsa môže stať.", format: "dialogue" },
+                    { de: "Er ist sicher nicht der Mann von gestern Abend.", sk: "On určite nie je ten muž zo včerajšieho večera.", format: "dialogue_end" },
+
+                    { de: "Aber dann sagt Chris: ‚Für dich ist das doch auch gut, Julia.‘", sk: "Avšak potom Chris povie: ‚Pre teba je to predsa tiež dobré, Júlia.‘", format: "dialogue_start" },
+                    { de: "‚Was?‘, frage ich.", sk: "‚Čo?‘, pýtam sa.", format: "dialogue" },
+                    { de: "‚Na, Klara ist tot, jetzt kannst du am Sonntag spielen.", sk: "‚No, Klára je mŕtva, teraz môžeš v nedeľu hrať ty.", format: "dialogue" },
+                    { de: "Und nächstes Jahr bist du ein Profi.", sk: "A budúci rok si profesionálka.", format: "dialogue" },
+                    { de: "Das ist doch toll! Julia, die Profifußballerin.", sk: "To je predsa úžasné! Júlia, profesionálna futbalistka.", format: "dialogue" },
+                    { de: "Das möchtest du doch so gern.", sk: "To si predsa tak veľmi priala.", format: "dialogue" },
+                    { de: "Das hast du oft gesagt.‘", sk: "To si dosť často hovorievala.‘", format: "dialogue_end" },
+
+                    { de: "‚Ja‘, sage ich, ‚aber das ist doch jetzt nicht mehr wichtig.", sk: "‚Áno‘, hovorím, ‚ale to predsa teraz už nie je dôležité.", format: "dialogue_start" },
+                    { de: "Klara ist tot. Sie war meine beste Freundin.‘", sk: "Klára je mŕtva. Bola to moja najlepšia priateľka.‘", format: "dialogue_end" },
+
+                    { de: "‚Doch, es ist wichtig!", sk: "‚Ale áno, to je dôležité!", format: "dialogue_start" },
+                    { de: "Für mich ist das wichtig.", sk: "Pre mňa je to dôležité.", format: "dialogue" },
+                    { de: "Du bist gut. Du musst in der Profimannschaft spielen.‘", sk: "Ty si dobrá. Ty musíš hrať v profi tíme.‘", format: "dialogue_end" },
+
+                    { de: "Und dann sagt er noch: ‚Vielleicht hat der Mörder es für dich gemacht.", sk: "A potom ešte hovorí: ‚Možno to ten vrah urobil pre teba.", format: "dialogue_start" },
+                    { de: "Er hat dir geholfen. Er weiß, du bist die Bessere.‘", sk: "Pomohol ti. On vie, ty si tá lepšia.‘", format: "dialogue" },
+                    { de: "Und er sieht mich an und lacht.", sk: "A on sa na mňa pozrie a zasmeje sa.", format: "dialogue" },
+                    { de: "‚Vielleicht musst du dem Mörder danken.‘", sk: "‚Možno by si mala tomu vrahovi poďakovať.‘", format: "dialogue_end" },
+
+                    { de: "Ich sehe ihn an und seine Augen sagen: Ich habe es für dich gemacht.", sk: "Pozriem sa naňho a jeho oči hovoria: Urobil som to pre teba.", format: "dialogue_start" },
+                    { de: "Ich liebe dich. Jetzt musst du mich auch lieben.", sk: "Milujem ťa. Teraz ma musíš milovať aj ty.", format: "dialogue" },
+                    { de: "Ich denke: Der ist ja verrückt!", sk: "Pomyslím si: Ten je normálne šialený!", format: "dialogue" },
+                    { de: "Aber ich sage: ‚Ja, vielleicht… vielleicht ist das richtig.", sk: "Ale poviem: ‚Áno, možno… možno je to pravda.", format: "dialogue" },
+                    { de: "Der Mörder hat mir wirklich geholfen.‘", sk: "Ten vrah mi naozaj pomohol.‘", format: "dialogue_end" },
+
+                    { de: "Und dann muss Chris zum Glück zu einer anderen Kundin.", sk: "A potom musí ísť Chris našťastie k inej zákazníčke.", format: "dialogue_start" },
+                    { de: "Ich trinke meinen Kaffee schnell aus und gehe.\"", sk: "Rýchlo vypijem svoju kávu a odchádzam.\"", format: "dialogue_end" },
+
+                    { de: "Das finde ich interessant … Coffee-Chris ist also der Mörder?", sk: "To znie nesmierne zaujímavo … Kaviarenský Chris je teda vrah?", format: "normal" },
+                    { de: "Wirklich?", sk: "Naozaj?", format: "normal" },
+                    { de: "Wie können wir das sicher wissen?", sk: "Ako to môžeme vedieť naisto?", format: "normal" },
+                    { de: "Hm, ich glaube, ich habe eine gute Idee …", sk: "Hm, myslím, že mám dobrý nápad …", format: "normal", endParagraph: true },
+
+                    { de: "„Julia, sind Sie noch in dem Park beim Café?“,", sk: "„Júlia, ste ešte v tom parku pri kaviarni?“,", format: "dialogue_start" },
+                    { de: "frage ich am Telefon.", sk: "pýtam sa po telefóne.", format: "normal" },
+                    { de: "„Ja. Was soll ich denn jetzt machen?", sk: "„Áno. Čo by som teda teraz mala urobiť?", format: "dialogue_start" },
+                    { de: "Chris ist verrückt.", sk: "Chris je úplný blázon.", format: "dialogue" },
+                    { de: "Zuerst ermordet er Klara, und dann?", sk: "Najprv zavraždí Kláru, a čo potom?", format: "dialogue" },
+                    { de: "Wenn ich ihn nicht liebe? …", sk: "Ak ho ja nebudem milovať? …", format: "dialogue" },
+                    { de: "Ich kann nie mehr in mein Lieblingscafé gehen!\"", sk: "Ja už nikdy nesmiem vojsť do mojej obľúbenej kaviarne!\"", format: "dialogue_end" },
+
+                    { de: "„Doch“,", sk: "„Ono zase áno“,", format: "dialogue_start" },
+                    { de: "sage ich, ", sk: "vravím ja, ", format: "normal" },
+                    { de: "„Sie müssen genau das tun!", sk: "„Musíte spraviť predsa len presne toto!", format: "dialogue_start" },
+                    { de: "Warten Sie im Park auf mich, ich bin gleich bei Ihnen und erkläre Ihnen alles.", sk: "Počkajte tam na mňa vonku v parku, hneď k Vám dorazím a všetko Vám to dopodrobna vysvetlím.", format: "dialogue" },
+                    { de: "Und dann wissen wir bald:", sk: "A potom zanedlho s istotou odhalíme:", format: "dialogue" },
+                    { de: "Ist Chris der Mörder oder nicht?\"", sk: "Je Chris ten vrah alebo vonkoncom nie?\"", format: "dialogue_end" }
                 ]
             }
         ]

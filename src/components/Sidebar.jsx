@@ -1,14 +1,16 @@
 import React, { useState } from 'react';
-import { Home, Calendar, Brain, BookOpen, HelpCircle, Headphones, MessageSquare, Key, FlaskConical, Target, Lightbulb, Newspaper, MonitorPlay, LayoutList, Map, MoreHorizontal, X, Mic, Activity, Zap } from 'lucide-react';
+import { Home, Calendar, Brain, BookOpen, HelpCircle, Headphones, MessageSquare, Key, FlaskConical, Target, Lightbulb, Newspaper, MonitorPlay, LayoutList, Map, MoreHorizontal, X, Mic, Activity, Zap, Ear, Flame } from 'lucide-react';
 
 const NAV = [
   { id: 'dashboard', label: 'Prehľad', Icon: Home },
   { id: 'weekly', label: 'Plán', Icon: Calendar },
   { id: 'passive', label: 'Pasívna fáza', Icon: Headphones },
   { id: 'vocab', label: 'Slovíčka', Icon: Brain },
+  { id: 'intensive_drill', label: 'Intenzívny Drill', Icon: Flame },
   { id: 'stories', label: 'Čítanie', Icon: Newspaper },
   { id: 'ebooks', label: 'E-Knihy', Icon: BookOpen },
   { id: 'videocoach', label: 'Video Coach', Icon: MonitorPlay },
+  { id: 'shadowing', label: 'Shadowing', Icon: Ear },
   { id: 'sentence_trainer', label: 'Tréner viet', Icon: Mic },
   { id: 'grammar', label: 'Gramatika', Icon: BookOpen },
   { id: 'arena', label: 'Aréna', Icon: Target },

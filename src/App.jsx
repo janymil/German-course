@@ -28,7 +28,9 @@ import FeaturesPage from './views/FeaturesPage';
 import RoadmapPage from './views/RoadmapPage';
 import OnboardingModal from './components/OnboardingModal';
 import { SentenceTrainer } from './views/SentenceTrainer';
+import ShadowingTrainer from './views/ShadowingTrainer';
 import ApiStats from './views/ApiStats';
+import IntensiveDrill from './views/IntensiveDrill';
 
 export default function App() {
   const [activeView, setActiveView] = useState(() => {
@@ -251,6 +253,12 @@ export default function App() {
           )}
           {activeView === 'sentence_trainer' && (
             <SentenceTrainer />
+          )}
+          {activeView === 'intensive_drill' && (
+            <IntensiveDrill progress={progress} onNavigate={setActiveView} />
+          )}
+          {activeView === 'shadowing' && (
+            <ShadowingTrainer />
           )}
           {activeView === 'features' && (
             <FeaturesPage onNavigate={setActiveView} />
