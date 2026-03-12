@@ -123,6 +123,7 @@ export default function VocabTrainer({ progress, onMarkVocab, onMarkVocabWrong, 
   const [mainTab, setMainTab] = useState('decks'); // 'decks' | 'words' | 'chunks'
   const [selectedParentDeckId, setSelectedParentDeckId] = useState(null);
   const [selectedChapterId, setSelectedChapterId] = useState(null);
+  const [searchQuery, setSearchQuery] = useState('');
   const [mode, setMode] = useState('A');
   const [direction, setDirection] = useState('DE_SK'); // 'DE_SK' | 'SK_DE' | 'MIXED'
   const [currentDirection, setCurrentDirection] = useState('DE_SK'); // for mixed mode resolution
@@ -491,15 +492,26 @@ export default function VocabTrainer({ progress, onMarkVocab, onMarkVocabWrong, 
         <div className="space-y-4 animate-fade-in">
           {selectedParentDeckId ? (
             <>
-              <button onClick={() => setSelectedParentDeckId(null)} className="flex items-center gap-2 text-indigo-400 hover:text-indigo-300 transition-colors text-sm font-semibold mb-4">
+              <button onClick={() => { setSelectedParentDeckId(null); setSearchQuery(''); }} className="flex items-center gap-2 text-indigo-400 hover:text-indigo-300 transition-colors text-sm font-semibold mb-4">
                 <ChevronLeft size={16} /> Späť na kurzy
               </button>
-              <div className="mb-4 space-y-1">
-                <h2 className="text-xl font-bold text-white">{(deckOverride ? [deckOverride] : ALL_DECKS).find(d => d.id === selectedParentDeckId)?.title}</h2>
-                <p className="text-gray-400 text-sm">Vyber si lekciu na precvičovanie:</p>
+              <div className="mb-4 space-y-3">
+                <div>
+                  <h2 className="text-xl font-bold text-white">{(deckOverride ? [deckOverride] : ALL_DECKS).find(d => d.id === selectedParentDeckId)?.title}</h2>
+                  <p className="text-gray-400 text-sm mt-1">Vyber si lekciu na precvičovanie:</p>
+                </div>
+                <input 
+                  type="text"
+                  placeholder="Hľadať slovo alebo lekciu..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-full bg-gray-900 border border-gray-700 text-white text-sm rounded-lg px-3 py-2.5 outline-none focus:border-indigo-500 transition-colors"
+                />
               </div>
               <div className="grid grid-cols-1 gap-2">
-                {(deckOverride ? [deckOverride] : ALL_DECKS).find(d => d.id === selectedParentDeckId)?.chapters?.map(c => (
+                {(deckOverride ? [deckOverride] : ALL_DECKS).find(d => d.id === selectedParentDeckId)?.chapters
+                  ?.filter(c => !searchQuery || c.title.toLowerCase().includes(searchQuery.toLowerCase()))
+                  .map(c => (
                   <div
                     key={c.id}
                     onClick={() => { setSelectedChapterId(c.id); setMainTab('words'); }}

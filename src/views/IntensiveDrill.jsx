@@ -16,6 +16,7 @@ export default function IntensiveDrill({ progress, onNavigate }) {
   
   // WRITING EXERCISE STATE
   const [selectedWordId, setSelectedWordId] = useState(null);
+  const [searchQuery, setSearchQuery] = useState('');
   const [writingIndex, setWritingIndex] = useState(0);
   const [userInputs, setUserInputs] = useState({});
   const [showWritingResults, setShowWritingResults] = useState(false);
@@ -210,21 +211,32 @@ export default function IntensiveDrill({ progress, onNavigate }) {
 
     return (
       <div className="flex flex-col gap-6 animate-fade-in">
-        <div className="flex items-center gap-3 border-b border-gray-800 pb-4">
-          <select 
-            className="bg-gray-800 border border-gray-700 text-white rounded-xl p-3 font-bold focus:ring-2 focus:ring-orange-500 focus:outline-none flex-1 max-w-sm"
-            value={selectedWordId || ''}
-            onChange={(e) => {
-              setSelectedWordId(e.target.value);
-              setWritingIndex(0);
-              setShowWritingResults(false);
-            }}
-          >
-            {drillItems.map(d => (
-              <option key={d.id} value={d.id}>{d.title}</option>
-            ))}
-          </select>
-          <span className="text-gray-500 text-sm font-medium">Veta {writingIndex + 1} z {selectedDrill.sentences.length}</span>
+        <div className="flex flex-col md:flex-row items-center gap-3 border-b border-gray-800 pb-4">
+          <div className="flex-1 max-w-sm flex flex-col gap-2 w-full">
+            <input 
+              type="text" 
+              placeholder="Hľadať slovo..." 
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="bg-gray-800 border border-gray-700 text-white rounded-xl p-2 font-bold focus:ring-2 focus:ring-orange-500 focus:outline-none w-full"
+            />
+            <select 
+              className="bg-gray-800 border border-gray-700 text-white rounded-xl p-3 font-bold focus:ring-2 focus:ring-orange-500 focus:outline-none w-full"
+              value={selectedWordId || ''}
+              onChange={(e) => {
+                setSelectedWordId(e.target.value);
+                setWritingIndex(0);
+                setShowWritingResults(false);
+              }}
+            >
+              {drillItems
+                .filter(d => d.title.toLowerCase().includes(searchQuery.toLowerCase()))
+                .map(d => (
+                <option key={d.id} value={d.id}>{d.title}</option>
+              ))}
+            </select>
+          </div>
+          <span className="text-gray-500 text-sm font-medium mt-2 md:mt-0">Veta {writingIndex + 1} z {selectedDrill.sentences.length}</span>
         </div>
 
         <div className="bg-gray-800/50 rounded-2xl p-6 md:p-10 border border-gray-700/50 relative">

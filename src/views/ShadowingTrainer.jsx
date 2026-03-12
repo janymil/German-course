@@ -15,6 +15,7 @@ export default function ShadowingTrainer({ dataOverride }) {
   const [isShuffled, setIsShuffled] = useState(false);
   const [voiceRate, setVoiceRate] = useState(0.85);
   const [pauseFactor, setPauseFactor] = useState(1.5);
+  const [searchQuery, setSearchQuery] = useState('');
 
   // Refs – never cause re-renders, safe to read inside callbacks
   const audioRef = useRef(null);
@@ -375,13 +376,23 @@ export default function ShadowingTrainer({ dataOverride }) {
                     {isSpecial ? (
                       <div className="bg-gray-800/20 border border-gray-800 rounded-xl p-3">
                         <div className="text-sm font-medium text-gray-400 mb-2 px-1">Vyberte si slovíčko na drilovanie:</div>
+                        <input 
+                          type="text"
+                          placeholder="Hľadať slovo..."
+                          value={searchQuery}
+                          onChange={(e) => setSearchQuery(e.target.value)}
+                          className="w-full bg-gray-900 border border-gray-700 text-white text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 block p-2 mb-2 outline-none"
+                        />
                         <select 
-                          className="w-full bg-gray-900 border border-gray-700 text-white text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 block p-2.5"
+                          className="w-full bg-gray-900 border border-gray-700 text-white text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 block p-2.5 outline-none"
                           value={activeItemId}
                           onChange={(e) => handleSelectItem(e.target.value)}
                         >
                           <option value="" disabled>Zvoľte slovíčko...</option>
-                          {items.sort((a,b) => a.title.localeCompare(b.title)).map(item => (
+                          {items
+                            .filter(i => i.title.toLowerCase().includes(searchQuery.toLowerCase()))
+                            .sort((a,b) => a.title.localeCompare(b.title))
+                            .map(item => (
                             <option key={item.id} value={item.id}>
                               {item.title}
                             </option>

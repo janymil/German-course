@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Flame, Star, BookOpen, Trophy, Zap, Lock, CheckCircle, TrendingUp, Calendar, HelpCircle, MessageSquare, Sparkles, Key, Unlock, FlaskConical, ArrowRight, Target, RotateCcw } from 'lucide-react';
+import { Flame, Star, BookOpen, Trophy, Zap, Lock, CheckCircle, TrendingUp, Calendar, HelpCircle, MessageSquare, Sparkles, Key, Unlock, FlaskConical, ArrowRight, Target, RotateCcw, PenLine } from 'lucide-react';
 import { LESSONS, WEEKLY_PLAN, A2_PREVIEW } from '../data/curriculum';
 
 function XPBar({ xp }) {
@@ -431,6 +431,32 @@ export default function Dashboard({ progress, onStartLesson, onNavigate, onOpenA
               >
                 <Target size={16} className="group-hover:rotate-12 transition-transform" />
                 Otvoriť Arénu
+              </button>
+            </div>
+          </div>
+
+          {/* Übungsbuch Cvičenia Widget */}
+          <div className="bg-gradient-to-br from-cyan-950/80 to-gray-900/60 border border-cyan-800/40 rounded-3xl p-6 relative overflow-hidden">
+            <div className="absolute -top-12 -right-12 w-32 h-32 bg-cyan-400/10 blur-3xl rounded-full" />
+            <div className="relative z-10">
+              <div className="flex items-center gap-3 mb-3">
+                <div className="w-10 h-10 rounded-2xl bg-cyan-500/20 flex items-center justify-center">
+                  <PenLine size={20} className="text-cyan-400" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-white text-sm">Übungsbuch A1/A2</h3>
+                  <p className="text-xs text-cyan-300/70">Cvičenia podľa knihy</p>
+                </div>
+              </div>
+              <p className="text-xs text-gray-400 leading-relaxed mb-4">
+                Interaktívne cvičenia z knihy <strong className="text-cyan-300">Deutsch Übungsbuch Grammatik A1/A2</strong> — rovnaké úlohy ako v knihe, priamo online.
+              </p>
+              <button
+                onClick={() => onNavigate('ubungsbuch')}
+                className="w-full py-2.5 bg-cyan-700 hover:bg-cyan-600 text-white font-bold rounded-xl transition-all text-sm flex items-center justify-center gap-2 group shadow-[0_0_20px_rgba(6,182,212,0.2)]"
+              >
+                <PenLine size={16} className="group-hover:scale-110 transition-transform" />
+                Otvoriť Cvičenia
               </button>
             </div>
           </div>
