@@ -364,7 +364,7 @@ export default function ShadowingTrainer({ dataOverride }) {
                 }, {})
               ).map(([categoryName, items]) => {
                 // Determine layout for this category
-                const isSpecial = categoryName === 'Problematické Slovíčka';
+                const isSpecial = categoryName === 'Problematické Slovíčka' || categoryName === 'Intenzívny Drill';
                 const isExpanded = activeItemId && items.some(i => i.id === activeItemId);
                 
                 return (

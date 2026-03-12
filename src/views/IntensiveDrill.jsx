@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Flame, Brain, Ear, Edit3, Plus, ArrowRight, Check, X as XIcon, RefreshCw, Layers } from 'lucide-react';
 import { hardwordsDeck } from '../data/decks/hardwords';
 import { hardwordsShadowing } from '../data/shadowingHardwords';
+import { hardwords_flashcards } from '../data/decks/hardwords_flashcards';
 import { normalizeGerman } from '../utils/text';
 import ShadowingTrainer from './ShadowingTrainer';
 import VocabTrainer from './VocabTrainer';
@@ -136,16 +137,32 @@ export default function IntensiveDrill({ progress, onNavigate }) {
   const vocabOverride = {
     id: 'intensive_drill_deck',
     title: 'Intenzívny Drill',
-    chapters: drillItems.map(d => ({
-      id: `vocab_ext_${d.id}`,
-      title: d.title,
-      vocab: d.sentences.map(s => ({
-        de: s.de,
-        sk: s.sk,
-        example: d.word,
-        source: 'intensive'
-      }))
-    }))
+    chapters: drillItems.map(d => {
+      const flashcardData = hardwords_flashcards[d.word];
+      if (flashcardData) {
+        return {
+          id: `vocab_ext_${d.id}`,
+          title: d.title,
+          vocab: flashcardData.sentences.map(s => ({
+            de: s[0], // German sentence from the array
+            sk: s[1], // Slovak sentence from the array
+            example: d.word,
+            source: 'intensive'
+          }))
+        };
+      }
+      
+      return {
+        id: `vocab_ext_${d.id}`,
+        title: d.title,
+        vocab: d.sentences.map(s => ({
+          de: s.de,
+          sk: s.sk,
+          example: d.word,
+          source: 'intensive'
+        }))
+      };
+    })
   };
 
   // ─── Writing Section Logic ──────────────────────────────────────────

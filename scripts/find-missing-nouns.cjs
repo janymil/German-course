@@ -2,7 +2,7 @@ const fs = require('fs');
 
 const content = fs.readFileSync('c:/Users/USER/Documents/GERMAN/src/data/ebooks.js', 'utf8');
 
-const regexWords = /words:\s*\{([\s\S]*?)\},\s*chapters/g; const wordsMatch = regexWords.exec(content);
+const regexWords = /words:\s*\{([\s\S]*?)\},\s*chapters/g;const wordsMatch = regexWords.exec(content);
 let existingWords = [];
 if (wordsMatch) {
     const lines = wordsMatch[1].split('\n');
@@ -16,7 +16,7 @@ const lines = content.split('\n');
 let ch68text = [];
 let inCh = false;
 lines.forEach(line => {
-    if (line.includes("id: 'ch_09'")) inCh = true;
+    if (line.includes("id: 'ch_10'")) inCh = true;
     if (inCh && line.includes('{ de: "')) {
         let m = line.match(/\{ de: "([^"]+)"/);
         if (m) ch68text.push(m[1]);
