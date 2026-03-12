@@ -1373,5 +1373,115 @@ export const EBOOKS = [
                 ]
             }
         ]
+    },
+    {
+        id: 'ebook_02',
+        title: 'Schatten über der Vergangenheit',
+        titleSk: 'Tiene nad minulosťou',
+        cefr: 'A1',
+        description: 'Vzrušujúce čítanie pre úroveň A1. Bývalá policajná komisárka Emma je na dôchodku a teší sa na pokojný život. Ale potom jej vnuk nájde zvláštny náhrdelník...',
+        coverImage: '/ebooks/A1-Schatten-uber-der-Vergangenheit/obalka.png',
+        words: {},
+        chapters: [
+            {
+                id: 1,
+                title: 'Kapitel 1: Eine komische Halskette',
+                image: '/ebooks/A1-Schatten-uber-der-Vergangenheit/kapitel1.png',
+                audioSrc: '/ebooks/A1-Schatten-uber-der-Vergangenheit/mp3/Schatten_Krimi_Track_01_Kapitel_1_Eine_komische_Halskette.mp3',
+                sentences: [
+                    { de: "Leise öffnet Emma die Tür zum Spielzimmer.", sk: "Emma ticho otvára dvere do herne.", format: "normal" },
+                    { de: "Noch ist Mittagsruhe.", sk: "Ešte je poludňajší odpočinok.", format: "normal" },
+                    { de: "Ein paar Kinder schlafen, die anderen sehen Bilderbücher an oder spielen mit Teddys in der Kissenecke.", sk: "Niekoľko detí spí, ostatné si prezerajú obrázkové knihy alebo sa hrajú s medvedíkmi v kútiku s vankúšmi.", format: "normal" },
+                    { de: "Die Kindergärtnerin auf ihrem Stuhl hat ein Buch auf den Knien.", sk: "Učiteľka v škôlke na stoličke má knihu na kolenách.", format: "normal" },
+                    { de: "Ihre Augen sind geschlossen.", sk: "Jej oči sú zatvoreté.", format: "normal" },
+                    { de: "Emma lächelt.", sk: "Emma sa usmieva.", format: "normal" },
+                    { de: "Hier gibt es wirklich eine ruhige Mittagszeit.", sk: "Tu je naozaj pokojný poludňajší čas.", format: "normal", endParagraph: true },
+                    
+                    { de: "Aber da sieht ein kleiner Junge von seinem Bilderbuch auf.", sk: "Ale vtom jeden malý chlapec vzhliadne od svojej obrázkovej knihy.", format: "normal", endParagraph: true },
+                    
+                    { de: "„Omi, Omi!\"", sk: "„Babi, babi!\"", format: "dialogue_start" },
+                    { de: "Er läuft in Emmas Arme und die Ruhe ist vorbei.", sk: "Rozbehne sa Emme do náručia a pokoj je preč.", format: "normal", endParagraph: true },
+                    
+                    { de: "Die Kindergärtnerin hat auch geschlafen.", sk: "Učiteľka v škôlke tiež spala.", format: "normal" },
+                    { de: "Jetzt sieht sie auf.", sk: "Teraz vzhliadne.", format: "normal", endParagraph: true },
+                    
+                    { de: "„Oh, Frau Wagner, Sie sind schon da.\"", sk: "„Ach, pani Wagnerová, už ste tu.\"", format: "dialogue_start", endParagraph: true },
+                    
+                    { de: "„Entschuldigen Sie bitte, aber ich möchte meinen Enkelsohn heute ein bisschen früher abholen.\"", sk: "„Prepáčte prosím, ale chcela by som svojho vnuka dnes vyzdvihnúť trochu skôr.\"", format: "dialogue_start", endParagraph: true },
+                    
+                    { de: "„Kein Problem, Frau Wagner, ich muss die Kleinen sowieso jetzt wecken.\"", sk: "„Žiadny problém, pani Wagnerová, aj tak už musím tých najmenších zobudiť.\"", format: "dialogue_start", endParagraph: true },
+                    
+                    { de: "Simon flüstert seiner Oma ins Ohr:", sk: "Simon šepká svojej babičke do ucha:", format: "normal" },
+                    { de: "„Das stimmt nicht, Omi.\"", sk: "„To nie je pravda, babi.\"", format: "dialogue_start", endParagraph: true },
+                    
+                    { de: "„Sie weckt uns nie. Sie schläft immer ganz lange.\"", sk: "„Ona nás nikdy nebudí. Spí vždy veľmi dlho.\"", format: "dialogue_start", endParagraph: true },
+                    
+                    { de: "Emma muss lachen und nimmt Simon an der Hand.", sk: "Emma sa musí smiať a vezme Simona za ruku.", format: "normal", endParagraph: true },
+                    
+                    { de: "„Komm, wir holen deine Jacke, dann gehen wir nach Hause.\"", sk: "„Poď, vezmeme ti bundu, potom pôjdeme domov.\"", format: "dialogue_start", endParagraph: true },
+                    
+                    { de: "Emma hilft ihrem Enkelsohn in die Schuhe.", sk: "Emma pomáha svojmu vnukovi do topánok.", format: "normal" },
+                    { de: "So lange hat sie gewartet.", sk: "Tak dlho čakala.", format: "normal" },
+                    { de: "Nun hat sie endlich mehr Zeit für Simon.", sk: "Teraz má konečne viac času na Simona.", format: "normal" },
+                    { de: "Fehlt ihr die Arbeit als Kriminalkommissarin?", sk: "Chýba jej práca kriminálnej komisárky?", format: "normal" },
+                    { de: "Im Moment sicher nicht.", sk: "V tomto momente určite nie.", format: "normal" },
+                    { de: "Jetzt ist sie seit einer Woche in Rente und freut sich.", sk: "Teraz je týždeň na dôchodku a teší sa.", format: "normal" },
+                    { de: "Sie ist einfach nur Oma.", sk: "Je proste už len babička.", format: "normal", endParagraph: true },
+                    
+                    { de: "Bis zum Wochenende wohnt Simon sogar bei ihr.", sk: "Do víkendu dokonca Simon býva u nej.", format: "normal" },
+                    { de: "Seine Eltern sind für ein paar Tage auf Reisen.", sk: "Jeho rodičia sú na pár dní na cestách.", format: "normal" },
+                    { de: "Sie haben einen Geschäftstermin in Wien und wollen dann noch die Stadt ansehen.", sk: "Majú obchodné stretnutie vo Viedni a chcú si potom ešte pozrieť mesto.", format: "normal" },
+                    { de: "Endlich kann Emma ihrer Tochter helfen und manchmal etwas mit Simon machen.", sk: "Konečne môže Emma svojej dcére pomôcť a občas niečo podnikať so Simonom.", format: "normal" },
+                    { de: "In den letzten Jahren war das fast nie möglich.", sk: "V posledných rokoch to nebolo takmer nikdy možné.", format: "normal", endParagraph: true },
+                    
+                    { de: "Hand in Hand gehen die beiden in der warmen Nachmittagssonne die Plinganserstraße hinunter, Richtung Harras.", sk: "Ruka v ruke kráčajú obaja v teplom popoludňajšom slnku po ulici Plinganserstraße smerom na Harras.", format: "normal", endParagraph: true },
+                    
+                    { de: "Emma fragt gerade:", sk: "Emma sa práve pýta:", format: "normal" },
+                    { de: "„Na, Simon? Sollen wir uns ein Eis kaufen?\"", sk: "„No, Simon? Pôjdeme si kúpiť nejakú zmrzlinu?\"", format: "dialogue_start" },
+                    { de: "Da bleibt er plötzlich stehen.", sk: "Vtom zrazu zastane.", format: "normal", endParagraph: true },
+                    
+                    { de: "„Oh nein, Omi, jetzt hab ich Felix vergessen. Seine Kette!\"", sk: "„Ach nie, babi, teraz som zabudol na Felixa. Jeho reťaz!\"", format: "dialogue_start", endParagraph: true },
+                    
+                    { de: "„Was hast du vergessen? Und was für eine Kette?\"", sk: "„Čo si zabudol? A aká reťaz?\"", format: "dialogue_start", endParagraph: true },
+                    
+                    { de: "Simon sucht in seiner Hosentasche.", sk: "Simon hľadá vrecku u nohavíc.", format: "normal" },
+                    { de: "Nach einem alten Taschentuch, einem Radiergummi, einem kleinen Porsche und einem alten Kaugummi hat er eine Halskette in der Hand und gibt sie Emma.", sk: "Po starej vreckovke, gume, malom Porsche a starej žuvačke drží v ruke náhrdelník a podáva ho Emme.", format: "normal", endParagraph: true },
+                    
+                    { de: "„Schau mal, die war im Kindergarten im Bad auf dem Boden.\"", sk: "„Pozri, tá bola v škôlke v kúpeľni na podlahe.\"", format: "dialogue_start" },
+                    { de: "„Das ist Felix Glücksbringer.\"", sk: "„To je Felixov talizman pre šťastie.\"", format: "dialogue_start" },
+                    { de: "„Sein Papa hat ihm die Kette geschenkt.\"", sk: "„Jeho ocko mu ten náhrdelník daroval.\"", format: "dialogue_start" },
+                    { de: "„Er trägt sie immer um den Hals.\"", sk: "„Vždy ju nosí na krku.\"", format: "dialogue_start", endParagraph: true },
+                    
+                    { de: "Emma nimmt die Kette und sieht den Anhänger an.", sk: "Emma si vezme náhrdelník a pozerá si prívesok.", format: "normal" },
+                    { de: "Ein rundes Stück Metall, wie ein 20-Cent-Stück, ein paar Zahlen darauf, ein paar Buchstaben…", sk: "Okrúhly kus kovu, ako dvadsaťcentíkovka, zopár čísel na ňom, zopár písmen…", format: "normal", endParagraph: true },
+                    
+                    { de: "„Ich kenne so etwas.\"", sk: "„Poznám niečo také.\"", format: "dialogue_start" },
+                    { de: "Denkt Emma.", sk: "Myslí si Emma.", format: "normal" },
+                    { de: "„Wo habe ich das schon einmal gesehen?\"", sk: "„Kde som to už predtým videla?\"", format: "dialogue_start", endParagraph: true },
+                    
+                    { de: "„Wann hast du sie denn gefunden, Simon? Und warum hast du Felix die Kette nicht zurückgegeben?\"", sk: "„A kedy si ju našiel, Simon? A prečo si Felixovi ten náhrdelník nevrátil?\"", format: "dialogue_start" },
+                    { de: "Fragt sie laut.", sk: "Spýta sa nahlas.", format: "normal", endParagraph: true },
+                    
+                    { de: "„Das war so. Nach dem Mittagsschlaf muss ich immer Pipi.\"", sk: "„Bolo to takto. Po poobedňajšom spánku musím vždy cikať.\"", format: "dialogue_start" },
+                    { de: "„Dann steh ich auf und geh ins Bad.\"", sk: "„Potom som vstal a išiel do kúpeľne.\"", format: "dialogue_start" },
+                    { de: "„Da hab ich die Kette auf dem Boden gefunden und mitgenommen.\"", sk: "„Tam som našiel náhrdelník na dlážke a vzal si ho.\"", format: "dialogue_start" },
+                    { de: "„Und dann hab ich Felix gesucht, aber nicht gesehen.\"", sk: "„A potom som hľadal Felixa, ale nevidel som ho.\"", format: "dialogue_start" },
+                    { de: "„Dann hab ich das Bilderbuch angesehen und dann bist du gekommen.\"", sk: "„Tak som si prezeral obrázkovú knihu a potom si prišla ty.\"", format: "dialogue_start", endParagraph: true },
+                    
+                    { de: "„Gut, Simon. Wir gehen erst einmal Eis essen und bringen deine Tasche nach Hause.\"", sk: "„Dobre, Simon. Najprv si pôjdeme dať zmrzlinu a odnesieme tvoju tašku domov.\"", format: "dialogue_start" },
+                    { de: "„Später machen wir einen Spaziergang zu Felix und du gibst ihm die Kette zurück.\"", sk: "„Neskôr sa prejdeme k Felixovi a ty mu ten náhrdelník vrátiš.\"", format: "dialogue_start", endParagraph: true },
+                    
+                    { de: "Schokolade und Erdbeere, Emmas Lieblingseis.", sk: "Čokoládová a jahodová, Emmina obľúbená zmrzlina.", format: "normal" },
+                    { de: "Es ist lecker wie immer, aber Emma muss an die Kette denken.", sk: "Je chutná ako vždy, no Emma musí myslieť na tú reťaz.", format: "normal" },
+                    { de: "Sieht sie nicht aus wie eine Plombe?", sk: "Nevyzerá ako plomba?", format: "normal" },
+                    { de: "Macht man nicht die Koffer von Geldtransporten mit diesen Plomben zu?", sk: "Nezatvárajú sa kufre s peniazmi takýmito plombami?", format: "normal" },
+                    { de: "Doch warum hat ein Junge in Felix Alter so ein Stück Metall um den Hals?", sk: "Ale prečo má chlapec vo Felixovom veku na krku taký kus kovu?", format: "normal" },
+                    { de: "Und warum schenkt ein Vater seinem Sohn so eine Kette?", sk: "A prečo by niečo také daroval otec synovi?", format: "normal", endParagraph: true },
+                    
+                    { de: "Aber da fällt Simon eine Eiskugel auf den Boden.", sk: "Avšak Simonovi padá na zem kopček zmrzliny.", format: "normal" },
+                    { de: "Er weint, Omi tröstet, und die Kette ist erst einmal vergessen.", sk: "Plače, babička ho utešuje, a na reťaz sa zatiaľ zabudne.", format: "normal", endParagraph: true }
+                ]
+            }
+        ]
     }
 ];

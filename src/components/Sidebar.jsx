@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Home, Calendar, Brain, BookOpen, HelpCircle, Headphones, MessageSquare, Key, FlaskConical, Target, Lightbulb, Newspaper, MonitorPlay, LayoutList, Map, MoreHorizontal, X, Mic, Activity, Zap, Ear, Flame } from 'lucide-react';
+import { Home, Calendar, Brain, BookOpen, HelpCircle, Headphones, MessageSquare, Key, FlaskConical, Target, Lightbulb, Newspaper, MonitorPlay, LayoutList, Map, MoreHorizontal, X, Mic, Activity, Zap, Ear, Flame, PenLine } from 'lucide-react';
 
 const NAV = [
   { id: 'dashboard', label: 'Prehľad', Icon: Home },
@@ -21,6 +21,11 @@ const NAV = [
   { id: 'features', label: 'Funkcie', Icon: LayoutList },
   { id: 'roadmap', label: 'Roadmapa', Icon: Map },
   { id: 'guide', label: 'Príručka', Icon: HelpCircle },
+];
+
+// CVIČENIA section — books / exercise workbooks
+const CVICENIA_BOOKS = [
+  { id: 'ubungsbuch', label: 'Übungsbuch A1/A2', Icon: PenLine },
 ];
 
 // Mobile: 5 main items shown + "More" expander
@@ -48,6 +53,28 @@ export default function Sidebar({ activeView, setActiveView, onOpenAPIKey }) {
               className={`flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all
                 ${activeView === id
                   ? 'bg-indigo-800/60 text-white border border-indigo-700/40'
+                  : 'text-gray-400 hover:text-white hover:bg-gray-800/60'}`}
+            >
+              <Icon size={18} />
+              {label}
+            </button>
+          ))}
+
+          {/* CVIČENIA section */}
+          <div className="mt-3 mb-1 px-3">
+            <div className="flex items-center gap-2">
+              <div className="flex-1 h-px bg-gray-800" />
+              <span className="text-[10px] font-bold text-cyan-500/70 uppercase tracking-widest whitespace-nowrap">Cvičenia</span>
+              <div className="flex-1 h-px bg-gray-800" />
+            </div>
+          </div>
+          {CVICENIA_BOOKS.map(({ id, label, Icon }) => (
+            <button
+              key={id}
+              onClick={() => setActiveView(id)}
+              className={`flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all
+                ${activeView === id
+                  ? 'bg-cyan-900/50 text-cyan-200 border border-cyan-700/40'
                   : 'text-gray-400 hover:text-white hover:bg-gray-800/60'}`}
             >
               <Icon size={18} />
@@ -97,6 +124,23 @@ export default function Sidebar({ activeView, setActiveView, onOpenAPIKey }) {
                   <span className="leading-tight text-center">{label}</span>
                 </button>
               ))}
+            </div>
+            {/* Cvičenia section in mobile */}
+            <div className="px-4 py-2 border-t border-gray-800/60">
+              <p className="text-[10px] font-bold text-cyan-500/70 uppercase tracking-widest mb-2">Cvičenia</p>
+              <div className="grid grid-cols-3 gap-1">
+                {CVICENIA_BOOKS.map(({ id, label, Icon }) => (
+                  <button
+                    key={id}
+                    onClick={() => { setActiveView(id); setMobileMore(false); }}
+                    className={`flex flex-col items-center justify-center gap-1.5 py-3 px-2 rounded-xl text-xs font-medium transition-all
+                      ${activeView === id ? 'bg-cyan-900/50 text-cyan-300' : 'text-gray-400 hover:text-white hover:bg-gray-800/50'}`}
+                  >
+                    <Icon size={20} />
+                    <span className="leading-tight text-center">{label}</span>
+                  </button>
+                ))}
+              </div>
             </div>
           </div>
         )}

@@ -1,11 +1,13 @@
 import React, { useState, useCallback, useMemo } from 'react';
-import { ChevronLeft, List, Volume2, BookText, Globe } from 'lucide-react';
+import { ChevronLeft, List, Volume2, BookText, Globe, PenTool } from 'lucide-react';
 import { EBOOKS } from '../data/ebooks';
 import { LessonAudioPlayer } from '../components/LessonAudioPlayer';
 import { useProgress } from '../hooks/useProgress';
 import { GLOBAL_NOUNS } from '../data/globalNouns';
 import GrammarCard from '../components/GrammarCard';
 import { generateGrammarCard } from '../hooks/useAI';
+import { EBOOK_EXERCISES } from '../data/ebookExercises';
+import EbookExerciseView from '../components/ebook/EbookExerciseView';
 
 function getFormatClasses(format) {
     switch (format) {
@@ -37,6 +39,7 @@ export default function EbookReader({ ebookId, onBack }) {
 
     const [currentChapterIdx, setCurrentChapterIdx] = useState(0);
     const [showToc, setShowToc] = useState(false);
+    const [mode, setMode] = useState('read');
 
     // Interactive Dictionary State
     const [activeWord, setActiveWord] = useState(null);
@@ -141,6 +144,13 @@ export default function EbookReader({ ebookId, onBack }) {
                 </div>
                 <div className="flex items-center gap-2">
                     <button
+                        onClick={() => setMode(mode === 'read' ? 'exercises' : 'read')}
+                        className={`flex items-center gap-2 px-4 py-2 rounded-xl transition-all font-medium ${mode === 'exercises' ? 'bg-indigo-600/90 text-white shadow-lg' : 'bg-gray-800 text-indigo-400 hover:text-indigo-300 hover:bg-gray-700 border border-gray-700'}`}
+                    >
+                        <PenTool size={18} />
+                        <span className="hidden sm:inline">Cvičenia</span>
+                    </button>
+                    <button
                         onClick={() => setShowToc(!showToc)}
                         className="flex items-center gap-2 text-gray-400 hover:text-white hover:bg-gray-800 px-4 py-2 rounded-xl transition-all"
                     >
@@ -155,10 +165,11 @@ export default function EbookReader({ ebookId, onBack }) {
 
                 {/* Left Side: Interactive Text Area (SCROLLING) */}
                 <div className="flex-1 w-full h-full overflow-y-auto custom-scrollbar bg-gray-900/60 border border-gray-800 rounded-3xl p-6 lg:p-10 shadow-xl">
-                    <div className="max-w-3xl mx-auto">
-                        <h1 className="text-2xl md:text-4xl font-black text-white mb-8 leading-snug tracking-tight border-b border-gray-800 pb-6">
-                            {chapter.title}
-                        </h1>
+                    {mode === 'read' ? (
+                        <div className="max-w-3xl mx-auto">
+                            <h1 className="text-2xl md:text-4xl font-black text-white mb-8 leading-snug tracking-tight border-b border-gray-800 pb-6">
+                                {chapter.title}
+                            </h1>
 
                         <div className="space-y-0 text-[1.10rem] leading-[1.8rem]">
                             {chapter.sentences.map((sentence, si) => (
@@ -254,7 +265,10 @@ export default function EbookReader({ ebookId, onBack }) {
                                 Nasledujúca
                             </button>
                         </div>
-                    </div>
+                        </div>
+                    ) : (
+                        <EbookExerciseView chapterIndex={currentChapterIdx} ebookId={ebookId} exercisesData={EBOOK_EXERCISES} />
+                    )}
                 </div>
 
                 {/* Right Side: Audio Player & Cover (FIXED POSITION) */}

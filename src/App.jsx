@@ -31,6 +31,7 @@ import { SentenceTrainer } from './views/SentenceTrainer';
 import ShadowingTrainer from './views/ShadowingTrainer';
 import ApiStats from './views/ApiStats';
 import IntensiveDrill from './views/IntensiveDrill';
+import UbungsbuchView from './views/UbungsbuchView';
 
 export default function App() {
   const [activeView, setActiveView] = useState(() => {
@@ -256,6 +257,9 @@ export default function App() {
           )}
           {activeView === 'intensive_drill' && (
             <IntensiveDrill progress={progress} onNavigate={setActiveView} />
+          )}
+          {activeView === 'ubungsbuch' && (
+            <UbungsbuchView />
           )}
           {activeView === 'shadowing' && (
             <ShadowingTrainer />
